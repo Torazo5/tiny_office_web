@@ -8,6 +8,9 @@ type YouTubePlayer = {
   destroy: () => void;
   getCurrentTime: () => number;
   getPlayerState: () => number;
+  loadVideoById: (videoId: string, startSeconds?: number) => void;
+  pauseVideo: () => void;
+  playVideo: () => void;
   seekTo: (seconds: number, allowSeekAhead: boolean) => void;
 };
 

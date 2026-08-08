@@ -15,6 +15,23 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-08 — Production build blocked by conflicting YouTube player types
+
+- **Symptom and impact:** The production build compiled successfully but
+  failed TypeScript validation in `components/playlist-player.tsx` because the
+  inferred YouTube player lacked `loadVideoById`, `pauseVideo`, and `playVideo`.
+- **Root cause / evidence:** `components/video-embed.tsx` globally augmented
+  `Window.YT` with a narrower player type. The playlist player intersected that
+  global type with its fuller local type, producing an incompatible constructor
+  result.
+- **Systems and files:** Next.js TypeScript validation,
+  `components/video-embed.tsx`, and `components/playlist-player.tsx`.
+- **Resolution / next action:** Aligned the global YouTube player contract with
+  the full IFrame API methods used by both components.
+- **Verification:** `git diff --check` passed. The production build should be
+  rerun in the deployment environment; this WSL1 shell cannot start the local
+  Node toolchain.
+
 ### 2026-08-08 — OAuth signup returned users away from playlists
 
 - **Symptom and impact:** After Google signup/sign-in, users were returned to
