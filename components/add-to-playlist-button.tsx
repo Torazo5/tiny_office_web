@@ -2,27 +2,35 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { addPlaylistVideo } from "@/app/playlist/actions";
+import { addPlaylistSong, addPlaylistVideo } from "@/app/playlist/actions";
 import type { PlaylistSummary } from "@/lib/types";
 
+type PlaylistItem =
+  | { kind: "video"; performanceVideoId: string }
+  | { kind: "song"; performanceVideoId: string; songIndex: number };
+
 export function AddToPlaylistButton({
-  performanceVideoId,
+  item,
   playlists,
   isSignedIn,
+  returnPath = "/",
 }: {
-  performanceVideoId: string;
+  item: PlaylistItem;
   playlists: PlaylistSummary[];
   isSignedIn: boolean;
+  returnPath?: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [pendingPlaylistId, setPendingPlaylistId] = useState<string | null>(null);
   const [addedPlaylistIds, setAddedPlaylistIds] = useState<Set<string>>(() => new Set());
   const [error, setError] = useState<string | null>(null);
+  const isSong = item.kind === "song";
+  const playlistLabel = isSong ? "Song playlists" : "Video playlists";
 
   if (!isSignedIn) {
     return (
       <Link
-        href={{ pathname: "/login", query: { next: "/" } }}
+        href={{ pathname: "/login", query: { next: returnPath } }}
         className="inline-flex rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground"
       >
         + Add to playlist
@@ -33,7 +41,13 @@ export function AddToPlaylistButton({
   async function handleAdd(playlistId: string) {
     setPendingPlaylistId(playlistId);
     setError(null);
-    const result = await addPlaylistVideo({ playlistId, performanceVideoId });
+    const result = item.kind === "song"
+      ? await addPlaylistSong({
+          playlistId,
+          performanceVideoId: item.performanceVideoId,
+          songIndex: item.songIndex,
+        })
+      : await addPlaylistVideo({ playlistId, performanceVideoId: item.performanceVideoId });
 
     if (result?.error) {
       setError(result.error);
@@ -60,11 +74,13 @@ export function AddToPlaylistButton({
       {isOpen && (
         <div className="absolute bottom-full left-0 z-20 mb-2 w-64 rounded-lg border border-border bg-card p-2 shadow-lg">
           <div className="px-2 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
-            Video playlists
+            {playlistLabel}
           </div>
           {playlists.length === 0 ? (
             <div className="px-2 py-2">
-              <p className="text-[12px] text-muted-foreground">Create a video playlist first.</p>
+              <p className="text-[12px] text-muted-foreground">
+                Create a {isSong ? "song" : "video"} playlist first.
+              </p>
               <Link
                 href="/playlists"
                 className="mt-2 inline-block text-[12px] font-medium text-primary hover:underline"

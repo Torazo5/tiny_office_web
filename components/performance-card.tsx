@@ -44,7 +44,7 @@ export function PerformanceCard({
       </Link>
       <div className="mt-2">
         <AddToPlaylistButton
-          performanceVideoId={p.videoId}
+          item={{ kind: "video", performanceVideoId: p.videoId }}
           playlists={playlists}
           isSignedIn={isSignedIn}
         />

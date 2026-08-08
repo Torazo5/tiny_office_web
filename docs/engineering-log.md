@@ -15,6 +15,21 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-08 — Song playlist picker runtime validation blocked
+
+- **Symptom and impact:** The new per-song playlist picker could not be
+  exercised in the local Next.js app before commit.
+- **Root cause / evidence:** Both `npm run build` and the required fallback
+  `npm run dev` stop before startup with `WSL 1 is not supported` and
+  `Could not determine Node.js install directory`.
+- **Systems and files:** WSL1 Node.js runtime, `app/video/[id]/page.tsx`,
+  `components/add-to-playlist-button.tsx`, and the existing Supabase playlist
+  actions.
+- **Resolution / next action:** Run the production build and click a song's
+  Add to playlist control from WSL2 or the deployment environment.
+- **Verification:** `git diff --check` passed; a live Supabase read confirmed
+  the signed-in user has a `songs` playlist available to the picker.
+
 ### 2026-08-08 — Browse card build blocked by malformed JSX
 
 - **Symptom and impact:** The production build failed during parsing with

@@ -4,7 +4,9 @@ import { PlayerProvider } from "@/components/player-context";
 import { SongRow } from "@/components/song-row";
 import { StarRating } from "@/components/star-rating";
 import { VideoEmbed } from "@/components/video-embed";
-import { getPerformance } from "@/lib/data";
+import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
+import { getCurrentUser } from "@/lib/auth";
+import { getPerformance, getPlaylists } from "@/lib/data";
 
 export default async function VideoPage({
   params,
@@ -12,8 +14,15 @@ export default async function VideoPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const performance = await getPerformance(id);
+  const [performance, playlists, user] = await Promise.all([
+    getPerformance(id),
+    getPlaylists(),
+    getCurrentUser(),
+  ]);
   if (!performance) notFound();
+  const songPlaylists = user
+    ? playlists.filter((playlist) => playlist.ownerId === user.id && playlist.type === "songs")
+    : [];
 
   return (
     <>
@@ -72,7 +81,21 @@ export default async function VideoPage({
             </h2>
             <div className="flex flex-col gap-0.5">
               {performance.songs.map((song) => (
-                <SongRow key={song.index} song={song} />
+                <div key={song.index} className="flex items-center gap-2">
+                  <div className="min-w-0 flex-1">
+                    <SongRow song={song} />
+                  </div>
+                  <AddToPlaylistButton
+                    item={{
+                      kind: "song",
+                      performanceVideoId: performance.videoId,
+                      songIndex: song.index,
+                    }}
+                    playlists={songPlaylists}
+                    isSignedIn={Boolean(user)}
+                    returnPath={`/video/${performance.videoId}`}
+                  />
+                </div>
               ))}
             </div>
           </div>
