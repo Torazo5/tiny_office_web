@@ -15,6 +15,24 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-08 — Playlist page blocked by unapplied playlist-type migration
+
+- **Symptom and impact:** The playlists page failed at runtime with
+  `Loading playlists: column playlists.playlist_type does not exist`, blocking
+  playlist loading and the new song/video playlist flow.
+- **Root cause / evidence:** The local
+  `supabase/migrations/20260808090000_playlist_types.sql` migration existed,
+  but the connected Supabase project migration history stopped before it and
+  its live `public.playlists` table had no `playlist_type` column.
+- **Systems and files:** Supabase `public.playlists` and
+  `public.playlist_tracks`, `lib/data.ts`, and the playlist-types migration.
+- **Resolution / next action:** Applied the existing `playlist_types` migration
+  to the connected project. No application-code fallback was needed.
+- **Verification:** Supabase migration history now includes `playlist_types`;
+  SQL checks confirmed `playlists.playlist_type` is non-null with a `songs`
+  default, the songs/videos constraint exists, and
+  `playlist_tracks.song_index` is nullable.
+
 ### 2026-08-08 — Song/video playlist live validation blocked
 
 - **Symptom and impact:** The new playlist player and playlist-type migration
