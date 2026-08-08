@@ -232,3 +232,20 @@ tokens, personal data, or full environment-variable values.
   runtime.
 - **Verification:** `git diff --check` passed; no application command reached
   its test, lint, or build phase in this shell.
+
+### 2026-08-08 — Final-song playback validation blocked by WSL1 Node launcher
+
+- **Symptom and impact:** The final-song stop and playlist handoff behavior
+  could not be exercised with the focused tests, lint, or production build in
+  this shell.
+- **Root cause / evidence:** `npm test`, `npm run lint`, and `npm run build`
+  stopped before Node.js startup with `WSL 1 is not supported` and
+  `Could not determine Node.js install directory`.
+- **Systems and files:** WSL1 Node.js/npm launcher, `lib/only-song-mode.ts`,
+  `components/video-embed.tsx`, `components/playlist-player.tsx`, and the
+  focused helper tests.
+- **Resolution / next action:** Run the focused tests and browser-check the
+  standalone stop and multi-item playlist handoff from WSL2 or another Linux
+  Node.js runtime.
+- **Verification:** `git diff --check` passed; no application command reached
+  its test, lint, or build phase in this shell.

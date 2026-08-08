@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { PlaylistTrack, PlaylistType } from "@/lib/types";
-import { findOnlySongModeTarget } from "@/lib/only-song-mode";
+import { findOnlySongModeAction } from "@/lib/only-song-mode";
 
 type YouTubePlayer = {
   destroy: () => void;
@@ -201,16 +201,30 @@ export function PlaylistPlayer({
         return;
       }
 
-      const nextStart = findOnlySongModeTarget(
+      const action = findOnlySongModeAction(
         track.songClips,
         previousTimeRef.current,
         currentTime,
       );
       previousTimeRef.current = currentTime;
-      if (nextStart === null) return;
+      if (action === null) return;
 
-      previousTimeRef.current = nextStart;
-      player.seekTo(nextStart, true);
+      if (action.type === "stop") {
+        const hasNextTrack = currentIndexRef.current + 1 < tracksRef.current.length;
+        if (hasNextTrack) {
+          advanceToNextRef.current();
+        } else {
+          const stopAt = Math.max(0, action.end);
+          player.seekTo(stopAt, true);
+          player.pauseVideo();
+          previousTimeRef.current = stopAt;
+          setPlayerState(2);
+        }
+        return;
+      }
+
+      previousTimeRef.current = action.start;
+      player.seekTo(action.start, true);
     }, 250);
 
     return () => window.clearInterval(intervalId);
@@ -285,7 +299,7 @@ export function PlaylistPlayer({
       </div>
       <p className="mt-3 text-[12px] text-muted-foreground/75">
         One player stays mounted while the next {playlistType === "songs" ? "song clip" : "performance"} loads in place.
-        {playlistType === "videos" ? " Full performances skip detected gaps between songs." : ""}
+        {playlistType === "videos" ? " Full performances skip gaps and advance after the final song." : ""}
       </p>
     </section>
   );

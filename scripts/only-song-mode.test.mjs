@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-const { findOnlySongModeTarget } = await import("../lib/only-song-mode.ts");
+const { findOnlySongModeAction, findOnlySongModeTarget } = await import("../lib/only-song-mode.ts");
 
 const songs = [
   { clipStart: 10, clipEnd: 100 },
@@ -33,4 +33,11 @@ test("skips invalid-duration clips as automatic targets", () => {
 
 test("does not return a target after the final song", () => {
   assert.equal(findOnlySongModeTarget(songs, 299.5, 300.2), null);
+});
+
+test("stops at the end of the final playable song", () => {
+  assert.deepEqual(findOnlySongModeAction(songs, 299.5, 300.2), {
+    type: "stop",
+    end: 300,
+  });
 });

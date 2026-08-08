@@ -29,8 +29,8 @@ YouTube’s embedded-player requirements.
   - If there is a meaningful gap, seek to the next song’s `clipStart`.
 - A manual song-row click continues to use the existing in-place seek and
   preserves whether the player was paused or playing.
-- If there is no later playable song, playback is left alone at the end of the
-  final song.
+- If there is no later playable song, playback stops at the final song's
+  `clipEnd`.
 - Song entries with non-positive duration (`clipEnd <= clipStart`) are not
   automatic transition targets. They remain visible in the existing list.
 
@@ -52,10 +52,12 @@ control exposed by `VideoEmbed`.
 `getCurrentTime()` and `getPlayerState()` methods and subscribe to the player’s
 state-change callback. While `onlySongMode` is enabled and the YouTube state is
 `playing`, a short interval will sample the current time. A pure helper will
-determine whether the previous sample crossed a song boundary and, if so,
-return the next clip’s start time only when a real gap exists. The embed will
-call `seekTo()` with that start time; because YouTube preserves paused versus
-playing state for `seekTo()`, no explicit `playVideo()` call is needed.
+determine whether the previous sample crossed a song boundary and return
+either the next clip’s start time when a real gap exists or a stop action for
+the final playable song. The embed will call `seekTo()` with the returned
+timestamp; because YouTube preserves paused versus playing state for
+`seekTo()`, no explicit `playVideo()` call is needed. The final-song action
+also pauses the player after seeking to the exact clip end.
 
 The helper will use the ordered song list, ignore invalid-duration entries for
 automatic transitions, and use a small fixed near-contiguous tolerance so
@@ -90,7 +92,7 @@ Add unit tests for the pure transition helper covering:
 3. entering a song after enabling during a gap does not cause an immediate
    transition;
 4. invalid-duration entries are skipped as automatic targets; and
-5. a final song produces no transition target.
+5. a final song returns a stop action at its clip end.
 
 Run the focused tests, lint, and a production build. Manually verify in the
 browser that toggling while paused does not start playback, toggling during a

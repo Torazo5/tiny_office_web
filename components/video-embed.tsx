@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { usePlayer } from "@/components/player-context";
-import { findOnlySongModeTarget } from "@/lib/only-song-mode";
+import { findOnlySongModeAction } from "@/lib/only-song-mode";
 
 type YouTubePlayer = {
   destroy: () => void;
@@ -141,17 +141,26 @@ export function VideoEmbed({ videoId }: { videoId: string }) {
       if (!player || player.getPlayerState() !== YOUTUBE_PLAYER_PLAYING) return;
 
       const currentTime = player.getCurrentTime();
-      const nextStart = findOnlySongModeTarget(
+      const action = findOnlySongModeAction(
         songs,
         previousTimeRef.current,
         currentTime,
       );
       previousTimeRef.current = currentTime;
 
-      if (nextStart === null) return;
+      if (action === null) return;
 
-      previousTimeRef.current = nextStart;
-      setStartAt(nextStart);
+      if (action.type === "stop") {
+        const stopAt = Math.max(0, action.end);
+        player.seekTo(stopAt, true);
+        player.pauseVideo();
+        previousTimeRef.current = stopAt;
+        setStartAt(stopAt);
+        return;
+      }
+
+      previousTimeRef.current = action.start;
+      setStartAt(action.start);
     }, 250);
 
     return () => window.clearInterval(intervalId);
