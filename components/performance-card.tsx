@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { ConfidenceDot } from "@/components/confidence-dot";
-import { PlaceholderThumb } from "@/components/placeholder-thumb";
 import { StarRating } from "@/components/star-rating";
+import { YouTubeThumbnail } from "@/components/youtube-thumbnail";
 import type { Performance, PlaylistSummary } from "@/lib/types";
 
 export function PerformanceCard({
@@ -18,7 +18,11 @@ export function PerformanceCard({
     <article className="min-w-0">
       <Link href={`/video/${p.videoId}`} className="group block">
         <div className="relative aspect-video rounded-[10px] overflow-hidden mb-2.5">
-          <PlaceholderThumb label="THUMBNAIL" className="h-full w-full" />
+          <YouTubeThumbnail
+            videoId={p.videoId}
+            alt={`${p.artist} Tiny Desk Concert`}
+            className="h-full w-full"
+          />
           <ConfidenceDot
             verified={p.verified}
             className="absolute top-2 right-2 ring-[3px] ring-background/60"

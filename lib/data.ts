@@ -212,15 +212,22 @@ export async function getPlaylists(): Promise<PlaylistSummary[]> {
       .from("playlists")
       .select("id, name, owner_name, owner_id, playlist_type")
       .order("updated_at", { ascending: false }),
-    supabase.from("playlist_tracks").select("playlist_id"),
+    supabase
+      .from("playlist_tracks")
+      .select("playlist_id, performance_video_id, position")
+      .order("position"),
   ]);
 
   throwIfError("Loading playlists", playlistsResult.error);
   throwIfError("Loading playlist track counts", tracksResult.error);
 
   const trackCounts = new Map<string, number>();
+  const thumbnailVideoIds = new Map<string, string>();
   for (const track of tracksResult.data ?? []) {
     trackCounts.set(track.playlist_id, (trackCounts.get(track.playlist_id) ?? 0) + 1);
+    if (!thumbnailVideoIds.has(track.playlist_id)) {
+      thumbnailVideoIds.set(track.playlist_id, track.performance_video_id);
+    }
   }
 
   return (playlistsResult.data ?? []).map((playlist) => ({
@@ -230,6 +237,7 @@ export async function getPlaylists(): Promise<PlaylistSummary[]> {
     type: playlist.playlist_type as PlaylistType,
     ownerId: playlist.owner_id,
     trackCount: trackCounts.get(playlist.id) ?? 0,
+    thumbnailVideoId: thumbnailVideoIds.get(playlist.id) ?? null,
   }));
 }
 

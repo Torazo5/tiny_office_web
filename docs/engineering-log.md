@@ -215,3 +215,20 @@ tokens, personal data, or full environment-variable values.
   from a writable checkout.
 - **Verification:** The failed `git add` left no files staged; the working-tree
   diff continues to pass `git diff --check`.
+
+### 2026-08-08 — Thumbnail system runtime validation blocked by WSL1 Node launcher
+
+- **Symptom and impact:** The new YouTube thumbnail component and playlist
+  thumbnail data path could not be validated with the project test, lint, or
+  production build commands in this shell.
+- **Root cause / evidence:** `npm test`, `npm run lint`, and `npm run build`
+  all stopped before Node.js startup with `WSL 1 is not supported` and
+  `Could not determine Node.js install directory`.
+- **Systems and files:** WSL1 Node.js/npm launcher, `components/youtube-thumbnail.tsx`,
+  `components/performance-card.tsx`, playlist components, `lib/data.ts`, and
+  `next.config.ts`.
+- **Resolution / next action:** Run the checks and browser-check the YouTube
+  thumbnail load and fallback behavior from WSL2 or another Linux Node.js
+  runtime.
+- **Verification:** `git diff --check` passed; no application command reached
+  its test, lint, or build phase in this shell.

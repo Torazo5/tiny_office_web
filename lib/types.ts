@@ -109,6 +109,7 @@ export interface PlaylistSummary {
   type: PlaylistType;
   ownerId: string | null;
   trackCount: number;
+  thumbnailVideoId: string | null;
 }
 
 export interface PlaylistSongOption {

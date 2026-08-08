@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useActionState, useState, useTransition } from "react";
 import { createPlaylist, deletePlaylist } from "@/app/playlist/actions";
-import { PlaceholderThumb } from "@/components/placeholder-thumb";
+import { YouTubeThumbnail } from "@/components/youtube-thumbnail";
 import type { PlaylistSummary } from "@/lib/types";
 
 type PlaylistActionState = { error: string } | null;
@@ -139,7 +139,11 @@ export function PlaylistLibrary({
             return (
               <article key={playlist.id} className="group relative min-w-0">
                 <Link href={`/playlist/${playlist.id}`} className="block">
-                  <PlaceholderThumb label="PLAYLIST" className="mb-3 aspect-square w-full rounded-[10px]" />
+                  <YouTubeThumbnail
+                    videoId={playlist.thumbnailVideoId}
+                    alt={`${playlist.name} playlist`}
+                    className="mb-3 aspect-square w-full rounded-[10px]"
+                  />
                   <h2 className="truncate text-[15px] font-semibold text-foreground transition-colors group-hover:text-primary">
                     {playlist.name}
                   </h2>

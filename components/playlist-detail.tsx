@@ -8,8 +8,8 @@ import {
   addPlaylistVideo,
   removePlaylistTrack,
 } from "@/app/playlist/actions";
-import { PlaceholderThumb } from "@/components/placeholder-thumb";
 import { PlaylistPlayer } from "@/components/playlist-player";
+import { YouTubeThumbnail } from "@/components/youtube-thumbnail";
 import { formatTime } from "@/lib/format";
 import type {
   Playlist,
@@ -171,7 +171,12 @@ export function PlaylistDetail({
       )}
 
       <div className="mb-7 flex flex-col items-start gap-6 sm:flex-row sm:items-end">
-        <PlaceholderThumb label={isSongPlaylist ? "SONGS" : "VIDEOS"} className="h-[180px] w-[180px] shrink-0 rounded-[10px]" />
+        <YouTubeThumbnail
+          videoId={tracks[0]?.performanceVideoId}
+          alt={`${playlist.name} playlist`}
+          className="h-[180px] w-[180px] shrink-0 rounded-[10px]"
+          sizes="180px"
+        />
         <div>
           <div className="mb-2 font-mono text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
             {isSongPlaylist ? "Song playlist" : "Video playlist"}
