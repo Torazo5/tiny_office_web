@@ -115,3 +115,4 @@ sibling `tiny_office` repo is the ingest source — see that repo's
 `PIPELINE.md` for the full JSON schema. `confidence.min >= 75` is the
 existing "trust without review" bar (used for `verified` in the fixtures);
 keep using it unless you have a reason not to.
+# tiny_office_web
