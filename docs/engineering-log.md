@@ -268,3 +268,20 @@ tokens, personal data, or full environment-variable values.
   Node.js runtime.
 - **Verification:** `git diff --check` passed; no application command reached
   its test, lint, or build phase in this shell.
+
+### 2026-08-08 — Revision video playback validation blocked by WSL1 Node launcher
+
+- **Symptom and impact:** The new revision editor YouTube embed and clip
+  playback controls could not be exercised with the production build or a
+  browser flow in this shell.
+- **Root cause / evidence:** `npm run build` stopped before Node.js startup
+  with `WSL 1 is not supported` and `Could not determine Node.js install
+  directory`.
+- **Systems and files:** WSL1 Node.js/npm launcher,
+  `components/revision-video-player.tsx`, and
+  `components/revision-editor.tsx`.
+- **Resolution / next action:** Run the production build and browser-check
+  current-clip playback, seeking, and song switching from WSL2 or another
+  Linux Node.js runtime.
+- **Verification:** `git diff --check` passed; the build did not reach the
+  application compilation phase in this shell.

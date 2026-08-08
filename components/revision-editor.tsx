@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState, useActionState } from "react";
 import { Waveform } from "@/components/waveform";
+import { RevisionVideoPlayer } from "@/components/revision-video-player";
 import {
   resolveTruthRequest,
   saveGroundTruthAction,
@@ -133,46 +134,57 @@ export function RevisionEditor({
       </div>
 
       {song && (
-        <div className="bg-card border border-border rounded-[10px] p-5">
-          <div className="text-[15px] font-semibold text-foreground mb-0.5">{song.title}</div>
-          <div className="font-mono text-xs text-muted-foreground mb-4.5">
-            current clip {formatTime(currentStart)} &ndash; {formatTime(currentEnd)}
-          </div>
+        <div className="grid items-start gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(280px,0.9fr)]">
+          <RevisionVideoPlayer
+            videoId={performance.videoId}
+            songKey={`${performance.videoId}:${song.index}`}
+            songTitle={song.title}
+            clipStart={currentStart}
+            clipEnd={currentEnd}
+            duration={performance.duration}
+          />
 
-          <Waveform durationSec={performance.duration} clipStart={currentStart} clipEnd={currentEnd} />
-          <div className="flex justify-between mt-1.5 font-mono text-[11px] text-muted-foreground/70">
-            <span>0:00</span>
-            <span>{formatTime(performance.duration)}</span>
-          </div>
+          <div className="rounded-[10px] border border-border bg-card p-5">
+            <div className="text-[15px] font-semibold text-foreground mb-0.5">{song.title}</div>
+            <div className="font-mono text-xs text-muted-foreground mb-4.5">
+              current clip {formatTime(currentStart)} &ndash; {formatTime(currentEnd)}
+            </div>
 
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
-            <label className="text-[12px] font-medium text-muted-foreground">
-              Start time
-              <input
-                value={song.clipStart}
-                onChange={(event) => updateSong(song.index, "clipStart", event.target.value)}
-                inputMode="decimal"
-                aria-label={`${song.title} start time`}
-                className="mt-1 h-9 w-full rounded-lg border border-input bg-background px-2.5 font-mono text-sm text-foreground outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
-              />
-            </label>
-            <label className="text-[12px] font-medium text-muted-foreground">
-              End time
-              <input
-                value={song.clipEnd}
-                onChange={(event) => updateSong(song.index, "clipEnd", event.target.value)}
-                inputMode="decimal"
-                aria-label={`${song.title} end time`}
-                className="mt-1 h-9 w-full rounded-lg border border-input bg-background px-2.5 font-mono text-sm text-foreground outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
-              />
-            </label>
-          </div>
+            <Waveform durationSec={performance.duration} clipStart={currentStart} clipEnd={currentEnd} />
+            <div className="flex justify-between mt-1.5 font-mono text-[11px] text-muted-foreground/70">
+              <span>0:00</span>
+              <span>{formatTime(performance.duration)}</span>
+            </div>
 
-          <div className="mt-4 flex flex-wrap gap-2">
-            <button type="button" onClick={() => nudge("clipStart", -TIMELINE_NUDGE_SECONDS)} className="rounded-lg border border-input px-3 py-2 text-[12px] text-muted-foreground hover:text-foreground">Start −5s</button>
-            <button type="button" onClick={() => nudge("clipStart", TIMELINE_NUDGE_SECONDS)} className="rounded-lg border border-input px-3 py-2 text-[12px] text-muted-foreground hover:text-foreground">Start +5s</button>
-            <button type="button" onClick={() => nudge("clipEnd", -TIMELINE_NUDGE_SECONDS)} className="rounded-lg border border-input px-3 py-2 text-[12px] text-muted-foreground hover:text-foreground">End −5s</button>
-            <button type="button" onClick={() => nudge("clipEnd", TIMELINE_NUDGE_SECONDS)} className="rounded-lg border border-input px-3 py-2 text-[12px] text-muted-foreground hover:text-foreground">End +5s</button>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              <label className="text-[12px] font-medium text-muted-foreground">
+                Start time
+                <input
+                  value={song.clipStart}
+                  onChange={(event) => updateSong(song.index, "clipStart", event.target.value)}
+                  inputMode="decimal"
+                  aria-label={`${song.title} start time`}
+                  className="mt-1 h-9 w-full rounded-lg border border-input bg-background px-2.5 font-mono text-sm text-foreground outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
+                />
+              </label>
+              <label className="text-[12px] font-medium text-muted-foreground">
+                End time
+                <input
+                  value={song.clipEnd}
+                  onChange={(event) => updateSong(song.index, "clipEnd", event.target.value)}
+                  inputMode="decimal"
+                  aria-label={`${song.title} end time`}
+                  className="mt-1 h-9 w-full rounded-lg border border-input bg-background px-2.5 font-mono text-sm text-foreground outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
+                />
+              </label>
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              <button type="button" onClick={() => nudge("clipStart", -TIMELINE_NUDGE_SECONDS)} className="rounded-lg border border-input px-3 py-2 text-[12px] text-muted-foreground hover:text-foreground">Start −5s</button>
+              <button type="button" onClick={() => nudge("clipStart", TIMELINE_NUDGE_SECONDS)} className="rounded-lg border border-input px-3 py-2 text-[12px] text-muted-foreground hover:text-foreground">Start +5s</button>
+              <button type="button" onClick={() => nudge("clipEnd", -TIMELINE_NUDGE_SECONDS)} className="rounded-lg border border-input px-3 py-2 text-[12px] text-muted-foreground hover:text-foreground">End −5s</button>
+              <button type="button" onClick={() => nudge("clipEnd", TIMELINE_NUDGE_SECONDS)} className="rounded-lg border border-input px-3 py-2 text-[12px] text-muted-foreground hover:text-foreground">End +5s</button>
+            </div>
           </div>
         </div>
       )}
