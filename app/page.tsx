@@ -1,9 +1,17 @@
 import { Header } from "@/components/header";
 import { PerformanceCard } from "@/components/performance-card";
-import { getPerformances } from "@/lib/data";
+import { getCurrentUser } from "@/lib/auth";
+import { getPerformances, getPlaylists } from "@/lib/data";
 
 export default async function BrowsePage() {
-  const performances = await getPerformances();
+  const [performances, playlists, user] = await Promise.all([
+    getPerformances(),
+    getPlaylists(),
+    getCurrentUser(),
+  ]);
+  const videoPlaylists = user
+    ? playlists.filter((playlist) => playlist.ownerId === user.id && playlist.type === "videos")
+    : [];
 
   return (
     <>
@@ -21,7 +29,12 @@ export default async function BrowsePage() {
           style={{ gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))" }}
         >
           {performances.map((p) => (
-            <PerformanceCard key={p.videoId} performance={p} />
+            <PerformanceCard
+              key={p.videoId}
+              performance={p}
+              playlists={videoPlaylists}
+              isSignedIn={Boolean(user)}
+            />
           ))}
         </div>
       </main>

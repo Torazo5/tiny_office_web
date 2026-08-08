@@ -1,0 +1,102 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import { addPlaylistVideo } from "@/app/playlist/actions";
+import type { PlaylistSummary } from "@/lib/types";
+
+export function AddToPlaylistButton({
+  performanceVideoId,
+  playlists,
+  isSignedIn,
+}: {
+  performanceVideoId: string;
+  playlists: PlaylistSummary[];
+  isSignedIn: boolean;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [pendingPlaylistId, setPendingPlaylistId] = useState<string | null>(null);
+  const [addedPlaylistIds, setAddedPlaylistIds] = useState<Set<string>>(() => new Set());
+  const [error, setError] = useState<string | null>(null);
+
+  if (!isSignedIn) {
+    return (
+      <Link
+        href={{ pathname: "/login", query: { next: "/" } }}
+        className="inline-flex rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground"
+      >
+        + Add to playlist
+      </Link>
+    );
+  }
+
+  async function handleAdd(playlistId: string) {
+    setPendingPlaylistId(playlistId);
+    setError(null);
+    const result = await addPlaylistVideo({ playlistId, performanceVideoId });
+
+    if (result?.error) {
+      setError(result.error);
+    } else {
+      setAddedPlaylistIds((current) => new Set(current).add(playlistId));
+    }
+    setPendingPlaylistId(null);
+  }
+
+  return (
+    <div className="relative">
+      <button
+        type="button"
+        onClick={() => {
+          setIsOpen((open) => !open);
+          setError(null);
+        }}
+        aria-expanded={isOpen}
+        className="inline-flex rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground"
+      >
+        + Add to playlist
+      </button>
+
+      {isOpen && (
+        <div className="absolute bottom-full left-0 z-20 mb-2 w-64 rounded-lg border border-border bg-card p-2 shadow-lg">
+          <div className="px-2 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+            Video playlists
+          </div>
+          {playlists.length === 0 ? (
+            <div className="px-2 py-2">
+              <p className="text-[12px] text-muted-foreground">Create a video playlist first.</p>
+              <Link
+                href="/playlists"
+                className="mt-2 inline-block text-[12px] font-medium text-primary hover:underline"
+                onClick={() => setIsOpen(false)}
+              >
+                Open playlists
+              </Link>
+            </div>
+          ) : (
+            <div className="flex max-h-52 flex-col overflow-y-auto">
+              {playlists.map((playlist) => {
+                const isAdded = addedPlaylistIds.has(playlist.id);
+                return (
+                  <button
+                    key={playlist.id}
+                    type="button"
+                    onClick={() => void handleAdd(playlist.id)}
+                    disabled={isAdded || pendingPlaylistId !== null}
+                    className="flex items-center justify-between gap-3 rounded-md px-2 py-2 text-left text-[12.5px] text-foreground transition-colors hover:bg-secondary disabled:cursor-default disabled:opacity-60"
+                  >
+                    <span className="min-w-0 truncate">{playlist.name}</span>
+                    <span className="shrink-0 text-[11px] text-muted-foreground">
+                      {pendingPlaylistId === playlist.id ? "Adding…" : isAdded ? "Added" : "Add"}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+          {error && <p className="px-2 pb-1 pt-2 text-[11.5px] text-primary">{error}</p>}
+        </div>
+      )}
+    </div>
+  );
+}
