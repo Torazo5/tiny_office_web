@@ -26,9 +26,11 @@ full environment-variable values in the log.
 
 After a meaningful, verified change (feature, bug fix, behavior change,
 substantial refactor, configuration/schema change, or a major-error fix),
-create a focused local Git commit. Stage only the files that belong to that
-change and preserve unrelated user edits. Never push, open a pull request, or
-otherwise publish the commit unless the user explicitly asks.
+create a focused local Git commit without asking the user again for approval.
+Stage only the files that belong to that change and preserve unrelated user
+edits. Use any available scoped Git-write approval needed by the execution
+environment. Never push, open a pull request, or otherwise publish the commit
+unless the user explicitly asks.
 
 If validation or committing is blocked, explain the blocker and record it in
 the major-error log when it qualifies as a major error.
