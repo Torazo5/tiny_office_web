@@ -15,6 +15,7 @@ export function SongRow({ song }: { song: Song }) {
     <button
       type="button"
       onClick={() => setStartAt(song.clipStart)}
+      aria-label={`${song.title}, ${formatTime(song.clipStart)} to ${formatTime(song.clipEnd)}, ${formatClipDuration(song.clipStart, song.clipEnd)} duration`}
       className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left transition-colors ${
         active ? "bg-secondary" : "hover:bg-secondary/60"
       }`}
@@ -33,11 +34,15 @@ export function SongRow({ song }: { song: Song }) {
           </div>
         )}
       </div>
-      <div className="font-mono text-xs text-muted-foreground">
-        {formatTime(song.clipStart)}
-      </div>
-      <div className="font-mono text-xs text-muted-foreground/70 w-[38px] text-right">
-        {formatClipDuration(song.clipStart, song.clipEnd)}
+      <div className="shrink-0 whitespace-nowrap text-right font-mono text-[11px] leading-tight text-muted-foreground">
+        <div>
+          {formatTime(song.clipStart)}
+          <span aria-hidden className="px-1 text-muted-foreground/50">→</span>
+          {formatTime(song.clipEnd)}
+        </div>
+        <div className="mt-0.5 text-[10px] text-muted-foreground/70">
+          {formatClipDuration(song.clipStart, song.clipEnd)} duration
+        </div>
       </div>
     </button>
   );
