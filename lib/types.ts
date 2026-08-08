@@ -72,6 +72,44 @@ export interface ReviewQueueItem {
   whyText: string;
 }
 
+export interface TimelineDraftSong {
+  songIndex: number;
+  clipStart: number;
+  clipEnd: number;
+}
+
+export type TruthRequestStatus = "pending" | "approved" | "rejected";
+
+export interface ListeningPresetSong {
+  songIndex: number;
+  clipStart: number;
+  clipEnd: number;
+}
+
+export interface ListeningPreset {
+  id: string;
+  performanceVideoId: string;
+  ownerId: string;
+  ownerName: string;
+  name: string;
+  note: string | null;
+  status: "published" | "hidden";
+  createdAt: string;
+  songs: ListeningPresetSong[];
+}
+
+export interface TruthRequestSummary {
+  id: string;
+  performanceVideoId: string;
+  artist: string;
+  requesterId: string;
+  requesterName: string;
+  note: string | null;
+  status: TruthRequestStatus;
+  createdAt: string;
+  resolvedAt: string | null;
+}
+
 export type PlaylistType = "songs" | "videos";
 
 export interface PlaylistTrack {

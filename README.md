@@ -4,18 +4,18 @@ An unofficial Tiny Desk companion — turns full concerts into individually
 playable songs (official YouTube embeds), with ratings, reviews, lists, and
 discovery. Spotify + Letterboxd, for Tiny Desk.
 
-This repo is the **frontend scaffold**: Next.js + Tailwind + shadcn/ui,
-styled to match the design handoff, wired to realistic fixture data. There
-is no backend yet — see [For Codex](#for-codex-backend-integration) below,
-that's the explicit next step.
+This repo is the **frontend plus Supabase-backed app**: Next.js + Tailwind +
+shadcn/ui, styled to match the design handoff. Supabase now backs auth,
+playlists, revision submissions, listening presets, and main-truth review.
+Ratings and written reviews remain the next product surfaces to connect.
 
 ## Stack
 
 - Next.js 16 (App Router) + TypeScript + Tailwind v4
 - shadcn/ui (`new-york`-derived, custom theme — see `app/globals.css`)
 - IBM Plex Sans / IBM Plex Mono (`next/font/google`)
-- No state library, no data-fetching library, no auth — nothing to wire out
-  when a real backend replaces the data layer
+- No state library or data-fetching library; server components and Supabase
+  Server Actions own the data flow
 
 ## Running it
 
@@ -44,8 +44,8 @@ first.
 |---|---|
 | `/` | Browse — grid of performances |
 | `/video/[id]` | Performance detail — embed, song list, ratings, reviews |
-| `/review` | Review queue — worklist of performances needing a confirmation pass |
-| `/review/[id]?song=N` | Review flow — confirm one song's clip boundaries |
+| `/review` | Password-protected admin dashboard — truth requests, pipeline review, and presets |
+| `/review/[id]` | Public revision editor — publish a listening preset or submit main truth |
 | `/playlists` | Playlist library — create, open, and delete playlists |
 | `/playlist/[id]` | Playlist — cross-performance track list |
 
@@ -92,25 +92,14 @@ to change, they already treat this as an async data layer. Table shapes
 should follow `lib/types.ts` (`Performance`, `Song`, `Review`, `Playlist`,
 `PlaylistTrack`) — that file is the intended schema contract.
 
-Specific gaps to close, roughly in the order they'll bite:
+Remaining product gaps, roughly in the order they'll bite:
 
-1. **Auth.** The "Sign in" slot in `components/header.tsx` is a disabled
-   div. Whatever auth (Clerk, Supabase Auth, etc.) goes here also unlocks
-   "Your rating" / "Write a review" / "+ Add to list" on `/video/[id]`,
-   currently all inert.
-2. **Review-flow writes.** `/review/[id]`'s nudge/confirm/skip/mark-bad
-   buttons are disabled placeholders. This screen is
-   `scripts/review.py` from the pipeline repo, moved into the browser —
-   confirming here should write the same kind of correction that script's
-   `reports/<id>.verified.json` output represents, just to a real table
-   instead of a file. Needs a Server Action or API route + a schema for
-   storing corrections.
-3. **Ratings/reviews** — pure product surfaces with no pipeline equivalent,
-   build from scratch.
-4. **Upload dates.** `Performance.date` is `null` for every fixture — the
+1. **Ratings and written reviews.** The video page still shows the visual
+   rating/review surface, but those controls are not connected to writes yet.
+2. **Upload dates.** `Performance.date` is `null` for every fixture — the
    pipeline's yt-dlp call never captured it. Pull it from a real metadata
    source when performances get ingested for real.
-5. **Manual-tier videos.** The pipeline flags some videos `method:
+3. **Manual-tier videos.** The pipeline flags some videos `method:
    "manual"` (zero candidates — e.g. The Roots feat. Bilal in the real
    dataset) — deliberately excluded from `getPerformances()` /
    `getReviewQueue()` right now, since the review-flow UI assumes existing
@@ -124,6 +113,20 @@ youtube-nocookie.com iframe, reseeked by clicking a song row. What it
 doesn't do: scrub *within* a song (each click is a fresh seek + reload,
 not a smooth scrub), track "currently playing" as real playback state, or
 persist anything. That's still fair game to improve, just not blocking.
+
+### Review administration environment
+
+The review dashboard requires the server-only variables in `.env.local` and
+the deployment environment:
+
+```bash
+ADMIN_PASSWORD=paak
+ADMIN_SESSION_SECRET=replace-with-a-long-random-string
+```
+
+The admin password is checked only in a Server Action. The session cookie is
+signed, HttpOnly, bound to the signed-in Supabase user, and expires after
+eight hours. Keep both values out of client-exposed environment variables.
 
 ## Ingesting real pipeline output
 

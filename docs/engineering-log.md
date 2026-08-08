@@ -15,6 +15,25 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-08 — Review workflow Node verification blocked by WSL1
+
+- **Symptom and impact:** The new review editor, preset flow, and admin
+  Server Actions could not be validated with the repository's Node-based
+  tests, lint, or production build commands in this shell.
+- **Root cause / evidence:** `npm test`, `npx tsc --noEmit`, and `npm run lint`
+  all stopped before starting Node with `WSL 1 is not supported` and
+  `Could not determine Node.js install directory`. The bundled Windows Node
+  executable also failed through WSL interop with `UtilBindVsockAnyPort`.
+- **Systems and files:** WSL1 Node/npm interop, `app/review/`,
+  `components/revision-editor.tsx`, `lib/review-data.ts`, and the new review
+  utility tests.
+- **Resolution / next action:** Run the focused tests, lint, TypeScript check,
+  production build, and browser flows from WSL2 or another Linux Node runtime.
+- **Verification:** `git diff --check` passed. The connected Supabase project
+  accepted all review migrations; table introspection, grants, policies, and
+  Supabase security advisors were checked successfully apart from the
+  pre-existing Auth leaked-password-protection warning.
+
 ### 2026-08-08 — Song playlist picker runtime validation blocked
 
 - **Symptom and impact:** The new per-song playlist picker could not be

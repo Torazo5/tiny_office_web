@@ -34,47 +34,23 @@ type SongRow = {
   suspect: boolean;
 };
 
-type CorrectionRow = {
-  performance_video_id: string;
-  song_index: number;
-  action: "nudge_start" | "nudge_end" | "confirm" | "skip" | "mark_bad";
-  clip_start: number | null;
-  clip_end: number | null;
-  created_at: string;
-};
-
 function throwIfError(label: string, error: { message: string } | null) {
   if (error) throw new Error(`${label}: ${error.message}`);
 }
-
-function latestCorrections(rows: CorrectionRow[]) {
-  const latest = new Map<string, CorrectionRow>();
-  for (const row of rows) {
-    const key = `${row.performance_video_id}:${row.song_index}`;
-    if (!latest.has(key)) latest.set(key, row);
-  }
-  return latest;
-}
-
-function correctSong(song: SongRow, correction: CorrectionRow | undefined): Song {
+function mapSong(song: SongRow): Song {
   return {
     index: song.song_index,
     title: song.title,
-    clipStart: correction?.clip_start ?? song.clip_start,
-    clipEnd: correction?.clip_end ?? song.clip_end,
+    clipStart: Number(song.clip_start),
+    clipEnd: Number(song.clip_end),
     confidence: song.confidence,
-    suspect:
-      correction?.action === "mark_bad"
-        ? true
-        : correction?.action === "confirm"
-          ? false
-          : song.suspect,
+    suspect: song.suspect,
   };
 }
 
 async function loadPerformances(): Promise<Performance[]> {
   const supabase = await createClient();
-  const [performancesResult, songsResult, ratingsResult, reviewsResult, correctionsResult] = await Promise.all([
+  const [performancesResult, songsResult, ratingsResult, reviewsResult] = await Promise.all([
     supabase
       .from("performances")
       .select("video_id, artist, date, duration, method, confidence_avg, confidence_min, verified")
@@ -90,17 +66,12 @@ async function loadPerformances(): Promise<Performance[]> {
       .from("reviews")
       .select("performance_video_id, display_name, rating, text, created_at")
       .order("created_at", { ascending: false }),
-    supabase
-      .from("song_corrections")
-      .select("performance_video_id, song_index, action, clip_start, clip_end, created_at")
-      .order("created_at", { ascending: false }),
   ]);
 
   throwIfError("Loading performances", performancesResult.error);
   throwIfError("Loading songs", songsResult.error);
   throwIfError("Loading ratings", ratingsResult.error);
   throwIfError("Loading reviews", reviewsResult.error);
-  throwIfError("Loading corrections", correctionsResult.error);
 
   const songsByPerformance = new Map<string, SongRow[]>();
   for (const song of (songsResult.data ?? []) as SongRow[]) {
@@ -128,17 +99,10 @@ async function loadPerformances(): Promise<Performance[]> {
     reviewsByPerformance.set(review.performance_video_id, reviews);
   }
 
-  const corrections = latestCorrections((correctionsResult.data ?? []) as CorrectionRow[]);
-
   return ((performancesResult.data ?? []) as PerformanceRow[]).map((row) => {
     const rawSongs = songsByPerformance.get(row.video_id) ?? [];
-    const songs = rawSongs.map((song) =>
-      correctSong(song, corrections.get(`${row.video_id}:${song.song_index}`)),
-    );
+    const songs = rawSongs.map(mapSong);
     const ratings = ratingsByPerformance.get(row.video_id) ?? [];
-    const confirmed =
-      songs.length > 0 &&
-      songs.every((song) => corrections.get(`${row.video_id}:${song.index}`)?.action === "confirm");
 
     return {
       videoId: row.video_id,
@@ -148,7 +112,7 @@ async function loadPerformances(): Promise<Performance[]> {
       method: row.method,
       songs,
       confidence: { avg: Number(row.confidence_avg), min: Number(row.confidence_min) },
-      verified: row.verified || confirmed,
+      verified: row.verified,
       avgRating: ratings.length
         ? ratings.reduce((total, rating) => total + rating, 0) / ratings.length
         : null,
@@ -159,13 +123,9 @@ async function loadPerformances(): Promise<Performance[]> {
 }
 
 /**
- * DATA SEAM — every function here is async and returns plain data, backed
- * right now by the fixtures in lib/fixtures/. That's deliberate: swap a
- * function body for a Supabase query and no call site (page component)
- * needs to change, because they already treat this as an async data layer.
- *
- * Nothing here does real auth, real playback state, or real writes
- * (ratings/reviews/reorder/nudge-boundary). Those need a backend first.
+ * All performance reads use the approved values in public.songs. User drafts,
+ * truth requests, and listening presets are separate overlays and never
+ * silently become public ground truth.
  */
 
 export async function getPerformances(): Promise<Performance[]> {

@@ -1,23 +1,29 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { Header } from "@/components/header";
 import { PlayerProvider } from "@/components/player-context";
 import { SongRow } from "@/components/song-row";
 import { StarRating } from "@/components/star-rating";
 import { VideoEmbed } from "@/components/video-embed";
 import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
+import { PresetPicker } from "@/components/preset-picker";
 import { getCurrentUser } from "@/lib/auth";
-import { getPerformance, getPlaylists } from "@/lib/data";
+import { getPlaylists } from "@/lib/data";
+import { getPerformanceWithSelectedPreset } from "@/lib/review-data";
 
 export default async function VideoPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ id: string }>;
+  searchParams: Promise<{ preset_id?: string }>;
 }) {
   const { id } = await params;
-  const [performance, playlists, user] = await Promise.all([
-    getPerformance(id),
+  const { preset_id: previewPresetId } = await searchParams;
+  const user = await getCurrentUser();
+  const [{ performance, presets, selectedPreset }, playlists] = await Promise.all([
+    getPerformanceWithSelectedPreset(id, user?.id, previewPresetId),
     getPlaylists(),
-    getCurrentUser(),
   ]);
   if (!performance) notFound();
   const songPlaylists = user
@@ -52,6 +58,28 @@ export default async function VideoPage({
                 + Add to list
               </span>
             </div>
+
+            <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+              <Link
+                href={`/review/${performance.videoId}`}
+                className="rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground"
+              >
+                Edit timeline and send request
+              </Link>
+              <Link
+                href={`/review/${performance.videoId}`}
+                className="text-[12.5px] font-medium text-muted-foreground hover:text-foreground"
+              >
+                Open revision editor →
+              </Link>
+            </div>
+
+            <PresetPicker
+              videoId={performance.videoId}
+              presets={presets}
+              selectedPresetId={selectedPreset?.id ?? null}
+              isSignedIn={Boolean(user)}
+            />
 
             <h2 className="text-[13px] font-semibold text-muted-foreground uppercase tracking-wide mb-2.5">
               Reviews
