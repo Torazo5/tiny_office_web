@@ -6,6 +6,8 @@ import type {
   Playlist,
   PlaylistSongOption,
   PlaylistSummary,
+  PlaylistType,
+  PlaylistVideoOption,
   ReviewQueueItem,
   Song,
 } from "@/lib/types";
@@ -207,7 +209,7 @@ export async function getPlaylists(): Promise<PlaylistSummary[]> {
   const [playlistsResult, tracksResult] = await Promise.all([
     supabase
       .from("playlists")
-      .select("id, name, owner_name, owner_id")
+      .select("id, name, owner_name, owner_id, playlist_type")
       .order("updated_at", { ascending: false }),
     supabase.from("playlist_tracks").select("playlist_id"),
   ]);
@@ -224,6 +226,7 @@ export async function getPlaylists(): Promise<PlaylistSummary[]> {
     id: playlist.id,
     name: playlist.name,
     owner: playlist.owner_name,
+    type: playlist.playlist_type as PlaylistType,
     ownerId: playlist.owner_id,
     trackCount: trackCounts.get(playlist.id) ?? 0,
   }));
@@ -233,7 +236,7 @@ export async function getPlaylist(id: string): Promise<Playlist | null> {
   const supabase = await createClient();
   const { data: playlist, error: playlistError } = await supabase
     .from("playlists")
-    .select("id, name, owner_name, owner_id")
+    .select("id, name, owner_name, owner_id, playlist_type")
     .eq("id", id)
     .maybeSingle();
   throwIfError("Loading playlist", playlistError);
@@ -252,24 +255,29 @@ export async function getPlaylist(id: string): Promise<Playlist | null> {
       id: playlist.id,
       name: playlist.name,
       owner: playlist.owner_name,
+      type: playlist.playlist_type as PlaylistType,
       ownerId: playlist.owner_id,
       tracks: [],
     };
   }
 
-  const [performancesResult, songsResult] = await Promise.all([
-    supabase.from("performances").select("video_id, artist, date").in("video_id", videoIds),
-    supabase
-      .from("songs")
-      .select("performance_video_id, song_index, title, clip_start, clip_end")
-      .in("performance_video_id", videoIds),
-  ]);
-  throwIfError("Loading playlist performances", performancesResult.error);
-  throwIfError("Loading playlist songs", songsResult.error);
+  const { data: performanceRows, error: performancesError } = await supabase
+    .from("performances")
+    .select("video_id, artist, date, duration")
+    .in("video_id", videoIds);
+  throwIfError("Loading playlist performances", performancesError);
 
-  const performances = new Map((performancesResult.data ?? []).map((performance) => [performance.video_id, performance]));
+  const songsResult = playlist.playlist_type === "songs"
+    ? await supabase
+        .from("songs")
+        .select("performance_video_id, song_index, title, clip_start, clip_end")
+        .in("performance_video_id", videoIds)
+    : null;
+  if (songsResult) throwIfError("Loading playlist songs", songsResult.error);
+
+  const performances = new Map((performanceRows ?? []).map((performance) => [performance.video_id, performance]));
   const songs = new Map(
-    (songsResult.data ?? []).map((song) => [`${song.performance_video_id}:${song.song_index}`, song]),
+    (songsResult?.data ?? []).map((song) => [`${song.performance_video_id}:${song.song_index}`, song]),
   );
 
   let displayIndex = 0;
@@ -278,11 +286,31 @@ export async function getPlaylist(id: string): Promise<Playlist | null> {
     id: playlist.id,
     name: playlist.name,
     owner: playlist.owner_name,
+    type: playlist.playlist_type as PlaylistType,
     ownerId: playlist.owner_id,
     tracks: (tracks ?? []).flatMap((track) => {
       const performance = performances.get(track.performance_video_id);
       const song = songs.get(`${track.performance_video_id}:${track.song_index}`);
-      if (!performance || !song) return [];
+      if (!performance) return [];
+
+      if (playlist.playlist_type === "videos") {
+        displayIndex += 1;
+        const duration = Math.max(0, Number(performance.duration));
+        return [{
+          index: displayIndex,
+          position: track.position,
+          title: performance.artist,
+          artist: performance.artist,
+          performanceLabel: `Tiny Desk Concert${performance.date ? ` · ${performance.date}` : ""}`,
+          performanceVideoId: performance.video_id,
+          songIndex: null,
+          clipStart: 0,
+          clipEnd: duration,
+          duration,
+        }];
+      }
+
+      if (!song) return [];
       displayIndex += 1;
       return [{
         index: displayIndex,
@@ -292,6 +320,8 @@ export async function getPlaylist(id: string): Promise<Playlist | null> {
         performanceLabel: `Tiny Desk Concert${performance.date ? ` · ${performance.date}` : ""}`,
         performanceVideoId: performance.video_id,
         songIndex: song.song_index,
+        clipStart: Number(song.clip_start),
+        clipEnd: Number(song.clip_end),
         duration: Math.max(0, Number(song.clip_end) - Number(song.clip_start)),
       }];
     }),
@@ -308,7 +338,21 @@ export async function getPlaylistSongOptions(): Promise<PlaylistSongOption[]> {
       title: song.title,
       artist: performance.artist,
       performanceLabel: `Tiny Desk Concert${performance.date ? ` · ${performance.date}` : ""}`,
+      clipStart: song.clipStart,
+      clipEnd: song.clipEnd,
       duration: Math.max(0, song.clipEnd - song.clipStart),
     })),
   );
+}
+
+export async function getPlaylistVideoOptions(): Promise<PlaylistVideoOption[]> {
+  const performances = await loadPerformances();
+
+  return performances.map((performance) => ({
+    performanceVideoId: performance.videoId,
+    title: performance.artist,
+    artist: performance.artist,
+    performanceLabel: `Tiny Desk Concert${performance.date ? ` · ${performance.date}` : ""}`,
+    duration: performance.duration,
+  }));
 }

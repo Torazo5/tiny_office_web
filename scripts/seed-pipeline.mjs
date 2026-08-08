@@ -64,6 +64,7 @@ if (songsError) throw songsError;
 const demoPlaylist = {
   id: "late-night-sets",
   name: "Late Night Sets",
+  playlist_type: "songs",
   owner_name: "You",
   visibility: "public",
 };

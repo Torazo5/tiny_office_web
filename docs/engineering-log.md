@@ -15,6 +15,21 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-08 — Song/video playlist live validation blocked
+
+- **Symptom and impact:** The new playlist player and playlist-type migration
+  could not be exercised in a running Next.js app, so live YouTube switching
+  and Supabase create/add/remove behavior remain unverified here.
+- **Root cause / evidence:** The same WSL1 Node interop failure recurred when
+  running `npm run lint` and `npx tsc --noEmit`: `WSL 1 is not supported` and
+  `UtilBindVsockAnyPort ... socket failed 1`.
+- **Systems and files:** WSL1 Node.js runtime, `components/playlist-player.tsx`,
+  playlist server actions, and the playlist-type Supabase migration.
+- **Resolution / next action:** Run the checks and browser flow from WSL2 or a
+  Linux Node runtime after applying the new Supabase migration.
+- **Verification:** `git diff --check` and trailing-whitespace checks passed;
+  Node-based lint/typecheck could not start.
+
 ### 2026-08-08 — Playlist validation blocked by WSL Node launcher
 
 - **Symptom and impact:** `npm run lint` and `npx tsc --noEmit` could not run,

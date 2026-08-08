@@ -5,11 +5,13 @@ import { useRouter } from "next/navigation";
 import { useActionState, useState, useTransition } from "react";
 import { createPlaylist, deletePlaylist } from "@/app/playlist/actions";
 import { PlaceholderThumb } from "@/components/placeholder-thumb";
-import type { PlaylistActionState } from "@/app/playlist/actions";
 import type { PlaylistSummary } from "@/lib/types";
 
-function trackLabel(count: number) {
-  return `${count} ${count === 1 ? "song" : "songs"}`;
+type PlaylistActionState = { error: string } | null;
+
+function itemLabel(type: "songs" | "videos", count: number) {
+  const noun = type === "videos" ? "video" : "song";
+  return `${count} ${count === 1 ? noun : `${noun}s`}`;
 }
 
 export function PlaylistLibrary({
@@ -48,7 +50,7 @@ export function PlaylistLibrary({
         <div>
           <h1 className="text-[26px] font-bold text-foreground mb-1">Your playlists</h1>
           <p className="text-[13.5px] text-muted-foreground">
-            Keep the songs you want to come back to in one place.
+            Keep favorite song clips or full performances in one place.
           </p>
         </div>
         {userId ? (
@@ -79,7 +81,7 @@ export function PlaylistLibrary({
               Name your playlist
             </label>
             <p className="mt-1 text-[12.5px] text-muted-foreground">
-              You can add songs as soon as it is created.
+              Choose songs for clips or videos for full performances.
             </p>
           </div>
           <div className="flex flex-col gap-2 sm:flex-row">
@@ -93,6 +95,15 @@ export function PlaylistLibrary({
               autoFocus
               className="min-w-0 flex-1 rounded-lg border border-input bg-secondary px-3 py-2 text-sm text-foreground outline-none placeholder:text-muted-foreground/70 focus:border-primary"
             />
+            <select
+              name="type"
+              defaultValue="songs"
+              aria-label="Playlist type"
+              className="rounded-lg border border-input bg-secondary px-3 py-2 text-sm text-foreground outline-none focus:border-primary"
+            >
+              <option value="songs">Songs</option>
+              <option value="videos">Videos</option>
+            </select>
             <button
               type="submit"
               disabled={isCreating}
@@ -133,7 +144,7 @@ export function PlaylistLibrary({
                     {playlist.name}
                   </h2>
                   <p className="mt-1 text-[12.5px] text-muted-foreground">
-                    {trackLabel(playlist.trackCount)} · by {isOwner ? "You" : playlist.owner}
+                    {playlist.type === "songs" ? "Songs" : "Videos"} · {itemLabel(playlist.type, playlist.trackCount)} · by {isOwner ? "You" : playlist.owner}
                   </p>
                 </Link>
                 {isOwner && (

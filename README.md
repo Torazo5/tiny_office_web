@@ -66,9 +66,9 @@ knowing about before you "fix" them:
 - Napalm Death, "Dead" — `clip_end < clip_start` (an inverted range). Also
   real pipeline output, also correctly flagged.
 
-Everything else — ratings, review text, playlists, "verified" upload
-dates — has **no backend**, so it's plausible-looking mock data. See the
-doc comment at the top of `lib/data.ts` for the exact boundary.
+Ratings, review text, and "verified" upload dates remain fixture/mock data.
+Playlists are now Supabase-backed, including song/video playlist type and
+playlist track membership.
 
 ## For Codex: backend integration
 
@@ -84,8 +84,9 @@ they're gitignored there and nothing in this repo references them. Don't
 add Supabase Storage buckets for audio, don't proxy video through a
 Vercel Function, don't cache mp3s anywhere in this stack.
 
-Everything reads through `lib/data.ts` — four async functions
-(`getPerformances`, `getPerformance`, `getReviewQueue`, `getPlaylist`).
+Everything reads through `lib/data.ts` async data functions, including
+`getPlaylists`, `getPlaylist`, `getPlaylistSongOptions`, and
+`getPlaylistVideoOptions`.
 Replace their bodies with real Supabase queries; no page component needs
 to change, they already treat this as an async data layer. Table shapes
 should follow `lib/types.ts` (`Performance`, `Song`, `Review`, `Playlist`,
@@ -104,8 +105,8 @@ Specific gaps to close, roughly in the order they'll bite:
    `reports/<id>.verified.json` output represents, just to a real table
    instead of a file. Needs a Server Action or API route + a schema for
    storing corrections.
-3. **Ratings/reviews/playlists tables** — pure product surfaces, no
-   pipeline equivalent, build from scratch.
+3. **Ratings/reviews** — pure product surfaces with no pipeline equivalent,
+   build from scratch.
 4. **Upload dates.** `Performance.date` is `null` for every fixture — the
    pipeline's yt-dlp call never captured it. Pull it from a real metadata
    source when performances get ingested for real.

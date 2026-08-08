@@ -70,6 +70,8 @@ export interface ReviewQueueItem {
   whyText: string;
 }
 
+export type PlaylistType = "songs" | "videos";
+
 export interface PlaylistTrack {
   /** Display position in the playlist. */
   index: number;
@@ -80,7 +82,9 @@ export interface PlaylistTrack {
   /** e.g. "Tiny Desk · Mar 12, 2024" */
   performanceLabel: string;
   performanceVideoId: string;
-  songIndex: number;
+  songIndex: number | null;
+  clipStart: number;
+  clipEnd: number;
   /** seconds */
   duration: number;
 }
@@ -89,6 +93,7 @@ export interface Playlist {
   id: string;
   name: string;
   owner: string;
+  type: PlaylistType;
   ownerId?: string | null;
   tracks: PlaylistTrack[];
 }
@@ -97,6 +102,7 @@ export interface PlaylistSummary {
   id: string;
   name: string;
   owner: string;
+  type: PlaylistType;
   ownerId: string | null;
   trackCount: number;
 }
@@ -104,6 +110,16 @@ export interface PlaylistSummary {
 export interface PlaylistSongOption {
   performanceVideoId: string;
   songIndex: number;
+  title: string;
+  artist: string;
+  performanceLabel: string;
+  clipStart: number;
+  clipEnd: number;
+  duration: number;
+}
+
+export interface PlaylistVideoOption {
+  performanceVideoId: string;
   title: string;
   artist: string;
   performanceLabel: string;
