@@ -91,7 +91,12 @@ export function PlaylistDetail({
     } else {
       setTracks((current) => [
         ...current,
-        { ...song, index: current.length + 1, position: nextPosition(current) },
+        {
+          ...song,
+          index: current.length + 1,
+          position: nextPosition(current),
+          songClips: [],
+        },
       ]);
       router.refresh();
     }
