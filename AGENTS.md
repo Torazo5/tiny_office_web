@@ -39,3 +39,11 @@ If the agent cannot write Git metadata or create a required commit, it must
 tell the user why (for example, a read-only `.git` sandbox) and provide the
 exact `git add` and `git commit` commands for the files it changed. Do not
 push unless explicitly instructed.
+
+### Functional verification before commits
+
+Before creating a commit for a code or configuration change, run `npm run
+build` when possible. If a production build is not practical for the change,
+start `npm run dev` and exercise the affected flow. If the environment blocks
+both, record the blocker in `docs/engineering-log.md` and clearly report that
+functional verification could not be completed.

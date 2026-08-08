@@ -40,7 +40,6 @@ export function PerformanceCard({
               {p.avgRating.toFixed(1)} · {p.ratingCount.toLocaleString()}
             </span>
           </div>
-        </div>
         )}
       </Link>
       <div className="mt-2">

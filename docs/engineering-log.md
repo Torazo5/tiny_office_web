@@ -15,6 +15,22 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-08 — Browse card build blocked by malformed JSX
+
+- **Symptom and impact:** The production build failed during parsing with
+  `Unterminated regexp literal` in `components/performance-card.tsx`, blocking
+  deployment of the browse-card playlist action.
+- **Root cause / evidence:** The card refactor left an extra closing `</div>`
+  after the optional rating block, so Turbopack parsed the following JSX as
+  invalid source.
+- **Systems and files:** Next.js 16.3.0 Turbopack and
+  `components/performance-card.tsx`.
+- **Resolution / next action:** Removed the unmatched closing element. The
+  repository now also requires a build or dev-flow check before commits.
+- **Verification:** `git diff --check` passed. Both `npm run build` and
+  `npm run dev` were attempted but are blocked before startup by the WSL1 Node
+  runtime; rerun the build from WSL2 or the deployment environment.
+
 ### 2026-08-08 — Production build blocked by conflicting YouTube player types
 
 - **Symptom and impact:** The production build compiled successfully but
