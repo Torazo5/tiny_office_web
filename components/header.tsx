@@ -1,0 +1,59 @@
+import Link from "next/link";
+import { Input } from "@/components/ui/input";
+
+/**
+ * Shared header, per the design handoff. Rendered explicitly at the top of
+ * each page (not in the root layout) because the one variant prop that
+ * changes per-screen — `progressLabel`, only used on the review flow — is
+ * page-specific data a root layout can't easily see.
+ *
+ * Search input is decorative for now — wiring it to real search needs a
+ * backend to search against.
+ */
+export function Header({
+  showBack = true,
+  progressLabel,
+}: {
+  showBack?: boolean;
+  progressLabel?: string;
+}) {
+  return (
+    <header className="flex items-center gap-6 px-8 py-4 border-b border-border">
+      <Link
+        href="/"
+        className="font-sans font-bold text-[19px] tracking-tight text-foreground whitespace-nowrap"
+      >
+        Tiny<span className="text-primary">Office</span>
+      </Link>
+
+      {showBack && (
+        <Link
+          href="/"
+          className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1.5 rounded-md transition-colors"
+        >
+          <span aria-hidden>&larr;</span> Browse
+        </Link>
+      )}
+
+      <div className="flex-1 max-w-[420px]">
+        <Input
+          placeholder="Search performances, artists, songs"
+          className="bg-secondary"
+          disabled
+        />
+      </div>
+
+      <div className="flex-1" />
+
+      {progressLabel && (
+        <div className="font-mono text-xs font-semibold text-muted-foreground bg-secondary border border-border px-3 py-1.5 rounded-full whitespace-nowrap">
+          {progressLabel}
+        </div>
+      )}
+
+      <div className="text-sm font-medium text-muted-foreground border border-input px-4 py-2 rounded-lg whitespace-nowrap cursor-not-allowed">
+        Sign in
+      </div>
+    </header>
+  );
+}

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#0b0a09;}
+  ::selection{background:oklch(0.68 0.17 25 / 0.35);}
+  a{color:inherit;text-decoration:none;}
+  input::placeholder{color:oklch(0.5 0.006 60);}
+  @keyframes playBars{0%,100%{height:4px;}50%{height:13px;}}
+</style>
+</helmet>
+
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif;background:oklch(0.155 0.004 60);min-height:100vh;color:oklch(0.92 0.004 60);width:100%;max-width:1440px;margin:0 auto;box-sizing:border-box;overflow-x:hidden;">
+
+  <!-- mockup screen switcher (not part of product UI) -->
+  <div style="display:flex;gap:6px;padding:12px 32px;background:oklch(0.105 0.004 60);border-bottom:1px solid oklch(0.24 0.006 60);position:sticky;top:0;z-index:10;">
+    <span style="font:600 10.5px/1 'IBM Plex Mono',monospace;color:oklch(0.46 0.006 60);align-self:center;margin-right:6px;text-transform:uppercase;letter-spacing:0.07em;">Mockup nav</span>
+    <sc-for list="{{ screenTabs }}" as="tab" hint-placeholder-count="4">
+      <button onClick="{{ tab.onClick }}" style="font:500 12.5px 'IBM Plex Sans',sans-serif;padding:6px 13px;border-radius:6px;border:1px solid transparent;background:{{ tab.bg }};color:{{ tab.color }};cursor:pointer;">{{ tab.label }}</button>
+    </sc-for>
+  </div>
+
+  <!-- ===== Shared app header ===== -->
+  <div style="display:flex;align-items:center;gap:22px;padding:16px 32px;border-bottom:1px solid oklch(0.24 0.006 60);">
+    <div onClick="{{ goBrowse }}" style="font:700 19px 'IBM Plex Sans',sans-serif;letter-spacing:-0.01em;color:oklch(0.94 0.004 60);white-space:nowrap;cursor:pointer;">Tiny<span style="color:oklch(0.68 0.17 25);">Office</span></div>
+
+    <sc-if value="{{ showBack }}" hint-placeholder-val="{{ false }}">
+      <div onClick="{{ goBrowse }}" style="display:flex;align-items:center;gap:5px;font:500 13px 'IBM Plex Sans',sans-serif;color:oklch(0.6 0.006 60);cursor:pointer;padding:6px 10px;border-radius:6px;">
+        <span style="font-size:14px;">&larr;</span> Browse
+      </div>
+    </sc-if>
+
+    <div style="flex:1;max-width:420px;">
+      <input placeholder="Search performances, artists, songs" style="width:100%;box-sizing:border-box;background:oklch(0.21 0.004 60);border:1px solid oklch(0.28 0.006 60);border-radius:8px;padding:9px 14px;font:400 13.5px 'IBM Plex Sans',sans-serif;color:oklch(0.9 0.004 60);outline:none;" />
+    </div>
+
+    <div style="flex:1;"></div>
+
+    <sc-if value="{{ showProgress }}" hint-placeholder-val="{{ false }}">
+      <div style="font:600 12px 'IBM Plex Mono',monospace;color:oklch(0.62 0.006 60);background:oklch(0.21 0.004 60);border:1px solid oklch(0.28 0.006 60);padding:6px 12px;border-radius:20px;">{{ progressLabel }}</div>
+    </sc-if>
+
+    <div style="font:500 13px 'IBM Plex Sans',sans-serif;color:oklch(0.58 0.006 60);padding:8px 16px;border:1px solid oklch(0.3 0.006 60);border-radius:8px;cursor:pointer;white-space:nowrap;">Sign in</div>
+  </div>
+
+  <!-- ===== Screen: Browse ===== -->
+  <sc-if value="{{ isBrowse }}" hint-placeholder-val="{{ true }}">
+    <div style="padding:32px;">
+      <div style="font:600 22px 'IBM Plex Sans',sans-serif;color:oklch(0.94 0.004 60);margin-bottom:4px;">Browse performances</div>
+      <div style="font:400 13.5px 'IBM Plex Sans',sans-serif;color:oklch(0.55 0.006 60);margin-bottom:24px;">{{ perfCountLabel }} concerts, individually playable by song</div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px;">
+        <sc-for list="{{ performances }}" as="p" hint-placeholder-count="8">
+          <div onClick="{{ p.onClick }}" style="cursor:pointer;">
+            <div style="position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:repeating-linear-gradient(135deg,oklch(0.24 0.005 60) 0 10px,oklch(0.21 0.005 60) 10px 20px);margin-bottom:10px;display:flex;align-items:center;justify-content:center;">
+              <span style="font:500 10px 'IBM Plex Mono',monospace;color:oklch(0.5 0.006 60);letter-spacing:0.04em;">THUMBNAIL</span>
+              <div style="position:absolute;top:8px;right:8px;width:9px;height:9px;border-radius:50%;background:{{ p.dotColor }};box-shadow:0 0 0 3px oklch(0.16 0.004 60 / 0.6);"></div>
+              <div style="position:absolute;bottom:8px;right:8px;background:oklch(0.1 0.004 60 / 0.75);color:oklch(0.88 0.004 60);font:500 11px 'IBM Plex Mono',monospace;padding:3px 7px;border-radius:4px;white-space:nowrap;">{{ p.songCount }} songs</div>
+            </div>
+            <div style="font:600 14.5px 'IBM Plex Sans',sans-serif;color:oklch(0.93 0.004 60);margin-bottom:2px;">{{ p.artist }}</div>
+            <div style="font:400 12.5px 'IBM Plex Sans',sans-serif;color:oklch(0.52 0.006 60);margin-bottom:5px;">Tiny Desk Concert &middot; {{ p.date }}</div>
+            <div style="font:500 12.5px 'IBM Plex Sans',sans-serif;display:flex;align-items:baseline;gap:6px;">
+              <span><span style="color:oklch(0.68 0.17 25);letter-spacing:1px;">{{ p.starsFilled }}</span><span style="color:oklch(0.34 0.006 60);letter-spacing:1px;">{{ p.starsEmpty }}</span></span>
+              <span style="color:oklch(0.5 0.006 60);font:400 12px 'IBM Plex Mono',monospace;">{{ p.avgRating }} &middot; {{ p.ratingCount }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ===== Screen: Video detail ===== -->
+  <sc-if value="{{ isVideo }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:32px;display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:start;">
+      <div>
+        <div style="aspect-ratio:16/9;border-radius:10px;background:oklch(0.08 0.004 60);display:flex;align-items:center;justify-content:center;margin-bottom:16px;border:1px solid oklch(0.24 0.006 60);">
+          <div style="width:64px;height:64px;border-radius:50%;background:oklch(0.68 0.17 25);display:flex;align-items:center;justify-content:center;">
+            <div style="width:0;height:0;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent oklch(0.1 0.004 60);margin-left:4px;"></div>
+          </div>
+          <span style="position:absolute;margin-top:96px;font:500 10.5px 'IBM Plex Mono',monospace;color:oklch(0.42 0.006 60);letter-spacing:0.05em;">YOUTUBE EMBED</span>
+        </div>
+        <div style="font:700 24px 'IBM Plex Sans',sans-serif;color:oklch(0.95 0.004 60);margin-bottom:6px;">{{ selectedPerf.artist }}</div>
+        <div style="font:400 14px 'IBM Plex Sans',sans-serif;color:oklch(0.56 0.006 60);margin-bottom:18px;">Tiny Desk Concert &middot; {{ selectedPerf.date }} &middot; NPR Music</div>
+
+        <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-top:1px solid oklch(0.24 0.006 60);border-bottom:1px solid oklch(0.24 0.006 60);margin-bottom:18px;">
+          <span style="font:500 12.5px 'IBM Plex Sans',sans-serif;color:oklch(0.58 0.006 60);">Your rating</span>
+          <div style="display:flex;gap:3px;">
+            <sc-for list="{{ myStars }}" as="star" hint-placeholder-count="5">
+              <span onClick="{{ star.onClick }}" style="font-size:19px;cursor:pointer;color:{{ star.color }};">&#9733;</span>
+            </sc-for>
+          </div>
+          <div style="flex:1;"></div>
+          <span style="font:500 12.5px 'IBM Plex Sans',sans-serif;color:oklch(0.68 0.17 25);cursor:pointer;">Write a review</span>
+          <span style="font:500 12.5px 'IBM Plex Sans',sans-serif;color:oklch(0.58 0.006 60);cursor:pointer;">+ Add to list</span>
+        </div>
+
+        <div style="font:600 13px 'IBM Plex Sans',sans-serif;color:oklch(0.6 0.006 60);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Reviews</div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <sc-for list="{{ selectedPerf.reviews }}" as="rev" hint-placeholder-count="3">
+            <div style="display:flex;gap:12px;">
+              <div style="width:32px;height:32px;border-radius:50%;flex:none;background:repeating-linear-gradient(135deg,oklch(0.28 0.006 60) 0 6px,oklch(0.24 0.006 60) 6px 12px);"></div>
+              <div>
+                <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:2px;">
+                  <span style="font:600 13px 'IBM Plex Sans',sans-serif;color:oklch(0.88 0.004 60);">{{ rev.user }}</span>
+                  <span style="color:oklch(0.68 0.17 25);font-size:11.5px;letter-spacing:1px;">{{ rev.starsFilled }}</span><span style="color:oklch(0.34 0.006 60);font-size:11.5px;letter-spacing:1px;margin-left:-6px;">{{ rev.starsEmpty }}</span>
+                  <span style="font:400 11.5px 'IBM Plex Mono',monospace;color:oklch(0.44 0.006 60);">{{ rev.date }}</span>
+                </div>
+                <div style="font:400 13px/1.5 'IBM Plex Sans',sans-serif;color:oklch(0.72 0.006 60);">{{ rev.text }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div>
+        <div style="font:600 13px 'IBM Plex Sans',sans-serif;color:oklch(0.6 0.006 60);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Songs in this set</div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <sc-for list="{{ selectedPerf.songs }}" as="s" hint-placeholder-count="4">
+            <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:8px;cursor:pointer;background:transparent;" style-hover="background:oklch(0.21 0.004 60);">
+              <div style="width:20px;text-align:center;font:500 12px 'IBM Plex Mono',monospace;color:oklch(0.44 0.006 60);">{{ s.index }}</div>
+              <div style="width:8px;height:8px;border-radius:50%;background:{{ s.dotColor }};flex:none;"></div>
+              <div style="flex:1;">
+                <div style="font:500 13.5px 'IBM Plex Sans',sans-serif;color:oklch(0.9 0.004 60);">{{ s.title }}</div>
+                <sc-if value="{{ s.unverified }}" hint-placeholder-val="{{ false }}">
+                  <div style="font:400 11.5px 'IBM Plex Sans',sans-serif;color:oklch(0.68 0.17 25);margin-top:1px;">Unconfirmed boundaries</div>
+                </sc-if>
+              </div>
+              <div style="font:400 12px 'IBM Plex Mono',monospace;color:oklch(0.5 0.006 60);">{{ s.start }}</div>
+              <div style="font:400 12px 'IBM Plex Mono',monospace;color:oklch(0.4 0.006 60);width:38px;text-align:right;">{{ s.duration }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ===== Screen: Review queue ===== -->
+  <sc-if value="{{ isReview }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:32px;">
+      <div style="font:600 20px 'IBM Plex Sans',sans-serif;color:oklch(0.92 0.004 60);margin-bottom:4px;">Review queue</div>
+      <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:oklch(0.52 0.006 60);margin-bottom:20px;">{{ reviewCountLabel }} performances flagged for manual confirmation</div>
+
+      <div style="border:1px solid oklch(0.26 0.006 60);border-radius:8px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:2.2fr 0.9fr 2.3fr 0.8fr;padding:10px 16px;background:oklch(0.19 0.004 60);font:600 11px 'IBM Plex Mono',monospace;color:oklch(0.5 0.006 60);text-transform:uppercase;letter-spacing:0.04em;">
+          <div>Performance</div><div>Confidence</div><div>Why</div><div></div>
+        </div>
+        <sc-for list="{{ reviewItems }}" as="r" hint-placeholder-count="4">
+          <div style="display:grid;grid-template-columns:2.2fr 0.9fr 2.3fr 0.8fr;align-items:center;padding:13px 16px;border-top:1px solid oklch(0.22 0.005 60);">
+            <div style="font:500 13.5px 'IBM Plex Sans',sans-serif;color:oklch(0.9 0.004 60);">{{ r.artist }}</div>
+            <div style="font:600 13px 'IBM Plex Mono',monospace;color:{{ r.confColor }};">{{ r.confidencePct }}%</div>
+            <div style="font:400 12.5px 'IBM Plex Sans',sans-serif;color:oklch(0.58 0.006 60);">{{ r.whyText }}</div>
+            <div onClick="{{ r.onClick }}" style="font:500 12.5px 'IBM Plex Sans',sans-serif;color:oklch(0.68 0.17 25);cursor:pointer;text-align:right;">Review &rarr;</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ===== Screen: Single-video review flow ===== -->
+  <sc-if value="{{ isReviewItem }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:32px;max-width:900px;margin:0 auto;">
+      <div style="font:600 20px 'IBM Plex Sans',sans-serif;color:oklch(0.92 0.004 60);margin-bottom:2px;">{{ reviewSong.artist }}</div>
+      <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:oklch(0.52 0.006 60);margin-bottom:22px;">Confirming song boundaries</div>
+
+      <div style="background:oklch(0.19 0.004 60);border:1px solid oklch(0.26 0.006 60);border-radius:10px;padding:20px;margin-bottom:18px;">
+        <div style="font:600 15px 'IBM Plex Sans',sans-serif;color:oklch(0.94 0.004 60);margin-bottom:2px;">{{ reviewSong.title }}</div>
+        <div style="font:400 12px 'IBM Plex Mono',monospace;color:oklch(0.5 0.006 60);margin-bottom:18px;">clip {{ reviewSong.startTime }} &ndash; {{ reviewSong.endTime }}</div>
+
+        <div style="position:relative;height:64px;display:flex;align-items:center;gap:2px;margin-bottom:8px;">
+          <sc-for list="{{ waveform }}" as="bar" hint-placeholder-count="48">
+            <div style="width:100%;height:{{ bar.h }}px;background:{{ bar.color }};border-radius:1px;"></div>
+          </sc-for>
+        </div>
+        <div style="position:relative;height:2px;background:oklch(0.28 0.006 60);border-radius:2px;">
+          <div style="position:absolute;top:-3px;height:8px;border-radius:4px;background:oklch(0.68 0.17 25 / 0.25);border:1px solid oklch(0.68 0.17 25);left:{{ reviewSong.startPct }}%;width:{{ reviewSong.widthPct }}%;"></div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;margin-top:6px;font:400 11px 'IBM Plex Mono',monospace;color:oklch(0.42 0.006 60);">
+          <span>0:00</span><span>{{ reviewSong.totalTime }}</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap;">
+        <button onClick="{{ nudgeStartBack }}" style="font:500 13px 'IBM Plex Sans',sans-serif;padding:9px 14px;border-radius:8px;border:1px solid oklch(0.3 0.006 60);background:oklch(0.19 0.004 60);color:oklch(0.85 0.004 60);cursor:pointer;">&larr; Nudge start</button>
+        <button onClick="{{ nudgeEndFwd }}" style="font:500 13px 'IBM Plex Sans',sans-serif;padding:9px 14px;border-radius:8px;border:1px solid oklch(0.3 0.006 60);background:oklch(0.19 0.004 60);color:oklch(0.85 0.004 60);cursor:pointer;">Nudge end &rarr;</button>
+        <div style="flex:1;"></div>
+        <button style="font:500 13px 'IBM Plex Sans',sans-serif;padding:9px 16px;border-radius:8px;border:none;background:transparent;color:oklch(0.62 0.18 25);cursor:pointer;">Mark bad</button>
+        <button style="font:500 13px 'IBM Plex Sans',sans-serif;padding:9px 16px;border-radius:8px;border:1px solid oklch(0.3 0.006 60);background:transparent;color:oklch(0.75 0.004 60);cursor:pointer;">Skip</button>
+        <button style="font:600 13px 'IBM Plex Sans',sans-serif;padding:9px 18px;border-radius:8px;border:none;background:oklch(0.68 0.17 25);color:oklch(0.1 0.004 60);cursor:pointer;">Confirm</button>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid oklch(0.24 0.006 60);">
+        <button onClick="{{ prevSong }}" style="font:500 13px 'IBM Plex Sans',sans-serif;padding:8px 14px;border-radius:8px;border:1px solid oklch(0.28 0.006 60);background:transparent;color:oklch(0.6 0.006 60);cursor:pointer;">&larr; Previous song</button>
+        <button onClick="{{ nextSong }}" style="font:500 13px 'IBM Plex Sans',sans-serif;padding:8px 14px;border-radius:8px;border:1px solid oklch(0.28 0.006 60);background:transparent;color:oklch(0.6 0.006 60);cursor:pointer;">Next song &rarr;</button>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ===== Screen: Playlist ===== -->
+  <sc-if value="{{ isPlaylist }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:32px;">
+      <div style="display:flex;gap:24px;align-items:flex-end;margin-bottom:28px;">
+        <div style="width:180px;height:180px;flex:none;border-radius:10px;background:repeating-linear-gradient(135deg,oklch(0.26 0.006 60) 0 10px,oklch(0.22 0.006 60) 10px 20px);display:flex;align-items:center;justify-content:center;">
+          <span style="font:500 10px 'IBM Plex Mono',monospace;color:oklch(0.5 0.006 60);letter-spacing:0.04em;">COVER</span>
+        </div>
+        <div>
+          <div style="font:600 11px 'IBM Plex Mono',monospace;color:oklch(0.55 0.006 60);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;">Playlist</div>
+          <div style="font:700 32px 'IBM Plex Sans',sans-serif;color:oklch(0.96 0.004 60);margin-bottom:10px;">{{ playlist.name }}</div>
+          <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:oklch(0.56 0.006 60);margin-bottom:18px;">by You &middot; {{ playlist.songCount }} songs &middot; {{ playlist.totalTime }}</div>
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:46px;height:46px;border-radius:50%;background:oklch(0.68 0.17 25);display:flex;align-items:center;justify-content:center;cursor:pointer;">
+              <div style="width:0;height:0;border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent oklch(0.1 0.004 60);margin-left:3px;"></div>
+            </div>
+            <span style="font:500 13px 'IBM Plex Sans',sans-serif;color:oklch(0.6 0.006 60);cursor:pointer;">+ Add songs</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:28px 1fr 1.1fr 70px;padding:8px 14px;border-bottom:1px solid oklch(0.24 0.006 60);font:600 11px 'IBM Plex Mono',monospace;color:oklch(0.48 0.006 60);text-transform:uppercase;letter-spacing:0.04em;">
+        <div>#</div><div>Title</div><div>From performance</div><div style="text-align:right;">Time</div>
+      </div>
+      <sc-for list="{{ playlist.songs }}" as="ps" hint-placeholder-count="6">
+        <div onClick="{{ ps.onClick }}" style="display:grid;grid-template-columns:28px 1fr 1.1fr 70px;align-items:center;padding:11px 14px;border-radius:8px;cursor:pointer;background:{{ ps.rowBg }};" style-hover="background:oklch(0.2 0.004 60);">
+          <div style="font:500 12.5px 'IBM Plex Mono',monospace;color:oklch(0.46 0.006 60);display:flex;align-items:center;">
+            <sc-if value="{{ ps.playing }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;gap:2px;align-items:flex-end;height:13px;">
+                <div style="width:2px;height:8px;background:oklch(0.68 0.17 25);animation:playBars 0.9s ease-in-out infinite;"></div>
+                <div style="width:2px;height:8px;background:oklch(0.68 0.17 25);animation:playBars 0.9s ease-in-out infinite 0.2s;"></div>
+                <div style="width:2px;height:8px;background:oklch(0.68 0.17 25);animation:playBars 0.9s ease-in-out infinite 0.4s;"></div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ ps.notPlaying }}" hint-placeholder-val="{{ true }}">
+              <span>{{ ps.index }}</span>
+            </sc-if>
+          </div>
+          <div>
+            <div style="font:500 13.5px 'IBM Plex Sans',sans-serif;color:{{ ps.titleColor }};">{{ ps.title }}</div>
+            <div style="font:400 12px 'IBM Plex Sans',sans-serif;color:oklch(0.5 0.006 60);">{{ ps.artist }}</div>
+          </div>
+          <div style="font:400 12.5px 'IBM Plex Sans',sans-serif;color:oklch(0.54 0.006 60);">{{ ps.perf }}</div>
+          <div style="font:400 12px 'IBM Plex Mono',monospace;color:oklch(0.46 0.006 60);text-align:right;">{{ ps.duration }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+function starStrings(rating) {
+  const filled = Math.round(rating);
+  return { starsFilled: '\u2605'.repeat(filled), starsEmpty: '\u2605'.repeat(5 - filled) };
+}
+
+const REVIEWS = {
+  tyler: [
+    { user: 'mfmiller', rating: 5, date: 'Mar 14, 2024', text: 'EARFQUAKE live hits different when it\u2019s just him and a band this tight. Best Tiny Desk of the year so far.' },
+    { user: 'juniper_k', rating: 4, date: 'Mar 13, 2024', text: 'Sticky as a closer was a great call. Wish the set was longer.' },
+  ],
+  paak: [
+    { user: 'soul_archive', rating: 5, date: 'Feb 5, 2024', text: 'Anderson behind the kit for half of this is worth the watch alone.' },
+  ],
+  doechii: [
+    { user: 'rap_radar_99', rating: 3, date: 'Jan 24, 2024', text: 'Great energy but the boundary between Persuasive and Denial Is a River is cut weird here.' },
+  ],
+};
+
+const PERFORMANCES = [
+  { id: 'tyler', artist: 'Tyler, The Creator', date: 'Mar 12, 2024', verified: true, avgRating: 4.3, ratingCount: '2.1k ratings',
+    songs: [
+      { title: 'See You Again', start: '0:00', duration: '3:24', unverified: false },
+      { title: 'EARFQUAKE', start: '3:24', duration: '3:10', unverified: false },
+      { title: 'WUSYANAME', start: '6:34', duration: '2:45', unverified: true },
+      { title: 'Sticky', start: '9:19', duration: '3:02', unverified: false },
+    ] },
+  { id: 'paak', artist: 'Anderson .Paak', date: 'Feb 3, 2024', verified: true, avgRating: 4.6, ratingCount: '1.8k ratings',
+    songs: [
+      { title: 'Come Down', start: '0:00', duration: '3:40', unverified: false },
+      { title: 'Bubblin', start: '3:40', duration: '2:58', unverified: false },
+      { title: 'Tints', start: '6:38', duration: '3:15', unverified: false },
+      { title: 'Am I Wrong', start: '9:53', duration: '3:20', unverified: false },
+      { title: 'Silicon Valley', start: '13:13', duration: '2:40', unverified: false },
+    ] },
+  { id: 'doechii', artist: 'Doechii', date: 'Jan 22, 2024', verified: false, avgRating: 4.1, ratingCount: '640 ratings',
+    songs: [
+      { title: 'What It Is (Block Boy)', start: '0:00', duration: '3:12', unverified: false },
+      { title: 'Persuasive', start: '3:12', duration: '2:50', unverified: true },
+      { title: 'Denial Is a River', start: '6:02', duration: '3:38', unverified: true },
+    ] },
+  { id: 'mac', artist: 'Mac Miller', date: 'Sep 10, 2018', verified: true, avgRating: 4.8, ratingCount: '5.4k ratings',
+    songs: [
+      { title: 'Small Worlds', start: '0:00', duration: '4:02', unverified: false },
+      { title: 'What\u2019s the Use?', start: '4:02', duration: '3:45', unverified: false },
+      { title: 'Self Care', start: '7:47', duration: '4:10', unverified: false },
+      { title: '2009', start: '11:57', duration: '3:33', unverified: false },
+    ] },
+  { id: 'lizzo', artist: 'Lizzo', date: 'Apr 1, 2019', verified: true, avgRating: 4.4, ratingCount: '3.2k ratings',
+    songs: [
+      { title: 'Cuz I Love You', start: '0:00', duration: '3:20', unverified: false },
+      { title: 'Truth Hurts', start: '3:20', duration: '3:02', unverified: false },
+      { title: 'Juice', start: '6:22', duration: '3:15', unverified: false },
+      { title: 'Good as Hell', start: '9:37', duration: '3:00', unverified: false },
+    ] },
+  { id: 'common', artist: 'Common', date: 'Nov 5, 2023', verified: true, avgRating: 4.0, ratingCount: '812 ratings',
+    songs: [
+      { title: 'The Light', start: '0:00', duration: '4:20', unverified: false },
+      { title: 'Testify', start: '4:20', duration: '3:30', unverified: false },
+      { title: 'Glory', start: '7:50', duration: '3:55', unverified: false },
+    ] },
+  { id: 'snailmail', artist: 'Snail Mail', date: 'Jun 18, 2024', verified: false, avgRating: 3.9, ratingCount: '298 ratings',
+    songs: [
+      { title: 'Pristine', start: '0:00', duration: '3:44', unverified: false },
+      { title: 'Valentine', start: '3:44', duration: '3:10', unverified: true },
+      { title: 'Heat Wave', start: '6:54', duration: '2:55', unverified: false },
+    ] },
+  { id: 'jbrekkie', artist: 'Japanese Breakfast', date: 'Aug 2, 2021', verified: true, avgRating: 4.5, ratingCount: '1.1k ratings',
+    songs: [
+      { title: 'Be Sweet', start: '0:00', duration: '3:30', unverified: false },
+      { title: 'Kokomo, IN', start: '3:30', duration: '3:12', unverified: false },
+      { title: 'Paprika', start: '6:42', duration: '3:48', unverified: false },
+      { title: 'Posing in Bondage', start: '10:30', duration: '4:05', unverified: false },
+    ] },
+];
+
+const REVIEW_META = {
+  doechii: { confidencePct: 62, whyText: '2 of 3 songs unconfirmed' },
+  snailmail: { confidencePct: 71, whyText: '1 song boundary unclear' },
+  jbrekkie: { confidencePct: 88, whyText: 'Intro banter miscut as song' },
+  common: { confidencePct: 95, whyText: 'Low confidence timestamp on track 3' },
+};
+
+const PLAYLIST_SONGS = [
+  { title: 'EARFQUAKE', artist: 'Tyler, The Creator', perf: 'Tiny Desk \u00b7 Mar 12, 2024', duration: '3:10' },
+  { title: 'Come Down', artist: 'Anderson .Paak', perf: 'Tiny Desk \u00b7 Feb 3, 2024', duration: '3:40' },
+  { title: 'Self Care', artist: 'Mac Miller', perf: 'Tiny Desk \u00b7 Sep 10, 2018', duration: '4:10' },
+  { title: 'Truth Hurts', artist: 'Lizzo', perf: 'Tiny Desk \u00b7 Apr 1, 2019', duration: '3:02' },
+  { title: 'Be Sweet', artist: 'Japanese Breakfast', perf: 'Tiny Desk \u00b7 Aug 2, 2021', duration: '3:30' },
+  { title: 'The Light', artist: 'Common', perf: 'Tiny Desk \u00b7 Nov 5, 2023', duration: '4:20' },
+  { title: 'Pristine', artist: 'Snail Mail', perf: 'Tiny Desk \u00b7 Jun 18, 2024', duration: '3:44' },
+];
+
+const ACCENT = 'oklch(0.68 0.17 25)';
+const GREEN = 'oklch(0.62 0.1 145)';
+
+class Component extends DCLogic {
+  state = {
+    screen: 'browse',
+    selectedPerfId: 'tyler',
+    selectedReviewId: 'doechii',
+    reviewSongIndex: 1,
+    nudge: 0,
+    myRating: 4,
+    playingIndex: 1,
+  };
+
+  go(screen, extra) {
+    this.setState(Object.assign({ screen }, extra || {}));
+  }
+
+  renderVals() {
+    const s = this.state;
+    const tabs = [
+      { key: 'browse', label: 'Browse' },
+      { key: 'video', label: 'Performance detail' },
+      { key: 'review', label: 'Review queue' },
+      { key: 'reviewItem', label: 'Review flow' },
+      { key: 'playlist', label: 'Playlist' },
+    ];
+    const screenTabs = tabs.map(t => ({
+      label: t.label,
+      onClick: () => this.go(t.key),
+      bg: s.screen === t.key ? 'oklch(0.24 0.006 60)' : 'transparent',
+      color: s.screen === t.key ? 'oklch(0.94 0.004 60)' : 'oklch(0.55 0.006 60)',
+    }));
+
+    const performances = PERFORMANCES.map(p => {
+      const stars = starStrings(p.avgRating);
+      return {
+        artist: p.artist,
+        date: p.date,
+        songCount: p.songs.length,
+        dotColor: p.verified ? GREEN : ACCENT,
+        onClick: () => this.go('video', { selectedPerfId: p.id }),
+        avgRating: p.avgRating.toFixed(1),
+        ratingCount: p.ratingCount,
+        starsFilled: stars.starsFilled,
+        starsEmpty: stars.starsEmpty,
+      };
+    });
+
+    const perf = PERFORMANCES.find(p => p.id === s.selectedPerfId) || PERFORMANCES[0];
+    const selectedPerf = {
+      artist: perf.artist,
+      date: perf.date,
+      songs: perf.songs.map((song, i) => ({
+        index: i + 1,
+        title: song.title,
+        start: song.start,
+        duration: song.duration,
+        unverified: song.unverified,
+        dotColor: song.unverified ? ACCENT : GREEN,
+      })),
+      reviews: (REVIEWS[perf.id] || []).map(r => {
+        const stars = starStrings(r.rating);
+        return Object.assign({}, r, stars);
+      }),
+    };
+
+    const myStars = [1, 2, 3, 4, 5].map(n => ({
+      color: n <= s.myRating ? ACCENT : 'oklch(0.34 0.006 60)',
+      onClick: () => this.setState({ myRating: n }),
+    }));
+
+    const reviewItems = PERFORMANCES.filter(p => !p.verified).map(p => {
+      const meta = REVIEW_META[p.id];
+      return {
+        artist: p.artist,
+        confidencePct: meta.confidencePct,
+        whyText: meta.whyText,
+        confColor: meta.confidencePct < 70 ? ACCENT : 'oklch(0.62 0.006 60)',
+        onClick: () => this.go('reviewItem', { selectedReviewId: p.id, reviewSongIndex: 0, nudge: 0 }),
+      };
+    });
+
+    const revPerf = PERFORMANCES.find(p => p.id === s.selectedReviewId) || PERFORMANCES[0];
+    const idx = Math.max(0, Math.min(s.reviewSongIndex, revPerf.songs.length - 1));
+    const song = revPerf.songs[idx];
+    const basePct = 12 + idx * 4;
+    const startPct = Math.max(2, Math.min(85, basePct + s.nudge));
+    const widthPct = 34;
+
+    const waveform = Array.from({ length: 48 }, (_, i) => {
+      const h = Math.round(14 + 20 * Math.abs(Math.sin(i * 0.7)) + (i % 5) * 2);
+      const pct = (i / 48) * 100;
+      const inClip = pct >= startPct && pct <= startPct + widthPct;
+      return { h, color: inClip ? ACCENT : 'oklch(0.32 0.006 60)' };
+    });
+
+    const totalSecs = PLAYLIST_SONGS.reduce((sum, sg) => {
+      const [m, sec] = sg.duration.split(':').map(Number);
+      return sum + m * 60 + sec;
+    }, 0);
+    const playlist = {
+      name: 'Late Night Sets',
+      songCount: PLAYLIST_SONGS.length,
+      totalTime: `${Math.floor(totalSecs / 60)} min`,
+      songs: PLAYLIST_SONGS.map((sg, i) => ({
+        index: i + 1,
+        title: sg.title,
+        artist: sg.artist,
+        perf: sg.perf,
+        duration: sg.duration,
+        playing: i === s.playingIndex,
+        notPlaying: i !== s.playingIndex,
+        titleColor: i === s.playingIndex ? ACCENT : 'oklch(0.92 0.004 60)',
+        rowBg: i === s.playingIndex ? 'oklch(0.21 0.006 60)' : 'transparent',
+        onClick: () => this.setState({ playingIndex: i }),
+      })),
+    };
+
+    return {
+      screenTabs,
+      isBrowse: s.screen === 'browse',
+      isVideo: s.screen === 'video',
+      isReview: s.screen === 'review',
+      isReviewItem: s.screen === 'reviewItem',
+      isPlaylist: s.screen === 'playlist',
+      playlist,
+      showBack: s.screen !== 'browse',
+      showProgress: s.screen === 'reviewItem',
+      progressLabel: `Song ${idx + 1} of ${revPerf.songs.length}`,
+      goBrowse: () => this.go('browse'),
+      perfCountLabel: PERFORMANCES.length,
+      performances,
+      selectedPerf,
+      myStars,
+      reviewCountLabel: reviewItems.length,
+      reviewItems,
+      reviewSong: {
+        artist: revPerf.artist,
+        title: song.title,
+        startTime: song.start,
+        endTime: song.duration,
+        totalTime: revPerf.songs[revPerf.songs.length - 1].start,
+        startPct,
+        widthPct,
+      },
+      waveform,
+      nudgeStartBack: () => this.setState({ nudge: s.nudge - 3 }),
+      nudgeEndFwd: () => this.setState({ nudge: s.nudge + 3 }),
+      prevSong: () => this.setState({ reviewSongIndex: Math.max(0, idx - 1), nudge: 0 }),
+      nextSong: () => this.setState({ reviewSongIndex: Math.min(revPerf.songs.length - 1, idx + 1), nudge: 0 }),
+    };
+  }
+}
+</script>
+</body>
+</html>
