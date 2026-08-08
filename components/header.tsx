@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
+import { getCurrentUser } from "@/lib/auth";
+import { signOut } from "@/app/auth/actions";
 
 /**
  * Shared header, per the design handoff. Rendered explicitly at the top of
@@ -10,13 +12,15 @@ import { Input } from "@/components/ui/input";
  * Search input is decorative for now — wiring it to real search needs a
  * backend to search against.
  */
-export function Header({
+export async function Header({
   showBack = true,
   progressLabel,
 }: {
   showBack?: boolean;
   progressLabel?: string;
 }) {
+  const user = await getCurrentUser();
+
   return (
     <header className="flex items-center gap-6 px-8 py-4 border-b border-border">
       <Link
@@ -51,9 +55,24 @@ export function Header({
         </div>
       )}
 
-      <div className="text-sm font-medium text-muted-foreground border border-input px-4 py-2 rounded-lg whitespace-nowrap cursor-not-allowed">
-        Sign in
-      </div>
+      {user ? (
+        <form action={signOut} className="flex items-center gap-3">
+          <span className="max-w-[180px] truncate text-sm text-muted-foreground">{user.email}</span>
+          <button
+            type="submit"
+            className="whitespace-nowrap rounded-lg border border-input px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
+          >
+            Sign out
+          </button>
+        </form>
+      ) : (
+        <Link
+          href="/login"
+          className="whitespace-nowrap rounded-lg border border-input px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
+        >
+          Sign in
+        </Link>
+      )}
     </header>
   );
 }

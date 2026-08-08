@@ -1,8 +1,152 @@
 import "server-only";
 
-import { PERFORMANCES } from "@/lib/fixtures/performances";
-import { DEMO_PLAYLIST } from "@/lib/fixtures/playlist";
-import type { Performance, Playlist, ReviewQueueItem } from "@/lib/types";
+import { createClient } from "@/lib/supabase/server";
+import type { Performance, Playlist, ReviewQueueItem, Song } from "@/lib/types";
+
+type PerformanceRow = {
+  video_id: string;
+  artist: string;
+  date: string | null;
+  duration: number;
+  method: Performance["method"];
+  confidence_avg: number;
+  confidence_min: number;
+  verified: boolean;
+};
+
+type SongRow = {
+  performance_video_id: string;
+  song_index: number;
+  title: string;
+  clip_start: number;
+  clip_end: number;
+  confidence: number;
+  suspect: boolean;
+};
+
+type CorrectionRow = {
+  performance_video_id: string;
+  song_index: number;
+  action: "nudge_start" | "nudge_end" | "confirm" | "skip" | "mark_bad";
+  clip_start: number | null;
+  clip_end: number | null;
+  created_at: string;
+};
+
+function throwIfError(label: string, error: { message: string } | null) {
+  if (error) throw new Error(`${label}: ${error.message}`);
+}
+
+function latestCorrections(rows: CorrectionRow[]) {
+  const latest = new Map<string, CorrectionRow>();
+  for (const row of rows) {
+    const key = `${row.performance_video_id}:${row.song_index}`;
+    if (!latest.has(key)) latest.set(key, row);
+  }
+  return latest;
+}
+
+function correctSong(song: SongRow, correction: CorrectionRow | undefined): Song {
+  return {
+    index: song.song_index,
+    title: song.title,
+    clipStart: correction?.clip_start ?? song.clip_start,
+    clipEnd: correction?.clip_end ?? song.clip_end,
+    confidence: song.confidence,
+    suspect:
+      correction?.action === "mark_bad"
+        ? true
+        : correction?.action === "confirm"
+          ? false
+          : song.suspect,
+  };
+}
+
+async function loadPerformances(): Promise<Performance[]> {
+  const supabase = await createClient();
+  const [performancesResult, songsResult, ratingsResult, reviewsResult, correctionsResult] = await Promise.all([
+    supabase
+      .from("performances")
+      .select("video_id, artist, date, duration, method, confidence_avg, confidence_min, verified")
+      .neq("method", "manual")
+      .order("artist"),
+    supabase
+      .from("songs")
+      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect")
+      .order("performance_video_id")
+      .order("song_index"),
+    supabase.from("ratings").select("performance_video_id, rating"),
+    supabase
+      .from("reviews")
+      .select("performance_video_id, display_name, rating, text, created_at")
+      .order("created_at", { ascending: false }),
+    supabase
+      .from("song_corrections")
+      .select("performance_video_id, song_index, action, clip_start, clip_end, created_at")
+      .order("created_at", { ascending: false }),
+  ]);
+
+  throwIfError("Loading performances", performancesResult.error);
+  throwIfError("Loading songs", songsResult.error);
+  throwIfError("Loading ratings", ratingsResult.error);
+  throwIfError("Loading reviews", reviewsResult.error);
+  throwIfError("Loading corrections", correctionsResult.error);
+
+  const songsByPerformance = new Map<string, SongRow[]>();
+  for (const song of (songsResult.data ?? []) as SongRow[]) {
+    const songs = songsByPerformance.get(song.performance_video_id) ?? [];
+    songs.push(song);
+    songsByPerformance.set(song.performance_video_id, songs);
+  }
+
+  const ratingsByPerformance = new Map<string, number[]>();
+  for (const rating of ratingsResult.data ?? []) {
+    const ratings = ratingsByPerformance.get(rating.performance_video_id) ?? [];
+    ratings.push(Number(rating.rating));
+    ratingsByPerformance.set(rating.performance_video_id, ratings);
+  }
+
+  const reviewsByPerformance = new Map<string, Performance["reviews"]>();
+  for (const review of reviewsResult.data ?? []) {
+    const reviews = reviewsByPerformance.get(review.performance_video_id) ?? [];
+    reviews.push({
+      user: review.display_name,
+      rating: Number(review.rating),
+      date: review.created_at,
+      text: review.text,
+    });
+    reviewsByPerformance.set(review.performance_video_id, reviews);
+  }
+
+  const corrections = latestCorrections((correctionsResult.data ?? []) as CorrectionRow[]);
+
+  return ((performancesResult.data ?? []) as PerformanceRow[]).map((row) => {
+    const rawSongs = songsByPerformance.get(row.video_id) ?? [];
+    const songs = rawSongs.map((song) =>
+      correctSong(song, corrections.get(`${row.video_id}:${song.song_index}`)),
+    );
+    const ratings = ratingsByPerformance.get(row.video_id) ?? [];
+    const confirmed =
+      songs.length > 0 &&
+      songs.every((song) => corrections.get(`${row.video_id}:${song.index}`)?.action === "confirm");
+
+    return {
+      videoId: row.video_id,
+      artist: row.artist,
+      date: row.date,
+      duration: Number(row.duration),
+      method: row.method,
+      songs,
+      confidence: { avg: Number(row.confidence_avg), min: Number(row.confidence_min) },
+      verified: row.verified || confirmed,
+      avgRating: ratings.length
+        ? ratings.reduce((total, rating) => total + rating, 0) / ratings.length
+        : null,
+      ratingCount: ratings.length,
+      reviews: reviewsByPerformance.get(row.video_id) ?? [],
+    } satisfies Performance;
+  });
+}
 
 /**
  * DATA SEAM — every function here is async and returns plain data, backed
@@ -15,11 +159,12 @@ import type { Performance, Playlist, ReviewQueueItem } from "@/lib/types";
  */
 
 export async function getPerformances(): Promise<Performance[]> {
-  return PERFORMANCES;
+  return loadPerformances();
 }
 
 export async function getPerformance(videoId: string): Promise<Performance | null> {
-  return PERFORMANCES.find((p) => p.videoId === videoId) ?? null;
+  const performances = await loadPerformances();
+  return performances.find((performance) => performance.videoId === videoId) ?? null;
 }
 
 /**
@@ -34,7 +179,8 @@ export async function getPerformance(videoId: string): Promise<Performance | nul
  * scripts/manual_mark.py equivalent) that doesn't exist in this app yet.
  */
 export async function getReviewQueue(): Promise<ReviewQueueItem[]> {
-  return PERFORMANCES.filter((p) => !p.verified).map((p) => {
+  const performances = await loadPerformances();
+  return performances.filter((p) => !p.verified).map((p) => {
     const suspectCount = p.songs.filter((s) => s.suspect).length;
     const whyText =
       suspectCount > 0
@@ -53,6 +199,54 @@ export async function getReviewQueue(): Promise<ReviewQueueItem[]> {
  * Single playlist demo, ignores `id` — see lib/fixtures/playlist.ts.
  */
 export async function getPlaylist(id: string): Promise<Playlist | null> {
-  if (id !== DEMO_PLAYLIST.id) return null;
-  return DEMO_PLAYLIST;
+  const supabase = await createClient();
+  const { data: playlist, error: playlistError } = await supabase
+    .from("playlists")
+    .select("id, name, owner_name")
+    .eq("id", id)
+    .maybeSingle();
+  throwIfError("Loading playlist", playlistError);
+  if (!playlist) return null;
+
+  const { data: tracks, error: tracksError } = await supabase
+    .from("playlist_tracks")
+    .select("position, performance_video_id, song_index")
+    .eq("playlist_id", id)
+    .order("position");
+  throwIfError("Loading playlist tracks", tracksError);
+
+  const videoIds = [...new Set((tracks ?? []).map((track) => track.performance_video_id))];
+  const [performancesResult, songsResult] = await Promise.all([
+    supabase.from("performances").select("video_id, artist, date").in("video_id", videoIds),
+    supabase
+      .from("songs")
+      .select("performance_video_id, song_index, title, clip_start, clip_end")
+      .in("performance_video_id", videoIds),
+  ]);
+  throwIfError("Loading playlist performances", performancesResult.error);
+  throwIfError("Loading playlist songs", songsResult.error);
+
+  const performances = new Map((performancesResult.data ?? []).map((performance) => [performance.video_id, performance]));
+  const songs = new Map(
+    (songsResult.data ?? []).map((song) => [`${song.performance_video_id}:${song.song_index}`, song]),
+  );
+
+  return {
+    id: playlist.id,
+    name: playlist.name,
+    owner: playlist.owner_name,
+    tracks: (tracks ?? []).flatMap((track) => {
+      const performance = performances.get(track.performance_video_id);
+      const song = songs.get(`${track.performance_video_id}:${track.song_index}`);
+      if (!performance || !song) return [];
+      return [{
+        index: track.position,
+        title: song.title,
+        artist: performance.artist,
+        performanceLabel: `Tiny Desk Concert${performance.date ? ` · ${performance.date}` : ""}`,
+        performanceVideoId: performance.video_id,
+        duration: Math.max(0, Number(song.clip_end) - Number(song.clip_start)),
+      }];
+    }),
+  };
 }

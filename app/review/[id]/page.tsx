@@ -4,6 +4,7 @@ import { Header } from "@/components/header";
 import { Waveform } from "@/components/waveform";
 import { formatTime } from "@/lib/format";
 import { getPerformance } from "@/lib/data";
+import { recordReviewAction } from "@/app/review/actions";
 
 /**
  * Song-by-song boundary confirmation flow. Prev/Next navigate via a real
@@ -59,36 +60,44 @@ export default async function ReviewFlowPage({
           </div>
         </div>
 
-        <div className="flex gap-2.5 flex-wrap mb-5.5">
+        <form action={recordReviewAction} className="flex gap-2.5 flex-wrap mb-5.5">
+          <input type="hidden" name="performance_video_id" value={performance.videoId} />
+          <input type="hidden" name="song_index" value={song.index} />
+          <input type="hidden" name="clip_start" value={song.clipStart} />
+          <input type="hidden" name="clip_end" value={song.clipEnd} />
           <button
-            disabled
+            name="action"
+            value="nudge_start"
             className="text-[13px] font-medium px-3.5 py-2 rounded-lg border border-input bg-card text-foreground/80 cursor-not-allowed"
           >
             &larr; Nudge start
           </button>
           <button
-            disabled
+            name="action"
+            value="nudge_end"
             className="text-[13px] font-medium px-3.5 py-2 rounded-lg border border-input bg-card text-foreground/80 cursor-not-allowed"
           >
             Nudge end &rarr;
           </button>
           <div className="flex-1" />
-          <button disabled className="text-[13px] font-medium px-4 py-2 rounded-lg text-primary/80 cursor-not-allowed">
+          <button name="action" value="mark_bad" className="text-[13px] font-medium px-4 py-2 rounded-lg text-primary/80">
             Mark bad
           </button>
           <button
-            disabled
+            name="action"
+            value="skip"
             className="text-[13px] font-medium px-4 py-2 rounded-lg border border-input text-foreground/70 cursor-not-allowed"
           >
             Skip
           </button>
           <button
-            disabled
+            name="action"
+            value="confirm"
             className="text-[13px] font-semibold px-4.5 py-2 rounded-lg bg-primary/60 text-primary-foreground cursor-not-allowed"
           >
             Confirm
           </button>
-        </div>
+        </form>
 
         <div className="flex justify-between items-center pt-4 border-t border-border">
           <Link
