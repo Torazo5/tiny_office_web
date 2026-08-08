@@ -2,8 +2,16 @@
  * Static placeholder waveform — there's no real waveform/amplitude data in
  * the pipeline output (reports/<id>.json has no such field), so bar
  * heights are a deterministic decorative pattern, not real audio analysis.
- * Codex should replace this with real waveform data once that exists
- * (e.g. computed from reports/audio/<id>.mp3).
+ *
+ * To make this real: the *pipeline* (which has the source mp3 locally,
+ * gitignored, never committed) would need to extract a small array of
+ * amplitude values and add it to reports/<id>.json — a few hundred
+ * numbers, trivial to store in Supabase. The mp3 itself must never be
+ * uploaded to Supabase Storage, proxied, or served to users — playback is
+ * exclusively through the YouTube embed (video-embed.tsx). That's what
+ * makes this legal: it's YouTube's own official embed, not a rehost of
+ * their content. Don't build a path where audio/video bytes flow through
+ * our infrastructure.
  *
  * What IS real: the clip-range highlight position, derived from the
  * song's actual clip_start/clip_end against the performance's duration.

@@ -71,6 +71,18 @@ doc comment at the top of `lib/data.ts` for the exact boundary.
 
 ## For Codex: backend integration
 
+**Hard constraint, not a suggestion: Supabase stores metadata only —
+timestamps, text, confidence scores, user-generated content (ratings,
+reviews, playlists). Never audio or video bytes.** Playback is exclusively
+through the YouTube embed (`components/video-embed.tsx`,
+`youtube-nocookie.com`) — that's what makes this legal, since it's
+YouTube's own official embed rather than a rehost of their content. The
+pipeline's source mp3s (`reports/audio/*.mp3` in the `tiny_office` repo)
+exist only so YAMNet/ffmpeg can compute boundary timestamps locally —
+they're gitignored there and nothing in this repo references them. Don't
+add Supabase Storage buckets for audio, don't proxy video through a
+Vercel Function, don't cache mp3s anywhere in this stack.
+
 Everything reads through `lib/data.ts` — four async functions
 (`getPerformances`, `getPerformance`, `getReviewQueue`, `getPlaylist`).
 Replace their bodies with real Supabase queries; no page component needs
