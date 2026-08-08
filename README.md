@@ -46,6 +46,7 @@ first.
 | `/video/[id]` | Performance detail — embed, song list, ratings, reviews |
 | `/review` | Review queue — worklist of performances needing a confirmation pass |
 | `/review/[id]?song=N` | Review flow — confirm one song's clip boundaries |
+| `/playlists` | Playlist library — create, open, and delete playlists |
 | `/playlist/[id]` | Playlist — cross-performance track list |
 
 ## What's real vs. mock

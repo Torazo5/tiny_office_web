@@ -15,6 +15,23 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-08 — Playlist validation blocked by WSL Node launcher
+
+- **Symptom and impact:** `npm run lint` and `npx tsc --noEmit` could not run,
+  so automated validation of the playlist changes is unavailable in this
+  shell.
+- **Root cause / evidence:** The shell is running under WSL1. Both the npm
+  shim and the available Windows Node executables failed before starting with
+  `WSL ... UtilBindVsockAnyPort ... socket failed 1` and
+  `WSL 1 is not supported`.
+- **Systems and files:** WSL1 command interop, the Node.js runtime, and the
+  playlist route/action/component files in this change.
+- **Resolution / next action:** Run lint, TypeScript, and the Next.js dev
+  server from WSL2 or another Linux Node runtime, then browser-check create,
+  add, remove, and delete playlist flows.
+- **Verification:** `git diff --check` passed; a thread terminal was not
+  attached and no dev server could be started from this environment.
+
 ### 2026-08-08 — Local app startup blocked
 
 - **Symptom and impact:** `npm run dev` could not start because the local

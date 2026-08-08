@@ -1,7 +1,14 @@
 import "server-only";
 
 import { createClient } from "@/lib/supabase/server";
-import type { Performance, Playlist, ReviewQueueItem, Song } from "@/lib/types";
+import type {
+  Performance,
+  Playlist,
+  PlaylistSongOption,
+  PlaylistSummary,
+  ReviewQueueItem,
+  Song,
+} from "@/lib/types";
 
 type PerformanceRow = {
   video_id: string;
@@ -195,14 +202,38 @@ export async function getReviewQueue(): Promise<ReviewQueueItem[]> {
   });
 }
 
-/**
- * Single playlist demo, ignores `id` — see lib/fixtures/playlist.ts.
- */
+export async function getPlaylists(): Promise<PlaylistSummary[]> {
+  const supabase = await createClient();
+  const [playlistsResult, tracksResult] = await Promise.all([
+    supabase
+      .from("playlists")
+      .select("id, name, owner_name, owner_id")
+      .order("updated_at", { ascending: false }),
+    supabase.from("playlist_tracks").select("playlist_id"),
+  ]);
+
+  throwIfError("Loading playlists", playlistsResult.error);
+  throwIfError("Loading playlist track counts", tracksResult.error);
+
+  const trackCounts = new Map<string, number>();
+  for (const track of tracksResult.data ?? []) {
+    trackCounts.set(track.playlist_id, (trackCounts.get(track.playlist_id) ?? 0) + 1);
+  }
+
+  return (playlistsResult.data ?? []).map((playlist) => ({
+    id: playlist.id,
+    name: playlist.name,
+    owner: playlist.owner_name,
+    ownerId: playlist.owner_id,
+    trackCount: trackCounts.get(playlist.id) ?? 0,
+  }));
+}
+
 export async function getPlaylist(id: string): Promise<Playlist | null> {
   const supabase = await createClient();
   const { data: playlist, error: playlistError } = await supabase
     .from("playlists")
-    .select("id, name, owner_name")
+    .select("id, name, owner_name, owner_id")
     .eq("id", id)
     .maybeSingle();
   throwIfError("Loading playlist", playlistError);
@@ -216,6 +247,16 @@ export async function getPlaylist(id: string): Promise<Playlist | null> {
   throwIfError("Loading playlist tracks", tracksError);
 
   const videoIds = [...new Set((tracks ?? []).map((track) => track.performance_video_id))];
+  if (videoIds.length === 0) {
+    return {
+      id: playlist.id,
+      name: playlist.name,
+      owner: playlist.owner_name,
+      ownerId: playlist.owner_id,
+      tracks: [],
+    };
+  }
+
   const [performancesResult, songsResult] = await Promise.all([
     supabase.from("performances").select("video_id, artist, date").in("video_id", videoIds),
     supabase
@@ -231,22 +272,43 @@ export async function getPlaylist(id: string): Promise<Playlist | null> {
     (songsResult.data ?? []).map((song) => [`${song.performance_video_id}:${song.song_index}`, song]),
   );
 
+  let displayIndex = 0;
+
   return {
     id: playlist.id,
     name: playlist.name,
     owner: playlist.owner_name,
+    ownerId: playlist.owner_id,
     tracks: (tracks ?? []).flatMap((track) => {
       const performance = performances.get(track.performance_video_id);
       const song = songs.get(`${track.performance_video_id}:${track.song_index}`);
       if (!performance || !song) return [];
+      displayIndex += 1;
       return [{
-        index: track.position,
+        index: displayIndex,
+        position: track.position,
         title: song.title,
         artist: performance.artist,
         performanceLabel: `Tiny Desk Concert${performance.date ? ` · ${performance.date}` : ""}`,
         performanceVideoId: performance.video_id,
+        songIndex: song.song_index,
         duration: Math.max(0, Number(song.clip_end) - Number(song.clip_start)),
       }];
     }),
   };
+}
+
+export async function getPlaylistSongOptions(): Promise<PlaylistSongOption[]> {
+  const performances = await loadPerformances();
+
+  return performances.flatMap((performance) =>
+    performance.songs.map((song) => ({
+      performanceVideoId: performance.videoId,
+      songIndex: song.index,
+      title: song.title,
+      artist: performance.artist,
+      performanceLabel: `Tiny Desk Concert${performance.date ? ` · ${performance.date}` : ""}`,
+      duration: Math.max(0, song.clipEnd - song.clipStart),
+    })),
+  );
 }

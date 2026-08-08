@@ -39,6 +39,13 @@ export async function Header({
         </Link>
       )}
 
+      <Link
+        href="/playlists"
+        className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+      >
+        Playlists
+      </Link>
+
       <div className="flex-1 max-w-[420px]">
         <Input
           placeholder="Search performances, artists, songs"

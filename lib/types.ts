@@ -4,9 +4,7 @@
  * `Song`/`Performance` mirror the pipeline's output contract documented in
  * tiny_office/PIPELINE.md (`reports/<id>.json`) — video_id, method,
  * clip_start/clip_end, confidence, suspect. Anything NOT in that contract
- * (ratings, reviews, playlists) is a new product surface with no backend
- * yet; those types exist so the UI has something to render, but the data
- * behind them is fixture/mock data until Supabase is wired in.
+ * (ratings, reviews, playlists) are product surfaces backed by Supabase.
  */
 
 export type ConfidenceTier = "high" | "medium" | "low" | "very-low";
@@ -73,12 +71,16 @@ export interface ReviewQueueItem {
 }
 
 export interface PlaylistTrack {
+  /** Display position in the playlist. */
   index: number;
+  /** Persisted position used when removing this track. */
+  position: number;
   title: string;
   artist: string;
   /** e.g. "Tiny Desk · Mar 12, 2024" */
   performanceLabel: string;
   performanceVideoId: string;
+  songIndex: number;
   /** seconds */
   duration: number;
 }
@@ -87,5 +89,23 @@ export interface Playlist {
   id: string;
   name: string;
   owner: string;
+  ownerId?: string | null;
   tracks: PlaylistTrack[];
+}
+
+export interface PlaylistSummary {
+  id: string;
+  name: string;
+  owner: string;
+  ownerId: string | null;
+  trackCount: number;
+}
+
+export interface PlaylistSongOption {
+  performanceVideoId: string;
+  songIndex: number;
+  title: string;
+  artist: string;
+  performanceLabel: string;
+  duration: number;
 }
