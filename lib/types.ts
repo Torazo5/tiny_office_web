@@ -30,6 +30,8 @@ export interface Song {
   suspect: boolean;
 }
 
+export type PlaylistSongClip = Pick<Song, "clipStart" | "clipEnd">;
+
 export interface Performance {
   /** YouTube video ID — same as reports/<video_id>.json */
   videoId: string;
@@ -87,6 +89,8 @@ export interface PlaylistTrack {
   clipEnd: number;
   /** seconds */
   duration: number;
+  /** Song boundaries used to skip gaps during full-performance playback. */
+  songClips: PlaylistSongClip[];
 }
 
 export interface Playlist {
@@ -124,4 +128,5 @@ export interface PlaylistVideoOption {
   artist: string;
   performanceLabel: string;
   duration: number;
+  songClips: PlaylistSongClip[];
 }

@@ -183,3 +183,35 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** TypeScript compilation, ESLint, and the five focused
   only-song-mode tests passed; `next build` reproduced the missing Windows
   Lightning CSS module error.
+
+### 2026-08-08 — Full-video playlist validation blocked by WSL1 Node launcher
+
+- **Symptom and impact:** The focused tests, lint, and production build for
+  full-video playlist gap skipping could not start, so the changed player and
+  Supabase data path remain statically reviewed but not runtime-verified here.
+- **Root cause / evidence:** `npm test`, `npm run lint`, and `npm run build`
+  all stopped before Node.js startup with `WSL 1 is not supported` and
+  `Could not determine Node.js install directory`.
+- **Systems and files:** WSL1 Node.js/npm launcher, `components/playlist-player.tsx`,
+  `lib/data.ts`, and the playlist type definitions.
+- **Resolution / next action:** Run the focused tests, lint, production build,
+  and a browser playback check from WSL2 or another Linux Node.js runtime.
+- **Verification:** `git diff --check` passed; no application command reached
+  its test, lint, or build phase in this shell.
+
+### 2026-08-08 — Full-video playlist commit blocked by read-only Git metadata
+
+- **Symptom and impact:** The required focused local commit could not be
+  created through the normal Git executable, leaving the verified source
+  changes unstaged.
+- **Root cause / evidence:** `git add` failed before staging with
+  `fatal: Unable to create '/home/torazo/code/tiny-office-web/.git/index.lock':
+  Read-only file system`.
+- **Systems and files:** Git metadata under `.git` and the full-video playlist
+  changes in `components/playlist-player.tsx`, `lib/data.ts`, the playlist
+  types, fixture, detail component, and engineering log.
+- **Resolution / next action:** Retry with the environment’s scoped Git-write
+  workaround; if it remains unavailable, run the exact Git commands below
+  from a writable checkout.
+- **Verification:** The failed `git add` left no files staged; the working-tree
+  diff continues to pass `git diff --check`.

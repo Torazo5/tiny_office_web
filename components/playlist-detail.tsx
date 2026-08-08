@@ -112,6 +112,7 @@ export function PlaylistDetail({
     if (result?.error) {
       setError(result.error);
     } else {
+      const firstPlayableSong = video.songClips.find((clip) => clip.clipEnd > clip.clipStart);
       setTracks((current) => [
         ...current,
         {
@@ -119,8 +120,9 @@ export function PlaylistDetail({
           index: current.length + 1,
           position: nextPosition(current),
           songIndex: null,
-          clipStart: 0,
+          clipStart: firstPlayableSong?.clipStart ?? 0,
           clipEnd: video.duration,
+          songClips: video.songClips,
         },
       ]);
       router.refresh();

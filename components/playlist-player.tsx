@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { PlaylistTrack, PlaylistType } from "@/lib/types";
+import { findOnlySongModeTarget } from "@/lib/only-song-mode";
 
 type YouTubePlayer = {
   destroy: () => void;
@@ -82,6 +83,7 @@ export function PlaylistPlayer({
   const tracksRef = useRef(tracks);
   const currentIndexRef = useRef(0);
   const advanceLockRef = useRef(false);
+  const previousTimeRef = useRef(0);
   const loadTrackRef = useRef<(index: number) => void>(() => undefined);
   const advanceToNextRef = useRef<() => void>(() => undefined);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
@@ -97,6 +99,7 @@ export function PlaylistPlayer({
     const previousTrack = tracksRef.current[currentIndexRef.current];
     currentIndexRef.current = index;
     setCurrentIndex(index);
+    previousTimeRef.current = Math.max(0, track.clipStart);
     advanceLockRef.current = true;
     if (previousTrack?.performanceVideoId === track.performanceVideoId) {
       playerRef.current.seekTo(Math.max(0, track.clipStart), true);
@@ -146,11 +149,15 @@ export function PlaylistPlayer({
             onReady: (event) => {
               if (cancelled) return;
               playerRef.current = event.target;
+              previousTimeRef.current = event.target.getCurrentTime();
               setPlayerState(event.target.getPlayerState());
               setIsPlayerReady(true);
             },
             onStateChange: (event) => {
               if (cancelled) return;
+              if (event.data !== PLAYER_BUFFERING) {
+                previousTimeRef.current = event.target.getCurrentTime();
+              }
               setPlayerState(event.data);
               if (event.data === PLAYER_ENDED) advanceToNextRef.current();
             },
@@ -179,7 +186,7 @@ export function PlaylistPlayer({
   }, [isPlayerReady, onSelectionConsumed, selectedIndex]);
 
   useEffect(() => {
-    if (!isPlayerReady || playerState !== PLAYER_PLAYING || playlistType !== "songs") return;
+    if (!isPlayerReady || playerState !== PLAYER_PLAYING) return;
 
     const intervalId = window.setInterval(() => {
       const player = playerRef.current;
@@ -187,9 +194,23 @@ export function PlaylistPlayer({
       if (!player || !track || player.getPlayerState() !== PLAYER_PLAYING) return;
 
       const currentTime = player.getCurrentTime();
-      const effectiveClipEnd = Math.max(track.clipEnd, track.clipStart + 0.5);
-      const endThreshold = Math.max(track.clipStart + 0.5, effectiveClipEnd - 0.35);
-      if (currentTime >= endThreshold) advanceToNextRef.current();
+      if (playlistType === "songs") {
+        const effectiveClipEnd = Math.max(track.clipEnd, track.clipStart + 0.5);
+        const endThreshold = Math.max(track.clipStart + 0.5, effectiveClipEnd - 0.35);
+        if (currentTime >= endThreshold) advanceToNextRef.current();
+        return;
+      }
+
+      const nextStart = findOnlySongModeTarget(
+        track.songClips,
+        previousTimeRef.current,
+        currentTime,
+      );
+      previousTimeRef.current = currentTime;
+      if (nextStart === null) return;
+
+      previousTimeRef.current = nextStart;
+      player.seekTo(nextStart, true);
     }, 250);
 
     return () => window.clearInterval(intervalId);
@@ -264,6 +285,7 @@ export function PlaylistPlayer({
       </div>
       <p className="mt-3 text-[12px] text-muted-foreground/75">
         One player stays mounted while the next {playlistType === "songs" ? "song clip" : "performance"} loads in place.
+        {playlistType === "videos" ? " Full performances skip detected gaps between songs." : ""}
       </p>
     </section>
   );
