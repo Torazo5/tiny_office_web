@@ -63,7 +63,7 @@ export function PlaylistLibrary({
           </button>
         ) : (
           <Link
-            href="/login"
+            href={{ pathname: "/login", query: { next: "/playlists" } }}
             className="rounded-lg border border-input px-4 py-2 text-[13px] font-semibold text-muted-foreground transition-colors hover:text-foreground"
           >
             Sign in to create

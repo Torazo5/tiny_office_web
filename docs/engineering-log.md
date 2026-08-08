@@ -15,6 +15,25 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-08 — OAuth signup returned users away from playlists
+
+- **Symptom and impact:** After Google signup/sign-in, users were returned to
+  the browse home page and could no longer see the playlist list they had been
+  using.
+- **Root cause / evidence:** `components/login-form.tsx` hardcoded the OAuth
+  callback destination to `next=/`. Supabase logs showed the playlist query
+  succeeding before authentication, successful OAuth completion, and no
+  playlist query after the redirect because the user landed on `/`.
+- **Systems and files:** Google OAuth redirect construction,
+  `app/login/page.tsx`, `app/auth/callback/route.ts`, and the playlists link.
+- **Resolution / next action:** Preserve a safe return path through the login
+  page and callback, defaulting direct login to `/playlists`; use the browser's
+  current origin for OAuth redirects so a stale site URL cannot send users to a
+  different host.
+- **Verification:** `git diff --check` passed; Supabase auth logs showed the
+  affected user's OAuth callback and playlist REST request both completing with
+  successful status codes. Node lint remains unavailable in this WSL1 shell.
+
 ### 2026-08-08 — Playlist page blocked by unapplied playlist-type migration
 
 - **Symptom and impact:** The playlists page failed at runtime with

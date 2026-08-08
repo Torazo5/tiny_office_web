@@ -26,6 +26,7 @@ export async function GET(request: Request) {
   if (error) {
     const errorUrl = new URL("/login", requestUrl.origin);
     errorUrl.searchParams.set("error", error.message);
+    errorUrl.searchParams.set("next", next);
     return NextResponse.redirect(errorUrl);
   }
 

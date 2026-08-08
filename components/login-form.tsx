@@ -1,50 +1,47 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
-export function LoginForm() {
-  const [email, setEmail] = useState("");
+export function LoginForm({ nextPath }: { nextPath?: string }) {
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-  async function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  async function signInWithGoogle() {
     setLoading(true);
     setMessage(null);
+
     const supabase = createClient();
-    const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || window.location.origin).replace(/\/$/, "");
-    const redirectTo = `${siteUrl}/auth/callback?next=/`;
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: { emailRedirectTo: redirectTo },
+    const siteUrl = window.location.origin;
+    const fallbackPath = window.location.pathname === "/login"
+      ? "/playlists"
+      : `${window.location.pathname}${window.location.search}`;
+    const destination = nextPath && nextPath.startsWith("/") && !nextPath.startsWith("//")
+      ? nextPath
+      : fallbackPath;
+    const redirectTo = `${siteUrl}/auth/callback?next=${encodeURIComponent(destination || "/playlists")}`;
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: { redirectTo },
     });
-    setLoading(false);
-    setMessage(error ? error.message : "Check your email for a sign-in link.");
+
+    if (error) {
+      setLoading(false);
+      setMessage(error.message);
+    }
   }
 
   return (
-    <form onSubmit={submit} className="flex max-w-[360px] flex-col gap-3">
-      <label htmlFor="email" className="text-sm font-medium text-foreground">
-        Email
-      </label>
-      <input
-        id="email"
-        type="email"
-        required
-        value={email}
-        onChange={(event) => setEmail(event.target.value)}
-        placeholder="you@example.com"
-        className="h-10 rounded-lg border border-input bg-secondary px-3 text-sm text-foreground outline-none focus:ring-2 focus:ring-primary"
-      />
+    <div className="flex max-w-[360px] flex-col gap-3">
       <button
-        type="submit"
+        type="button"
+        onClick={signInWithGoogle}
         disabled={loading}
         className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground disabled:opacity-60"
       >
-        {loading ? "Sending…" : "Email me a sign-in link"}
+        {loading ? "Redirecting…" : "Continue with Google"}
       </button>
       {message && <p className="text-sm text-muted-foreground">{message}</p>}
-    </form>
+    </div>
   );
 }
