@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState } from "react";
+import type { Song } from "@/lib/types";
 
 /**
  * Shares "which timestamp is the embed currently seeked to" between the
@@ -10,18 +11,27 @@ import { createContext, useContext, useState } from "react";
 const PlayerContext = createContext<{
   startAt: number;
   setStartAt: (seconds: number) => void;
+  songs: Song[];
+  onlySongMode: boolean;
+  setOnlySongMode: (enabled: boolean) => void;
 } | null>(null);
 
 export function PlayerProvider({
   initialStart,
+  songs,
   children,
 }: {
   initialStart: number;
+  songs: Song[];
   children: React.ReactNode;
 }) {
   const [startAt, setStartAt] = useState(initialStart);
+  const [onlySongMode, setOnlySongMode] = useState(false);
+
   return (
-    <PlayerContext.Provider value={{ startAt, setStartAt }}>
+    <PlayerContext.Provider
+      value={{ songs, startAt, setStartAt, onlySongMode, setOnlySongMode }}
+    >
       {children}
     </PlayerContext.Provider>
   );

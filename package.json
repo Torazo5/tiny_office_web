@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "test": "node --experimental-strip-types --test scripts/only-song-mode.test.mjs",
     "start": "next start",
     "lint": "eslint",
     "seed:pipeline": "node scripts/seed-pipeline.mjs"

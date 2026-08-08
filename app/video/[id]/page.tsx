@@ -18,7 +18,10 @@ export default async function VideoPage({
   return (
     <>
       <Header />
-      <PlayerProvider initialStart={performance.songs[0]?.clipStart ?? 0}>
+      <PlayerProvider
+        initialStart={performance.songs[0]?.clipStart ?? 0}
+        songs={performance.songs}
+      >
         <main className="p-8 grid gap-8 items-start" style={{ gridTemplateColumns: "1.4fr 1fr" }}>
           <div>
             <VideoEmbed videoId={performance.videoId} />
