@@ -32,3 +32,8 @@ otherwise publish the commit unless the user explicitly asks.
 
 If validation or committing is blocked, explain the blocker and record it in
 the major-error log when it qualifies as a major error.
+
+If the agent cannot write Git metadata or create a required commit, it must
+tell the user why (for example, a read-only `.git` sandbox) and provide the
+exact `git add` and `git commit` commands for the files it changed. Do not
+push unless explicitly instructed.
