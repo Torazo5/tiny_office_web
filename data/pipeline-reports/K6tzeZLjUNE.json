@@ -1,0 +1,306 @@
+{
+  "video_id": "K6tzeZLjUNE",
+  "title": "Masego: NPR Music Tiny Desk Concert",
+  "duration": 1225,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/K6tzeZLjUNE.mp3",
+  "description_songs": [
+    "Tadow",
+    "Nayhoo",
+    "Queen Tings",
+    "Black Love",
+    "I Do Everything"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 643 likes, template #1"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 267.36,
+      "end": 272.16,
+      "duration": 4.800000000000011,
+      "kind": "applause"
+    },
+    {
+      "start": 272.64,
+      "end": 293.28000000000003,
+      "duration": 20.640000000000043,
+      "kind": "talk"
+    },
+    {
+      "start": 468.47999999999996,
+      "end": 471.36,
+      "duration": 2.8800000000000523,
+      "kind": "talk"
+    },
+    {
+      "start": 471.35999999999996,
+      "end": 471.84,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 472.32,
+      "end": 479.04,
+      "duration": 6.720000000000027,
+      "kind": "applause"
+    },
+    {
+      "start": 479.03999999999996,
+      "end": 497.28,
+      "duration": 18.24000000000001,
+      "kind": "talk"
+    },
+    {
+      "start": 708.0,
+      "end": 709.92,
+      "duration": 1.919999999999959,
+      "kind": "talk"
+    },
+    {
+      "start": 714.72,
+      "end": 716.64,
+      "duration": 1.919999999999959,
+      "kind": "applause"
+    },
+    {
+      "start": 717.12,
+      "end": 719.04,
+      "duration": 1.919999999999959,
+      "kind": "applause"
+    },
+    {
+      "start": 719.52,
+      "end": 721.92,
+      "duration": 2.3999999999999773,
+      "kind": "applause"
+    },
+    {
+      "start": 722.4,
+      "end": 760.3199999999999,
+      "duration": 37.91999999999996,
+      "kind": "talk"
+    },
+    {
+      "start": 948.48,
+      "end": 956.64,
+      "duration": 8.159999999999968,
+      "kind": "applause"
+    },
+    {
+      "start": 956.64,
+      "end": 1000.3199999999999,
+      "duration": 43.67999999999995,
+      "kind": "talk"
+    },
+    {
+      "start": 1006.0799999999999,
+      "end": 1009.4399999999999,
+      "duration": 3.3600000000000136,
+      "kind": "talk"
+    },
+    {
+      "start": 1103.04,
+      "end": 1103.52,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 1220.6399999999999,
+      "end": 1224.96,
+      "duration": 4.320000000000164,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 73,
+      "song": "Tadow",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 73,
+      "clip_end": 267.36,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 285,
+      "song": "Nayhoo",
+      "corroboration": 0,
+      "silence_match": 287.454,
+      "clip_start": 293.28000000000003,
+      "clip_end": 471.35999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 497,
+      "song": "Queen Tings",
+      "corroboration": 0,
+      "silence_match": 492.094,
+      "clip_start": 497.28,
+      "clip_end": 714.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 761,
+      "song": "Black Love",
+      "corroboration": 0,
+      "silence_match": 760.117,
+      "clip_start": 760.3199999999999,
+      "clip_end": 948.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 1010,
+      "song": "I Do Everything",
+      "corroboration": 0,
+      "silence_match": 1009.02,
+      "clip_start": 1009.4399999999999,
+      "clip_end": 1103.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 2.48077,
+      "end": 3.99506,
+      "duration": 1.51429
+    },
+    {
+      "start": 6.59727,
+      "end": 7.1246,
+      "duration": 0.527333
+    },
+    {
+      "start": 277.78,
+      "end": 278.596,
+      "duration": 0.816396
+    },
+    {
+      "start": 287.454,
+      "end": 288.084,
+      "duration": 0.629437
+    },
+    {
+      "start": 484.174,
+      "end": 484.713,
+      "duration": 0.5385
+    },
+    {
+      "start": 485.163,
+      "end": 485.845,
+      "duration": 0.68175
+    },
+    {
+      "start": 487.231,
+      "end": 488.577,
+      "duration": 1.34558
+    },
+    {
+      "start": 489.855,
+      "end": 490.482,
+      "duration": 0.626542
+    },
+    {
+      "start": 492.094,
+      "end": 492.601,
+      "duration": 0.507729
+    },
+    {
+      "start": 708.95,
+      "end": 709.872,
+      "duration": 0.922896
+    },
+    {
+      "start": 730.818,
+      "end": 731.899,
+      "duration": 1.08117
+    },
+    {
+      "start": 734.674,
+      "end": 735.194,
+      "duration": 0.519875
+    },
+    {
+      "start": 741.744,
+      "end": 742.316,
+      "duration": 0.572313
+    },
+    {
+      "start": 754.103,
+      "end": 755.082,
+      "duration": 0.979146
+    },
+    {
+      "start": 756.151,
+      "end": 757.433,
+      "duration": 1.28133
+    },
+    {
+      "start": 760.117,
+      "end": 760.855,
+      "duration": 0.738896
+    },
+    {
+      "start": 966.43,
+      "end": 967.121,
+      "duration": 0.691437
+    },
+    {
+      "start": 984.202,
+      "end": 984.766,
+      "duration": 0.564125
+    },
+    {
+      "start": 991.305,
+      "end": 992.029,
+      "duration": 0.724313
+    },
+    {
+      "start": 998.085,
+      "end": 998.78,
+      "duration": 0.694292
+    },
+    {
+      "start": 1007.42,
+      "end": 1007.94,
+      "duration": 0.520083
+    },
+    {
+      "start": 1009.02,
+      "end": 1010.51,
+      "duration": 1.491
+    },
+    {
+      "start": 1224.61,
+      "end": 1225.32,
+      "duration": 0.709771
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76,
+      76,
+      76
+    ],
+    "avg": 71.4,
+    "min": 53
+  }
+}

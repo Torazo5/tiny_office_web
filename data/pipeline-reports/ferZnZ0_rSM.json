@@ -1,0 +1,388 @@
+{
+  "video_id": "ferZnZ0_rSM",
+  "title": "Anderson .Paak & The Free Nationals: NPR Music Tiny Desk Concert",
+  "duration": 938,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/ferZnZ0_rSM.mp3",
+  "description_songs": [
+    "Follow NPR Music:",
+    "Twitter: https://twitter.com/nprmusic",
+    "Instagram: https://www.instagram.com/nprmusic",
+    "Malibu is available now:",
+    "iTunes: https://itunes.apple.com/us/album/malibu/id1065681363?app=itunes&ign-mpt=uo%3D4",
+    "Come Down",
+    "Heart Don't Stand A Chance",
+    "Put Me Thru",
+    "Suede",
+    "For more Tiny Desk concerts, subscribe to our podcast: http://www.npr.org/podcasts/510292/tiny-desk-concerts-video"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 449 likes, template #1 (description lists 10 \u2014 comment may split/merge differently)"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 1.44,
+      "end": 8.16,
+      "duration": 6.720000000000001,
+      "kind": "talk"
+    },
+    {
+      "start": 27.84,
+      "end": 29.759999999999998,
+      "duration": 1.9199999999999982,
+      "kind": "talk"
+    },
+    {
+      "start": 176.64,
+      "end": 178.07999999999998,
+      "duration": 1.4399999999999977,
+      "kind": "applause"
+    },
+    {
+      "start": 179.04,
+      "end": 184.79999999999998,
+      "duration": 5.759999999999991,
+      "kind": "applause"
+    },
+    {
+      "start": 184.79999999999998,
+      "end": 186.23999999999998,
+      "duration": 1.4399999999999977,
+      "kind": "talk"
+    },
+    {
+      "start": 186.23999999999998,
+      "end": 192.48,
+      "duration": 6.240000000000009,
+      "kind": "applause"
+    },
+    {
+      "start": 193.44,
+      "end": 211.67999999999998,
+      "duration": 18.23999999999998,
+      "kind": "talk"
+    },
+    {
+      "start": 213.6,
+      "end": 223.67999999999998,
+      "duration": 10.079999999999984,
+      "kind": "talk"
+    },
+    {
+      "start": 256.32,
+      "end": 259.68,
+      "duration": 3.3600000000000136,
+      "kind": "talk"
+    },
+    {
+      "start": 404.64,
+      "end": 414.72,
+      "duration": 10.080000000000041,
+      "kind": "applause"
+    },
+    {
+      "start": 414.71999999999997,
+      "end": 422.88,
+      "duration": 8.160000000000025,
+      "kind": "talk"
+    },
+    {
+      "start": 422.88,
+      "end": 426.24,
+      "duration": 3.3600000000000136,
+      "kind": "applause"
+    },
+    {
+      "start": 426.24,
+      "end": 454.56,
+      "duration": 28.319999999999993,
+      "kind": "talk"
+    },
+    {
+      "start": 641.28,
+      "end": 648.96,
+      "duration": 7.680000000000064,
+      "kind": "applause"
+    },
+    {
+      "start": 650.4,
+      "end": 651.84,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 651.84,
+      "end": 708.96,
+      "duration": 57.120000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 712.3199999999999,
+      "end": 714.24,
+      "duration": 1.9200000000000728,
+      "kind": "talk"
+    },
+    {
+      "start": 849.6,
+      "end": 851.52,
+      "duration": 1.919999999999959,
+      "kind": "talk"
+    },
+    {
+      "start": 907.68,
+      "end": 914.88,
+      "duration": 7.2000000000000455,
+      "kind": "applause"
+    },
+    {
+      "start": 915.8399999999999,
+      "end": 930.24,
+      "duration": 14.400000000000091,
+      "kind": "applause"
+    },
+    {
+      "start": 930.7199999999999,
+      "end": 936.48,
+      "duration": 5.760000000000105,
+      "kind": "talk"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Come Down",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 8.16,
+      "clip_end": 176.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 224,
+      "song": "Heart Don't Stand A Chance",
+      "corroboration": 0,
+      "silence_match": 223.706,
+      "clip_start": 223.67999999999998,
+      "clip_end": 404.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 455,
+      "song": "Put Me Thru",
+      "corroboration": 0,
+      "silence_match": 454.228,
+      "clip_start": 454.56,
+      "clip_end": 641.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 718,
+      "song": "Suede",
+      "corroboration": 0,
+      "silence_match": 714.317,
+      "clip_start": 714.24,
+      "clip_end": 907.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 2.10577,
+      "duration": 2.10577
+    },
+    {
+      "start": 7.11515,
+      "end": 7.65402,
+      "duration": 0.538875
+    },
+    {
+      "start": 28.4535,
+      "end": 29.0691,
+      "duration": 0.615604
+    },
+    {
+      "start": 192.752,
+      "end": 193.95,
+      "duration": 1.19767
+    },
+    {
+      "start": 195.302,
+      "end": 195.923,
+      "duration": 0.621646
+    },
+    {
+      "start": 196.592,
+      "end": 197.161,
+      "duration": 0.569146
+    },
+    {
+      "start": 202.389,
+      "end": 202.9,
+      "duration": 0.511437
+    },
+    {
+      "start": 210.868,
+      "end": 211.407,
+      "duration": 0.539083
+    },
+    {
+      "start": 212.513,
+      "end": 213.699,
+      "duration": 1.18577
+    },
+    {
+      "start": 215.019,
+      "end": 216.073,
+      "duration": 1.05354
+    },
+    {
+      "start": 216.101,
+      "end": 216.711,
+      "duration": 0.609125
+    },
+    {
+      "start": 223.706,
+      "end": 224.511,
+      "duration": 0.804604
+    },
+    {
+      "start": 264.32,
+      "end": 264.939,
+      "duration": 0.618875
+    },
+    {
+      "start": 306.917,
+      "end": 307.434,
+      "duration": 0.517583
+    },
+    {
+      "start": 338.445,
+      "end": 338.967,
+      "duration": 0.521708
+    },
+    {
+      "start": 416.913,
+      "end": 417.545,
+      "duration": 0.632417
+    },
+    {
+      "start": 418.438,
+      "end": 419.01,
+      "duration": 0.57225
+    },
+    {
+      "start": 436.249,
+      "end": 437.084,
+      "duration": 0.835167
+    },
+    {
+      "start": 440.017,
+      "end": 440.523,
+      "duration": 0.506312
+    },
+    {
+      "start": 450.994,
+      "end": 451.571,
+      "duration": 0.576333
+    },
+    {
+      "start": 454.228,
+      "end": 455.049,
+      "duration": 0.820688
+    },
+    {
+      "start": 639.672,
+      "end": 640.794,
+      "duration": 1.12152
+    },
+    {
+      "start": 657.076,
+      "end": 658.716,
+      "duration": 1.6395
+    },
+    {
+      "start": 662.194,
+      "end": 662.891,
+      "duration": 0.697437
+    },
+    {
+      "start": 663.317,
+      "end": 663.888,
+      "duration": 0.571063
+    },
+    {
+      "start": 671.448,
+      "end": 671.986,
+      "duration": 0.537687
+    },
+    {
+      "start": 683.082,
+      "end": 683.914,
+      "duration": 0.831875
+    },
+    {
+      "start": 686.537,
+      "end": 687.371,
+      "duration": 0.834146
+    },
+    {
+      "start": 700.762,
+      "end": 701.376,
+      "duration": 0.614229
+    },
+    {
+      "start": 702.621,
+      "end": 703.946,
+      "duration": 1.32433
+    },
+    {
+      "start": 708.561,
+      "end": 709.41,
+      "duration": 0.849292
+    },
+    {
+      "start": 712.532,
+      "end": 713.072,
+      "duration": 0.539625
+    },
+    {
+      "start": 714.317,
+      "end": 719.037,
+      "duration": 4.72071
+    },
+    {
+      "start": 932.894,
+      "end": 933.441,
+      "duration": 0.546625
+    },
+    {
+      "start": 935.552,
+      "end": 937.448,
+      "duration": 1.89554
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      76,
+      76,
+      76
+    ],
+    "avg": 76.0,
+    "min": 76
+  }
+}

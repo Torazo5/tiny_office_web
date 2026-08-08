@@ -1,0 +1,214 @@
+{
+  "video_id": "hxsJvKYyVyg",
+  "title": "The Cranberries: NPR Music Tiny Desk Concert",
+  "duration": 1171,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/hxsJvKYyVyg.mp3",
+  "description_songs": [
+    "Linger",
+    "Tomorrow",
+    "Ode To My Family",
+    "Zombie",
+    "Raining In My Heart",
+    "For more videos and to subscribe to the Tiny Desk Concerts podcast, visit npr.org/tinydeskconcerts."
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 4600 likes, template #1 (description lists 6 \u2014 comment may split/merge differently)"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.96,
+      "end": 2.88,
+      "duration": 1.92,
+      "kind": "applause"
+    },
+    {
+      "start": 191.51999999999998,
+      "end": 195.35999999999999,
+      "duration": 3.8400000000000034,
+      "kind": "applause"
+    },
+    {
+      "start": 195.35999999999999,
+      "end": 198.71999999999997,
+      "duration": 3.359999999999985,
+      "kind": "talk"
+    },
+    {
+      "start": 443.52,
+      "end": 452.16,
+      "duration": 8.640000000000043,
+      "kind": "applause"
+    },
+    {
+      "start": 695.52,
+      "end": 701.28,
+      "duration": 5.759999999999991,
+      "kind": "applause"
+    },
+    {
+      "start": 702.24,
+      "end": 705.6,
+      "duration": 3.3600000000000136,
+      "kind": "applause"
+    },
+    {
+      "start": 705.6,
+      "end": 735.84,
+      "duration": 30.24000000000001,
+      "kind": "talk"
+    },
+    {
+      "start": 958.0799999999999,
+      "end": 958.56,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 959.04,
+      "end": 963.84,
+      "duration": 4.800000000000068,
+      "kind": "applause"
+    },
+    {
+      "start": 965.28,
+      "end": 972.0,
+      "duration": 6.720000000000027,
+      "kind": "talk"
+    },
+    {
+      "start": 1148.6399999999999,
+      "end": 1152.48,
+      "duration": 3.8400000000001455,
+      "kind": "applause"
+    },
+    {
+      "start": 1153.44,
+      "end": 1158.24,
+      "duration": 4.7999999999999545,
+      "kind": "applause"
+    },
+    {
+      "start": 1160.1599999999999,
+      "end": 1166.3999999999999,
+      "duration": 6.240000000000009,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 2,
+      "song": "Linger",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 2.88,
+      "clip_end": 191.51999999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 198,
+      "song": "Tomorrow",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 198.71999999999997,
+      "clip_end": 443.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 452,
+      "song": "Ode to my Family",
+      "corroboration": 0,
+      "silence_match": 452.904,
+      "clip_start": 452.16,
+      "clip_end": 695.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 735,
+      "song": "Zombie",
+      "corroboration": 0,
+      "silence_match": 734.674,
+      "clip_start": 735.84,
+      "clip_end": 958.0799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 973,
+      "song": "Raining in my Heart",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 972.0,
+      "clip_end": 1148.6399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 452.904,
+      "end": 453.909,
+      "duration": 1.00502
+    },
+    {
+      "start": 708.281,
+      "end": 709.214,
+      "duration": 0.933625
+    },
+    {
+      "start": 713.283,
+      "end": 714.022,
+      "duration": 0.739396
+    },
+    {
+      "start": 716.962,
+      "end": 718.003,
+      "duration": 1.04081
+    },
+    {
+      "start": 733.044,
+      "end": 733.859,
+      "duration": 0.81475
+    },
+    {
+      "start": 734.674,
+      "end": 735.389,
+      "duration": 0.715417
+    },
+    {
+      "start": 1166.0,
+      "end": 1166.58,
+      "duration": 0.5885
+    },
+    {
+      "start": 1166.59,
+      "end": 1171.34,
+      "duration": 4.75598
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      61,
+      76,
+      76,
+      61
+    ],
+    "avg": 67.0,
+    "min": 61
+  }
+}

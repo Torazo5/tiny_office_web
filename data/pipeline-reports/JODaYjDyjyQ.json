@@ -1,0 +1,312 @@
+{
+  "video_id": "JODaYjDyjyQ",
+  "title": "Natalia Lafourcade: NPR Music Tiny Desk Concert",
+  "duration": 920,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/JODaYjDyjyQ.mp3",
+  "description_songs": [
+    "Soledad y el Mar",
+    "Mi Tierra Veracruzana",
+    "T\u00fa S\u00ed Sabes Quererme"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no comment had 2+ timestamps",
+    "B_yamnet": "ok \u2014 12 usable span(s), took top 2"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 83.03999999999999,
+      "end": 84.96,
+      "duration": 1.9200000000000017,
+      "kind": "talk"
+    },
+    {
+      "start": 200.16,
+      "end": 212.64,
+      "duration": 12.47999999999999,
+      "kind": "applause"
+    },
+    {
+      "start": 213.12,
+      "end": 236.64,
+      "duration": 23.519999999999982,
+      "kind": "talk"
+    },
+    {
+      "start": 462.71999999999997,
+      "end": 476.64,
+      "duration": 13.920000000000016,
+      "kind": "applause"
+    },
+    {
+      "start": 477.59999999999997,
+      "end": 513.12,
+      "duration": 35.52000000000004,
+      "kind": "talk"
+    },
+    {
+      "start": 513.12,
+      "end": 517.44,
+      "duration": 4.32000000000005,
+      "kind": "applause"
+    },
+    {
+      "start": 517.4399999999999,
+      "end": 547.68,
+      "duration": 30.24000000000001,
+      "kind": "talk"
+    },
+    {
+      "start": 556.3199999999999,
+      "end": 562.56,
+      "duration": 6.240000000000009,
+      "kind": "talk"
+    },
+    {
+      "start": 619.68,
+      "end": 633.12,
+      "duration": 13.440000000000055,
+      "kind": "talk"
+    },
+    {
+      "start": 900.48,
+      "end": 901.92,
+      "duration": 1.4399999999999409,
+      "kind": "applause"
+    },
+    {
+      "start": 902.4,
+      "end": 904.8,
+      "duration": 2.3999999999999773,
+      "kind": "applause"
+    },
+    {
+      "start": 905.28,
+      "end": 906.72,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 908.16,
+      "end": 908.64,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 909.6,
+      "end": 919.1999999999999,
+      "duration": 9.599999999999909,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Soledad y el Mar",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 200.16,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 200.16,
+      "song": "Mi Tierra Veracruzana",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 212.64,
+      "clip_end": 213.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": true,
+      "confidence": 1
+    },
+    {
+      "seconds": 462.71999999999997,
+      "song": "T\u00fa S\u00ed Sabes Quererme",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 476.64,
+      "clip_end": 477.59999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": true,
+      "confidence": 1
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 77.491,
+      "end": 78.1263,
+      "duration": 0.635271
+    },
+    {
+      "start": 131.484,
+      "end": 132.117,
+      "duration": 0.632854
+    },
+    {
+      "start": 132.117,
+      "end": 132.698,
+      "duration": 0.581
+    },
+    {
+      "start": 138.285,
+      "end": 143.807,
+      "duration": 5.52175
+    },
+    {
+      "start": 212.801,
+      "end": 213.822,
+      "duration": 1.02165
+    },
+    {
+      "start": 218.849,
+      "end": 219.358,
+      "duration": 0.508896
+    },
+    {
+      "start": 220.026,
+      "end": 220.979,
+      "duration": 0.953688
+    },
+    {
+      "start": 222.857,
+      "end": 223.495,
+      "duration": 0.637687
+    },
+    {
+      "start": 224.239,
+      "end": 224.924,
+      "duration": 0.685104
+    },
+    {
+      "start": 232.467,
+      "end": 233.095,
+      "duration": 0.628229
+    },
+    {
+      "start": 233.988,
+      "end": 234.491,
+      "duration": 0.503125
+    },
+    {
+      "start": 236.341,
+      "end": 238.461,
+      "duration": 2.12033
+    },
+    {
+      "start": 238.487,
+      "end": 239.585,
+      "duration": 1.0981
+    },
+    {
+      "start": 239.598,
+      "end": 240.685,
+      "duration": 1.08763
+    },
+    {
+      "start": 276.219,
+      "end": 276.764,
+      "duration": 0.544625
+    },
+    {
+      "start": 477.541,
+      "end": 478.281,
+      "duration": 0.739729
+    },
+    {
+      "start": 482.14,
+      "end": 482.657,
+      "duration": 0.517021
+    },
+    {
+      "start": 484.5,
+      "end": 485.405,
+      "duration": 0.904333
+    },
+    {
+      "start": 489.385,
+      "end": 489.914,
+      "duration": 0.529542
+    },
+    {
+      "start": 491.236,
+      "end": 492.218,
+      "duration": 0.982
+    },
+    {
+      "start": 498.772,
+      "end": 500.425,
+      "duration": 1.65383
+    },
+    {
+      "start": 504.732,
+      "end": 505.346,
+      "duration": 0.613938
+    },
+    {
+      "start": 508.923,
+      "end": 509.527,
+      "duration": 0.604021
+    },
+    {
+      "start": 527.85,
+      "end": 528.688,
+      "duration": 0.838083
+    },
+    {
+      "start": 531.719,
+      "end": 533.093,
+      "duration": 1.37406
+    },
+    {
+      "start": 535.104,
+      "end": 536.921,
+      "duration": 1.81642
+    },
+    {
+      "start": 548.753,
+      "end": 549.379,
+      "duration": 0.625687
+    },
+    {
+      "start": 560.137,
+      "end": 560.886,
+      "duration": 0.749479
+    },
+    {
+      "start": 629.018,
+      "end": 630.228,
+      "duration": 1.21021
+    },
+    {
+      "start": 631.833,
+      "end": 633.065,
+      "duration": 1.23273
+    },
+    {
+      "start": 633.792,
+      "end": 634.416,
+      "duration": 0.623958
+    },
+    {
+      "start": 918.488,
+      "end": 919.464,
+      "duration": 0.976042
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      1,
+      1
+    ],
+    "avg": 15.0,
+    "min": 1
+  }
+}

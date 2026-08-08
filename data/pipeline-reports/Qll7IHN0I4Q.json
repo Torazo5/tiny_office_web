@@ -1,0 +1,236 @@
+{
+  "video_id": "Qll7IHN0I4Q",
+  "title": "Snoh Aalegra: NPR Music Tiny Desk Concert",
+  "duration": 993,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/Qll7IHN0I4Q.mp3",
+  "description_songs": [
+    "Love Like That",
+    "I Want You Around",
+    "Whoa",
+    "Fool For You",
+    "Find Someone Like You"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1100 likes, template #0"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 367.2,
+      "end": 368.64,
+      "duration": 1.4399999999999977,
+      "kind": "applause"
+    },
+    {
+      "start": 370.56,
+      "end": 375.84000000000003,
+      "duration": 5.28000000000003,
+      "kind": "applause"
+    },
+    {
+      "start": 375.84,
+      "end": 378.24,
+      "duration": 2.400000000000034,
+      "kind": "talk"
+    },
+    {
+      "start": 569.28,
+      "end": 572.64,
+      "duration": 3.3600000000000136,
+      "kind": "applause"
+    },
+    {
+      "start": 573.12,
+      "end": 580.32,
+      "duration": 7.2000000000000455,
+      "kind": "applause"
+    },
+    {
+      "start": 588.48,
+      "end": 590.4,
+      "duration": 1.919999999999959,
+      "kind": "talk"
+    },
+    {
+      "start": 594.24,
+      "end": 594.72,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 605.76,
+      "end": 607.68,
+      "duration": 1.919999999999959,
+      "kind": "talk"
+    },
+    {
+      "start": 975.8399999999999,
+      "end": 977.76,
+      "duration": 1.9200000000000728,
+      "kind": "applause"
+    },
+    {
+      "start": 978.7199999999999,
+      "end": 983.04,
+      "duration": 4.32000000000005,
+      "kind": "applause"
+    },
+    {
+      "start": 984.9599999999999,
+      "end": 991.1999999999999,
+      "duration": 6.240000000000009,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 2,
+      "song": "Love Like That",
+      "corroboration": 3,
+      "silence_match": 0.0,
+      "clip_start": 2,
+      "clip_end": 367.2,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 89
+    },
+    {
+      "seconds": 366,
+      "song": "[2:36 / 3:06] - I Want You Around",
+      "corroboration": 0,
+      "silence_match": 366.078,
+      "clip_start": 378.24,
+      "clip_end": 380,
+      "start_refined": true,
+      "end_trimmed": false,
+      "suspect": true,
+      "confidence": 18
+    },
+    {
+      "seconds": 380,
+      "song": "Whoa (9:27)",
+      "corroboration": 3,
+      "silence_match": 380.198,
+      "clip_start": 378.24,
+      "clip_end": 569.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 97
+    },
+    {
+      "seconds": 580,
+      "song": "Fool for You",
+      "corroboration": 1,
+      "silence_match": 580.292,
+      "clip_start": 594.72,
+      "clip_end": 975.8399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 975,
+      "song": "[12:11] - Find Someone Like You",
+      "corroboration": 0,
+      "silence_match": 974.118,
+      "clip_start": 991.1999999999999,
+      "clip_end": 993,
+      "start_refined": true,
+      "end_trimmed": false,
+      "suspect": true,
+      "confidence": 18
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 2.61156,
+      "duration": 2.61156
+    },
+    {
+      "start": 280.951,
+      "end": 281.804,
+      "duration": 0.853208
+    },
+    {
+      "start": 366.078,
+      "end": 366.615,
+      "duration": 0.537583
+    },
+    {
+      "start": 378.215,
+      "end": 380.172,
+      "duration": 1.95694
+    },
+    {
+      "start": 380.198,
+      "end": 380.832,
+      "duration": 0.634563
+    },
+    {
+      "start": 380.862,
+      "end": 381.491,
+      "duration": 0.62925
+    },
+    {
+      "start": 381.522,
+      "end": 382.14,
+      "duration": 0.617333
+    },
+    {
+      "start": 382.171,
+      "end": 382.82,
+      "duration": 0.649167
+    },
+    {
+      "start": 382.849,
+      "end": 383.496,
+      "duration": 0.647062
+    },
+    {
+      "start": 567.171,
+      "end": 568.148,
+      "duration": 0.977146
+    },
+    {
+      "start": 580.292,
+      "end": 581.337,
+      "duration": 1.045
+    },
+    {
+      "start": 600.159,
+      "end": 600.787,
+      "duration": 0.628563
+    },
+    {
+      "start": 611.975,
+      "end": 612.561,
+      "duration": 0.585917
+    },
+    {
+      "start": 974.118,
+      "end": 974.993,
+      "duration": 0.875521
+    },
+    {
+      "start": 990.941,
+      "end": 993.338,
+      "duration": 2.39748
+    }
+  ],
+  "confidence": {
+    "scores": [
+      89,
+      18,
+      97,
+      83,
+      18
+    ],
+    "avg": 61.0,
+    "min": 18
+  }
+}

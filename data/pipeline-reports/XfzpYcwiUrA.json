@@ -1,0 +1,224 @@
+{
+  "video_id": "XfzpYcwiUrA",
+  "title": "Adele: NPR Music Tiny Desk Concert",
+  "duration": 874,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/XfzpYcwiUrA.mp3",
+  "description_songs": [
+    "Watch Adele play \"Someone Like You\", \"Chasing Pavements\" and \"Rolling In The Deep",
+    "at the Tiny Desk.",
+    "Follow NPR Music:",
+    "Twitter: https://twitter.com/nprmusic",
+    "Instagram: https://www.instagram.com/nprmusic",
+    "Someone Like You",
+    "Chasing Pavements",
+    "Rolling In The Deep",
+    "For more videos, visit npr.org/tinydeskconcerts"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 751 likes, template #1 (description lists 9 \u2014 comment may split/merge differently)"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 14.879999999999999,
+      "duration": 14.879999999999999,
+      "kind": "talk"
+    },
+    {
+      "start": 14.879999999999999,
+      "end": 18.24,
+      "duration": 3.3599999999999994,
+      "kind": "applause"
+    },
+    {
+      "start": 18.24,
+      "end": 29.279999999999998,
+      "duration": 11.04,
+      "kind": "talk"
+    },
+    {
+      "start": 332.64,
+      "end": 341.76,
+      "duration": 9.120000000000005,
+      "kind": "applause"
+    },
+    {
+      "start": 341.76,
+      "end": 360.0,
+      "duration": 18.24000000000001,
+      "kind": "talk"
+    },
+    {
+      "start": 584.16,
+      "end": 586.56,
+      "duration": 2.3999999999999773,
+      "kind": "applause"
+    },
+    {
+      "start": 587.04,
+      "end": 591.36,
+      "duration": 4.32000000000005,
+      "kind": "applause"
+    },
+    {
+      "start": 591.36,
+      "end": 612.96,
+      "duration": 21.600000000000023,
+      "kind": "talk"
+    },
+    {
+      "start": 773.28,
+      "end": 773.76,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 848.16,
+      "end": 849.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 852.48,
+      "end": 860.16,
+      "duration": 7.67999999999995,
+      "kind": "talk"
+    },
+    {
+      "start": 860.16,
+      "end": 864.48,
+      "duration": 4.32000000000005,
+      "kind": "applause"
+    },
+    {
+      "start": 864.48,
+      "end": 865.92,
+      "duration": 1.4399999999999409,
+      "kind": "talk"
+    },
+    {
+      "start": 866.4,
+      "end": 867.36,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 867.8399999999999,
+      "end": 870.72,
+      "duration": 2.880000000000109,
+      "kind": "applause"
+    },
+    {
+      "start": 870.7199999999999,
+      "end": 874.08,
+      "duration": 3.3600000000001273,
+      "kind": "talk"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 30,
+      "song": "Someone Like You",
+      "corroboration": 3,
+      "silence_match": 29.1324,
+      "clip_start": 29.279999999999998,
+      "clip_end": 332.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 97
+    },
+    {
+      "seconds": 361,
+      "song": "Chasing Pavements",
+      "corroboration": 3,
+      "silence_match": 359.669,
+      "clip_start": 360.0,
+      "clip_end": 584.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 97
+    },
+    {
+      "seconds": 612,
+      "song": "Rolling In The Deep",
+      "corroboration": 3,
+      "silence_match": 608.314,
+      "clip_start": 612.96,
+      "clip_end": 773.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 97
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 9.4445,
+      "end": 10.1927,
+      "duration": 0.748229
+    },
+    {
+      "start": 29.1324,
+      "end": 29.9883,
+      "duration": 0.855875
+    },
+    {
+      "start": 330.425,
+      "end": 332.291,
+      "duration": 1.86548
+    },
+    {
+      "start": 350.997,
+      "end": 351.793,
+      "duration": 0.795604
+    },
+    {
+      "start": 359.669,
+      "end": 361.131,
+      "duration": 1.46212
+    },
+    {
+      "start": 583.053,
+      "end": 583.682,
+      "duration": 0.629
+    },
+    {
+      "start": 600.68,
+      "end": 601.467,
+      "duration": 0.786896
+    },
+    {
+      "start": 603.084,
+      "end": 604.013,
+      "duration": 0.929021
+    },
+    {
+      "start": 608.314,
+      "end": 608.819,
+      "duration": 0.50475
+    },
+    {
+      "start": 872.447,
+      "end": 872.972,
+      "duration": 0.524979
+    },
+    {
+      "start": 873.872,
+      "end": 874.441,
+      "duration": 0.569354
+    }
+  ],
+  "confidence": {
+    "scores": [
+      97,
+      97,
+      97
+    ],
+    "avg": 97.0,
+    "min": 97
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "video_id": "JGL-eQAAxGs",
+  "title": "Monsieur Perin\u00e9: NPR Music Tiny Desk Concert",
+  "duration": 1116,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/JGL-eQAAxGs.mp3",
+  "description_songs": [
+    "March 4, 2016 by FELIX CONTRERAS",
+    "Words don't do this band justice. Play the video and discover Monsieur Perin\u00e9's magic for yourself.",
+    "Caja De M\u00fasica is available now",
+    "iTunes: https://itunes.apple.com/us/album/caja-de-musica/id1000830433",
+    "Amazon: http://www.amazon.com/Caja-De-Musica-MONSIEUR-PERINE/dp/B00YJKH3AM",
+    "Nuestra Canci\u00f3n",
+    "Sabor A Mi",
+    "La Muerte",
+    "For more Tiny Desk concerts, subscribe to our podcast: http://www.npr.org/podcasts/510292/tiny-desk-concerts-video"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no comment had 2+ timestamps",
+    "B_yamnet": "ok \u2014 8 usable span(s), took top 8"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 388.8,
+      "end": 397.44,
+      "duration": 8.639999999999986,
+      "kind": "applause"
+    },
+    {
+      "start": 398.4,
+      "end": 399.36,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 399.36,
+      "end": 400.8,
+      "duration": 1.4399999999999977,
+      "kind": "talk"
+    },
+    {
+      "start": 413.28,
+      "end": 422.4,
+      "duration": 9.120000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 424.32,
+      "end": 433.44,
+      "duration": 9.120000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 621.12,
+      "end": 627.84,
+      "duration": 6.720000000000027,
+      "kind": "applause"
+    },
+    {
+      "start": 1062.24,
+      "end": 1068.48,
+      "duration": 6.240000000000009,
+      "kind": "applause"
+    },
+    {
+      "start": 1074.24,
+      "end": 1077.6,
+      "duration": 3.3599999999999,
+      "kind": "applause"
+    },
+    {
+      "start": 1078.56,
+      "end": 1080.0,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 1081.44,
+      "end": 1084.8,
+      "duration": 3.3599999999999,
+      "kind": "talk"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "March 4, 2016 by FELIX CONTRERAS",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 388.8,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 388.8,
+      "song": "Words don't do this band justice. Play the video and discover Monsieur Perin\u00e9's magic for yourself.",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 400.8,
+      "clip_end": 398.4,
+      "start_refined": true,
+      "end_trimmed": false,
+      "suspect": true,
+      "confidence": 0
+    },
+    {
+      "seconds": 398.4,
+      "song": "Caja De M\u00fasica is available now",
+      "corroboration": 0,
+      "silence_match": 400.644,
+      "clip_start": 400.8,
+      "clip_end": 413.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": true,
+      "confidence": 16
+    },
+    {
+      "seconds": 413.28,
+      "song": "iTunes: https://itunes.apple.com/us/album/caja-de-musica/id1000830433",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 422.4,
+      "clip_end": 424.32,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": true,
+      "confidence": 1
+    },
+    {
+      "seconds": 424.32,
+      "song": "Amazon: http://www.amazon.com/Caja-De-Musica-MONSIEUR-PERINE/dp/B00YJKH3AM",
+      "corroboration": 0,
+      "silence_match": 423.755,
+      "clip_start": 433.44,
+      "clip_end": 621.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 621.12,
+      "song": "Nuestra Canci\u00f3n",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 627.84,
+      "clip_end": 1062.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 1062.24,
+      "song": "Sabor A Mi",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1080.0,
+      "clip_end": 1074.24,
+      "start_refined": true,
+      "end_trimmed": false,
+      "suspect": true,
+      "confidence": 0
+    },
+    {
+      "seconds": 1074.24,
+      "song": "La Muerte",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1084.8,
+      "clip_end": 1078.56,
+      "start_refined": true,
+      "end_trimmed": false,
+      "suspect": true,
+      "confidence": 0
+    },
+    {
+      "seconds": 1078.56,
+      "song": "For more Tiny Desk concerts, subscribe to our podcast: http://www.npr.org/podcasts/510292/tiny-desk-concerts-video",
+      "corroboration": 0,
+      "silence_match": 1080.69,
+      "clip_start": 1084.8,
+      "clip_end": 1116,
+      "start_refined": true,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 58
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 400.644,
+      "end": 401.636,
+      "duration": 0.991729
+    },
+    {
+      "start": 401.645,
+      "end": 402.377,
+      "duration": 0.732646
+    },
+    {
+      "start": 402.791,
+      "end": 404.888,
+      "duration": 2.09658
+    },
+    {
+      "start": 419.744,
+      "end": 421.094,
+      "duration": 1.34962
+    },
+    {
+      "start": 423.755,
+      "end": 424.813,
+      "duration": 1.05881
+    },
+    {
+      "start": 427.33,
+      "end": 427.999,
+      "duration": 0.669875
+    },
+    {
+      "start": 435.332,
+      "end": 436.86,
+      "duration": 1.5279
+    },
+    {
+      "start": 436.905,
+      "end": 437.585,
+      "duration": 0.679937
+    },
+    {
+      "start": 438.005,
+      "end": 439.016,
+      "duration": 1.01046
+    },
+    {
+      "start": 1080.69,
+      "end": 1081.31,
+      "duration": 0.623479
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      0,
+      16,
+      1,
+      66,
+      51,
+      0,
+      0,
+      58
+    ],
+    "avg": 26.1,
+    "min": 0
+  }
+}

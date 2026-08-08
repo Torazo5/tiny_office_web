@@ -1,0 +1,659 @@
+{
+  "processed_at": "2026-08-08 08:18:31",
+  "elapsed_seconds": 612.5,
+  "ok": [
+    {
+      "video_id": "QrR_gm6RqCo",
+      "confidence": {
+        "scores": [
+          58,
+          43,
+          0
+        ],
+        "avg": 33.7,
+        "min": 0
+      }
+    },
+    {
+      "video_id": "rGyQHyDMZZI",
+      "confidence": {
+        "scores": [
+          51,
+          51,
+          66,
+          1,
+          16,
+          0
+        ],
+        "avg": 30.8,
+        "min": 0
+      }
+    },
+    {
+      "video_id": "GVDJ8O3lPBA",
+      "confidence": {
+        "scores": [
+          43,
+          43,
+          0
+        ],
+        "avg": 28.7,
+        "min": 0
+      }
+    },
+    {
+      "video_id": "id28fCyYgIU",
+      "confidence": {
+        "scores": [
+          43,
+          1,
+          0
+        ],
+        "avg": 14.7,
+        "min": 0
+      }
+    },
+    {
+      "video_id": "9HUV5a7MgS4",
+      "confidence": {
+        "scores": [
+          0,
+          53
+        ],
+        "avg": 26.5,
+        "min": 0
+      }
+    },
+    {
+      "video_id": "eB4oFu4BtQ8",
+      "confidence": {
+        "scores": [],
+        "avg": 0,
+        "min": 0
+      }
+    },
+    {
+      "video_id": "JGL-eQAAxGs",
+      "confidence": {
+        "scores": [
+          43,
+          0,
+          16,
+          1,
+          66,
+          51,
+          0,
+          0,
+          58
+        ],
+        "avg": 26.1,
+        "min": 0
+      }
+    },
+    {
+      "video_id": "JODaYjDyjyQ",
+      "confidence": {
+        "scores": [
+          43,
+          1,
+          1
+        ],
+        "avg": 15.0,
+        "min": 1
+      }
+    },
+    {
+      "video_id": "CIjXUg1s5gc",
+      "confidence": {
+        "scores": [
+          16,
+          1,
+          43
+        ],
+        "avg": 20.0,
+        "min": 1
+      }
+    },
+    {
+      "video_id": "4iQmPv_dTI0",
+      "confidence": {
+        "scores": [
+          68,
+          25,
+          60,
+          68,
+          10,
+          53,
+          68
+        ],
+        "avg": 50.3,
+        "min": 10
+      }
+    },
+    {
+      "video_id": "Qll7IHN0I4Q",
+      "confidence": {
+        "scores": [
+          89,
+          18,
+          97,
+          83,
+          18
+        ],
+        "avg": 61.0,
+        "min": 18
+      }
+    },
+    {
+      "video_id": "N1w-hDiJ4dM",
+      "confidence": {
+        "scores": [
+          82,
+          40,
+          90,
+          25,
+          90,
+          25,
+          40,
+          25
+        ],
+        "avg": 52.1,
+        "min": 25
+      }
+    },
+    {
+      "video_id": "ouuPSxE1hK4",
+      "confidence": {
+        "scores": [
+          82,
+          75,
+          75,
+          75,
+          75,
+          25
+        ],
+        "avg": 67.8,
+        "min": 25
+      }
+    },
+    {
+      "video_id": "cMIJsoaxRjk",
+      "confidence": {
+        "scores": [
+          59,
+          67,
+          75,
+          75,
+          32,
+          75,
+          75,
+          68
+        ],
+        "avg": 65.8,
+        "min": 32
+      }
+    },
+    {
+      "video_id": "bdneye4pzMw",
+      "confidence": {
+        "scores": [
+          68,
+          83,
+          33
+        ],
+        "avg": 61.3,
+        "min": 33
+      }
+    },
+    {
+      "video_id": "L_BHC2l30pY",
+      "confidence": {
+        "scores": [
+          67,
+          90,
+          83,
+          40
+        ],
+        "avg": 70.0,
+        "min": 40
+      }
+    },
+    {
+      "video_id": "vWLJeqLPfSU",
+      "confidence": {
+        "scores": [
+          43,
+          66,
+          50
+        ],
+        "avg": 53.0,
+        "min": 43
+      }
+    },
+    {
+      "video_id": "p7YpVl35pac",
+      "confidence": {
+        "scores": [
+          45,
+          45,
+          53,
+          61,
+          53,
+          68
+        ],
+        "avg": 54.2,
+        "min": 45
+      }
+    },
+    {
+      "video_id": "QKzobTCIRDw",
+      "confidence": {
+        "scores": [
+          53,
+          45,
+          53
+        ],
+        "avg": 50.3,
+        "min": 45
+      }
+    },
+    {
+      "video_id": "vR6_ZVKEhJ4",
+      "confidence": {
+        "scores": [
+          75,
+          60,
+          60,
+          60,
+          52,
+          60,
+          68,
+          68
+        ],
+        "avg": 62.9,
+        "min": 52
+      }
+    },
+    {
+      "video_id": "9kqnsoY94L8",
+      "confidence": {
+        "scores": [
+          61,
+          76,
+          53,
+          53,
+          61,
+          76
+        ],
+        "avg": 63.3,
+        "min": 53
+      }
+    },
+    {
+      "video_id": "uwUt1fVLb3E",
+      "confidence": {
+        "scores": [
+          53,
+          83,
+          90,
+          75
+        ],
+        "avg": 75.2,
+        "min": 53
+      }
+    },
+    {
+      "video_id": "hxxcEzM8r-4",
+      "confidence": {
+        "scores": [
+          53,
+          68,
+          83,
+          61
+        ],
+        "avg": 66.2,
+        "min": 53
+      }
+    },
+    {
+      "video_id": "fOAIrUZbOwo",
+      "confidence": {
+        "scores": [
+          53,
+          68,
+          61,
+          61
+        ],
+        "avg": 60.8,
+        "min": 53
+      }
+    },
+    {
+      "video_id": "4cfmEgpOOZk",
+      "confidence": {
+        "scores": [
+          68,
+          68,
+          60,
+          53
+        ],
+        "avg": 62.2,
+        "min": 53
+      }
+    },
+    {
+      "video_id": "K6tzeZLjUNE",
+      "confidence": {
+        "scores": [
+          53,
+          76,
+          76,
+          76,
+          76
+        ],
+        "avg": 71.4,
+        "min": 53
+      }
+    },
+    {
+      "video_id": "UEqTIwRrWvA",
+      "confidence": {
+        "scores": [
+          68,
+          61,
+          76,
+          53,
+          61,
+          61,
+          76
+        ],
+        "avg": 65.1,
+        "min": 53
+      }
+    },
+    {
+      "video_id": "C3lcprigQ0E",
+      "confidence": {
+        "scores": [
+          60,
+          68,
+          83,
+          61
+        ],
+        "avg": 68.0,
+        "min": 60
+      }
+    },
+    {
+      "video_id": "w4WiXKGCJhg",
+      "confidence": {
+        "scores": [
+          60,
+          83,
+          83,
+          76,
+          83
+        ],
+        "avg": 77.0,
+        "min": 60
+      }
+    },
+    {
+      "video_id": "hxsJvKYyVyg",
+      "confidence": {
+        "scores": [
+          61,
+          61,
+          76,
+          76,
+          61
+        ],
+        "avg": 67.0,
+        "min": 61
+      }
+    },
+    {
+      "video_id": "xnS2tbgcTc0",
+      "confidence": {
+        "scores": [
+          82,
+          61,
+          75,
+          83,
+          83
+        ],
+        "avg": 76.8,
+        "min": 61
+      }
+    },
+    {
+      "video_id": "BEoGvTlJMyY",
+      "confidence": {
+        "scores": [
+          75,
+          61,
+          68,
+          68,
+          76,
+          76
+        ],
+        "avg": 70.7,
+        "min": 61
+      }
+    },
+    {
+      "video_id": "YcHL0kUFPhw",
+      "confidence": {
+        "scores": [
+          61,
+          76,
+          61
+        ],
+        "avg": 66.0,
+        "min": 61
+      }
+    },
+    {
+      "video_id": "DFiLdByWIDY",
+      "confidence": {
+        "scores": [
+          76,
+          61,
+          61
+        ],
+        "avg": 66.0,
+        "min": 61
+      }
+    },
+    {
+      "video_id": "up8ODGFWgFg",
+      "confidence": {
+        "scores": [
+          67,
+          75,
+          68,
+          76,
+          75,
+          90
+        ],
+        "avg": 75.2,
+        "min": 67
+      }
+    },
+    {
+      "video_id": "j82L3pLjb_0",
+      "confidence": {
+        "scores": [
+          67,
+          67,
+          75,
+          90
+        ],
+        "avg": 74.8,
+        "min": 67
+      }
+    },
+    {
+      "video_id": "oLgZo6Qi3Uo",
+      "confidence": {
+        "scores": [
+          67,
+          68,
+          90
+        ],
+        "avg": 75.0,
+        "min": 67
+      }
+    },
+    {
+      "video_id": "y38qQRg3UDI",
+      "confidence": {
+        "scores": [
+          68,
+          83,
+          83,
+          83
+        ],
+        "avg": 79.2,
+        "min": 68
+      }
+    },
+    {
+      "video_id": "yXrlhebkpIQ",
+      "confidence": {
+        "scores": [
+          74,
+          90,
+          90
+        ],
+        "avg": 84.7,
+        "min": 74
+      }
+    },
+    {
+      "video_id": "PBKa-AAy_vo",
+      "confidence": {
+        "scores": [
+          82,
+          90,
+          75
+        ],
+        "avg": 82.3,
+        "min": 75
+      }
+    },
+    {
+      "video_id": "IUMTaAQ43lY",
+      "confidence": {
+        "scores": [
+          75,
+          75,
+          75
+        ],
+        "avg": 75.0,
+        "min": 75
+      }
+    },
+    {
+      "video_id": "aWjihS2LHLs",
+      "confidence": {
+        "scores": [
+          75,
+          83,
+          83,
+          83
+        ],
+        "avg": 81.0,
+        "min": 75
+      }
+    },
+    {
+      "video_id": "6dkDepLX0rk",
+      "confidence": {
+        "scores": [
+          75,
+          90,
+          83,
+          83
+        ],
+        "avg": 82.8,
+        "min": 75
+      }
+    },
+    {
+      "video_id": "ferZnZ0_rSM",
+      "confidence": {
+        "scores": [
+          76,
+          76,
+          76,
+          76
+        ],
+        "avg": 76.0,
+        "min": 76
+      }
+    },
+    {
+      "video_id": "oCcks-fwq2c",
+      "confidence": {
+        "scores": [
+          89,
+          97,
+          76,
+          90
+        ],
+        "avg": 88.0,
+        "min": 76
+      }
+    },
+    {
+      "video_id": "FvVnP8G6ITs",
+      "confidence": {
+        "scores": [
+          97,
+          97,
+          82,
+          82
+        ],
+        "avg": 89.5,
+        "min": 82
+      }
+    },
+    {
+      "video_id": "jIIuzB11dsA",
+      "confidence": {
+        "scores": [
+          89,
+          83,
+          97,
+          97
+        ],
+        "avg": 91.5,
+        "min": 83
+      }
+    },
+    {
+      "video_id": "XfzpYcwiUrA",
+      "confidence": {
+        "scores": [
+          97,
+          97,
+          97
+        ],
+        "avg": 97.0,
+        "min": 97
+      }
+    }
+  ],
+  "skipped": [],
+  "failed": [
+    {
+      "video_id": "gMp0SlkVU8w",
+      "error": "FAILED (exit 1): n\n    info = fetch_metadata(vid, args.max_comments)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/torazo/code/tiny_office/scripts/analyze_video.py\", line 98, in fetch_metadata\n    raise RuntimeError(\"yt-dlp did not produce info.json\")\nRuntimeError: yt-dlp did not produce info.json\n"
+    },
+    {
+      "video_id": "-91vymvIH0c",
+      "error": "FAILED (exit 2): ls<81.\n  from pkg_resources import parse_version\nusage: analyze_video.py [-h] [--out OUT] [--max-comments MAX_COMMENTS]\n                        [--skip-audio] [--skip-transcript] [--skip-refine]\n                        video_id\nanalyze_video.py: error: the following arguments are required: video_id\n"
+    }
+  ]
+}

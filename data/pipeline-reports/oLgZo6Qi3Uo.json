@@ -1,0 +1,314 @@
+{
+  "video_id": "oLgZo6Qi3Uo",
+  "title": "Hozier: NPR Music Tiny Desk Concert",
+  "duration": 911,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/oLgZo6Qi3Uo.mp3",
+  "description_songs": [
+    "Take Me To Church",
+    "To Be Alone",
+    "Cherry Wine"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1500 likes, template #1"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 235.2,
+      "end": 247.2,
+      "duration": 12.0,
+      "kind": "applause"
+    },
+    {
+      "start": 266.4,
+      "end": 269.28000000000003,
+      "duration": 2.8800000000000523,
+      "kind": "talk"
+    },
+    {
+      "start": 402.24,
+      "end": 404.16,
+      "duration": 1.920000000000016,
+      "kind": "talk"
+    },
+    {
+      "start": 585.6,
+      "end": 595.68,
+      "duration": 10.079999999999927,
+      "kind": "applause"
+    },
+    {
+      "start": 605.76,
+      "end": 624.0,
+      "duration": 18.24000000000001,
+      "kind": "talk"
+    },
+    {
+      "start": 626.4,
+      "end": 627.84,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 862.0799999999999,
+      "end": 876.0,
+      "duration": 13.920000000000073,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 1,
+      "song": "Take Me to Church",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 1,
+      "clip_end": 235.2,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 67
+    },
+    {
+      "seconds": 276,
+      "song": "To be Alone",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 269.28000000000003,
+      "clip_end": 585.6,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 627,
+      "song": "Cherry Wine",
+      "corroboration": 2,
+      "silence_match": 627.385,
+      "clip_start": 627.84,
+      "clip_end": 862.0799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 90
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 11.6352,
+      "end": 12.5081,
+      "duration": 0.872937
+    },
+    {
+      "start": 45.4056,
+      "end": 46.1043,
+      "duration": 0.698688
+    },
+    {
+      "start": 47.9877,
+      "end": 48.9305,
+      "duration": 0.942729
+    },
+    {
+      "start": 51.1864,
+      "end": 51.7763,
+      "duration": 0.589979
+    },
+    {
+      "start": 53.8295,
+      "end": 54.68,
+      "duration": 0.850521
+    },
+    {
+      "start": 56.8557,
+      "end": 57.6886,
+      "duration": 0.832917
+    },
+    {
+      "start": 247.363,
+      "end": 251.206,
+      "duration": 3.84327
+    },
+    {
+      "start": 251.206,
+      "end": 252.529,
+      "duration": 1.32281
+    },
+    {
+      "start": 252.537,
+      "end": 255.119,
+      "duration": 2.58246
+    },
+    {
+      "start": 255.119,
+      "end": 263.736,
+      "duration": 8.61719
+    },
+    {
+      "start": 264.32,
+      "end": 264.939,
+      "duration": 0.618667
+    },
+    {
+      "start": 267.268,
+      "end": 268.175,
+      "duration": 0.907187
+    },
+    {
+      "start": 268.928,
+      "end": 273.672,
+      "duration": 4.74398
+    },
+    {
+      "start": 404.156,
+      "end": 404.958,
+      "duration": 0.802312
+    },
+    {
+      "start": 540.21,
+      "end": 541.018,
+      "duration": 0.807708
+    },
+    {
+      "start": 583.823,
+      "end": 585.367,
+      "duration": 1.5435
+    },
+    {
+      "start": 595.301,
+      "end": 595.864,
+      "duration": 0.562458
+    },
+    {
+      "start": 595.864,
+      "end": 604.21,
+      "duration": 8.3456
+    },
+    {
+      "start": 604.541,
+      "end": 606.727,
+      "duration": 2.18615
+    },
+    {
+      "start": 606.763,
+      "end": 607.568,
+      "duration": 0.804896
+    },
+    {
+      "start": 608.613,
+      "end": 609.989,
+      "duration": 1.37615
+    },
+    {
+      "start": 610.014,
+      "end": 610.835,
+      "duration": 0.820333
+    },
+    {
+      "start": 610.964,
+      "end": 614.388,
+      "duration": 3.42392
+    },
+    {
+      "start": 619.795,
+      "end": 621.122,
+      "duration": 1.32667
+    },
+    {
+      "start": 621.13,
+      "end": 621.687,
+      "duration": 0.557104
+    },
+    {
+      "start": 621.705,
+      "end": 622.237,
+      "duration": 0.531583
+    },
+    {
+      "start": 622.237,
+      "end": 625.086,
+      "duration": 2.8494
+    },
+    {
+      "start": 625.119,
+      "end": 626.954,
+      "duration": 1.835
+    },
+    {
+      "start": 627.385,
+      "end": 630.087,
+      "duration": 2.70225
+    },
+    {
+      "start": 630.624,
+      "end": 632.624,
+      "duration": 1.99956
+    },
+    {
+      "start": 649.034,
+      "end": 649.856,
+      "duration": 0.821833
+    },
+    {
+      "start": 765.342,
+      "end": 766.28,
+      "duration": 0.937958
+    },
+    {
+      "start": 774.663,
+      "end": 775.369,
+      "duration": 0.705729
+    },
+    {
+      "start": 777.66,
+      "end": 778.982,
+      "duration": 1.32142
+    },
+    {
+      "start": 780.857,
+      "end": 781.58,
+      "duration": 0.722917
+    },
+    {
+      "start": 782.757,
+      "end": 785.364,
+      "duration": 2.6069
+    },
+    {
+      "start": 794.493,
+      "end": 796.108,
+      "duration": 1.61554
+    },
+    {
+      "start": 856.825,
+      "end": 857.688,
+      "duration": 0.863271
+    },
+    {
+      "start": 860.229,
+      "end": 861.525,
+      "duration": 1.29581
+    },
+    {
+      "start": 876.532,
+      "end": 885.771,
+      "duration": 9.23829
+    },
+    {
+      "start": 885.771,
+      "end": 910.454,
+      "duration": 24.6834
+    }
+  ],
+  "confidence": {
+    "scores": [
+      67,
+      68,
+      90
+    ],
+    "avg": 75.0,
+    "min": 67
+  }
+}

@@ -1,0 +1,648 @@
+{
+  "video_id": "jIIuzB11dsA",
+  "title": "Harry Styles: NPR Music Tiny Desk Concert",
+  "duration": 1153,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/jIIuzB11dsA.mp3",
+  "description_songs": [
+    "Cherry",
+    "Watermelon Sugar",
+    "To Be So Lonely",
+    "Adore You"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2200 likes, template #1"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 17.28,
+      "end": 20.16,
+      "duration": 2.879999999999999,
+      "kind": "talk"
+    },
+    {
+      "start": 122.39999999999999,
+      "end": 125.28,
+      "duration": 2.8800000000000097,
+      "kind": "talk"
+    },
+    {
+      "start": 132.96,
+      "end": 134.88,
+      "duration": 1.9199999999999875,
+      "kind": "talk"
+    },
+    {
+      "start": 203.04,
+      "end": 203.99999999999997,
+      "duration": 0.9599999999999795,
+      "kind": "applause"
+    },
+    {
+      "start": 205.44,
+      "end": 214.55999999999997,
+      "duration": 9.119999999999976,
+      "kind": "applause"
+    },
+    {
+      "start": 214.56,
+      "end": 304.8,
+      "duration": 90.24000000000001,
+      "kind": "talk"
+    },
+    {
+      "start": 489.12,
+      "end": 497.28,
+      "duration": 8.159999999999968,
+      "kind": "applause"
+    },
+    {
+      "start": 498.24,
+      "end": 574.08,
+      "duration": 75.84000000000003,
+      "kind": "talk"
+    },
+    {
+      "start": 574.0799999999999,
+      "end": 578.4,
+      "duration": 4.32000000000005,
+      "kind": "applause"
+    },
+    {
+      "start": 578.4,
+      "end": 636.96,
+      "duration": 58.56000000000006,
+      "kind": "talk"
+    },
+    {
+      "start": 833.76,
+      "end": 834.24,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 835.1999999999999,
+      "end": 843.36,
+      "duration": 8.160000000000082,
+      "kind": "applause"
+    },
+    {
+      "start": 843.36,
+      "end": 913.4399999999999,
+      "duration": 70.07999999999993,
+      "kind": "talk"
+    },
+    {
+      "start": 1127.04,
+      "end": 1136.16,
+      "duration": 9.120000000000118,
+      "kind": "applause"
+    },
+    {
+      "start": 1136.6399999999999,
+      "end": 1138.56,
+      "duration": 1.9200000000000728,
+      "kind": "talk"
+    },
+    {
+      "start": 1139.04,
+      "end": 1143.84,
+      "duration": 4.7999999999999545,
+      "kind": "applause"
+    },
+    {
+      "start": 1145.76,
+      "end": 1146.24,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "cherry",
+      "corroboration": 5,
+      "silence_match": 4.85171,
+      "clip_start": 0,
+      "clip_end": 203.04,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 89
+    },
+    {
+      "seconds": 300,
+      "song": "watermelon sugar",
+      "corroboration": 1,
+      "silence_match": 298.949,
+      "clip_start": 304.8,
+      "clip_end": 489.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 636,
+      "song": "To be so lonely",
+      "corroboration": 6,
+      "silence_match": 636.742,
+      "clip_start": 636.96,
+      "clip_end": 833.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 97
+    },
+    {
+      "seconds": 912,
+      "song": "Adore you",
+      "corroboration": 5,
+      "silence_match": 906.215,
+      "clip_start": 913.4399999999999,
+      "clip_end": 1127.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 97
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 4.85171,
+      "end": 5.95231,
+      "duration": 1.1006
+    },
+    {
+      "start": 10.0894,
+      "end": 11.0707,
+      "duration": 0.981292
+    },
+    {
+      "start": 17.0548,
+      "end": 18.1258,
+      "duration": 1.07102
+    },
+    {
+      "start": 18.2156,
+      "end": 18.7182,
+      "duration": 0.502646
+    },
+    {
+      "start": 18.8,
+      "end": 19.3246,
+      "duration": 0.524604
+    },
+    {
+      "start": 19.4345,
+      "end": 20.0296,
+      "duration": 0.595104
+    },
+    {
+      "start": 111.478,
+      "end": 112.729,
+      "duration": 1.25027
+    },
+    {
+      "start": 117.184,
+      "end": 118.024,
+      "duration": 0.840729
+    },
+    {
+      "start": 122.605,
+      "end": 124.126,
+      "duration": 1.52094
+    },
+    {
+      "start": 124.152,
+      "end": 124.848,
+      "duration": 0.696063
+    },
+    {
+      "start": 124.929,
+      "end": 125.542,
+      "duration": 0.613125
+    },
+    {
+      "start": 125.631,
+      "end": 126.178,
+      "duration": 0.546708
+    },
+    {
+      "start": 132.392,
+      "end": 133.029,
+      "duration": 0.636875
+    },
+    {
+      "start": 200.97,
+      "end": 203.101,
+      "duration": 2.13131
+    },
+    {
+      "start": 216.158,
+      "end": 216.922,
+      "duration": 0.763521
+    },
+    {
+      "start": 221.674,
+      "end": 222.571,
+      "duration": 0.897292
+    },
+    {
+      "start": 224.808,
+      "end": 225.657,
+      "duration": 0.849687
+    },
+    {
+      "start": 226.496,
+      "end": 227.072,
+      "duration": 0.575083
+    },
+    {
+      "start": 232.071,
+      "end": 232.906,
+      "duration": 0.835021
+    },
+    {
+      "start": 235.445,
+      "end": 236.024,
+      "duration": 0.578979
+    },
+    {
+      "start": 241.209,
+      "end": 242.181,
+      "duration": 0.972521
+    },
+    {
+      "start": 245.788,
+      "end": 247.18,
+      "duration": 1.39173
+    },
+    {
+      "start": 252.966,
+      "end": 253.69,
+      "duration": 0.724
+    },
+    {
+      "start": 258.328,
+      "end": 259.307,
+      "duration": 0.978521
+    },
+    {
+      "start": 260.086,
+      "end": 260.98,
+      "duration": 0.893708
+    },
+    {
+      "start": 263.399,
+      "end": 264.249,
+      "duration": 0.850146
+    },
+    {
+      "start": 271.737,
+      "end": 272.758,
+      "duration": 1.02131
+    },
+    {
+      "start": 276.53,
+      "end": 277.29,
+      "duration": 0.760375
+    },
+    {
+      "start": 279.827,
+      "end": 280.617,
+      "duration": 0.789583
+    },
+    {
+      "start": 282.169,
+      "end": 282.99,
+      "duration": 0.821354
+    },
+    {
+      "start": 283.371,
+      "end": 283.94,
+      "duration": 0.569417
+    },
+    {
+      "start": 285.067,
+      "end": 285.751,
+      "duration": 0.684667
+    },
+    {
+      "start": 286.686,
+      "end": 287.732,
+      "duration": 1.04573
+    },
+    {
+      "start": 290.027,
+      "end": 290.783,
+      "duration": 0.756146
+    },
+    {
+      "start": 293.292,
+      "end": 294.017,
+      "duration": 0.724771
+    },
+    {
+      "start": 298.037,
+      "end": 298.818,
+      "duration": 0.780312
+    },
+    {
+      "start": 298.949,
+      "end": 299.548,
+      "duration": 0.598938
+    },
+    {
+      "start": 311.261,
+      "end": 312.834,
+      "duration": 1.57262
+    },
+    {
+      "start": 487.497,
+      "end": 488.625,
+      "duration": 1.12773
+    },
+    {
+      "start": 499.725,
+      "end": 500.905,
+      "duration": 1.18056
+    },
+    {
+      "start": 504.329,
+      "end": 505.362,
+      "duration": 1.03348
+    },
+    {
+      "start": 516.24,
+      "end": 516.845,
+      "duration": 0.605042
+    },
+    {
+      "start": 517.321,
+      "end": 517.889,
+      "duration": 0.56775
+    },
+    {
+      "start": 519.2,
+      "end": 520.491,
+      "duration": 1.29067
+    },
+    {
+      "start": 526.28,
+      "end": 526.785,
+      "duration": 0.504333
+    },
+    {
+      "start": 533.805,
+      "end": 534.483,
+      "duration": 0.677812
+    },
+    {
+      "start": 535.973,
+      "end": 536.995,
+      "duration": 1.02148
+    },
+    {
+      "start": 541.804,
+      "end": 542.557,
+      "duration": 0.753333
+    },
+    {
+      "start": 543.361,
+      "end": 544.425,
+      "duration": 1.06452
+    },
+    {
+      "start": 551.119,
+      "end": 551.768,
+      "duration": 0.649438
+    },
+    {
+      "start": 552.67,
+      "end": 553.525,
+      "duration": 0.855417
+    },
+    {
+      "start": 558.78,
+      "end": 559.426,
+      "duration": 0.646312
+    },
+    {
+      "start": 559.723,
+      "end": 560.353,
+      "duration": 0.629771
+    },
+    {
+      "start": 563.667,
+      "end": 564.475,
+      "duration": 0.808063
+    },
+    {
+      "start": 565.332,
+      "end": 566.117,
+      "duration": 0.784917
+    },
+    {
+      "start": 569.679,
+      "end": 570.286,
+      "duration": 0.6075
+    },
+    {
+      "start": 586.899,
+      "end": 587.648,
+      "duration": 0.749146
+    },
+    {
+      "start": 594.207,
+      "end": 594.924,
+      "duration": 0.716854
+    },
+    {
+      "start": 598.893,
+      "end": 599.487,
+      "duration": 0.59375
+    },
+    {
+      "start": 601.256,
+      "end": 602.051,
+      "duration": 0.794458
+    },
+    {
+      "start": 602.271,
+      "end": 603.168,
+      "duration": 0.896771
+    },
+    {
+      "start": 604.772,
+      "end": 605.333,
+      "duration": 0.561292
+    },
+    {
+      "start": 609.247,
+      "end": 609.765,
+      "duration": 0.518813
+    },
+    {
+      "start": 611.455,
+      "end": 612.031,
+      "duration": 0.576354
+    },
+    {
+      "start": 612.795,
+      "end": 613.402,
+      "duration": 0.607167
+    },
+    {
+      "start": 615.813,
+      "end": 616.362,
+      "duration": 0.549167
+    },
+    {
+      "start": 617.827,
+      "end": 618.429,
+      "duration": 0.602417
+    },
+    {
+      "start": 620.064,
+      "end": 621.02,
+      "duration": 0.956313
+    },
+    {
+      "start": 627.007,
+      "end": 627.556,
+      "duration": 0.548917
+    },
+    {
+      "start": 632.867,
+      "end": 633.505,
+      "duration": 0.63825
+    },
+    {
+      "start": 636.742,
+      "end": 637.715,
+      "duration": 0.9725
+    },
+    {
+      "start": 641.54,
+      "end": 642.104,
+      "duration": 0.563396
+    },
+    {
+      "start": 646.015,
+      "end": 646.528,
+      "duration": 0.512854
+    },
+    {
+      "start": 792.609,
+      "end": 793.544,
+      "duration": 0.935083
+    },
+    {
+      "start": 831.168,
+      "end": 833.054,
+      "duration": 1.88658
+    },
+    {
+      "start": 846.563,
+      "end": 847.248,
+      "duration": 0.685042
+    },
+    {
+      "start": 869.71,
+      "end": 870.315,
+      "duration": 0.6045
+    },
+    {
+      "start": 871.959,
+      "end": 872.888,
+      "duration": 0.929271
+    },
+    {
+      "start": 874.143,
+      "end": 876.211,
+      "duration": 2.06779
+    },
+    {
+      "start": 881.414,
+      "end": 882.05,
+      "duration": 0.635958
+    },
+    {
+      "start": 883.103,
+      "end": 883.643,
+      "duration": 0.539479
+    },
+    {
+      "start": 888.304,
+      "end": 889.012,
+      "duration": 0.707958
+    },
+    {
+      "start": 890.162,
+      "end": 891.101,
+      "duration": 0.938229
+    },
+    {
+      "start": 892.69,
+      "end": 893.772,
+      "duration": 1.08173
+    },
+    {
+      "start": 894.73,
+      "end": 895.383,
+      "duration": 0.653021
+    },
+    {
+      "start": 897.754,
+      "end": 898.59,
+      "duration": 0.836854
+    },
+    {
+      "start": 901.543,
+      "end": 902.046,
+      "duration": 0.503167
+    },
+    {
+      "start": 902.645,
+      "end": 903.297,
+      "duration": 0.6525
+    },
+    {
+      "start": 904.798,
+      "end": 905.933,
+      "duration": 1.13458
+    },
+    {
+      "start": 906.215,
+      "end": 907.165,
+      "duration": 0.950479
+    },
+    {
+      "start": 1090.93,
+      "end": 1092.51,
+      "duration": 1.58727
+    },
+    {
+      "start": 1123.61,
+      "end": 1124.94,
+      "duration": 1.32744
+    },
+    {
+      "start": 1146.96,
+      "end": 1153.32,
+      "duration": 6.36662
+    }
+  ],
+  "confidence": {
+    "scores": [
+      89,
+      83,
+      97,
+      97
+    ],
+    "avg": 91.5,
+    "min": 83
+  }
+}

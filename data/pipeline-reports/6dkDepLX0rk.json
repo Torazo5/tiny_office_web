@@ -1,0 +1,436 @@
+{
+  "video_id": "6dkDepLX0rk",
+  "title": "Stromae: Tiny Desk Concert",
+  "duration": 975,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/6dkDepLX0rk.mp3",
+  "description_songs": [
+    "\u201cL\u2019enfer\u201d",
+    "\u201cSant\u00e9\u201d",
+    "\u201cAlors on danse\u201d",
+    "\u201cMon amour\u201d"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 3500 likes, template #4"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 194.4,
+      "end": 206.39999999999998,
+      "duration": 11.999999999999972,
+      "kind": "applause"
+    },
+    {
+      "start": 206.88,
+      "end": 210.71999999999997,
+      "duration": 3.839999999999975,
+      "kind": "talk"
+    },
+    {
+      "start": 211.67999999999998,
+      "end": 218.88,
+      "duration": 7.200000000000017,
+      "kind": "applause"
+    },
+    {
+      "start": 218.88,
+      "end": 225.11999999999998,
+      "duration": 6.239999999999981,
+      "kind": "talk"
+    },
+    {
+      "start": 225.6,
+      "end": 228.95999999999998,
+      "duration": 3.359999999999985,
+      "kind": "applause"
+    },
+    {
+      "start": 228.95999999999998,
+      "end": 233.27999999999997,
+      "duration": 4.319999999999993,
+      "kind": "talk"
+    },
+    {
+      "start": 233.28,
+      "end": 235.2,
+      "duration": 1.9199999999999875,
+      "kind": "applause"
+    },
+    {
+      "start": 235.2,
+      "end": 240.48,
+      "duration": 5.280000000000001,
+      "kind": "talk"
+    },
+    {
+      "start": 240.48,
+      "end": 242.87999999999997,
+      "duration": 2.3999999999999773,
+      "kind": "applause"
+    },
+    {
+      "start": 242.88,
+      "end": 247.2,
+      "duration": 4.319999999999993,
+      "kind": "talk"
+    },
+    {
+      "start": 247.2,
+      "end": 251.99999999999997,
+      "duration": 4.799999999999983,
+      "kind": "applause"
+    },
+    {
+      "start": 252.0,
+      "end": 256.32,
+      "duration": 4.319999999999993,
+      "kind": "talk"
+    },
+    {
+      "start": 256.8,
+      "end": 261.6,
+      "duration": 4.800000000000011,
+      "kind": "applause"
+    },
+    {
+      "start": 261.59999999999997,
+      "end": 276.96000000000004,
+      "duration": 15.36000000000007,
+      "kind": "talk"
+    },
+    {
+      "start": 464.64,
+      "end": 478.08,
+      "duration": 13.439999999999998,
+      "kind": "applause"
+    },
+    {
+      "start": 478.08,
+      "end": 494.88,
+      "duration": 16.80000000000001,
+      "kind": "talk"
+    },
+    {
+      "start": 631.68,
+      "end": 633.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 702.72,
+      "end": 726.72,
+      "duration": 24.0,
+      "kind": "applause"
+    },
+    {
+      "start": 727.1999999999999,
+      "end": 730.56,
+      "duration": 3.3600000000000136,
+      "kind": "talk"
+    },
+    {
+      "start": 732.48,
+      "end": 734.4,
+      "duration": 1.919999999999959,
+      "kind": "talk"
+    },
+    {
+      "start": 736.8,
+      "end": 762.72,
+      "duration": 25.920000000000073,
+      "kind": "talk"
+    },
+    {
+      "start": 775.1999999999999,
+      "end": 775.68,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 791.04,
+      "end": 793.92,
+      "duration": 2.8799999999999955,
+      "kind": "talk"
+    },
+    {
+      "start": 813.12,
+      "end": 813.6,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 816.48,
+      "end": 816.96,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 819.8399999999999,
+      "end": 825.6,
+      "duration": 5.760000000000105,
+      "kind": "talk"
+    },
+    {
+      "start": 827.52,
+      "end": 835.1999999999999,
+      "duration": 7.67999999999995,
+      "kind": "talk"
+    },
+    {
+      "start": 851.52,
+      "end": 859.1999999999999,
+      "duration": 7.67999999999995,
+      "kind": "talk"
+    },
+    {
+      "start": 884.64,
+      "end": 886.08,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 897.6,
+      "end": 899.04,
+      "duration": 1.4399999999999409,
+      "kind": "talk"
+    },
+    {
+      "start": 908.64,
+      "end": 931.1999999999999,
+      "duration": 22.559999999999945,
+      "kind": "applause"
+    },
+    {
+      "start": 931.1999999999999,
+      "end": 942.24,
+      "duration": 11.040000000000077,
+      "kind": "talk"
+    },
+    {
+      "start": 942.24,
+      "end": 950.4,
+      "duration": 8.159999999999968,
+      "kind": "applause"
+    },
+    {
+      "start": 950.4,
+      "end": 957.12,
+      "duration": 6.720000000000027,
+      "kind": "talk"
+    },
+    {
+      "start": 957.12,
+      "end": 963.84,
+      "duration": 6.720000000000027,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "L\u2019enfer",
+      "corroboration": 1,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 194.4,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 275,
+      "song": "Sant\u00e9",
+      "corroboration": 2,
+      "silence_match": 274.818,
+      "clip_start": 276.96000000000004,
+      "clip_end": 464.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 495,
+      "song": "Alors on danse",
+      "corroboration": 1,
+      "silence_match": 494.727,
+      "clip_start": 494.88,
+      "clip_end": 702.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 769,
+      "song": "Mon amour",
+      "corroboration": 1,
+      "silence_match": 769.165,
+      "clip_start": 775.68,
+      "clip_end": 813.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.0449,
+      "duration": 5.0449
+    },
+    {
+      "start": 17.2508,
+      "end": 19.144,
+      "duration": 1.89323
+    },
+    {
+      "start": 191.699,
+      "end": 193.268,
+      "duration": 1.56912
+    },
+    {
+      "start": 224.937,
+      "end": 225.484,
+      "duration": 0.547063
+    },
+    {
+      "start": 256.122,
+      "end": 256.798,
+      "duration": 0.676208
+    },
+    {
+      "start": 269.087,
+      "end": 269.794,
+      "duration": 0.706646
+    },
+    {
+      "start": 274.818,
+      "end": 275.449,
+      "duration": 0.631021
+    },
+    {
+      "start": 276.974,
+      "end": 278.283,
+      "duration": 1.30981
+    },
+    {
+      "start": 464.286,
+      "end": 464.952,
+      "duration": 0.665167
+    },
+    {
+      "start": 483.448,
+      "end": 484.701,
+      "duration": 1.25223
+    },
+    {
+      "start": 493.497,
+      "end": 494.28,
+      "duration": 0.783333
+    },
+    {
+      "start": 494.727,
+      "end": 495.646,
+      "duration": 0.919083
+    },
+    {
+      "start": 631.97,
+      "end": 633.12,
+      "duration": 1.14983
+    },
+    {
+      "start": 730.022,
+      "end": 731.835,
+      "duration": 1.81288
+    },
+    {
+      "start": 731.862,
+      "end": 733.37,
+      "duration": 1.50769
+    },
+    {
+      "start": 735.102,
+      "end": 736.667,
+      "duration": 1.56565
+    },
+    {
+      "start": 736.67,
+      "end": 737.614,
+      "duration": 0.944208
+    },
+    {
+      "start": 742.357,
+      "end": 743.323,
+      "duration": 0.965271
+    },
+    {
+      "start": 746.25,
+      "end": 746.871,
+      "duration": 0.621271
+    },
+    {
+      "start": 748.096,
+      "end": 748.687,
+      "duration": 0.591625
+    },
+    {
+      "start": 753.553,
+      "end": 754.553,
+      "duration": 1.00071
+    },
+    {
+      "start": 760.443,
+      "end": 761.188,
+      "duration": 0.7445
+    },
+    {
+      "start": 761.61,
+      "end": 762.24,
+      "duration": 0.629854
+    },
+    {
+      "start": 762.549,
+      "end": 764.366,
+      "duration": 1.81692
+    },
+    {
+      "start": 764.66,
+      "end": 765.72,
+      "duration": 1.05996
+    },
+    {
+      "start": 765.905,
+      "end": 768.104,
+      "duration": 2.19888
+    },
+    {
+      "start": 769.165,
+      "end": 770.089,
+      "duration": 0.923896
+    },
+    {
+      "start": 908.538,
+      "end": 909.259,
+      "duration": 0.720083
+    },
+    {
+      "start": 964.093,
+      "end": 974.82,
+      "duration": 10.7267
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      90,
+      83,
+      83
+    ],
+    "avg": 82.8,
+    "min": 75
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "video_id": "hxxcEzM8r-4",
+  "title": "H.E.R.: NPR Music Tiny Desk Concert",
+  "duration": 1132,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/hxxcEzM8r-4.mp3",
+  "description_songs": [
+    "Going\" (Interlude)",
+    "Feel A Way",
+    "Hard Place",
+    "Focus"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1100 likes, template #1"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 144.0,
+      "end": 145.44,
+      "duration": 1.4399999999999977,
+      "kind": "talk"
+    },
+    {
+      "start": 147.84,
+      "end": 154.55999999999997,
+      "duration": 6.71999999999997,
+      "kind": "talk"
+    },
+    {
+      "start": 384.47999999999996,
+      "end": 394.08,
+      "duration": 9.600000000000023,
+      "kind": "applause"
+    },
+    {
+      "start": 395.52,
+      "end": 403.68,
+      "duration": 8.160000000000025,
+      "kind": "talk"
+    },
+    {
+      "start": 405.59999999999997,
+      "end": 407.52,
+      "duration": 1.920000000000016,
+      "kind": "talk"
+    },
+    {
+      "start": 690.24,
+      "end": 694.08,
+      "duration": 3.840000000000032,
+      "kind": "applause"
+    },
+    {
+      "start": 694.56,
+      "end": 697.92,
+      "duration": 3.3600000000000136,
+      "kind": "applause"
+    },
+    {
+      "start": 697.92,
+      "end": 699.36,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 699.36,
+      "end": 701.76,
+      "duration": 2.3999999999999773,
+      "kind": "applause"
+    },
+    {
+      "start": 701.76,
+      "end": 714.24,
+      "duration": 12.480000000000018,
+      "kind": "talk"
+    },
+    {
+      "start": 714.24,
+      "end": 714.72,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 716.16,
+      "end": 716.64,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 716.64,
+      "end": 719.52,
+      "duration": 2.8799999999999955,
+      "kind": "talk"
+    },
+    {
+      "start": 719.52,
+      "end": 720.0,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 720.9599999999999,
+      "end": 722.4,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 723.36,
+      "end": 728.64,
+      "duration": 5.279999999999973,
+      "kind": "talk"
+    },
+    {
+      "start": 729.12,
+      "end": 729.6,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 730.0799999999999,
+      "end": 733.4399999999999,
+      "duration": 3.3600000000000136,
+      "kind": "talk"
+    },
+    {
+      "start": 734.88,
+      "end": 737.28,
+      "duration": 2.3999999999999773,
+      "kind": "applause"
+    },
+    {
+      "start": 737.76,
+      "end": 739.68,
+      "duration": 1.919999999999959,
+      "kind": "talk"
+    },
+    {
+      "start": 1110.24,
+      "end": 1125.12,
+      "duration": 14.879999999999882,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 10,
+      "song": "going (interlude)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 10,
+      "clip_end": 147.84,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 163,
+      "song": "Feel a way",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 154.55999999999997,
+      "clip_end": 384.47999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 407,
+      "song": "Hard Place",
+      "corroboration": 1,
+      "silence_match": 403.637,
+      "clip_start": 407.52,
+      "clip_end": 690.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 743,
+      "song": "focus",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 739.68,
+      "clip_end": 1110.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.10067,
+      "duration": 5.10067
+    },
+    {
+      "start": 395.182,
+      "end": 396.186,
+      "duration": 1.0041
+    },
+    {
+      "start": 396.795,
+      "end": 398.12,
+      "duration": 1.32431
+    },
+    {
+      "start": 399.451,
+      "end": 399.976,
+      "duration": 0.525687
+    },
+    {
+      "start": 403.637,
+      "end": 406.073,
+      "duration": 2.43548
+    },
+    {
+      "start": 707.739,
+      "end": 708.469,
+      "duration": 0.729708
+    },
+    {
+      "start": 719.533,
+      "end": 720.087,
+      "duration": 0.554167
+    },
+    {
+      "start": 861.839,
+      "end": 862.654,
+      "duration": 0.814937
+    },
+    {
+      "start": 1125.08,
+      "end": 1131.55,
+      "duration": 6.47425
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      68,
+      83,
+      61
+    ],
+    "avg": 66.2,
+    "min": 53
+  }
+}

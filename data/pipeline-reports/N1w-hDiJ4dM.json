@@ -1,0 +1,620 @@
+{
+  "video_id": "N1w-hDiJ4dM",
+  "title": "Tyler, The Creator: NPR Music Tiny Desk Concert",
+  "duration": 1484,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/N1w-hDiJ4dM.mp3",
+  "description_songs": [
+    "Boredom",
+    "See You Again",
+    "Glitter"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 699 likes, template #1 (description lists 3 \u2014 comment may split/merge differently)"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 418.08,
+      "end": 425.28000000000003,
+      "duration": 7.2000000000000455,
+      "kind": "applause"
+    },
+    {
+      "start": 426.24,
+      "end": 428.64,
+      "duration": 2.3999999999999773,
+      "kind": "applause"
+    },
+    {
+      "start": 430.56,
+      "end": 456.0,
+      "duration": 25.439999999999998,
+      "kind": "talk"
+    },
+    {
+      "start": 467.52,
+      "end": 518.4,
+      "duration": 50.879999999999995,
+      "kind": "talk"
+    },
+    {
+      "start": 567.84,
+      "end": 569.28,
+      "duration": 1.4399999999999409,
+      "kind": "talk"
+    },
+    {
+      "start": 743.04,
+      "end": 748.3199999999999,
+      "duration": 5.279999999999973,
+      "kind": "applause"
+    },
+    {
+      "start": 749.28,
+      "end": 750.24,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 750.24,
+      "end": 755.04,
+      "duration": 4.7999999999999545,
+      "kind": "talk"
+    },
+    {
+      "start": 755.04,
+      "end": 757.92,
+      "duration": 2.8799999999999955,
+      "kind": "applause"
+    },
+    {
+      "start": 758.4,
+      "end": 760.8,
+      "duration": 2.3999999999999773,
+      "kind": "talk"
+    },
+    {
+      "start": 762.72,
+      "end": 765.6,
+      "duration": 2.8799999999999955,
+      "kind": "talk"
+    },
+    {
+      "start": 767.52,
+      "end": 771.36,
+      "duration": 3.840000000000032,
+      "kind": "talk"
+    },
+    {
+      "start": 773.28,
+      "end": 796.3199999999999,
+      "duration": 23.039999999999964,
+      "kind": "talk"
+    },
+    {
+      "start": 1077.12,
+      "end": 1079.04,
+      "duration": 1.9200000000000728,
+      "kind": "talk"
+    },
+    {
+      "start": 1140.0,
+      "end": 1159.68,
+      "duration": 19.680000000000064,
+      "kind": "applause"
+    },
+    {
+      "start": 1159.68,
+      "end": 1161.12,
+      "duration": 1.4399999999998272,
+      "kind": "talk"
+    },
+    {
+      "start": 1161.12,
+      "end": 1163.04,
+      "duration": 1.9200000000000728,
+      "kind": "applause"
+    },
+    {
+      "start": 1167.84,
+      "end": 1266.24,
+      "duration": 98.40000000000009,
+      "kind": "talk"
+    },
+    {
+      "start": 1268.6399999999999,
+      "end": 1272.96,
+      "duration": 4.320000000000164,
+      "kind": "applause"
+    },
+    {
+      "start": 1273.44,
+      "end": 1310.3999999999999,
+      "duration": 36.95999999999981,
+      "kind": "talk"
+    },
+    {
+      "start": 1310.3999999999999,
+      "end": 1310.8799999999999,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 1310.8799999999999,
+      "end": 1317.6,
+      "duration": 6.720000000000027,
+      "kind": "talk"
+    },
+    {
+      "start": 1317.6,
+      "end": 1321.92,
+      "duration": 4.320000000000164,
+      "kind": "applause"
+    },
+    {
+      "start": 1322.3999999999999,
+      "end": 1340.6399999999999,
+      "duration": 18.24000000000001,
+      "kind": "talk"
+    },
+    {
+      "start": 1340.6399999999999,
+      "end": 1343.04,
+      "duration": 2.400000000000091,
+      "kind": "applause"
+    },
+    {
+      "start": 1344.0,
+      "end": 1362.72,
+      "duration": 18.720000000000027,
+      "kind": "talk"
+    },
+    {
+      "start": 1364.6399999999999,
+      "end": 1473.12,
+      "duration": 108.48000000000002,
+      "kind": "talk"
+    },
+    {
+      "start": 1473.6,
+      "end": 1474.56,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 1475.52,
+      "end": 1476.0,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 1476.0,
+      "end": 1477.44,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 1478.3999999999999,
+      "end": 1478.8799999999999,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 1479.36,
+      "end": 1479.84,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 1479.84,
+      "end": 1482.24,
+      "duration": 2.400000000000091,
+      "kind": "talk"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "boredom",
+      "corroboration": 2,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 418.08,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 82
+    },
+    {
+      "seconds": 457,
+      "song": "see you again introduction",
+      "corroboration": 2,
+      "silence_match": 456.646,
+      "clip_start": 456.0,
+      "clip_end": 467.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": true,
+      "confidence": 40
+    },
+    {
+      "seconds": 515,
+      "song": "see you again",
+      "corroboration": 2,
+      "silence_match": 517.116,
+      "clip_start": 518.4,
+      "clip_end": 743.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 750,
+      "song": "preparing for glitter",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 765.6,
+      "clip_end": 773.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": true,
+      "confidence": 25
+    },
+    {
+      "seconds": 792,
+      "song": "glitter",
+      "corroboration": 2,
+      "silence_match": 792.313,
+      "clip_start": 796.3199999999999,
+      "clip_end": 1140.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 1153,
+      "song": "credits",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 1163.04,
+      "clip_end": 1167.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": true,
+      "confidence": 25
+    },
+    {
+      "seconds": 1167,
+      "song": "chit chat with tyler",
+      "corroboration": 2,
+      "silence_match": 1164.06,
+      "clip_start": 1163.04,
+      "clip_end": 1167.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": true,
+      "confidence": 40
+    },
+    {
+      "seconds": 1272,
+      "song": "band introductions",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 1272.96,
+      "clip_end": 1273.44,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": true,
+      "confidence": 25
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.48152,
+      "duration": 5.48152
+    },
+    {
+      "start": 17.0665,
+      "end": 17.7079,
+      "duration": 0.641333
+    },
+    {
+      "start": 445.41,
+      "end": 446.012,
+      "duration": 0.601854
+    },
+    {
+      "start": 451.145,
+      "end": 451.701,
+      "duration": 0.556458
+    },
+    {
+      "start": 451.723,
+      "end": 452.879,
+      "duration": 1.15596
+    },
+    {
+      "start": 453.801,
+      "end": 455.666,
+      "duration": 1.86448
+    },
+    {
+      "start": 455.666,
+      "end": 456.641,
+      "duration": 0.975479
+    },
+    {
+      "start": 456.646,
+      "end": 457.425,
+      "duration": 0.779042
+    },
+    {
+      "start": 466.652,
+      "end": 467.696,
+      "duration": 1.04442
+    },
+    {
+      "start": 469.585,
+      "end": 470.49,
+      "duration": 0.904542
+    },
+    {
+      "start": 470.712,
+      "end": 471.695,
+      "duration": 0.983187
+    },
+    {
+      "start": 474.994,
+      "end": 475.525,
+      "duration": 0.53125
+    },
+    {
+      "start": 478.619,
+      "end": 479.443,
+      "duration": 0.823896
+    },
+    {
+      "start": 491.2,
+      "end": 491.946,
+      "duration": 0.745375
+    },
+    {
+      "start": 494.256,
+      "end": 495.339,
+      "duration": 1.083
+    },
+    {
+      "start": 497.083,
+      "end": 497.742,
+      "duration": 0.658896
+    },
+    {
+      "start": 501.313,
+      "end": 502.018,
+      "duration": 0.704958
+    },
+    {
+      "start": 502.02,
+      "end": 502.713,
+      "duration": 0.693167
+    },
+    {
+      "start": 504.79,
+      "end": 505.302,
+      "duration": 0.511729
+    },
+    {
+      "start": 511.753,
+      "end": 512.961,
+      "duration": 1.20875
+    },
+    {
+      "start": 517.116,
+      "end": 517.806,
+      "duration": 0.69
+    },
+    {
+      "start": 517.887,
+      "end": 518.592,
+      "duration": 0.705437
+    },
+    {
+      "start": 518.592,
+      "end": 519.357,
+      "duration": 0.765167
+    },
+    {
+      "start": 543.02,
+      "end": 543.553,
+      "duration": 0.532833
+    },
+    {
+      "start": 761.143,
+      "end": 763.258,
+      "duration": 2.11552
+    },
+    {
+      "start": 763.477,
+      "end": 764.159,
+      "duration": 0.681688
+    },
+    {
+      "start": 764.17,
+      "end": 765.168,
+      "duration": 0.998458
+    },
+    {
+      "start": 765.678,
+      "end": 766.436,
+      "duration": 0.758188
+    },
+    {
+      "start": 768.031,
+      "end": 769.122,
+      "duration": 1.09096
+    },
+    {
+      "start": 779.367,
+      "end": 780.529,
+      "duration": 1.16244
+    },
+    {
+      "start": 781.254,
+      "end": 781.924,
+      "duration": 0.670125
+    },
+    {
+      "start": 781.939,
+      "end": 782.555,
+      "duration": 0.616
+    },
+    {
+      "start": 786.286,
+      "end": 786.854,
+      "duration": 0.56775
+    },
+    {
+      "start": 788.622,
+      "end": 789.523,
+      "duration": 0.900875
+    },
+    {
+      "start": 792.313,
+      "end": 793.647,
+      "duration": 1.33448
+    },
+    {
+      "start": 793.803,
+      "end": 794.564,
+      "duration": 0.76125
+    },
+    {
+      "start": 794.564,
+      "end": 796.414,
+      "duration": 1.8505
+    },
+    {
+      "start": 796.422,
+      "end": 797.295,
+      "duration": 0.873146
+    },
+    {
+      "start": 1164.06,
+      "end": 1168.44,
+      "duration": 4.38129
+    },
+    {
+      "start": 1172.74,
+      "end": 1173.4,
+      "duration": 0.65325
+    },
+    {
+      "start": 1173.59,
+      "end": 1174.53,
+      "duration": 0.939479
+    },
+    {
+      "start": 1185.74,
+      "end": 1186.84,
+      "duration": 1.10312
+    },
+    {
+      "start": 1206.31,
+      "end": 1206.93,
+      "duration": 0.613187
+    },
+    {
+      "start": 1207.4,
+      "end": 1208.12,
+      "duration": 0.722396
+    },
+    {
+      "start": 1213.02,
+      "end": 1213.56,
+      "duration": 0.537604
+    },
+    {
+      "start": 1283.94,
+      "end": 1284.58,
+      "duration": 0.637854
+    },
+    {
+      "start": 1284.58,
+      "end": 1285.28,
+      "duration": 0.699458
+    },
+    {
+      "start": 1307.16,
+      "end": 1308.2,
+      "duration": 1.03313
+    },
+    {
+      "start": 1343.83,
+      "end": 1344.87,
+      "duration": 1.04054
+    },
+    {
+      "start": 1345.47,
+      "end": 1346.03,
+      "duration": 0.554896
+    },
+    {
+      "start": 1346.71,
+      "end": 1347.31,
+      "duration": 0.596021
+    },
+    {
+      "start": 1351.32,
+      "end": 1352.0,
+      "duration": 0.674417
+    },
+    {
+      "start": 1364.16,
+      "end": 1365.28,
+      "duration": 1.12729
+    },
+    {
+      "start": 1374.36,
+      "end": 1374.9,
+      "duration": 0.539708
+    },
+    {
+      "start": 1388.45,
+      "end": 1389.02,
+      "duration": 0.568792
+    },
+    {
+      "start": 1405.19,
+      "end": 1406.11,
+      "duration": 0.919771
+    },
+    {
+      "start": 1461.79,
+      "end": 1462.37,
+      "duration": 0.584875
+    },
+    {
+      "start": 1481.64,
+      "end": 1483.99,
+      "duration": 2.34927
+    }
+  ],
+  "confidence": {
+    "scores": [
+      82,
+      40,
+      90,
+      25,
+      90,
+      25,
+      40,
+      25
+    ],
+    "avg": 52.1,
+    "min": 25
+  }
+}

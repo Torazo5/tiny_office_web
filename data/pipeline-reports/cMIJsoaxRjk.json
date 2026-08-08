@@ -1,0 +1,424 @@
+{
+  "video_id": "cMIJsoaxRjk",
+  "title": "Justin Timberlake: Tiny Desk Concert",
+  "duration": 1540,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/cMIJsoaxRjk.mp3",
+  "description_songs": [
+    "Se\u00f1orita",
+    "Rock Your Body",
+    "Pusher Love Girl",
+    "Until The End Of Time",
+    "Selfish",
+    "What Goes Around",
+    "SexyBack"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 3000 likes, template #4 (description lists 7 \u2014 comment may split/merge differently)"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 275.03999999999996,
+      "end": 278.88,
+      "duration": 3.840000000000032,
+      "kind": "applause"
+    },
+    {
+      "start": 280.8,
+      "end": 284.16,
+      "duration": 3.3600000000000136,
+      "kind": "applause"
+    },
+    {
+      "start": 444.0,
+      "end": 452.16,
+      "duration": 8.160000000000025,
+      "kind": "applause"
+    },
+    {
+      "start": 632.16,
+      "end": 633.6,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 634.0799999999999,
+      "end": 636.96,
+      "duration": 2.880000000000109,
+      "kind": "talk"
+    },
+    {
+      "start": 636.9599999999999,
+      "end": 638.4,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 639.36,
+      "end": 641.28,
+      "duration": 1.919999999999959,
+      "kind": "applause"
+    },
+    {
+      "start": 642.24,
+      "end": 643.68,
+      "duration": 1.4399999999999409,
+      "kind": "applause"
+    },
+    {
+      "start": 647.04,
+      "end": 654.72,
+      "duration": 7.680000000000064,
+      "kind": "talk"
+    },
+    {
+      "start": 654.72,
+      "end": 660.96,
+      "duration": 6.240000000000009,
+      "kind": "applause"
+    },
+    {
+      "start": 661.4399999999999,
+      "end": 696.96,
+      "duration": 35.520000000000095,
+      "kind": "talk"
+    },
+    {
+      "start": 698.88,
+      "end": 731.04,
+      "duration": 32.15999999999997,
+      "kind": "talk"
+    },
+    {
+      "start": 732.48,
+      "end": 735.84,
+      "duration": 3.3600000000000136,
+      "kind": "applause"
+    },
+    {
+      "start": 737.28,
+      "end": 761.28,
+      "duration": 24.0,
+      "kind": "talk"
+    },
+    {
+      "start": 996.9599999999999,
+      "end": 1000.3199999999999,
+      "duration": 3.3600000000000136,
+      "kind": "applause"
+    },
+    {
+      "start": 1168.32,
+      "end": 1171.68,
+      "duration": 3.3600000000001273,
+      "kind": "applause"
+    },
+    {
+      "start": 1172.6399999999999,
+      "end": 1181.28,
+      "duration": 8.6400000000001,
+      "kind": "applause"
+    },
+    {
+      "start": 1182.24,
+      "end": 1193.28,
+      "duration": 11.039999999999964,
+      "kind": "talk"
+    },
+    {
+      "start": 1193.76,
+      "end": 1194.72,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 1195.2,
+      "end": 1204.32,
+      "duration": 9.11999999999989,
+      "kind": "talk"
+    },
+    {
+      "start": 1498.56,
+      "end": 1517.28,
+      "duration": 18.720000000000027,
+      "kind": "applause"
+    },
+    {
+      "start": 1518.72,
+      "end": 1529.76,
+      "duration": 11.039999999999964,
+      "kind": "applause"
+    },
+    {
+      "start": 1529.76,
+      "end": 1538.3999999999999,
+      "duration": 8.639999999999873,
+      "kind": "talk"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 1,
+      "song": "Se\u00f1orita",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 1,
+      "clip_end": 142,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 59
+    },
+    {
+      "seconds": 142,
+      "song": "Rock Your Body",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 142,
+      "clip_end": 275.03999999999996,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 67
+    },
+    {
+      "seconds": 274,
+      "song": "Pusher Love Girl",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 284.16,
+      "clip_end": 444.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 447,
+      "song": "Until The End Of Time",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 452.16,
+      "clip_end": 632.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 763,
+      "song": "BREAK FOR SPEECH - 10:30 to",
+      "corroboration": 2,
+      "silence_match": 764.246,
+      "clip_start": 761.28,
+      "clip_end": 766,
+      "start_refined": true,
+      "end_trimmed": false,
+      "suspect": true,
+      "confidence": 32
+    },
+    {
+      "seconds": 766,
+      "song": "Selfish",
+      "corroboration": 1,
+      "silence_match": 765.632,
+      "clip_start": 766,
+      "clip_end": 996.9599999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 1001,
+      "song": "What Goes Around... Comes Around",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 1000.3199999999999,
+      "clip_end": 1168.32,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 1204,
+      "song": "SexyBack",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 1204.32,
+      "clip_end": 1498.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 68
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 646.714,
+      "end": 647.636,
+      "duration": 0.922833
+    },
+    {
+      "start": 681.399,
+      "end": 681.915,
+      "duration": 0.515708
+    },
+    {
+      "start": 685.949,
+      "end": 686.639,
+      "duration": 0.689562
+    },
+    {
+      "start": 687.461,
+      "end": 688.051,
+      "duration": 0.589437
+    },
+    {
+      "start": 690.091,
+      "end": 690.6,
+      "duration": 0.509021
+    },
+    {
+      "start": 694.898,
+      "end": 696.133,
+      "duration": 1.23458
+    },
+    {
+      "start": 697.369,
+      "end": 697.952,
+      "duration": 0.582896
+    },
+    {
+      "start": 697.952,
+      "end": 698.56,
+      "duration": 0.607479
+    },
+    {
+      "start": 698.908,
+      "end": 699.421,
+      "duration": 0.512375
+    },
+    {
+      "start": 720.977,
+      "end": 721.883,
+      "duration": 0.906104
+    },
+    {
+      "start": 724.076,
+      "end": 724.808,
+      "duration": 0.732125
+    },
+    {
+      "start": 726.207,
+      "end": 726.874,
+      "duration": 0.667396
+    },
+    {
+      "start": 727.347,
+      "end": 728.488,
+      "duration": 1.14075
+    },
+    {
+      "start": 743.456,
+      "end": 744.006,
+      "duration": 0.550187
+    },
+    {
+      "start": 744.451,
+      "end": 744.987,
+      "duration": 0.535792
+    },
+    {
+      "start": 746.855,
+      "end": 747.679,
+      "duration": 0.824292
+    },
+    {
+      "start": 748.145,
+      "end": 748.798,
+      "duration": 0.652708
+    },
+    {
+      "start": 750.46,
+      "end": 751.041,
+      "duration": 0.580833
+    },
+    {
+      "start": 751.438,
+      "end": 752.169,
+      "duration": 0.730146
+    },
+    {
+      "start": 755.407,
+      "end": 756.048,
+      "duration": 0.641104
+    },
+    {
+      "start": 757.457,
+      "end": 758.262,
+      "duration": 0.804979
+    },
+    {
+      "start": 759.406,
+      "end": 760.184,
+      "duration": 0.778292
+    },
+    {
+      "start": 764.246,
+      "end": 764.853,
+      "duration": 0.607062
+    },
+    {
+      "start": 764.952,
+      "end": 765.534,
+      "duration": 0.582146
+    },
+    {
+      "start": 765.632,
+      "end": 766.215,
+      "duration": 0.583688
+    },
+    {
+      "start": 953.039,
+      "end": 954.25,
+      "duration": 1.21085
+    },
+    {
+      "start": 954.296,
+      "end": 954.997,
+      "duration": 0.70025
+    },
+    {
+      "start": 955.044,
+      "end": 955.717,
+      "duration": 0.673771
+    },
+    {
+      "start": 1531.8,
+      "end": 1532.41,
+      "duration": 0.611771
+    },
+    {
+      "start": 1538.05,
+      "end": 1540.13,
+      "duration": 2.08462
+    }
+  ],
+  "confidence": {
+    "scores": [
+      59,
+      67,
+      75,
+      75,
+      32,
+      75,
+      75,
+      68
+    ],
+    "avg": 65.8,
+    "min": 32
+  }
+}

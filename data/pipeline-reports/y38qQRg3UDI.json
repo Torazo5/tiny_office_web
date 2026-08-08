@@ -1,0 +1,434 @@
+{
+  "video_id": "y38qQRg3UDI",
+  "title": "Dua Lipa: Tiny Desk Concert",
+  "duration": 1105,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/y38qQRg3UDI.mp3",
+  "description_songs": [
+    "\u201cTraining Season\u201d",
+    "\u201cThese Walls\u201d",
+    "\u201cHappy for You\u201d",
+    "\u201cHoudini\u201d"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 3000 likes, template #1"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 101.28,
+      "end": 101.76,
+      "duration": 0.480000000000004,
+      "kind": "applause"
+    },
+    {
+      "start": 168.95999999999998,
+      "end": 169.43999999999997,
+      "duration": 0.47999999999998977,
+      "kind": "applause"
+    },
+    {
+      "start": 177.12,
+      "end": 177.6,
+      "duration": 0.47999999999998977,
+      "kind": "applause"
+    },
+    {
+      "start": 242.39999999999998,
+      "end": 246.71999999999997,
+      "duration": 4.319999999999993,
+      "kind": "applause"
+    },
+    {
+      "start": 247.2,
+      "end": 247.67999999999998,
+      "duration": 0.47999999999998977,
+      "kind": "applause"
+    },
+    {
+      "start": 247.67999999999998,
+      "end": 249.6,
+      "duration": 1.920000000000016,
+      "kind": "talk"
+    },
+    {
+      "start": 249.6,
+      "end": 256.32,
+      "duration": 6.719999999999999,
+      "kind": "applause"
+    },
+    {
+      "start": 257.76,
+      "end": 269.28000000000003,
+      "duration": 11.520000000000039,
+      "kind": "applause"
+    },
+    {
+      "start": 269.28,
+      "end": 302.40000000000003,
+      "duration": 33.12000000000006,
+      "kind": "talk"
+    },
+    {
+      "start": 517.4399999999999,
+      "end": 526.08,
+      "duration": 8.6400000000001,
+      "kind": "applause"
+    },
+    {
+      "start": 526.0799999999999,
+      "end": 528.48,
+      "duration": 2.400000000000091,
+      "kind": "talk"
+    },
+    {
+      "start": 528.48,
+      "end": 529.44,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 529.4399999999999,
+      "end": 562.56,
+      "duration": 33.120000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 792.0,
+      "end": 794.4,
+      "duration": 2.3999999999999773,
+      "kind": "talk"
+    },
+    {
+      "start": 795.36,
+      "end": 799.68,
+      "duration": 4.319999999999936,
+      "kind": "applause"
+    },
+    {
+      "start": 800.64,
+      "end": 811.1999999999999,
+      "duration": 10.559999999999945,
+      "kind": "applause"
+    },
+    {
+      "start": 811.68,
+      "end": 826.08,
+      "duration": 14.400000000000091,
+      "kind": "talk"
+    },
+    {
+      "start": 826.0799999999999,
+      "end": 828.48,
+      "duration": 2.400000000000091,
+      "kind": "applause"
+    },
+    {
+      "start": 828.48,
+      "end": 837.12,
+      "duration": 8.639999999999986,
+      "kind": "talk"
+    },
+    {
+      "start": 838.0799999999999,
+      "end": 838.56,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 840.0,
+      "end": 844.8,
+      "duration": 4.7999999999999545,
+      "kind": "talk"
+    },
+    {
+      "start": 845.76,
+      "end": 848.16,
+      "duration": 2.3999999999999773,
+      "kind": "applause"
+    },
+    {
+      "start": 848.16,
+      "end": 852.48,
+      "duration": 4.32000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 852.48,
+      "end": 852.96,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 852.9599999999999,
+      "end": 859.1999999999999,
+      "duration": 6.240000000000009,
+      "kind": "talk"
+    },
+    {
+      "start": 859.68,
+      "end": 862.08,
+      "duration": 2.400000000000091,
+      "kind": "applause"
+    },
+    {
+      "start": 862.0799999999999,
+      "end": 865.4399999999999,
+      "duration": 3.3600000000000136,
+      "kind": "talk"
+    },
+    {
+      "start": 865.92,
+      "end": 867.84,
+      "duration": 1.9200000000000728,
+      "kind": "applause"
+    },
+    {
+      "start": 868.3199999999999,
+      "end": 877.92,
+      "duration": 9.600000000000023,
+      "kind": "talk"
+    },
+    {
+      "start": 974.88,
+      "end": 977.28,
+      "duration": 2.3999999999999773,
+      "kind": "talk"
+    },
+    {
+      "start": 1064.6399999999999,
+      "end": 1072.32,
+      "duration": 7.680000000000064,
+      "kind": "applause"
+    },
+    {
+      "start": 1072.32,
+      "end": 1073.76,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 1073.76,
+      "end": 1092.0,
+      "duration": 18.24000000000001,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 3,
+      "song": "Training Season",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 3,
+      "clip_end": 101.28,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 303,
+      "song": "These Walls",
+      "corroboration": 1,
+      "silence_match": 302.447,
+      "clip_start": 302.40000000000003,
+      "clip_end": 517.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 563,
+      "song": "Happy For You",
+      "corroboration": 1,
+      "silence_match": 562.09,
+      "clip_start": 562.56,
+      "clip_end": 795.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 878,
+      "song": "Houdini",
+      "corroboration": 1,
+      "silence_match": 874.284,
+      "clip_start": 877.92,
+      "clip_end": 1064.6399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 4.24677,
+      "duration": 4.24677
+    },
+    {
+      "start": 241.035,
+      "end": 241.559,
+      "duration": 0.523813
+    },
+    {
+      "start": 280.493,
+      "end": 281.001,
+      "duration": 0.508062
+    },
+    {
+      "start": 282.668,
+      "end": 283.168,
+      "duration": 0.500521
+    },
+    {
+      "start": 284.903,
+      "end": 285.487,
+      "duration": 0.58425
+    },
+    {
+      "start": 292.961,
+      "end": 293.535,
+      "duration": 0.573896
+    },
+    {
+      "start": 302.447,
+      "end": 303.127,
+      "duration": 0.679417
+    },
+    {
+      "start": 515.959,
+      "end": 517.011,
+      "duration": 1.05177
+    },
+    {
+      "start": 533.298,
+      "end": 533.929,
+      "duration": 0.630875
+    },
+    {
+      "start": 544.272,
+      "end": 544.901,
+      "duration": 0.629792
+    },
+    {
+      "start": 549.168,
+      "end": 549.91,
+      "duration": 0.741771
+    },
+    {
+      "start": 554.408,
+      "end": 555.217,
+      "duration": 0.808937
+    },
+    {
+      "start": 558.19,
+      "end": 558.765,
+      "duration": 0.575167
+    },
+    {
+      "start": 559.255,
+      "end": 560.017,
+      "duration": 0.762271
+    },
+    {
+      "start": 562.09,
+      "end": 564.302,
+      "duration": 2.21252
+    },
+    {
+      "start": 565.729,
+      "end": 566.389,
+      "duration": 0.659979
+    },
+    {
+      "start": 578.951,
+      "end": 579.993,
+      "duration": 1.04227
+    },
+    {
+      "start": 587.968,
+      "end": 588.772,
+      "duration": 0.804854
+    },
+    {
+      "start": 596.649,
+      "end": 597.21,
+      "duration": 0.560063
+    },
+    {
+      "start": 614.808,
+      "end": 615.575,
+      "duration": 0.767792
+    },
+    {
+      "start": 647.606,
+      "end": 648.514,
+      "duration": 0.908458
+    },
+    {
+      "start": 650.867,
+      "end": 652.227,
+      "duration": 1.3596
+    },
+    {
+      "start": 778.053,
+      "end": 778.646,
+      "duration": 0.592792
+    },
+    {
+      "start": 789.039,
+      "end": 789.706,
+      "duration": 0.666937
+    },
+    {
+      "start": 790.287,
+      "end": 791.663,
+      "duration": 1.37617
+    },
+    {
+      "start": 794.063,
+      "end": 795.231,
+      "duration": 1.16854
+    },
+    {
+      "start": 819.291,
+      "end": 819.888,
+      "duration": 0.596917
+    },
+    {
+      "start": 856.751,
+      "end": 857.823,
+      "duration": 1.07196
+    },
+    {
+      "start": 874.284,
+      "end": 874.925,
+      "duration": 0.640583
+    },
+    {
+      "start": 1012.53,
+      "end": 1013.42,
+      "duration": 0.885937
+    },
+    {
+      "start": 1093.14,
+      "end": 1105.19,
+      "duration": 12.0503
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      83,
+      83,
+      83
+    ],
+    "avg": 79.2,
+    "min": 68
+  }
+}

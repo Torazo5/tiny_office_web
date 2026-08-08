@@ -1,0 +1,88 @@
+{
+  "video_id": "eB4oFu4BtQ8",
+  "title": "The Roots feat. Bilal: NPR Music Tiny Desk Concert",
+  "duration": 724,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/eB4oFu4BtQ8.mp3",
+  "description_songs": [
+    "It Ain't Fair"
+  ],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no comment had 2+ timestamps",
+    "B_yamnet": "failed \u2014 not enough songs or no talk/applause spans detected",
+    "C_silence": "failed \u2014 not enough songs or no silence detected",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 558.72,
+      "end": 561.6,
+      "duration": 2.8799999999999955,
+      "kind": "applause"
+    },
+    {
+      "start": 562.0799999999999,
+      "end": 564.48,
+      "duration": 2.400000000000091,
+      "kind": "applause"
+    },
+    {
+      "start": 564.9599999999999,
+      "end": 572.16,
+      "duration": 7.2000000000000455,
+      "kind": "applause"
+    },
+    {
+      "start": 701.28,
+      "end": 715.68,
+      "duration": 14.399999999999977,
+      "kind": "applause"
+    },
+    {
+      "start": 717.6,
+      "end": 718.08,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 718.56,
+      "end": 721.4399999999999,
+      "duration": 2.8799999999999955,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.07025,
+      "duration": 5.07025
+    },
+    {
+      "start": 418.846,
+      "end": 419.451,
+      "duration": 0.604375
+    },
+    {
+      "start": 572.117,
+      "end": 574.285,
+      "duration": 2.16827
+    },
+    {
+      "start": 574.306,
+      "end": 575.106,
+      "duration": 0.800771
+    },
+    {
+      "start": 721.704,
+      "end": 723.685,
+      "duration": 1.981
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  }
+}

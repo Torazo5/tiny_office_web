@@ -1,0 +1,248 @@
+{
+  "video_id": "bdneye4pzMw",
+  "title": "Sting And Shaggy: NPR Music Tiny Desk Concert",
+  "duration": 875,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/bdneye4pzMw.mp3",
+  "description_songs": [
+    "Englishman in New York",
+    "Don't Make Me Wait",
+    "Shape of My Heart/Lucid Dreams"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 384 likes, template #1"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 7.68,
+      "duration": 7.68,
+      "kind": "applause"
+    },
+    {
+      "start": 8.64,
+      "end": 10.08,
+      "duration": 1.4399999999999995,
+      "kind": "talk"
+    },
+    {
+      "start": 241.92,
+      "end": 247.2,
+      "duration": 5.280000000000001,
+      "kind": "applause"
+    },
+    {
+      "start": 248.16,
+      "end": 253.43999999999997,
+      "duration": 5.279999999999973,
+      "kind": "applause"
+    },
+    {
+      "start": 253.92,
+      "end": 256.32,
+      "duration": 2.4000000000000057,
+      "kind": "applause"
+    },
+    {
+      "start": 256.32,
+      "end": 277.44,
+      "duration": 21.120000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 502.56,
+      "end": 505.92,
+      "duration": 3.3600000000000136,
+      "kind": "applause"
+    },
+    {
+      "start": 505.91999999999996,
+      "end": 508.32,
+      "duration": 2.400000000000034,
+      "kind": "talk"
+    },
+    {
+      "start": 508.32,
+      "end": 510.24,
+      "duration": 1.920000000000016,
+      "kind": "applause"
+    },
+    {
+      "start": 511.2,
+      "end": 540.96,
+      "duration": 29.760000000000048,
+      "kind": "talk"
+    },
+    {
+      "start": 840.9599999999999,
+      "end": 844.3199999999999,
+      "duration": 3.3600000000000136,
+      "kind": "applause"
+    },
+    {
+      "start": 847.1999999999999,
+      "end": 852.96,
+      "duration": 5.760000000000105,
+      "kind": "applause"
+    },
+    {
+      "start": 853.92,
+      "end": 854.88,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 857.76,
+      "end": 858.24,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 858.24,
+      "end": 860.64,
+      "duration": 2.3999999999999773,
+      "kind": "talk"
+    },
+    {
+      "start": 860.64,
+      "end": 867.36,
+      "duration": 6.720000000000027,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Englishman/Jamaican in New York",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 10.08,
+      "clip_end": 241.92,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 265,
+      "song": "Don't make me wait",
+      "corroboration": 1,
+      "silence_match": 264.036,
+      "clip_start": 277.44,
+      "clip_end": 502.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 515,
+      "song": "Shape of My Heart/Lucid Dreams",
+      "corroboration": 1,
+      "silence_match": 517.717,
+      "clip_start": 510.24,
+      "clip_end": 511.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": true,
+      "confidence": 33
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 262.322,
+      "end": 262.869,
+      "duration": 0.54675
+    },
+    {
+      "start": 264.036,
+      "end": 265.11,
+      "duration": 1.0749
+    },
+    {
+      "start": 266.928,
+      "end": 267.776,
+      "duration": 0.847792
+    },
+    {
+      "start": 270.429,
+      "end": 271.237,
+      "duration": 0.80825
+    },
+    {
+      "start": 517.717,
+      "end": 518.451,
+      "duration": 0.734417
+    },
+    {
+      "start": 518.48,
+      "end": 519.374,
+      "duration": 0.894458
+    },
+    {
+      "start": 522.565,
+      "end": 523.285,
+      "duration": 0.720271
+    },
+    {
+      "start": 523.87,
+      "end": 524.817,
+      "duration": 0.946937
+    },
+    {
+      "start": 526.681,
+      "end": 527.452,
+      "duration": 0.770562
+    },
+    {
+      "start": 530.348,
+      "end": 531.316,
+      "duration": 0.968042
+    },
+    {
+      "start": 533.024,
+      "end": 533.927,
+      "duration": 0.902687
+    },
+    {
+      "start": 534.451,
+      "end": 535.31,
+      "duration": 0.859521
+    },
+    {
+      "start": 538.842,
+      "end": 539.453,
+      "duration": 0.610958
+    },
+    {
+      "start": 540.815,
+      "end": 542.412,
+      "duration": 1.59662
+    },
+    {
+      "start": 542.587,
+      "end": 543.126,
+      "duration": 0.539687
+    },
+    {
+      "start": 543.976,
+      "end": 544.555,
+      "duration": 0.578812
+    },
+    {
+      "start": 866.84,
+      "end": 875.044,
+      "duration": 8.20379
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      83,
+      33
+    ],
+    "avg": 61.3,
+    "min": 33
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "video_id": "DFiLdByWIDY",
+  "title": "Lizzo: NPR Music Tiny Desk Concert",
+  "duration": 1019,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/DFiLdByWIDY.mp3",
+  "description_songs": [
+    "Cuz I Love You",
+    "Truth Hurts",
+    "Juice"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 32 likes, template #0"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 6.72,
+      "end": 8.16,
+      "duration": 1.4400000000000004,
+      "kind": "talk"
+    },
+    {
+      "start": 8.64,
+      "end": 10.56,
+      "duration": 1.92,
+      "kind": "applause"
+    },
+    {
+      "start": 16.32,
+      "end": 17.76,
+      "duration": 1.4400000000000013,
+      "kind": "talk"
+    },
+    {
+      "start": 188.16,
+      "end": 190.55999999999997,
+      "duration": 2.3999999999999773,
+      "kind": "talk"
+    },
+    {
+      "start": 229.92,
+      "end": 231.35999999999999,
+      "duration": 1.4399999999999977,
+      "kind": "talk"
+    },
+    {
+      "start": 231.84,
+      "end": 233.76,
+      "duration": 1.9199999999999875,
+      "kind": "applause"
+    },
+    {
+      "start": 234.72,
+      "end": 245.27999999999997,
+      "duration": 10.559999999999974,
+      "kind": "applause"
+    },
+    {
+      "start": 247.2,
+      "end": 249.11999999999998,
+      "duration": 1.9199999999999875,
+      "kind": "applause"
+    },
+    {
+      "start": 251.04,
+      "end": 253.92,
+      "duration": 2.8799999999999955,
+      "kind": "talk"
+    },
+    {
+      "start": 263.52,
+      "end": 267.84000000000003,
+      "duration": 4.32000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 292.32,
+      "end": 294.24,
+      "duration": 1.920000000000016,
+      "kind": "talk"
+    },
+    {
+      "start": 297.59999999999997,
+      "end": 299.04,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 308.15999999999997,
+      "end": 310.56,
+      "duration": 2.400000000000034,
+      "kind": "talk"
+    },
+    {
+      "start": 326.88,
+      "end": 329.76,
+      "duration": 2.8799999999999955,
+      "kind": "talk"
+    },
+    {
+      "start": 362.88,
+      "end": 365.28000000000003,
+      "duration": 2.400000000000034,
+      "kind": "talk"
+    },
+    {
+      "start": 448.8,
+      "end": 450.72,
+      "duration": 1.920000000000016,
+      "kind": "talk"
+    },
+    {
+      "start": 535.1999999999999,
+      "end": 537.12,
+      "duration": 1.9200000000000728,
+      "kind": "talk"
+    },
+    {
+      "start": 537.12,
+      "end": 544.32,
+      "duration": 7.2000000000000455,
+      "kind": "applause"
+    },
+    {
+      "start": 547.1999999999999,
+      "end": 547.68,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 550.0799999999999,
+      "end": 550.56,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 562.0799999999999,
+      "end": 564.96,
+      "duration": 2.880000000000109,
+      "kind": "talk"
+    },
+    {
+      "start": 571.68,
+      "end": 573.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 580.3199999999999,
+      "end": 589.4399999999999,
+      "duration": 9.120000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 608.64,
+      "end": 610.56,
+      "duration": 1.919999999999959,
+      "kind": "talk"
+    },
+    {
+      "start": 628.3199999999999,
+      "end": 629.76,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 632.16,
+      "end": 633.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 636.48,
+      "end": 638.4,
+      "duration": 1.919999999999959,
+      "kind": "talk"
+    },
+    {
+      "start": 646.56,
+      "end": 649.4399999999999,
+      "duration": 2.8799999999999955,
+      "kind": "talk"
+    },
+    {
+      "start": 655.68,
+      "end": 657.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 664.8,
+      "end": 666.24,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 668.64,
+      "end": 670.56,
+      "duration": 1.919999999999959,
+      "kind": "talk"
+    },
+    {
+      "start": 716.16,
+      "end": 717.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 996.9599999999999,
+      "end": 999.36,
+      "duration": 2.400000000000091,
+      "kind": "applause"
+    },
+    {
+      "start": 999.36,
+      "end": 1001.28,
+      "duration": 1.919999999999959,
+      "kind": "talk"
+    },
+    {
+      "start": 1001.28,
+      "end": 1011.36,
+      "duration": 10.080000000000041,
+      "kind": "applause"
+    },
+    {
+      "start": 1014.24,
+      "end": 1015.1999999999999,
+      "duration": 0.9599999999999227,
+      "kind": "applause"
+    },
+    {
+      "start": 1017.12,
+      "end": 1017.6,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Cuz I Love You",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 17.76,
+      "clip_end": 231.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 368,
+      "song": "Truth Hurts",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 365.28000000000003,
+      "clip_end": 537.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 672,
+      "song": "Juice",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 670.56,
+      "clip_end": 996.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.28887,
+      "duration": 5.28887
+    },
+    {
+      "start": 43.8358,
+      "end": 45.965,
+      "duration": 2.12921
+    },
+    {
+      "start": 47.8097,
+      "end": 48.4313,
+      "duration": 0.621646
+    },
+    {
+      "start": 147.46,
+      "end": 147.999,
+      "duration": 0.539396
+    },
+    {
+      "start": 229.285,
+      "end": 229.964,
+      "duration": 0.678312
+    },
+    {
+      "start": 249.475,
+      "end": 250.197,
+      "duration": 0.721938
+    },
+    {
+      "start": 263.059,
+      "end": 264.41,
+      "duration": 1.35119
+    },
+    {
+      "start": 316.499,
+      "end": 317.268,
+      "duration": 0.769292
+    },
+    {
+      "start": 320.591,
+      "end": 321.408,
+      "duration": 0.81675
+    },
+    {
+      "start": 1017.47,
+      "end": 1019.02,
+      "duration": 1.54937
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      61,
+      61
+    ],
+    "avg": 66.0,
+    "min": 61
+  }
+}

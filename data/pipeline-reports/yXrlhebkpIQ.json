@@ -1,0 +1,201 @@
+{
+  "video_id": "yXrlhebkpIQ",
+  "title": "Jorja Smith: NPR Music Tiny Desk Concert",
+  "duration": 749,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/yXrlhebkpIQ.mp3",
+  "description_songs": [
+    "On My Mind",
+    "Teenage Fantasy",
+    "Blue Lights"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1400 likes, template #1"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 187.2,
+      "end": 195.83999999999997,
+      "duration": 8.639999999999986,
+      "kind": "applause"
+    },
+    {
+      "start": 196.79999999999998,
+      "end": 201.6,
+      "duration": 4.800000000000011,
+      "kind": "talk"
+    },
+    {
+      "start": 201.6,
+      "end": 203.99999999999997,
+      "duration": 2.3999999999999773,
+      "kind": "applause"
+    },
+    {
+      "start": 204.48,
+      "end": 206.39999999999998,
+      "duration": 1.9199999999999875,
+      "kind": "talk"
+    },
+    {
+      "start": 206.4,
+      "end": 207.83999999999997,
+      "duration": 1.4399999999999693,
+      "kind": "applause"
+    },
+    {
+      "start": 208.32,
+      "end": 209.76,
+      "duration": 1.4399999999999977,
+      "kind": "talk"
+    },
+    {
+      "start": 209.76,
+      "end": 211.2,
+      "duration": 1.4399999999999977,
+      "kind": "applause"
+    },
+    {
+      "start": 212.64,
+      "end": 215.04,
+      "duration": 2.4000000000000057,
+      "kind": "applause"
+    },
+    {
+      "start": 215.04,
+      "end": 227.04,
+      "duration": 12.0,
+      "kind": "talk"
+    },
+    {
+      "start": 318.71999999999997,
+      "end": 323.04,
+      "duration": 4.32000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 463.68,
+      "end": 470.4,
+      "duration": 6.71999999999997,
+      "kind": "applause"
+    },
+    {
+      "start": 470.4,
+      "end": 474.72,
+      "duration": 4.32000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 732.0,
+      "end": 742.08,
+      "duration": 10.080000000000041,
+      "kind": "applause"
+    },
+    {
+      "start": 743.04,
+      "end": 747.36,
+      "duration": 4.32000000000005,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "On My Mind",
+      "corroboration": 3,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 187.2,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 74
+    },
+    {
+      "seconds": 227,
+      "song": "Teenage Fantasy",
+      "corroboration": 2,
+      "silence_match": 227.235,
+      "clip_start": 227.04,
+      "clip_end": 463.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 476,
+      "song": "Blue Lights",
+      "corroboration": 2,
+      "silence_match": 474.578,
+      "clip_start": 474.72,
+      "clip_end": 732.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 90
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 185.476,
+      "end": 186.344,
+      "duration": 0.868062
+    },
+    {
+      "start": 201.264,
+      "end": 201.992,
+      "duration": 0.727708
+    },
+    {
+      "start": 218.758,
+      "end": 219.322,
+      "duration": 0.564354
+    },
+    {
+      "start": 224.496,
+      "end": 225.881,
+      "duration": 1.38435
+    },
+    {
+      "start": 225.881,
+      "end": 226.503,
+      "duration": 0.622396
+    },
+    {
+      "start": 226.563,
+      "end": 227.164,
+      "duration": 0.601875
+    },
+    {
+      "start": 227.235,
+      "end": 227.768,
+      "duration": 0.533937
+    },
+    {
+      "start": 471.382,
+      "end": 471.976,
+      "duration": 0.59475
+    },
+    {
+      "start": 474.578,
+      "end": 476.551,
+      "duration": 1.97265
+    },
+    {
+      "start": 746.929,
+      "end": 748.46,
+      "duration": 1.53177
+    }
+  ],
+  "confidence": {
+    "scores": [
+      74,
+      90,
+      90
+    ],
+    "avg": 84.7,
+    "min": 74
+  }
+}

@@ -1,17 +1,24 @@
+"use client";
+
 import { ConfidenceDot } from "@/components/confidence-dot";
+import { usePlayer } from "@/components/player-context";
 import { formatClipDuration, formatTime } from "@/lib/format";
 import type { Song } from "@/lib/types";
 
-/**
- * "Click to seek" per the design handoff — not wired up here since there's
- * no player instance to control yet (the video embed is a static
- * placeholder). Codex should turn this into a button that scrubs the
- * YouTube player to `song.clipStart`.
- */
+/** Click to seek — reseeks the embed (via PlayerProvider) to this song's clip_start. */
 export function SongRow({ song }: { song: Song }) {
+  const { startAt, setStartAt } = usePlayer();
   const confirmed = !song.suspect && song.confidence >= 75;
+  const active = Math.floor(startAt) === Math.floor(song.clipStart);
+
   return (
-    <div className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-secondary transition-colors">
+    <button
+      type="button"
+      onClick={() => setStartAt(song.clipStart)}
+      className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left transition-colors ${
+        active ? "bg-secondary" : "hover:bg-secondary/60"
+      }`}
+    >
       <div className="w-5 text-center font-mono text-xs text-muted-foreground">
         {song.index}
       </div>
@@ -32,6 +39,6 @@ export function SongRow({ song }: { song: Song }) {
       <div className="font-mono text-xs text-muted-foreground/70 w-[38px] text-right">
         {formatClipDuration(song.clipStart, song.clipEnd)}
       </div>
-    </div>
+    </button>
   );
 }

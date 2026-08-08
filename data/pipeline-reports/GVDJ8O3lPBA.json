@@ -1,0 +1,271 @@
+{
+  "video_id": "GVDJ8O3lPBA",
+  "title": "Tash Sultana: Tiny Desk Concert",
+  "duration": 1537,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/GVDJ8O3lPBA.mp3",
+  "description_songs": [
+    "Jungle",
+    "Notion",
+    "Blackbird"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no comment had 2+ timestamps",
+    "B_yamnet": "ok \u2014 5 usable span(s), took top 2"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 422.4,
+      "end": 435.84,
+      "duration": 13.439999999999998,
+      "kind": "applause"
+    },
+    {
+      "start": 435.84,
+      "end": 439.2,
+      "duration": 3.3600000000000136,
+      "kind": "talk"
+    },
+    {
+      "start": 443.52,
+      "end": 447.36,
+      "duration": 3.840000000000032,
+      "kind": "talk"
+    },
+    {
+      "start": 454.08,
+      "end": 460.8,
+      "duration": 6.720000000000027,
+      "kind": "talk"
+    },
+    {
+      "start": 1045.92,
+      "end": 1060.32,
+      "duration": 14.399999999999864,
+      "kind": "applause"
+    },
+    {
+      "start": 1060.32,
+      "end": 1079.52,
+      "duration": 19.200000000000045,
+      "kind": "talk"
+    },
+    {
+      "start": 1515.36,
+      "end": 1533.12,
+      "duration": 17.75999999999999,
+      "kind": "applause"
+    },
+    {
+      "start": 1534.08,
+      "end": 1536.96,
+      "duration": 2.880000000000109,
+      "kind": "talk"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Jungle",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 422.4,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 1045.92,
+      "song": "Notion",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1060.32,
+      "clip_end": 1515.36,
+      "start_refined": true,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 1515.36,
+      "song": "Blackbird",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1533.12,
+      "clip_end": 1537,
+      "start_refined": true,
+      "end_trimmed": false,
+      "suspect": true,
+      "confidence": 0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 402.837,
+      "end": 403.589,
+      "duration": 0.752062
+    },
+    {
+      "start": 415.924,
+      "end": 416.598,
+      "duration": 0.6735
+    },
+    {
+      "start": 416.774,
+      "end": 417.73,
+      "duration": 0.956292
+    },
+    {
+      "start": 420.73,
+      "end": 422.073,
+      "duration": 1.34223
+    },
+    {
+      "start": 437.192,
+      "end": 438.418,
+      "duration": 1.22583
+    },
+    {
+      "start": 444.747,
+      "end": 445.597,
+      "duration": 0.849896
+    },
+    {
+      "start": 446.658,
+      "end": 447.187,
+      "duration": 0.529229
+    },
+    {
+      "start": 452.457,
+      "end": 453.54,
+      "duration": 1.08262
+    },
+    {
+      "start": 453.542,
+      "end": 454.046,
+      "duration": 0.503812
+    },
+    {
+      "start": 457.061,
+      "end": 457.655,
+      "duration": 0.593917
+    },
+    {
+      "start": 458.661,
+      "end": 459.819,
+      "duration": 1.15775
+    },
+    {
+      "start": 460.497,
+      "end": 463.424,
+      "duration": 2.92787
+    },
+    {
+      "start": 465.787,
+      "end": 466.72,
+      "duration": 0.933083
+    },
+    {
+      "start": 493.397,
+      "end": 494.144,
+      "duration": 0.7465
+    },
+    {
+      "start": 908.624,
+      "end": 909.977,
+      "duration": 1.35319
+    },
+    {
+      "start": 1060.38,
+      "end": 1061.21,
+      "duration": 0.835938
+    },
+    {
+      "start": 1062.05,
+      "end": 1062.85,
+      "duration": 0.797146
+    },
+    {
+      "start": 1063.64,
+      "end": 1064.66,
+      "duration": 1.01925
+    },
+    {
+      "start": 1067.93,
+      "end": 1068.76,
+      "duration": 0.826
+    },
+    {
+      "start": 1072.97,
+      "end": 1074.23,
+      "duration": 1.26335
+    },
+    {
+      "start": 1075.63,
+      "end": 1076.65,
+      "duration": 1.01285
+    },
+    {
+      "start": 1077.1,
+      "end": 1078.16,
+      "duration": 1.05312
+    },
+    {
+      "start": 1079.7,
+      "end": 1082.09,
+      "duration": 2.39292
+    },
+    {
+      "start": 1090.97,
+      "end": 1092.26,
+      "duration": 1.2816
+    },
+    {
+      "start": 1169.04,
+      "end": 1169.67,
+      "duration": 0.630292
+    },
+    {
+      "start": 1191.02,
+      "end": 1192.53,
+      "duration": 1.50321
+    },
+    {
+      "start": 1219.87,
+      "end": 1220.44,
+      "duration": 0.572771
+    },
+    {
+      "start": 1333.94,
+      "end": 1334.45,
+      "duration": 0.511583
+    },
+    {
+      "start": 1533.33,
+      "end": 1533.83,
+      "duration": 0.502437
+    },
+    {
+      "start": 1533.84,
+      "end": 1535.45,
+      "duration": 1.61779
+    },
+    {
+      "start": 1536.61,
+      "end": 1537.17,
+      "duration": 0.563292
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      43,
+      0
+    ],
+    "avg": 28.7,
+    "min": 0
+  }
+}

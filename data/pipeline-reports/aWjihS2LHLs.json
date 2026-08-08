@@ -1,0 +1,259 @@
+{
+  "video_id": "aWjihS2LHLs",
+  "title": "Juanes & Mon Laferte: NPR Music Tiny Desk Concert",
+  "duration": 1061,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/aWjihS2LHLs.mp3",
+  "description_songs": [
+    "Pa' D\u00f3nde Se Fue\" by Mon Laferte",
+    "Am\u00e1rrame [feat. Juanes]\" by Mon Laferte",
+    "Fotograf\u00eda [feat. Mon Laferte]\" by Juanes",
+    "Es Tarde\" by Juanes"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1000 likes, template #1"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 261.59999999999997,
+      "end": 277.44,
+      "duration": 15.840000000000032,
+      "kind": "applause"
+    },
+    {
+      "start": 277.44,
+      "end": 281.76,
+      "duration": 4.319999999999993,
+      "kind": "talk"
+    },
+    {
+      "start": 292.32,
+      "end": 309.6,
+      "duration": 17.28000000000003,
+      "kind": "talk"
+    },
+    {
+      "start": 313.44,
+      "end": 314.88,
+      "duration": 1.4399999999999977,
+      "kind": "talk"
+    },
+    {
+      "start": 401.28,
+      "end": 404.64,
+      "duration": 3.3600000000000136,
+      "kind": "talk"
+    },
+    {
+      "start": 523.68,
+      "end": 525.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 525.12,
+      "end": 544.8,
+      "duration": 19.67999999999995,
+      "kind": "applause"
+    },
+    {
+      "start": 792.0,
+      "end": 793.92,
+      "duration": 1.919999999999959,
+      "kind": "talk"
+    },
+    {
+      "start": 794.4,
+      "end": 815.52,
+      "duration": 21.120000000000005,
+      "kind": "applause"
+    },
+    {
+      "start": 903.36,
+      "end": 906.24,
+      "duration": 2.8799999999999955,
+      "kind": "talk"
+    },
+    {
+      "start": 908.16,
+      "end": 913.4399999999999,
+      "duration": 5.279999999999973,
+      "kind": "talk"
+    },
+    {
+      "start": 1032.96,
+      "end": 1044.0,
+      "duration": 11.039999999999964,
+      "kind": "applause"
+    },
+    {
+      "start": 1045.44,
+      "end": 1054.56,
+      "duration": 9.11999999999989,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Pa' d\u00f3nde se fue [Mon Laferte]",
+      "corroboration": 1,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 261.59999999999997,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 316,
+      "song": "Am\u00e1rrame [Mon Laferte feat. Juanes]",
+      "corroboration": 1,
+      "silence_match": 314.772,
+      "clip_start": 314.88,
+      "clip_end": 525.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 553,
+      "song": "Fotograf\u00eda [Juanes feat. Mon Laferte]",
+      "corroboration": 1,
+      "silence_match": 550.466,
+      "clip_start": 544.8,
+      "clip_end": 794.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 818,
+      "song": "Es tarde [Juanes]",
+      "corroboration": 1,
+      "silence_match": 816.649,
+      "clip_start": 815.52,
+      "clip_end": 908.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.657583,
+      "duration": 0.657583
+    },
+    {
+      "start": 193.069,
+      "end": 194.227,
+      "duration": 1.15804
+    },
+    {
+      "start": 277.896,
+      "end": 279.011,
+      "duration": 1.11525
+    },
+    {
+      "start": 282.639,
+      "end": 283.486,
+      "duration": 0.847375
+    },
+    {
+      "start": 283.551,
+      "end": 288.828,
+      "duration": 5.27715
+    },
+    {
+      "start": 288.829,
+      "end": 289.389,
+      "duration": 0.559937
+    },
+    {
+      "start": 289.391,
+      "end": 292.726,
+      "duration": 3.3345
+    },
+    {
+      "start": 293.024,
+      "end": 294.107,
+      "duration": 1.08323
+    },
+    {
+      "start": 295.382,
+      "end": 297.507,
+      "duration": 2.12429
+    },
+    {
+      "start": 297.514,
+      "end": 301.467,
+      "duration": 3.95342
+    },
+    {
+      "start": 302.331,
+      "end": 302.894,
+      "duration": 0.562625
+    },
+    {
+      "start": 307.546,
+      "end": 308.189,
+      "duration": 0.64275
+    },
+    {
+      "start": 310.813,
+      "end": 314.225,
+      "duration": 3.41183
+    },
+    {
+      "start": 314.772,
+      "end": 317.06,
+      "duration": 2.28729
+    },
+    {
+      "start": 402.269,
+      "end": 402.776,
+      "duration": 0.506875
+    },
+    {
+      "start": 545.45,
+      "end": 546.372,
+      "duration": 0.921708
+    },
+    {
+      "start": 550.466,
+      "end": 553.962,
+      "duration": 3.49577
+    },
+    {
+      "start": 793.716,
+      "end": 794.341,
+      "duration": 0.625312
+    },
+    {
+      "start": 816.649,
+      "end": 818.494,
+      "duration": 1.84465
+    },
+    {
+      "start": 1053.66,
+      "end": 1061.31,
+      "duration": 7.65329
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      83,
+      83,
+      83
+    ],
+    "avg": 81.0,
+    "min": 75
+  }
+}

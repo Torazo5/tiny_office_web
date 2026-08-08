@@ -1,0 +1,491 @@
+{
+  "video_id": "e4WrRKSgGI0",
+  "title": "Lewis Capaldi: Tiny Desk Concert",
+  "duration": 1124,
+  "audio_path": "reports/audio/e4WrRKSgGI0.mp3",
+  "description_songs": [
+    "\u201cBefore You Go\u201d",
+    "\u201cWish You The Best\u201d",
+    "\u201cHeavenly Kind of State of Mind\u201d",
+    "\u201cSomeone You Loved\u201d"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1000 likes, template #0"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 249.12,
+      "end": 261.6,
+      "duration": 12.480000000000018,
+      "kind": "applause"
+    },
+    {
+      "start": 263.03999999999996,
+      "end": 281.28000000000003,
+      "duration": 18.240000000000066,
+      "kind": "talk"
+    },
+    {
+      "start": 283.2,
+      "end": 296.64,
+      "duration": 13.439999999999998,
+      "kind": "talk"
+    },
+    {
+      "start": 444.0,
+      "end": 446.4,
+      "duration": 2.3999999999999773,
+      "kind": "talk"
+    },
+    {
+      "start": 466.56,
+      "end": 468.96,
+      "duration": 2.3999999999999773,
+      "kind": "talk"
+    },
+    {
+      "start": 471.35999999999996,
+      "end": 473.76,
+      "duration": 2.400000000000034,
+      "kind": "talk"
+    },
+    {
+      "start": 505.44,
+      "end": 516.96,
+      "duration": 11.520000000000039,
+      "kind": "applause"
+    },
+    {
+      "start": 520.8,
+      "end": 527.52,
+      "duration": 6.720000000000027,
+      "kind": "talk"
+    },
+    {
+      "start": 529.92,
+      "end": 570.72,
+      "duration": 40.80000000000007,
+      "kind": "talk"
+    },
+    {
+      "start": 773.28,
+      "end": 782.88,
+      "duration": 9.600000000000023,
+      "kind": "applause"
+    },
+    {
+      "start": 783.36,
+      "end": 791.04,
+      "duration": 7.67999999999995,
+      "kind": "talk"
+    },
+    {
+      "start": 792.0,
+      "end": 795.36,
+      "duration": 3.3600000000000136,
+      "kind": "applause"
+    },
+    {
+      "start": 795.8399999999999,
+      "end": 859.1999999999999,
+      "duration": 63.360000000000014,
+      "kind": "talk"
+    },
+    {
+      "start": 859.1999999999999,
+      "end": 861.12,
+      "duration": 1.9200000000000728,
+      "kind": "applause"
+    },
+    {
+      "start": 861.12,
+      "end": 895.68,
+      "duration": 34.559999999999945,
+      "kind": "talk"
+    },
+    {
+      "start": 897.6,
+      "end": 900.0,
+      "duration": 2.3999999999999773,
+      "kind": "talk"
+    },
+    {
+      "start": 1082.8799999999999,
+      "end": 1088.6399999999999,
+      "duration": 5.759999999999991,
+      "kind": "applause"
+    },
+    {
+      "start": 1089.6,
+      "end": 1090.56,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 1092.48,
+      "end": 1096.32,
+      "duration": 3.839999999999918,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Before You Go",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 249.12,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false
+    },
+    {
+      "seconds": 297,
+      "song": "Wish You The Best",
+      "corroboration": 0,
+      "silence_match": 296.53,
+      "clip_start": 296.64,
+      "clip_end": 505.44,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false
+    },
+    {
+      "seconds": 570,
+      "song": "Heavenly Kind Of State Of Mind",
+      "corroboration": 0,
+      "silence_match": 570.929,
+      "clip_start": 570.72,
+      "clip_end": 773.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false
+    },
+    {
+      "seconds": 900,
+      "song": "Someone You Loved",
+      "corroboration": 0,
+      "silence_match": 895.68,
+      "clip_start": 900.0,
+      "clip_end": 1082.8799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 82.7169,
+      "end": 83.2542,
+      "duration": 0.537354
+    },
+    {
+      "start": 188.167,
+      "end": 188.79,
+      "duration": 0.623333
+    },
+    {
+      "start": 264.814,
+      "end": 265.405,
+      "duration": 0.591125
+    },
+    {
+      "start": 268.06,
+      "end": 268.757,
+      "duration": 0.697854
+    },
+    {
+      "start": 270.856,
+      "end": 271.395,
+      "duration": 0.539062
+    },
+    {
+      "start": 273.386,
+      "end": 274.107,
+      "duration": 0.721146
+    },
+    {
+      "start": 279.293,
+      "end": 279.895,
+      "duration": 0.601437
+    },
+    {
+      "start": 288.776,
+      "end": 290.168,
+      "duration": 1.39198
+    },
+    {
+      "start": 290.812,
+      "end": 291.955,
+      "duration": 1.14354
+    },
+    {
+      "start": 292.305,
+      "end": 292.85,
+      "duration": 0.545438
+    },
+    {
+      "start": 292.863,
+      "end": 294.227,
+      "duration": 1.36427
+    },
+    {
+      "start": 294.504,
+      "end": 295.319,
+      "duration": 0.814417
+    },
+    {
+      "start": 296.53,
+      "end": 297.671,
+      "duration": 1.14181
+    },
+    {
+      "start": 343.083,
+      "end": 343.759,
+      "duration": 0.676083
+    },
+    {
+      "start": 444.762,
+      "end": 445.951,
+      "duration": 1.18892
+    },
+    {
+      "start": 464.729,
+      "end": 465.357,
+      "duration": 0.627521
+    },
+    {
+      "start": 470.678,
+      "end": 471.19,
+      "duration": 0.511854
+    },
+    {
+      "start": 474.818,
+      "end": 475.741,
+      "duration": 0.923667
+    },
+    {
+      "start": 479.614,
+      "end": 480.304,
+      "duration": 0.689937
+    },
+    {
+      "start": 504.131,
+      "end": 504.723,
+      "duration": 0.591625
+    },
+    {
+      "start": 518.21,
+      "end": 519.393,
+      "duration": 1.18367
+    },
+    {
+      "start": 531.118,
+      "end": 532.851,
+      "duration": 1.73321
+    },
+    {
+      "start": 537.777,
+      "end": 538.341,
+      "duration": 0.563833
+    },
+    {
+      "start": 540.445,
+      "end": 540.96,
+      "duration": 0.514167
+    },
+    {
+      "start": 545.552,
+      "end": 546.254,
+      "duration": 0.701708
+    },
+    {
+      "start": 548.728,
+      "end": 549.274,
+      "duration": 0.546
+    },
+    {
+      "start": 550.929,
+      "end": 551.624,
+      "duration": 0.695146
+    },
+    {
+      "start": 556.831,
+      "end": 557.478,
+      "duration": 0.646854
+    },
+    {
+      "start": 557.895,
+      "end": 559.103,
+      "duration": 1.20825
+    },
+    {
+      "start": 559.809,
+      "end": 560.933,
+      "duration": 1.1246
+    },
+    {
+      "start": 566.666,
+      "end": 567.698,
+      "duration": 1.03165
+    },
+    {
+      "start": 570.929,
+      "end": 573.132,
+      "duration": 2.20304
+    },
+    {
+      "start": 783.994,
+      "end": 784.886,
+      "duration": 0.892667
+    },
+    {
+      "start": 785.928,
+      "end": 786.656,
+      "duration": 0.727458
+    },
+    {
+      "start": 797.087,
+      "end": 797.769,
+      "duration": 0.682229
+    },
+    {
+      "start": 805.654,
+      "end": 806.471,
+      "duration": 0.817146
+    },
+    {
+      "start": 811.903,
+      "end": 812.552,
+      "duration": 0.649396
+    },
+    {
+      "start": 813.189,
+      "end": 813.756,
+      "duration": 0.567333
+    },
+    {
+      "start": 815.024,
+      "end": 815.94,
+      "duration": 0.915979
+    },
+    {
+      "start": 817.697,
+      "end": 818.552,
+      "duration": 0.855333
+    },
+    {
+      "start": 830.647,
+      "end": 831.225,
+      "duration": 0.578229
+    },
+    {
+      "start": 840.262,
+      "end": 840.763,
+      "duration": 0.501333
+    },
+    {
+      "start": 841.575,
+      "end": 842.17,
+      "duration": 0.595458
+    },
+    {
+      "start": 844.219,
+      "end": 844.909,
+      "duration": 0.690312
+    },
+    {
+      "start": 849.785,
+      "end": 850.32,
+      "duration": 0.535062
+    },
+    {
+      "start": 854.192,
+      "end": 854.921,
+      "duration": 0.728833
+    },
+    {
+      "start": 862.616,
+      "end": 864.196,
+      "duration": 1.58021
+    },
+    {
+      "start": 865.698,
+      "end": 866.217,
+      "duration": 0.519292
+    },
+    {
+      "start": 866.765,
+      "end": 867.965,
+      "duration": 1.2
+    },
+    {
+      "start": 869.236,
+      "end": 869.778,
+      "duration": 0.5425
+    },
+    {
+      "start": 874.202,
+      "end": 875.577,
+      "duration": 1.37487
+    },
+    {
+      "start": 875.988,
+      "end": 877.507,
+      "duration": 1.51902
+    },
+    {
+      "start": 878.069,
+      "end": 879.033,
+      "duration": 0.964187
+    },
+    {
+      "start": 879.401,
+      "end": 880.832,
+      "duration": 1.43146
+    },
+    {
+      "start": 882.722,
+      "end": 883.496,
+      "duration": 0.773354
+    },
+    {
+      "start": 886.725,
+      "end": 887.331,
+      "duration": 0.605854
+    },
+    {
+      "start": 888.78,
+      "end": 889.659,
+      "duration": 0.878563
+    },
+    {
+      "start": 890.286,
+      "end": 891.312,
+      "duration": 1.0259
+    },
+    {
+      "start": 891.76,
+      "end": 892.826,
+      "duration": 1.06671
+    },
+    {
+      "start": 893.558,
+      "end": 894.163,
+      "duration": 0.605
+    },
+    {
+      "start": 895.68,
+      "end": 898.262,
+      "duration": 2.58231
+    },
+    {
+      "start": 1097.51,
+      "end": 1123.59,
+      "duration": 26.0852
+    }
+  ]
+}

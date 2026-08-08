@@ -1,0 +1,277 @@
+{
+  "video_id": "vR6_ZVKEhJ4",
+  "title": "Ne-Yo: Tiny Desk Concert",
+  "duration": 1394,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/vR6_ZVKEhJ4.mp3",
+  "description_songs": [
+    "Because Of You",
+    "So Sick",
+    "Sexy Love",
+    "Take a Bow",
+    "Let Me Love You",
+    "Irreplaceable",
+    "Two Million Secrets",
+    "Miss Independent"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 14000 likes, template #4"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 152.16,
+      "end": 156.95999999999998,
+      "duration": 4.799999999999983,
+      "kind": "applause"
+    },
+    {
+      "start": 157.44,
+      "end": 159.35999999999999,
+      "duration": 1.9199999999999875,
+      "kind": "talk"
+    },
+    {
+      "start": 480.47999999999996,
+      "end": 481.92,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 482.88,
+      "end": 487.2,
+      "duration": 4.319999999999993,
+      "kind": "applause"
+    },
+    {
+      "start": 487.68,
+      "end": 490.56,
+      "duration": 2.8799999999999955,
+      "kind": "applause"
+    },
+    {
+      "start": 492.0,
+      "end": 497.28,
+      "duration": 5.279999999999973,
+      "kind": "talk"
+    },
+    {
+      "start": 861.12,
+      "end": 868.3199999999999,
+      "duration": 7.199999999999932,
+      "kind": "applause"
+    },
+    {
+      "start": 872.16,
+      "end": 873.6,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 876.0,
+      "end": 876.48,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 879.36,
+      "end": 879.84,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 883.68,
+      "end": 888.0,
+      "duration": 4.32000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 894.7199999999999,
+      "end": 897.12,
+      "duration": 2.400000000000091,
+      "kind": "talk"
+    },
+    {
+      "start": 904.8,
+      "end": 907.68,
+      "duration": 2.8799999999999955,
+      "kind": "talk"
+    },
+    {
+      "start": 1090.08,
+      "end": 1096.32,
+      "duration": 6.240000000000009,
+      "kind": "applause"
+    },
+    {
+      "start": 1096.8,
+      "end": 1097.76,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 1248.96,
+      "end": 1250.3999999999999,
+      "duration": 1.4399999999998272,
+      "kind": "applause"
+    },
+    {
+      "start": 1320.0,
+      "end": 1320.48,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 1368.48,
+      "end": 1369.44,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 1372.8,
+      "end": 1379.52,
+      "duration": 6.720000000000027,
+      "kind": "applause"
+    },
+    {
+      "start": 1380.0,
+      "end": 1384.8,
+      "duration": 4.7999999999999545,
+      "kind": "talk"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Because Of You",
+      "corroboration": 1,
+      "silence_match": 0.488771,
+      "clip_start": 0,
+      "clip_end": 152.16,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 202,
+      "song": "So Sick",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 159.35999999999999,
+      "clip_end": 354,
+      "start_refined": true,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 354,
+      "song": "Sexy Love",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 354,
+      "clip_end": 480.47999999999996,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 540,
+      "song": "Take a Bow",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 497.28,
+      "clip_end": 650,
+      "start_refined": true,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 650,
+      "song": "Let Me Love You",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 650,
+      "clip_end": 786,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 52
+    },
+    {
+      "seconds": 786,
+      "song": "Irreplaceable",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 786,
+      "clip_end": 861.12,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 920,
+      "song": "Two Million Secrets",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 907.68,
+      "clip_end": 1090.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 1110,
+      "song": "Miss Independent",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 1097.76,
+      "clip_end": 1248.96,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 68
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.488771,
+      "end": 1.2434,
+      "duration": 0.754625
+    },
+    {
+      "start": 158.787,
+      "end": 159.388,
+      "duration": 0.600375
+    },
+    {
+      "start": 492.238,
+      "end": 494.397,
+      "duration": 2.15912
+    },
+    {
+      "start": 1384.01,
+      "end": 1394.28,
+      "duration": 10.2645
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      60,
+      60,
+      60,
+      52,
+      60,
+      68,
+      68
+    ],
+    "avg": 62.9,
+    "min": 52
+  }
+}

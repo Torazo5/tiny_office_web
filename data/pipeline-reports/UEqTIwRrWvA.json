@@ -1,0 +1,372 @@
+{
+  "video_id": "UEqTIwRrWvA",
+  "title": "31 Minutos: Tiny Desk Concert",
+  "duration": 1269,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/UEqTIwRrWvA.mp3",
+  "description_songs": [
+    "Mi Equilibrio Espiritual",
+    "Bailan sin Cesar",
+    "Objeci\u00f3n Denegada",
+    "Calurosa Navidad",
+    "Mi Mu\u00f1eca me Habl\u00f3",
+    "Arwrarwrirwrarwro",
+    "Yo Nunca Vi Televisi\u00f3n (Y Luego S\u00ed Pero Despu\u00e9s No)"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 72 likes, template #2"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 168.48,
+      "end": 171.83999999999997,
+      "duration": 3.359999999999985,
+      "kind": "applause"
+    },
+    {
+      "start": 171.84,
+      "end": 173.27999999999997,
+      "duration": 1.4399999999999693,
+      "kind": "talk"
+    },
+    {
+      "start": 297.12,
+      "end": 298.08,
+      "duration": 0.9599999999999795,
+      "kind": "applause"
+    },
+    {
+      "start": 299.03999999999996,
+      "end": 312.96,
+      "duration": 13.920000000000016,
+      "kind": "talk"
+    },
+    {
+      "start": 316.32,
+      "end": 339.36,
+      "duration": 23.04000000000002,
+      "kind": "talk"
+    },
+    {
+      "start": 444.47999999999996,
+      "end": 447.84,
+      "duration": 3.3600000000000136,
+      "kind": "talk"
+    },
+    {
+      "start": 496.79999999999995,
+      "end": 498.24,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 505.91999999999996,
+      "end": 508.8,
+      "duration": 2.8800000000000523,
+      "kind": "applause"
+    },
+    {
+      "start": 508.79999999999995,
+      "end": 544.8,
+      "duration": 36.0,
+      "kind": "talk"
+    },
+    {
+      "start": 548.16,
+      "end": 564.0,
+      "duration": 15.840000000000032,
+      "kind": "talk"
+    },
+    {
+      "start": 704.16,
+      "end": 705.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 828.0,
+      "end": 830.88,
+      "duration": 2.8799999999999955,
+      "kind": "applause"
+    },
+    {
+      "start": 830.88,
+      "end": 886.08,
+      "duration": 55.200000000000045,
+      "kind": "talk"
+    },
+    {
+      "start": 891.36,
+      "end": 902.88,
+      "duration": 11.519999999999982,
+      "kind": "talk"
+    },
+    {
+      "start": 1049.28,
+      "end": 1056.96,
+      "duration": 7.680000000000064,
+      "kind": "talk"
+    },
+    {
+      "start": 1060.32,
+      "end": 1063.68,
+      "duration": 3.3600000000001273,
+      "kind": "talk"
+    },
+    {
+      "start": 1234.56,
+      "end": 1236.96,
+      "duration": 2.400000000000091,
+      "kind": "talk"
+    },
+    {
+      "start": 1240.8,
+      "end": 1243.2,
+      "duration": 2.400000000000091,
+      "kind": "talk"
+    },
+    {
+      "start": 1245.6,
+      "end": 1249.44,
+      "duration": 3.8400000000001455,
+      "kind": "talk"
+    },
+    {
+      "start": 1250.3999999999999,
+      "end": 1252.32,
+      "duration": 1.9200000000000728,
+      "kind": "applause"
+    },
+    {
+      "start": 1253.28,
+      "end": 1256.16,
+      "duration": 2.880000000000109,
+      "kind": "applause"
+    },
+    {
+      "start": 1259.04,
+      "end": 1260.0,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 1262.3999999999999,
+      "end": 1263.84,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 1266.24,
+      "end": 1267.68,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 15,
+      "song": "Mi Equilibrio Espiritual",
+      "corroboration": 0,
+      "silence_match": 10.2915,
+      "clip_start": 15,
+      "clip_end": 168.48,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 197,
+      "song": "Bailan sin Cesar",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 173.27999999999997,
+      "clip_end": 297.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 343,
+      "song": "Objeci\u00f3n Denegada",
+      "corroboration": 0,
+      "silence_match": 339.548,
+      "clip_start": 339.36,
+      "clip_end": 505.91999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 565,
+      "song": "Calurosa Navidad",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 564.0,
+      "clip_end": 719,
+      "start_refined": true,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 719,
+      "song": "Mi Mu\u00f1eca me Habl\u00f3",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 705.6,
+      "clip_end": 828.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 922,
+      "song": "Arwrarwrirwrarwro",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 902.88,
+      "clip_end": 1049.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 1066,
+      "song": "Yo Nunca Vi Televisi\u00f3n (Y Luego S\u00ed Pero Despu\u00e9s No)",
+      "corroboration": 0,
+      "silence_match": 1065.3,
+      "clip_start": 1063.68,
+      "clip_end": 1250.3999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 10.2915,
+      "end": 10.8528,
+      "duration": 0.561333
+    },
+    {
+      "start": 304.442,
+      "end": 304.986,
+      "duration": 0.543625
+    },
+    {
+      "start": 307.978,
+      "end": 308.841,
+      "duration": 0.862792
+    },
+    {
+      "start": 318.353,
+      "end": 318.908,
+      "duration": 0.555167
+    },
+    {
+      "start": 334.449,
+      "end": 335.159,
+      "duration": 0.709833
+    },
+    {
+      "start": 338.009,
+      "end": 338.543,
+      "duration": 0.533417
+    },
+    {
+      "start": 339.548,
+      "end": 340.092,
+      "duration": 0.543583
+    },
+    {
+      "start": 349.661,
+      "end": 350.587,
+      "duration": 0.925479
+    },
+    {
+      "start": 834.474,
+      "end": 835.087,
+      "duration": 0.612958
+    },
+    {
+      "start": 846.596,
+      "end": 847.118,
+      "duration": 0.521937
+    },
+    {
+      "start": 851.995,
+      "end": 852.521,
+      "duration": 0.526604
+    },
+    {
+      "start": 860.422,
+      "end": 861.099,
+      "duration": 0.677
+    },
+    {
+      "start": 866.469,
+      "end": 867.089,
+      "duration": 0.620271
+    },
+    {
+      "start": 867.147,
+      "end": 868.085,
+      "duration": 0.937667
+    },
+    {
+      "start": 869.078,
+      "end": 869.6,
+      "duration": 0.521854
+    },
+    {
+      "start": 869.964,
+      "end": 870.475,
+      "duration": 0.510875
+    },
+    {
+      "start": 872.885,
+      "end": 874.809,
+      "duration": 1.92383
+    },
+    {
+      "start": 875.808,
+      "end": 876.33,
+      "duration": 0.521521
+    },
+    {
+      "start": 1065.3,
+      "end": 1066.04,
+      "duration": 0.740229
+    },
+    {
+      "start": 1073.18,
+      "end": 1073.72,
+      "duration": 0.542854
+    },
+    {
+      "start": 1268.22,
+      "end": 1268.81,
+      "duration": 0.588646
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      61,
+      76,
+      53,
+      61,
+      61,
+      76
+    ],
+    "avg": 65.1,
+    "min": 53
+  }
+}

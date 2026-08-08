@@ -1,0 +1,433 @@
+{
+  "video_id": "up8ODGFWgFg",
+  "title": "Usher: Tiny Desk Concert",
+  "duration": 1487,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/up8ODGFWgFg.mp3",
+  "description_songs": [
+    "You Make Me Wanna...",
+    "Superstar",
+    "U Don't Have to Call",
+    "Nice & Slow",
+    "Confessions Part II",
+    "My Way"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2200 likes, template #1"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 7.68,
+      "duration": 7.68,
+      "kind": "talk"
+    },
+    {
+      "start": 7.68,
+      "end": 8.16,
+      "duration": 0.4800000000000004,
+      "kind": "applause"
+    },
+    {
+      "start": 8.16,
+      "end": 12.0,
+      "duration": 3.84,
+      "kind": "talk"
+    },
+    {
+      "start": 16.32,
+      "end": 17.76,
+      "duration": 1.4400000000000013,
+      "kind": "talk"
+    },
+    {
+      "start": 232.32,
+      "end": 241.92,
+      "duration": 9.599999999999994,
+      "kind": "applause"
+    },
+    {
+      "start": 241.92,
+      "end": 265.92,
+      "duration": 24.00000000000003,
+      "kind": "talk"
+    },
+    {
+      "start": 269.28,
+      "end": 272.64,
+      "duration": 3.3600000000000136,
+      "kind": "talk"
+    },
+    {
+      "start": 276.48,
+      "end": 281.28000000000003,
+      "duration": 4.800000000000011,
+      "kind": "talk"
+    },
+    {
+      "start": 439.68,
+      "end": 441.6,
+      "duration": 1.920000000000016,
+      "kind": "applause"
+    },
+    {
+      "start": 443.52,
+      "end": 445.44,
+      "duration": 1.920000000000016,
+      "kind": "applause"
+    },
+    {
+      "start": 639.36,
+      "end": 650.88,
+      "duration": 11.519999999999982,
+      "kind": "applause"
+    },
+    {
+      "start": 650.88,
+      "end": 659.04,
+      "duration": 8.159999999999968,
+      "kind": "talk"
+    },
+    {
+      "start": 659.04,
+      "end": 662.4,
+      "duration": 3.3600000000000136,
+      "kind": "applause"
+    },
+    {
+      "start": 662.4,
+      "end": 714.72,
+      "duration": 52.32000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 896.16,
+      "end": 900.96,
+      "duration": 4.800000000000068,
+      "kind": "applause"
+    },
+    {
+      "start": 901.4399999999999,
+      "end": 901.92,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 902.4,
+      "end": 907.1999999999999,
+      "duration": 4.7999999999999545,
+      "kind": "talk"
+    },
+    {
+      "start": 913.92,
+      "end": 920.16,
+      "duration": 6.240000000000009,
+      "kind": "talk"
+    },
+    {
+      "start": 928.8,
+      "end": 933.12,
+      "duration": 4.32000000000005,
+      "kind": "talk"
+    },
+    {
+      "start": 941.28,
+      "end": 946.0799999999999,
+      "duration": 4.7999999999999545,
+      "kind": "talk"
+    },
+    {
+      "start": 961.92,
+      "end": 964.3199999999999,
+      "duration": 2.3999999999999773,
+      "kind": "talk"
+    },
+    {
+      "start": 972.48,
+      "end": 976.3199999999999,
+      "duration": 3.839999999999918,
+      "kind": "talk"
+    },
+    {
+      "start": 1016.16,
+      "end": 1020.0,
+      "duration": 3.840000000000032,
+      "kind": "talk"
+    },
+    {
+      "start": 1077.12,
+      "end": 1078.56,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 1211.04,
+      "end": 1220.6399999999999,
+      "duration": 9.599999999999909,
+      "kind": "applause"
+    },
+    {
+      "start": 1220.6399999999999,
+      "end": 1222.56,
+      "duration": 1.9200000000000728,
+      "kind": "talk"
+    },
+    {
+      "start": 1222.56,
+      "end": 1223.52,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 1223.52,
+      "end": 1227.36,
+      "duration": 3.839999999999918,
+      "kind": "talk"
+    },
+    {
+      "start": 1228.32,
+      "end": 1231.2,
+      "duration": 2.880000000000109,
+      "kind": "applause"
+    },
+    {
+      "start": 1231.2,
+      "end": 1233.6,
+      "duration": 2.3999999999998636,
+      "kind": "talk"
+    },
+    {
+      "start": 1234.56,
+      "end": 1238.3999999999999,
+      "duration": 3.839999999999918,
+      "kind": "applause"
+    },
+    {
+      "start": 1238.3999999999999,
+      "end": 1242.72,
+      "duration": 4.320000000000164,
+      "kind": "talk"
+    },
+    {
+      "start": 1242.72,
+      "end": 1244.16,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 1246.08,
+      "end": 1248.96,
+      "duration": 2.880000000000109,
+      "kind": "applause"
+    },
+    {
+      "start": 1248.96,
+      "end": 1266.24,
+      "duration": 17.279999999999973,
+      "kind": "talk"
+    },
+    {
+      "start": 1454.8799999999999,
+      "end": 1469.28,
+      "duration": 14.400000000000091,
+      "kind": "applause"
+    },
+    {
+      "start": 1469.76,
+      "end": 1476.48,
+      "duration": 6.720000000000027,
+      "kind": "talk"
+    },
+    {
+      "start": 1476.48,
+      "end": 1478.8799999999999,
+      "duration": 2.3999999999998636,
+      "kind": "applause"
+    },
+    {
+      "start": 1479.36,
+      "end": 1482.72,
+      "duration": 3.3600000000001273,
+      "kind": "talk"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 84,
+      "song": "U Make Me Wanna",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 84,
+      "clip_end": 232.32,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 67
+    },
+    {
+      "seconds": 293,
+      "song": "Superstar",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 281.28000000000003,
+      "clip_end": 439.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 448,
+      "song": "U Don\u2019t Have To Call",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 445.44,
+      "clip_end": 639.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 702,
+      "song": "Nice n Slow",
+      "corroboration": 0,
+      "silence_match": 701.647,
+      "clip_start": 714.72,
+      "clip_end": 896.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 977,
+      "song": "Confessions Part II",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 976.3199999999999,
+      "clip_end": 1211.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 1268,
+      "song": "My Way",
+      "corroboration": 2,
+      "silence_match": 1266.68,
+      "clip_start": 1266.24,
+      "clip_end": 1454.8799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 90
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 2.00769,
+      "end": 2.52329,
+      "duration": 0.515604
+    },
+    {
+      "start": 3.43054,
+      "end": 4.03515,
+      "duration": 0.604604
+    },
+    {
+      "start": 10.7701,
+      "end": 11.3445,
+      "duration": 0.574396
+    },
+    {
+      "start": 11.662,
+      "end": 12.405,
+      "duration": 0.743
+    },
+    {
+      "start": 231.076,
+      "end": 231.647,
+      "duration": 0.571313
+    },
+    {
+      "start": 250.311,
+      "end": 250.965,
+      "duration": 0.654312
+    },
+    {
+      "start": 667.048,
+      "end": 667.558,
+      "duration": 0.510229
+    },
+    {
+      "start": 689.404,
+      "end": 689.973,
+      "duration": 0.569792
+    },
+    {
+      "start": 697.612,
+      "end": 700.082,
+      "duration": 2.46971
+    },
+    {
+      "start": 701.647,
+      "end": 702.566,
+      "duration": 0.91925
+    },
+    {
+      "start": 1022.13,
+      "end": 1022.86,
+      "duration": 0.729938
+    },
+    {
+      "start": 1240.52,
+      "end": 1241.47,
+      "duration": 0.951208
+    },
+    {
+      "start": 1264.22,
+      "end": 1265.37,
+      "duration": 1.1454
+    },
+    {
+      "start": 1265.41,
+      "end": 1266.0,
+      "duration": 0.589208
+    },
+    {
+      "start": 1266.03,
+      "end": 1266.64,
+      "duration": 0.613187
+    },
+    {
+      "start": 1266.68,
+      "end": 1267.26,
+      "duration": 0.581708
+    },
+    {
+      "start": 1479.1,
+      "end": 1479.86,
+      "duration": 0.764021
+    },
+    {
+      "start": 1482.29,
+      "end": 1486.58,
+      "duration": 4.28696
+    }
+  ],
+  "confidence": {
+    "scores": [
+      67,
+      75,
+      68,
+      76,
+      75,
+      90
+    ],
+    "avg": 75.2,
+    "min": 67
+  }
+}

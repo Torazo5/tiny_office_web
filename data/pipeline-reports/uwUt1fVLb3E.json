@@ -1,0 +1,531 @@
+{
+  "video_id": "uwUt1fVLb3E",
+  "title": "Alicia Keys: NPR Music Tiny Desk Concert",
+  "duration": 1667,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/uwUt1fVLb3E.mp3",
+  "description_songs": [
+    "Show Me Love",
+    "Gramercy Park",
+    "Underdog",
+    "Fallin'"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 6000 likes, template #1"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 6.24,
+      "duration": 6.24,
+      "kind": "talk"
+    },
+    {
+      "start": 19.68,
+      "end": 21.12,
+      "duration": 1.4400000000000013,
+      "kind": "talk"
+    },
+    {
+      "start": 57.599999999999994,
+      "end": 59.03999999999999,
+      "duration": 1.4399999999999977,
+      "kind": "talk"
+    },
+    {
+      "start": 139.68,
+      "end": 143.51999999999998,
+      "duration": 3.839999999999975,
+      "kind": "talk"
+    },
+    {
+      "start": 387.84,
+      "end": 392.16,
+      "duration": 4.32000000000005,
+      "kind": "applause"
+    },
+    {
+      "start": 392.64,
+      "end": 396.0,
+      "duration": 3.3600000000000136,
+      "kind": "applause"
+    },
+    {
+      "start": 396.47999999999996,
+      "end": 399.36,
+      "duration": 2.8800000000000523,
+      "kind": "talk"
+    },
+    {
+      "start": 400.32,
+      "end": 401.76,
+      "duration": 1.4399999999999977,
+      "kind": "applause"
+    },
+    {
+      "start": 401.76,
+      "end": 404.64,
+      "duration": 2.8799999999999955,
+      "kind": "talk"
+    },
+    {
+      "start": 405.59999999999997,
+      "end": 406.56,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 407.03999999999996,
+      "end": 462.24,
+      "duration": 55.200000000000045,
+      "kind": "talk"
+    },
+    {
+      "start": 468.0,
+      "end": 518.88,
+      "duration": 50.879999999999995,
+      "kind": "talk"
+    },
+    {
+      "start": 524.16,
+      "end": 524.64,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 525.6,
+      "end": 529.44,
+      "duration": 3.840000000000032,
+      "kind": "talk"
+    },
+    {
+      "start": 736.8,
+      "end": 751.68,
+      "duration": 14.879999999999995,
+      "kind": "applause"
+    },
+    {
+      "start": 755.04,
+      "end": 858.72,
+      "duration": 103.68000000000006,
+      "kind": "talk"
+    },
+    {
+      "start": 1088.1599999999999,
+      "end": 1088.6399999999999,
+      "duration": 0.4800000000000182,
+      "kind": "applause"
+    },
+    {
+      "start": 1090.56,
+      "end": 1109.76,
+      "duration": 19.200000000000045,
+      "kind": "applause"
+    },
+    {
+      "start": 1111.68,
+      "end": 1115.52,
+      "duration": 3.839999999999918,
+      "kind": "applause"
+    },
+    {
+      "start": 1116.48,
+      "end": 1129.44,
+      "duration": 12.960000000000036,
+      "kind": "talk"
+    },
+    {
+      "start": 1130.8799999999999,
+      "end": 1133.76,
+      "duration": 2.880000000000109,
+      "kind": "applause"
+    },
+    {
+      "start": 1133.76,
+      "end": 1157.76,
+      "duration": 24.0,
+      "kind": "talk"
+    },
+    {
+      "start": 1157.76,
+      "end": 1162.08,
+      "duration": 4.319999999999936,
+      "kind": "applause"
+    },
+    {
+      "start": 1162.08,
+      "end": 1167.36,
+      "duration": 5.279999999999973,
+      "kind": "talk"
+    },
+    {
+      "start": 1169.28,
+      "end": 1181.76,
+      "duration": 12.480000000000018,
+      "kind": "talk"
+    },
+    {
+      "start": 1182.24,
+      "end": 1184.16,
+      "duration": 1.9200000000000728,
+      "kind": "applause"
+    },
+    {
+      "start": 1185.6,
+      "end": 1186.56,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 1186.56,
+      "end": 1189.44,
+      "duration": 2.880000000000109,
+      "kind": "talk"
+    },
+    {
+      "start": 1189.9199999999998,
+      "end": 1191.36,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 1193.28,
+      "end": 1196.16,
+      "duration": 2.880000000000109,
+      "kind": "applause"
+    },
+    {
+      "start": 1196.1599999999999,
+      "end": 1198.56,
+      "duration": 2.400000000000091,
+      "kind": "talk"
+    },
+    {
+      "start": 1199.04,
+      "end": 1201.92,
+      "duration": 2.880000000000109,
+      "kind": "applause"
+    },
+    {
+      "start": 1202.8799999999999,
+      "end": 1227.36,
+      "duration": 24.480000000000018,
+      "kind": "talk"
+    },
+    {
+      "start": 1228.8,
+      "end": 1230.24,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 1230.72,
+      "end": 1232.6399999999999,
+      "duration": 1.9199999999998454,
+      "kind": "talk"
+    },
+    {
+      "start": 1233.6,
+      "end": 1235.04,
+      "duration": 1.4400000000000546,
+      "kind": "applause"
+    },
+    {
+      "start": 1235.52,
+      "end": 1238.8799999999999,
+      "duration": 3.3599999999999,
+      "kind": "talk"
+    },
+    {
+      "start": 1594.08,
+      "end": 1595.52,
+      "duration": 1.4400000000000546,
+      "kind": "talk"
+    },
+    {
+      "start": 1635.36,
+      "end": 1656.48,
+      "duration": 21.12000000000012,
+      "kind": "applause"
+    },
+    {
+      "start": 1659.36,
+      "end": 1662.72,
+      "duration": 3.3600000000001273,
+      "kind": "talk"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 105,
+      "song": "Show me love",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 105,
+      "clip_end": 387.84,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 532,
+      "song": "Gramercy Park",
+      "corroboration": 1,
+      "silence_match": 529.16,
+      "clip_start": 529.44,
+      "clip_end": 736.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 858,
+      "song": "Underdog",
+      "corroboration": 2,
+      "silence_match": 856.558,
+      "clip_start": 858.72,
+      "clip_end": 1088.1599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 1240,
+      "song": "Fallin",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 1238.8799999999999,
+      "clip_end": 1635.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 75
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 417.925,
+      "end": 419.111,
+      "duration": 1.18679
+    },
+    {
+      "start": 435.206,
+      "end": 435.926,
+      "duration": 0.720042
+    },
+    {
+      "start": 436.899,
+      "end": 437.884,
+      "duration": 0.985563
+    },
+    {
+      "start": 443.171,
+      "end": 443.925,
+      "duration": 0.754354
+    },
+    {
+      "start": 447.421,
+      "end": 448.193,
+      "duration": 0.7715
+    },
+    {
+      "start": 453.808,
+      "end": 454.475,
+      "duration": 0.667229
+    },
+    {
+      "start": 456.811,
+      "end": 457.534,
+      "duration": 0.722396
+    },
+    {
+      "start": 462.264,
+      "end": 462.873,
+      "duration": 0.608187
+    },
+    {
+      "start": 473.092,
+      "end": 473.676,
+      "duration": 0.584333
+    },
+    {
+      "start": 500.12,
+      "end": 500.804,
+      "duration": 0.683667
+    },
+    {
+      "start": 506.569,
+      "end": 507.084,
+      "duration": 0.515521
+    },
+    {
+      "start": 529.16,
+      "end": 533.012,
+      "duration": 3.85204
+    },
+    {
+      "start": 772.02,
+      "end": 772.833,
+      "duration": 0.81375
+    },
+    {
+      "start": 800.013,
+      "end": 800.615,
+      "duration": 0.602021
+    },
+    {
+      "start": 806.766,
+      "end": 807.346,
+      "duration": 0.580229
+    },
+    {
+      "start": 809.527,
+      "end": 810.397,
+      "duration": 0.870458
+    },
+    {
+      "start": 812.722,
+      "end": 813.398,
+      "duration": 0.675125
+    },
+    {
+      "start": 813.825,
+      "end": 814.373,
+      "duration": 0.548583
+    },
+    {
+      "start": 814.825,
+      "end": 815.541,
+      "duration": 0.716458
+    },
+    {
+      "start": 821.218,
+      "end": 821.724,
+      "duration": 0.506125
+    },
+    {
+      "start": 828.539,
+      "end": 829.14,
+      "duration": 0.601521
+    },
+    {
+      "start": 831.002,
+      "end": 831.53,
+      "duration": 0.52825
+    },
+    {
+      "start": 834.529,
+      "end": 835.117,
+      "duration": 0.588354
+    },
+    {
+      "start": 838.04,
+      "end": 838.62,
+      "duration": 0.580125
+    },
+    {
+      "start": 848.25,
+      "end": 848.756,
+      "duration": 0.506312
+    },
+    {
+      "start": 854.323,
+      "end": 854.871,
+      "duration": 0.547375
+    },
+    {
+      "start": 855.273,
+      "end": 855.923,
+      "duration": 0.65025
+    },
+    {
+      "start": 856.558,
+      "end": 858.477,
+      "duration": 1.91852
+    },
+    {
+      "start": 1137.22,
+      "end": 1137.76,
+      "duration": 0.533771
+    },
+    {
+      "start": 1138.74,
+      "end": 1139.72,
+      "duration": 0.977625
+    },
+    {
+      "start": 1142.76,
+      "end": 1143.96,
+      "duration": 1.19235
+    },
+    {
+      "start": 1147.67,
+      "end": 1148.64,
+      "duration": 0.963917
+    },
+    {
+      "start": 1149.14,
+      "end": 1150.04,
+      "duration": 0.898875
+    },
+    {
+      "start": 1151.17,
+      "end": 1152.07,
+      "duration": 0.897583
+    },
+    {
+      "start": 1157.66,
+      "end": 1158.22,
+      "duration": 0.556063
+    },
+    {
+      "start": 1207.67,
+      "end": 1208.36,
+      "duration": 0.690083
+    },
+    {
+      "start": 1228.02,
+      "end": 1228.55,
+      "duration": 0.531604
+    },
+    {
+      "start": 1300.06,
+      "end": 1300.91,
+      "duration": 0.852938
+    },
+    {
+      "start": 1301.63,
+      "end": 1302.29,
+      "duration": 0.664333
+    },
+    {
+      "start": 1308.55,
+      "end": 1310.67,
+      "duration": 2.12387
+    },
+    {
+      "start": 1655.93,
+      "end": 1660.14,
+      "duration": 4.20904
+    },
+    {
+      "start": 1662.56,
+      "end": 1666.83,
+      "duration": 4.26806
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      83,
+      90,
+      75
+    ],
+    "avg": 75.2,
+    "min": 53
+  }
+}

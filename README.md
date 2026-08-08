@@ -84,23 +84,19 @@ Specific gaps to close, roughly in the order they'll bite:
    div. Whatever auth (Clerk, Supabase Auth, etc.) goes here also unlocks
    "Your rating" / "Write a review" / "+ Add to list" on `/video/[id]`,
    currently all inert.
-2. **Real video player.** `/video/[id]`'s embed is a static placeholder.
-   Once it's a real YouTube iframe, wire `components/song-row.tsx` to seek
-   it to `song.clipStart` on click — that's the one interaction the design
-   explicitly calls out as "click to seek."
-3. **Review-flow writes.** `/review/[id]`'s nudge/confirm/skip/mark-bad
+2. **Review-flow writes.** `/review/[id]`'s nudge/confirm/skip/mark-bad
    buttons are disabled placeholders. This screen is
    `scripts/review.py` from the pipeline repo, moved into the browser —
    confirming here should write the same kind of correction that script's
    `reports/<id>.verified.json` output represents, just to a real table
    instead of a file. Needs a Server Action or API route + a schema for
    storing corrections.
-4. **Ratings/reviews/playlists tables** — pure product surfaces, no
+3. **Ratings/reviews/playlists tables** — pure product surfaces, no
    pipeline equivalent, build from scratch.
-5. **Upload dates.** `Performance.date` is `null` for every fixture — the
+4. **Upload dates.** `Performance.date` is `null` for every fixture — the
    pipeline's yt-dlp call never captured it. Pull it from a real metadata
    source when performances get ingested for real.
-6. **Manual-tier videos.** The pipeline flags some videos `method:
+5. **Manual-tier videos.** The pipeline flags some videos `method:
    "manual"` (zero candidates — e.g. The Roots feat. Bilal in the real
    dataset) — deliberately excluded from `getPerformances()` /
    `getReviewQueue()` right now, since the review-flow UI assumes existing
@@ -108,11 +104,20 @@ Specific gaps to close, roughly in the order they'll bite:
    free-scrub flow (the pipeline's `scripts/manual_mark.py`, as a UI) that
    doesn't exist here yet.
 
+The video embed and click-to-seek (`components/video-embed.tsx`,
+`components/player-context.tsx`) are already real — a live
+youtube-nocookie.com iframe, reseeked by clicking a song row. What it
+doesn't do: scrub *within* a song (each click is a fresh seek + reload,
+not a smooth scrub), track "currently playing" as real playback state, or
+persist anything. That's still fair game to improve, just not blocking.
+
 ## Ingesting real pipeline output
 
-Once there's a real `performances` table, `reports/<video_id>.json` in the
-sibling `tiny_office` repo is the ingest source — see that repo's
-`PIPELINE.md` for the full JSON schema. `confidence.min >= 75` is the
-existing "trust without review" bar (used for `verified` in the fixtures);
-keep using it unless you have a reason not to.
-# tiny_office_web
+`data/pipeline-reports/` is a **self-contained snapshot** of every
+`reports/<video_id>.json` from the `tiny_office` pipeline repo (53 files,
+committed here — no cross-repo filesystem access needed to use them; see
+that directory's own README for details and how to refresh it). Once
+there's a real `performances` table, that's the ingest source.
+`confidence.min >= 75` is the existing "trust without review" bar (used
+for `verified` in the fixtures); keep using it unless you have a reason
+not to.

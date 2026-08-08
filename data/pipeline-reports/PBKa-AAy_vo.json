@@ -1,0 +1,163 @@
+{
+  "video_id": "PBKa-AAy_vo",
+  "title": "Daniel Caesar: NPR Music Tiny Desk Concert",
+  "duration": 993,
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/PBKa-AAy_vo.mp3",
+  "description_songs": [
+    "Japanese Denim",
+    "Get You",
+    "Best Part (feat. H.E.R.)"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 3300 likes, template #0"
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 272.64,
+      "end": 277.44,
+      "duration": 4.800000000000011,
+      "kind": "applause"
+    },
+    {
+      "start": 624.9599999999999,
+      "end": 627.36,
+      "duration": 2.400000000000091,
+      "kind": "talk"
+    },
+    {
+      "start": 644.16,
+      "end": 651.84,
+      "duration": 7.680000000000064,
+      "kind": "applause"
+    },
+    {
+      "start": 967.68,
+      "end": 968.64,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 971.04,
+      "end": 978.72,
+      "duration": 7.680000000000064,
+      "kind": "applause"
+    },
+    {
+      "start": 981.5999999999999,
+      "end": 985.4399999999999,
+      "duration": 3.840000000000032,
+      "kind": "applause"
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Japanese Denim",
+      "corroboration": 2,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 272.64,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 82
+    },
+    {
+      "seconds": 279,
+      "song": "Get You",
+      "corroboration": 2,
+      "silence_match": 281.929,
+      "clip_start": 277.44,
+      "clip_end": 644.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 650,
+      "song": "Best Part (feat. H.E.R.)",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 651.84,
+      "clip_end": 967.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 75
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.46212,
+      "duration": 5.46212
+    },
+    {
+      "start": 263.407,
+      "end": 264.349,
+      "duration": 0.942125
+    },
+    {
+      "start": 281.929,
+      "end": 282.643,
+      "duration": 0.714
+    },
+    {
+      "start": 285.54,
+      "end": 286.052,
+      "duration": 0.511458
+    },
+    {
+      "start": 287.753,
+      "end": 288.604,
+      "duration": 0.851271
+    },
+    {
+      "start": 291.739,
+      "end": 292.278,
+      "duration": 0.539
+    },
+    {
+      "start": 294.101,
+      "end": 294.876,
+      "duration": 0.774708
+    },
+    {
+      "start": 300.252,
+      "end": 301.063,
+      "duration": 0.811708
+    },
+    {
+      "start": 619.611,
+      "end": 620.121,
+      "duration": 0.509979
+    },
+    {
+      "start": 642.394,
+      "end": 643.245,
+      "duration": 0.851625
+    },
+    {
+      "start": 984.724,
+      "end": 986.654,
+      "duration": 1.92971
+    },
+    {
+      "start": 987.018,
+      "end": 993.257,
+      "duration": 6.23873
+    }
+  ],
+  "confidence": {
+    "scores": [
+      82,
+      90,
+      75
+    ],
+    "avg": 82.3,
+    "min": 75
+  }
+}
