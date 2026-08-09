@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getCurrentUser } from "@/lib/auth";
+import { getUserProfile } from "@/lib/profile-data";
 import { TruthRequestNotification } from "@/components/truth-request-notification";
 import { getMyTruthRequests } from "@/lib/review-data";
 import { isAdminSession } from "@/lib/admin-session";
@@ -12,21 +14,24 @@ import { signOut } from "@/app/auth/actions";
  * changes per-screen — `progressLabel`, only used on the review flow — is
  * page-specific data a root layout can't easily see.
  *
- * Search input is decorative for now — wiring it to real search needs a
- * backend to search against.
  */
 export async function Header({
   showBack = true,
   progressLabel,
+  searchQuery = "",
 }: {
   showBack?: boolean;
   progressLabel?: string;
+  searchQuery?: string;
 }) {
   const user = await getCurrentUser();
-  const latestResolvedRequest = user
-    ? (await getMyTruthRequests(user.id)).find((request) => request.status !== "pending")
-    : null;
-  const isAdmin = Boolean(user && (await isAdminSession(user.id)));
+  const [latestResolvedRequest, isAdmin, profile] = user
+    ? await Promise.all([
+        getMyTruthRequests(user.id).then((requests) => requests.find((request) => request.status !== "pending") ?? null),
+        isAdminSession(user.id),
+        getUserProfile(user.id),
+      ])
+    : ([null, false, null] as const);
 
   return (
     <>
@@ -55,15 +60,6 @@ export async function Header({
         Playlists
       </Link>
 
-      {user && (
-        <Link
-          href="/profile"
-          className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-        >
-          Profile
-        </Link>
-      )}
-
       {user && isAdmin && (
         <Link
           href="/review"
@@ -73,13 +69,16 @@ export async function Header({
         </Link>
       )}
 
-      <div className="flex-1 max-w-[420px]">
+      <form action="/" method="get" className="flex-1 max-w-[420px]">
         <Input
+          type="search"
+          name="q"
+          defaultValue={searchQuery}
           placeholder="Search performances, artists, songs"
           className="bg-secondary"
-          disabled
+          aria-label="Search performances, artists, and songs"
         />
-      </div>
+      </form>
 
       <div className="flex-1" />
 
@@ -91,7 +90,20 @@ export async function Header({
 
       {user ? (
         <form action={signOut} className="flex items-center gap-3">
-          <span className="max-w-[180px] truncate text-sm text-muted-foreground">{user.email}</span>
+          {profile && (
+            <Link
+              href="/profile"
+              className="flex items-center gap-2 rounded-lg px-1.5 py-1 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              aria-label={`Open ${profile.displayName}'s profile`}
+            >
+              <Avatar size="sm">
+                <AvatarImage src={profile.avatarUrl} alt="" />
+                <AvatarFallback>{profile.displayName.slice(0, 1).toUpperCase()}</AvatarFallback>
+              </Avatar>
+              <span className="max-w-[150px] truncate">{profile.displayName}</span>
+              <span className="hidden text-xs text-muted-foreground/70 sm:inline">Profile</span>
+            </Link>
+          )}
           <button
             type="submit"
             className="whitespace-nowrap rounded-lg border border-input px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"

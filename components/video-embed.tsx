@@ -74,6 +74,7 @@ export function VideoEmbed({ videoId }: { videoId: string }) {
     songs,
     startAt,
     setStartAt,
+    setCurrentTime,
     onlySongMode,
     setOnlySongMode,
   } = usePlayer();
@@ -97,15 +98,19 @@ export function VideoEmbed({ videoId }: { videoId: string }) {
             onReady: (event) => {
               if (cancelled) return;
               playerRef.current = event.target;
-              previousTimeRef.current = event.target.getCurrentTime();
-              trackingTimeRef.current = event.target.getCurrentTime();
+              const currentTime = event.target.getCurrentTime();
+              previousTimeRef.current = currentTime;
+              trackingTimeRef.current = currentTime;
+              setCurrentTime(currentTime);
               setPlayerState(event.target.getPlayerState());
               setIsPlayerReady(true);
             },
             onStateChange: (event) => {
               if (cancelled) return;
               if (event.data !== YOUTUBE_PLAYER_BUFFERING) {
-                previousTimeRef.current = event.target.getCurrentTime();
+                const currentTime = event.target.getCurrentTime();
+                previousTimeRef.current = currentTime;
+                setCurrentTime(currentTime);
               }
               setPlayerState(event.data);
             },
@@ -123,7 +128,7 @@ export function VideoEmbed({ videoId }: { videoId: string }) {
       playerRef.current?.destroy();
       playerRef.current = null;
     };
-  }, []);
+  }, [setCurrentTime]);
 
   useEffect(() => {
     if (!isPlayerReady || startAt === initialStart) return;
@@ -150,6 +155,18 @@ export function VideoEmbed({ videoId }: { videoId: string }) {
 
     return () => window.clearInterval(intervalId);
   }, [isPlayerReady, playerState, videoId]);
+
+  useEffect(() => {
+    if (!isPlayerReady || playerState !== YOUTUBE_PLAYER_PLAYING) return;
+
+    const intervalId = window.setInterval(() => {
+      const player = playerRef.current;
+      if (!player || player.getPlayerState() !== YOUTUBE_PLAYER_PLAYING) return;
+      setCurrentTime(player.getCurrentTime());
+    }, 250);
+
+    return () => window.clearInterval(intervalId);
+  }, [isPlayerReady, playerState, setCurrentTime]);
 
   useEffect(() => {
     if (!isPlayerReady) return;

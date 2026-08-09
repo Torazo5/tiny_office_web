@@ -15,6 +15,24 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-09 — Header and playback micro-fix validation blocked by WSL1
+
+- **Symptom and impact:** The requested browse search, live song highlighting,
+  and signed-in header identity changes could not be validated with the
+  repository's automated commands or local browser flow in this shell.
+- **Root cause / evidence:** `npm run build`, `npm run lint`, and `npm test`
+  all stopped before Node.js startup with `WSL 1 is not supported` and
+  `Could not determine Node.js install directory`; the dev server therefore
+  cannot be started for browser verification.
+- **Systems and files:** WSL1 Node.js/npm interop, `app/page.tsx`,
+  `components/header.tsx`, `components/player-context.tsx`,
+  `components/video-embed.tsx`, and `components/song-row.tsx`.
+- **Resolution / next action:** Run the build, lint, tests, and the search,
+  profile-header, and live-highlight browser flows from WSL2 or another Linux
+  Node.js runtime.
+- **Verification:** `git diff --check` passed; all three Node-based commands
+  failed before application compilation or test execution.
+
 ### 2026-08-09 — Partial revision resolution build verification blocked
 
 - **Symptom and impact:** The new per-song admin revision controls could not be
