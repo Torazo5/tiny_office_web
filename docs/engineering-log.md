@@ -302,6 +302,22 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** `git diff --check` passed; the local `npm run build` was
   blocked before startup by the existing WSL1 Node launcher limitation.
 
+### 2026-08-09 — Truth request decision missing from Server Action form data
+
+- **Symptom and impact:** Admins clicking **Apply as main truth** or
+  **Reject request** received `Invalid request decision`, so pending truth
+  requests could not be resolved.
+- **Root cause / evidence:** The clicked button’s `name/value` was not present
+  in the Server Action `FormData` for this form setup, leaving `decision`
+  empty when `resolveTruthRequest` validated it.
+- **Systems and files:** `components/revision-editor.tsx` and
+  `app/review/actions.ts`.
+- **Resolution / next action:** Added a hidden `decision` field and set its
+  value synchronously from each approve/reject button before submission.
+  Re-test both resolution paths in the deployed browser flow.
+- **Verification:** `git diff --check` passed; local Node-based build
+  verification remains blocked by the WSL1 launcher limitation.
+
 ### 2026-08-09 — Boundary confirmation validation blocked by WSL1 Node launcher
 
 - **Symptom and impact:** The per-boundary confirmation controls and updated

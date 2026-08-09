@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState, useActionState } from "react";
+import { useMemo, useRef, useState, useActionState } from "react";
 import { Waveform } from "@/components/waveform";
 import { RevisionVideoPlayer } from "@/components/revision-video-player";
 import {
@@ -77,6 +77,7 @@ export function RevisionEditor({
   const [truthState, truthAction, truthPending] = useActionState<ReviewActionState, FormData>(submitTruthRequest, null);
   const [saveState, saveAction, savePending] = useActionState<ReviewActionState, FormData>(saveGroundTruthAction, null);
   const [resolveState, resolveAction, resolvePending] = useActionState<ReviewActionState, FormData>(resolveTruthRequest, null);
+  const resolveDecisionRef = useRef<HTMLInputElement>(null);
 
   const song = songs[currentIndex] ?? songs[0];
   const currentStart = parseTimeInput(song?.clipStart ?? "") ?? song?.baseStart ?? 0;
@@ -330,6 +331,9 @@ export function RevisionEditor({
         <input type="hidden" name="performance_video_id" value={performance.videoId} />
         <input type="hidden" name="draft" value={draftJson} />
         {request && <input type="hidden" name="request_id" value={request.id} />}
+        {isAdmin && request?.status === "pending" && (
+          <input ref={resolveDecisionRef} type="hidden" name="decision" defaultValue="approve" />
+        )}
 
         <div className="grid gap-3 sm:grid-cols-2">
           {!isAdmin && (
@@ -362,8 +366,8 @@ export function RevisionEditor({
             {request ? (
               request.status === "pending" ? (
                 <>
-                  <button formAction={resolveAction} type="submit" name="decision" value="approve" disabled={isPending} className="rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground disabled:opacity-60">{resolvePending ? "Applying…" : "Apply as main truth"}</button>
-                  <button formAction={resolveAction} type="submit" name="decision" value="reject" disabled={isPending} className="rounded-lg border border-primary/50 px-3.5 py-2 text-[13px] font-medium text-primary disabled:opacity-60">Reject request</button>
+                  <button formAction={resolveAction} type="submit" onClick={() => { if (resolveDecisionRef.current) resolveDecisionRef.current.value = "approve"; }} disabled={isPending} className="rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground disabled:opacity-60">{resolvePending ? "Applying…" : "Apply as main truth"}</button>
+                  <button formAction={resolveAction} type="submit" onClick={() => { if (resolveDecisionRef.current) resolveDecisionRef.current.value = "reject"; }} disabled={isPending} className="rounded-lg border border-primary/50 px-3.5 py-2 text-[13px] font-medium text-primary disabled:opacity-60">Reject request</button>
                 </>
               ) : (
                 <span className="font-mono text-[11px] uppercase tracking-wide text-muted-foreground">Request already {request.status}</span>
