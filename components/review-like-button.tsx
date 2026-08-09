@@ -23,12 +23,13 @@ export function ReviewLikeButton({
   const [isPending, startTransition] = useTransition();
 
   if (!reviewId) return null;
+  const validReviewId = reviewId;
 
   function handleToggle() {
     const nextLiked = !liked;
     setError(null);
     startTransition(async () => {
-      const result = await toggleReviewLike(reviewId, nextLiked);
+      const result = await toggleReviewLike(validReviewId, nextLiked);
       if (result?.error) {
         setError(result.error);
         return;

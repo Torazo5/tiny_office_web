@@ -33,6 +33,21 @@ tokens, personal data, or full environment-variable values.
   required `npm run dev` fallback stopped before application startup in this
   shell.
 
+### 2026-08-09 — Review like-button follow-up build validation blocked by WSL1
+
+- **Symptom and impact:** The TypeScript fix for the review like button could
+  not be confirmed with the production build or local dev server in this
+  shell.
+- **Root cause / evidence:** Both `npm run build` and `npm run dev` stopped
+  before Node.js startup with `WSL 1 is not supported` and `Could not
+  determine Node.js install directory`.
+- **Systems and files:** WSL1 Node/npm launcher and
+  `components/review-like-button.tsx`.
+- **Resolution / next action:** Run the production build and review like/unlike
+  flow from WSL2 or another Linux Node.js runtime.
+- **Verification:** `git diff --check` passed; neither command reached the
+  application compilation or runtime phase.
+
 ### 2026-08-09 — Social engagement build validation blocked by WSL1
 
 - **Symptom and impact:** The new half-star rating/review slice could not be
