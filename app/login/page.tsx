@@ -10,7 +10,7 @@ export default async function LoginPage({
   const { error, next } = await searchParams;
   return (
     <>
-      <Header showBack={false} />
+      <Header showBack={false} user={null} />
       <main className="mx-auto w-full max-w-[520px] p-8">
         <h1 className="mb-2 text-2xl font-semibold text-foreground">Sign in</h1>
         <p className="mb-6 text-sm text-muted-foreground">

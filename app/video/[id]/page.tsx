@@ -28,7 +28,7 @@ export default async function VideoPage({
   const [{ performance, presets, selectedPreset }, engagement, playlists] = await Promise.all([
     getPerformanceWithSelectedPreset(id, user?.id, previewPresetId),
     getUserEngagement(id, user?.id),
-    getPlaylists(),
+    getPlaylists(user?.id ?? null),
   ]);
   if (!performance) notFound();
   const songPlaylists = user
@@ -47,7 +47,7 @@ export default async function VideoPage({
 
   return (
     <>
-      <Header />
+      <Header user={user} />
       <PlayerProvider
         initialStart={performance.songs[0]?.clipStart ?? 0}
         songs={performance.songs}

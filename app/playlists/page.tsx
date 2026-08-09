@@ -5,11 +5,11 @@ import { getPlaylists } from "@/lib/data";
 
 export default async function PlaylistsPage() {
   const user = await getCurrentUser();
-  const playlists = user ? await getPlaylists(user.id) : [];
+  const playlists = await getPlaylists(user?.id ?? null);
 
   return (
     <>
-      <Header showBack={true} />
+      <Header showBack={true} user={user} />
       <main className="p-8">
         <PlaylistLibrary playlists={playlists} userId={user?.id ?? null} />
       </main>

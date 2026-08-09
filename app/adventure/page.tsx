@@ -2,25 +2,23 @@ import { AdventureExperience } from "@/components/adventure-experience";
 import { Header } from "@/components/header";
 import { getCurrentUser } from "@/lib/auth";
 import {
-  getPlaylistSongOptions,
-  getPlaylistVideoOptions,
+  getPlaylistOptions,
   getPlaylists,
 } from "@/lib/data";
 
 export default async function AdventurePage() {
-  const [songOptions, videoOptions, playlists, user] = await Promise.all([
-    getPlaylistSongOptions(),
-    getPlaylistVideoOptions(),
+  const [options, playlists, user] = await Promise.all([
+    getPlaylistOptions(),
     getPlaylists(),
     getCurrentUser(),
   ]);
 
   return (
     <>
-      <Header />
+      <Header user={user} />
       <AdventureExperience
-        songOptions={songOptions}
-        videoOptions={videoOptions}
+        songOptions={options.songOptions}
+        videoOptions={options.videoOptions}
         playlists={playlists}
         isSignedIn={Boolean(user)}
       />

@@ -3,6 +3,42 @@
 Use this file for major errors and their outcomes. Do not include secrets,
 tokens, personal data, or full environment-variable values.
 
+### 2026-08-09 — Catalog performance refactor build verification blocked by WSL1
+
+- **Symptom and impact:** The required `npm run build` check could not start,
+  so the catalog data-path refactor has not received production-build
+  verification in this shell.
+- **Root cause / evidence:** The repository's `npm` launcher resolves to a
+  Windows Node.js installation and exits before Next.js starts with `WSL 1 is
+  not supported` and `Could not determine Node.js install directory`.
+- **Systems and files:** WSL1/Windows Node.js interop, `npm run build`,
+  `lib/data.ts`, `lib/auth.ts`, `lib/profile-data.ts`, the affected App Router
+  pages, and `vercel.json`.
+- **Resolution / next action:** Run `npm run build`, `npm run lint`, and
+  `npx tsc --noEmit` from WSL2 or another Linux Node.js runtime before
+  deployment. The refactor was source-reviewed and its public Supabase query
+  path was checked with a read-only live catalog count query.
+- **Verification:** `git diff --check` passed; the live Supabase query returned
+  162 public performances, 706 songs, 11 ratings, 9 reviews, and 1 review
+  like; `npm run build` and `npx tsc --noEmit` both exited before application
+  compilation with the WSL1 launcher error.
+
+### 2026-08-09 — Catalog performance refactor commit blocked by read-only Git metadata
+
+- **Symptom and impact:** The verified catalog data-path changes could not be
+  staged or committed, so the focused local commit remains pending.
+- **Root cause / evidence:** `git add` failed with `Unable to create
+  .git/index.lock: Read-only file system`; project files are writable, but the
+  repository's Git metadata is mounted read-only.
+- **Systems and files:** The repository Git index, `lib/data.ts`, the affected
+  App Router pages, `lib/auth.ts`, `lib/profile-data.ts`, `lib/review-data.ts`,
+  `lib/supabase/public.ts`, and `vercel.json`.
+- **Resolution / next action:** Retry the scoped add and commit from an
+  environment with writable `.git` metadata. Do not publish or push from this
+  task.
+- **Verification:** `git diff --check` passed; the scoped `git add` exited
+  before staging and created no index lock.
+
 ### 2026-08-09 — Playlist seek can leave playback UI in stale scrub state
 
 - **Symptom and impact:** After advancing to another playlist song, dragging

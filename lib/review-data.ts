@@ -2,7 +2,7 @@ import "server-only";
 
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
-import { getPerformance } from "@/lib/data";
+import { getPerformance, getPerformanceDetail } from "@/lib/data";
 import { formatProfileLabel, getProfilesByUserId, type PublicProfile } from "@/lib/profile-data";
 import type {
   ListeningPreset,
@@ -150,8 +150,10 @@ export async function getPerformanceWithSelectedPreset(
   userId?: string,
   previewPresetId?: string,
 ) {
-  const performance = await getPerformance(videoId);
-  const presets = await getListeningPresets(videoId);
+  const [performance, presets] = await Promise.all([
+    getPerformanceDetail(videoId, userId ?? null),
+    getListeningPresets(videoId),
+  ]);
   if (!performance) return { performance, selectedPreset: null, presets };
   if (previewPresetId !== undefined) {
     const selectedPreset = previewPresetId === "ground-truth"
@@ -224,6 +226,25 @@ export async function getMyTruthRequests(userId: string) {
   throwIfError("Loading your truth requests", error);
   const profiles = await getProfilesByUserId((data ?? []).map((row) => row.requester_id));
   return (data ?? []).map((row) => mapTruthRequest(row as TruthRequestRow, profiles));
+}
+
+/**
+ * The shared header only needs one dismissed-able notification, not the full
+ * request history. Keep this query deliberately narrow and avoid a profile
+ * lookup because the notification copy does not display the requester name.
+ */
+export async function getLatestResolvedTruthRequest(userId: string) {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("truth_requests")
+    .select("id, performance_video_id, requester_id, note, status, created_at, resolved_at, performances(artist)")
+    .eq("requester_id", userId)
+    .neq("status", "pending")
+    .order("created_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  throwIfError("Loading latest resolved truth request", error);
+  return data ? mapTruthRequest(data as TruthRequestRow, new Map()) : null;
 }
 
 export async function getAdminTruthRequest(requestId: string) {

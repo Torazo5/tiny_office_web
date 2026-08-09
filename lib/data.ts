@@ -1,7 +1,11 @@
 import "server-only";
 
-import { createClient } from "@/lib/supabase/server";
+import { unstable_cache } from "next/cache";
+import { cache } from "react";
+import { getCurrentUser } from "@/lib/auth";
 import { formatProfileLabel, getIdenticonUrl, getProfilesByUserId } from "@/lib/profile-data";
+import { createPublicClient } from "@/lib/supabase/public";
+import { createClient } from "@/lib/supabase/server";
 import type {
   Performance,
   Playlist,
@@ -35,6 +39,23 @@ type SongRow = {
   suspect: boolean;
 };
 
+type BrowseRatingRow = {
+  performance_video_id: string;
+  rating: number;
+};
+
+type ReviewRow = {
+  id: string;
+  performance_video_id: string;
+  user_id: string;
+  rating: number;
+  text: string;
+  created_at: string;
+};
+
+export const PUBLIC_CATALOG_CACHE_TAG = "public-catalog";
+const PUBLIC_CATALOG_REVALIDATE_SECONDS = 300;
+
 function throwIfError(label: string, error: { message: string } | null) {
   if (error) throw new Error(`${label}: ${error.message}`);
 }
@@ -49,9 +70,41 @@ function mapSong(song: SongRow): Song {
   };
 }
 
-async function loadPerformances(): Promise<Performance[]> {
-  const supabase = await createClient();
-  const [performancesResult, songsResult, ratingsResult, reviewsResult, likesResult, authResult] = await Promise.all([
+function mapPerformance(
+  performance: PerformanceRow,
+  songRows: SongRow[],
+  avgRating: number | null = null,
+  ratingCount = 0,
+  reviews: Performance["reviews"] = [],
+): Performance {
+  return {
+    videoId: performance.video_id,
+    artist: performance.artist,
+    date: performance.date,
+    duration: Number(performance.duration),
+    method: performance.method,
+    songs: songRows.map(mapSong),
+    confidence: { avg: Number(performance.confidence_avg), min: Number(performance.confidence_min) },
+    verified: performance.verified,
+    avgRating,
+    ratingCount,
+    reviews,
+  } satisfies Performance;
+}
+
+function ratingsByPerformance(rows: BrowseRatingRow[]) {
+  const ratings = new Map<string, number[]>();
+  for (const row of rows) {
+    const values = ratings.get(row.performance_video_id) ?? [];
+    values.push(Number(row.rating));
+    ratings.set(row.performance_video_id, values);
+  }
+  return ratings;
+}
+
+async function loadBrowsePerformances(): Promise<Performance[]> {
+  const supabase = createPublicClient();
+  const [performancesResult, songsResult, ratingsResult] = await Promise.all([
     supabase
       .from("performances")
       .select("video_id, artist, date, duration, method, confidence_avg, confidence_min, verified")
@@ -63,23 +116,11 @@ async function loadPerformances(): Promise<Performance[]> {
       .order("performance_video_id")
       .order("song_index"),
     supabase.from("ratings").select("performance_video_id, rating"),
-    supabase
-      .from("reviews")
-      .select("id, performance_video_id, user_id, rating, text, created_at")
-      .order("created_at", { ascending: false }),
-    supabase.from("review_likes").select("review_id, user_id"),
-    supabase.auth.getUser(),
   ]);
 
   throwIfError("Loading performances", performancesResult.error);
   throwIfError("Loading songs", songsResult.error);
   throwIfError("Loading ratings", ratingsResult.error);
-  throwIfError("Loading reviews", reviewsResult.error);
-  throwIfError("Loading review likes", likesResult.error);
-
-  const reviewProfiles = await getProfilesByUserId(
-    (reviewsResult.data ?? []).map((review) => review.user_id),
-  );
 
   const songsByPerformance = new Map<string, SongRow[]>();
   for (const song of (songsResult.data ?? []) as SongRow[]) {
@@ -88,15 +129,92 @@ async function loadPerformances(): Promise<Performance[]> {
     songsByPerformance.set(song.performance_video_id, songs);
   }
 
-  const ratingsByPerformance = new Map<string, number[]>();
-  for (const rating of ratingsResult.data ?? []) {
-    const ratings = ratingsByPerformance.get(rating.performance_video_id) ?? [];
-    ratings.push(Number(rating.rating));
-    ratingsByPerformance.set(rating.performance_video_id, ratings);
-  }
+  const ratings = ratingsByPerformance((ratingsResult.data ?? []) as BrowseRatingRow[]);
+  return ((performancesResult.data ?? []) as PerformanceRow[]).map((row) => {
+    const values = ratings.get(row.video_id) ?? [];
+    return mapPerformance(
+      row,
+      songsByPerformance.get(row.video_id) ?? [],
+      values.length ? values.reduce((total, rating) => total + rating, 0) / values.length : null,
+      values.length,
+    );
+  });
+}
 
-  const reviewsByPerformance = new Map<string, Performance["reviews"]>();
-  const currentUserId = authResult.data.user?.id ?? null;
+const getCachedBrowsePerformances = unstable_cache(
+  loadBrowsePerformances,
+  ["public-browse-performances"],
+  {
+    tags: [PUBLIC_CATALOG_CACHE_TAG],
+    revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
+  },
+);
+
+const loadPerformances = cache(async () => getCachedBrowsePerformances());
+
+async function loadPerformance(videoId: string): Promise<Performance | null> {
+  const supabase = createPublicClient();
+  const [performanceResult, songsResult] = await Promise.all([
+    supabase
+      .from("performances")
+      .select("video_id, artist, date, duration, method, confidence_avg, confidence_min, verified")
+      .eq("video_id", videoId)
+      .neq("method", "manual")
+      .maybeSingle(),
+    supabase
+      .from("songs")
+      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect")
+      .eq("performance_video_id", videoId)
+      .order("song_index"),
+  ]);
+
+  throwIfError("Loading performance", performanceResult.error);
+  throwIfError("Loading performance songs", songsResult.error);
+  if (!performanceResult.data) return null;
+
+  return mapPerformance(
+    performanceResult.data as PerformanceRow,
+    (songsResult.data ?? []) as SongRow[],
+  );
+}
+
+const getCachedPerformance = cache(async (videoId: string) => {
+  const load = unstable_cache(
+    async () => loadPerformance(videoId),
+    ["public-performance", videoId],
+    {
+      tags: [PUBLIC_CATALOG_CACHE_TAG, `public-performance:${videoId}`],
+      revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
+    },
+  );
+  return load();
+});
+
+async function loadPerformanceDetail(videoId: string, currentUserId: string | null) {
+  const performance = await getCachedPerformance(videoId);
+  if (!performance) return null;
+
+  const supabase = createPublicClient();
+  const [ratingsResult, reviewsResult] = await Promise.all([
+    supabase.from("ratings").select("rating").eq("performance_video_id", videoId),
+    supabase
+      .from("reviews")
+      .select("id, performance_video_id, user_id, rating, text, created_at")
+      .eq("performance_video_id", videoId)
+      .order("created_at", { ascending: false }),
+  ]);
+
+  throwIfError("Loading performance ratings", ratingsResult.error);
+  throwIfError("Loading performance reviews", reviewsResult.error);
+
+  const reviews = (reviewsResult.data ?? []) as ReviewRow[];
+  const reviewIds = reviews.map((review) => review.id);
+  const likesResult = reviewIds.length
+    ? await supabase.from("review_likes").select("review_id, user_id").in("review_id", reviewIds)
+    : { data: [], error: null };
+  throwIfError("Loading performance review likes", likesResult.error);
+
+  const reviewProfiles = await getProfilesByUserId(reviews.map((review) => review.user_id));
   const likesByReview = new Map<string, { count: number; liked: boolean }>();
   for (const like of likesResult.data ?? []) {
     const current = likesByReview.get(like.review_id) ?? { count: 0, liked: false };
@@ -105,44 +223,29 @@ async function loadPerformances(): Promise<Performance[]> {
     likesByReview.set(like.review_id, current);
   }
 
-  for (const review of reviewsResult.data ?? []) {
-    const reviews = reviewsByPerformance.get(review.performance_video_id) ?? [];
+  const mappedReviews = reviews.map((review) => {
     const likes = likesByReview.get(review.id) ?? { count: 0, liked: false };
-    const profile = reviewProfiles.get(review.user_id);
-    reviews.push({
+    return {
       id: review.id,
-      user: formatProfileLabel(profile),
+      user: formatProfileLabel(reviewProfiles.get(review.user_id)),
       avatarUrl: getIdenticonUrl(review.user_id),
       rating: Number(review.rating),
       date: review.created_at,
       text: review.text,
       likeCount: likes.count,
       likedByCurrentUser: likes.liked,
-    });
-    reviewsByPerformance.set(review.performance_video_id, reviews);
-  }
-
-  return ((performancesResult.data ?? []) as PerformanceRow[]).map((row) => {
-    const rawSongs = songsByPerformance.get(row.video_id) ?? [];
-    const songs = rawSongs.map(mapSong);
-    const ratings = ratingsByPerformance.get(row.video_id) ?? [];
-
-    return {
-      videoId: row.video_id,
-      artist: row.artist,
-      date: row.date,
-      duration: Number(row.duration),
-      method: row.method,
-      songs,
-      confidence: { avg: Number(row.confidence_avg), min: Number(row.confidence_min) },
-      verified: row.verified,
-      avgRating: ratings.length
-        ? ratings.reduce((total, rating) => total + rating, 0) / ratings.length
-        : null,
-      ratingCount: ratings.length,
-      reviews: reviewsByPerformance.get(row.video_id) ?? [],
-    } satisfies Performance;
+    };
   });
+  const ratings = (ratingsResult.data ?? []).map((rating) => Number(rating.rating));
+
+  return {
+    ...performance,
+    avgRating: ratings.length
+      ? ratings.reduce((total, rating) => total + rating, 0) / ratings.length
+      : null,
+    ratingCount: ratings.length,
+    reviews: mappedReviews,
+  } satisfies Performance;
 }
 
 /**
@@ -156,8 +259,14 @@ export async function getPerformances(): Promise<Performance[]> {
 }
 
 export async function getPerformance(videoId: string): Promise<Performance | null> {
-  const performances = await loadPerformances();
-  return performances.find((performance) => performance.videoId === videoId) ?? null;
+  return getCachedPerformance(videoId);
+}
+
+export async function getPerformanceDetail(
+  videoId: string,
+  currentUserId: string | null = null,
+): Promise<Performance | null> {
+  return loadPerformanceDetail(videoId, currentUserId);
 }
 
 /**
@@ -189,14 +298,13 @@ export async function getReviewQueue(): Promise<ReviewQueueItem[]> {
 }
 
 export async function getPlaylists(ownerId?: string | null): Promise<PlaylistSummary[]> {
-  const supabase = await createClient();
   let currentOwnerId = ownerId;
   if (currentOwnerId === undefined) {
-    const { data, error } = await supabase.auth.getUser();
-    if (error) return [];
-    currentOwnerId = data.user?.id ?? null;
+    currentOwnerId = (await getCurrentUser())?.id ?? null;
   }
   if (!currentOwnerId) return [];
+
+  const supabase = await createClient();
 
   const playlistsResult = await supabase
     .from("playlists")
@@ -245,14 +353,13 @@ export async function getPlaylists(ownerId?: string | null): Promise<PlaylistSum
 }
 
 export async function getPlaylist(id: string, ownerId?: string | null): Promise<Playlist | null> {
-  const supabase = await createClient();
   let currentOwnerId = ownerId;
   if (currentOwnerId === undefined) {
-    const { data, error } = await supabase.auth.getUser();
-    if (error) return null;
-    currentOwnerId = data.user?.id ?? null;
+    currentOwnerId = (await getCurrentUser())?.id ?? null;
   }
   if (!currentOwnerId) return null;
+
+  const supabase = await createClient();
 
   const { data: playlist, error: playlistError } = await supabase
     .from("playlists")
@@ -364,10 +471,9 @@ export async function getPlaylist(id: string, ownerId?: string | null): Promise<
   };
 }
 
-export async function getPlaylistSongOptions(): Promise<PlaylistSongOption[]> {
+const loadPlaylistOptions = cache(async () => {
   const performances = await loadPerformances();
-
-  return performances.flatMap((performance) =>
+  const songOptions: PlaylistSongOption[] = performances.flatMap((performance) =>
     performance.songs.map((song) => ({
       performanceVideoId: performance.videoId,
       songIndex: song.index,
@@ -379,12 +485,7 @@ export async function getPlaylistSongOptions(): Promise<PlaylistSongOption[]> {
       duration: Math.max(0, song.clipEnd - song.clipStart),
     })),
   );
-}
-
-export async function getPlaylistVideoOptions(): Promise<PlaylistVideoOption[]> {
-  const performances = await loadPerformances();
-
-  return performances.map((performance) => ({
+  const videoOptions: PlaylistVideoOption[] = performances.map((performance) => ({
     performanceVideoId: performance.videoId,
     title: performance.artist,
     artist: performance.artist,
@@ -392,4 +493,18 @@ export async function getPlaylistVideoOptions(): Promise<PlaylistVideoOption[]> 
     duration: performance.duration,
     songClips: performance.songs.map(({ clipStart, clipEnd }) => ({ clipStart, clipEnd })),
   }));
+
+  return { songOptions, videoOptions };
+});
+
+export async function getPlaylistOptions() {
+  return loadPlaylistOptions();
+}
+
+export async function getPlaylistSongOptions(): Promise<PlaylistSongOption[]> {
+  return (await loadPlaylistOptions()).songOptions;
+}
+
+export async function getPlaylistVideoOptions(): Promise<PlaylistVideoOption[]> {
+  return (await loadPlaylistOptions()).videoOptions;
 }

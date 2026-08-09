@@ -3,7 +3,7 @@ import { Header } from "@/components/header";
 import { PlaylistDetail } from "@/components/playlist-detail";
 import { PlaylistSignInGate } from "@/components/playlist-sign-in-gate";
 import { getCurrentUser } from "@/lib/auth";
-import { getPlaylist, getPlaylistSongOptions, getPlaylistVideoOptions } from "@/lib/data";
+import { getPlaylist, getPlaylistOptions } from "@/lib/data";
 
 /**
  * Playlist metadata and track membership come from Supabase. The persistent
@@ -21,7 +21,7 @@ export default async function PlaylistPage({
   if (!user) {
     return (
       <>
-        <Header />
+        <Header user={user} />
         <main className="p-8">
           <PlaylistSignInGate nextPath={`/playlist/${id}`} />
         </main>
@@ -29,22 +29,20 @@ export default async function PlaylistPage({
     );
   }
 
-  const playlist = await getPlaylist(id, user.id);
-  if (!playlist) notFound();
-
-  const [songCatalog, videoCatalog] = await Promise.all([
-    getPlaylistSongOptions(),
-    getPlaylistVideoOptions(),
+  const [playlist, options] = await Promise.all([
+    getPlaylist(id, user.id),
+    getPlaylistOptions(),
   ]);
+  if (!playlist) notFound();
   const canManage = playlist.ownerId === user.id;
 
   return (
     <>
-      <Header />
+      <Header user={user} />
       <PlaylistDetail
         playlist={playlist}
-        songCatalog={songCatalog}
-        videoCatalog={videoCatalog}
+        songCatalog={options.songOptions}
+        videoCatalog={options.videoOptions}
         canManage={canManage}
         isSignedIn
       />

@@ -15,7 +15,7 @@ export default async function ReviewQueuePage() {
   if (!user || !isAdmin) {
     return (
       <>
-        <Header />
+        <Header user={user} />
         <main className="mx-auto w-full max-w-[720px] p-8">
           <h1 className="text-xl font-semibold text-foreground">Review dashboard</h1>
           <p className="mt-1 text-[13px] text-muted-foreground">
@@ -42,7 +42,7 @@ export default async function ReviewQueuePage() {
 
   return (
     <>
-      <Header progressLabel="Admin dashboard" />
+      <Header progressLabel="Admin dashboard" user={user} />
       <main className="p-8">
         <div className="mb-7 flex flex-wrap items-end justify-between gap-3">
           <div>

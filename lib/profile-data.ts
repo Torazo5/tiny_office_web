@@ -1,6 +1,7 @@
 import "server-only";
 
 import { createHash } from "node:crypto";
+import { cache } from "react";
 import { createClient } from "@/lib/supabase/server";
 import type { Performance } from "@/lib/types";
 
@@ -73,9 +74,9 @@ export async function getProfilesByUserId(userIds: readonly string[]) {
   return profiles;
 }
 
-export async function getUserProfile(userId: string) {
+export const getUserProfile = cache(async (userId: string) => {
   return (await getProfilesByUserId([userId])).get(userId)!;
-}
+});
 
 export type ProfileFavorite = {
   position: number;

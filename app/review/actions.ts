@@ -1,11 +1,11 @@
 "use server";
 
 import { randomUUID, timingSafeEqual } from "node:crypto";
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 import { endAdminSession, isAdminSession, startAdminSession } from "@/lib/admin-session";
-import { getPerformance } from "@/lib/data";
+import { getPerformance, PUBLIC_CATALOG_CACHE_TAG } from "@/lib/data";
 import { formatProfileLabel, getUserProfile } from "@/lib/profile-data";
 import { getAdminTruthRequest } from "@/lib/review-data";
 import { draftChanged, validateTimelineDraft } from "@/lib/review-utils";
@@ -239,6 +239,8 @@ async function saveGroundTruth(
 
   const result = Array.isArray(data) ? data[0] : data;
   if (!result) return { error: "The timeline update returned no result." };
+
+  revalidateTag(PUBLIC_CATALOG_CACHE_TAG, "max");
 
   return {
     error: null,

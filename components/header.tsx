@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getCurrentUser } from "@/lib/auth";
 import { getUserProfile } from "@/lib/profile-data";
 import { TruthRequestNotification } from "@/components/truth-request-notification";
-import { getMyTruthRequests } from "@/lib/review-data";
+import { getLatestResolvedTruthRequest } from "@/lib/review-data";
 import { isAdminSession } from "@/lib/admin-session";
 import { signOut } from "@/app/auth/actions";
 
@@ -19,15 +19,17 @@ export async function Header({
   showBack = true,
   progressLabel,
   searchQuery = "",
+  user: currentUser,
 }: {
   showBack?: boolean;
   progressLabel?: string;
   searchQuery?: string;
+  user?: Awaited<ReturnType<typeof getCurrentUser>>;
 }) {
-  const user = await getCurrentUser();
+  const user = currentUser === undefined ? await getCurrentUser() : currentUser;
   const [latestResolvedRequest, isAdmin, profile] = user
     ? await Promise.all([
-        getMyTruthRequests(user.id).then((requests) => requests.find((request) => request.status !== "pending") ?? null),
+        getLatestResolvedTruthRequest(user.id),
         isAdminSession(user.id),
         getUserProfile(user.id),
       ])

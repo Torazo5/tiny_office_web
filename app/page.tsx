@@ -29,7 +29,7 @@ export default async function BrowsePage({
 
   return (
     <>
-      <Header showBack={false} searchQuery={query} />
+      <Header showBack={false} searchQuery={query} user={user} />
       <main className="p-8">
         <h1 className="text-[22px] font-semibold text-foreground mb-1">
           {query ? `Search results for “${query}”` : "Browse performances"}
