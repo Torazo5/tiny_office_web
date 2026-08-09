@@ -15,6 +15,24 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-09 — First setlist song did not reseek after playback moved
+
+- **Symptom and impact:** Clicking the first song after selecting or playing a
+  later song highlighted song one but left the YouTube player at its previous
+  position, blocking reliable setlist navigation back to the start.
+- **Root cause / evidence:** Song one starts at the provider's `initialStart`.
+  The seek effect skipped whenever `startAt === initialStart`, and clicking
+  song one could not change that state value, so no `seekTo` call was issued.
+- **Systems and files:** `components/player-context.tsx` and
+  `components/video-embed.tsx`, specifically the shared seek state and
+  YouTube IFrame Player API effect.
+- **Resolution / next action:** Added a monotonic `seekRequestId` that changes
+  for every setlist seek, including same-timestamp clicks, and made the player
+  effect consume that request instead of comparing timestamps alone.
+- **Verification:** `git diff --check` passed. `npm run build` and `npm run dev`
+  remain blocked before application startup by the WSL1 Node.js launcher; run
+  the first-song navigation flow from WSL2 or another Linux Node runtime.
+
 ### 2026-08-09 — Playback controls validation blocked by WSL1 Node launcher
 
 - **Symptom and impact:** The new skip buttons and seek timelines could not be

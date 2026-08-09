@@ -74,6 +74,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
   const {
     songs,
     startAt,
+    seekRequestId,
     currentTime,
     setStartAt,
     setCurrentTime,
@@ -146,11 +147,11 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
   }, [setCurrentTime]);
 
   useEffect(() => {
-    if (!isPlayerReady || startAt === initialStart) return;
+    if (!isPlayerReady || seekRequestId === 0) return;
     previousTimeRef.current = startAt;
     trackingTimeRef.current = startAt;
     playerRef.current?.seekTo(Math.floor(startAt), true);
-  }, [initialStart, isPlayerReady, startAt]);
+  }, [isPlayerReady, seekRequestId, startAt]);
 
   useEffect(() => {
     if (!isPlayerReady || playerState !== YOUTUBE_PLAYER_PLAYING) return;

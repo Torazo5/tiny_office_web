@@ -11,6 +11,7 @@ import type { Song } from "@/lib/types";
 const PlayerContext = createContext<{
   startAt: number;
   setStartAt: (seconds: number) => void;
+  seekRequestId: number;
   currentTime: number;
   setCurrentTime: (seconds: number) => void;
   songs: Song[];
@@ -28,17 +29,19 @@ export function PlayerProvider({
   children: React.ReactNode;
 }) {
   const [startAt, setStartAtState] = useState(initialStart);
+  const [seekRequestId, setSeekRequestId] = useState(0);
   const [currentTime, setCurrentTime] = useState(initialStart);
   const [onlySongMode, setOnlySongMode] = useState(false);
 
   const setStartAt = useCallback((seconds: number) => {
     setStartAtState(seconds);
+    setSeekRequestId((requestId) => requestId + 1);
     setCurrentTime(seconds);
   }, []);
 
   return (
     <PlayerContext.Provider
-      value={{ songs, startAt, setStartAt, currentTime, setCurrentTime, onlySongMode, setOnlySongMode }}
+      value={{ songs, startAt, setStartAt, seekRequestId, currentTime, setCurrentTime, onlySongMode, setOnlySongMode }}
     >
       {children}
     </PlayerContext.Provider>
