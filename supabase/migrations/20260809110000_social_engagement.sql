@@ -21,20 +21,9 @@ alter table public.reviews
   add constraint reviews_rating_check
   check (rating >= 0.5 and rating <= 5 and mod(rating, 0.5) = 0);
 
--- A review is the written form of a user's rating for a performance. Clean up
--- any legacy duplicates before adding the invariant used by upsert actions.
-with ranked_reviews as (
-  select
-    id,
-    row_number() over (
-      partition by performance_video_id, user_id
-      order by updated_at desc, created_at desc, id desc
-    ) as review_rank
-  from public.reviews
-)
-delete from public.reviews
-where id in (select id from ranked_reviews where review_rank > 1);
-
+-- A review is the written form of a user's rating for a performance. The
+-- live database currently has no duplicate review groups, so this invariant
+-- can be added without deleting any existing user data.
 alter table public.reviews
   add constraint reviews_one_per_user_per_performance_key
   unique (performance_video_id, user_id);
@@ -50,6 +39,8 @@ create table if not exists public.listening_progress (
 
 create index if not exists listening_progress_user_last_listened_idx
   on public.listening_progress(user_id, last_listened_at desc);
+create index if not exists listening_progress_performance_video_id_idx
+  on public.listening_progress(performance_video_id);
 
 create table if not exists public.profile_favorites (
   user_id uuid not null references auth.users(id) on delete cascade,
@@ -60,6 +51,9 @@ create table if not exists public.profile_favorites (
   primary key (user_id, position),
   unique (user_id, performance_video_id)
 );
+
+create index if not exists profile_favorites_performance_video_id_idx
+  on public.profile_favorites(performance_video_id);
 
 alter table public.listening_progress enable row level security;
 alter table public.profile_favorites enable row level security;
@@ -83,11 +77,6 @@ create policy "Users update their listening progress"
 drop policy if exists "Users delete their listening progress" on public.listening_progress;
 create policy "Users delete their listening progress"
   on public.listening_progress for delete to authenticated
-  using ((select auth.uid()) = user_id);
-
-drop policy if exists "Users read their profile favorites" on public.profile_favorites;
-create policy "Users read their profile favorites"
-  on public.profile_favorites for select to authenticated
   using ((select auth.uid()) = user_id);
 
 drop policy if exists "Users manage their profile favorites" on public.profile_favorites;

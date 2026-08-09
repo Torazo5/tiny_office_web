@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { recordListeningProgress } from "@/app/listening/actions";
 import { usePlayer } from "@/components/player-context";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
 
@@ -80,6 +81,7 @@ export function VideoEmbed({ videoId }: { videoId: string }) {
   const playerRef = useRef<YouTubePlayer | null>(null);
   const [initialStart] = useState(() => Math.floor(startAt));
   const previousTimeRef = useRef(initialStart);
+  const trackingTimeRef = useRef<number | null>(null);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [playerState, setPlayerState] = useState<number | null>(null);
 
@@ -96,6 +98,7 @@ export function VideoEmbed({ videoId }: { videoId: string }) {
               if (cancelled) return;
               playerRef.current = event.target;
               previousTimeRef.current = event.target.getCurrentTime();
+              trackingTimeRef.current = event.target.getCurrentTime();
               setPlayerState(event.target.getPlayerState());
               setIsPlayerReady(true);
             },
@@ -125,8 +128,28 @@ export function VideoEmbed({ videoId }: { videoId: string }) {
   useEffect(() => {
     if (!isPlayerReady || startAt === initialStart) return;
     previousTimeRef.current = startAt;
+    trackingTimeRef.current = startAt;
     playerRef.current?.seekTo(Math.floor(startAt), true);
   }, [initialStart, isPlayerReady, startAt]);
+
+  useEffect(() => {
+    if (!isPlayerReady || playerState !== YOUTUBE_PLAYER_PLAYING) return;
+
+    const intervalId = window.setInterval(() => {
+      const player = playerRef.current;
+      if (!player || player.getPlayerState() !== YOUTUBE_PLAYER_PLAYING) return;
+
+      const currentTime = player.getCurrentTime();
+      const previousTime = trackingTimeRef.current;
+      trackingTimeRef.current = currentTime;
+      if (previousTime === null) return;
+
+      const delta = currentTime - previousTime;
+      if (delta > 0 && delta <= 30) void recordListeningProgress(videoId, delta);
+    }, 15000);
+
+    return () => window.clearInterval(intervalId);
+  }, [isPlayerReady, playerState, videoId]);
 
   useEffect(() => {
     if (!isPlayerReady) return;
