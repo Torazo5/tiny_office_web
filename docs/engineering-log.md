@@ -286,6 +286,22 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** `git diff --check` passed; the build did not reach the
   application compilation phase in this shell.
 
+### 2026-08-09 — Ground-truth save result type-check failure
+
+- **Symptom and impact:** The deployment build compiled the application but
+  failed TypeScript checking because `allConfirmed` was inferred as possibly
+  undefined in the admin ground-truth success messages.
+- **Root cause / evidence:** The inferred return type of `saveGroundTruth`
+  combined error returns and the success return without a discriminated
+  `error: null` branch.
+- **Systems and files:** `app/review/actions.ts`, specifically the direct
+  save and truth-request approval actions.
+- **Resolution / next action:** Added an explicit success/error union and
+  narrowed with `result.error !== null`. Rerun the deployment build to verify
+  the complete application after this patch.
+- **Verification:** `git diff --check` passed; the local `npm run build` was
+  blocked before startup by the existing WSL1 Node launcher limitation.
+
 ### 2026-08-09 — Boundary confirmation validation blocked by WSL1 Node launcher
 
 - **Symptom and impact:** The per-boundary confirmation controls and updated

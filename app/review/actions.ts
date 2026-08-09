@@ -12,6 +12,10 @@ import type { TimelineDraftSong } from "@/lib/types";
 
 export type ReviewActionState = { error?: string; success?: string } | null;
 
+type GroundTruthSaveResult =
+  | { error: string; allConfirmed?: never }
+  | { error: null; allConfirmed: boolean };
+
 function readText(formData: FormData, name: string, maxLength: number) {
   const value = formData.get(name);
   if (typeof value !== "string") return null;
@@ -280,7 +284,7 @@ async function saveGroundTruth(
   draft: TimelineDraftSong[],
   adminId: string,
   requestId: string | null,
-) {
+): Promise<GroundTruthSaveResult> {
   const groundTruth = await loadGroundTruth(videoId);
   if (!groundTruth) return { error: "Performance not found." };
 
@@ -374,7 +378,7 @@ export async function saveGroundTruthAction(
   if (!videoId || !draft) return { error: "Invalid timeline submission." };
 
   const result = await saveGroundTruth(videoId, draft, user.id, null);
-  if (result.error) return result;
+  if (result.error !== null) return result;
   revalidatePath("/");
   revalidatePath(`/video/${videoId}`);
   revalidatePath(`/review/${videoId}`);
@@ -425,7 +429,7 @@ export async function resolveTruthRequest(
     user.id,
     requestId,
   );
-  if (result.error) return result;
+  if (result.error !== null) return result;
 
   const { error } = await supabase
     .from("truth_requests")
