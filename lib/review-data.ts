@@ -29,6 +29,7 @@ type PresetRow = {
 type PresetSongRow = {
   preset_id: string;
   song_index: number;
+  title: string;
   clip_start: number;
   clip_end: number;
 };
@@ -43,6 +44,7 @@ function mapPresets(
     const songs = songsByPreset.get(song.preset_id) ?? [];
     songs.push({
       songIndex: song.song_index,
+      title: song.title,
       clipStart: Number(song.clip_start),
       clipEnd: Number(song.clip_end),
     });
@@ -77,7 +79,7 @@ async function loadPresets(client: Awaited<ReturnType<typeof createClient>>, vid
 
   const { data: songRows, error: songError } = await client
     .from("listening_preset_songs")
-    .select("preset_id, song_index, clip_start, clip_end")
+    .select("preset_id, song_index, title, clip_start, clip_end")
     .in("preset_id", ids)
     .order("song_index");
   throwIfError("Loading listening preset songs", songError);
@@ -103,7 +105,7 @@ export async function getAdminListeningPresets() {
   const profiles = await getProfilesByUserId((presetRows ?? []).map((preset) => preset.owner_id));
   const { data: songRows, error: songError } = await supabase
     .from("listening_preset_songs")
-    .select("preset_id, song_index, clip_start, clip_end")
+    .select("preset_id, song_index, title, clip_start, clip_end")
     .in("preset_id", ids)
     .order("song_index");
   throwIfError("Loading admin preset songs", songError);
@@ -125,14 +127,20 @@ export async function getSelectedPresetId(videoId: string, userId: string) {
 
 export function applyListeningPreset(performance: Performance, preset: ListeningPreset | null) {
   if (!preset || preset.performanceVideoId !== performance.videoId) return performance;
-  const edits = new Map(preset.songs.map((song) => [song.songIndex, song]));
   return {
     ...performance,
-    songs: performance.songs.map((song) => {
-      const edit = edits.get(song.index);
-      return edit
-        ? { ...song, clipStart: edit.clipStart, clipEnd: edit.clipEnd }
-        : song;
+    songs: preset.songs.map((edit) => {
+      const source = performance.songs.find((song) => song.index === edit.songIndex);
+      return source
+        ? { ...source, title: edit.title, clipStart: edit.clipStart, clipEnd: edit.clipEnd }
+        : {
+            index: edit.songIndex,
+            title: edit.title,
+            clipStart: edit.clipStart,
+            clipEnd: edit.clipEnd,
+            confidence: 0,
+            suspect: false,
+          };
     }),
   } satisfies Performance;
 }
@@ -232,7 +240,7 @@ export async function getAdminTruthRequest(requestId: string) {
 
   const { data: songRows, error: songsError } = await supabase
     .from("truth_request_songs")
-    .select("song_index, clip_start, clip_end")
+    .select("song_index, title, clip_start, clip_end")
     .eq("request_id", requestId)
     .order("song_index");
   throwIfError("Loading truth request timeline", songsError);
@@ -250,9 +258,10 @@ export async function getAdminTruthRequest(requestId: string) {
     request: mapTruthRequest(request as TruthRequestRow, profiles),
     draft: (songRows ?? []).map((song) => ({
       songIndex: song.song_index,
+      title: song.title,
       clipStart: Number(song.clip_start),
       clipEnd: Number(song.clip_end),
-      confirmed: confirmedByIndex.get(song.song_index) ?? true,
+      confirmed: confirmedByIndex.get(song.song_index) ?? false,
     })) as TimelineDraftSong[],
   };
 }

@@ -89,6 +89,7 @@ export interface ReviewQueueItem {
 
 export interface TimelineDraftSong {
   songIndex: number;
+  title: string;
   clipStart: number;
   clipEnd: number;
   /** Admin decision about whether this boundary is safe to treat as confirmed. */
@@ -99,6 +100,7 @@ export type TruthRequestStatus = "pending" | "approved" | "rejected";
 
 export interface ListeningPresetSong {
   songIndex: number;
+  title: string;
   clipStart: number;
   clipEnd: number;
 }

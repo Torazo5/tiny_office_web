@@ -17,21 +17,19 @@ test("parses timestamp and seconds input", () => {
 test("carries the existing boundary status into a draft", () => {
   assert.deepEqual(
     createTimelineDraft([{ ...songs[0], suspect: true }]),
-    [{ songIndex: 1, clipStart: 10, clipEnd: 100, confirmed: false }],
+    [{ songIndex: 1, title: "One", clipStart: 10, clipEnd: 100, confirmed: false }],
   );
 });
 
-test("requires valid ranges for every song", () => {
-  const draft = songs.map((song) => ({ songIndex: song.index, clipStart: song.clipStart, clipEnd: song.clipEnd, confirmed: true }));
+test("validates existing, added, and removed songs", () => {
+  const draft = songs.map((song) => ({ songIndex: song.index, title: song.title, clipStart: song.clipStart, clipEnd: song.clipEnd, confirmed: true }));
   assert.equal(validateTimelineDraft(draft, songs, 240), null);
+  assert.equal(validateTimelineDraft([{ ...draft[0], title: "One half" }, { songIndex: 3, title: "New song", clipStart: 100, clipEnd: 150, confirmed: false }], songs, 240), null);
   assert.match(
-    validateTimelineDraft([{ songIndex: 1, clipStart: 100, clipEnd: 90 }, draft[1]], songs, 240),
+    validateTimelineDraft([{ ...draft[0], clipStart: 100, clipEnd: 90 }, draft[1]], songs, 240),
     /start before its end/,
   );
-  assert.match(
-    validateTimelineDraft([draft[0]], songs, 240),
-    /every song/,
-  );
+  assert.equal(validateTimelineDraft([draft[0]], songs, 240), null);
   assert.match(
     validateTimelineDraft([{ ...draft[0], confirmed: undefined }, draft[1]], songs, 240),
     /confirmed or unconfirmed/,
@@ -39,7 +37,10 @@ test("requires valid ranges for every song", () => {
 });
 
 test("detects a changed timeline", () => {
-  const unchanged = songs.map((song) => ({ songIndex: song.index, clipStart: song.clipStart, clipEnd: song.clipEnd, confirmed: true }));
+  const unchanged = songs.map((song) => ({ songIndex: song.index, title: song.title, clipStart: song.clipStart, clipEnd: song.clipEnd, confirmed: true }));
   assert.equal(draftChanged(unchanged, songs), false);
   assert.equal(draftChanged([{ ...unchanged[0], clipEnd: 105 }, unchanged[1]], songs), true);
+  assert.equal(draftChanged([unchanged[0]], songs), true);
+  assert.equal(draftChanged([{ ...unchanged[0], title: "Renamed" }, unchanged[1]], songs), true);
+  assert.equal(draftChanged([{ ...unchanged[0], ...{ songIndex: 3, title: "Added" } }, unchanged[1]], songs), true);
 });

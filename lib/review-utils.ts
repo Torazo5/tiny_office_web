@@ -25,6 +25,7 @@ export function parseTimeInput(value: string): number | null {
 export function createTimelineDraft(songs: Song[]): TimelineDraftSong[] {
   return songs.map((song) => ({
     songIndex: song.index,
+    title: song.title,
     clipStart: song.clipStart,
     clipEnd: song.clipEnd,
     confirmed: !song.suspect,
@@ -36,18 +37,25 @@ export function validateTimelineDraft(
   songs: Song[],
   duration: number,
 ): string | null {
-  if (!Array.isArray(draft) || draft.length !== songs.length) {
-    return "Include one timeline range for every song in this performance.";
-  }
+  if (!Array.isArray(draft)) return "Submit a valid song list.";
   if (!Number.isFinite(duration) || duration <= 0) return "This performance has no valid duration.";
 
   const expected = new Set(songs.map((song) => song.index));
+  const maxExistingIndex = songs.reduce((max, song) => Math.max(max, song.index), 0);
   const seen = new Set<number>();
   for (const item of draft) {
-    if (!Number.isInteger(item.songIndex) || !expected.has(item.songIndex) || seen.has(item.songIndex)) {
+    if (
+      !Number.isInteger(item.songIndex) ||
+      item.songIndex <= 0 ||
+      seen.has(item.songIndex) ||
+      (!expected.has(item.songIndex) && item.songIndex <= maxExistingIndex)
+    ) {
       return "The timeline contains an invalid song.";
     }
     seen.add(item.songIndex);
+    if (typeof item.title !== "string" || item.title.trim().length === 0 || item.title.trim().length > 200) {
+      return "Every song needs a title up to 200 characters.";
+    }
     if (typeof item.confirmed !== "boolean") {
       return "Choose confirmed or unconfirmed for every song boundary.";
     }
@@ -66,8 +74,14 @@ export function validateTimelineDraft(
 }
 
 export function draftChanged(draft: TimelineDraftSong[], songs: Song[]): boolean {
-  return draft.some((item) => {
-    const song = songs.find((candidate) => candidate.index === item.songIndex);
-    return song && (song.clipStart !== item.clipStart || song.clipEnd !== item.clipEnd);
-  });
+  const draftByIndex = new Map(draft.map((item) => [item.songIndex, item]));
+  if (draft.length !== songs.length) return true;
+
+  return songs.some((song) => {
+    const item = draftByIndex.get(song.index);
+    return !item ||
+      song.title !== item.title ||
+      song.clipStart !== item.clipStart ||
+      song.clipEnd !== item.clipEnd;
+  }) || draft.some((item) => !songs.some((song) => song.index === item.songIndex));
 }

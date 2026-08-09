@@ -23,29 +23,55 @@ import { formatTime } from "@/lib/format";
 type EditableSong = {
   index: number;
   title: string;
+  baseTitle: string;
   baseStart: number;
   baseEnd: number;
   baseConfirmed: boolean;
   clipStart: string;
   clipEnd: string;
   confirmed: boolean;
+  isNew: boolean;
+  removed: boolean;
 };
 
 function toEditableSongs(performance: Performance, initialDraft?: TimelineDraftSong[]) {
-  const draftByIndex = new Map((initialDraft ?? createTimelineDraft(performance.songs)).map((song) => [song.songIndex, song]));
-  return performance.songs.map((song) => {
+  const draft = initialDraft ?? createTimelineDraft(performance.songs);
+  const draftByIndex = new Map(draft.map((song) => [song.songIndex, song]));
+  const songs = performance.songs.map((song) => {
     const draft = draftByIndex.get(song.index);
     return {
       index: song.index,
-      title: song.title,
-      baseStart: song.clipStart,
-      baseEnd: song.clipEnd,
-      baseConfirmed: !song.suspect,
+      title: draft?.title ?? song.title,
+      baseTitle: song.title,
+      baseStart: draft?.clipStart ?? song.clipStart,
+      baseEnd: draft?.clipEnd ?? song.clipEnd,
+      baseConfirmed: draft?.confirmed ?? !song.suspect,
       clipStart: formatTimeInput(draft?.clipStart ?? song.clipStart),
       clipEnd: formatTimeInput(draft?.clipEnd ?? song.clipEnd),
       confirmed: draft?.confirmed ?? !song.suspect,
+      isNew: false,
+      removed: Boolean(initialDraft && !draft),
     } satisfies EditableSong;
   });
+
+  return [
+    ...songs,
+    ...draft
+      .filter((song) => !performance.songs.some((candidate) => candidate.index === song.songIndex))
+      .map((song) => ({
+        index: song.songIndex,
+        title: song.title,
+        baseTitle: song.title,
+        baseStart: song.clipStart,
+        baseEnd: song.clipEnd,
+        baseConfirmed: song.confirmed,
+        clipStart: formatTimeInput(song.clipStart),
+        clipEnd: formatTimeInput(song.clipEnd),
+        confirmed: song.confirmed,
+        isNew: true,
+        removed: false,
+      } satisfies EditableSong)),
+  ];
 }
 
 function actionMessage(...states: Array<ReviewActionState>) {
@@ -83,8 +109,9 @@ export function RevisionEditor({
   const currentStart = parseTimeInput(song?.clipStart ?? "") ?? song?.baseStart ?? 0;
   const currentEnd = parseTimeInput(song?.clipEnd ?? "") ?? song?.baseEnd ?? 0;
   const draft = useMemo<TimelineDraftSong[]>(
-    () => songs.map((item) => ({
+    () => songs.filter((item) => !item.removed).map((item) => ({
       songIndex: item.index,
+      title: item.title.trim(),
       clipStart: parseTimeInput(item.clipStart) ?? Number.NaN,
       clipEnd: parseTimeInput(item.clipEnd) ?? Number.NaN,
       confirmed: item.confirmed,
@@ -97,24 +124,32 @@ export function RevisionEditor({
   const requestComparison = useMemo(() => {
     if (!request) return null;
     const draftByIndex = new Map(draft.map((item) => [item.songIndex, item]));
-    return performance.songs.map((groundTruthSong) => {
-      const proposed = draftByIndex.get(groundTruthSong.index);
-      const proposedStart = proposed && Number.isFinite(proposed.clipStart) ? proposed.clipStart : groundTruthSong.clipStart;
-      const proposedEnd = proposed && Number.isFinite(proposed.clipEnd) ? proposed.clipEnd : groundTruthSong.clipEnd;
-      const currentConfirmed = !groundTruthSong.suspect;
-      const proposedConfirmed = proposed?.confirmed ?? currentConfirmed;
+    const groundTruthByIndex = new Map(performance.songs.map((item) => [item.index, item]));
+    const indices = [...new Set([...performance.songs.map((item) => item.index), ...draft.map((item) => item.songIndex)])].sort((a, b) => a - b);
+    return indices.map((index) => {
+      const groundTruthSong = groundTruthByIndex.get(index);
+      const proposed = draftByIndex.get(index);
+      const currentStart = groundTruthSong?.clipStart ?? null;
+      const currentEnd = groundTruthSong?.clipEnd ?? null;
+      const proposedStart = proposed && Number.isFinite(proposed.clipStart) ? proposed.clipStart : null;
+      const proposedEnd = proposed && Number.isFinite(proposed.clipEnd) ? proposed.clipEnd : null;
+      const currentConfirmed = groundTruthSong ? !groundTruthSong.suspect : null;
+      const proposedConfirmed = proposed?.confirmed ?? null;
       return {
-        index: groundTruthSong.index,
-        title: groundTruthSong.title,
-        currentStart: groundTruthSong.clipStart,
-        currentEnd: groundTruthSong.clipEnd,
+        index,
+        currentTitle: groundTruthSong?.title ?? null,
+        proposedTitle: proposed?.title ?? null,
+        currentStart,
+        currentEnd,
         proposedStart,
         proposedEnd,
         currentConfirmed,
         proposedConfirmed,
         changed:
-          groundTruthSong.clipStart !== proposedStart ||
-          groundTruthSong.clipEnd !== proposedEnd ||
+          Boolean(groundTruthSong) !== Boolean(proposed) ||
+          groundTruthSong?.title !== proposed?.title ||
+          currentStart !== proposedStart ||
+          currentEnd !== proposedEnd ||
           currentConfirmed !== proposedConfirmed,
       };
     });
@@ -125,8 +160,41 @@ export function RevisionEditor({
     setSongs((current) => current.map((item) => item.index === index ? { ...item, [field]: value } : item));
   }
 
+  function updateTitle(index: number, title: string) {
+    setSongs((current) => current.map((item) => item.index === index ? { ...item, title } : item));
+  }
+
   function updateConfirmation(index: number, confirmed: boolean) {
     setSongs((current) => current.map((item) => item.index === index ? { ...item, confirmed } : item));
+  }
+
+  function addSong() {
+    const existingIndexes = songs.map((item) => item.index);
+    const nextIndex = Math.max(0, ...existingIndexes, ...performance.songs.map((item) => item.index)) + 1;
+    const source = song && !song.removed ? song : songs.find((item) => !item.removed);
+    const start = source ? parseTimeInput(source.clipStart) ?? source.baseStart : 0;
+    const end = source ? parseTimeInput(source.clipEnd) ?? source.baseEnd : performance.duration;
+    setSongs((current) => [
+      ...current,
+      {
+        index: nextIndex,
+        title: "New song",
+        baseTitle: "New song",
+        baseStart: start,
+        baseEnd: Math.max(start + 1, end),
+        baseConfirmed: false,
+        clipStart: formatTimeInput(start),
+        clipEnd: formatTimeInput(Math.max(start + 1, end)),
+        confirmed: false,
+        isNew: true,
+        removed: false,
+      },
+    ]);
+    setCurrentIndex(songs.length);
+  }
+
+  function setSongRemoved(index: number, removed: boolean) {
+    setSongs((current) => current.map((item) => item.index === index ? { ...item, removed } : item));
   }
 
   function nudge(field: "clipStart" | "clipEnd", delta: number) {
@@ -154,6 +222,26 @@ export function RevisionEditor({
         >
           {isAdmin ? "Admin dashboard" : "Back to performance"}
         </Link>
+      </div>
+
+      <div className="mb-4 flex justify-end">
+        <div className="group relative">
+          <button
+            type="button"
+            onClick={addSong}
+            className="rounded-lg border border-primary/40 bg-primary/5 px-3.5 py-2 text-[12.5px] font-semibold text-primary hover:bg-primary/10"
+            aria-describedby="add-song-hint"
+          >
+            + Add song
+          </button>
+          <div
+            id="add-song-hint"
+            role="tooltip"
+            className="pointer-events-none absolute right-0 top-full z-10 mt-2 w-64 rounded-lg border border-border bg-card p-3 text-[11.5px] leading-relaxed text-muted-foreground opacity-0 shadow-lg transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
+          >
+            Want to split a song? Add a song, then adjust its timestamps to define the two parts.
+          </div>
+        </div>
       </div>
 
       {isAdmin && requestComparison && (
@@ -186,23 +274,46 @@ export function RevisionEditor({
                   <tr key={item.index} className={`border-t border-border ${item.changed ? "bg-primary/[0.04]" : ""}`}>
                     <td className="px-4 py-3 align-top">
                       <div className="font-mono text-[11px] text-muted-foreground">{item.index}</div>
-                      <div className="mt-0.5 max-w-[190px] text-[12.5px] font-medium text-foreground">{item.title}</div>
+                      <div className={`mt-0.5 max-w-[190px] text-[12.5px] font-medium ${!item.proposedTitle ? "text-muted-foreground line-through" : !item.currentTitle ? "text-primary" : "text-foreground"}`}>
+                        {item.proposedTitle ?? item.currentTitle ?? "Untitled song"}
+                      </div>
                     </td>
                     <td className="px-4 py-3 align-top font-mono text-[11px] text-muted-foreground">
-                      <div>{formatTime(item.currentStart)} → {formatTime(item.currentEnd)}</div>
-                      <div className={`mt-1 font-sans text-[11px] ${item.currentConfirmed ? "text-success" : "text-primary"}`}>
-                        {item.currentConfirmed ? "Confirmed" : "Unconfirmed"}
-                      </div>
+                      {item.currentStart !== null && item.currentEnd !== null ? (
+                        <>
+                          <div>{formatTime(item.currentStart)} → {formatTime(item.currentEnd)}</div>
+                          <div className={`mt-1 font-sans text-[11px] ${item.currentConfirmed ? "text-success" : "text-primary"}`}>
+                            {item.currentConfirmed ? "Confirmed" : "Unconfirmed"}
+                          </div>
+                        </>
+                      ) : (
+                        <span className="font-sans text-[11px] text-primary">Added in request</span>
+                      )}
                     </td>
                     <td className="px-4 py-3 align-top font-mono text-[11px] text-foreground">
-                      <div>{formatTime(item.proposedStart)} → {formatTime(item.proposedEnd)}</div>
-                      <div className={`mt-1 font-sans text-[11px] ${item.proposedConfirmed ? "text-success" : "text-primary"}`}>
-                        {item.proposedConfirmed ? "Confirmed" : "Unconfirmed"}
-                      </div>
+                      {item.proposedStart !== null && item.proposedEnd !== null ? (
+                        <>
+                          <div>{formatTime(item.proposedStart)} → {formatTime(item.proposedEnd)}</div>
+                          <div className={`mt-1 font-sans text-[11px] ${item.proposedConfirmed ? "text-success" : "text-primary"}`}>
+                            {item.proposedConfirmed ? "Confirmed" : "Unconfirmed"}
+                          </div>
+                        </>
+                      ) : (
+                        <span className="font-sans text-[11px] text-primary">Removed in request</span>
+                      )}
                     </td>
                     <td className="px-4 py-3 align-top font-mono text-[11px] text-muted-foreground">
-                      <div>start {formatSignedTime(item.proposedStart - item.currentStart)}</div>
-                      <div className="mt-1">end {formatSignedTime(item.proposedEnd - item.currentEnd)}</div>
+                      {item.currentStart !== null && item.proposedStart !== null && (
+                        <div>start {formatSignedTime(item.proposedStart - item.currentStart)}</div>
+                      )}
+                      {item.currentEnd !== null && item.proposedEnd !== null && (
+                        <div className="mt-1">end {formatSignedTime(item.proposedEnd - item.currentEnd)}</div>
+                      )}
+                      {item.currentTitle !== item.proposedTitle && item.currentTitle !== null && item.proposedTitle !== null && (
+                        <div className="mt-1 font-sans text-primary">title changed</div>
+                      )}
+                      {!item.currentTitle && item.proposedTitle && <div className="font-sans text-primary">song added</div>}
+                      {item.currentTitle && !item.proposedTitle && <div className="font-sans text-primary">song removed</div>}
                       {item.currentConfirmed !== item.proposedConfirmed && (
                         <div className="mt-1 font-sans text-primary">
                           status changed
@@ -220,9 +331,12 @@ export function RevisionEditor({
       <div className="mb-4 flex gap-2 overflow-x-auto border-b border-border pb-2">
         {songs.map((item, index) => {
           const changed =
+            item.title !== item.baseTitle ||
             item.clipStart !== formatTimeInput(item.baseStart) ||
             item.clipEnd !== formatTimeInput(item.baseEnd) ||
-            item.confirmed !== item.baseConfirmed;
+            item.confirmed !== item.baseConfirmed ||
+            item.removed ||
+            item.isNew;
           return (
             <button
               key={item.index}
@@ -232,14 +346,14 @@ export function RevisionEditor({
                 index === currentIndex ? "bg-secondary text-foreground" : "text-muted-foreground hover:bg-secondary/60"
               }`}
             >
-              <span className="font-mono">{item.index}</span> {item.title}
+              <span className="font-mono">{item.index}</span> {item.title} {item.removed && <span className="text-[10px] uppercase text-primary">(removed)</span>}
               {changed && <span className="ml-1 text-primary">●</span>}
             </button>
           );
         })}
       </div>
 
-      {song && (
+      {song && !song.removed && (
         <div className="grid items-start gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(280px,0.9fr)]">
           <RevisionVideoPlayer
             videoId={performance.videoId}
@@ -251,7 +365,25 @@ export function RevisionEditor({
           />
 
           <div className="rounded-[10px] border border-border bg-card p-5">
-            <div className="text-[15px] font-semibold text-foreground mb-0.5">{song.title}</div>
+            <div className="flex items-end justify-between gap-3">
+              <label className="min-w-0 flex-1 text-[12px] font-medium text-muted-foreground">
+                Song title
+                <input
+                  value={song.title}
+                  onChange={(event) => updateTitle(song.index, event.target.value)}
+                  maxLength={200}
+                  aria-label={`${song.title} title`}
+                  className="mt-1 h-9 w-full rounded-lg border border-input bg-background px-2.5 text-[15px] font-semibold text-foreground outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
+                />
+              </label>
+              <button
+                type="button"
+                onClick={() => setSongRemoved(song.index, true)}
+                className="shrink-0 rounded-lg border border-primary/40 px-3 py-2 text-[12px] font-medium text-primary hover:bg-primary/5"
+              >
+                Remove song
+              </button>
+            </div>
             <div className="font-mono text-xs text-muted-foreground mb-4.5">
               current clip {formatTime(currentStart)} &ndash; {formatTime(currentEnd)}
             </div>
@@ -322,9 +454,23 @@ export function RevisionEditor({
         </div>
       )}
 
+      {song?.removed && (
+        <div className="rounded-[10px] border border-primary/30 bg-primary/5 p-5">
+          <div className="text-[15px] font-semibold text-foreground">{song.title}</div>
+          <p className="mt-1 text-[12px] text-muted-foreground">This song is removed from the revision and will not be included when it is submitted.</p>
+          <button
+            type="button"
+            onClick={() => setSongRemoved(song.index, false)}
+            className="mt-4 rounded-lg border border-border px-3.5 py-2 text-[12px] font-medium text-muted-foreground hover:text-foreground"
+          >
+            Restore song
+          </button>
+        </div>
+      )}
+
       <div className="mt-4 flex justify-between">
         <button type="button" onClick={() => setCurrentIndex(Math.max(0, currentIndex - 1))} disabled={currentIndex === 0} className="rounded-lg border border-border px-3.5 py-2 text-[13px] text-muted-foreground disabled:opacity-40">← Previous song</button>
-        <button type="button" onClick={() => setCurrentIndex(Math.min(songs.length - 1, currentIndex + 1))} disabled={currentIndex === songs.length - 1} className="rounded-lg border border-border px-3.5 py-2 text-[13px] text-muted-foreground disabled:opacity-40">Next song →</button>
+        <button type="button" onClick={() => setCurrentIndex(Math.min(songs.length - 1, currentIndex + 1))} disabled={songs.length === 0 || currentIndex >= songs.length - 1} className="rounded-lg border border-border px-3.5 py-2 text-[13px] text-muted-foreground disabled:opacity-40">Next song →</button>
       </div>
 
       <form className="mt-5 border-t border-border pt-5">

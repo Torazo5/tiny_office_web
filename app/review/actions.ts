@@ -34,8 +34,10 @@ function readDraft(formData: FormData): TimelineDraftSong[] | null {
       if (!item || typeof item !== "object") throw new Error("invalid");
       const value = item as Record<string, unknown>;
       if (typeof value.confirmed !== "boolean") throw new Error("missing confirmation status");
+      if (typeof value.title !== "string") throw new Error("missing song title");
       return {
         songIndex: Number(value.songIndex),
+        title: value.title.trim(),
         clipStart: Number(value.clipStart),
         clipEnd: Number(value.clipEnd),
         confirmed: value.confirmed,
@@ -138,6 +140,7 @@ export async function submitListeningPreset(
       preset_id: presetId,
       performance_video_id: videoId,
       song_index: song.songIndex,
+      title: song.title,
       clip_start: song.clipStart,
       clip_end: song.clipEnd,
     })),
@@ -188,6 +191,7 @@ export async function submitTruthRequest(
       request_id: requestId,
       performance_video_id: videoId,
       song_index: song.songIndex,
+      title: song.title,
       clip_start: song.clipStart,
       clip_end: song.clipEnd,
     })),
@@ -296,54 +300,105 @@ async function saveGroundTruth(
   if (validationError) return { error: validationError };
 
   const requested = new Map(draft.map((song) => [song.songIndex, song]));
-  const edits = groundTruth.songs
-    .map((song) => {
-      const next = requested.get(song.song_index);
-      const previousConfirmed = !song.suspect;
-      if (
-        !next ||
-        (next.clipStart === song.clip_start &&
-          next.clipEnd === song.clip_end &&
-          next.confirmed === previousConfirmed)
-      ) return null;
-      return {
+  const edits = groundTruth.songs.flatMap((song) => {
+    const next = requested.get(song.song_index);
+    const previousConfirmed = !song.suspect;
+    if (!next) {
+      return [{
         performance_video_id: videoId,
         song_index: song.song_index,
         admin_id: adminId,
         request_id: requestId,
+        change_type: "remove",
+        previous_title: song.title,
+        next_title: null,
         previous_clip_start: song.clip_start,
         previous_clip_end: song.clip_end,
-        next_clip_start: next.clipStart,
-        next_clip_end: next.clipEnd,
+        next_clip_start: null,
+        next_clip_end: null,
         previous_confirmed: previousConfirmed,
-        next_confirmed: next.confirmed,
-      };
-    })
-    .filter((edit): edit is NonNullable<typeof edit> => Boolean(edit));
+        next_confirmed: null,
+      }];
+    }
+    if (
+      next.title === song.title &&
+      next.clipStart === song.clip_start &&
+      next.clipEnd === song.clip_end &&
+      next.confirmed === previousConfirmed
+    ) return [];
+    return [{
+      performance_video_id: videoId,
+      song_index: song.song_index,
+      admin_id: adminId,
+      request_id: requestId,
+      change_type: "update",
+      previous_title: song.title,
+      next_title: next.title,
+      previous_clip_start: song.clip_start,
+      previous_clip_end: song.clip_end,
+      next_clip_start: next.clipStart,
+      next_clip_end: next.clipEnd,
+      previous_confirmed: previousConfirmed,
+      next_confirmed: next.confirmed,
+    }];
+  });
+
+  for (const song of draft.filter((item) => !groundTruth.songs.some((candidate) => candidate.song_index === item.songIndex))) {
+    edits.push({
+      performance_video_id: videoId,
+      song_index: song.songIndex,
+      admin_id: adminId,
+      request_id: requestId,
+      change_type: "add",
+      previous_title: null,
+      next_title: song.title,
+      previous_clip_start: null,
+      previous_clip_end: null,
+      next_clip_start: song.clipStart,
+      next_clip_end: song.clipEnd,
+      previous_confirmed: null,
+      next_confirmed: song.confirmed,
+    });
+  }
 
   if (edits.length > 0) {
     const { error: auditError } = await groundTruth.supabase.from("ground_truth_edits").insert(edits);
     if (auditError) return { error: "Could not record the ground-truth audit." };
   }
 
-  const { error: songsError } = await groundTruth.supabase.from("songs").upsert(
-    groundTruth.songs.map((song) => {
-      const next = requested.get(song.song_index)!;
-      return {
-        id: song.id,
-        performance_video_id: song.performance_video_id,
-        song_index: song.song_index,
-        title: song.title,
-        clip_start: next.clipStart,
-        clip_end: next.clipEnd,
-        confidence: song.confidence,
-        suspect: !next.confirmed,
-        updated_at: new Date().toISOString(),
-      };
-    }),
-    { onConflict: "performance_video_id,song_index" },
-  );
-  if (songsError) return { error: "Could not update the official timeline." };
+  const now = new Date().toISOString();
+  const nextSongs = draft.map((song) => {
+    const previous = groundTruth.songs.find((candidate) => candidate.song_index === song.songIndex);
+    return {
+      id: previous?.id ?? randomUUID(),
+      performance_video_id: videoId,
+      song_index: song.songIndex,
+      title: song.title,
+      clip_start: song.clipStart,
+      clip_end: song.clipEnd,
+      confidence: previous?.confidence ?? 0,
+      suspect: !song.confirmed,
+      updated_at: now,
+    };
+  });
+  if (nextSongs.length > 0) {
+    const { error: songsError } = await groundTruth.supabase.from("songs").upsert(nextSongs, {
+      onConflict: "performance_video_id,song_index",
+    });
+    if (songsError) return { error: "Could not update the official timeline." };
+  }
+
+  const removedIndexes = groundTruth.songs
+    .map((song) => song.song_index)
+    .filter((songIndex) => !requested.has(songIndex));
+  if (removedIndexes.length > 0) {
+    const { error: songsError } = await groundTruth.supabase
+      .from("songs")
+      .delete()
+      .eq("performance_video_id", videoId)
+      .in("song_index", removedIndexes);
+    if (songsError) return { error: "The timeline was partly updated, but removed songs could not be deleted." };
+  }
 
   const { error: performanceError } = await groundTruth.supabase
     .from("performances")

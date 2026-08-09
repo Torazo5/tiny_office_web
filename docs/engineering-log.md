@@ -15,6 +15,22 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-09 — Revision song change validation blocked by WSL1
+
+- **Symptom and impact:** The add/remove song revision flow could not be
+  validated with the repository's required Node-based tests, lint, production
+  build, or local dev server in this shell.
+- **Root cause / evidence:** `npm test`, `npm run lint`, `npm run build`, and
+  `npm run dev` all stopped before Node.js startup with `WSL 1 is not
+  supported` and `Could not determine Node.js install directory`.
+- **Systems and files:** WSL1 Node/npm interop, the revision editor, review
+  Server Actions, revision persistence migration, and review utility tests.
+- **Resolution / next action:** Run the test, lint, production build, and
+  revision flows from WSL2 or another Linux Node.js runtime after applying
+  `20260809160000_revision_song_changes.sql`.
+- **Verification:** `git diff --check` passed. The Node commands were attempted
+  and failed before application compilation or runtime startup.
+
 ### 2026-08-09 — Public profile build validation blocked by WSL1
 
 - **Symptom and impact:** The new public profile identity flow could not be
