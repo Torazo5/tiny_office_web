@@ -50,7 +50,7 @@ function mapSong(song: SongRow): Song {
 
 async function loadPerformances(): Promise<Performance[]> {
   const supabase = await createClient();
-  const [performancesResult, songsResult, ratingsResult, reviewsResult] = await Promise.all([
+  const [performancesResult, songsResult, ratingsResult, reviewsResult, likesResult, authResult] = await Promise.all([
     supabase
       .from("performances")
       .select("video_id, artist, date, duration, method, confidence_avg, confidence_min, verified")
@@ -66,12 +66,15 @@ async function loadPerformances(): Promise<Performance[]> {
       .from("reviews")
       .select("id, performance_video_id, display_name, rating, text, created_at")
       .order("created_at", { ascending: false }),
+    supabase.from("review_likes").select("review_id, user_id"),
+    supabase.auth.getUser(),
   ]);
 
   throwIfError("Loading performances", performancesResult.error);
   throwIfError("Loading songs", songsResult.error);
   throwIfError("Loading ratings", ratingsResult.error);
   throwIfError("Loading reviews", reviewsResult.error);
+  throwIfError("Loading review likes", likesResult.error);
 
   const songsByPerformance = new Map<string, SongRow[]>();
   for (const song of (songsResult.data ?? []) as SongRow[]) {
@@ -88,14 +91,26 @@ async function loadPerformances(): Promise<Performance[]> {
   }
 
   const reviewsByPerformance = new Map<string, Performance["reviews"]>();
+  const currentUserId = authResult.data.user?.id ?? null;
+  const likesByReview = new Map<string, { count: number; liked: boolean }>();
+  for (const like of likesResult.data ?? []) {
+    const current = likesByReview.get(like.review_id) ?? { count: 0, liked: false };
+    current.count += 1;
+    current.liked ||= like.user_id === currentUserId;
+    likesByReview.set(like.review_id, current);
+  }
+
   for (const review of reviewsResult.data ?? []) {
     const reviews = reviewsByPerformance.get(review.performance_video_id) ?? [];
+    const likes = likesByReview.get(review.id) ?? { count: 0, liked: false };
     reviews.push({
       id: review.id,
       user: review.display_name,
       rating: Number(review.rating),
       date: review.created_at,
       text: review.text,
+      likeCount: likes.count,
+      likedByCurrentUser: likes.liked,
     });
     reviewsByPerformance.set(review.performance_video_id, reviews);
   }

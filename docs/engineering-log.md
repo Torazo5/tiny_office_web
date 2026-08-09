@@ -32,6 +32,24 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** `git diff --check` passed; all three Node-based commands
   failed before reaching the application or test runner.
 
+### 2026-08-09 — Review likes build validation blocked by WSL1
+
+- **Symptom and impact:** The review-like action and UI could not be checked
+  with the repository's automated test, lint, or production build commands;
+  browser verification remains unavailable in this shell.
+- **Root cause / evidence:** `npm run build`, `npm run test`, and `npm run
+  lint` again stopped before Node startup with `WSL 1 is not supported` and
+  `Could not determine Node.js install directory`.
+- **Systems and files:** WSL1 Node/npm interop, `app/review-likes/`,
+  `components/review-like-button.tsx`, `lib/data.ts`, and the review-likes
+  Supabase migrations.
+- **Resolution / next action:** Run the same commands and click like/unlike
+  from WSL2 or another Linux Node runtime against the connected Supabase
+  project.
+- **Verification:** `git diff --check` passed. The live Supabase table,
+  composite primary key, three RLS policies, and user foreign-key index were
+  verified successfully.
+
 ### 2026-08-08 — Review workflow Node verification blocked by WSL1
 
 - **Symptom and impact:** The new review editor, preset flow, and admin

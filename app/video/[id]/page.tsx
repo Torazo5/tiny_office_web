@@ -8,6 +8,7 @@ import { RatingReviewPanel } from "@/components/rating-review-panel";
 import { VideoEmbed } from "@/components/video-embed";
 import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { PresetPicker } from "@/components/preset-picker";
+import { ReviewLikeButton } from "@/components/review-like-button";
 import { getCurrentUser } from "@/lib/auth";
 import { getPlaylists } from "@/lib/data";
 import { getPerformanceWithSelectedPreset } from "@/lib/review-data";
@@ -98,14 +99,23 @@ export default async function VideoPage({
                 <p className="text-[13px] text-muted-foreground/70">No reviews yet.</p>
               )}
               {performance.reviews.map((rev, i) => (
-                <div key={i} className="flex gap-3">
+                <div key={rev.id ?? i} className="flex gap-3">
                   <div className="w-8 h-8 rounded-full shrink-0 bg-secondary" />
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <div className="flex items-baseline gap-2 mb-0.5">
                       <span className="text-[13px] font-semibold text-foreground">{rev.user}</span>
                       <StarRating rating={rev.rating} size="text-[11.5px]" />
                     </div>
                     <p className="text-[13px] leading-relaxed text-muted-foreground">{rev.text}</p>
+                    <div className="mt-2">
+                      <ReviewLikeButton
+                        reviewId={rev.id}
+                        videoId={performance.videoId}
+                        initialLikeCount={rev.likeCount}
+                        initialLiked={rev.likedByCurrentUser}
+                        isSignedIn={Boolean(user)}
+                      />
+                    </div>
                   </div>
                 </div>
               ))}

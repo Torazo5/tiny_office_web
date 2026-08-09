@@ -51,10 +51,10 @@ export interface Performance {
   confidence: { avg: number; min: number };
   /** min >= 75 — safe to trust without a review.py pass, per PIPELINE.md */
   verified: boolean;
-  /** mock — no ratings backend yet */
+  /** Aggregated from the ratings table. */
   avgRating: number | null;
   ratingCount: number;
-  /** mock — no reviews backend yet */
+  /** Public reviews with like state for the current session. */
   reviews: Review[];
 }
 
@@ -64,6 +64,8 @@ export interface Review {
   rating: number;
   date: string;
   text: string;
+  likeCount?: number;
+  likedByCurrentUser?: boolean;
 }
 
 export interface UserReview {
