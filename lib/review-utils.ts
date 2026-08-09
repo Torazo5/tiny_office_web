@@ -27,6 +27,7 @@ export function createTimelineDraft(songs: Song[]): TimelineDraftSong[] {
     songIndex: song.index,
     clipStart: song.clipStart,
     clipEnd: song.clipEnd,
+    confirmed: !song.suspect,
   }));
 }
 
@@ -47,6 +48,9 @@ export function validateTimelineDraft(
       return "The timeline contains an invalid song.";
     }
     seen.add(item.songIndex);
+    if (typeof item.confirmed !== "boolean") {
+      return "Choose confirmed or unconfirmed for every song boundary.";
+    }
     if (
       !Number.isFinite(item.clipStart) ||
       !Number.isFinite(item.clipEnd) ||

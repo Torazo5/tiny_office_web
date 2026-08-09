@@ -224,12 +224,22 @@ export async function getAdminTruthRequest(requestId: string) {
     .order("song_index");
   throwIfError("Loading truth request timeline", songsError);
 
+  const { data: groundTruthSongs, error: groundTruthError } = await supabase
+    .from("songs")
+    .select("song_index, suspect")
+    .eq("performance_video_id", request.performance_video_id);
+  throwIfError("Loading current boundary statuses", groundTruthError);
+  const confirmedByIndex = new Map(
+    (groundTruthSongs ?? []).map((song) => [Number(song.song_index), !Boolean(song.suspect)]),
+  );
+
   return {
     request: mapTruthRequest(request as TruthRequestRow),
     draft: (songRows ?? []).map((song) => ({
       songIndex: song.song_index,
       clipStart: Number(song.clip_start),
       clipEnd: Number(song.clip_end),
+      confirmed: confirmedByIndex.get(song.song_index) ?? true,
     })) as TimelineDraftSong[],
   };
 }

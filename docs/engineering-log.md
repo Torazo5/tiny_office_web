@@ -285,3 +285,21 @@ tokens, personal data, or full environment-variable values.
   Linux Node.js runtime.
 - **Verification:** `git diff --check` passed; the build did not reach the
   application compilation phase in this shell.
+
+### 2026-08-09 — Boundary confirmation validation blocked by WSL1 Node launcher
+
+- **Symptom and impact:** The per-boundary confirmation controls and updated
+  ground-truth action could not be exercised with the focused test suite or a
+  production build in this shell.
+- **Root cause / evidence:** `npm test` stopped before Node.js startup with
+  `WSL 1 is not supported` and `Could not determine Node.js install
+  directory`.
+- **Systems and files:** WSL1 Node.js/npm launcher,
+  `components/revision-editor.tsx`, `app/review/actions.ts`,
+  `lib/review-utils.ts`, and the ground-truth audit migration.
+- **Resolution / next action:** Run the focused tests, production build, and
+  browser-check the admin confirmation choices from WSL2 or another Linux
+  Node.js runtime.
+- **Verification:** Supabase confirmed the new audit columns and security
+  advisors returned only the existing leaked-password-protection warning;
+  `git diff --check` passed.

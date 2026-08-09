@@ -25,8 +25,10 @@ type EditableSong = {
   title: string;
   baseStart: number;
   baseEnd: number;
+  baseConfirmed: boolean;
   clipStart: string;
   clipEnd: string;
+  confirmed: boolean;
 };
 
 function toEditableSongs(performance: Performance, initialDraft?: TimelineDraftSong[]) {
@@ -38,8 +40,10 @@ function toEditableSongs(performance: Performance, initialDraft?: TimelineDraftS
       title: song.title,
       baseStart: song.clipStart,
       baseEnd: song.clipEnd,
+      baseConfirmed: !song.suspect,
       clipStart: formatTimeInput(draft?.clipStart ?? song.clipStart),
       clipEnd: formatTimeInput(draft?.clipEnd ?? song.clipEnd),
+      confirmed: draft?.confirmed ?? !song.suspect,
     } satisfies EditableSong;
   });
 }
@@ -76,6 +80,7 @@ export function RevisionEditor({
       songIndex: item.index,
       clipStart: parseTimeInput(item.clipStart) ?? Number.NaN,
       clipEnd: parseTimeInput(item.clipEnd) ?? Number.NaN,
+      confirmed: item.confirmed,
     })),
     [songs],
   );
@@ -85,6 +90,10 @@ export function RevisionEditor({
 
   function updateSong(index: number, field: "clipStart" | "clipEnd", value: string) {
     setSongs((current) => current.map((item) => item.index === index ? { ...item, [field]: value } : item));
+  }
+
+  function updateConfirmation(index: number, confirmed: boolean) {
+    setSongs((current) => current.map((item) => item.index === index ? { ...item, confirmed } : item));
   }
 
   function nudge(field: "clipStart" | "clipEnd", delta: number) {
@@ -116,7 +125,10 @@ export function RevisionEditor({
 
       <div className="mb-4 flex gap-2 overflow-x-auto border-b border-border pb-2">
         {songs.map((item, index) => {
-          const changed = item.clipStart !== formatTimeInput(item.baseStart) || item.clipEnd !== formatTimeInput(item.baseEnd);
+          const changed =
+            item.clipStart !== formatTimeInput(item.baseStart) ||
+            item.clipEnd !== formatTimeInput(item.baseEnd) ||
+            item.confirmed !== item.baseConfirmed;
           return (
             <button
               key={item.index}
@@ -149,6 +161,33 @@ export function RevisionEditor({
             <div className="font-mono text-xs text-muted-foreground mb-4.5">
               current clip {formatTime(currentStart)} &ndash; {formatTime(currentEnd)}
             </div>
+
+            {isAdmin && (
+              <div className="mb-4 rounded-lg border border-border bg-background/50 p-3">
+                <div className="text-[12px] font-semibold text-foreground">Boundary status</div>
+                <p className="mt-1 text-[11.5px] text-muted-foreground">
+                  Mark this boundary confirmed only when you trust both timestamps.
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label={`${song.title} boundary status`}>
+                  <button
+                    type="button"
+                    aria-pressed={song.confirmed}
+                    onClick={() => updateConfirmation(song.index, true)}
+                    className={`rounded-lg border px-3 py-1.5 text-[12px] font-medium ${song.confirmed ? "border-success/60 bg-success/10 text-success" : "border-input text-muted-foreground hover:text-foreground"}`}
+                  >
+                    Confirmed
+                  </button>
+                  <button
+                    type="button"
+                    aria-pressed={!song.confirmed}
+                    onClick={() => updateConfirmation(song.index, false)}
+                    className={`rounded-lg border px-3 py-1.5 text-[12px] font-medium ${!song.confirmed ? "border-primary/60 bg-primary/10 text-primary" : "border-input text-muted-foreground hover:text-foreground"}`}
+                  >
+                    Unconfirmed
+                  </button>
+                </div>
+              </div>
+            )}
 
             <Waveform durationSec={performance.duration} clipStart={currentStart} clipEnd={currentEnd} />
             <div className="flex justify-between mt-1.5 font-mono text-[11px] text-muted-foreground/70">

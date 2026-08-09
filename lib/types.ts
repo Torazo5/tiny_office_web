@@ -76,6 +76,8 @@ export interface TimelineDraftSong {
   songIndex: number;
   clipStart: number;
   clipEnd: number;
+  /** Admin decision about whether this boundary is safe to treat as confirmed. */
+  confirmed: boolean;
 }
 
 export type TruthRequestStatus = "pending" | "approved" | "rejected";

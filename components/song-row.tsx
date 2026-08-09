@@ -8,7 +8,10 @@ import type { Song } from "@/lib/types";
 /** Click to seek — reseeks the embed (via PlayerProvider) to this song's clip_start. */
 export function SongRow({ song }: { song: Song }) {
   const { startAt, setStartAt } = usePlayer();
-  const confirmed = !song.suspect && song.confidence >= 75;
+  // `suspect` is the persisted boundary decision. An admin can confirm a
+  // low-confidence AI boundary after listening, so confidence must not
+  // override that explicit decision.
+  const confirmed = !song.suspect;
   const active = Math.floor(startAt) === Math.floor(song.clipStart);
 
   return (

@@ -28,10 +28,12 @@ function readDraft(formData: FormData): TimelineDraftSong[] | null {
     return parsed.map((item) => {
       if (!item || typeof item !== "object") throw new Error("invalid");
       const value = item as Record<string, unknown>;
+      if (typeof value.confirmed !== "boolean") throw new Error("missing confirmation status");
       return {
         songIndex: Number(value.songIndex),
         clipStart: Number(value.clipStart),
         clipEnd: Number(value.clipEnd),
+        confirmed: value.confirmed,
       };
     });
   } catch {
@@ -297,7 +299,13 @@ async function saveGroundTruth(
   const edits = groundTruth.songs
     .map((song) => {
       const next = requested.get(song.song_index);
-      if (!next || (next.clipStart === song.clip_start && next.clipEnd === song.clip_end)) return null;
+      const previousConfirmed = !song.suspect;
+      if (
+        !next ||
+        (next.clipStart === song.clip_start &&
+          next.clipEnd === song.clip_end &&
+          next.confirmed === previousConfirmed)
+      ) return null;
       return {
         performance_video_id: videoId,
         song_index: song.song_index,
@@ -307,6 +315,8 @@ async function saveGroundTruth(
         previous_clip_end: song.clip_end,
         next_clip_start: next.clipStart,
         next_clip_end: next.clipEnd,
+        previous_confirmed: previousConfirmed,
+        next_confirmed: next.confirmed,
       };
     })
     .filter((edit): edit is NonNullable<typeof edit> => Boolean(edit));
@@ -327,7 +337,7 @@ async function saveGroundTruth(
         clip_start: next.clipStart,
         clip_end: next.clipEnd,
         confidence: song.confidence,
-        suspect: false,
+        suspect: !next.confirmed,
         updated_at: new Date().toISOString(),
       };
     }),
@@ -337,11 +347,20 @@ async function saveGroundTruth(
 
   const { error: performanceError } = await groundTruth.supabase
     .from("performances")
-    .update({ verified: true, updated_at: new Date().toISOString() })
+    .update({
+      verified: draft.every((song) => song.confirmed),
+      updated_at: new Date().toISOString(),
+    })
     .eq("video_id", videoId);
   if (performanceError) return { error: "The timeline saved, but verification could not be updated." };
 
-  return { error: null };
+  return { error: null, allConfirmed: draft.every((song) => song.confirmed) };
+}
+
+function groundTruthSuccessMessage(allConfirmed: boolean) {
+  return allConfirmed
+    ? "Main truth updated and all boundaries confirmed."
+    : "Main truth updated; the performance remains unverified because some boundaries are unconfirmed.";
 }
 
 export async function saveGroundTruthAction(
@@ -360,7 +379,7 @@ export async function saveGroundTruthAction(
   revalidatePath(`/video/${videoId}`);
   revalidatePath(`/review/${videoId}`);
   revalidatePath("/review");
-  return { success: "Main truth updated." };
+  return { success: groundTruthSuccessMessage(result.allConfirmed) };
 }
 
 export async function resolveTruthRequest(
@@ -425,7 +444,7 @@ export async function resolveTruthRequest(
   revalidatePath(`/video/${requestData.request.performanceVideoId}`);
   revalidatePath(`/review/${requestData.request.performanceVideoId}`);
   revalidatePath("/review");
-  return { success: "Request approved and main truth updated." };
+  return { success: `Request approved and main truth updated. ${groundTruthSuccessMessage(result.allConfirmed)}` };
 }
 
 export async function hideListeningPreset(

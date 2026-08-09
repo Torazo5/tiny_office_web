@@ -8,6 +8,8 @@ This repo is the **frontend plus Supabase-backed app**: Next.js + Tailwind +
 shadcn/ui, styled to match the design handoff. Supabase now backs auth,
 playlists, revision submissions, listening presets, and main-truth review.
 Ratings and written reviews remain the next product surfaces to connect.
+Admins can mark each official boundary confirmed or unconfirmed; a performance
+is only marked verified when every boundary is confirmed.
 
 ## Stack
 
