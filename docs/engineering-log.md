@@ -15,6 +15,37 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-09 — Playback controls validation blocked by WSL1 Node launcher
+
+- **Symptom and impact:** The new skip buttons and seek timelines could not be
+  validated with the repository's required lint or production build commands;
+  local browser verification is also unavailable without a running app.
+- **Root cause / evidence:** `npm run lint` and `npm run build` stopped before
+  Node.js startup with `WSL 1 is not supported` and `Could not determine
+  Node.js install directory`.
+- **Systems and files:** WSL/Node.js interop, `components/player-controls.tsx`,
+  `components/video-embed.tsx`, `components/playlist-player.tsx`, and the
+  video page prop wiring.
+- **Resolution / next action:** Run lint, production build, and the performance
+  and playlist seeking flows from WSL2 or another Linux Node.js runtime.
+- **Verification:** `git diff --check` passed; both Node-based commands failed
+  before application compilation or runtime startup.
+
+### 2026-08-09 — Playback controls commit blocked by read-only Git metadata
+
+- **Symptom and impact:** The focused playback-controls change could not be
+  staged or committed in this environment, so the required local commit is
+  still pending.
+- **Root cause / evidence:** `git add` failed with `Unable to create
+  .git/index.lock: Read-only file system`; the workspace files themselves are
+  writable, but Git metadata is not.
+- **Systems and files:** Repository Git index and the playback-controls files
+  listed in the preceding entry.
+- **Resolution / next action:** Retry the scoped `git add` and commit from an
+  environment with writable `.git` metadata; no push or publication is needed.
+- **Verification:** `git status --short` confirms the intended files remain
+  unstaged and no index lock was created.
+
 ### 2026-08-09 — Header and playback micro-fix validation blocked by WSL1
 
 - **Symptom and impact:** The requested browse search, live song highlighting,

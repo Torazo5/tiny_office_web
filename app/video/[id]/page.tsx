@@ -47,7 +47,7 @@ export default async function VideoPage({
       >
         <main className="p-8 grid gap-8 items-start" style={{ gridTemplateColumns: "1.4fr 1fr" }}>
           <div>
-            <VideoEmbed videoId={performance.videoId} />
+            <VideoEmbed videoId={performance.videoId} duration={performance.duration} />
 
             <h1 className="text-2xl font-bold text-foreground mb-1.5">{performance.artist}</h1>
             <p className="text-sm text-muted-foreground mb-4">

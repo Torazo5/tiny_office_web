@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { recordListeningProgress } from "@/app/listening/actions";
+import { PlayerControls } from "@/components/player-controls";
 import { usePlayer } from "@/components/player-context";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
 
@@ -69,10 +70,11 @@ function loadYouTubeIframeApi() {
  * `seekTo` preserves YouTube's existing paused or playing state, so clicking
  * a song never replaces the player or asks the viewer to start again.
  */
-export function VideoEmbed({ videoId }: { videoId: string }) {
+export function VideoEmbed({ videoId, duration }: { videoId: string; duration: number }) {
   const {
     songs,
     startAt,
+    currentTime,
     setStartAt,
     setCurrentTime,
     onlySongMode,
@@ -85,6 +87,19 @@ export function VideoEmbed({ videoId }: { videoId: string }) {
   const trackingTimeRef = useRef<number | null>(null);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [playerState, setPlayerState] = useState<number | null>(null);
+  const safeDuration = Math.max(0, duration);
+
+  function seekTo(seconds: number, allowSeekAhead: boolean) {
+    const nextTime = Math.min(Math.max(0, seconds), safeDuration);
+    playerRef.current?.seekTo(nextTime, allowSeekAhead);
+    previousTimeRef.current = nextTime;
+    trackingTimeRef.current = nextTime;
+    setCurrentTime(nextTime);
+  }
+
+  function skipBy(seconds: number) {
+    seekTo(currentTime + seconds, true);
+  }
 
   useEffect(() => {
     let cancelled = false;
@@ -239,6 +254,20 @@ export function VideoEmbed({ videoId }: { videoId: string }) {
           allowFullScreen
         />
       </div>
+
+      <PlayerControls
+        currentTime={currentTime}
+        rangeStart={0}
+        rangeEnd={safeDuration}
+        isPlaying={playerState === YOUTUBE_PLAYER_PLAYING}
+        isReady={isPlayerReady}
+        onTogglePlay={() => {
+          if (playerState === YOUTUBE_PLAYER_PLAYING) playerRef.current?.pauseVideo();
+          else playerRef.current?.playVideo();
+        }}
+        onSeek={seekTo}
+        onSkip={skipBy}
+      />
     </div>
   );
 }

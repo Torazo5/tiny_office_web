@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { PlayerControls } from "@/components/player-controls";
 import type { PlaylistTrack, PlaylistType } from "@/lib/types";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
 
@@ -84,10 +85,12 @@ export function PlaylistPlayer({
   const currentIndexRef = useRef(0);
   const advanceLockRef = useRef(false);
   const previousTimeRef = useRef(0);
+  const scrubbingRef = useRef(false);
   const loadTrackRef = useRef<(index: number) => void>(() => undefined);
   const advanceToNextRef = useRef<() => void>(() => undefined);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentTime, setCurrentTime] = useState(tracks[0]?.clipStart ?? 0);
   const [playerState, setPlayerState] = useState<number | null>(null);
 
   tracksRef.current = tracks;
@@ -99,7 +102,9 @@ export function PlaylistPlayer({
     const previousTrack = tracksRef.current[currentIndexRef.current];
     currentIndexRef.current = index;
     setCurrentIndex(index);
-    previousTimeRef.current = Math.max(0, track.clipStart);
+    const startAt = Math.max(0, track.clipStart);
+    previousTimeRef.current = startAt;
+    setCurrentTime(startAt);
     advanceLockRef.current = true;
     if (previousTrack?.performanceVideoId === track.performanceVideoId) {
       playerRef.current.seekTo(Math.max(0, track.clipStart), true);
@@ -126,6 +131,30 @@ export function PlaylistPlayer({
   loadTrackRef.current = loadTrack;
   advanceToNextRef.current = advanceToNext;
 
+  function timelineBounds() {
+    const track = tracksRef.current[currentIndexRef.current];
+    if (!track) return { start: 0, end: 0 };
+    if (playlistType === "songs") {
+      return {
+        start: Math.max(0, track.clipStart),
+        end: Math.max(track.clipEnd, track.clipStart + 0.5),
+      };
+    }
+    return { start: 0, end: Math.max(0, track.clipEnd) };
+  }
+
+  function seekTo(seconds: number, allowSeekAhead: boolean) {
+    const { start, end } = timelineBounds();
+    const nextTime = Math.min(Math.max(start, seconds), end);
+    playerRef.current?.seekTo(nextTime, allowSeekAhead);
+    previousTimeRef.current = nextTime;
+    setCurrentTime(nextTime);
+  }
+
+  function skipBy(seconds: number) {
+    seekTo(currentTime + seconds, true);
+  }
+
   useEffect(() => {
     if (currentIndexRef.current >= tracks.length) {
       const nextIndex = Math.max(0, tracks.length - 1);
@@ -149,14 +178,18 @@ export function PlaylistPlayer({
             onReady: (event) => {
               if (cancelled) return;
               playerRef.current = event.target;
-              previousTimeRef.current = event.target.getCurrentTime();
+              const currentTime = event.target.getCurrentTime();
+              previousTimeRef.current = currentTime;
+              setCurrentTime(currentTime);
               setPlayerState(event.target.getPlayerState());
               setIsPlayerReady(true);
             },
             onStateChange: (event) => {
               if (cancelled) return;
               if (event.data !== PLAYER_BUFFERING) {
-                previousTimeRef.current = event.target.getCurrentTime();
+                const currentTime = event.target.getCurrentTime();
+                previousTimeRef.current = currentTime;
+                setCurrentTime(currentTime);
               }
               setPlayerState(event.data);
               if (event.data === PLAYER_ENDED) advanceToNextRef.current();
@@ -194,6 +227,12 @@ export function PlaylistPlayer({
       if (!player || !track || player.getPlayerState() !== PLAYER_PLAYING) return;
 
       const currentTime = player.getCurrentTime();
+      setCurrentTime(currentTime);
+      if (scrubbingRef.current) {
+        previousTimeRef.current = currentTime;
+        return;
+      }
+
       if (playlistType === "songs") {
         const effectiveClipEnd = Math.max(track.clipEnd, track.clipStart + 0.5);
         const endThreshold = Math.max(track.clipStart + 0.5, effectiveClipEnd - 0.35);
@@ -236,6 +275,7 @@ export function PlaylistPlayer({
   const isPlaying = playerState === PLAYER_PLAYING;
   const isBuffering = playerState === PLAYER_BUFFERING;
   const kindLabel = playlistType === "songs" ? "Song playlist" : "Video playlist";
+  const { start: timelineStart, end: timelineEnd } = timelineBounds();
 
   return (
     <section className="mb-8 rounded-xl border border-border bg-card p-4 sm:p-5">
@@ -250,43 +290,31 @@ export function PlaylistPlayer({
         />
       </div>
 
-      <div className="mt-4 flex flex-wrap items-center gap-3">
-        <button
-          type="button"
-          onClick={() => {
-            if (!isPlayerReady) return;
-            if (isPlaying) playerRef.current?.pauseVideo();
-            else playerRef.current?.playVideo();
-          }}
-          disabled={!isPlayerReady}
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-wait disabled:opacity-60"
-          aria-label={isPlaying ? "Pause playlist" : "Play playlist"}
-        >
-          {isPlaying ? (
-            <span aria-hidden className="flex gap-1">
-              <span className="h-4 w-1 rounded-sm bg-primary-foreground" />
-              <span className="h-4 w-1 rounded-sm bg-primary-foreground" />
-            </span>
-          ) : (
-            <span aria-hidden className="ml-0.5 block h-0 w-0 border-y-[7px] border-l-[11px] border-y-transparent border-l-primary-foreground" />
-          )}
-        </button>
-        <button
-          type="button"
-          onClick={() => loadTrack(Math.max(0, currentIndex - 1))}
-          disabled={!isPlayerReady || currentIndex === 0}
-          className="rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground hover:text-foreground disabled:cursor-default disabled:opacity-40"
-        >
-          Previous
-        </button>
-        <button
-          type="button"
-          onClick={() => advanceToNext()}
-          disabled={!isPlayerReady || currentIndex >= tracks.length - 1}
-          className="rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground hover:text-foreground disabled:cursor-default disabled:opacity-40"
-        >
-          Next
-        </button>
+      <PlayerControls
+        currentTime={currentTime}
+        rangeStart={timelineStart}
+        rangeEnd={timelineEnd}
+        isPlaying={isPlaying}
+        isReady={isPlayerReady}
+        onTogglePlay={() => {
+          if (isPlaying) playerRef.current?.pauseVideo();
+          else playerRef.current?.playVideo();
+        }}
+        onSeek={seekTo}
+        onSkip={skipBy}
+        onPrevious={() => loadTrack(Math.max(0, currentIndex - 1))}
+        onNext={() => advanceToNext()}
+        previousDisabled={currentIndex === 0}
+        nextDisabled={currentIndex >= tracks.length - 1}
+        onScrubStart={() => {
+          scrubbingRef.current = true;
+        }}
+        onScrubEnd={() => {
+          scrubbingRef.current = false;
+        }}
+      />
+
+      <div className="mt-3 flex flex-wrap items-center gap-3">
         <div className="min-w-0 flex-1 sm:ml-2">
           <div className="truncate text-[13.5px] font-semibold text-foreground">{currentTrack.title}</div>
           <div className="truncate text-[12px] text-muted-foreground">
