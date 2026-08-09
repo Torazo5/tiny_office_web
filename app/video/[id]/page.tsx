@@ -37,6 +37,13 @@ export default async function VideoPage({
   const videoPlaylists = user
     ? playlists.filter((playlist) => playlist.ownerId === user.id && playlist.type === "videos")
     : [];
+  const methodLabel = {
+    comments: "comments",
+    yamnet: "YAMNet",
+    silence: "silence detection",
+    transcript: "transcript",
+    manual: "manual review",
+  }[performance.method];
 
   return (
     <>
@@ -53,6 +60,7 @@ export default async function VideoPage({
             <p className="text-sm text-muted-foreground mb-4">
               Tiny Desk Concert{performance.date ? ` · ${performance.date}` : ""} · NPR Music
             </p>
+            <p className="mb-4 text-[11px] text-muted-foreground/70">Used {methodLabel}</p>
 
             <RatingReviewPanel
               videoId={performance.videoId}

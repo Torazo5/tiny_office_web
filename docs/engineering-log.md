@@ -15,6 +15,35 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-09 — Video method label build verification blocked
+
+- **Symptom and impact:** The required production build could not start, so
+  the new video-detail method label has not received full Next.js build
+  verification in this environment.
+- **Root cause / evidence:** The repository's `npm` launcher invokes a Windows
+  Node.js installation from WSL1 and exits before Next.js starts with `WSL 1
+  is not supported` and `Could not determine Node.js install directory`.
+- **Systems and files:** WSL1/Windows Node.js interop, `npm run build`,
+  `app/video/[id]/page.tsx`, and `docs/engineering-log.md`.
+- **Resolution / next action:** Run the production build from WSL2 or another
+  Linux Node.js runtime before deployment.
+- **Verification:** `git diff --check` passed; `npm run build` exited with code
+  1 before application compilation.
+
+### 2026-08-09 — Video method label commit blocked by read-only Git metadata
+
+- **Symptom and impact:** The focused video-detail change could not be staged
+  or committed, so the local commit remains pending.
+- **Root cause / evidence:** `git add` failed with `Unable to create
+  .git/index.lock: Read-only file system`; workspace files are writable, but
+  the repository's Git metadata is not.
+- **Systems and files:** The repository Git index, `app/video/[id]/page.tsx`,
+  and `docs/engineering-log.md`.
+- **Resolution / next action:** Retry the scoped add and commit from an
+  environment with writable `.git` metadata; do not push or publish from this
+  task.
+- **Verification:** No index lock was created; `git add` exited before staging.
+
 ### 2026-08-09 — Refined v2 snapshot build verification blocked
 
 - **Symptom and impact:** The required `npm run build` check could not start,
