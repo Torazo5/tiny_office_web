@@ -34,11 +34,3 @@ create policy "Users update their own profile"
 
 grant select on public.profiles to anon, authenticated;
 grant insert, update on public.profiles to authenticated;
-
--- Existing denormalized labels may contain provider metadata from the old
--- implementation. Replace them before the new profile UI is used. Runtime
--- reads resolve the current safe label from public.profiles instead.
-update public.reviews set display_name = 'Anonymous';
-update public.playlists set owner_name = 'Anonymous' where owner_id is not null;
-update public.listening_presets set owner_name = 'Anonymous';
-update public.truth_requests set requester_name = 'Anonymous';

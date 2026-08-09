@@ -15,6 +15,31 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-09 — Production profile reads blocked by unapplied migrations
+
+- **Symptom and impact:** Local and production requests failed while loading
+  the browse page because Supabase could not find `public.profiles` in its
+  schema cache.
+- **Root cause / evidence:** The connected `tiny-office-web` Supabase project
+  was healthy but its migration history stopped before `public_profiles` and
+  `revision_song_changes`; `public.profiles` was absent while the deployed
+  app already queried it.
+- **Systems and files:** Supabase project `cwwnuifsbgxyunzlmivf`,
+  `supabase/migrations/20260809150000_public_profiles.sql`,
+  `supabase/migrations/20260809160000_revision_song_changes.sql`, and
+  `lib/profile-data.ts`.
+- **Resolution / next action:** Applied both pending migrations to the
+  production Supabase project. The profile migration was kept schema-only so
+  existing denormalized display-name fields were not overwritten. Confirm the
+  Vercel production URL after its next request; the Vercel connector did not
+  expose a linked project for direct runtime verification.
+- **Verification:** Migration history now includes `public_profiles` and
+  `revision_song_changes`; `public.profiles` exists with RLS enabled and
+  `anon`/`authenticated` read grants, and the revision title/audit columns are
+  present. Supabase security advisors report only the pre-existing leaked
+  password protection warning; performance findings are unrelated indexes and
+  policies.
+
 ### 2026-08-09 — Revision song change validation blocked by WSL1
 
 - **Symptom and impact:** The add/remove song revision flow could not be
