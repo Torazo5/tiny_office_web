@@ -58,7 +58,8 @@ export function ReviewLikeButton({
         onClick={handleToggle}
         disabled={isPending}
         aria-pressed={liked}
-        aria-label={liked ? "Unlike this review" : "Like this review"}
+        aria-label={liked ? "Remove your like" : "Like this review"}
+        title={liked ? "Remove your like" : "Like this review"}
         className={`inline-flex items-center gap-1.5 text-[11.5px] transition-colors disabled:cursor-wait disabled:opacity-60 ${
           liked ? "text-primary" : "text-muted-foreground hover:text-primary"
         }`}
