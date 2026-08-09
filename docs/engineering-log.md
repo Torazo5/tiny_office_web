@@ -3,6 +3,31 @@
 Use this file for major errors and their outcomes. Do not include secrets,
 tokens, personal data, or full environment-variable values.
 
+### 2026-08-09 — Playlist seek can leave playback UI in stale scrub state
+
+- **Symptom and impact:** After advancing to another playlist song, dragging
+  the playback bar can leave its displayed progress frozen while YouTube
+  continues playing. The song-end handoff is also skipped until the user
+  clicks elsewhere, which disrupts playlist playback.
+- **Root cause / evidence:** `PlayerControls` keeps `draftValue` visible until
+  `pointerup`, `pointercancel`, `keyup`, or `blur`. If the pointer is released
+  outside the range input and its `pointerup` is missed, the draft remains in
+  place. `PlaylistPlayer` receives live timestamps but its `scrubbingRef`
+  stays true, so the end-of-song logic returns early. A later click causes
+  `blur`, which commits the old draft seek and clears the stale state. This
+  matches the reported jump back to the original seek position.
+- **Systems and files:** YouTube IFrame playback, `components/player-controls.tsx`,
+  `components/playlist-player.tsx`, and the playlist transport path introduced
+  with commit `7fdabbd`.
+- **Resolution / next action:** Added pointer capture on drag start and
+  idempotent cleanup for pointer release, cancellation, lost capture, blur,
+  and keyboard completion. Run a browser regression check for releasing the
+  slider outside its bounds from WSL2 or another supported runtime.
+- **Verification:** `git diff --check` passed and the source diff contains only
+  the targeted slider lifecycle change. `npm test`, `npm run lint`, and
+  `npm run build` remain blocked before startup by the WSL1 Node launcher;
+  no live browser session is attached.
+
 ## Entry template
 
 ### YYYY-MM-DD — Short incident title

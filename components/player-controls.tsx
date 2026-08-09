@@ -58,8 +58,9 @@ export function PlayerControls({
   const displayedValue = draftValue ?? currentRelativeTime;
   const canInteract = isReady && duration > 0;
 
-  function beginScrub() {
+  function beginScrub(event?: React.PointerEvent<HTMLInputElement>) {
     if (!canInteract) return;
+    if (event) event.currentTarget.setPointerCapture(event.pointerId);
     draftValueRef.current = currentRelativeTime;
     setDraftValue(currentRelativeTime);
     if (!scrubbingRef.current) {
@@ -201,6 +202,7 @@ export function PlayerControls({
           onPointerDown={beginScrub}
           onPointerUp={commitScrub}
           onPointerCancel={commitScrub}
+          onLostPointerCapture={commitScrub}
           onKeyUp={commitScrub}
           onBlur={commitScrub}
           onChange={(event) => changeScrub(event.target.value)}
