@@ -2,20 +2,12 @@
 
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
+import { formatProfileLabel, getUserProfile } from "@/lib/profile-data";
 
 export type EngagementActionState = { error?: string; success?: string } | null;
 
 function isValidRating(rating: number) {
   return Number.isFinite(rating) && rating >= 0.5 && rating <= 5 && Number.isInteger(rating * 2);
-}
-
-function getDisplayName(user: { user_metadata?: Record<string, unknown>; email?: string | null }) {
-  const metadata = user.user_metadata ?? {};
-  return (
-    String(metadata.full_name ?? metadata.name ?? "").trim() ||
-    user.email?.split("@")[0] ||
-    "Anonymous"
-  );
 }
 
 async function getAuthenticatedUser() {
@@ -87,11 +79,13 @@ export async function saveReview(input: {
     return { error: "Performance not found." };
   }
 
+  const profile = await getUserProfile(user.id);
+
   const { error: reviewError } = await supabase.from("reviews").upsert(
     {
       performance_video_id: input.performanceVideoId,
       user_id: user.id,
-      display_name: getDisplayName(user),
+      display_name: formatProfileLabel(profile),
       rating: input.rating,
       text,
       updated_at: new Date().toISOString(),

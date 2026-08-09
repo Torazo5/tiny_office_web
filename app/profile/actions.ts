@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 
 export type FavoriteActionState = { error?: string; success?: string } | null;
+export type ProfileActionState = { error?: string; success?: string } | null;
 
 async function getAuthenticatedUser() {
   const supabase = await createClient();
@@ -14,6 +15,51 @@ async function getAuthenticatedUser() {
 
 function isValidPosition(position: number) {
   return Number.isInteger(position) && position >= 1 && position <= 4;
+}
+
+function readDisplayName(formData: FormData) {
+  const value = formData.get("display_name");
+  if (typeof value !== "string") return null;
+  const displayName = value.trim().replace(/\s+/g, " ");
+  return displayName.length >= 1 && displayName.length <= 40 ? displayName : null;
+}
+
+function readTag(formData: FormData) {
+  const value = formData.get("tag");
+  if (typeof value !== "string") return null;
+  const tag = value.trim().replace(/^@/, "").toLowerCase();
+  return /^[a-z0-9_]{3,24}$/.test(tag) ? tag : null;
+}
+
+export async function updateProfile(
+  _previousState: ProfileActionState,
+  formData: FormData,
+): Promise<ProfileActionState> {
+  const displayName = readDisplayName(formData);
+  const tag = readTag(formData);
+  if (!displayName) return { error: "Choose a display name between 1 and 40 characters." };
+  if (!tag) return { error: "Your tag must be 3–24 lowercase letters, numbers, or underscores." };
+
+  const { supabase, user } = await getAuthenticatedUser();
+  if (!user) return { error: "Sign in to update your profile." };
+
+  const { error } = await supabase.from("profiles").upsert(
+    {
+      user_id: user.id,
+      display_name: displayName,
+      tag,
+      updated_at: new Date().toISOString(),
+    },
+    { onConflict: "user_id" },
+  );
+  if (error) {
+    if (error.code === "23505") return { error: "That tag is already taken. Try another one." };
+    return { error: "Could not save your profile. Try again." };
+  }
+
+  revalidatePath("/profile");
+  revalidatePath("/");
+  return { success: "Profile saved." };
 }
 
 export async function saveFavorite(

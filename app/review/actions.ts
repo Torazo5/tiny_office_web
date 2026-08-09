@@ -6,6 +6,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 import { endAdminSession, isAdminSession, startAdminSession } from "@/lib/admin-session";
 import { getPerformance } from "@/lib/data";
+import { formatProfileLabel, getUserProfile } from "@/lib/profile-data";
 import { getAdminTruthRequest } from "@/lib/review-data";
 import { draftChanged, validateTimelineDraft } from "@/lib/review-utils";
 import type { TimelineDraftSong } from "@/lib/types";
@@ -56,15 +57,6 @@ async function requireAdmin() {
   const { user } = await getAuthenticatedUser();
   if (!user || !(await isAdminSession(user.id))) return null;
   return user;
-}
-
-function displayName(user: { user_metadata?: Record<string, unknown>; email?: string | null }) {
-  const metadata = user.user_metadata ?? {};
-  return (
-    String(metadata.full_name ?? metadata.name ?? "").trim() ||
-    user.email?.split("@")[0] ||
-    "Anonymous"
-  );
 }
 
 async function loadGroundTruth(videoId: string) {
@@ -127,12 +119,14 @@ export async function submitListeningPreset(
   const validationError = validateSubmission(draft, performance);
   if (validationError) return { error: validationError };
 
+  const profile = await getUserProfile(user.id);
+
   const presetId = randomUUID();
   const { error: presetError } = await supabase.from("listening_presets").insert({
     id: presetId,
     performance_video_id: videoId,
     owner_id: user.id,
-    owner_name: displayName(user),
+    owner_name: formatProfileLabel(profile),
     name,
     note: note || null,
     status: "published",
@@ -173,12 +167,14 @@ export async function submitTruthRequest(
   const validationError = validateSubmission(draft, performance);
   if (validationError) return { error: validationError };
 
+  const profile = await getUserProfile(user.id);
+
   const requestId = randomUUID();
   const { error: requestError } = await supabase.from("truth_requests").insert({
     id: requestId,
     performance_video_id: videoId,
     requester_id: user.id,
-    requester_name: displayName(user),
+    requester_name: formatProfileLabel(profile),
     note: note || null,
     status: "pending",
   });

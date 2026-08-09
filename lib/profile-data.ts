@@ -1,7 +1,81 @@
 import "server-only";
 
+import { createHash } from "node:crypto";
 import { createClient } from "@/lib/supabase/server";
 import type { Performance } from "@/lib/types";
+
+export const DEFAULT_PROFILE_DISPLAY_NAME = "Anonymous";
+
+export type PublicProfile = {
+  userId: string;
+  displayName: string;
+  tag: string;
+  avatarUrl: string;
+};
+
+type ProfileRow = {
+  user_id: string;
+  display_name: string;
+  tag: string;
+};
+
+function defaultTag(userId: string) {
+  return `listener_${userId.replaceAll("-", "").slice(0, 8).toLowerCase()}`;
+}
+
+export function getIdenticonUrl(seed: string) {
+  const privateSeed = createHash("sha256").update(seed).digest("hex");
+  const params = new URLSearchParams({
+    seed: privateSeed,
+    backgroundColor: "252525",
+    radius: "50",
+  });
+  return `https://api.dicebear.com/10.x/identicon/svg?${params.toString()}`;
+}
+
+function fallbackProfile(userId: string): PublicProfile {
+  return {
+    userId,
+    displayName: DEFAULT_PROFILE_DISPLAY_NAME,
+    tag: defaultTag(userId),
+    avatarUrl: getIdenticonUrl(userId),
+  };
+}
+
+export function formatProfileLabel(profile: PublicProfile | undefined) {
+  if (!profile) return DEFAULT_PROFILE_DISPLAY_NAME;
+  return `${profile.displayName} · @${profile.tag}`;
+}
+
+export async function getProfilesByUserId(userIds: readonly string[]) {
+  const uniqueUserIds = [...new Set(userIds.filter(Boolean))];
+  const profiles = new Map<string, PublicProfile>();
+  if (uniqueUserIds.length === 0) return profiles;
+
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("profiles")
+    .select("user_id, display_name, tag")
+    .in("user_id", uniqueUserIds);
+  if (error) throw new Error(`Loading public profiles: ${error.message}`);
+
+  for (const userId of uniqueUserIds) {
+    profiles.set(userId, fallbackProfile(userId));
+  }
+  for (const row of (data ?? []) as ProfileRow[]) {
+    profiles.set(row.user_id, {
+      userId: row.user_id,
+      displayName: row.display_name,
+      tag: row.tag,
+      avatarUrl: getIdenticonUrl(row.user_id),
+    });
+  }
+  return profiles;
+}
+
+export async function getUserProfile(userId: string) {
+  return (await getProfilesByUserId([userId])).get(userId)!;
+}
 
 export type ProfileFavorite = {
   position: number;

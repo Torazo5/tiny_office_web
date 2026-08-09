@@ -1,6 +1,7 @@
 import "server-only";
 
 import { createClient } from "@/lib/supabase/server";
+import { formatProfileLabel, getIdenticonUrl, getProfilesByUserId } from "@/lib/profile-data";
 import type {
   Performance,
   Playlist,
@@ -64,7 +65,7 @@ async function loadPerformances(): Promise<Performance[]> {
     supabase.from("ratings").select("performance_video_id, rating"),
     supabase
       .from("reviews")
-      .select("id, performance_video_id, display_name, rating, text, created_at")
+      .select("id, performance_video_id, user_id, rating, text, created_at")
       .order("created_at", { ascending: false }),
     supabase.from("review_likes").select("review_id, user_id"),
     supabase.auth.getUser(),
@@ -75,6 +76,10 @@ async function loadPerformances(): Promise<Performance[]> {
   throwIfError("Loading ratings", ratingsResult.error);
   throwIfError("Loading reviews", reviewsResult.error);
   throwIfError("Loading review likes", likesResult.error);
+
+  const reviewProfiles = await getProfilesByUserId(
+    (reviewsResult.data ?? []).map((review) => review.user_id),
+  );
 
   const songsByPerformance = new Map<string, SongRow[]>();
   for (const song of (songsResult.data ?? []) as SongRow[]) {
@@ -103,9 +108,11 @@ async function loadPerformances(): Promise<Performance[]> {
   for (const review of reviewsResult.data ?? []) {
     const reviews = reviewsByPerformance.get(review.performance_video_id) ?? [];
     const likes = likesByReview.get(review.id) ?? { count: 0, liked: false };
+    const profile = reviewProfiles.get(review.user_id);
     reviews.push({
       id: review.id,
-      user: review.display_name,
+      user: formatProfileLabel(profile),
+      avatarUrl: getIdenticonUrl(review.user_id),
       rating: Number(review.rating),
       date: review.created_at,
       text: review.text,
@@ -197,6 +204,12 @@ export async function getPlaylists(): Promise<PlaylistSummary[]> {
   throwIfError("Loading playlists", playlistsResult.error);
   throwIfError("Loading playlist track counts", tracksResult.error);
 
+  const playlistProfiles = await getProfilesByUserId(
+    (playlistsResult.data ?? [])
+      .map((playlist) => playlist.owner_id)
+      .filter((ownerId): ownerId is string => Boolean(ownerId)),
+  );
+
   const trackCounts = new Map<string, number>();
   const thumbnailVideoIds = new Map<string, string>();
   for (const track of tracksResult.data ?? []) {
@@ -209,7 +222,9 @@ export async function getPlaylists(): Promise<PlaylistSummary[]> {
   return (playlistsResult.data ?? []).map((playlist) => ({
     id: playlist.id,
     name: playlist.name,
-    owner: playlist.owner_name,
+    owner: playlist.owner_id
+      ? formatProfileLabel(playlistProfiles.get(playlist.owner_id))
+      : playlist.owner_name,
     type: playlist.playlist_type as PlaylistType,
     ownerId: playlist.owner_id,
     trackCount: trackCounts.get(playlist.id) ?? 0,
@@ -227,6 +242,11 @@ export async function getPlaylist(id: string): Promise<Playlist | null> {
   throwIfError("Loading playlist", playlistError);
   if (!playlist) return null;
 
+  const ownerProfile = playlist.owner_id
+    ? (await getProfilesByUserId([playlist.owner_id])).get(playlist.owner_id)
+    : undefined;
+  const owner = playlist.owner_id ? formatProfileLabel(ownerProfile) : playlist.owner_name;
+
   const { data: tracks, error: tracksError } = await supabase
     .from("playlist_tracks")
     .select("position, performance_video_id, song_index")
@@ -239,7 +259,7 @@ export async function getPlaylist(id: string): Promise<Playlist | null> {
     return {
       id: playlist.id,
       name: playlist.name,
-      owner: playlist.owner_name,
+      owner,
       type: playlist.playlist_type as PlaylistType,
       ownerId: playlist.owner_id,
       tracks: [],
@@ -276,7 +296,7 @@ export async function getPlaylist(id: string): Promise<Playlist | null> {
   return {
     id: playlist.id,
     name: playlist.name,
-    owner: playlist.owner_name,
+    owner,
     type: playlist.playlist_type as PlaylistType,
     ownerId: playlist.owner_id,
     tracks: (tracks ?? []).flatMap((track) => {

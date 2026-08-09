@@ -3,6 +3,7 @@ import "server-only";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 import { getPerformance } from "@/lib/data";
+import { formatProfileLabel, getProfilesByUserId, type PublicProfile } from "@/lib/profile-data";
 import type {
   ListeningPreset,
   Performance,
@@ -19,7 +20,6 @@ type PresetRow = {
   id: string;
   performance_video_id: string;
   owner_id: string;
-  owner_name: string;
   name: string;
   note: string | null;
   status: "published" | "hidden";
@@ -33,7 +33,11 @@ type PresetSongRow = {
   clip_end: number;
 };
 
-function mapPresets(presetRows: PresetRow[], songRows: PresetSongRow[]): ListeningPreset[] {
+function mapPresets(
+  presetRows: PresetRow[],
+  songRows: PresetSongRow[],
+  profiles: Map<string, PublicProfile>,
+): ListeningPreset[] {
   const songsByPreset = new Map<string, ListeningPreset["songs"]>();
   for (const song of songRows) {
     const songs = songsByPreset.get(song.preset_id) ?? [];
@@ -49,7 +53,7 @@ function mapPresets(presetRows: PresetRow[], songRows: PresetSongRow[]): Listeni
     id: preset.id,
     performanceVideoId: preset.performance_video_id,
     ownerId: preset.owner_id,
-    ownerName: preset.owner_name,
+    ownerName: formatProfileLabel(profiles.get(preset.owner_id)),
     name: preset.name,
     note: preset.note,
     status: preset.status,
@@ -61,13 +65,15 @@ function mapPresets(presetRows: PresetRow[], songRows: PresetSongRow[]): Listeni
 async function loadPresets(client: Awaited<ReturnType<typeof createClient>>, videoId: string) {
   const { data: presetRows, error: presetError } = await client
     .from("listening_presets")
-    .select("id, performance_video_id, owner_id, owner_name, name, note, status, created_at")
+    .select("id, performance_video_id, owner_id, name, note, status, created_at")
     .eq("performance_video_id", videoId)
     .order("created_at", { ascending: false });
   throwIfError("Loading listening presets", presetError);
 
   const ids = (presetRows ?? []).map((preset) => preset.id);
   if (ids.length === 0) return [];
+
+  const profiles = await getProfilesByUserId((presetRows ?? []).map((preset) => preset.owner_id));
 
   const { data: songRows, error: songError } = await client
     .from("listening_preset_songs")
@@ -76,7 +82,7 @@ async function loadPresets(client: Awaited<ReturnType<typeof createClient>>, vid
     .order("song_index");
   throwIfError("Loading listening preset songs", songError);
 
-  return mapPresets(presetRows as PresetRow[], (songRows ?? []) as PresetSongRow[]);
+  return mapPresets(presetRows as PresetRow[], (songRows ?? []) as PresetSongRow[], profiles);
 }
 
 export async function getListeningPresets(videoId: string) {
@@ -88,12 +94,13 @@ export async function getAdminListeningPresets() {
   const supabase = createAdminClient();
   const { data: presetRows, error: presetError } = await supabase
     .from("listening_presets")
-    .select("id, performance_video_id, owner_id, owner_name, name, note, status, created_at")
+    .select("id, performance_video_id, owner_id, name, note, status, created_at")
     .order("created_at", { ascending: false });
   throwIfError("Loading admin listening presets", presetError);
 
   const ids = (presetRows ?? []).map((preset) => preset.id);
   if (ids.length === 0) return [];
+  const profiles = await getProfilesByUserId((presetRows ?? []).map((preset) => preset.owner_id));
   const { data: songRows, error: songError } = await supabase
     .from("listening_preset_songs")
     .select("preset_id, song_index, clip_start, clip_end")
@@ -101,7 +108,7 @@ export async function getAdminListeningPresets() {
     .order("song_index");
   throwIfError("Loading admin preset songs", songError);
 
-  return mapPresets(presetRows as PresetRow[], (songRows ?? []) as PresetSongRow[]);
+  return mapPresets(presetRows as PresetRow[], (songRows ?? []) as PresetSongRow[], profiles);
 }
 
 export async function getSelectedPresetId(videoId: string, userId: string) {
@@ -163,7 +170,6 @@ type TruthRequestRow = {
   id: string;
   performance_video_id: string;
   requester_id: string;
-  requester_name: string;
   note: string | null;
   status: TruthRequestStatus;
   created_at: string;
@@ -171,14 +177,17 @@ type TruthRequestRow = {
   performances?: { artist: string } | { artist: string }[] | null;
 };
 
-function mapTruthRequest(row: TruthRequestRow): TruthRequestSummary {
+function mapTruthRequest(
+  row: TruthRequestRow,
+  profiles: Map<string, PublicProfile>,
+): TruthRequestSummary {
   const performance = Array.isArray(row.performances) ? row.performances[0] : row.performances;
   return {
     id: row.id,
     performanceVideoId: row.performance_video_id,
     artist: performance?.artist ?? row.performance_video_id,
     requesterId: row.requester_id,
-    requesterName: row.requester_name,
+    requesterName: formatProfileLabel(profiles.get(row.requester_id)),
     note: row.note,
     status: row.status,
     createdAt: row.created_at,
@@ -190,32 +199,36 @@ export async function getAdminTruthRequests() {
   const supabase = createAdminClient();
   const { data, error } = await supabase
     .from("truth_requests")
-    .select("id, performance_video_id, requester_id, requester_name, note, status, created_at, resolved_at, performances(artist)")
+    .select("id, performance_video_id, requester_id, note, status, created_at, resolved_at, performances(artist)")
     .order("created_at", { ascending: false });
   throwIfError("Loading truth requests", error);
-  return (data ?? []).map((row) => mapTruthRequest(row as TruthRequestRow));
+  const profiles = await getProfilesByUserId((data ?? []).map((row) => row.requester_id));
+  return (data ?? []).map((row) => mapTruthRequest(row as TruthRequestRow, profiles));
 }
 
 export async function getMyTruthRequests(userId: string) {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("truth_requests")
-    .select("id, performance_video_id, requester_id, requester_name, note, status, created_at, resolved_at, performances(artist)")
+    .select("id, performance_video_id, requester_id, note, status, created_at, resolved_at, performances(artist)")
     .eq("requester_id", userId)
     .order("created_at", { ascending: false });
   throwIfError("Loading your truth requests", error);
-  return (data ?? []).map((row) => mapTruthRequest(row as TruthRequestRow));
+  const profiles = await getProfilesByUserId((data ?? []).map((row) => row.requester_id));
+  return (data ?? []).map((row) => mapTruthRequest(row as TruthRequestRow, profiles));
 }
 
 export async function getAdminTruthRequest(requestId: string) {
   const supabase = createAdminClient();
   const { data: request, error: requestError } = await supabase
     .from("truth_requests")
-    .select("id, performance_video_id, requester_id, requester_name, note, status, created_at, resolved_at, performances(artist)")
+    .select("id, performance_video_id, requester_id, note, status, created_at, resolved_at, performances(artist)")
     .eq("id", requestId)
     .maybeSingle();
   throwIfError("Loading truth request", requestError);
   if (!request) return null;
+
+  const profiles = await getProfilesByUserId([request.requester_id]);
 
   const { data: songRows, error: songsError } = await supabase
     .from("truth_request_songs")
@@ -234,7 +247,7 @@ export async function getAdminTruthRequest(requestId: string) {
   );
 
   return {
-    request: mapTruthRequest(request as TruthRequestRow),
+    request: mapTruthRequest(request as TruthRequestRow, profiles),
     draft: (songRows ?? []).map((song) => ({
       songIndex: song.song_index,
       clipStart: Number(song.clip_start),

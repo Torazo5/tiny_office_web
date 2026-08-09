@@ -61,6 +61,7 @@ export interface Performance {
 export interface Review {
   id?: string;
   user: string;
+  avatarUrl?: string;
   rating: number;
   date: string;
   text: string;

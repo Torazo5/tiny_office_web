@@ -15,6 +15,24 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-09 — Public profile build validation blocked by WSL1
+
+- **Symptom and impact:** The new public profile identity flow could not be
+  validated with the required production build in this shell, so compile-time
+  and browser verification remain unavailable here.
+- **Root cause / evidence:** `npm run build` stopped before Node.js startup
+  with `WSL 1 is not supported` and `Could not determine Node.js install
+  directory`.
+- **Systems and files:** WSL1 Node/npm launcher, the public profiles
+  migration, profile Server Action, profile settings UI, and profile label
+  readers.
+- **Resolution / next action:** Run `npm run build`, `npm run lint`, and the
+  profile/review flows from WSL2 or another Linux Node.js runtime after
+  applying the public profiles migration.
+- **Verification:** `git diff --check` passed; both `npm run build` and the
+  required `npm run dev` fallback stopped before application startup in this
+  shell.
+
 ### 2026-08-09 — Social engagement build validation blocked by WSL1
 
 - **Symptom and impact:** The new half-star rating/review slice could not be

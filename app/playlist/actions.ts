@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { randomUUID } from "node:crypto";
 import { createClient } from "@/lib/supabase/server";
+import { formatProfileLabel, getUserProfile } from "@/lib/profile-data";
 import type { PlaylistType } from "@/lib/types";
 
 type PlaylistActionState = { error: string } | null;
@@ -88,10 +89,7 @@ export async function createPlaylist(
   const { supabase, user } = await getAuthenticatedUser();
   if (!user) return { error: "Sign in to create a playlist." };
 
-  const ownerName =
-    String(user.user_metadata?.full_name ?? user.user_metadata?.name ?? "").trim() ||
-    user.email?.split("@")[0] ||
-    "You";
+  const ownerName = formatProfileLabel(await getUserProfile(user.id));
   const id = `playlist-${randomUUID()}`;
   const { error } = await supabase.from("playlists").insert({
     id,
