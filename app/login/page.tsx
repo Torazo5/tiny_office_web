@@ -14,7 +14,7 @@ export default async function LoginPage({
       <main className="mx-auto w-full max-w-[520px] p-8">
         <h1 className="mb-2 text-2xl font-semibold text-foreground">Sign in</h1>
         <p className="mb-6 text-sm text-muted-foreground">
-          Sign in with Google to rate performances, write reviews, and save playlists.
+          Sign in or create your account with Google to revise timelines, rate performances, write reviews, and save playlists.
         </p>
         {error && <p className="mb-4 text-sm text-primary">{error}</p>}
         <LoginForm nextPath={next} />

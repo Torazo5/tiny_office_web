@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { AdminUnlockForm } from "@/components/admin-unlock-form";
 import { RevisionEditor } from "@/components/revision-editor";
 import { Header } from "@/components/header";
@@ -20,7 +19,15 @@ export default async function ReviewFlowPage({
   const [performance, user] = await Promise.all([getPerformance(id), getCurrentUser()]);
   if (!performance) notFound();
 
-  const isAdmin = Boolean(user && (await isAdminSession(user.id)));
+  if (!user) {
+    const nextQuery = new URLSearchParams();
+    if (adminIntent) nextQuery.set("admin", "1");
+    if (requestId) nextQuery.set("request", requestId);
+    const nextPath = `/review/${id}${nextQuery.toString() ? `?${nextQuery.toString()}` : ""}`;
+    redirect(`/login?next=${encodeURIComponent(nextPath)}`);
+  }
+
+  const isAdmin = await isAdminSession(user.id);
   const requestData = isAdmin && requestId ? await getAdminTruthRequest(requestId) : null;
   const myRequests = user && !isAdmin ? await getMyTruthRequests(user.id) : [];
 
@@ -34,16 +41,7 @@ export default async function ReviewFlowPage({
             <p className="mt-1 text-[12px] text-muted-foreground">
               Sign in and enter the admin password to review requests or change main truth.
             </p>
-            {user ? (
-              <AdminUnlockForm />
-            ) : (
-              <Link
-                href={`/login?next=${encodeURIComponent(`/review/${id}?admin=1`)}`}
-                className="mt-3 inline-block rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground"
-              >
-                Sign in to unlock admin access
-              </Link>
-            )}
+            <AdminUnlockForm />
           </div>
         )}
 

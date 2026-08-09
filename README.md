@@ -45,7 +45,7 @@ first.
 | `/` | Browse — grid of performances |
 | `/video/[id]` | Performance detail — embed, song list, ratings, reviews |
 | `/review` | Password-protected admin dashboard — truth requests, pipeline review, and presets |
-| `/review/[id]` | Public revision editor — publish a listening preset or submit main truth |
+| `/review/[id]` | Signed-in revision editor — publish a listening preset or submit main truth; anonymous visitors are sent to sign in first |
 | `/playlists` | Playlist library — create, open, and delete playlists |
 | `/playlist/[id]` | Playlist — cross-performance track list |
 
