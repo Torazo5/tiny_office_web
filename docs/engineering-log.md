@@ -303,3 +303,20 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Supabase confirmed the new audit columns and security
   advisors returned only the existing leaked-password-protection warning;
   `git diff --check` passed.
+
+### 2026-08-09 — Request comparison and notification validation blocked by WSL1 Node launcher
+
+- **Symptom and impact:** The admin request comparison table and requester
+  notification banner could not be exercised with the production build or a
+  browser flow in this shell.
+- **Root cause / evidence:** `npm run build` stopped before Node.js startup
+  with `WSL 1 is not supported` and `Could not determine Node.js install
+  directory`.
+- **Systems and files:** WSL1 Node.js/npm launcher,
+  `components/revision-editor.tsx`, `components/header.tsx`, and
+  `components/truth-request-notification.tsx`.
+- **Resolution / next action:** Run the production build and browser-check
+  request comparison, approval notification, and notification dismissal from
+  WSL2 or another Linux Node.js runtime.
+- **Verification:** `git diff --check` passed; the build did not reach the
+  application compilation phase in this shell.

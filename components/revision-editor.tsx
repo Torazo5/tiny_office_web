@@ -52,6 +52,12 @@ function actionMessage(...states: Array<ReviewActionState>) {
   return states.find((state) => state?.error || state?.success) ?? null;
 }
 
+function formatSignedTime(delta: number) {
+  const rounded = Math.round(delta);
+  if (rounded === 0) return "no change";
+  return `${rounded > 0 ? "+" : "−"}${formatTime(Math.abs(rounded))}`;
+}
+
 export function RevisionEditor({
   performance,
   isSignedIn,
@@ -87,6 +93,32 @@ export function RevisionEditor({
   const draftJson = JSON.stringify(draft);
   const message = actionMessage(presetState, truthState, saveState, resolveState);
   const isPending = presetPending || truthPending || savePending || resolvePending;
+  const requestComparison = useMemo(() => {
+    if (!request) return null;
+    const draftByIndex = new Map(draft.map((item) => [item.songIndex, item]));
+    return performance.songs.map((groundTruthSong) => {
+      const proposed = draftByIndex.get(groundTruthSong.index);
+      const proposedStart = proposed && Number.isFinite(proposed.clipStart) ? proposed.clipStart : groundTruthSong.clipStart;
+      const proposedEnd = proposed && Number.isFinite(proposed.clipEnd) ? proposed.clipEnd : groundTruthSong.clipEnd;
+      const currentConfirmed = !groundTruthSong.suspect;
+      const proposedConfirmed = proposed?.confirmed ?? currentConfirmed;
+      return {
+        index: groundTruthSong.index,
+        title: groundTruthSong.title,
+        currentStart: groundTruthSong.clipStart,
+        currentEnd: groundTruthSong.clipEnd,
+        proposedStart,
+        proposedEnd,
+        currentConfirmed,
+        proposedConfirmed,
+        changed:
+          groundTruthSong.clipStart !== proposedStart ||
+          groundTruthSong.clipEnd !== proposedEnd ||
+          currentConfirmed !== proposedConfirmed,
+      };
+    });
+  }, [draft, performance.songs, request]);
+  const changedRequestCount = requestComparison?.filter((item) => item.changed).length ?? 0;
 
   function updateSong(index: number, field: "clipStart" | "clipEnd", value: string) {
     setSongs((current) => current.map((item) => item.index === index ? { ...item, [field]: value } : item));
@@ -122,6 +154,67 @@ export function RevisionEditor({
           {isAdmin ? "Admin dashboard" : "Back to performance"}
         </Link>
       </div>
+
+      {isAdmin && requestComparison && (
+        <section className="mb-5 overflow-hidden rounded-[10px] border border-border bg-card">
+          <div className="border-b border-border px-4 py-3">
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <div>
+                <h2 className="text-[13px] font-semibold uppercase tracking-wide text-muted-foreground">Request comparison</h2>
+                <p className="mt-1 text-[12px] text-muted-foreground">
+                  Current ground truth versus the requested timeline. You can edit the proposed values below before applying them.
+                </p>
+              </div>
+              <span className="font-mono text-[11px] text-muted-foreground">
+                {changedRequestCount} of {requestComparison.length} changed
+              </span>
+            </div>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[680px] text-left">
+              <thead className="bg-background/50 font-mono text-[10px] uppercase tracking-wide text-muted-foreground">
+                <tr>
+                  <th className="px-4 py-2.5 font-semibold">Song</th>
+                  <th className="px-4 py-2.5 font-semibold">Current ground truth</th>
+                  <th className="px-4 py-2.5 font-semibold">Request / proposed</th>
+                  <th className="px-4 py-2.5 font-semibold">Difference</th>
+                </tr>
+              </thead>
+              <tbody>
+                {requestComparison.map((item) => (
+                  <tr key={item.index} className={`border-t border-border ${item.changed ? "bg-primary/[0.04]" : ""}`}>
+                    <td className="px-4 py-3 align-top">
+                      <div className="font-mono text-[11px] text-muted-foreground">{item.index}</div>
+                      <div className="mt-0.5 max-w-[190px] text-[12.5px] font-medium text-foreground">{item.title}</div>
+                    </td>
+                    <td className="px-4 py-3 align-top font-mono text-[11px] text-muted-foreground">
+                      <div>{formatTime(item.currentStart)} → {formatTime(item.currentEnd)}</div>
+                      <div className={`mt-1 font-sans text-[11px] ${item.currentConfirmed ? "text-success" : "text-primary"}`}>
+                        {item.currentConfirmed ? "Confirmed" : "Unconfirmed"}
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 align-top font-mono text-[11px] text-foreground">
+                      <div>{formatTime(item.proposedStart)} → {formatTime(item.proposedEnd)}</div>
+                      <div className={`mt-1 font-sans text-[11px] ${item.proposedConfirmed ? "text-success" : "text-primary"}`}>
+                        {item.proposedConfirmed ? "Confirmed" : "Unconfirmed"}
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 align-top font-mono text-[11px] text-muted-foreground">
+                      <div>start {formatSignedTime(item.proposedStart - item.currentStart)}</div>
+                      <div className="mt-1">end {formatSignedTime(item.proposedEnd - item.currentEnd)}</div>
+                      {item.currentConfirmed !== item.proposedConfirmed && (
+                        <div className="mt-1 font-sans text-primary">
+                          status changed
+                        </div>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
 
       <div className="mb-4 flex gap-2 overflow-x-auto border-b border-border pb-2">
         {songs.map((item, index) => {

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { getCurrentUser } from "@/lib/auth";
+import { TruthRequestNotification } from "@/components/truth-request-notification";
+import { getMyTruthRequests } from "@/lib/review-data";
 import { signOut } from "@/app/auth/actions";
 
 /**
@@ -20,9 +22,14 @@ export async function Header({
   progressLabel?: string;
 }) {
   const user = await getCurrentUser();
+  const latestResolvedRequest = user
+    ? (await getMyTruthRequests(user.id)).find((request) => request.status !== "pending")
+    : null;
 
   return (
-    <header className="flex items-center gap-6 px-8 py-4 border-b border-border">
+    <>
+      {latestResolvedRequest && <TruthRequestNotification request={latestResolvedRequest} />}
+      <header className="flex items-center gap-6 px-8 py-4 border-b border-border">
       <Link
         href="/"
         className="font-sans font-bold text-[19px] tracking-tight text-foreground whitespace-nowrap"
@@ -80,6 +87,7 @@ export async function Header({
           Sign in
         </Link>
       )}
-    </header>
+      </header>
+    </>
   );
 }
