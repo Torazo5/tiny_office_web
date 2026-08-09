@@ -86,12 +86,14 @@ export function PlaylistPlayer({
   const advanceLockRef = useRef(false);
   const previousTimeRef = useRef(0);
   const scrubbingRef = useRef(false);
+  const isLoopingRef = useRef(false);
   const loadTrackRef = useRef<(index: number) => void>(() => undefined);
   const advanceToNextRef = useRef<() => void>(() => undefined);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTime, setCurrentTime] = useState(tracks[0]?.clipStart ?? 0);
   const [playerState, setPlayerState] = useState<number | null>(null);
+  const [isLooping, setIsLooping] = useState(false);
 
   tracksRef.current = tracks;
 
@@ -126,6 +128,14 @@ export function PlaylistPlayer({
       return;
     }
     loadTrack(nextIndex);
+  }
+
+  function toggleLoop() {
+    setIsLooping((current) => {
+      const next = !current;
+      isLoopingRef.current = next;
+      return next;
+    });
   }
 
   loadTrackRef.current = loadTrack;
@@ -192,7 +202,10 @@ export function PlaylistPlayer({
                 setCurrentTime(currentTime);
               }
               setPlayerState(event.data);
-              if (event.data === PLAYER_ENDED) advanceToNextRef.current();
+              if (event.data === PLAYER_ENDED) {
+                if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current);
+                else advanceToNextRef.current();
+              }
             },
           },
         });
@@ -236,7 +249,10 @@ export function PlaylistPlayer({
       if (playlistType === "songs") {
         const effectiveClipEnd = Math.max(track.clipEnd, track.clipStart + 0.5);
         const endThreshold = Math.max(track.clipStart + 0.5, effectiveClipEnd - 0.35);
-        if (currentTime >= endThreshold) advanceToNextRef.current();
+        if (currentTime >= endThreshold) {
+          if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current);
+          else advanceToNextRef.current();
+        }
         return;
       }
 
@@ -250,7 +266,9 @@ export function PlaylistPlayer({
 
       if (action.type === "stop") {
         const hasNextTrack = currentIndexRef.current + 1 < tracksRef.current.length;
-        if (hasNextTrack) {
+        if (isLoopingRef.current) {
+          loadTrackRef.current(currentIndexRef.current);
+        } else if (hasNextTrack) {
           advanceToNextRef.current();
         } else {
           const stopAt = Math.max(0, action.end);
@@ -306,6 +324,8 @@ export function PlaylistPlayer({
         onNext={() => advanceToNext()}
         previousDisabled={currentIndex === 0}
         nextDisabled={currentIndex >= tracks.length - 1}
+        isLooping={isLooping}
+        onToggleLoop={toggleLoop}
         onScrubStart={() => {
           scrubbingRef.current = true;
         }}

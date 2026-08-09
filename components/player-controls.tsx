@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { Repeat2, SkipBack, SkipForward } from "lucide-react";
 import { formatTime } from "@/lib/format";
 
 type PlayerControlsProps = {
@@ -16,6 +17,8 @@ type PlayerControlsProps = {
   onNext?: () => void;
   previousDisabled?: boolean;
   nextDisabled?: boolean;
+  isLooping?: boolean;
+  onToggleLoop?: () => void;
   onScrubStart?: () => void;
   onScrubEnd?: () => void;
 };
@@ -37,6 +40,8 @@ export function PlayerControls({
   onNext,
   previousDisabled = false,
   nextDisabled = false,
+  isLooping = false,
+  onToggleLoop,
   onScrubStart,
   onScrubEnd,
 }: PlayerControlsProps) {
@@ -81,46 +86,69 @@ export function PlayerControls({
 
   return (
     <section className="mt-4 rounded-lg border border-border bg-secondary/35 p-3.5" aria-label="Playback controls">
-      <div className="flex flex-wrap items-center gap-2">
-        {onPrevious && (
-          <button
-            type="button"
-            onClick={onPrevious}
-            disabled={!isReady || previousDisabled}
-            className="rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:text-foreground disabled:cursor-default disabled:opacity-40"
-          >
-            Previous
-          </button>
-        )}
-
-        <button
-          type="button"
-          onClick={onTogglePlay}
-          disabled={!isReady}
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-wait disabled:opacity-60"
-          aria-label={isPlaying ? "Pause" : "Play"}
-        >
-          {isPlaying ? (
-            <span aria-hidden className="flex gap-1">
-              <span className="h-3.5 w-1 rounded-sm bg-primary-foreground" />
-              <span className="h-3.5 w-1 rounded-sm bg-primary-foreground" />
-            </span>
-          ) : (
-            <span aria-hidden className="ml-0.5 block h-0 w-0 border-y-[6px] border-l-[10px] border-y-transparent border-l-primary-foreground" />
+      <div className="relative flex min-h-11 items-center justify-center">
+        <div className="flex items-center gap-4">
+          {onPrevious && (
+            <button
+              type="button"
+              onClick={onPrevious}
+              disabled={!isReady || previousDisabled}
+              className="flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground disabled:cursor-default disabled:opacity-40"
+              aria-label="Previous song"
+            >
+              <SkipBack size={18} aria-hidden />
+            </button>
           )}
-        </button>
 
-        {onNext && (
           <button
             type="button"
-            onClick={onNext}
-            disabled={!isReady || nextDisabled}
-            className="rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:text-foreground disabled:cursor-default disabled:opacity-40"
+            onClick={onTogglePlay}
+            disabled={!isReady}
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-wait disabled:opacity-60"
+            aria-label={isPlaying ? "Pause" : "Play"}
           >
-            Next
+            {isPlaying ? (
+              <span aria-hidden className="flex gap-1">
+                <span className="h-4 w-1 rounded-sm bg-primary-foreground" />
+                <span className="h-4 w-1 rounded-sm bg-primary-foreground" />
+              </span>
+            ) : (
+              <span aria-hidden className="ml-0.5 block h-0 w-0 border-y-[7px] border-l-[11px] border-y-transparent border-l-primary-foreground" />
+            )}
+          </button>
+
+          {onNext && (
+            <button
+              type="button"
+              onClick={onNext}
+              disabled={!isReady || nextDisabled}
+              className="flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground disabled:cursor-default disabled:opacity-40"
+              aria-label="Next song"
+            >
+              <SkipForward size={18} aria-hidden />
+            </button>
+          )}
+        </div>
+
+        {onToggleLoop && (
+          <button
+            type="button"
+            onClick={onToggleLoop}
+            disabled={!isReady}
+            aria-pressed={isLooping}
+            aria-label={isLooping ? "Turn off loop" : "Loop current song"}
+            className={`absolute right-0 flex h-9 w-9 items-center justify-center rounded-full transition-colors disabled:cursor-wait disabled:opacity-40 ${
+              isLooping
+                ? "bg-primary/15 text-primary"
+                : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+            }`}
+          >
+            <Repeat2 size={18} aria-hidden />
           </button>
         )}
+      </div>
 
+      <div className="mt-3 flex items-center justify-center gap-2">
         <button
           type="button"
           onClick={() => onSkip(-10)}
