@@ -2,7 +2,7 @@
   "video_id": "Qll7IHN0I4Q",
   "title": "Snoh Aalegra: NPR Music Tiny Desk Concert",
   "duration": 993,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/Qll7IHN0I4Q.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/Qll7IHN0I4Q.mp3",
   "description_songs": [
     "Love Like That",
     "I Want You Around",
@@ -12,135 +12,116 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 1100 likes, template #0"
+    "A_comments": "ok \u2014 1100 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 4,
+    "accepted": 3,
+    "rejected": 1,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 367.2,
-      "end": 368.64,
-      "duration": 1.4399999999999977,
-      "kind": "applause"
-    },
-    {
-      "start": 370.56,
-      "end": 375.84000000000003,
-      "duration": 5.28000000000003,
-      "kind": "applause"
-    },
-    {
-      "start": 375.84,
       "end": 378.24,
-      "duration": 2.400000000000034,
-      "kind": "talk"
+      "duration": 11.04000000000002,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 569.28,
-      "end": 572.64,
-      "duration": 3.3600000000000136,
-      "kind": "applause"
-    },
-    {
-      "start": 573.12,
       "end": 580.32,
-      "duration": 7.2000000000000455,
-      "kind": "applause"
+      "duration": 11.040000000000077,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 588.48,
       "end": 590.4,
       "duration": 1.919999999999959,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 594.24,
       "end": 594.72,
       "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 605.76,
-      "end": 607.68,
-      "duration": 1.919999999999959,
-      "kind": "talk"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 975.8399999999999,
-      "end": 977.76,
-      "duration": 1.9200000000000728,
-      "kind": "applause"
-    },
-    {
-      "start": 978.7199999999999,
-      "end": 983.04,
-      "duration": 4.32000000000005,
-      "kind": "applause"
-    },
-    {
-      "start": 984.9599999999999,
       "end": 991.1999999999999,
-      "duration": 6.240000000000009,
-      "kind": "applause"
+      "duration": 15.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
       "seconds": 2,
       "song": "Love Like That",
-      "corroboration": 3,
+      "corroboration": 2,
       "silence_match": 0.0,
       "clip_start": 2,
       "clip_end": 367.2,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 89
+      "confidence": 82
     },
     {
       "seconds": 366,
-      "song": "[2:36 / 3:06] - I Want You Around",
+      "song": "I Want You Around",
       "corroboration": 0,
       "silence_match": 366.078,
       "clip_start": 378.24,
       "clip_end": 380,
       "start_refined": true,
       "end_trimmed": false,
+      "end_guard": [],
       "suspect": true,
       "confidence": 18
     },
     {
       "seconds": 380,
-      "song": "Whoa (9:27)",
-      "corroboration": 3,
+      "song": "Whoa",
+      "corroboration": 2,
       "silence_match": 380.198,
       "clip_start": 378.24,
       "clip_end": 569.28,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 97
+      "confidence": 90
     },
     {
       "seconds": 580,
-      "song": "Fool for You",
+      "song": "Fool For You",
       "corroboration": 1,
       "silence_match": 580.292,
       "clip_start": 594.72,
       "clip_end": 975.8399999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 83
     },
     {
       "seconds": 975,
-      "song": "[12:11] - Find Someone Like You",
+      "song": "Find Someone Like You",
       "corroboration": 0,
       "silence_match": 974.118,
       "clip_start": 991.1999999999999,
       "clip_end": 993,
       "start_refined": true,
       "end_trimmed": false,
+      "end_guard": [],
       "suspect": true,
       "confidence": 18
     }
@@ -224,13 +205,16 @@
   ],
   "confidence": {
     "scores": [
-      89,
+      82,
       18,
-      97,
+      90,
       83,
       18
     ],
-    "avg": 61.0,
+    "avg": 58.2,
     "min": 18
-  }
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

@@ -2,7 +2,7 @@
   "video_id": "QrR_gm6RqCo",
   "title": "Mac Miller: NPR Music Tiny Desk Concert",
   "duration": 1029,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/QrR_gm6RqCo.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/QrR_gm6RqCo.mp3",
   "description_songs": [
     "Small Worlds",
     "What's the Use? (Feat. Thundercat)",
@@ -10,130 +10,87 @@
   ],
   "method": "yamnet",
   "resolve_notes": {
-    "A_comments": "failed \u2014 no comment had 2+ timestamps",
-    "B_yamnet": "ok \u2014 14 usable span(s), took top 2"
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 6 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 279.36,
-      "end": 283.68,
-      "duration": 4.319999999999993,
-      "kind": "applause"
-    },
-    {
-      "start": 284.64,
-      "end": 286.56,
-      "duration": 1.920000000000016,
-      "kind": "applause"
-    },
-    {
-      "start": 288.0,
-      "end": 288.48,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 288.47999999999996,
       "end": 311.04,
-      "duration": 22.56000000000006,
-      "kind": "talk"
+      "duration": 31.680000000000007,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 315.36,
-      "end": 317.76,
-      "duration": 2.3999999999999773,
-      "kind": "talk"
+      "end": 316.8,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 327.84,
-      "end": 341.28000000000003,
-      "duration": 13.440000000000055,
-      "kind": "talk"
+      "start": 329.28,
+      "end": 333.6,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 334.56,
+      "end": 339.84000000000003,
+      "duration": 5.28000000000003,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 605.28,
-      "end": 606.72,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 607.68,
-      "end": 608.16,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 609.6,
-      "end": 612.48,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
-    },
-    {
-      "start": 612.9599999999999,
-      "end": 613.92,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 614.4,
-      "end": 617.28,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
-    },
-    {
-      "start": 619.1999999999999,
-      "end": 622.08,
-      "duration": 2.880000000000109,
-      "kind": "applause"
-    },
-    {
-      "start": 622.0799999999999,
       "end": 623.52,
-      "duration": 1.4400000000000546,
-      "kind": "talk"
+      "duration": 18.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
-      "start": 629.76,
+      "start": 630.72,
+      "end": 642.72,
+      "duration": 12.0,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 643.1999999999999,
+      "end": 647.52,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 648.48,
       "end": 669.12,
-      "duration": 39.360000000000014,
-      "kind": "talk"
+      "duration": 20.639999999999986,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 671.04,
-      "end": 675.36,
-      "duration": 4.32000000000005,
-      "kind": "applause"
-    },
-    {
-      "start": 675.36,
       "end": 697.4399999999999,
-      "duration": 22.079999999999927,
-      "kind": "talk"
+      "duration": 26.399999999999977,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 995.52,
-      "end": 1010.4,
-      "duration": 14.879999999999995,
-      "kind": "applause"
-    },
-    {
-      "start": 1010.88,
-      "end": 1014.24,
-      "duration": 3.3600000000000136,
-      "kind": "talk"
-    },
-    {
-      "start": 1014.24,
-      "end": 1016.16,
-      "duration": 1.919999999999959,
-      "kind": "applause"
-    },
-    {
-      "start": 1016.16,
       "end": 1029.12,
-      "duration": 12.959999999999923,
-      "kind": "talk"
+      "duration": 33.59999999999991,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
@@ -146,32 +103,35 @@
       "clip_end": 279.36,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 58
     },
     {
-      "seconds": 671.04,
+      "seconds": 279.36,
       "song": "What's the Use? (Feat. Thundercat)",
       "corroboration": 0,
       "silence_match": null,
-      "clip_start": 675.36,
-      "clip_end": 995.52,
+      "clip_start": 311.04,
+      "clip_end": 334.56,
       "start_refined": true,
-      "end_trimmed": false,
+      "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 43
+      "confidence": 51
     },
     {
-      "seconds": 995.52,
+      "seconds": 671.04,
       "song": "2009",
       "corroboration": 0,
       "silence_match": null,
-      "clip_start": 1014.24,
-      "clip_end": 1029,
+      "clip_start": 697.4399999999999,
+      "clip_end": 995.52,
       "start_refined": true,
-      "end_trimmed": false,
-      "suspect": true,
-      "confidence": 0
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
     }
   ],
   "silence_intervals": [
@@ -424,10 +384,13 @@
   "confidence": {
     "scores": [
       58,
-      43,
-      0
+      51,
+      51
     ],
-    "avg": 33.7,
-    "min": 0
-  }
+    "avg": 53.3,
+    "min": 51
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

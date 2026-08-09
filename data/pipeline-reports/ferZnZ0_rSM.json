@@ -2,22 +2,24 @@
   "video_id": "ferZnZ0_rSM",
   "title": "Anderson .Paak & The Free Nationals: NPR Music Tiny Desk Concert",
   "duration": 938,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/ferZnZ0_rSM.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/ferZnZ0_rSM.mp3",
   "description_songs": [
-    "Follow NPR Music:",
-    "Twitter: https://twitter.com/nprmusic",
-    "Instagram: https://www.instagram.com/nprmusic",
-    "Malibu is available now:",
-    "iTunes: https://itunes.apple.com/us/album/malibu/id1065681363?app=itunes&ign-mpt=uo%3D4",
     "Come Down",
     "Heart Don't Stand A Chance",
     "Put Me Thru",
-    "Suede",
-    "For more Tiny Desk concerts, subscribe to our podcast: http://www.npr.org/podcasts/510292/tiny-desk-concerts-video"
+    "Suede"
   ],
-  "method": "comments",
+  "method": "yamnet",
   "resolve_notes": {
-    "A_comments": "ok \u2014 449 likes, template #1 (description lists 10 \u2014 comment may split/merge differently)"
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 3 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
@@ -25,177 +27,118 @@
       "start": 1.44,
       "end": 8.16,
       "duration": 6.720000000000001,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 27.84,
       "end": 29.759999999999998,
       "duration": 1.9199999999999982,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 176.64,
-      "end": 178.07999999999998,
-      "duration": 1.4399999999999977,
-      "kind": "applause"
-    },
-    {
-      "start": 179.04,
-      "end": 184.79999999999998,
-      "duration": 5.759999999999991,
-      "kind": "applause"
-    },
-    {
-      "start": 184.79999999999998,
-      "end": 186.23999999999998,
-      "duration": 1.4399999999999977,
-      "kind": "talk"
-    },
-    {
-      "start": 186.23999999999998,
-      "end": 192.48,
-      "duration": 6.240000000000009,
-      "kind": "applause"
-    },
-    {
-      "start": 193.44,
-      "end": 211.67999999999998,
-      "duration": 18.23999999999998,
-      "kind": "talk"
-    },
-    {
-      "start": 213.6,
       "end": 223.67999999999998,
-      "duration": 10.079999999999984,
-      "kind": "talk"
+      "duration": 47.03999999999999,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 256.32,
       "end": 259.68,
       "duration": 3.3600000000000136,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 404.64,
-      "end": 414.72,
-      "duration": 10.080000000000041,
-      "kind": "applause"
-    },
-    {
-      "start": 414.71999999999997,
-      "end": 422.88,
-      "duration": 8.160000000000025,
-      "kind": "talk"
-    },
-    {
-      "start": 422.88,
-      "end": 426.24,
-      "duration": 3.3600000000000136,
-      "kind": "applause"
-    },
-    {
-      "start": 426.24,
       "end": 454.56,
-      "duration": 28.319999999999993,
-      "kind": "talk"
+      "duration": 49.920000000000016,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 641.28,
-      "end": 648.96,
-      "duration": 7.680000000000064,
-      "kind": "applause"
-    },
-    {
-      "start": 650.4,
-      "end": 651.84,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 651.84,
       "end": 708.96,
-      "duration": 57.120000000000005,
-      "kind": "talk"
+      "duration": 67.68000000000006,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 712.3199999999999,
       "end": 714.24,
       "duration": 1.9200000000000728,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 849.6,
       "end": 851.52,
       "duration": 1.919999999999959,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 907.68,
-      "end": 914.88,
-      "duration": 7.2000000000000455,
-      "kind": "applause"
-    },
-    {
-      "start": 915.8399999999999,
-      "end": 930.24,
-      "duration": 14.400000000000091,
-      "kind": "applause"
-    },
-    {
-      "start": 930.7199999999999,
       "end": 936.48,
-      "duration": 5.760000000000105,
-      "kind": "talk"
+      "duration": 28.800000000000068,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
-      "seconds": 0,
+      "seconds": 8.16,
       "song": "Come Down",
       "corroboration": 0,
-      "silence_match": 0.0,
+      "silence_match": 7.11515,
       "clip_start": 8.16,
       "clip_end": 176.64,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 66
     },
     {
-      "seconds": 224,
+      "seconds": 176.64,
       "song": "Heart Don't Stand A Chance",
       "corroboration": 0,
-      "silence_match": 223.706,
+      "silence_match": null,
       "clip_start": 223.67999999999998,
       "clip_end": 404.64,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 51
     },
     {
-      "seconds": 455,
+      "seconds": 404.64,
       "song": "Put Me Thru",
       "corroboration": 0,
-      "silence_match": 454.228,
+      "silence_match": null,
       "clip_start": 454.56,
       "clip_end": 641.28,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 51
     },
     {
-      "seconds": 718,
+      "seconds": 641.28,
       "song": "Suede",
       "corroboration": 0,
-      "silence_match": 714.317,
-      "clip_start": 714.24,
+      "silence_match": 639.672,
+      "clip_start": 708.96,
       "clip_end": 907.68,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 66
     }
   ],
   "silence_intervals": [
@@ -377,12 +320,15 @@
   ],
   "confidence": {
     "scores": [
-      76,
-      76,
-      76,
-      76
+      66,
+      51,
+      51,
+      66
     ],
-    "avg": 76.0,
-    "min": 76
-  }
+    "avg": 58.5,
+    "min": 51
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

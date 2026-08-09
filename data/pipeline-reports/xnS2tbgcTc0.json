@@ -2,7 +2,7 @@
   "video_id": "xnS2tbgcTc0",
   "title": "Summer Walker: NPR Music Tiny Desk Concert",
   "duration": 888,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/xnS2tbgcTc0.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/xnS2tbgcTc0.mp3",
   "description_songs": [
     "Session 32",
     "Wasted",
@@ -12,7 +12,14 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 2400 likes, template #1"
+    "A_comments": "ok \u2014 2400 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
@@ -20,135 +27,51 @@
       "start": 160.79999999999998,
       "end": 165.6,
       "duration": 4.800000000000011,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 318.24,
       "end": 323.52,
       "duration": 5.279999999999973,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 487.68,
-      "end": 495.36,
-      "duration": 7.680000000000007,
-      "kind": "applause"
-    },
-    {
-      "start": 495.35999999999996,
-      "end": 499.2,
-      "duration": 3.840000000000032,
-      "kind": "talk"
-    },
-    {
-      "start": 499.2,
-      "end": 505.44,
-      "duration": 6.240000000000009,
-      "kind": "applause"
-    },
-    {
-      "start": 505.44,
-      "end": 524.16,
-      "duration": 18.71999999999997,
-      "kind": "talk"
-    },
-    {
-      "start": 526.0799999999999,
-      "end": 527.04,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 528.0,
-      "end": 530.4,
-      "duration": 2.3999999999999773,
-      "kind": "applause"
-    },
-    {
-      "start": 533.28,
-      "end": 533.76,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 533.76,
-      "end": 535.68,
-      "duration": 1.919999999999959,
-      "kind": "talk"
-    },
-    {
-      "start": 536.16,
-      "end": 537.12,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 538.0799999999999,
-      "end": 540.96,
-      "duration": 2.880000000000109,
-      "kind": "talk"
-    },
-    {
-      "start": 541.92,
-      "end": 544.8,
-      "duration": 2.8799999999999955,
-      "kind": "applause"
-    },
-    {
-      "start": 544.8,
       "end": 551.04,
-      "duration": 6.240000000000009,
-      "kind": "talk"
-    },
-    {
-      "start": 620.16,
-      "end": 622.56,
-      "duration": 2.3999999999999773,
-      "kind": "talk"
+      "duration": 63.35999999999996,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 667.68,
-      "end": 674.4,
-      "duration": 6.720000000000027,
-      "kind": "applause"
-    },
-    {
-      "start": 674.4,
       "end": 685.92,
-      "duration": 11.519999999999982,
-      "kind": "talk"
+      "duration": 18.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 841.92,
-      "end": 850.08,
-      "duration": 8.160000000000082,
-      "kind": "applause"
-    },
-    {
-      "start": 850.0799999999999,
-      "end": 872.64,
-      "duration": 22.56000000000006,
-      "kind": "talk"
-    },
-    {
-      "start": 873.12,
       "end": 879.36,
-      "duration": 6.240000000000009,
-      "kind": "applause"
+      "duration": 37.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
       "seconds": 0,
       "song": "Session 32",
-      "corroboration": 2,
+      "corroboration": 1,
       "silence_match": 0.0,
       "clip_start": 0,
       "clip_end": 160.79999999999998,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 82
+      "confidence": 75
     },
     {
       "seconds": 170,
@@ -159,44 +82,48 @@
       "clip_end": 318.24,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 61
     },
     {
       "seconds": 325,
       "song": "Girls Need Love",
-      "corroboration": 2,
+      "corroboration": 1,
       "silence_match": null,
       "clip_start": 323.52,
       "clip_end": 487.68,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 68
     },
     {
       "seconds": 554,
       "song": "Riot",
-      "corroboration": 1,
+      "corroboration": 0,
       "silence_match": 553.782,
       "clip_start": 551.04,
       "clip_end": 667.68,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 76
     },
     {
       "seconds": 689,
       "song": "Playing Games",
-      "corroboration": 1,
+      "corroboration": 0,
       "silence_match": 685.919,
       "clip_start": 685.92,
       "clip_end": 841.92,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 76
     }
   ],
   "silence_intervals": [
@@ -343,13 +270,16 @@
   ],
   "confidence": {
     "scores": [
-      82,
-      61,
       75,
-      83,
-      83
+      61,
+      68,
+      76,
+      76
     ],
-    "avg": 76.8,
+    "avg": 71.2,
     "min": 61
-  }
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

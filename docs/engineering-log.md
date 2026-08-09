@@ -15,6 +15,58 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-09 — Refined v2 snapshot build verification blocked
+
+- **Symptom and impact:** The required `npm run build` check could not start,
+  so the refreshed pipeline snapshot has not received production-build
+  verification in this environment.
+- **Root cause / evidence:** The repository's `npm` launcher invokes a Windows
+  Node.js installation from WSL1 and exits before Next.js starts with `WSL 1
+  is not supported` and `Could not determine Node.js install directory`.
+- **Systems and files:** WSL1/Windows Node.js interop, `npm run build`, and
+  `data/pipeline-reports/`.
+- **Resolution / next action:** Run the build from WSL2 or another Linux
+  Node.js runtime after the database seed policy is approved.
+- **Verification:** `npm run build` exited with code 1 before application
+  compilation; the snapshot itself was separately checked to contain exactly
+  48 source report JSONs plus `_mass_pull_summary.json`, byte-identical to the
+  `refined_v2` source, with no audio, WebM, or `.part` files.
+
+### 2026-08-09 — Refined v2 snapshot commit blocked
+
+- **Symptom and impact:** The verified snapshot could not be committed, so
+  the refreshed reports and engineering-log entry remain unstaged.
+- **Root cause / evidence:** Git could not create
+  `/home/torazo/code/tiny-office-web/.git/index.lock` because the repository
+  metadata is mounted read-only.
+- **Systems and files:** The repository Git index, `data/pipeline-reports/`,
+  `scripts/seed-pipeline.mjs`, and `docs/engineering-log.md`.
+- **Resolution / next action:** Retry a scoped `git add` and commit from an
+  environment with writable Git metadata; do not push or publish from this
+  task.
+- **Verification:** `git diff --check` passed; the final scoped `git add`
+  exited before staging with the same read-only-filesystem error, and no index
+  lock was created.
+
+### 2026-08-09 — Refined v2 seed command blocked
+
+- **Symptom and impact:** The requested `npm run seed:pipeline` command could
+  not start, so the database replacement could not run through the checked-in
+  Node script from this shell.
+- **Root cause / evidence:** The repository's `npm` launcher invokes a Windows
+  Node.js installation from WSL1 and exits before the script starts with
+  `WSL 1 is not supported` and `Could not determine Node.js install
+  directory`.
+- **Systems and files:** WSL1/Windows Node.js interop, `npm run
+  seed:pipeline`, and `scripts/seed-pipeline.mjs`.
+- **Resolution / next action:** Applied the same reviewed, targeted DML
+  transaction through the authenticated Supabase SQL connector. Rerun the
+  checked-in Node seed from WSL2 or another Linux Node.js runtime when
+  available for independent script-level verification.
+- **Verification:** `npm run seed:pipeline` exited with code 1 before loading
+  the script; the connector transaction then produced exactly 48 performances
+  and 178 songs, with no stale IDs or obsolete song rows remaining.
+
 ### 2026-08-09 — Private playlist verification and live migration blocked
 
 - **Symptom and impact:** The account-private playlist change could not be

@@ -2,7 +2,7 @@
   "video_id": "id28fCyYgIU",
   "title": "Damian 'Jr. Gong' Marley: NPR Music Tiny Desk Concert",
   "duration": 913,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/id28fCyYgIU.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/id28fCyYgIU.mp3",
   "description_songs": [
     "Slave Mill",
     "So a Child May Follow",
@@ -10,64 +10,45 @@
   ],
   "method": "yamnet",
   "resolve_notes": {
-    "A_comments": "failed \u2014 no comment had 2+ timestamps",
-    "B_yamnet": "ok \u2014 8 usable span(s), took top 2"
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 3 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 284.15999999999997,
-      "end": 288.48,
-      "duration": 4.32000000000005,
-      "kind": "applause"
-    },
-    {
-      "start": 288.96,
       "end": 310.56,
-      "duration": 21.600000000000023,
-      "kind": "talk"
+      "duration": 26.400000000000034,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 586.0799999999999,
-      "end": 592.8,
-      "duration": 6.720000000000027,
-      "kind": "applause"
-    },
-    {
-      "start": 593.28,
       "end": 614.4,
-      "duration": 21.120000000000005,
-      "kind": "talk"
+      "duration": 28.32000000000005,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 890.88,
       "end": 891.36,
       "duration": 0.4800000000000182,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 893.76,
-      "end": 896.16,
-      "duration": 2.3999999999999773,
-      "kind": "applause"
-    },
-    {
-      "start": 896.16,
-      "end": 901.4399999999999,
-      "duration": 5.279999999999973,
-      "kind": "talk"
-    },
-    {
-      "start": 901.4399999999999,
-      "end": 907.1999999999999,
-      "duration": 5.759999999999991,
-      "kind": "applause"
-    },
-    {
-      "start": 907.1999999999999,
       "end": 909.6,
-      "duration": 2.400000000000091,
-      "kind": "talk"
+      "duration": 15.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
@@ -80,32 +61,35 @@
       "clip_end": 284.15999999999997,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 43
     },
     {
-      "seconds": 586.0799999999999,
+      "seconds": 284.15999999999997,
       "song": "So a Child May Follow",
       "corroboration": 0,
       "silence_match": null,
-      "clip_start": 592.8,
-      "clip_end": 593.28,
+      "clip_start": 310.56,
+      "clip_end": 586.0799999999999,
       "start_refined": true,
       "end_trimmed": true,
-      "suspect": true,
-      "confidence": 1
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
     },
     {
-      "seconds": 901.4399999999999,
+      "seconds": 586.0799999999999,
       "song": "Speak Life",
       "corroboration": 0,
       "silence_match": null,
-      "clip_start": 909.6,
-      "clip_end": 913,
+      "clip_start": 614.4,
+      "clip_end": 890.88,
       "start_refined": true,
-      "end_trimmed": false,
-      "suspect": true,
-      "confidence": 0
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
     }
   ],
   "silence_intervals": [
@@ -178,10 +162,13 @@
   "confidence": {
     "scores": [
       43,
-      1,
-      0
+      51,
+      51
     ],
-    "avg": 14.7,
-    "min": 0
-  }
+    "avg": 48.3,
+    "min": 43
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

@@ -2,115 +2,115 @@
   "video_id": "QKzobTCIRDw",
   "title": "Tank And The Bangas: NPR Music Tiny Desk Concert",
   "duration": 1429,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/QKzobTCIRDw.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/QKzobTCIRDw.mp3",
   "description_songs": [
     "Boxes And Squares",
     "Quick",
     "Rollercoasters"
   ],
-  "method": "comments",
+  "method": "yamnet",
   "resolve_notes": {
-    "A_comments": "ok \u2014 704 likes, template #1"
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 4 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 1.92,
-      "end": 16.32,
-      "duration": 14.4,
-      "kind": "applause"
+      "end": 18.72,
+      "duration": 16.799999999999997,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 639.36,
-      "end": 644.16,
-      "duration": 4.7999999999999545,
-      "kind": "talk"
+      "end": 640.8,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 755.04,
       "end": 755.52,
       "duration": 0.4800000000000182,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 764.16,
       "end": 765.12,
       "duration": 0.9600000000000364,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 827.04,
       "end": 827.52,
       "duration": 0.4800000000000182,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 1370.3999999999999,
       "end": 1374.24,
       "duration": 3.8400000000001455,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 1376.6399999999999,
-      "end": 1379.52,
-      "duration": 2.880000000000109,
-      "kind": "applause"
-    },
-    {
-      "start": 1380.96,
-      "end": 1401.12,
-      "duration": 20.159999999999854,
-      "kind": "applause"
-    },
-    {
-      "start": 1402.08,
-      "end": 1420.32,
-      "duration": 18.24000000000001,
-      "kind": "applause"
-    },
-    {
-      "start": 1420.32,
       "end": 1426.56,
-      "duration": 6.240000000000009,
-      "kind": "talk"
+      "duration": 49.92000000000007,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
-      "seconds": 60,
-      "song": "OK I really don\u2019t get it",
+      "seconds": 18.72,
+      "song": "Boxes And Squares",
       "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 16.32,
-      "clip_end": 90,
-      "start_refined": true,
-      "end_trimmed": false,
-      "suspect": false,
-      "confidence": 53
-    },
-    {
-      "seconds": 90,
-      "song": "Actually it\u2019s kind of fun",
-      "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 90,
-      "clip_end": 120,
-      "start_refined": false,
-      "end_trimmed": false,
-      "suspect": false,
-      "confidence": 45
-    },
-    {
-      "seconds": 120,
-      "song": "This is a beautiful work of art and these people are legitimate geniuses",
-      "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 120,
+      "silence_match": 18.142,
+      "clip_start": 18.72,
       "clip_end": 755.04,
-      "start_refined": false,
+      "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 53
+      "confidence": 66
+    },
+    {
+      "seconds": 764.16,
+      "song": "Quick",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 765.12,
+      "clip_end": 827.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 1370.3999999999999,
+      "song": "Rollercoasters",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1374.24,
+      "clip_end": 1376.6399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 1
     }
   ],
   "silence_intervals": [
@@ -152,11 +152,14 @@
   ],
   "confidence": {
     "scores": [
-      53,
-      45,
-      53
+      66,
+      51,
+      1
     ],
-    "avg": 50.3,
-    "min": 45
-  }
+    "avg": 39.3,
+    "min": 1
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

@@ -2,7 +2,7 @@
   "video_id": "up8ODGFWgFg",
   "title": "Usher: Tiny Desk Concert",
   "duration": 1487,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/up8ODGFWgFg.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/up8ODGFWgFg.mp3",
   "description_songs": [
     "You Make Me Wanna...",
     "Superstar",
@@ -13,317 +13,215 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 2200 likes, template #1"
+    "A_comments": "ok \u2014 837 likes, matched all 6 description song(s), retained 6 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 1,
+    "rejected": 2,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 0.0,
-      "end": 7.68,
-      "duration": 7.68,
-      "kind": "talk"
+      "end": 6.24,
+      "duration": 6.24,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 7.68,
-      "end": 8.16,
-      "duration": 0.4800000000000004,
-      "kind": "applause"
-    },
-    {
-      "start": 8.16,
       "end": 12.0,
-      "duration": 3.84,
-      "kind": "talk"
+      "duration": 4.32,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 16.32,
       "end": 17.76,
       "duration": 1.4400000000000013,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 232.32,
-      "end": 241.92,
-      "duration": 9.599999999999994,
-      "kind": "applause"
-    },
-    {
-      "start": 241.92,
       "end": 265.92,
-      "duration": 24.00000000000003,
-      "kind": "talk"
+      "duration": 33.60000000000002,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 269.28,
       "end": 272.64,
       "duration": 3.3600000000000136,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 276.48,
+      "start": 278.4,
       "end": 281.28000000000003,
-      "duration": 4.800000000000011,
-      "kind": "talk"
+      "duration": 2.8800000000000523,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 439.68,
-      "end": 441.6,
-      "duration": 1.920000000000016,
-      "kind": "applause"
-    },
-    {
-      "start": 443.52,
-      "end": 445.44,
-      "duration": 1.920000000000016,
-      "kind": "applause"
+      "end": 447.84,
+      "duration": 8.159999999999968,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 639.36,
-      "end": 650.88,
-      "duration": 11.519999999999982,
-      "kind": "applause"
-    },
-    {
-      "start": 650.88,
-      "end": 659.04,
-      "duration": 8.159999999999968,
-      "kind": "talk"
-    },
-    {
-      "start": 659.04,
-      "end": 662.4,
-      "duration": 3.3600000000000136,
-      "kind": "applause"
-    },
-    {
-      "start": 662.4,
       "end": 714.72,
-      "duration": 52.32000000000005,
-      "kind": "talk"
+      "duration": 75.36000000000001,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 896.16,
-      "end": 900.96,
-      "duration": 4.800000000000068,
-      "kind": "applause"
+      "end": 910.56,
+      "duration": 14.399999999999977,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
-      "start": 901.4399999999999,
-      "end": 901.92,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
+      "start": 914.88,
+      "end": 916.8,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 902.4,
-      "end": 907.1999999999999,
-      "duration": 4.7999999999999545,
-      "kind": "talk"
+      "start": 929.76,
+      "end": 931.1999999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 913.92,
-      "end": 920.16,
-      "duration": 6.240000000000009,
-      "kind": "talk"
+      "start": 943.1999999999999,
+      "end": 945.12,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 928.8,
-      "end": 933.12,
-      "duration": 4.32000000000005,
-      "kind": "talk"
-    },
-    {
-      "start": 941.28,
-      "end": 946.0799999999999,
-      "duration": 4.7999999999999545,
-      "kind": "talk"
-    },
-    {
-      "start": 961.92,
-      "end": 964.3199999999999,
-      "duration": 2.3999999999999773,
-      "kind": "talk"
-    },
-    {
-      "start": 972.48,
+      "start": 973.92,
       "end": 976.3199999999999,
-      "duration": 3.839999999999918,
-      "kind": "talk"
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 1016.16,
+      "start": 1017.5999999999999,
       "end": 1020.0,
-      "duration": 3.840000000000032,
-      "kind": "talk"
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1077.12,
       "end": 1078.56,
       "duration": 1.4400000000000546,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1211.04,
-      "end": 1220.6399999999999,
-      "duration": 9.599999999999909,
-      "kind": "applause"
-    },
-    {
-      "start": 1220.6399999999999,
-      "end": 1222.56,
-      "duration": 1.9200000000000728,
-      "kind": "talk"
-    },
-    {
-      "start": 1222.56,
-      "end": 1223.52,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 1223.52,
-      "end": 1227.36,
-      "duration": 3.839999999999918,
-      "kind": "talk"
-    },
-    {
-      "start": 1228.32,
-      "end": 1231.2,
-      "duration": 2.880000000000109,
-      "kind": "applause"
-    },
-    {
-      "start": 1231.2,
-      "end": 1233.6,
-      "duration": 2.3999999999998636,
-      "kind": "talk"
-    },
-    {
-      "start": 1234.56,
-      "end": 1238.3999999999999,
-      "duration": 3.839999999999918,
-      "kind": "applause"
-    },
-    {
-      "start": 1238.3999999999999,
-      "end": 1242.72,
-      "duration": 4.320000000000164,
-      "kind": "talk"
-    },
-    {
-      "start": 1242.72,
-      "end": 1244.16,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 1246.08,
-      "end": 1248.96,
-      "duration": 2.880000000000109,
-      "kind": "applause"
-    },
-    {
-      "start": 1248.96,
       "end": 1266.24,
-      "duration": 17.279999999999973,
-      "kind": "talk"
+      "duration": 55.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1454.8799999999999,
-      "end": 1469.28,
-      "duration": 14.400000000000091,
-      "kind": "applause"
-    },
-    {
-      "start": 1469.76,
-      "end": 1476.48,
-      "duration": 6.720000000000027,
-      "kind": "talk"
-    },
-    {
-      "start": 1476.48,
-      "end": 1478.8799999999999,
-      "duration": 2.3999999999998636,
-      "kind": "applause"
-    },
-    {
-      "start": 1479.36,
       "end": 1482.72,
-      "duration": 3.3600000000001273,
-      "kind": "talk"
+      "duration": 27.840000000000146,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
-      "seconds": 84,
-      "song": "U Make Me Wanna",
-      "corroboration": 2,
+      "seconds": 83,
+      "song": "You Make Me Wanna...",
+      "corroboration": 0,
       "silence_match": null,
-      "clip_start": 84,
+      "clip_start": 83,
       "clip_end": 232.32,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 67
+      "confidence": 53
     },
     {
-      "seconds": 293,
+      "seconds": 295,
       "song": "Superstar",
-      "corroboration": 2,
+      "corroboration": 0,
       "silence_match": null,
       "clip_start": 281.28000000000003,
       "clip_end": 439.68,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 61
     },
     {
-      "seconds": 448,
-      "song": "U Don\u2019t Have To Call",
-      "corroboration": 1,
+      "seconds": 447,
+      "song": "U Don't Have to Call",
+      "corroboration": 0,
       "silence_match": null,
-      "clip_start": 445.44,
+      "clip_start": 447.84,
       "clip_end": 639.36,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 61
     },
     {
-      "seconds": 702,
-      "song": "Nice n Slow",
+      "seconds": 715,
+      "song": "Nice & Slow",
       "corroboration": 0,
-      "silence_match": 701.647,
+      "silence_match": null,
       "clip_start": 714.72,
       "clip_end": 896.16,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 61
     },
     {
       "seconds": 977,
       "song": "Confessions Part II",
-      "corroboration": 2,
+      "corroboration": 0,
       "silence_match": null,
       "clip_start": 976.3199999999999,
       "clip_end": 1211.04,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 61
     },
     {
-      "seconds": 1268,
+      "seconds": 1266,
       "song": "My Way",
-      "corroboration": 2,
-      "silence_match": 1266.68,
+      "corroboration": 0,
+      "silence_match": 1266.03,
       "clip_start": 1266.24,
       "clip_end": 1454.8799999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 76
     }
   ],
   "silence_intervals": [
@@ -420,14 +318,17 @@
   ],
   "confidence": {
     "scores": [
-      67,
-      75,
-      68,
-      76,
-      75,
-      90
+      53,
+      61,
+      61,
+      61,
+      61,
+      76
     ],
-    "avg": 75.2,
-    "min": 67
-  }
+    "avg": 62.2,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

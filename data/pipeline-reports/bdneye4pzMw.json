@@ -2,7 +2,7 @@
   "video_id": "bdneye4pzMw",
   "title": "Sting And Shaggy: NPR Music Tiny Desk Concert",
   "duration": 875,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/bdneye4pzMw.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/bdneye4pzMw.mp3",
   "description_songs": [
     "Englishman in New York",
     "Don't Make Me Wait",
@@ -10,143 +10,92 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 384 likes, template #1"
+    "A_comments": "ok \u2014 666 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 6,
+    "accepted": 6,
+    "rejected": 0,
+    "filtered_entries": 2
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 0.0,
-      "end": 7.68,
-      "duration": 7.68,
-      "kind": "applause"
-    },
-    {
-      "start": 8.64,
       "end": 10.08,
-      "duration": 1.4399999999999995,
-      "kind": "talk"
+      "duration": 10.08,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 241.92,
-      "end": 247.2,
-      "duration": 5.280000000000001,
-      "kind": "applause"
-    },
-    {
-      "start": 248.16,
-      "end": 253.43999999999997,
-      "duration": 5.279999999999973,
-      "kind": "applause"
-    },
-    {
-      "start": 253.92,
-      "end": 256.32,
-      "duration": 2.4000000000000057,
-      "kind": "applause"
-    },
-    {
-      "start": 256.32,
       "end": 277.44,
-      "duration": 21.120000000000005,
-      "kind": "talk"
+      "duration": 35.52000000000001,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 502.56,
-      "end": 505.92,
-      "duration": 3.3600000000000136,
-      "kind": "applause"
-    },
-    {
-      "start": 505.91999999999996,
-      "end": 508.32,
-      "duration": 2.400000000000034,
-      "kind": "talk"
-    },
-    {
-      "start": 508.32,
-      "end": 510.24,
-      "duration": 1.920000000000016,
-      "kind": "applause"
-    },
-    {
-      "start": 511.2,
       "end": 540.96,
-      "duration": 29.760000000000048,
-      "kind": "talk"
+      "duration": 38.400000000000034,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 840.9599999999999,
       "end": 844.3199999999999,
       "duration": 3.3600000000000136,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 847.1999999999999,
-      "end": 852.96,
-      "duration": 5.760000000000105,
-      "kind": "applause"
-    },
-    {
-      "start": 853.92,
-      "end": 854.88,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 857.76,
-      "end": 858.24,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 858.24,
-      "end": 860.64,
-      "duration": 2.3999999999999773,
-      "kind": "talk"
-    },
-    {
-      "start": 860.64,
       "end": 867.36,
-      "duration": 6.720000000000027,
-      "kind": "applause"
+      "duration": 20.160000000000082,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
       "seconds": 0,
-      "song": "Englishman/Jamaican in New York",
-      "corroboration": 1,
+      "song": "Englishman in New York",
+      "corroboration": 3,
       "silence_match": null,
       "clip_start": 10.08,
       "clip_end": 241.92,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 82
     },
     {
       "seconds": 265,
-      "song": "Don't make me wait",
-      "corroboration": 1,
+      "song": "Don't Make Me Wait",
+      "corroboration": 2,
       "silence_match": 264.036,
       "clip_start": 277.44,
       "clip_end": 502.56,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 90
     },
     {
       "seconds": 515,
       "song": "Shape of My Heart/Lucid Dreams",
-      "corroboration": 1,
+      "corroboration": 2,
       "silence_match": 517.717,
-      "clip_start": 510.24,
-      "clip_end": 511.2,
-      "start_refined": true,
+      "clip_start": 515,
+      "clip_end": 840.9599999999999,
+      "start_refined": false,
       "end_trimmed": true,
-      "suspect": true,
-      "confidence": 33
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 82
     }
   ],
   "silence_intervals": [
@@ -238,11 +187,14 @@
   ],
   "confidence": {
     "scores": [
-      68,
-      83,
-      33
+      82,
+      90,
+      82
     ],
-    "avg": 61.3,
-    "min": 33
-  }
+    "avg": 84.7,
+    "min": 82
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

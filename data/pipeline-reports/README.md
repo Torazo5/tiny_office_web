@@ -1,7 +1,8 @@
 # Pipeline reports (static snapshot)
 
 Raw copy of every `reports/<video_id>.json` from the `tiny_office` pipeline
-repo (53 files, ~480KB), as of 2026-08-08. Committed here — not referenced
+repo's `refined_v2` batch (48 report JSONs plus `_mass_pull_summary.json`,
+~305KB), as of 2026-08-09. Committed here — not referenced
 by path from the other repo — so this repo is self-contained: whoever
 builds the backend against it doesn't need filesystem access to a sibling
 repo that may not exist in their environment (a cloud coding agent scoped

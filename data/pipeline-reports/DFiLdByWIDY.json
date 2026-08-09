@@ -2,7 +2,7 @@
   "video_id": "DFiLdByWIDY",
   "title": "Lizzo: NPR Music Tiny Desk Concert",
   "duration": 1019,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/DFiLdByWIDY.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/DFiLdByWIDY.mp3",
   "description_songs": [
     "Cuz I Love You",
     "Truth Hurts",
@@ -10,7 +10,14 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 32 likes, template #0"
+    "A_comments": "ok \u2014 33 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
@@ -18,223 +25,176 @@
       "start": 6.72,
       "end": 8.16,
       "duration": 1.4400000000000004,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 8.64,
-      "end": 10.56,
-      "duration": 1.92,
-      "kind": "applause"
+      "end": 11.04,
+      "duration": 2.3999999999999986,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 16.32,
       "end": 17.76,
       "duration": 1.4400000000000013,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 188.16,
       "end": 190.55999999999997,
       "duration": 2.3999999999999773,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 229.92,
       "end": 231.35999999999999,
       "duration": 1.4399999999999977,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 231.84,
-      "end": 233.76,
-      "duration": 1.9199999999999875,
-      "kind": "applause"
-    },
-    {
-      "start": 234.72,
-      "end": 245.27999999999997,
-      "duration": 10.559999999999974,
-      "kind": "applause"
-    },
-    {
-      "start": 247.2,
-      "end": 249.11999999999998,
-      "duration": 1.9199999999999875,
-      "kind": "applause"
-    },
-    {
-      "start": 251.04,
       "end": 253.92,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
+      "duration": 22.079999999999984,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 263.52,
-      "end": 267.84000000000003,
-      "duration": 4.32000000000005,
-      "kind": "talk"
+      "end": 265.92,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 292.32,
       "end": 294.24,
       "duration": 1.920000000000016,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 297.59999999999997,
       "end": 299.04,
       "duration": 1.4400000000000546,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 308.15999999999997,
       "end": 310.56,
       "duration": 2.400000000000034,
-      "kind": "talk"
-    },
-    {
-      "start": 326.88,
-      "end": 329.76,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 362.88,
       "end": 365.28000000000003,
       "duration": 2.400000000000034,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 448.8,
       "end": 450.72,
       "duration": 1.920000000000016,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 535.1999999999999,
       "end": 537.12,
       "duration": 1.9200000000000728,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 537.12,
       "end": 544.32,
       "duration": 7.2000000000000455,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 547.1999999999999,
       "end": 547.68,
       "duration": 0.4800000000000182,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 550.0799999999999,
       "end": 550.56,
       "duration": 0.4800000000000182,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 562.0799999999999,
-      "end": 564.96,
-      "duration": 2.880000000000109,
-      "kind": "talk"
+      "end": 563.52,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 571.68,
       "end": 573.12,
       "duration": 1.4400000000000546,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 580.3199999999999,
-      "end": 589.4399999999999,
-      "duration": 9.120000000000005,
-      "kind": "talk"
+      "end": 583.2,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 608.64,
       "end": 610.56,
       "duration": 1.919999999999959,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 628.3199999999999,
       "end": 629.76,
       "duration": 1.4400000000000546,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 632.16,
       "end": 633.6,
       "duration": 1.4400000000000546,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 636.48,
       "end": 638.4,
       "duration": 1.919999999999959,
-      "kind": "talk"
-    },
-    {
-      "start": 646.56,
-      "end": 649.4399999999999,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
-    },
-    {
-      "start": 655.68,
-      "end": 657.12,
-      "duration": 1.4400000000000546,
-      "kind": "talk"
-    },
-    {
-      "start": 664.8,
-      "end": 666.24,
-      "duration": 1.4400000000000546,
-      "kind": "talk"
-    },
-    {
-      "start": 668.64,
-      "end": 670.56,
-      "duration": 1.919999999999959,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 716.16,
       "end": 717.6,
       "duration": 1.4400000000000546,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 996.9599999999999,
-      "end": 999.36,
-      "duration": 2.400000000000091,
-      "kind": "applause"
-    },
-    {
-      "start": 999.36,
-      "end": 1001.28,
-      "duration": 1.919999999999959,
-      "kind": "talk"
-    },
-    {
-      "start": 1001.28,
-      "end": 1011.36,
-      "duration": 10.080000000000041,
-      "kind": "applause"
-    },
-    {
-      "start": 1014.24,
-      "end": 1015.1999999999999,
-      "duration": 0.9599999999999227,
-      "kind": "applause"
-    },
-    {
-      "start": 1017.12,
       "end": 1017.6,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
+      "duration": 20.6400000000001,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
@@ -247,6 +207,7 @@
       "clip_end": 231.84,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 76
     },
@@ -259,6 +220,7 @@
       "clip_end": 537.12,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 61
     },
@@ -267,10 +229,11 @@
       "song": "Juice",
       "corroboration": 0,
       "silence_match": null,
-      "clip_start": 670.56,
+      "clip_start": 638.4,
       "clip_end": 996.9599999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 61
     }
@@ -335,5 +298,8 @@
     ],
     "avg": 66.0,
     "min": 61
-  }
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

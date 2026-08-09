@@ -2,7 +2,7 @@
   "video_id": "jIIuzB11dsA",
   "title": "Harry Styles: NPR Music Tiny Desk Concert",
   "duration": 1153,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/jIIuzB11dsA.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/jIIuzB11dsA.mp3",
   "description_songs": [
     "Cherry",
     "Watermelon Sugar",
@@ -11,7 +11,14 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 2200 likes, template #1"
+    "A_comments": "ok \u2014 2200 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
@@ -19,153 +26,111 @@
       "start": 17.28,
       "end": 20.16,
       "duration": 2.879999999999999,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 122.39999999999999,
+      "start": 123.36,
       "end": 125.28,
-      "duration": 2.8800000000000097,
-      "kind": "talk"
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 132.96,
       "end": 134.88,
       "duration": 1.9199999999999875,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 203.04,
-      "end": 203.99999999999997,
-      "duration": 0.9599999999999795,
-      "kind": "applause"
+      "end": 235.2,
+      "duration": 32.16,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
-      "start": 205.44,
-      "end": 214.55999999999997,
-      "duration": 9.119999999999976,
-      "kind": "applause"
-    },
-    {
-      "start": 214.56,
-      "end": 304.8,
-      "duration": 90.24000000000001,
-      "kind": "talk"
+      "start": 235.67999999999998,
+      "end": 300.0,
+      "duration": 64.32000000000002,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 489.12,
-      "end": 497.28,
-      "duration": 8.159999999999968,
-      "kind": "applause"
-    },
-    {
-      "start": 498.24,
-      "end": 574.08,
-      "duration": 75.84000000000003,
-      "kind": "talk"
-    },
-    {
-      "start": 574.0799999999999,
-      "end": 578.4,
-      "duration": 4.32000000000005,
-      "kind": "applause"
-    },
-    {
-      "start": 578.4,
       "end": 636.96,
-      "duration": 58.56000000000006,
-      "kind": "talk"
+      "duration": 147.84000000000003,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 833.76,
-      "end": 834.24,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 835.1999999999999,
-      "end": 843.36,
-      "duration": 8.160000000000082,
-      "kind": "applause"
-    },
-    {
-      "start": 843.36,
       "end": 913.4399999999999,
-      "duration": 70.07999999999993,
-      "kind": "talk"
+      "duration": 79.67999999999995,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1127.04,
-      "end": 1136.16,
-      "duration": 9.120000000000118,
-      "kind": "applause"
-    },
-    {
-      "start": 1136.6399999999999,
-      "end": 1138.56,
-      "duration": 1.9200000000000728,
-      "kind": "talk"
-    },
-    {
-      "start": 1139.04,
-      "end": 1143.84,
-      "duration": 4.7999999999999545,
-      "kind": "applause"
-    },
-    {
-      "start": 1145.76,
       "end": 1146.24,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
+      "duration": 19.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
       "seconds": 0,
-      "song": "cherry",
-      "corroboration": 5,
+      "song": "Cherry",
+      "corroboration": 2,
       "silence_match": 4.85171,
       "clip_start": 0,
       "clip_end": 203.04,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 89
+      "confidence": 82
     },
     {
       "seconds": 300,
-      "song": "watermelon sugar",
+      "song": "Watermelon Sugar",
       "corroboration": 1,
       "silence_match": 298.949,
-      "clip_start": 304.8,
+      "clip_start": 300.0,
       "clip_end": 489.12,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 83
     },
     {
       "seconds": 636,
-      "song": "To be so lonely",
-      "corroboration": 6,
+      "song": "To Be So Lonely",
+      "corroboration": 2,
       "silence_match": 636.742,
       "clip_start": 636.96,
       "clip_end": 833.76,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 97
+      "confidence": 90
     },
     {
       "seconds": 912,
-      "song": "Adore you",
-      "corroboration": 5,
+      "song": "Adore You",
+      "corroboration": 2,
       "silence_match": 906.215,
       "clip_start": 913.4399999999999,
       "clip_end": 1127.04,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 97
+      "confidence": 90
     }
   ],
   "silence_intervals": [
@@ -637,12 +602,15 @@
   ],
   "confidence": {
     "scores": [
-      89,
+      82,
       83,
-      97,
-      97
+      90,
+      90
     ],
-    "avg": 91.5,
-    "min": 83
-  }
+    "avg": 86.2,
+    "min": 82
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

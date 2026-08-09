@@ -2,145 +2,150 @@
   "video_id": "9HUV5a7MgS4",
   "title": "Lianne La Havas: NPR Music Tiny Desk Concert",
   "duration": 860,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/9HUV5a7MgS4.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/9HUV5a7MgS4.mp3",
   "description_songs": [
-    "What You Don't Do\" 00:00",
-    "Unstoppable\" 04:00",
-    "Forget\" 08:41"
+    "What You Don't Do",
+    "Unstoppable",
+    "Forget"
   ],
-  "method": "comments",
+  "method": "yamnet",
   "resolve_notes": {
-    "A_comments": "ok \u2014 0 likes, template #5 (description lists 3 \u2014 comment may split/merge differently)"
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 3 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 0.0,
+      "end": 2.4,
+      "duration": 2.4,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 5.76,
       "end": 7.68,
-      "duration": 7.68,
-      "kind": "talk"
+      "duration": 1.92,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 14.399999999999999,
-      "end": 17.76,
-      "duration": 3.360000000000003,
-      "kind": "talk"
+      "end": 15.84,
+      "duration": 1.4400000000000013,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 71.52,
       "end": 75.36,
       "duration": 3.8400000000000034,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 82.56,
       "end": 84.0,
       "duration": 1.4399999999999977,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 208.32,
       "end": 209.76,
       "duration": 1.4399999999999977,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 210.23999999999998,
-      "end": 220.32,
-      "duration": 10.080000000000013,
-      "kind": "applause"
-    },
-    {
-      "start": 220.32,
       "end": 233.27999999999997,
-      "duration": 12.95999999999998,
-      "kind": "talk"
+      "duration": 23.039999999999992,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 238.07999999999998,
+      "end": 241.92,
+      "duration": 3.8400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 242.39999999999998,
       "end": 244.79999999999998,
-      "duration": 6.719999999999999,
-      "kind": "talk"
+      "duration": 2.4000000000000057,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 266.4,
       "end": 267.84000000000003,
       "duration": 1.4400000000000546,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 509.76,
-      "end": 514.56,
-      "duration": 4.7999999999999545,
-      "kind": "applause"
-    },
-    {
-      "start": 515.52,
-      "end": 520.8,
-      "duration": 5.279999999999973,
-      "kind": "applause"
-    },
-    {
-      "start": 520.8,
-      "end": 526.56,
-      "duration": 5.759999999999991,
-      "kind": "talk"
+      "end": 529.44,
+      "duration": 19.680000000000064,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 776.64,
-      "end": 797.28,
-      "duration": 20.639999999999986,
-      "kind": "applause"
-    },
-    {
-      "start": 798.24,
-      "end": 799.2,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 800.64,
-      "end": 802.08,
-      "duration": 1.4400000000000546,
-      "kind": "talk"
-    },
-    {
-      "start": 802.0799999999999,
-      "end": 810.72,
-      "duration": 8.6400000000001,
-      "kind": "applause"
-    },
-    {
-      "start": 810.7199999999999,
       "end": 828.96,
-      "duration": 18.240000000000123,
-      "kind": "talk"
+      "duration": 52.32000000000005,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
-      "seconds": 586,
-      "song": "It\u2019s",
+      "seconds": 0.0,
+      "song": "What You Don't Do",
       "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 586,
-      "clip_end": 480,
-      "start_refined": false,
-      "end_trimmed": false,
-      "suspect": true,
-      "confidence": 0
+      "silence_match": 0.252125,
+      "clip_start": 15.84,
+      "clip_end": 210.23999999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66
     },
     {
-      "seconds": 480,
-      "song": "But I\u2019m listening on loop since",
+      "seconds": 210.23999999999998,
+      "song": "Unstoppable",
       "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 480,
+      "silence_match": 208.11,
+      "clip_start": 233.27999999999997,
       "clip_end": 509.76,
-      "start_refined": false,
+      "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 53
+      "confidence": 66
+    },
+    {
+      "seconds": 776.64,
+      "song": "Forget",
+      "corroboration": 0,
+      "silence_match": 775.692,
+      "clip_start": 828.96,
+      "clip_end": 860,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58
     }
   ],
   "silence_intervals": [
@@ -372,10 +377,14 @@
   ],
   "confidence": {
     "scores": [
-      0,
-      53
+      66,
+      66,
+      58
     ],
-    "avg": 26.5,
-    "min": 0
-  }
+    "avg": 63.3,
+    "min": 58
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

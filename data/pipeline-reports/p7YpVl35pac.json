@@ -2,18 +2,25 @@
   "video_id": "p7YpVl35pac",
   "title": "Milo J: Tiny Desk Concert",
   "duration": 988,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/p7YpVl35pac.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/p7YpVl35pac.mp3",
   "description_songs": [
-    "\u201cRecord\u00e9\u201d",
-    "\u201ccuestiones\u201d",
-    "\u201cSolifican12\u201d",
-    "\u201cBajo de la Piel\u201d",
-    "\u201cNi\u00f1o\u201d",
-    "\u201cLuci\u00e9rnagas\u201d"
+    "Record\u00e9",
+    "cuestiones",
+    "Solifican12",
+    "Bajo de la Piel",
+    "Ni\u00f1o",
+    "Luci\u00e9rnagas"
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 1100 likes, template #1"
+    "A_comments": "ok \u2014 792 likes, matched all 6 description song(s), retained 6 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
@@ -21,205 +28,135 @@
       "start": 79.67999999999999,
       "end": 82.08,
       "duration": 2.4000000000000057,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 87.36,
       "end": 89.28,
       "duration": 1.9200000000000017,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 286.08,
       "end": 288.48,
       "duration": 2.400000000000034,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 410.4,
       "end": 416.64,
       "duration": 6.240000000000009,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 581.28,
-      "end": 582.24,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 582.24,
-      "end": 583.68,
-      "duration": 1.4399999999999409,
-      "kind": "talk"
-    },
-    {
-      "start": 584.16,
-      "end": 586.56,
-      "duration": 2.3999999999999773,
-      "kind": "applause"
-    },
-    {
-      "start": 587.52,
-      "end": 588.96,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 588.9599999999999,
-      "end": 590.4,
-      "duration": 1.4400000000000546,
-      "kind": "talk"
-    },
-    {
-      "start": 590.4,
-      "end": 595.68,
-      "duration": 5.279999999999973,
-      "kind": "applause"
-    },
-    {
-      "start": 600.9599999999999,
-      "end": 617.28,
-      "duration": 16.32000000000005,
-      "kind": "talk"
-    },
-    {
-      "start": 617.76,
-      "end": 619.68,
-      "duration": 1.919999999999959,
-      "kind": "applause"
-    },
-    {
-      "start": 620.64,
       "end": 655.2,
-      "duration": 34.56000000000006,
-      "kind": "talk"
+      "duration": 73.92000000000007,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 933.12,
-      "end": 936.96,
-      "duration": 3.840000000000032,
-      "kind": "applause"
-    },
-    {
-      "start": 937.4399999999999,
-      "end": 938.4,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 940.8,
-      "end": 941.28,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 943.68,
-      "end": 944.16,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
+      "end": 947.52,
+      "duration": 14.399999999999977,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 951.36,
-      "end": 952.3199999999999,
-      "duration": 0.9599999999999227,
-      "kind": "applause"
-    },
-    {
-      "start": 953.76,
-      "end": 960.48,
-      "duration": 6.720000000000027,
-      "kind": "talk"
-    },
-    {
-      "start": 960.48,
-      "end": 961.4399999999999,
-      "duration": 0.9599999999999227,
-      "kind": "applause"
-    },
-    {
-      "start": 963.8399999999999,
       "end": 966.24,
-      "duration": 2.400000000000091,
-      "kind": "talk"
+      "duration": 14.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 983.04,
-      "end": 983.52,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
+      "end": 986.88,
+      "duration": 3.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
-      "seconds": 11,
+      "seconds": 0,
       "song": "Record\u00e9",
       "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 11,
-      "clip_end": 170,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 159,
       "start_refined": false,
       "end_trimmed": false,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 45
+      "confidence": 60
     },
     {
-      "seconds": 170,
-      "song": "Cuestiones",
+      "seconds": 159,
+      "song": "cuestiones",
       "corroboration": 0,
       "silence_match": null,
-      "clip_start": 170,
-      "clip_end": 258,
+      "clip_start": 159,
+      "clip_end": 248,
       "start_refined": false,
       "end_trimmed": false,
+      "end_guard": [],
       "suspect": false,
       "confidence": 45
     },
     {
-      "seconds": 258,
+      "seconds": 248,
       "song": "Solifican12",
       "corroboration": 0,
       "silence_match": null,
-      "clip_start": 258,
+      "clip_start": 248,
       "clip_end": 410.4,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 53
     },
     {
-      "seconds": 452,
-      "song": "Bajo de la piel",
+      "seconds": 420,
+      "song": "Bajo de la Piel",
       "corroboration": 0,
-      "silence_match": null,
+      "silence_match": 421.458,
       "clip_start": 416.64,
       "clip_end": 581.28,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 76
     },
     {
-      "seconds": 665,
+      "seconds": 655,
       "song": "Ni\u00f1o",
       "corroboration": 0,
-      "silence_match": null,
+      "silence_match": 650.905,
       "clip_start": 655.2,
-      "clip_end": 810,
+      "clip_end": 802,
       "start_refined": true,
       "end_trimmed": false,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 53
+      "confidence": 68
     },
     {
-      "seconds": 810,
+      "seconds": 802,
       "song": "Luci\u00e9rnagas",
       "corroboration": 0,
-      "silence_match": 807.715,
-      "clip_start": 810,
+      "silence_match": 801.508,
+      "clip_start": 802,
       "clip_end": 933.12,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 68
     }
@@ -398,14 +335,17 @@
   ],
   "confidence": {
     "scores": [
-      45,
+      60,
       45,
       53,
-      61,
-      53,
+      76,
+      68,
       68
     ],
-    "avg": 54.2,
+    "avg": 61.7,
     "min": 45
-  }
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

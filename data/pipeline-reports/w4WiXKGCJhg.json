@@ -2,315 +2,156 @@
   "video_id": "w4WiXKGCJhg",
   "title": "Chappell Roan: Tiny Desk Concert",
   "duration": 1381,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/w4WiXKGCJhg.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/w4WiXKGCJhg.mp3",
   "description_songs": [
-    "\u201cCasual\u201d",
-    "\u201cPink Pony Club\u201d",
-    "\u201cPicture You\u201d",
-    "\u201cCalifornia\u201d",
-    "\u201cRed Wine Supernova\u201d"
+    "Casual",
+    "Pink Pony Club",
+    "Picture You",
+    "California",
+    "Red Wine Supernova"
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 1100 likes, template #1"
+    "A_comments": "ok \u2014 3000 likes, matched all 5 description song(s), retained 5 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 2,
+    "rejected": 1,
+    "filtered_entries": 1
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 222.72,
-      "end": 233.76,
-      "duration": 11.039999999999992,
-      "kind": "applause"
-    },
-    {
-      "start": 236.16,
-      "end": 239.04,
-      "duration": 2.8799999999999955,
-      "kind": "applause"
-    },
-    {
-      "start": 242.88,
-      "end": 248.15999999999997,
-      "duration": 5.279999999999973,
-      "kind": "talk"
-    },
-    {
-      "start": 250.07999999999998,
-      "end": 254.39999999999998,
-      "duration": 4.319999999999993,
-      "kind": "talk"
-    },
-    {
-      "start": 254.88,
-      "end": 260.16,
-      "duration": 5.28000000000003,
-      "kind": "applause"
-    },
-    {
-      "start": 260.15999999999997,
       "end": 285.12,
-      "duration": 24.960000000000036,
-      "kind": "talk"
+      "duration": 62.400000000000006,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 530.4,
-      "end": 546.72,
-      "duration": 16.32000000000005,
-      "kind": "applause"
-    },
-    {
-      "start": 546.72,
-      "end": 548.16,
-      "duration": 1.4399999999999409,
-      "kind": "talk"
-    },
-    {
-      "start": 550.0799999999999,
       "end": 576.0,
-      "duration": 25.920000000000073,
-      "kind": "talk"
+      "duration": 45.60000000000002,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 580.3199999999999,
-      "end": 587.52,
-      "duration": 7.2000000000000455,
-      "kind": "talk"
+      "end": 582.24,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 582.72,
+      "end": 584.64,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 805.4399999999999,
-      "end": 816.96,
-      "duration": 11.520000000000095,
-      "kind": "applause"
-    },
-    {
-      "start": 817.4399999999999,
-      "end": 821.28,
-      "duration": 3.840000000000032,
-      "kind": "applause"
-    },
-    {
-      "start": 821.28,
-      "end": 835.68,
-      "duration": 14.399999999999977,
-      "kind": "talk"
-    },
-    {
-      "start": 837.12,
-      "end": 838.08,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 838.0799999999999,
-      "end": 840.48,
-      "duration": 2.400000000000091,
-      "kind": "talk"
-    },
-    {
-      "start": 840.48,
-      "end": 843.36,
-      "duration": 2.8799999999999955,
-      "kind": "applause"
-    },
-    {
-      "start": 843.36,
-      "end": 848.16,
-      "duration": 4.7999999999999545,
-      "kind": "talk"
-    },
-    {
-      "start": 848.16,
-      "end": 850.56,
-      "duration": 2.3999999999999773,
-      "kind": "applause"
-    },
-    {
-      "start": 850.56,
-      "end": 852.96,
-      "duration": 2.400000000000091,
-      "kind": "talk"
-    },
-    {
-      "start": 853.4399999999999,
-      "end": 856.3199999999999,
-      "duration": 2.8799999999999955,
-      "kind": "applause"
-    },
-    {
-      "start": 856.3199999999999,
-      "end": 863.52,
-      "duration": 7.2000000000000455,
-      "kind": "talk"
-    },
-    {
-      "start": 864.0,
-      "end": 866.4,
-      "duration": 2.3999999999999773,
-      "kind": "applause"
-    },
-    {
-      "start": 866.4,
-      "end": 869.28,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
-    },
-    {
-      "start": 869.76,
-      "end": 872.16,
-      "duration": 2.3999999999999773,
-      "kind": "applause"
-    },
-    {
-      "start": 872.64,
-      "end": 875.04,
-      "duration": 2.3999999999999773,
-      "kind": "talk"
-    },
-    {
-      "start": 875.52,
-      "end": 876.0,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 877.4399999999999,
-      "end": 879.84,
-      "duration": 2.400000000000091,
-      "kind": "talk"
-    },
-    {
-      "start": 880.8,
-      "end": 885.12,
-      "duration": 4.32000000000005,
-      "kind": "applause"
-    },
-    {
-      "start": 885.12,
       "end": 889.4399999999999,
-      "duration": 4.319999999999936,
-      "kind": "talk"
-    },
-    {
-      "start": 897.12,
-      "end": 899.04,
-      "duration": 1.919999999999959,
-      "kind": "talk"
+      "duration": 84.0,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 901.92,
-      "end": 910.56,
-      "duration": 8.639999999999986,
-      "kind": "talk"
+      "end": 905.28,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 906.24,
+      "end": 909.12,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1106.3999999999999,
-      "end": 1121.76,
-      "duration": 15.360000000000127,
-      "kind": "applause"
-    },
-    {
-      "start": 1121.76,
-      "end": 1137.6,
-      "duration": 15.839999999999918,
-      "kind": "talk"
-    },
-    {
-      "start": 1138.08,
-      "end": 1141.44,
-      "duration": 3.3600000000001273,
-      "kind": "applause"
-    },
-    {
-      "start": 1144.8,
-      "end": 1145.28,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 1145.28,
-      "end": 1156.32,
-      "duration": 11.039999999999964,
-      "kind": "talk"
-    },
-    {
-      "start": 1156.8,
-      "end": 1159.2,
-      "duration": 2.400000000000091,
-      "kind": "applause"
-    },
-    {
-      "start": 1160.6399999999999,
       "end": 1162.08,
-      "duration": 1.4400000000000546,
-      "kind": "talk"
+      "duration": 55.680000000000064,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1358.8799999999999,
       "end": 1380.96,
       "duration": 22.080000000000155,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     }
   ],
   "candidates": [
     {
-      "seconds": 1,
-      "song": "casual",
-      "corroboration": 1,
+      "seconds": 14,
+      "song": "Casual",
+      "corroboration": 0,
       "silence_match": null,
-      "clip_start": 1,
+      "clip_start": 14,
       "clip_end": 222.72,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 60
+      "confidence": 53
     },
     {
-      "seconds": 287,
-      "song": "pink pony club",
-      "corroboration": 1,
-      "silence_match": 285.111,
+      "seconds": 300,
+      "song": "Pink Pony Club",
+      "corroboration": 0,
+      "silence_match": null,
       "clip_start": 285.12,
       "clip_end": 530.4,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 61
     },
     {
-      "seconds": 587,
-      "song": "picture you",
-      "corroboration": 1,
-      "silence_match": 584.441,
-      "clip_start": 587.52,
+      "seconds": 603,
+      "song": "Picture You",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 584.64,
       "clip_end": 805.4399999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 61
     },
     {
-      "seconds": 897,
-      "song": "california",
+      "seconds": 905,
+      "song": "California",
       "corroboration": 0,
-      "silence_match": 895.337,
-      "clip_start": 910.56,
+      "silence_match": 904.846,
+      "clip_start": 909.12,
       "clip_end": 1106.3999999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 76
     },
     {
-      "seconds": 1158,
-      "song": "red wine supernova",
-      "corroboration": 1,
-      "silence_match": 1152.59,
+      "seconds": 1170,
+      "song": "Red Wine Supernova",
+      "corroboration": 0,
+      "silence_match": null,
       "clip_start": 1162.08,
       "clip_end": 1358.8799999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 61
     }
   ],
   "silence_intervals": [
@@ -592,13 +433,16 @@
   ],
   "confidence": {
     "scores": [
-      60,
-      83,
-      83,
+      53,
+      61,
+      61,
       76,
-      83
+      61
     ],
-    "avg": 77.0,
-    "min": 60
-  }
+    "avg": 62.4,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

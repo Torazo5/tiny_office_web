@@ -2,7 +2,7 @@
   "video_id": "oCcks-fwq2c",
   "title": "Post Malone: Tiny Desk Concert",
   "duration": 1088,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/oCcks-fwq2c.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/oCcks-fwq2c.mp3",
   "description_songs": [
     "Sunflower",
     "I Fall Apart",
@@ -11,209 +11,105 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 1300 likes, template #0"
+    "A_comments": "ok \u2014 1300 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 2,
+    "rejected": 1,
+    "filtered_entries": 2
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 185.28,
-      "end": 186.71999999999997,
-      "duration": 1.4399999999999693,
-      "kind": "applause"
-    },
-    {
-      "start": 187.2,
-      "end": 191.99999999999997,
-      "duration": 4.799999999999983,
-      "kind": "applause"
-    },
-    {
-      "start": 192.95999999999998,
-      "end": 203.51999999999998,
-      "duration": 10.560000000000002,
-      "kind": "applause"
-    },
-    {
-      "start": 203.51999999999998,
-      "end": 241.92,
-      "duration": 38.400000000000006,
-      "kind": "talk"
-    },
-    {
-      "start": 243.84,
-      "end": 254.87999999999997,
-      "duration": 11.039999999999964,
-      "kind": "talk"
+      "end": 258.24,
+      "duration": 72.96000000000001,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 468.0,
-      "end": 484.8,
-      "duration": 16.80000000000001,
-      "kind": "applause"
-    },
-    {
-      "start": 485.28,
-      "end": 489.12,
-      "duration": 3.840000000000032,
-      "kind": "talk"
-    },
-    {
-      "start": 491.52,
       "end": 494.4,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
+      "duration": 26.399999999999977,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
-      "start": 500.15999999999997,
-      "end": 505.92,
-      "duration": 5.760000000000048,
-      "kind": "talk"
+      "start": 503.03999999999996,
+      "end": 504.48,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 740.16,
-      "end": 756.48,
-      "duration": 16.32000000000005,
-      "kind": "applause"
-    },
-    {
-      "start": 757.92,
-      "end": 760.8,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
-    },
-    {
-      "start": 763.1999999999999,
-      "end": 778.56,
-      "duration": 15.360000000000014,
-      "kind": "talk"
-    },
-    {
-      "start": 781.4399999999999,
       "end": 796.8,
-      "duration": 15.360000000000014,
-      "kind": "talk"
+      "duration": 56.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1004.64,
-      "end": 1025.28,
-      "duration": 20.639999999999986,
-      "kind": "applause"
-    },
-    {
-      "start": 1027.68,
-      "end": 1028.6399999999999,
-      "duration": 0.959999999999809,
-      "kind": "applause"
-    },
-    {
-      "start": 1028.6399999999999,
-      "end": 1031.04,
-      "duration": 2.400000000000091,
-      "kind": "talk"
-    },
-    {
-      "start": 1031.52,
-      "end": 1035.84,
-      "duration": 4.319999999999936,
-      "kind": "applause"
-    },
-    {
-      "start": 1035.84,
-      "end": 1054.08,
-      "duration": 18.24000000000001,
-      "kind": "talk"
-    },
-    {
-      "start": 1054.08,
-      "end": 1057.92,
-      "duration": 3.8400000000001455,
-      "kind": "applause"
-    },
-    {
-      "start": 1057.92,
-      "end": 1062.24,
-      "duration": 4.319999999999936,
-      "kind": "talk"
-    },
-    {
-      "start": 1062.72,
-      "end": 1066.56,
-      "duration": 3.839999999999918,
-      "kind": "applause"
-    },
-    {
-      "start": 1067.04,
-      "end": 1067.52,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 1067.52,
-      "end": 1071.36,
-      "duration": 3.839999999999918,
-      "kind": "talk"
-    },
-    {
-      "start": 1072.8,
-      "end": 1073.28,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 1074.24,
       "end": 1083.36,
-      "duration": 9.11999999999989,
-      "kind": "talk"
+      "duration": 78.71999999999991,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
       "seconds": 0,
       "song": "Sunflower",
-      "corroboration": 5,
+      "corroboration": 1,
       "silence_match": 0.390875,
       "clip_start": 0,
       "clip_end": 185.28,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 89
+      "confidence": 75
     },
     {
       "seconds": 255,
       "song": "I Fall Apart",
-      "corroboration": 5,
+      "corroboration": 1,
       "silence_match": 254.843,
-      "clip_start": 254.87999999999997,
+      "clip_start": 258.24,
       "clip_end": 468.0,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 97
+      "confidence": 83
     },
     {
       "seconds": 502,
       "song": "Circles",
       "corroboration": 0,
       "silence_match": 502.56,
-      "clip_start": 505.92,
+      "clip_start": 504.48,
       "clip_end": 740.16,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 76
     },
     {
       "seconds": 796,
       "song": "Enough Is Enough",
-      "corroboration": 2,
+      "corroboration": 0,
       "silence_match": 796.559,
       "clip_start": 796.8,
       "clip_end": 1004.64,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 76
     }
   ],
   "silence_intervals": [
@@ -420,12 +316,15 @@
   ],
   "confidence": {
     "scores": [
-      89,
-      97,
+      75,
+      83,
       76,
-      90
+      76
     ],
-    "avg": 88.0,
-    "min": 76
-  }
+    "avg": 77.5,
+    "min": 75
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

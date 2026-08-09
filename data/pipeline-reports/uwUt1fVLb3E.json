@@ -2,308 +2,226 @@
   "video_id": "uwUt1fVLb3E",
   "title": "Alicia Keys: NPR Music Tiny Desk Concert",
   "duration": 1667,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/uwUt1fVLb3E.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/uwUt1fVLb3E.mp3",
   "description_songs": [
     "Show Me Love",
     "Gramercy Park",
     "Underdog",
-    "Fallin'"
+    "Fallin"
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 6000 likes, template #1"
+    "A_comments": "ok \u2014 6100 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 1
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 0.0,
+      "end": 2.88,
+      "duration": 2.88,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 4.32,
       "end": 6.24,
-      "duration": 6.24,
-      "kind": "talk"
+      "duration": 1.92,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 19.68,
       "end": 21.12,
       "duration": 1.4400000000000013,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 57.599999999999994,
       "end": 59.03999999999999,
       "duration": 1.4399999999999977,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 139.68,
-      "end": 143.51999999999998,
-      "duration": 3.839999999999975,
-      "kind": "talk"
+      "end": 142.55999999999997,
+      "duration": 2.879999999999967,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 387.84,
-      "end": 392.16,
-      "duration": 4.32000000000005,
-      "kind": "applause"
-    },
-    {
-      "start": 392.64,
-      "end": 396.0,
-      "duration": 3.3600000000000136,
-      "kind": "applause"
-    },
-    {
-      "start": 396.47999999999996,
-      "end": 399.36,
-      "duration": 2.8800000000000523,
-      "kind": "talk"
-    },
-    {
-      "start": 400.32,
-      "end": 401.76,
-      "duration": 1.4399999999999977,
-      "kind": "applause"
-    },
-    {
-      "start": 401.76,
-      "end": 404.64,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
-    },
-    {
-      "start": 405.59999999999997,
-      "end": 406.56,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 407.03999999999996,
       "end": 462.24,
-      "duration": 55.200000000000045,
-      "kind": "talk"
+      "duration": 74.40000000000003,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
-      "start": 468.0,
+      "start": 470.88,
+      "end": 477.12,
+      "duration": 6.240000000000009,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 478.08,
+      "end": 482.4,
+      "duration": 4.319999999999993,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 483.35999999999996,
+      "end": 486.72,
+      "duration": 3.3600000000000705,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 488.15999999999997,
+      "end": 491.04,
+      "duration": 2.8800000000000523,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 492.96,
+      "end": 495.84,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 498.24,
+      "end": 511.68,
+      "duration": 13.439999999999998,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 512.16,
+      "end": 515.52,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 516.0,
       "end": 518.88,
-      "duration": 50.879999999999995,
-      "kind": "talk"
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 524.16,
-      "end": 524.64,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 525.6,
       "end": 529.44,
-      "duration": 3.840000000000032,
-      "kind": "talk"
+      "duration": 5.280000000000086,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 736.8,
-      "end": 751.68,
-      "duration": 14.879999999999995,
-      "kind": "applause"
-    },
-    {
-      "start": 755.04,
       "end": 858.72,
-      "duration": 103.68000000000006,
-      "kind": "talk"
+      "duration": 121.92000000000007,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1088.1599999999999,
       "end": 1088.6399999999999,
       "duration": 0.4800000000000182,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 1090.56,
       "end": 1109.76,
       "duration": 19.200000000000045,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 1111.68,
-      "end": 1115.52,
-      "duration": 3.839999999999918,
-      "kind": "applause"
-    },
-    {
-      "start": 1116.48,
-      "end": 1129.44,
-      "duration": 12.960000000000036,
-      "kind": "talk"
-    },
-    {
-      "start": 1130.8799999999999,
-      "end": 1133.76,
-      "duration": 2.880000000000109,
-      "kind": "applause"
-    },
-    {
-      "start": 1133.76,
-      "end": 1157.76,
-      "duration": 24.0,
-      "kind": "talk"
-    },
-    {
-      "start": 1157.76,
-      "end": 1162.08,
-      "duration": 4.319999999999936,
-      "kind": "applause"
-    },
-    {
-      "start": 1162.08,
-      "end": 1167.36,
-      "duration": 5.279999999999973,
-      "kind": "talk"
-    },
-    {
-      "start": 1169.28,
-      "end": 1181.76,
-      "duration": 12.480000000000018,
-      "kind": "talk"
-    },
-    {
-      "start": 1182.24,
-      "end": 1184.16,
-      "duration": 1.9200000000000728,
-      "kind": "applause"
-    },
-    {
-      "start": 1185.6,
-      "end": 1186.56,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 1186.56,
-      "end": 1189.44,
-      "duration": 2.880000000000109,
-      "kind": "talk"
-    },
-    {
-      "start": 1189.9199999999998,
-      "end": 1191.36,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 1193.28,
-      "end": 1196.16,
-      "duration": 2.880000000000109,
-      "kind": "applause"
-    },
-    {
-      "start": 1196.1599999999999,
-      "end": 1198.56,
-      "duration": 2.400000000000091,
-      "kind": "talk"
-    },
-    {
-      "start": 1199.04,
-      "end": 1201.92,
-      "duration": 2.880000000000109,
-      "kind": "applause"
-    },
-    {
-      "start": 1202.8799999999999,
-      "end": 1227.36,
-      "duration": 24.480000000000018,
-      "kind": "talk"
-    },
-    {
-      "start": 1228.8,
-      "end": 1230.24,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 1230.72,
-      "end": 1232.6399999999999,
-      "duration": 1.9199999999998454,
-      "kind": "talk"
-    },
-    {
-      "start": 1233.6,
-      "end": 1235.04,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 1235.52,
       "end": 1238.8799999999999,
-      "duration": 3.3599999999999,
-      "kind": "talk"
+      "duration": 127.19999999999982,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1594.08,
       "end": 1595.52,
       "duration": 1.4400000000000546,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1635.36,
-      "end": 1656.48,
-      "duration": 21.12000000000012,
-      "kind": "applause"
-    },
-    {
-      "start": 1659.36,
       "end": 1662.72,
-      "duration": 3.3600000000001273,
-      "kind": "talk"
+      "duration": 27.360000000000127,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
       "seconds": 105,
-      "song": "Show me love",
+      "song": "Show Me Love",
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 105,
       "clip_end": 387.84,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 53
     },
     {
       "seconds": 532,
       "song": "Gramercy Park",
-      "corroboration": 1,
+      "corroboration": 0,
       "silence_match": 529.16,
       "clip_start": 529.44,
       "clip_end": 736.8,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 76
     },
     {
       "seconds": 858,
       "song": "Underdog",
-      "corroboration": 2,
+      "corroboration": 1,
       "silence_match": 856.558,
       "clip_start": 858.72,
       "clip_end": 1088.1599999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 83
     },
     {
       "seconds": 1240,
       "song": "Fallin",
-      "corroboration": 2,
+      "corroboration": 1,
       "silence_match": null,
       "clip_start": 1238.8799999999999,
       "clip_end": 1635.36,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 68
     }
   ],
   "silence_intervals": [
@@ -521,11 +439,14 @@
   "confidence": {
     "scores": [
       53,
+      76,
       83,
-      90,
-      75
+      68
     ],
-    "avg": 75.2,
+    "avg": 70.0,
     "min": 53
-  }
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

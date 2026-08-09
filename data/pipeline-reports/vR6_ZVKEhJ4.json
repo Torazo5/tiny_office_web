@@ -2,7 +2,7 @@
   "video_id": "vR6_ZVKEhJ4",
   "title": "Ne-Yo: Tiny Desk Concert",
   "duration": 1394,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/vR6_ZVKEhJ4.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/vR6_ZVKEhJ4.mp3",
   "description_songs": [
     "Because Of You",
     "So Sick",
@@ -15,129 +15,72 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 14000 likes, template #4"
+    "A_comments": "ok \u2014 14000 likes, matched all 8 description song(s), retained 8 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 152.16,
-      "end": 156.95999999999998,
-      "duration": 4.799999999999983,
-      "kind": "applause"
-    },
-    {
-      "start": 157.44,
       "end": 159.35999999999999,
-      "duration": 1.9199999999999875,
-      "kind": "talk"
+      "duration": 7.199999999999989,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 480.47999999999996,
-      "end": 481.92,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 482.88,
-      "end": 487.2,
-      "duration": 4.319999999999993,
-      "kind": "applause"
-    },
-    {
-      "start": 487.68,
-      "end": 490.56,
-      "duration": 2.8799999999999955,
-      "kind": "applause"
-    },
-    {
-      "start": 492.0,
       "end": 497.28,
-      "duration": 5.279999999999973,
-      "kind": "talk"
+      "duration": 16.80000000000001,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 861.12,
-      "end": 868.3199999999999,
-      "duration": 7.199999999999932,
-      "kind": "applause"
-    },
-    {
-      "start": 872.16,
-      "end": 873.6,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 876.0,
-      "end": 876.48,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 879.36,
-      "end": 879.84,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 883.68,
-      "end": 888.0,
-      "duration": 4.32000000000005,
-      "kind": "talk"
-    },
-    {
-      "start": 894.7199999999999,
-      "end": 897.12,
-      "duration": 2.400000000000091,
-      "kind": "talk"
-    },
-    {
-      "start": 904.8,
-      "end": 907.68,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
+      "end": 890.88,
+      "duration": 29.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1090.08,
-      "end": 1096.32,
-      "duration": 6.240000000000009,
-      "kind": "applause"
-    },
-    {
-      "start": 1096.8,
       "end": 1097.76,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
+      "duration": 7.680000000000064,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1248.96,
       "end": 1250.3999999999999,
       "duration": 1.4399999999998272,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 1320.0,
       "end": 1320.48,
       "duration": 0.4800000000000182,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 1368.48,
       "end": 1369.44,
       "duration": 0.9600000000000364,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 1372.8,
-      "end": 1379.52,
-      "duration": 6.720000000000027,
-      "kind": "applause"
-    },
-    {
-      "start": 1380.0,
       "end": 1384.8,
-      "duration": 4.7999999999999545,
-      "kind": "talk"
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
@@ -150,6 +93,7 @@
       "clip_end": 152.16,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 75
     },
@@ -162,6 +106,7 @@
       "clip_end": 354,
       "start_refined": true,
       "end_trimmed": false,
+      "end_guard": [],
       "suspect": false,
       "confidence": 60
     },
@@ -174,6 +119,7 @@
       "clip_end": 480.47999999999996,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 60
     },
@@ -186,6 +132,7 @@
       "clip_end": 650,
       "start_refined": true,
       "end_trimmed": false,
+      "end_guard": [],
       "suspect": false,
       "confidence": 60
     },
@@ -198,6 +145,7 @@
       "clip_end": 786,
       "start_refined": false,
       "end_trimmed": false,
+      "end_guard": [],
       "suspect": false,
       "confidence": 52
     },
@@ -210,6 +158,7 @@
       "clip_end": 861.12,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 60
     },
@@ -218,10 +167,11 @@
       "song": "Two Million Secrets",
       "corroboration": 1,
       "silence_match": null,
-      "clip_start": 907.68,
+      "clip_start": 890.88,
       "clip_end": 1090.08,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 68
     },
@@ -231,9 +181,29 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 1097.76,
-      "clip_end": 1248.96,
+      "clip_end": 1368.48,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [
+        {
+          "start": 1248.96,
+          "end": 1250.4,
+          "duration": 1.44,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.983,
+          "music_run_sec": 93.0,
+          "anchor_start": 1372.8
+        },
+        {
+          "start": 1320.0,
+          "end": 1320.48,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.995,
+          "music_run_sec": 38.5,
+          "anchor_start": 1372.8
+        }
+      ],
       "suspect": false,
       "confidence": 68
     }
@@ -273,5 +243,8 @@
     ],
     "avg": 62.9,
     "min": 52
-  }
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

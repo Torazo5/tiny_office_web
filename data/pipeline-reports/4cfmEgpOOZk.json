@@ -2,102 +2,94 @@
   "video_id": "4cfmEgpOOZk",
   "title": "Erykah Badu: NPR Music Tiny Desk Concert",
   "duration": 908,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/4cfmEgpOOZk.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/4cfmEgpOOZk.mp3",
   "description_songs": [
     "Rimshot",
     "Green Eyes"
   ],
-  "method": "comments",
+  "method": "yamnet",
   "resolve_notes": {
-    "A_comments": "ok \u2014 1900 likes, template #5 (description lists 2 \u2014 comment may split/merge differently)"
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 2 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 1 usable episode(s), took top 1; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
-      "start": 14.879999999999999,
+      "start": 18.24,
+      "end": 21.12,
+      "duration": 2.8800000000000026,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 22.56,
+      "end": 24.48,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 25.439999999999998,
+      "end": 27.36,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 28.32,
       "end": 29.759999999999998,
-      "duration": 14.879999999999999,
-      "kind": "talk"
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 181.44,
-      "end": 192.95999999999998,
-      "duration": 11.519999999999982,
-      "kind": "applause"
-    },
-    {
-      "start": 809.76,
-      "end": 812.16,
-      "duration": 2.3999999999999773,
-      "kind": "talk"
-    },
-    {
-      "start": 822.24,
-      "end": 824.16,
-      "duration": 1.919999999999959,
-      "kind": "talk"
-    },
-    {
-      "start": 866.4,
-      "end": 868.8,
-      "duration": 2.3999999999999773,
-      "kind": "talk"
+      "end": 193.43999999999997,
+      "duration": 11.999999999999972,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 887.52,
       "end": 907.1999999999999,
       "duration": 19.67999999999995,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     }
   ],
   "candidates": [
     {
-      "seconds": 85,
-      "song": "rimshot",
+      "seconds": 0.0,
+      "song": "Rimshot",
       "corroboration": 0,
-      "silence_match": 87.0517,
-      "clip_start": 85,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
       "clip_end": 181.44,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 58
     },
     {
-      "seconds": 193,
-      "song": "movement 1 (denial)",
+      "seconds": 181.44,
+      "song": "Green Eyes",
       "corroboration": 0,
-      "silence_match": 192.95,
-      "clip_start": 192.95999999999998,
-      "clip_end": 328,
-      "start_refined": true,
-      "end_trimmed": false,
-      "suspect": false,
-      "confidence": 68
-    },
-    {
-      "seconds": 328,
-      "song": "movement 2 (acceptance)",
-      "corroboration": 0,
-      "silence_match": 326.834,
-      "clip_start": 328,
-      "clip_end": 571,
-      "start_refined": false,
-      "end_trimmed": false,
-      "suspect": false,
-      "confidence": 60
-    },
-    {
-      "seconds": 571,
-      "song": "movement 3 (the relapse)",
-      "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 571,
+      "silence_match": 180.064,
+      "clip_start": 193.43999999999997,
       "clip_end": 887.52,
-      "start_refined": false,
+      "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 53
+      "confidence": 66
     }
   ],
   "silence_intervals": [
@@ -244,12 +236,13 @@
   ],
   "confidence": {
     "scores": [
-      68,
-      68,
-      60,
-      53
+      58,
+      66
     ],
-    "avg": 62.2,
-    "min": 53
-  }
+    "avg": 62.0,
+    "min": 58
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

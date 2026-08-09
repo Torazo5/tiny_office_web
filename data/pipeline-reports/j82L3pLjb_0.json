@@ -2,7 +2,7 @@
   "video_id": "j82L3pLjb_0",
   "title": "Coldplay: NPR Music Tiny Desk Concert",
   "duration": 1093,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/j82L3pLjb_0.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/j82L3pLjb_0.mp3",
   "description_songs": [
     "Cry Cry Cry",
     "Viva La Vida",
@@ -12,7 +12,14 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 1800 likes, template #0 (description lists 5 \u2014 comment may split/merge differently)"
+    "A_comments": "ok \u2014 1800 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 4,
+    "accepted": 3,
+    "rejected": 1,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
@@ -20,135 +27,86 @@
       "start": 383.52,
       "end": 385.92,
       "duration": 2.400000000000034,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 387.84,
       "end": 389.76,
       "duration": 1.920000000000016,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 396.96,
       "end": 398.88,
       "duration": 1.920000000000016,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 398.88,
-      "end": 399.36,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 399.36,
-      "end": 400.8,
-      "duration": 1.4399999999999977,
-      "kind": "talk"
-    },
-    {
-      "start": 402.71999999999997,
-      "end": 406.56,
-      "duration": 3.840000000000032,
-      "kind": "applause"
-    },
-    {
-      "start": 407.03999999999996,
-      "end": 409.44,
-      "duration": 2.400000000000034,
-      "kind": "applause"
-    },
-    {
-      "start": 410.88,
-      "end": 431.04,
-      "duration": 20.160000000000025,
-      "kind": "talk"
-    },
-    {
-      "start": 431.52,
-      "end": 440.64,
-      "duration": 9.120000000000005,
-      "kind": "applause"
-    },
-    {
-      "start": 440.64,
       "end": 485.76,
-      "duration": 45.120000000000005,
-      "kind": "talk"
+      "duration": 86.88,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 812.64,
       "end": 813.12,
       "duration": 0.4800000000000182,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 817.92,
       "end": 819.36,
       "duration": 1.4400000000000546,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 820.3199999999999,
       "end": 827.52,
       "duration": 7.2000000000000455,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
-      "start": 864.0,
+      "start": 864.9599999999999,
       "end": 866.4,
-      "duration": 2.3999999999999773,
-      "kind": "talk"
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 873.12,
       "end": 875.04,
       "duration": 1.919999999999959,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1072.32,
-      "end": 1072.8,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 1073.28,
-      "end": 1080.96,
-      "duration": 7.680000000000064,
-      "kind": "applause"
-    },
-    {
-      "start": 1081.92,
-      "end": 1082.8799999999999,
-      "duration": 0.959999999999809,
-      "kind": "applause"
-    },
-    {
-      "start": 1082.8799999999999,
-      "end": 1085.76,
-      "duration": 2.880000000000109,
-      "kind": "talk"
-    },
-    {
-      "start": 1088.6399999999999,
       "end": 1089.12,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
+      "duration": 16.799999999999955,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
       "seconds": 0,
       "song": "Cry Cry Cry",
-      "corroboration": 1,
+      "corroboration": 2,
       "silence_match": 3.22177,
       "clip_start": 0,
       "clip_end": 174,
       "start_refined": false,
       "end_trimmed": false,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 67
+      "confidence": 74
     },
     {
       "seconds": 174,
@@ -159,6 +117,7 @@
       "clip_end": 383.52,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 67
     },
@@ -168,21 +127,36 @@
       "corroboration": 2,
       "silence_match": null,
       "clip_start": 485.76,
-      "clip_end": 812.64,
+      "clip_end": 628,
       "start_refined": true,
-      "end_trimmed": true,
+      "end_trimmed": false,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 67
+    },
+    {
+      "seconds": 628,
+      "song": "1999\" (Prince cover)",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 628,
+      "clip_end": 812.64,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 67
     },
     {
       "seconds": 877,
-      "song": "Champion of the World",
+      "song": "Champion Of The World",
       "corroboration": 2,
       "silence_match": 874.714,
       "clip_start": 875.04,
       "clip_end": 1072.32,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 90
     }
@@ -231,12 +205,16 @@
   ],
   "confidence": {
     "scores": [
+      74,
       67,
       67,
-      75,
+      67,
       90
     ],
-    "avg": 74.8,
+    "avg": 73.0,
     "min": 67
-  }
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

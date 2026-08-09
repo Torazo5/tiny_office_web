@@ -2,7 +2,7 @@
   "video_id": "L_BHC2l30pY",
   "title": "Sam Smith: Tiny Desk Concert",
   "duration": 1247,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/L_BHC2l30pY.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/L_BHC2l30pY.mp3",
   "description_songs": [
     "Stay With Me",
     "How Do You Sleep",
@@ -11,323 +11,152 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 5900 likes, template #1"
+    "A_comments": "ok \u2014 5900 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 5,
+    "accepted": 3,
+    "rejected": 2,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 228.48,
-      "end": 231.83999999999997,
-      "duration": 3.359999999999985,
-      "kind": "applause"
-    },
-    {
-      "start": 232.32,
-      "end": 245.27999999999997,
-      "duration": 12.95999999999998,
-      "kind": "applause"
-    },
-    {
-      "start": 245.28,
       "end": 277.44,
-      "duration": 32.16,
-      "kind": "talk"
+      "duration": 48.96000000000001,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 468.0,
-      "end": 468.48,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
+      "end": 471.36,
+      "duration": 3.3600000000000136,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 511.2,
-      "end": 516.0,
-      "duration": 4.800000000000011,
-      "kind": "applause"
-    },
-    {
-      "start": 516.0,
-      "end": 521.28,
-      "duration": 5.279999999999973,
-      "kind": "talk"
-    },
-    {
-      "start": 521.28,
-      "end": 530.88,
-      "duration": 9.600000000000023,
-      "kind": "applause"
-    },
-    {
-      "start": 530.88,
-      "end": 552.96,
-      "duration": 22.08000000000004,
-      "kind": "talk"
-    },
-    {
-      "start": 554.88,
-      "end": 596.64,
-      "duration": 41.75999999999999,
-      "kind": "talk"
-    },
-    {
-      "start": 597.12,
-      "end": 603.84,
-      "duration": 6.720000000000027,
-      "kind": "applause"
-    },
-    {
-      "start": 603.84,
       "end": 607.2,
-      "duration": 3.3600000000000136,
-      "kind": "talk"
+      "duration": 96.00000000000006,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 618.72,
-      "end": 624.48,
-      "duration": 5.759999999999991,
-      "kind": "talk"
+      "end": 622.56,
+      "duration": 3.839999999999918,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 653.28,
       "end": 656.16,
       "duration": 2.8799999999999955,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 918.7199999999999,
-      "end": 920.64,
-      "duration": 1.9200000000000728,
-      "kind": "applause"
-    },
-    {
-      "start": 920.64,
-      "end": 922.56,
-      "duration": 1.919999999999959,
-      "kind": "talk"
-    },
-    {
-      "start": 922.56,
-      "end": 923.04,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 923.04,
-      "end": 924.96,
-      "duration": 1.9200000000000728,
-      "kind": "talk"
-    },
-    {
-      "start": 924.9599999999999,
-      "end": 926.4,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 926.88,
-      "end": 928.8,
-      "duration": 1.919999999999959,
-      "kind": "applause"
-    },
-    {
-      "start": 929.76,
-      "end": 936.48,
-      "duration": 6.720000000000027,
-      "kind": "applause"
-    },
-    {
-      "start": 936.48,
-      "end": 938.4,
-      "duration": 1.919999999999959,
-      "kind": "talk"
-    },
-    {
-      "start": 938.88,
-      "end": 939.36,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 940.3199999999999,
-      "end": 941.76,
-      "duration": 1.4400000000000546,
-      "kind": "talk"
-    },
-    {
-      "start": 941.76,
-      "end": 942.72,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 945.5999999999999,
-      "end": 946.0799999999999,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 948.48,
-      "end": 950.4,
-      "duration": 1.919999999999959,
-      "kind": "applause"
-    },
-    {
-      "start": 950.88,
-      "end": 954.72,
-      "duration": 3.840000000000032,
-      "kind": "applause"
-    },
-    {
-      "start": 954.7199999999999,
-      "end": 994.0799999999999,
-      "duration": 39.360000000000014,
-      "kind": "talk"
-    },
-    {
-      "start": 999.36,
-      "end": 999.84,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 1001.28,
-      "end": 1001.76,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 1001.76,
-      "end": 1003.1999999999999,
-      "duration": 1.4399999999999409,
-      "kind": "talk"
-    },
-    {
-      "start": 1005.5999999999999,
-      "end": 1006.56,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 1008.48,
-      "end": 1009.4399999999999,
-      "duration": 0.9599999999999227,
-      "kind": "applause"
-    },
-    {
-      "start": 1011.8399999999999,
-      "end": 1013.76,
-      "duration": 1.9200000000000728,
-      "kind": "applause"
-    },
-    {
-      "start": 1015.68,
       "end": 1016.16,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
+      "duration": 97.44000000000005,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1020.0,
       "end": 1020.48,
       "duration": 0.4800000000000182,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 1022.88,
       "end": 1023.36,
       "duration": 0.4800000000000182,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 1200.0,
-      "end": 1205.28,
-      "duration": 5.279999999999973,
-      "kind": "applause"
-    },
-    {
-      "start": 1206.72,
-      "end": 1210.08,
-      "duration": 3.3599999999999,
-      "kind": "applause"
-    },
-    {
-      "start": 1211.52,
-      "end": 1212.0,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 1212.96,
-      "end": 1215.36,
-      "duration": 2.3999999999998636,
-      "kind": "applause"
-    },
-    {
-      "start": 1216.32,
-      "end": 1219.2,
-      "duration": 2.880000000000109,
-      "kind": "talk"
-    },
-    {
-      "start": 1219.68,
-      "end": 1226.3999999999999,
-      "duration": 6.7199999999998,
-      "kind": "applause"
-    },
-    {
-      "start": 1226.8799999999999,
-      "end": 1233.6,
-      "duration": 6.720000000000027,
-      "kind": "applause"
+      "end": 1234.08,
+      "duration": 34.07999999999993,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
       "seconds": 1,
-      "song": "Stay with me",
+      "song": "Stay With Me",
       "corroboration": 2,
       "silence_match": null,
       "clip_start": 1,
       "clip_end": 228.48,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 67
     },
     {
       "seconds": 277,
-      "song": "How do you sleep?",
+      "song": "How Do You Sleep",
       "corroboration": 2,
       "silence_match": 276.992,
       "clip_start": 277.44,
       "clip_end": 468.0,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 90
     },
     {
       "seconds": 626,
-      "song": "Lay Me Down(feat. LaDonna Harley-Peters)",
-      "corroboration": 1,
+      "song": "Lay Me Down (feat. LaDonna Harley-Peters)",
+      "corroboration": 2,
       "silence_match": 627.053,
-      "clip_start": 624.48,
+      "clip_start": 622.56,
       "clip_end": 918.7199999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 90
     },
     {
       "seconds": 992,
       "song": "Unholy",
       "corroboration": 2,
       "silence_match": 992.283,
-      "clip_start": 1009.4399999999999,
-      "clip_end": 1011.8399999999999,
-      "start_refined": true,
+      "clip_start": 992,
+      "clip_end": 1200.0,
+      "start_refined": false,
       "end_trimmed": true,
-      "suspect": true,
-      "confidence": 40
+      "end_guard": [
+        {
+          "start": 1020.0,
+          "end": 1020.48,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.938,
+          "music_run_sec": 25.0,
+          "anchor_start": 1200.0
+        },
+        {
+          "start": 1022.88,
+          "end": 1023.36,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.94,
+          "music_run_sec": 25.0,
+          "anchor_start": 1200.0
+        }
+      ],
+      "suspect": false,
+      "confidence": 82
     }
   ],
   "silence_intervals": [
@@ -621,10 +450,13 @@
     "scores": [
       67,
       90,
-      83,
-      40
+      90,
+      82
     ],
-    "avg": 70.0,
-    "min": 40
-  }
+    "avg": 82.2,
+    "min": 67
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

@@ -2,7 +2,7 @@
   "video_id": "hxxcEzM8r-4",
   "title": "H.E.R.: NPR Music Tiny Desk Concert",
   "duration": 1132,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/hxxcEzM8r-4.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/hxxcEzM8r-4.mp3",
   "description_songs": [
     "Going\" (Interlude)",
     "Feel A Way",
@@ -11,7 +11,14 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 1100 likes, template #1"
+    "A_comments": "ok \u2014 1100 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
@@ -19,151 +26,62 @@
       "start": 144.0,
       "end": 145.44,
       "duration": 1.4399999999999977,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 147.84,
+      "start": 152.16,
       "end": 154.55999999999997,
-      "duration": 6.71999999999997,
-      "kind": "talk"
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 384.47999999999996,
-      "end": 394.08,
-      "duration": 9.600000000000023,
-      "kind": "applause"
-    },
-    {
-      "start": 395.52,
-      "end": 403.68,
-      "duration": 8.160000000000025,
-      "kind": "talk"
-    },
-    {
-      "start": 405.59999999999997,
       "end": 407.52,
-      "duration": 1.920000000000016,
-      "kind": "talk"
+      "duration": 23.04000000000002,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 690.24,
-      "end": 694.08,
-      "duration": 3.840000000000032,
-      "kind": "applause"
-    },
-    {
-      "start": 694.56,
-      "end": 697.92,
-      "duration": 3.3600000000000136,
-      "kind": "applause"
-    },
-    {
-      "start": 697.92,
-      "end": 699.36,
-      "duration": 1.4400000000000546,
-      "kind": "talk"
-    },
-    {
-      "start": 699.36,
-      "end": 701.76,
-      "duration": 2.3999999999999773,
-      "kind": "applause"
-    },
-    {
-      "start": 701.76,
-      "end": 714.24,
-      "duration": 12.480000000000018,
-      "kind": "talk"
-    },
-    {
-      "start": 714.24,
-      "end": 714.72,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 716.16,
-      "end": 716.64,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 716.64,
-      "end": 719.52,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
-    },
-    {
-      "start": 719.52,
-      "end": 720.0,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 720.9599999999999,
-      "end": 722.4,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 723.36,
-      "end": 728.64,
-      "duration": 5.279999999999973,
-      "kind": "talk"
-    },
-    {
-      "start": 729.12,
-      "end": 729.6,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 730.0799999999999,
-      "end": 733.4399999999999,
-      "duration": 3.3600000000000136,
-      "kind": "talk"
-    },
-    {
-      "start": 734.88,
-      "end": 737.28,
-      "duration": 2.3999999999999773,
-      "kind": "applause"
-    },
-    {
-      "start": 737.76,
       "end": 739.68,
-      "duration": 1.919999999999959,
-      "kind": "talk"
+      "duration": 49.43999999999994,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1110.24,
       "end": 1125.12,
       "duration": 14.879999999999882,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     }
   ],
   "candidates": [
     {
       "seconds": 10,
-      "song": "going (interlude)",
+      "song": "Going\" (Interlude)",
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 10,
-      "clip_end": 147.84,
+      "clip_end": 163,
       "start_refined": false,
-      "end_trimmed": true,
+      "end_trimmed": false,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 53
+      "confidence": 45
     },
     {
       "seconds": 163,
-      "song": "Feel a way",
+      "song": "Feel A Way",
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 154.55999999999997,
       "clip_end": 384.47999999999996,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 68
     },
@@ -176,18 +94,20 @@
       "clip_end": 690.24,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 83
     },
     {
       "seconds": 743,
-      "song": "focus",
+      "song": "Focus",
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 739.68,
       "clip_end": 1110.24,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 61
     }
@@ -241,12 +161,15 @@
   ],
   "confidence": {
     "scores": [
-      53,
+      45,
       68,
       83,
       61
     ],
-    "avg": 66.2,
-    "min": 53
-  }
+    "avg": 64.2,
+    "min": 45
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

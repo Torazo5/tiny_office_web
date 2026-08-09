@@ -2,18 +2,21 @@
   "video_id": "hxsJvKYyVyg",
   "title": "The Cranberries: NPR Music Tiny Desk Concert",
   "duration": 1171,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/hxsJvKYyVyg.mp3",
-  "description_songs": [
-    "Linger",
-    "Tomorrow",
-    "Ode To My Family",
-    "Zombie",
-    "Raining In My Heart",
-    "For more videos and to subscribe to the Tiny Desk Concerts podcast, visit npr.org/tinydeskconcerts."
-  ],
-  "method": "comments",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/hxsJvKYyVyg.mp3",
+  "description_songs": [],
+  "method": "manual",
   "resolve_notes": {
-    "A_comments": "ok \u2014 4600 likes, template #1 (description lists 6 \u2014 comment may split/merge differently)"
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
@@ -21,143 +24,46 @@
       "start": 0.96,
       "end": 2.88,
       "duration": 1.92,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 191.51999999999998,
-      "end": 195.35999999999999,
-      "duration": 3.8400000000000034,
-      "kind": "applause"
-    },
-    {
-      "start": 195.35999999999999,
       "end": 198.71999999999997,
-      "duration": 3.359999999999985,
-      "kind": "talk"
+      "duration": 7.199999999999989,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 443.52,
-      "end": 452.16,
-      "duration": 8.640000000000043,
-      "kind": "applause"
+      "end": 454.08,
+      "duration": 10.560000000000002,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 695.52,
-      "end": 701.28,
-      "duration": 5.759999999999991,
-      "kind": "applause"
-    },
-    {
-      "start": 702.24,
-      "end": 705.6,
-      "duration": 3.3600000000000136,
-      "kind": "applause"
-    },
-    {
-      "start": 705.6,
       "end": 735.84,
-      "duration": 30.24000000000001,
-      "kind": "talk"
+      "duration": 40.32000000000005,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 958.0799999999999,
-      "end": 958.56,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 959.04,
-      "end": 963.84,
-      "duration": 4.800000000000068,
-      "kind": "applause"
-    },
-    {
-      "start": 965.28,
       "end": 972.0,
-      "duration": 6.720000000000027,
-      "kind": "talk"
+      "duration": 13.920000000000073,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1148.6399999999999,
-      "end": 1152.48,
-      "duration": 3.8400000000001455,
-      "kind": "applause"
-    },
-    {
-      "start": 1153.44,
-      "end": 1158.24,
-      "duration": 4.7999999999999545,
-      "kind": "applause"
-    },
-    {
-      "start": 1160.1599999999999,
       "end": 1166.3999999999999,
-      "duration": 6.240000000000009,
-      "kind": "applause"
+      "duration": 17.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
-  "candidates": [
-    {
-      "seconds": 2,
-      "song": "Linger",
-      "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 2.88,
-      "clip_end": 191.51999999999998,
-      "start_refined": true,
-      "end_trimmed": true,
-      "suspect": false,
-      "confidence": 61
-    },
-    {
-      "seconds": 198,
-      "song": "Tomorrow",
-      "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 198.71999999999997,
-      "clip_end": 443.52,
-      "start_refined": true,
-      "end_trimmed": true,
-      "suspect": false,
-      "confidence": 61
-    },
-    {
-      "seconds": 452,
-      "song": "Ode to my Family",
-      "corroboration": 0,
-      "silence_match": 452.904,
-      "clip_start": 452.16,
-      "clip_end": 695.52,
-      "start_refined": true,
-      "end_trimmed": true,
-      "suspect": false,
-      "confidence": 76
-    },
-    {
-      "seconds": 735,
-      "song": "Zombie",
-      "corroboration": 0,
-      "silence_match": 734.674,
-      "clip_start": 735.84,
-      "clip_end": 958.0799999999999,
-      "start_refined": true,
-      "end_trimmed": true,
-      "suspect": false,
-      "confidence": 76
-    },
-    {
-      "seconds": 973,
-      "song": "Raining in my Heart",
-      "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 972.0,
-      "clip_end": 1148.6399999999999,
-      "start_refined": true,
-      "end_trimmed": true,
-      "suspect": false,
-      "confidence": 61
-    }
-  ],
+  "candidates": [],
   "silence_intervals": [
     {
       "start": 452.904,
@@ -201,14 +107,11 @@
     }
   ],
   "confidence": {
-    "scores": [
-      61,
-      61,
-      76,
-      76,
-      61
-    ],
-    "avg": 67.0,
-    "min": 61
-  }
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

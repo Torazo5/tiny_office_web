@@ -2,7 +2,7 @@
   "video_id": "aWjihS2LHLs",
   "title": "Juanes & Mon Laferte: NPR Music Tiny Desk Concert",
   "duration": 1061,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/aWjihS2LHLs.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/aWjihS2LHLs.mp3",
   "description_songs": [
     "Pa' D\u00f3nde Se Fue\" by Mon Laferte",
     "Am\u00e1rrame [feat. Juanes]\" by Mon Laferte",
@@ -11,137 +11,133 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 1000 likes, template #1"
+    "A_comments": "ok \u2014 1000 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 261.59999999999997,
-      "end": 277.44,
-      "duration": 15.840000000000032,
-      "kind": "applause"
-    },
-    {
-      "start": 277.44,
       "end": 281.76,
-      "duration": 4.319999999999993,
-      "kind": "talk"
+      "duration": 20.160000000000025,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 292.32,
-      "end": 309.6,
-      "duration": 17.28000000000003,
-      "kind": "talk"
+      "end": 296.64,
+      "duration": 4.319999999999993,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 300.0,
+      "end": 308.64,
+      "duration": 8.639999999999986,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 313.44,
       "end": 314.88,
       "duration": 1.4399999999999977,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 401.28,
+      "start": 403.2,
       "end": 404.64,
-      "duration": 3.3600000000000136,
-      "kind": "talk"
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 523.68,
       "end": 525.12,
       "duration": 1.4400000000000546,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 525.12,
       "end": 544.8,
       "duration": 19.67999999999995,
-      "kind": "applause"
-    },
-    {
-      "start": 792.0,
-      "end": 793.92,
-      "duration": 1.919999999999959,
-      "kind": "talk"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 794.4,
       "end": 815.52,
       "duration": 21.120000000000005,
-      "kind": "applause"
-    },
-    {
-      "start": 903.36,
-      "end": 906.24,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
-    },
-    {
-      "start": 908.16,
-      "end": 913.4399999999999,
-      "duration": 5.279999999999973,
-      "kind": "talk"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 1032.96,
-      "end": 1044.0,
-      "duration": 11.039999999999964,
-      "kind": "applause"
-    },
-    {
-      "start": 1045.44,
       "end": 1054.56,
-      "duration": 9.11999999999989,
-      "kind": "applause"
+      "duration": 21.59999999999991,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
       "seconds": 0,
-      "song": "Pa' d\u00f3nde se fue [Mon Laferte]",
-      "corroboration": 1,
+      "song": "Pa' D\u00f3nde Se Fue\" by Mon Laferte",
+      "corroboration": 2,
       "silence_match": 0.0,
       "clip_start": 0,
       "clip_end": 261.59999999999997,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 82
     },
     {
       "seconds": 316,
-      "song": "Am\u00e1rrame [Mon Laferte feat. Juanes]",
+      "song": "Am\u00e1rrame [feat. Juanes]\" by Mon Laferte",
       "corroboration": 1,
       "silence_match": 314.772,
       "clip_start": 314.88,
       "clip_end": 525.12,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 83
     },
     {
       "seconds": 553,
-      "song": "Fotograf\u00eda [Juanes feat. Mon Laferte]",
-      "corroboration": 1,
+      "song": "Fotograf\u00eda [feat. Mon Laferte]\" by Juanes",
+      "corroboration": 2,
       "silence_match": 550.466,
       "clip_start": 544.8,
       "clip_end": 794.4,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 90
     },
     {
       "seconds": 818,
-      "song": "Es tarde [Juanes]",
-      "corroboration": 1,
+      "song": "Es Tarde\" by Juanes",
+      "corroboration": 2,
       "silence_match": 816.649,
       "clip_start": 815.52,
-      "clip_end": 908.16,
+      "clip_end": 1032.96,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 90
     }
   ],
   "silence_intervals": [
@@ -248,12 +244,15 @@
   ],
   "confidence": {
     "scores": [
-      75,
+      82,
       83,
-      83,
-      83
+      90,
+      90
     ],
-    "avg": 81.0,
-    "min": 75
-  }
+    "avg": 86.2,
+    "min": 82
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

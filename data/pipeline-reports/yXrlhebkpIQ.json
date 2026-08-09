@@ -2,141 +2,54 @@
   "video_id": "yXrlhebkpIQ",
   "title": "Jorja Smith: NPR Music Tiny Desk Concert",
   "duration": 749,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/yXrlhebkpIQ.mp3",
-  "description_songs": [
-    "On My Mind",
-    "Teenage Fantasy",
-    "Blue Lights"
-  ],
-  "method": "comments",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/yXrlhebkpIQ.mp3",
+  "description_songs": [],
+  "method": "manual",
   "resolve_notes": {
-    "A_comments": "ok \u2014 1400 likes, template #1"
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 3,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 187.2,
-      "end": 195.83999999999997,
-      "duration": 8.639999999999986,
-      "kind": "applause"
-    },
-    {
-      "start": 196.79999999999998,
-      "end": 201.6,
-      "duration": 4.800000000000011,
-      "kind": "talk"
-    },
-    {
-      "start": 201.6,
-      "end": 203.99999999999997,
-      "duration": 2.3999999999999773,
-      "kind": "applause"
-    },
-    {
-      "start": 204.48,
-      "end": 206.39999999999998,
-      "duration": 1.9199999999999875,
-      "kind": "talk"
-    },
-    {
-      "start": 206.4,
-      "end": 207.83999999999997,
-      "duration": 1.4399999999999693,
-      "kind": "applause"
-    },
-    {
-      "start": 208.32,
-      "end": 209.76,
-      "duration": 1.4399999999999977,
-      "kind": "talk"
-    },
-    {
-      "start": 209.76,
-      "end": 211.2,
-      "duration": 1.4399999999999977,
-      "kind": "applause"
-    },
-    {
-      "start": 212.64,
-      "end": 215.04,
-      "duration": 2.4000000000000057,
-      "kind": "applause"
-    },
-    {
-      "start": 215.04,
       "end": 227.04,
-      "duration": 12.0,
-      "kind": "talk"
+      "duration": 39.84,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
-      "start": 318.71999999999997,
+      "start": 321.12,
       "end": 323.04,
-      "duration": 4.32000000000005,
-      "kind": "talk"
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 463.68,
-      "end": 470.4,
-      "duration": 6.71999999999997,
-      "kind": "applause"
-    },
-    {
-      "start": 470.4,
       "end": 474.72,
-      "duration": 4.32000000000005,
-      "kind": "talk"
+      "duration": 11.04000000000002,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 732.0,
-      "end": 742.08,
-      "duration": 10.080000000000041,
-      "kind": "applause"
-    },
-    {
-      "start": 743.04,
       "end": 747.36,
-      "duration": 4.32000000000005,
-      "kind": "applause"
+      "duration": 15.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
-  "candidates": [
-    {
-      "seconds": 0,
-      "song": "On My Mind",
-      "corroboration": 3,
-      "silence_match": null,
-      "clip_start": 0,
-      "clip_end": 187.2,
-      "start_refined": false,
-      "end_trimmed": true,
-      "suspect": false,
-      "confidence": 74
-    },
-    {
-      "seconds": 227,
-      "song": "Teenage Fantasy",
-      "corroboration": 2,
-      "silence_match": 227.235,
-      "clip_start": 227.04,
-      "clip_end": 463.68,
-      "start_refined": true,
-      "end_trimmed": true,
-      "suspect": false,
-      "confidence": 90
-    },
-    {
-      "seconds": 476,
-      "song": "Blue Lights",
-      "corroboration": 2,
-      "silence_match": 474.578,
-      "clip_start": 474.72,
-      "clip_end": 732.0,
-      "start_refined": true,
-      "end_trimmed": true,
-      "suspect": false,
-      "confidence": 90
-    }
-  ],
+  "candidates": [],
   "silence_intervals": [
     {
       "start": 185.476,
@@ -190,12 +103,11 @@
     }
   ],
   "confidence": {
-    "scores": [
-      74,
-      90,
-      90
-    ],
-    "avg": 84.7,
-    "min": 74
-  }
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

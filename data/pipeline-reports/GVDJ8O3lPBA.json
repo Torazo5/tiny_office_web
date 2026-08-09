@@ -2,106 +2,68 @@
   "video_id": "GVDJ8O3lPBA",
   "title": "Tash Sultana: Tiny Desk Concert",
   "duration": 1537,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/GVDJ8O3lPBA.mp3",
-  "description_songs": [
-    "Jungle",
-    "Notion",
-    "Blackbird"
-  ],
-  "method": "yamnet",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/GVDJ8O3lPBA.mp3",
+  "description_songs": [],
+  "method": "manual",
   "resolve_notes": {
-    "A_comments": "failed \u2014 no comment had 2+ timestamps",
-    "B_yamnet": "ok \u2014 5 usable span(s), took top 2"
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 422.4,
-      "end": 435.84,
-      "duration": 13.439999999999998,
-      "kind": "applause"
-    },
-    {
-      "start": 435.84,
       "end": 439.2,
-      "duration": 3.3600000000000136,
-      "kind": "talk"
+      "duration": 16.80000000000001,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 443.52,
       "end": 447.36,
       "duration": 3.840000000000032,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 454.08,
+      "end": 458.88,
+      "duration": 4.800000000000011,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 459.35999999999996,
       "end": 460.8,
-      "duration": 6.720000000000027,
-      "kind": "talk"
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1045.92,
-      "end": 1060.32,
-      "duration": 14.399999999999864,
-      "kind": "applause"
-    },
-    {
-      "start": 1060.32,
       "end": 1079.52,
-      "duration": 19.200000000000045,
-      "kind": "talk"
+      "duration": 33.59999999999991,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1515.36,
-      "end": 1533.12,
-      "duration": 17.75999999999999,
-      "kind": "applause"
-    },
-    {
-      "start": 1534.08,
       "end": 1536.96,
-      "duration": 2.880000000000109,
-      "kind": "talk"
+      "duration": 21.600000000000136,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
-  "candidates": [
-    {
-      "seconds": 0.0,
-      "song": "Jungle",
-      "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 0.0,
-      "clip_end": 422.4,
-      "start_refined": false,
-      "end_trimmed": true,
-      "suspect": false,
-      "confidence": 43
-    },
-    {
-      "seconds": 1045.92,
-      "song": "Notion",
-      "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 1060.32,
-      "clip_end": 1515.36,
-      "start_refined": true,
-      "end_trimmed": false,
-      "suspect": false,
-      "confidence": 43
-    },
-    {
-      "seconds": 1515.36,
-      "song": "Blackbird",
-      "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 1533.12,
-      "clip_end": 1537,
-      "start_refined": true,
-      "end_trimmed": false,
-      "suspect": true,
-      "confidence": 0
-    }
-  ],
+  "candidates": [],
   "silence_intervals": [
     {
       "start": 402.837,
@@ -260,12 +222,11 @@
     }
   ],
   "confidence": {
-    "scores": [
-      43,
-      43,
-      0
-    ],
-    "avg": 28.7,
+    "scores": [],
+    "avg": 0,
     "min": 0
-  }
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

@@ -2,17 +2,24 @@
   "video_id": "ouuPSxE1hK4",
   "title": "Bad Bunny: Tiny Desk Concert",
   "duration": 2021,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/ouuPSxE1hK4.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/ouuPSxE1hK4.mp3",
   "description_songs": [
-    "\u201cPIToRRO DE COCO\u201d",
-    "\u201cVOY A LLeVARTE PA PR\u201d",
-    "\u201cKLOuFRENS\u201d",
-    "\u201cLO QUE LE PAS\u00d3 A HAWAii\u201d",
-    "\u201cLA MuDANZA\u201d"
+    "PIToRRO DE COCO",
+    "VOY A LLeVARTE PA PR",
+    "KLOuFRENS",
+    "LO QUE LE PAS\u00d3 A HAWAii",
+    "LA MuDANZA"
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 9500 likes, template #1 (description lists 5 \u2014 comment may split/merge differently)"
+    "A_comments": "ok \u2014 9500 likes, matched all 5 description song(s), retained 5 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 3
   },
   "refine_method": "yamnet",
   "boundary_spans": [
@@ -20,309 +27,328 @@
       "start": 109.44,
       "end": 110.88,
       "duration": 1.4399999999999977,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 216.95999999999998,
-      "end": 224.15999999999997,
-      "duration": 7.199999999999989,
-      "kind": "applause"
-    },
-    {
-      "start": 225.12,
-      "end": 235.2,
-      "duration": 10.079999999999984,
-      "kind": "applause"
-    },
-    {
-      "start": 235.2,
       "end": 257.28000000000003,
-      "duration": 22.08000000000004,
-      "kind": "talk"
+      "duration": 40.32000000000005,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 418.56,
-      "end": 429.12,
-      "duration": 10.560000000000002,
-      "kind": "applause"
-    },
-    {
-      "start": 429.59999999999997,
       "end": 432.48,
-      "duration": 2.8800000000000523,
-      "kind": "talk"
+      "duration": 13.920000000000016,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 438.24,
       "end": 439.68,
       "duration": 1.4399999999999977,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 651.36,
       "end": 664.8,
       "duration": 13.43999999999994,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 668.16,
+      "end": 669.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 670.0799999999999,
+      "end": 672.96,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 673.92,
+      "end": 676.3199999999999,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 677.28,
+      "end": 679.2,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 681.12,
       "end": 684.48,
-      "duration": 16.32000000000005,
-      "kind": "talk"
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 686.4,
+      "end": 695.04,
+      "duration": 8.639999999999986,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 696.0,
+      "end": 717.6,
+      "duration": 21.600000000000023,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 718.0799999999999,
+      "end": 727.68,
+      "duration": 9.600000000000023,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 728.16,
+      "end": 737.76,
+      "duration": 9.600000000000023,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 738.72,
       "end": 740.16,
-      "duration": 53.75999999999999,
-      "kind": "talk"
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 816.48,
+      "end": 817.92,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 818.4,
+      "end": 820.8,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 825.12,
       "end": 827.04,
-      "duration": 10.559999999999945,
-      "kind": "talk"
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 911.52,
       "end": 912.96,
       "duration": 1.4400000000000546,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 981.12,
       "end": 992.64,
       "duration": 11.519999999999982,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 994.56,
-      "end": 995.04,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 995.52,
-      "end": 996.96,
-      "duration": 1.4400000000000546,
-      "kind": "talk"
-    },
-    {
-      "start": 996.9599999999999,
-      "end": 998.4,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 1000.3199999999999,
-      "end": 1002.72,
-      "duration": 2.400000000000091,
-      "kind": "talk"
-    },
-    {
-      "start": 1004.16,
-      "end": 1004.64,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 1004.64,
       "end": 1291.2,
-      "duration": 286.56000000000006,
-      "kind": "talk"
+      "duration": 296.6400000000001,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1296.48,
       "end": 1299.84,
       "duration": 3.3599999999999,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1324.32,
       "end": 1325.76,
       "duration": 1.4400000000000546,
-      "kind": "talk"
-    },
-    {
-      "start": 1345.44,
-      "end": 1346.8799999999999,
-      "duration": 1.4399999999998272,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1730.3999999999999,
       "end": 1731.84,
       "duration": 1.4400000000000546,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 1735.6799999999998,
-      "end": 1738.08,
-      "duration": 2.400000000000091,
-      "kind": "talk"
+      "start": 1758.72,
+      "end": 1760.1599999999999,
+      "duration": 1.4399999999998272,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 1755.36,
-      "end": 1768.8,
-      "duration": 13.440000000000055,
-      "kind": "talk"
+      "start": 1764.48,
+      "end": 1767.36,
+      "duration": 2.8799999999998818,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1771.6799999999998,
       "end": 1773.6,
       "duration": 1.9200000000000728,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 1776.96,
+      "start": 1781.28,
       "end": 1785.12,
-      "duration": 8.159999999999854,
-      "kind": "talk"
+      "duration": 3.839999999999918,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1788.96,
+      "end": 1790.3999999999999,
+      "duration": 1.4399999999998272,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1791.84,
       "end": 1793.28,
-      "duration": 4.319999999999936,
-      "kind": "talk"
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 1796.1599999999999,
+      "start": 1798.08,
       "end": 1799.52,
-      "duration": 3.3600000000001273,
-      "kind": "talk"
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 1801.9199999999998,
-      "end": 1816.32,
-      "duration": 14.400000000000091,
-      "kind": "talk"
+      "start": 1802.8799999999999,
+      "end": 1812.96,
+      "duration": 10.080000000000155,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
-      "start": 1824.96,
+      "start": 1813.4399999999998,
+      "end": 1814.8799999999999,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1825.9199999999998,
       "end": 1828.32,
-      "duration": 3.3599999999999,
-      "kind": "talk"
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1830.72,
       "end": 1841.28,
       "duration": 10.559999999999945,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1843.6799999999998,
+      "end": 1845.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1845.6,
       "end": 1847.04,
-      "duration": 3.3600000000001273,
-      "kind": "talk"
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1903.6799999999998,
-      "end": 1904.1599999999999,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 1904.6399999999999,
-      "end": 1925.76,
-      "duration": 21.12000000000012,
-      "kind": "applause"
-    },
-    {
-      "start": 1928.6399999999999,
-      "end": 1933.44,
-      "duration": 4.800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 1933.9199999999998,
       "end": 1956.96,
-      "duration": 23.04000000000019,
-      "kind": "talk"
-    },
-    {
-      "start": 1974.72,
-      "end": 1976.1599999999999,
-      "duration": 1.4399999999998272,
-      "kind": "talk"
+      "duration": 53.2800000000002,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1993.9199999999998,
-      "end": 1998.24,
-      "duration": 4.320000000000164,
-      "kind": "applause"
-    },
-    {
-      "start": 1999.1999999999998,
-      "end": 2001.12,
-      "duration": 1.9200000000000728,
-      "kind": "talk"
-    },
-    {
-      "start": 2001.12,
-      "end": 2004.0,
-      "duration": 2.880000000000109,
-      "kind": "applause"
-    },
-    {
-      "start": 2005.4399999999998,
-      "end": 2006.3999999999999,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 2007.36,
       "end": 2015.04,
-      "duration": 7.680000000000064,
-      "kind": "applause"
+      "duration": 21.12000000000012,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
       "seconds": 11,
       "song": "PIToRRO DE COCO",
-      "corroboration": 2,
+      "corroboration": 1,
       "silence_match": 5.41269,
       "clip_start": 11,
       "clip_end": 216.95999999999998,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 82
+      "confidence": 75
     },
     {
       "seconds": 271,
       "song": "VOY A LLeVARTE PA PR",
-      "corroboration": 2,
+      "corroboration": 1,
       "silence_match": null,
       "clip_start": 257.28000000000003,
       "clip_end": 418.56,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 68
     },
     {
       "seconds": 458,
       "song": "KLOuFRENS",
-      "corroboration": 2,
+      "corroboration": 1,
       "silence_match": null,
       "clip_start": 439.68,
       "clip_end": 651.36,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 68
     },
     {
       "seconds": 751,
       "song": "LO QUE LE PAS\u00d3 A HAWAii",
-      "corroboration": 2,
+      "corroboration": 1,
       "silence_match": null,
       "clip_start": 740.16,
-      "clip_end": 816.48,
+      "clip_end": 981.12,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 68
     },
     {
       "seconds": 1309,
@@ -330,23 +356,12 @@
       "corroboration": 2,
       "silence_match": null,
       "clip_start": 1325.76,
-      "clip_end": 1755.36,
+      "clip_end": 1802.8799999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 75
-    },
-    {
-      "seconds": 1968,
-      "song": "DtMF",
-      "corroboration": 2,
-      "silence_match": null,
-      "clip_start": 1976.1599999999999,
-      "clip_end": 1993.9199999999998,
-      "start_refined": true,
-      "end_trimmed": true,
-      "suspect": true,
-      "confidence": 25
     }
   ],
   "silence_intervals": [
@@ -1083,14 +1098,16 @@
   ],
   "confidence": {
     "scores": [
-      82,
       75,
-      75,
-      75,
-      75,
-      25
+      68,
+      68,
+      68,
+      75
     ],
-    "avg": 67.8,
-    "min": 25
-  }
+    "avg": 70.8,
+    "min": 68
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

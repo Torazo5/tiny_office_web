@@ -2,54 +2,44 @@
   "video_id": "eB4oFu4BtQ8",
   "title": "The Roots feat. Bilal: NPR Music Tiny Desk Concert",
   "duration": 724,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/eB4oFu4BtQ8.mp3",
-  "description_songs": [
-    "It Ain't Fair"
-  ],
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/eB4oFu4BtQ8.mp3",
+  "description_songs": [],
   "method": "manual",
   "resolve_notes": {
-    "A_comments": "failed \u2014 no comment had 2+ timestamps",
-    "B_yamnet": "failed \u2014 not enough songs or no talk/applause spans detected",
-    "C_silence": "failed \u2014 not enough songs or no silence detected",
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
     "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
       "start": 558.72,
-      "end": 561.6,
-      "duration": 2.8799999999999955,
-      "kind": "applause"
-    },
-    {
-      "start": 562.0799999999999,
-      "end": 564.48,
-      "duration": 2.400000000000091,
-      "kind": "applause"
-    },
-    {
-      "start": 564.9599999999999,
       "end": 572.16,
-      "duration": 7.2000000000000455,
-      "kind": "applause"
+      "duration": 13.43999999999994,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 701.28,
       "end": 715.68,
       "duration": 14.399999999999977,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 717.6,
-      "end": 718.08,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 718.56,
       "end": 721.4399999999999,
-      "duration": 2.8799999999999955,
-      "kind": "applause"
+      "duration": 3.839999999999918,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [],
@@ -84,5 +74,8 @@
     "scores": [],
     "avg": 0,
     "min": 0
-  }
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

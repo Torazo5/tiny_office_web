@@ -2,16 +2,23 @@
   "video_id": "y38qQRg3UDI",
   "title": "Dua Lipa: Tiny Desk Concert",
   "duration": 1105,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/y38qQRg3UDI.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/y38qQRg3UDI.mp3",
   "description_songs": [
-    "\u201cTraining Season\u201d",
-    "\u201cThese Walls\u201d",
-    "\u201cHappy for You\u201d",
-    "\u201cHoudini\u201d"
+    "Training Season",
+    "These Walls",
+    "Happy for You",
+    "Houdini"
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 3000 likes, template #1"
+    "A_comments": "ok \u2014 3000 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
@@ -19,199 +26,57 @@
       "start": 101.28,
       "end": 101.76,
       "duration": 0.480000000000004,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 168.95999999999998,
       "end": 169.43999999999997,
       "duration": 0.47999999999998977,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 177.12,
       "end": 177.6,
       "duration": 0.47999999999998977,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 242.39999999999998,
-      "end": 246.71999999999997,
-      "duration": 4.319999999999993,
-      "kind": "applause"
-    },
-    {
-      "start": 247.2,
-      "end": 247.67999999999998,
-      "duration": 0.47999999999998977,
-      "kind": "applause"
-    },
-    {
-      "start": 247.67999999999998,
-      "end": 249.6,
-      "duration": 1.920000000000016,
-      "kind": "talk"
-    },
-    {
-      "start": 249.6,
-      "end": 256.32,
-      "duration": 6.719999999999999,
-      "kind": "applause"
-    },
-    {
-      "start": 257.76,
-      "end": 269.28000000000003,
-      "duration": 11.520000000000039,
-      "kind": "applause"
-    },
-    {
-      "start": 269.28,
       "end": 302.40000000000003,
-      "duration": 33.12000000000006,
-      "kind": "talk"
+      "duration": 60.00000000000006,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 517.4399999999999,
-      "end": 526.08,
-      "duration": 8.6400000000001,
-      "kind": "applause"
-    },
-    {
-      "start": 526.0799999999999,
-      "end": 528.48,
-      "duration": 2.400000000000091,
-      "kind": "talk"
-    },
-    {
-      "start": 528.48,
-      "end": 529.44,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 529.4399999999999,
       "end": 562.56,
-      "duration": 33.120000000000005,
-      "kind": "talk"
-    },
-    {
-      "start": 792.0,
-      "end": 794.4,
-      "duration": 2.3999999999999773,
-      "kind": "talk"
+      "duration": 45.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 795.36,
-      "end": 799.68,
-      "duration": 4.319999999999936,
-      "kind": "applause"
-    },
-    {
-      "start": 800.64,
-      "end": 811.1999999999999,
-      "duration": 10.559999999999945,
-      "kind": "applause"
-    },
-    {
-      "start": 811.68,
-      "end": 826.08,
-      "duration": 14.400000000000091,
-      "kind": "talk"
-    },
-    {
-      "start": 826.0799999999999,
-      "end": 828.48,
-      "duration": 2.400000000000091,
-      "kind": "applause"
-    },
-    {
-      "start": 828.48,
-      "end": 837.12,
-      "duration": 8.639999999999986,
-      "kind": "talk"
-    },
-    {
-      "start": 838.0799999999999,
-      "end": 838.56,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 840.0,
-      "end": 844.8,
-      "duration": 4.7999999999999545,
-      "kind": "talk"
-    },
-    {
-      "start": 845.76,
-      "end": 848.16,
-      "duration": 2.3999999999999773,
-      "kind": "applause"
-    },
-    {
-      "start": 848.16,
-      "end": 852.48,
-      "duration": 4.32000000000005,
-      "kind": "talk"
-    },
-    {
-      "start": 852.48,
-      "end": 852.96,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 852.9599999999999,
-      "end": 859.1999999999999,
-      "duration": 6.240000000000009,
-      "kind": "talk"
-    },
-    {
-      "start": 859.68,
-      "end": 862.08,
-      "duration": 2.400000000000091,
-      "kind": "applause"
-    },
-    {
-      "start": 862.0799999999999,
-      "end": 865.4399999999999,
-      "duration": 3.3600000000000136,
-      "kind": "talk"
-    },
-    {
-      "start": 865.92,
-      "end": 867.84,
-      "duration": 1.9200000000000728,
-      "kind": "applause"
-    },
-    {
-      "start": 868.3199999999999,
       "end": 877.92,
-      "duration": 9.600000000000023,
-      "kind": "talk"
+      "duration": 82.55999999999995,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 974.88,
       "end": 977.28,
       "duration": 2.3999999999999773,
-      "kind": "talk"
+      "kind": "talk",
+      "contains_talk": true
     },
     {
       "start": 1064.6399999999999,
-      "end": 1072.32,
-      "duration": 7.680000000000064,
-      "kind": "applause"
-    },
-    {
-      "start": 1072.32,
-      "end": 1073.76,
-      "duration": 1.4400000000000546,
-      "kind": "talk"
-    },
-    {
-      "start": 1073.76,
-      "end": 1092.0,
-      "duration": 18.24000000000001,
-      "kind": "applause"
+      "end": 1092.48,
+      "duration": 27.840000000000146,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
@@ -221,9 +86,38 @@
       "corroboration": 0,
       "silence_match": 0.0,
       "clip_start": 3,
-      "clip_end": 101.28,
+      "clip_end": 242.39999999999998,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [
+        {
+          "start": 101.28,
+          "end": 101.76,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.947,
+          "music_run_sec": 36.25,
+          "anchor_start": 242.4
+        },
+        {
+          "start": 168.96,
+          "end": 169.44,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.922,
+          "music_run_sec": 21.5,
+          "anchor_start": 242.4
+        },
+        {
+          "start": 177.12,
+          "end": 177.6,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.921,
+          "music_run_sec": 18.0,
+          "anchor_start": 242.4
+        }
+      ],
       "suspect": false,
       "confidence": 68
     },
@@ -236,18 +130,20 @@
       "clip_end": 517.4399999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 83
     },
     {
       "seconds": 563,
-      "song": "Happy For You",
+      "song": "Happy for You",
       "corroboration": 1,
       "silence_match": 562.09,
       "clip_start": 562.56,
       "clip_end": 795.36,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 83
     },
@@ -260,6 +156,7 @@
       "clip_end": 1064.6399999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 83
     }
@@ -430,5 +327,8 @@
     ],
     "avg": 79.2,
     "min": 68
-  }
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }

@@ -2,223 +2,174 @@
   "video_id": "9kqnsoY94L8",
   "title": "Ca7riel & Paco Amoroso: Tiny Desk Concert",
   "duration": 1048,
-  "audio_path": "/home/torazo/code/tiny_office/reports/audio/9kqnsoY94L8.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/9kqnsoY94L8.mp3",
   "description_songs": [
-    "\u201cDUMBAI\u201d",
-    "\u201cEL \u00daNICO\u201d",
-    "\u201cMi Deseo\u201d/\u201dBAD BITCH\u201d",
-    "\u201cBABY GANGSTA\u201d",
-    "\u201cLA QUE PUEDE, PUEDE\u201d"
+    "DUMBAI",
+    "EL \u00daNICO",
+    "Mi Deseo\u201d/\u201dBAD BITCH",
+    "BABY GANGSTA",
+    "LA QUE PUEDE, PUEDE"
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 4500 likes, template #5 (description lists 5 \u2014 comment may split/merge differently)"
+    "A_comments": "ok \u2014 4500 likes, matched all 5 description song(s), retained 6 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
   },
   "refine_method": "yamnet",
   "boundary_spans": [
     {
-      "start": 2.88,
-      "end": 5.279999999999999,
-      "duration": 2.3999999999999995,
-      "kind": "talk"
-    },
-    {
       "start": 166.07999999999998,
       "end": 166.55999999999997,
       "duration": 0.47999999999998977,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 356.15999999999997,
-      "end": 359.52,
-      "duration": 3.3600000000000136,
-      "kind": "applause"
-    },
-    {
-      "start": 360.96,
       "end": 361.44,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
+      "duration": 5.28000000000003,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 621.12,
       "end": 623.04,
       "duration": 1.919999999999959,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 797.76,
       "end": 798.24,
       "duration": 0.4800000000000182,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 801.6,
-      "end": 806.4,
-      "duration": 4.7999999999999545,
-      "kind": "applause"
-    },
-    {
-      "start": 808.3199999999999,
-      "end": 817.4399999999999,
-      "duration": 9.120000000000005,
-      "kind": "applause"
-    },
-    {
-      "start": 817.4399999999999,
       "end": 822.24,
-      "duration": 4.800000000000068,
-      "kind": "talk"
+      "duration": 20.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 981.12,
       "end": 983.04,
       "duration": 1.919999999999959,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 985.4399999999999,
       "end": 987.84,
       "duration": 2.400000000000091,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 989.76,
-      "end": 990.24,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 990.24,
-      "end": 991.68,
-      "duration": 1.4399999999999409,
-      "kind": "talk"
-    },
-    {
-      "start": 992.16,
-      "end": 992.64,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 995.04,
-      "end": 996.48,
-      "duration": 1.4400000000000546,
-      "kind": "applause"
-    },
-    {
-      "start": 997.92,
-      "end": 1002.72,
-      "duration": 4.800000000000068,
-      "kind": "talk"
-    },
-    {
-      "start": 1003.1999999999999,
-      "end": 1005.6,
-      "duration": 2.400000000000091,
-      "kind": "applause"
-    },
-    {
-      "start": 1006.56,
       "end": 1009.4399999999999,
-      "duration": 2.8799999999999955,
-      "kind": "talk"
+      "duration": 19.67999999999995,
+      "kind": "applause",
+      "contains_talk": true
     },
     {
       "start": 1022.88,
       "end": 1023.36,
       "duration": 0.4800000000000182,
-      "kind": "applause"
+      "kind": "applause",
+      "contains_talk": false
     },
     {
       "start": 1025.76,
-      "end": 1026.72,
-      "duration": 0.9600000000000364,
-      "kind": "applause"
-    },
-    {
-      "start": 1029.12,
-      "end": 1029.6,
-      "duration": 0.4800000000000182,
-      "kind": "applause"
-    },
-    {
-      "start": 1032.0,
-      "end": 1034.4,
-      "duration": 2.400000000000091,
-      "kind": "talk"
+      "end": 1036.8,
+      "duration": 11.039999999999964,
+      "kind": "applause",
+      "contains_talk": true
     }
   ],
   "candidates": [
     {
       "seconds": 15,
-      "song": "Dumbai",
+      "song": "DUMBAI",
       "corroboration": 0,
       "silence_match": null,
-      "clip_start": 5.279999999999999,
+      "clip_start": 15,
       "clip_end": 166.07999999999998,
-      "start_refined": true,
+      "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 53
     },
     {
       "seconds": 178,
-      "song": "El \u00danico",
+      "song": "EL \u00daNICO",
       "corroboration": 0,
       "silence_match": 181.086,
       "clip_start": 166.55999999999997,
       "clip_end": 356.15999999999997,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 76
     },
     {
       "seconds": 374,
-      "song": "Mi Deseo",
+      "song": "Mi Deseo\u201d/\u201dBAD BITCH",
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 361.44,
       "clip_end": 467,
       "start_refined": true,
       "end_trimmed": false,
+      "end_guard": [],
       "suspect": false,
       "confidence": 53
     },
     {
       "seconds": 467,
-      "song": "Bad bicht",
+      "song": "Mi Deseo\u201d/\u201dBAD BITCH",
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 467,
       "clip_end": 621.12,
       "start_refined": false,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 53
     },
     {
       "seconds": 623,
-      "song": "Baby Gangsta",
+      "song": "BABY GANGSTA",
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 623.04,
       "clip_end": 797.76,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 61
     },
     {
       "seconds": 828,
-      "song": "La que puede puede",
+      "song": "LA QUE PUEDE, PUEDE",
       "corroboration": 0,
       "silence_match": 825.673,
       "clip_start": 822.24,
       "clip_end": 981.12,
       "start_refined": true,
       "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
       "confidence": 76
     }
@@ -287,14 +238,17 @@
   ],
   "confidence": {
     "scores": [
-      61,
+      53,
       76,
       53,
       53,
       61,
       76
     ],
-    "avg": 63.3,
+    "avg": 62.0,
     "min": 53
-  }
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
 }
