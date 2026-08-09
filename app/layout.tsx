@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import { PlayerProvider } from "@/components/player-context";
 import "./globals.css";
 
 // Fonts per the design handoff (IBM Plex Sans for UI text/headings, IBM
@@ -27,7 +28,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`dark ${ibmPlexSans.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <PlayerProvider>{children}</PlayerProvider>
+      </body>
     </html>
   );
 }
