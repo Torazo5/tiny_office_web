@@ -4,7 +4,8 @@ import { getCurrentUser } from "@/lib/auth";
 import { getPlaylists } from "@/lib/data";
 
 export default async function PlaylistsPage() {
-  const [playlists, user] = await Promise.all([getPlaylists(), getCurrentUser()]);
+  const user = await getCurrentUser();
+  const playlists = user ? await getPlaylists(user.id) : [];
 
   return (
     <>

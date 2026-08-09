@@ -188,20 +188,32 @@ export async function getReviewQueue(): Promise<ReviewQueueItem[]> {
   });
 }
 
-export async function getPlaylists(): Promise<PlaylistSummary[]> {
+export async function getPlaylists(ownerId?: string | null): Promise<PlaylistSummary[]> {
   const supabase = await createClient();
-  const [playlistsResult, tracksResult] = await Promise.all([
-    supabase
-      .from("playlists")
-      .select("id, name, owner_name, owner_id, playlist_type")
-      .order("updated_at", { ascending: false }),
-    supabase
-      .from("playlist_tracks")
-      .select("playlist_id, performance_video_id, position")
-      .order("position"),
-  ]);
+  let currentOwnerId = ownerId;
+  if (currentOwnerId === undefined) {
+    const { data, error } = await supabase.auth.getUser();
+    if (error) return [];
+    currentOwnerId = data.user?.id ?? null;
+  }
+  if (!currentOwnerId) return [];
+
+  const playlistsResult = await supabase
+    .from("playlists")
+    .select("id, name, owner_name, owner_id, playlist_type")
+    .eq("owner_id", currentOwnerId)
+    .order("updated_at", { ascending: false });
 
   throwIfError("Loading playlists", playlistsResult.error);
+
+  if (!playlistsResult.data?.length) return [];
+
+  const tracksResult = await supabase
+    .from("playlist_tracks")
+    .select("playlist_id, performance_video_id, position")
+    .in("playlist_id", playlistsResult.data.map((playlist) => playlist.id))
+    .order("position");
+
   throwIfError("Loading playlist track counts", tracksResult.error);
 
   const playlistProfiles = await getProfilesByUserId(
@@ -232,12 +244,21 @@ export async function getPlaylists(): Promise<PlaylistSummary[]> {
   }));
 }
 
-export async function getPlaylist(id: string): Promise<Playlist | null> {
+export async function getPlaylist(id: string, ownerId?: string | null): Promise<Playlist | null> {
   const supabase = await createClient();
+  let currentOwnerId = ownerId;
+  if (currentOwnerId === undefined) {
+    const { data, error } = await supabase.auth.getUser();
+    if (error) return null;
+    currentOwnerId = data.user?.id ?? null;
+  }
+  if (!currentOwnerId) return null;
+
   const { data: playlist, error: playlistError } = await supabase
     .from("playlists")
     .select("id, name, owner_name, owner_id, playlist_type")
     .eq("id", id)
+    .eq("owner_id", currentOwnerId)
     .maybeSingle();
   throwIfError("Loading playlist", playlistError);
   if (!playlist) return null;

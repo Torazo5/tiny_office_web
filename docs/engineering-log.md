@@ -15,6 +15,49 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-09 — Private playlist verification and live migration blocked
+
+- **Symptom and impact:** The account-private playlist change could not be
+  fully verified with the production build, and the live Supabase RLS
+  migration was not applied from this task. The repository contains the
+  migration and server-side ownership checks, but the remote policy change
+  still needs an approved deployment step.
+- **Root cause / evidence:** Turbopack panicked while compiling CSS because
+  the environment denied a child process binding to a port. The Webpack
+  fallback then failed inside Next's TypeScript-output parsing. The connected
+  project's existing policies still included public playlist reads when
+  inspected, and the Supabase connector rejected applying the migration as an
+  unapproved live database mutation.
+- **Systems and files:** Next.js 16.3.0/Turbopack, the local WSL runtime,
+  Supabase project policies for `public.playlists` and
+  `public.playlist_tracks`, `lib/data.ts`, the playlist routes/actions, and
+  `supabase/migrations/20260809173000_private_playlists.sql`.
+- **Resolution / next action:** Keep the ownership filters, sign-in gates,
+  private insert default, and migration in the focused change. Run the
+  production build from a runtime that permits Turbopack child processes and
+  apply the checked-in Supabase migration through the approved deployment
+  workflow before publishing.
+- **Verification:** `git diff --check` and `tsc --noEmit` passed. The existing
+  lint command reports unrelated errors in playlist-player, revision-video,
+  and notification components; the existing review-utils test has one
+  unrelated failing expectation. A read-only policy query confirmed the
+  pre-change public policies before the migration attempt.
+
+### 2026-08-09 — Private playlist commit blocked by read-only Git metadata
+
+- **Symptom and impact:** The focused private-playlist change could not be
+  staged or committed, so the required local commit remains pending.
+- **Root cause / evidence:** `git add` failed with `Unable to create
+  .git/index.lock: Read-only file system`; the workspace files are writable,
+  but the repository's Git metadata is not.
+- **Systems and files:** The repository Git index and the private-playlist
+  files listed in the preceding entry.
+- **Resolution / next action:** Retry the scoped `git add` and commit from an
+  environment with writable `.git` metadata. Do not push or publish unless
+  requested.
+- **Verification:** `git status --short` confirms the intended files remain
+  unstaged and no index lock was created.
+
 ### 2026-08-09 — First setlist song did not reseek after playback moved
 
 - **Symptom and impact:** Clicking the first song after selecting or playing a

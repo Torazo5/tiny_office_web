@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useActionState, useState, useTransition } from "react";
 import { createPlaylist, deletePlaylist } from "@/app/playlist/actions";
+import { PlaylistSignInGate } from "@/components/playlist-sign-in-gate";
 import { YouTubeThumbnail } from "@/components/youtube-thumbnail";
 import type { PlaylistSummary } from "@/lib/types";
 
@@ -29,6 +30,10 @@ export function PlaylistLibrary({
     PlaylistActionState,
     FormData
   >(createPlaylist, null);
+
+  if (!userId) {
+    return <PlaylistSignInGate nextPath="/playlists" />;
+  }
 
   function handleDelete(playlist: PlaylistSummary) {
     if (!window.confirm(`Delete “${playlist.name}”? This cannot be undone.`)) return;

@@ -97,7 +97,7 @@ export async function createPlaylist(
     playlist_type: type,
     owner_id: user.id,
     owner_name: ownerName,
-    visibility: "public",
+    visibility: "private",
   });
 
   if (error) return { error: "Could not create that playlist. Try again." };

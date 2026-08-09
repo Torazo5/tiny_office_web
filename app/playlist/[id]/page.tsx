@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Header } from "@/components/header";
 import { PlaylistDetail } from "@/components/playlist-detail";
+import { PlaylistSignInGate } from "@/components/playlist-sign-in-gate";
 import { getCurrentUser } from "@/lib/auth";
 import { getPlaylist, getPlaylistSongOptions, getPlaylistVideoOptions } from "@/lib/data";
 
@@ -15,15 +16,27 @@ export default async function PlaylistPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const playlist = await getPlaylist(id);
+  const user = await getCurrentUser();
+
+  if (!user) {
+    return (
+      <>
+        <Header />
+        <main className="p-8">
+          <PlaylistSignInGate nextPath={`/playlist/${id}`} />
+        </main>
+      </>
+    );
+  }
+
+  const playlist = await getPlaylist(id, user.id);
   if (!playlist) notFound();
 
-  const [songCatalog, videoCatalog, user] = await Promise.all([
+  const [songCatalog, videoCatalog] = await Promise.all([
     getPlaylistSongOptions(),
     getPlaylistVideoOptions(),
-    getCurrentUser(),
   ]);
-  const canManage = Boolean(user && playlist.ownerId === user.id);
+  const canManage = playlist.ownerId === user.id;
 
   return (
     <>
@@ -33,7 +46,7 @@ export default async function PlaylistPage({
         songCatalog={songCatalog}
         videoCatalog={videoCatalog}
         canManage={canManage}
-        isSignedIn={Boolean(user)}
+        isSignedIn
       />
     </>
   );
