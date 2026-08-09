@@ -7,9 +7,9 @@ import type { Performance } from "@/lib/types";
  * dot, "unconfirmed boundaries" sublabel, suspect flags, review queue) all
  * have a real example to render, not synthetic data.
  *
- * `avgRating` / `ratingCount` / `reviews` are NOT pipeline output — there is
- * no ratings/reviews backend yet. Values here are placeholder mock data
- * standing in for what Supabase will eventually serve.
+ * `avgRating` / `ratingCount` / `reviews` are NOT pipeline output. Runtime
+ * reads come from Supabase now; these values remain as a small reference
+ * fixture for development and tests.
  */
 export const PERFORMANCES: Performance[] = [
   {

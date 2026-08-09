@@ -81,29 +81,13 @@ export async function saveReview(input: {
 
   const profile = await getUserProfile(user.id);
 
-  const { error: reviewError } = await supabase.from("reviews").upsert(
-    {
-      performance_video_id: input.performanceVideoId,
-      user_id: user.id,
-      display_name: formatProfileLabel(profile),
-      rating: input.rating,
-      text,
-      updated_at: new Date().toISOString(),
-    },
-    { onConflict: "performance_video_id,user_id" },
-  );
-  if (reviewError) return { error: "Could not save your review. Try again." };
-
-  const { error: ratingError } = await supabase.from("ratings").upsert(
-    {
-      performance_video_id: input.performanceVideoId,
-      user_id: user.id,
-      rating: input.rating,
-      updated_at: new Date().toISOString(),
-    },
-    { onConflict: "performance_video_id,user_id" },
-  );
-  if (ratingError) return { error: "Review saved, but its rating could not be updated." };
+  const { error } = await supabase.rpc("save_review_with_rating", {
+    p_performance_video_id: input.performanceVideoId,
+    p_rating: input.rating,
+    p_text: text,
+    p_display_name: formatProfileLabel(profile),
+  });
+  if (error) return { error: "Could not save your review. Try again." };
 
   revalidatePath(`/video/${input.performanceVideoId}`);
   revalidatePath("/");

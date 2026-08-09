@@ -1,142 +1,154 @@
 # Tiny Office
 
-An unofficial Tiny Desk companion — turns full concerts into individually
-playable songs (official YouTube embeds), with ratings, reviews, lists, and
-discovery. Spotify + Letterboxd, for Tiny Desk.
+Tiny Office is an unofficial Tiny Desk companion: official YouTube concerts,
+individually playable by song, with ratings, reviews, playlists, discovery,
+and community timeline corrections.
 
-This repo is the **frontend plus Supabase-backed app**: Next.js + Tailwind +
-shadcn/ui, styled to match the design handoff. Supabase now backs auth,
-playlists, revision submissions, listening presets, and main-truth review.
-Ratings and written reviews remain the next product surfaces to connect.
-Admins can mark each official boundary confirmed or unconfirmed; a performance
-is only marked verified when every boundary is confirmed.
+The app is a Next.js frontend backed by Supabase. Supabase stores metadata and
+user data only—timestamps, song titles, confidence values, ratings, reviews,
+playlists, profiles, listening progress, and review submissions. Video and
+audio playback stays inside the official `youtube-nocookie.com` embed.
 
 ## Stack
 
-- Next.js 16 (App Router) + TypeScript + Tailwind v4
-- shadcn/ui (`new-york`-derived, custom theme — see `app/globals.css`)
-- IBM Plex Sans / IBM Plex Mono (`next/font/google`)
-- No state library or data-fetching library; server components and Supabase
-  Server Actions own the data flow
+- Next.js 16 App Router and React 19
+- TypeScript, Tailwind CSS v4, and shadcn/ui primitives
+- Supabase Auth, Postgres, Row Level Security, and Server Actions
+- YouTube IFrame Player API for seeking and playlist playback
+- IBM Plex Sans and IBM Plex Mono from `next/font/google`
 
-## Running it
+## Run locally
+
+Install dependencies and create a local environment file:
 
 ```bash
 npm install
+cp .env.example .env.local
 npm run dev
 ```
 
-Open http://localhost:3000. Everything renders from fixture data — no
-external calls, no env vars required to run it locally.
+Open [http://localhost:3000](http://localhost:3000).
+
+The app reads its catalog and user data from Supabase; it does not silently
+fall back to the files in `lib/fixtures/`. A working local environment needs a
+Supabase project with the checked-in migrations applied and the catalog seeded.
+
+Required public variables:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
+```
+
+The pipeline seed script also needs the server-only secret key:
+
+```bash
+SUPABASE_SECRET_KEY=
+```
+
+Never expose `SUPABASE_SECRET_KEY`, `ADMIN_PASSWORD`, or
+`ADMIN_SESSION_SECRET` through a `NEXT_PUBLIC_` variable.
+
+## Routes
+
+| Route | Purpose |
+|---|---|
+| `/` | Browse and search performances |
+| `/video/[id]` | YouTube performance player, song timeline, ratings, reviews, and presets |
+| `/playlists` | Signed-in user playlist library |
+| `/playlist/[id]` | Song or full-video playlist with playback controls |
+| `/adventure` | Random song-clips or full-performance listening |
+| `/profile` | Public profile settings, top-four favorites, listening stats, and reviews |
+| `/review` | Password-protected admin queue and preset moderation |
+| `/review/[id]` | Timeline editor for presets, truth requests, and main-truth updates |
+| `/login` | Google sign-in and account creation |
+
+## Product behavior
+
+### Playback
+
+- Every video is played through the official YouTube embed.
+- Clicking a song seeks the shared player to that song's start boundary.
+- Performance pages support play/pause, seeking, skip controls, and “Only song mode.”
+- Playlist pages support previous/next, shuffle, loop, seeking, and gap skipping for full-video playlists.
+- Listening progress is recorded for signed-in users and feeds profile stats.
+
+### Community and review data
+
+- Signed-in users can save half-star ratings and one written review per performance.
+- Reviews show public profile labels, generated avatars, and likes.
+- Users can publish listening presets without changing official ground truth.
+- Users can submit timeline changes for admin review.
+- Admins can edit titles and boundaries, add or remove songs, confirm boundaries,
+  resolve requests, moderate presets, and retain an audit history.
+- Playlists are account-private. Both the app ownership checks and the
+  `private_playlists` migration must be active before launch.
+
+## Database setup
+
+The `supabase/migrations/` directory is the schema source of truth. Apply all
+migrations in order, including the private-playlist and transactional-write
+migrations, through the approved Supabase deployment workflow.
+
+The checked-in pipeline snapshot in `data/pipeline-reports/` contains 48 source
+report JSON files plus `_mass_pull_summary.json`. Seed or refresh the catalog
+with:
+
+```bash
+npm run seed:pipeline
+```
+
+That command upserts performances and songs and removes stale pipeline rows.
+The reports are a snapshot, not a live sync; refresh them from the pipeline
+repository before running the seed again.
+
+## Admin configuration
+
+The review dashboard requires a signed-in Google account plus these server-only
+variables:
+
+```bash
+ADMIN_PASSWORD=
+ADMIN_SESSION_SECRET=
+```
+
+The password is checked only in a Server Action. The signed admin session is
+HttpOnly, bound to the Supabase user, and expires after eight hours.
+
+## Pipeline data and known limits
+
+The runtime catalog comes from the Supabase `performances` and `songs` tables.
+The checked-in report snapshot is the ingestion source and is deliberately
+kept separate from user drafts and public main truth.
+
+Known limitations:
+
+- Upload dates are not populated by the current pipeline snapshot.
+- `method = 'manual'` reports are excluded from the browse and review queue
+  because the app does not yet have a free-scrub manual-marking workflow.
+- Playback is provider-controlled. The app can seek and constrain playback,
+  but it does not host, proxy, or persist YouTube media.
+- The design is intentionally dark-only; there is no light theme.
+
+## Validation and release checklist
+
+Run the local checks before publishing:
+
+```bash
+npm test
+npm run lint
+npx tsc --noEmit
+npm run build
+```
+
+Also verify the Google OAuth redirect URLs, Supabase migrations and RLS
+policies, catalog seed, admin access, private playlist access, review writes,
+timeline approval, and YouTube playback in a browser. The app includes shared
+loading, error, and not-found states, but a production browser smoke pass is
+still required.
 
 ## Design source
 
-`docs/design-handoff/` — the original design handoff (README + an
-interactive HTML prototype) this app was built to match. `README.md` there
-has the full token/spacing/typography spec; the `.html` file is a
-throwaway prototype, not something this app imports or depends on.
-
-Single dark theme, no light mode — that's a property of the source design,
-not an oversight. Don't add a theme toggle without a light-mode design
-first.
-
-## Screens
-
-| Route | Screen |
-|---|---|
-| `/` | Browse — grid of performances |
-| `/video/[id]` | Performance detail — embed, song list, ratings, reviews |
-| `/review` | Password-protected admin dashboard — truth requests, pipeline review, and presets |
-| `/review/[id]` | Signed-in revision editor — publish a listening preset or submit main truth; anonymous visitors are sent to sign in first |
-| `/playlists` | Playlist library — create, open, and delete playlists |
-| `/playlist/[id]` | Playlist — cross-performance track list |
-
-## What's real vs. mock
-
-The 9 performances in `lib/fixtures/performances.ts` are **real pipeline
-output**, trimmed from the sibling `tiny_office` repo's
-`reports/<video_id>.json` files (see that repo's `PIPELINE.md` for how
-`clip_start`/`clip_end`/`confidence`/`suspect` are computed). They were
-picked to span every confidence tier so every UI state — verified dot,
-"Unconfirmed boundaries", suspect flags, review-queue "why" text — has a
-genuine example behind it, including two real pipeline artifacts worth
-knowing about before you "fix" them:
-
-- Justin Timberlake, song 5 — a spoken interlude misread as a song off a
-  garbled comment timestamp. `suspect: true` is correct; that's the
-  feature working, not a bug in the fixture.
-- Napalm Death, "Dead" — `clip_end < clip_start` (an inverted range). Also
-  real pipeline output, also correctly flagged.
-
-Ratings, review text, and "verified" upload dates remain fixture/mock data.
-Playlists are now Supabase-backed, including song/video playlist type and
-playlist track membership.
-
-## For Codex: backend integration
-
-**Hard constraint, not a suggestion: Supabase stores metadata only —
-timestamps, text, confidence scores, user-generated content (ratings,
-reviews, playlists). Never audio or video bytes.** Playback is exclusively
-through the YouTube embed (`components/video-embed.tsx`,
-`youtube-nocookie.com`) — that's what makes this legal, since it's
-YouTube's own official embed rather than a rehost of their content. The
-pipeline's source mp3s (`reports/audio/*.mp3` in the `tiny_office` repo)
-exist only so YAMNet/ffmpeg can compute boundary timestamps locally —
-they're gitignored there and nothing in this repo references them. Don't
-add Supabase Storage buckets for audio, don't proxy video through a
-Vercel Function, don't cache mp3s anywhere in this stack.
-
-Everything reads through `lib/data.ts` async data functions, including
-`getPlaylists`, `getPlaylist`, `getPlaylistSongOptions`, and
-`getPlaylistVideoOptions`.
-Replace their bodies with real Supabase queries; no page component needs
-to change, they already treat this as an async data layer. Table shapes
-should follow `lib/types.ts` (`Performance`, `Song`, `Review`, `Playlist`,
-`PlaylistTrack`) — that file is the intended schema contract.
-
-Remaining product gaps, roughly in the order they'll bite:
-
-1. **Ratings and written reviews.** The video page still shows the visual
-   rating/review surface, but those controls are not connected to writes yet.
-2. **Upload dates.** `Performance.date` is `null` for every fixture — the
-   pipeline's yt-dlp call never captured it. Pull it from a real metadata
-   source when performances get ingested for real.
-3. **Manual-tier videos.** The pipeline flags some videos `method:
-   "manual"` (zero candidates — e.g. The Roots feat. Bilal in the real
-   dataset) — deliberately excluded from `getPerformances()` /
-   `getReviewQueue()` right now, since the review-flow UI assumes existing
-   clip candidates to nudge. A manual-tier video needs a different
-   free-scrub flow (the pipeline's `scripts/manual_mark.py`, as a UI) that
-   doesn't exist here yet.
-
-The video embed and click-to-seek (`components/video-embed.tsx`,
-`components/player-context.tsx`) are already real — a live
-youtube-nocookie.com iframe, reseeked by clicking a song row. What it
-doesn't do: scrub *within* a song (each click is a fresh seek + reload,
-not a smooth scrub), track "currently playing" as real playback state, or
-persist anything. That's still fair game to improve, just not blocking.
-
-### Review administration environment
-
-The review dashboard requires the server-only variables in `.env.local` and
-the deployment environment:
-
-```bash
-ADMIN_PASSWORD=paak
-ADMIN_SESSION_SECRET=replace-with-a-long-random-string
-```
-
-The admin password is checked only in a Server Action. The session cookie is
-signed, HttpOnly, bound to the signed-in Supabase user, and expires after
-eight hours. Keep both values out of client-exposed environment variables.
-
-## Ingesting real pipeline output
-
-`data/pipeline-reports/` is a **self-contained snapshot** of every
-`reports/<video_id>.json` from the `tiny_office` pipeline repo (53 files,
-committed here — no cross-repo filesystem access needed to use them; see
-that directory's own README for details and how to refresh it). Once
-there's a real `performances` table, that's the ingest source.
-`confidence.min >= 75` is the existing "trust without review" bar (used
-for `verified` in the fixtures); keep using it unless you have a reason
-not to.
+`docs/design-handoff/` contains the original design handoff and interactive
+prototype. The prototype is reference material only; the production UI uses
+the app's own React components and data layer.

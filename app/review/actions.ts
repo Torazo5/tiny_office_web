@@ -17,22 +17,6 @@ type GroundTruthSaveResult =
   | { error: string; allConfirmed?: never }
   | { error: null; allConfirmed: boolean; appliedChangeCount: number };
 
-type GroundTruthEdit = {
-  performance_video_id: string;
-  song_index: number;
-  admin_id: string;
-  request_id: string | null;
-  change_type: "update" | "add" | "remove";
-  previous_title: string | null;
-  next_title: string | null;
-  previous_clip_start: number | null;
-  previous_clip_end: number | null;
-  next_clip_start: number | null;
-  next_clip_end: number | null;
-  previous_confirmed: boolean | null;
-  next_confirmed: boolean | null;
-};
-
 function readText(formData: FormData, name: string, maxLength: number) {
   const value = formData.get(name);
   if (typeof value !== "string") return null;
@@ -77,39 +61,6 @@ async function requireAdmin() {
   return user;
 }
 
-async function loadGroundTruth(videoId: string) {
-  const supabase = createAdminClient();
-  const [{ data: performance, error: performanceError }, { data: songs, error: songsError }] = await Promise.all([
-    supabase
-      .from("performances")
-      .select("video_id, duration")
-      .eq("video_id", videoId)
-      .maybeSingle(),
-    supabase
-      .from("songs")
-      .select("id, performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect")
-      .eq("performance_video_id", videoId)
-      .order("song_index"),
-  ]);
-  if (performanceError) throw new Error(`Loading performance: ${performanceError.message}`);
-  if (songsError) throw new Error(`Loading songs: ${songsError.message}`);
-  if (!performance) return null;
-  return {
-    supabase,
-    duration: Number(performance.duration),
-    songs: (songs ?? []).map((song) => ({
-      id: song.id,
-      performance_video_id: song.performance_video_id,
-      song_index: Number(song.song_index),
-      title: song.title,
-      clip_start: Number(song.clip_start),
-      clip_end: Number(song.clip_end),
-      confidence: Number(song.confidence),
-      suspect: Boolean(song.suspect),
-    })),
-  };
-}
-
 function validateSubmission(
   draft: TimelineDraftSong[] | null,
   performance: Awaited<ReturnType<typeof getPerformance>>,
@@ -140,31 +91,15 @@ export async function submitListeningPreset(
   const profile = await getUserProfile(user.id);
 
   const presetId = randomUUID();
-  const { error: presetError } = await supabase.from("listening_presets").insert({
-    id: presetId,
-    performance_video_id: videoId,
-    owner_id: user.id,
-    owner_name: formatProfileLabel(profile),
-    name,
-    note: note || null,
-    status: "published",
+  const { error } = await supabase.rpc("create_listening_preset_with_songs", {
+    p_id: presetId,
+    p_performance_video_id: videoId,
+    p_owner_name: formatProfileLabel(profile),
+    p_name: name,
+    p_note: note || null,
+    p_songs: draft,
   });
-  if (presetError) return { error: "Could not publish this listening preset. Try again." };
-
-  const { error: songsError } = await supabase.from("listening_preset_songs").insert(
-    draft!.map((song) => ({
-      preset_id: presetId,
-      performance_video_id: videoId,
-      song_index: song.songIndex,
-      title: song.title,
-      clip_start: song.clipStart,
-      clip_end: song.clipEnd,
-    })),
-  );
-  if (songsError) {
-    await supabase.from("listening_presets").delete().eq("id", presetId);
-    return { error: "Could not save the preset timeline. Try again." };
-  }
+  if (error) return { error: "Could not publish this listening preset. Try again." };
 
   revalidatePath(`/video/${videoId}`);
   revalidatePath(`/review/${videoId}`);
@@ -189,32 +124,16 @@ export async function submitTruthRequest(
   const profile = await getUserProfile(user.id);
 
   const requestId = randomUUID();
-  const { error: requestError } = await supabase.from("truth_requests").insert({
-    id: requestId,
-    performance_video_id: videoId,
-    requester_id: user.id,
-    requester_name: formatProfileLabel(profile),
-    note: note || null,
-    status: "pending",
+  const { error: requestError } = await supabase.rpc("create_truth_request_with_songs", {
+    p_id: requestId,
+    p_performance_video_id: videoId,
+    p_requester_name: formatProfileLabel(profile),
+    p_note: note || null,
+    p_songs: draft,
   });
   if (requestError) {
     if (requestError.code === "23505") return { error: "You already have a pending request for this performance." };
     return { error: "Could not submit the main-truth request. Try again." };
-  }
-
-  const { error: songsError } = await supabase.from("truth_request_songs").insert(
-    draft!.map((song) => ({
-      request_id: requestId,
-      performance_video_id: videoId,
-      song_index: song.songIndex,
-      title: song.title,
-      clip_start: song.clipStart,
-      clip_end: song.clipEnd,
-    })),
-  );
-  if (songsError) {
-    await supabase.from("truth_requests").delete().eq("id", requestId);
-    return { error: "Could not save the requested timeline. Try again." };
   }
 
   revalidatePath(`/review/${videoId}`);
@@ -300,135 +219,31 @@ async function saveGroundTruth(
   draft: TimelineDraftSong[],
   adminId: string,
   requestId: string | null,
+  resolutionNote: string | null = null,
 ): Promise<GroundTruthSaveResult> {
-  const groundTruth = await loadGroundTruth(videoId);
-  if (!groundTruth) return { error: "Performance not found." };
+  const validationPerformance = await getPerformance(videoId);
+  if (!validationPerformance) return { error: "Performance not found." };
 
-  const songs = groundTruth.songs.map((song) => ({
-    index: song.song_index,
-    title: song.title,
-    clipStart: song.clip_start,
-    clipEnd: song.clip_end,
-    confidence: song.confidence,
-    suspect: song.suspect,
-  }));
-  const validationError = validateTimelineDraft(draft, songs, groundTruth.duration);
+  const validationError = validateTimelineDraft(draft, validationPerformance.songs, validationPerformance.duration);
   if (validationError) return { error: validationError };
 
-  const requested = new Map(draft.map((song) => [song.songIndex, song]));
-  const edits: GroundTruthEdit[] = groundTruth.songs.flatMap((song): GroundTruthEdit[] => {
-    const next = requested.get(song.song_index);
-    const previousConfirmed = !song.suspect;
-    if (!next) {
-      return [{
-        performance_video_id: videoId,
-        song_index: song.song_index,
-        admin_id: adminId,
-        request_id: requestId,
-        change_type: "remove",
-        previous_title: song.title,
-        next_title: null,
-        previous_clip_start: song.clip_start,
-        previous_clip_end: song.clip_end,
-        next_clip_start: null,
-        next_clip_end: null,
-        previous_confirmed: previousConfirmed,
-        next_confirmed: null,
-      }];
-    }
-    if (
-      next.title === song.title &&
-      next.clipStart === song.clip_start &&
-      next.clipEnd === song.clip_end &&
-      next.confirmed === previousConfirmed
-    ) return [];
-    return [{
-      performance_video_id: videoId,
-      song_index: song.song_index,
-      admin_id: adminId,
-      request_id: requestId,
-      change_type: "update",
-      previous_title: song.title,
-      next_title: next.title,
-      previous_clip_start: song.clip_start,
-      previous_clip_end: song.clip_end,
-      next_clip_start: next.clipStart,
-      next_clip_end: next.clipEnd,
-      previous_confirmed: previousConfirmed,
-      next_confirmed: next.confirmed,
-    }];
+  const supabase = createAdminClient();
+  const { data, error } = await supabase.rpc("apply_ground_truth_changes", {
+    p_performance_video_id: videoId,
+    p_draft: draft,
+    p_admin_id: adminId,
+    p_request_id: requestId,
+    p_resolution_note: resolutionNote,
   });
+  if (error) return { error: "Could not update the official timeline." };
 
-  for (const song of draft.filter((item) => !groundTruth.songs.some((candidate) => candidate.song_index === item.songIndex))) {
-    edits.push({
-      performance_video_id: videoId,
-      song_index: song.songIndex,
-      admin_id: adminId,
-      request_id: requestId,
-      change_type: "add",
-      previous_title: null,
-      next_title: song.title,
-      previous_clip_start: null,
-      previous_clip_end: null,
-      next_clip_start: song.clipStart,
-      next_clip_end: song.clipEnd,
-      previous_confirmed: null,
-      next_confirmed: song.confirmed,
-    });
-  }
-
-  if (edits.length > 0) {
-    const { error: auditError } = await groundTruth.supabase.from("ground_truth_edits").insert(edits);
-    if (auditError) return { error: "Could not record the ground-truth audit." };
-  }
-
-  const now = new Date().toISOString();
-  const nextSongs = draft.map((song) => {
-    const previous = groundTruth.songs.find((candidate) => candidate.song_index === song.songIndex);
-    return {
-      id: previous?.id ?? randomUUID(),
-      performance_video_id: videoId,
-      song_index: song.songIndex,
-      title: song.title,
-      clip_start: song.clipStart,
-      clip_end: song.clipEnd,
-      confidence: previous?.confidence ?? 0,
-      suspect: !song.confirmed,
-      updated_at: now,
-    };
-  });
-  if (nextSongs.length > 0) {
-    const { error: songsError } = await groundTruth.supabase.from("songs").upsert(nextSongs, {
-      onConflict: "performance_video_id,song_index",
-    });
-    if (songsError) return { error: "Could not update the official timeline." };
-  }
-
-  const removedIndexes = groundTruth.songs
-    .map((song) => song.song_index)
-    .filter((songIndex) => !requested.has(songIndex));
-  if (removedIndexes.length > 0) {
-    const { error: songsError } = await groundTruth.supabase
-      .from("songs")
-      .delete()
-      .eq("performance_video_id", videoId)
-      .in("song_index", removedIndexes);
-    if (songsError) return { error: "The timeline was partly updated, but removed songs could not be deleted." };
-  }
-
-  const { error: performanceError } = await groundTruth.supabase
-    .from("performances")
-    .update({
-      verified: draft.every((song) => song.confirmed),
-      updated_at: new Date().toISOString(),
-    })
-    .eq("video_id", videoId);
-  if (performanceError) return { error: "The timeline saved, but verification could not be updated." };
+  const result = Array.isArray(data) ? data[0] : data;
+  if (!result) return { error: "The timeline update returned no result." };
 
   return {
     error: null,
-    allConfirmed: draft.every((song) => song.confirmed),
-    appliedChangeCount: edits.length,
+    allConfirmed: Boolean(result.all_confirmed),
+    appliedChangeCount: Number(result.applied_change_count),
   };
 }
 
@@ -500,21 +315,9 @@ export async function resolveTruthRequest(
     draft,
     user.id,
     requestId,
+    resolutionNote,
   );
   if (result.error !== null) return result;
-
-  const { error } = await supabase
-    .from("truth_requests")
-    .update({
-      status: "approved",
-      resolved_by: user.id,
-      resolution_note: resolutionNote || null,
-      resolved_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
-    })
-    .eq("id", requestId)
-    .eq("status", "pending");
-  if (error) return { error: "Timeline saved, but the request status could not be updated." };
 
   revalidatePath("/");
   revalidatePath(`/video/${requestData.request.performanceVideoId}`);
