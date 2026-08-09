@@ -31,6 +31,24 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** `git diff --check` passed. The Node commands were attempted
   and failed before application compilation or runtime startup.
 
+### 2026-08-09 — Revision type-check failed on inferred union types
+
+- **Symptom and impact:** The revision feature's type check failed in
+  `app/review/actions.ts` and `components/revision-editor.tsx`, blocking the
+  revision build after the add/remove-song change.
+- **Root cause / evidence:** The add/update/remove audit branches inferred
+  incompatible literal nullability, while the editor state inferred a narrow
+  union from literal `isNew` and `removed` values. The attached compiler output
+  reported TS2345 at both call sites.
+- **Systems and files:** TypeScript inference in the revision Server Action
+  and client editor state.
+- **Resolution / next action:** Added explicit `GroundTruthEdit` and
+  `EditableSong[]` annotations so all branches and state updates share the
+  intended types. Re-run the production build from WSL2 or another Linux Node
+  runtime.
+- **Verification:** `git diff --check` passed. A local `npm run build` retry
+  remains blocked before Node.js startup by the existing WSL1 launcher issue.
+
 ### 2026-08-09 — Public profile build validation blocked by WSL1
 
 - **Symptom and impact:** The new public profile identity flow could not be

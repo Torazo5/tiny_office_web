@@ -34,10 +34,10 @@ type EditableSong = {
   removed: boolean;
 };
 
-function toEditableSongs(performance: Performance, initialDraft?: TimelineDraftSong[]) {
+function toEditableSongs(performance: Performance, initialDraft?: TimelineDraftSong[]): EditableSong[] {
   const draft = initialDraft ?? createTimelineDraft(performance.songs);
   const draftByIndex = new Map(draft.map((song) => [song.songIndex, song]));
-  const songs = performance.songs.map((song) => {
+  const songs: EditableSong[] = performance.songs.map((song) => {
     const draft = draftByIndex.get(song.index);
     return {
       index: song.index,
@@ -51,14 +51,14 @@ function toEditableSongs(performance: Performance, initialDraft?: TimelineDraftS
       confirmed: draft?.confirmed ?? !song.suspect,
       isNew: false,
       removed: Boolean(initialDraft && !draft),
-    } satisfies EditableSong;
+    };
   });
 
   return [
     ...songs,
     ...draft
       .filter((song) => !performance.songs.some((candidate) => candidate.index === song.songIndex))
-      .map((song) => ({
+      .map((song): EditableSong => ({
         index: song.songIndex,
         title: song.title,
         baseTitle: song.title,
@@ -70,7 +70,7 @@ function toEditableSongs(performance: Performance, initialDraft?: TimelineDraftS
         confirmed: song.confirmed,
         isNew: true,
         removed: false,
-      } satisfies EditableSong)),
+      })),
   ];
 }
 
@@ -97,7 +97,7 @@ export function RevisionEditor({
   request?: TruthRequestSummary | null;
   initialDraft?: TimelineDraftSong[];
 }) {
-  const [songs, setSongs] = useState(() => toEditableSongs(performance, initialDraft));
+  const [songs, setSongs] = useState<EditableSong[]>(() => toEditableSongs(performance, initialDraft));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [presetState, presetAction, presetPending] = useActionState<ReviewActionState, FormData>(submitListeningPreset, null);
   const [truthState, truthAction, truthPending] = useActionState<ReviewActionState, FormData>(submitTruthRequest, null);

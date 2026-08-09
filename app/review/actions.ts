@@ -17,6 +17,22 @@ type GroundTruthSaveResult =
   | { error: string; allConfirmed?: never }
   | { error: null; allConfirmed: boolean };
 
+type GroundTruthEdit = {
+  performance_video_id: string;
+  song_index: number;
+  admin_id: string;
+  request_id: string | null;
+  change_type: "update" | "add" | "remove";
+  previous_title: string | null;
+  next_title: string | null;
+  previous_clip_start: number | null;
+  previous_clip_end: number | null;
+  next_clip_start: number | null;
+  next_clip_end: number | null;
+  previous_confirmed: boolean | null;
+  next_confirmed: boolean | null;
+};
+
 function readText(formData: FormData, name: string, maxLength: number) {
   const value = formData.get(name);
   if (typeof value !== "string") return null;
@@ -300,7 +316,7 @@ async function saveGroundTruth(
   if (validationError) return { error: validationError };
 
   const requested = new Map(draft.map((song) => [song.songIndex, song]));
-  const edits = groundTruth.songs.flatMap((song) => {
+  const edits: GroundTruthEdit[] = groundTruth.songs.flatMap((song): GroundTruthEdit[] => {
     const next = requested.get(song.song_index);
     const previousConfirmed = !song.suspect;
     if (!next) {
