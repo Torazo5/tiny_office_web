@@ -10,7 +10,7 @@ export default async function PlaylistsPage() {
   return (
     <>
       <Header showBack={true} user={user} />
-      <main className="p-8">
+      <main className="p-4 sm:p-8">
         <PlaylistLibrary playlists={playlists} userId={user?.id ?? null} />
       </main>
     </>

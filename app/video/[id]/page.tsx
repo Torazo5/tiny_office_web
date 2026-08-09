@@ -52,8 +52,8 @@ export default async function VideoPage({
         initialStart={performance.songs[0]?.clipStart ?? 0}
         songs={performance.songs}
       >
-        <main className="p-8 grid gap-8 items-start" style={{ gridTemplateColumns: "1.4fr 1fr" }}>
-          <div>
+        <main className="grid min-w-0 items-start gap-8 p-4 sm:p-8 lg:grid-cols-[1.4fr_1fr]">
+          <div className="min-w-0">
             <VideoEmbed videoId={performance.videoId} duration={performance.duration} />
 
             <h1 className="text-2xl font-bold text-foreground mb-1.5">{performance.artist}</h1>
@@ -134,7 +134,7 @@ export default async function VideoPage({
             </div>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <h2 className="text-[13px] font-semibold text-muted-foreground uppercase tracking-wide mb-3">
               Songs in this set
             </h2>

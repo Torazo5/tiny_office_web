@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <main className="flex min-h-[60vh] items-center justify-center p-8">
+    <main className="flex min-h-[60vh] items-center justify-center p-4 sm:p-8">
       <div className="w-full max-w-[720px] animate-pulse space-y-4" aria-label="Loading Tiny Office">
         <div className="h-5 w-44 rounded bg-secondary" />
         <div className="h-3 w-72 rounded bg-secondary/80" />

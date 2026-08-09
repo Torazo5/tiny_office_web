@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import { Shuffle } from "lucide-react";
 import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { PlaylistPlayer } from "@/components/playlist-player";
 import { formatTime } from "@/lib/format";
@@ -86,7 +87,7 @@ function AdventureSetup({
   const availableLabel = source === "songs" ? "song clips" : "performances";
 
   return (
-    <main className="p-8">
+    <main className="p-4 sm:p-8">
       <div className="mx-auto max-w-[920px]">
         <div className="mb-8 max-w-[650px]">
           <div className="mb-2 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
@@ -171,8 +172,17 @@ function AdventureSetup({
             type="button"
             onClick={onStart}
             disabled={availableCount === 0}
-            className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[0_0_18px_oklch(0.68_0.17_25_/_0.16)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_24px_oklch(0.68_0.17_25_/_0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none"
           >
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 left-0 w-14 -translate-x-full skew-x-[-20deg] bg-white/20 transition-transform duration-700 group-hover:translate-x-[340%]"
+            />
+            <Shuffle
+              aria-hidden
+              className="relative size-4 transition-transform duration-300 group-hover:rotate-6"
+              strokeWidth={2.3}
+            />
             Start the adventure
           </button>
         </div>
@@ -211,7 +221,7 @@ function AdventureSessionPlayer({
   const compatiblePlaylists = playlists.filter((playlist) => playlist.type === session.source);
 
   return (
-    <main className="p-8">
+    <main className="p-4 sm:p-8">
       <div className="mx-auto max-w-[920px]">
         <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>

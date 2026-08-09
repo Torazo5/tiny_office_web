@@ -16,7 +16,7 @@ export default async function ReviewQueuePage() {
     return (
       <>
         <Header user={user} />
-        <main className="mx-auto w-full max-w-[720px] p-8">
+        <main className="mx-auto w-full max-w-[720px] p-4 sm:p-8">
           <h1 className="text-xl font-semibold text-foreground">Review dashboard</h1>
           <p className="mt-1 text-[13px] text-muted-foreground">
             This area is for signed-in admins reviewing main-truth requests and community presets.
@@ -43,7 +43,7 @@ export default async function ReviewQueuePage() {
   return (
     <>
       <Header progressLabel="Admin dashboard" user={user} />
-      <main className="p-8">
+      <main className="p-4 sm:p-8">
         <div className="mb-7 flex flex-wrap items-end justify-between gap-3">
           <div>
             <h1 className="text-xl font-semibold text-foreground">Review dashboard</h1>
@@ -59,7 +59,7 @@ export default async function ReviewQueuePage() {
         <section className="mb-8">
           <h2 className="mb-3 text-[13px] font-semibold uppercase tracking-wide text-muted-foreground">Main-truth requests</h2>
           <div className="overflow-hidden rounded-lg border border-border">
-            <div className="grid bg-card px-4 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-wide text-muted-foreground md:grid-cols-[2fr_1fr_1.4fr_0.8fr]">
+            <div className="hidden bg-card px-4 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-wide text-muted-foreground md:grid md:grid-cols-[2fr_1fr_1.4fr_0.8fr]">
               <div>Performance</div>
               <div>Submitted by</div>
               <div>Status</div>
@@ -70,7 +70,7 @@ export default async function ReviewQueuePage() {
               <Link
                 key={request.id}
                 href={`/review/${request.performanceVideoId}?admin=1&request=${request.id}`}
-                className="grid items-center gap-2 border-t border-border px-4 py-3.5 hover:bg-secondary/50 md:grid-cols-[2fr_1fr_1.4fr_0.8fr]"
+                className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 border-t border-border px-4 py-3.5 hover:bg-secondary/50 md:grid-cols-[2fr_1fr_1.4fr_0.8fr]"
               >
                 <div className="text-[13.5px] font-medium text-foreground">{request.artist}</div>
                 <div className="text-[12.5px] text-muted-foreground">{request.requesterName}</div>
@@ -84,7 +84,7 @@ export default async function ReviewQueuePage() {
         <section className="mb-8">
           <h2 className="mb-3 text-[13px] font-semibold uppercase tracking-wide text-muted-foreground">Pipeline review queue</h2>
           <div className="overflow-hidden rounded-lg border border-border">
-            <div className="grid bg-card px-4 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-wide text-muted-foreground md:grid-cols-[2.2fr_0.9fr_2.3fr_0.8fr]">
+            <div className="hidden bg-card px-4 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-wide text-muted-foreground md:grid md:grid-cols-[2.2fr_0.9fr_2.3fr_0.8fr]">
               <div>Performance</div>
               <div>Confidence</div>
               <div>Why</div>
@@ -95,11 +95,11 @@ export default async function ReviewQueuePage() {
               <Link
                 key={item.videoId}
                 href={`/review/${item.videoId}?admin=1`}
-                className="grid items-center gap-2 border-t border-border px-4 py-3.5 hover:bg-secondary/50 md:grid-cols-[2.2fr_0.9fr_2.3fr_0.8fr]"
+                className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 border-t border-border px-4 py-3.5 hover:bg-secondary/50 md:grid-cols-[2.2fr_0.9fr_2.3fr_0.8fr]"
               >
                 <div className="text-[13.5px] font-medium text-foreground">{item.artist}</div>
                 <div className={`font-mono text-[13px] font-semibold ${item.confidencePct < 70 ? "text-primary" : "text-muted-foreground"}`}>{item.confidencePct}%</div>
-                <div className="text-[12.5px] text-muted-foreground">{item.whyText}</div>
+                <div className="col-span-2 text-[12.5px] text-muted-foreground md:col-span-1">{item.whyText}</div>
                 <div className="text-right text-[12.5px] font-medium text-primary">Review →</div>
               </Link>
             ))}

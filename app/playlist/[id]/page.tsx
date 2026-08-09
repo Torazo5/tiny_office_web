@@ -22,7 +22,7 @@ export default async function PlaylistPage({
     return (
       <>
         <Header user={user} />
-        <main className="p-8">
+        <main className="p-4 sm:p-8">
           <PlaylistSignInGate nextPath={`/playlist/${id}`} />
         </main>
       </>

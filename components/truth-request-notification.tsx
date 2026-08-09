@@ -22,8 +22,8 @@ export function TruthRequestNotification({ request }: { request: TruthRequestSum
   }
 
   return (
-    <div className={`border-b px-8 py-2.5 ${approved ? "border-success/30 bg-success/10" : "border-primary/30 bg-primary/10"}`} role="status" aria-live="polite">
-      <div className="mx-auto flex max-w-[1400px] items-center gap-3 text-[12.5px]">
+    <div className={`border-b px-4 py-2.5 sm:px-8 ${approved ? "border-success/30 bg-success/10" : "border-primary/30 bg-primary/10"}`} role="status" aria-live="polite">
+      <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-2 text-[12.5px] sm:flex-nowrap sm:gap-3">
         <span aria-hidden className={`text-base ${approved ? "text-success" : "text-primary"}`}>{approved ? "✓" : "!"}</span>
         <p className="min-w-0 flex-1 text-foreground">
           {approved

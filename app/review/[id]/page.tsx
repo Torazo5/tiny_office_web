@@ -34,7 +34,7 @@ export default async function ReviewFlowPage({
   return (
     <>
       <Header progressLabel={`Revision editor · ${performance.songs.length} songs`} user={user} />
-      <main className="mx-auto w-full max-w-[980px] p-8">
+      <main className="mx-auto w-full max-w-[980px] p-4 sm:p-8">
         {adminIntent && !isAdmin && (
           <div className="mb-5 rounded-lg border border-primary/30 bg-primary/5 p-4">
             <div className="text-[13px] font-semibold text-foreground">Admin access</div>

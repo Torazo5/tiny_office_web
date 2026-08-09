@@ -165,7 +165,7 @@ export function PlaylistDetail({
   const filteredItems = isSongPlaylist ? filteredSongs : filteredVideos;
 
   return (
-    <main className="p-8">
+    <main className="p-4 sm:p-8">
       {tracks.length > 0 && (
         <PlaylistPlayer
           tracks={tracks}
@@ -179,7 +179,7 @@ export function PlaylistDetail({
         <YouTubeThumbnail
           videoId={tracks[0]?.performanceVideoId}
           alt={`${playlist.name} playlist`}
-          className="h-[180px] w-[180px] shrink-0 rounded-[10px]"
+          className="h-36 w-36 shrink-0 rounded-[10px] sm:h-[180px] sm:w-[180px]"
           sizes="180px"
         />
         <div>
@@ -287,12 +287,13 @@ export function PlaylistDetail({
       )}
 
       <div
-        className="grid items-center border-b border-border px-3.5 py-2 font-mono text-[11px] font-semibold uppercase tracking-wide text-muted-foreground/80"
-        style={{ gridTemplateColumns: canManage ? "28px minmax(0, 1fr) minmax(0, 1.1fr) 70px 72px" : "28px minmax(0, 1fr) minmax(0, 1.1fr) 70px" }}
+        className={canManage
+          ? "grid grid-cols-[28px_minmax(0,1fr)_64px_auto] items-center border-b border-border px-3.5 py-2 font-mono text-[11px] font-semibold uppercase tracking-wide text-muted-foreground/80 sm:grid-cols-[28px_minmax(0,1fr)_minmax(0,1.1fr)_70px_72px]"
+          : "grid grid-cols-[28px_minmax(0,1fr)_64px] items-center border-b border-border px-3.5 py-2 font-mono text-[11px] font-semibold uppercase tracking-wide text-muted-foreground/80 sm:grid-cols-[28px_minmax(0,1fr)_minmax(0,1.1fr)_70px]"}
       >
         <div>#</div>
         <div>{isSongPlaylist ? "Title" : "Performance"}</div>
-        <div>{isSongPlaylist ? "From performance" : "Format"}</div>
+        <div className="hidden sm:block">{isSongPlaylist ? "From performance" : "Format"}</div>
         <div className="text-right">Time</div>
         {canManage && <div />}
       </div>
@@ -319,15 +320,16 @@ export function PlaylistDetail({
                   selectTrack(index);
                 }
               }}
-              className="grid cursor-pointer items-center rounded-lg px-3.5 py-2.5 transition-colors hover:bg-secondary/50"
-              style={{ gridTemplateColumns: canManage ? "28px minmax(0, 1fr) minmax(0, 1.1fr) 70px 72px" : "28px minmax(0, 1fr) minmax(0, 1.1fr) 70px" }}
+              className={canManage
+                ? "grid grid-cols-[28px_minmax(0,1fr)_64px_auto] cursor-pointer items-center rounded-lg px-3.5 py-2.5 transition-colors hover:bg-secondary/50 sm:grid-cols-[28px_minmax(0,1fr)_minmax(0,1.1fr)_70px_72px]"
+                : "grid grid-cols-[28px_minmax(0,1fr)_64px] cursor-pointer items-center rounded-lg px-3.5 py-2.5 transition-colors hover:bg-secondary/50 sm:grid-cols-[28px_minmax(0,1fr)_minmax(0,1.1fr)_70px]"}
             >
               <div className="font-mono text-xs text-muted-foreground">{track.index}</div>
               <div className="min-w-0">
                 <div className="truncate text-[13.5px] font-medium text-foreground">{track.title}</div>
                 <div className="truncate text-xs text-muted-foreground">{isSongPlaylist ? track.artist : "Full performance"}</div>
               </div>
-              <div className="truncate text-[12.5px] text-muted-foreground">{isSongPlaylist ? track.performanceLabel : "Full video"}</div>
+              <div className="hidden truncate text-[12.5px] text-muted-foreground sm:block">{isSongPlaylist ? track.performanceLabel : "Full video"}</div>
               <div className="font-mono text-xs text-muted-foreground text-right">{formatTime(track.duration)}</div>
               {canManage && (
                 <button
@@ -337,7 +339,7 @@ export function PlaylistDetail({
                     void handleRemove(track);
                   }}
                   disabled={pendingKey !== null}
-                  className="ml-2 justify-self-end rounded-md px-2 py-1 text-[11px] font-medium text-muted-foreground transition-colors hover:text-primary disabled:cursor-wait disabled:opacity-60"
+                  className="ml-2 min-h-8 justify-self-end rounded-md px-2 py-1 text-[11px] font-medium text-muted-foreground transition-colors hover:text-primary disabled:cursor-wait disabled:opacity-60"
                 >
                   {pendingKey === key ? "Removing…" : "Remove"}
                 </button>

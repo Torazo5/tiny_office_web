@@ -31,7 +31,7 @@ export function AddToPlaylistButton({
     return (
       <Link
         href={{ pathname: "/login", query: { next: returnPath } }}
-        className="inline-flex rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground"
+        className="inline-flex min-h-9 items-center rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground sm:min-h-0"
       >
         + Add to playlist
       </Link>
@@ -66,13 +66,13 @@ export function AddToPlaylistButton({
           setError(null);
         }}
         aria-expanded={isOpen}
-        className="inline-flex rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground"
+        className="inline-flex min-h-9 items-center rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground sm:min-h-0"
       >
         + Add to playlist
       </button>
 
       {isOpen && (
-        <div className="absolute bottom-full left-0 z-20 mb-2 w-64 rounded-lg border border-border bg-card p-2 shadow-lg">
+        <div className="absolute bottom-full left-1/2 z-20 mb-2 w-[min(16rem,calc(100vw-2rem))] -translate-x-1/2 rounded-lg border border-border bg-card p-2 shadow-lg sm:left-0 sm:w-64 sm:translate-x-0">
           <div className="px-2 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
             {playlistLabel}
           </div>

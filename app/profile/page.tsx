@@ -31,7 +31,7 @@ export default async function ProfilePage() {
   return (
     <>
       <Header user={user} />
-      <main className="mx-auto flex w-full max-w-[1180px] flex-col gap-9 p-8">
+      <main className="mx-auto flex w-full max-w-[1180px] flex-col gap-9 p-4 sm:p-8">
         <section className="flex flex-wrap items-end justify-between gap-5 border-b border-border pb-7">
           <div className="flex items-center gap-4">
             <Avatar size="xl" className="border border-border bg-secondary">
