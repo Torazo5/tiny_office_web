@@ -27,7 +27,7 @@ export function TruthRequestNotification({ request }: { request: TruthRequestSum
         <span aria-hidden className={`text-base ${approved ? "text-success" : "text-primary"}`}>{approved ? "✓" : "!"}</span>
         <p className="min-w-0 flex-1 text-foreground">
           {approved
-            ? `Your main-truth request for ${request.artist} was approved.`
+            ? `Your timeline was approved — thank you for helping improve Tiny Office!`
             : `Your main-truth request for ${request.artist} was rejected.`}
         </p>
         <Link href={`/review/${request.performanceVideoId}`} className="shrink-0 font-medium text-primary hover:underline">
