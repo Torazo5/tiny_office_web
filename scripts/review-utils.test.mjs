@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-const { createTimelineDraft, draftChanged, parseTimeInput, validateTimelineDraft } = await import("../lib/review-utils.ts");
+const { applyTimelineRequestDecisions, createTimelineDraft, draftChanged, parseTimeInput, validateTimelineDraft } = await import("../lib/review-utils.ts");
 
 const songs = [
   { index: 1, title: "One", clipStart: 10, clipEnd: 100, confidence: 80, suspect: false },
@@ -43,4 +43,28 @@ test("detects a changed timeline", () => {
   assert.equal(draftChanged([unchanged[0]], songs), true);
   assert.equal(draftChanged([{ ...unchanged[0], title: "Renamed" }, unchanged[1]], songs), true);
   assert.equal(draftChanged([{ ...unchanged[0], ...{ songIndex: 3, title: "Added" } }, unchanged[1]], songs), true);
+});
+
+test("applies or keeps individual timeline request changes", () => {
+  const proposed = [
+    { songIndex: 1, title: "One (edited)", clipStart: 12, clipEnd: 105, confirmed: true },
+    { songIndex: 3, title: "Three", clipStart: 225, clipEnd: 280, confirmed: false },
+  ];
+
+  assert.deepEqual(
+    applyTimelineRequestDecisions(songs, proposed, { 1: "keep", 3: "accept" }),
+    [
+      { songIndex: 1, title: "One", clipStart: 10, clipEnd: 100, confirmed: true },
+      { songIndex: 2, title: "Two", clipStart: 150, clipEnd: 220, confirmed: true },
+      { songIndex: 3, title: "Three", clipStart: 225, clipEnd: 280, confirmed: false },
+    ],
+  );
+
+  assert.deepEqual(
+    applyTimelineRequestDecisions(songs, [{ ...proposed[0] }], { 2: "keep" }),
+    [
+      { songIndex: 1, title: "One (edited)", clipStart: 12, clipEnd: 105, confirmed: true },
+      { songIndex: 2, title: "Two", clipStart: 150, clipEnd: 220, confirmed: true },
+    ],
+  );
 });

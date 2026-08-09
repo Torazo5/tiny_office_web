@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { getCurrentUser } from "@/lib/auth";
 import { TruthRequestNotification } from "@/components/truth-request-notification";
 import { getMyTruthRequests } from "@/lib/review-data";
+import { isAdminSession } from "@/lib/admin-session";
 import { signOut } from "@/app/auth/actions";
 
 /**
@@ -25,6 +26,7 @@ export async function Header({
   const latestResolvedRequest = user
     ? (await getMyTruthRequests(user.id)).find((request) => request.status !== "pending")
     : null;
+  const isAdmin = Boolean(user && (await isAdminSession(user.id)));
 
   return (
     <>
@@ -59,6 +61,15 @@ export async function Header({
           className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
         >
           Profile
+        </Link>
+      )}
+
+      {user && isAdmin && (
+        <Link
+          href="/review"
+          className="text-sm font-medium text-primary hover:text-foreground transition-colors"
+        >
+          Admin dashboard
         </Link>
       )}
 

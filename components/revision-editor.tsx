@@ -13,10 +13,12 @@ import {
 } from "@/app/review/actions";
 import type { Performance, TimelineDraftSong, TruthRequestSummary } from "@/lib/types";
 import {
+  applyTimelineRequestDecisions,
   createTimelineDraft,
   formatTimeInput,
   parseTimeInput,
   TIMELINE_NUDGE_SECONDS,
+  type TimelineRequestDecision,
 } from "@/lib/review-utils";
 import { formatTime } from "@/lib/format";
 
@@ -43,9 +45,9 @@ function toEditableSongs(performance: Performance, initialDraft?: TimelineDraftS
       index: song.index,
       title: draft?.title ?? song.title,
       baseTitle: song.title,
-      baseStart: draft?.clipStart ?? song.clipStart,
-      baseEnd: draft?.clipEnd ?? song.clipEnd,
-      baseConfirmed: draft?.confirmed ?? !song.suspect,
+      baseStart: song.clipStart,
+      baseEnd: song.clipEnd,
+      baseConfirmed: !song.suspect,
       clipStart: formatTimeInput(draft?.clipStart ?? song.clipStart),
       clipEnd: formatTimeInput(draft?.clipEnd ?? song.clipEnd),
       confirmed: draft?.confirmed ?? !song.suspect,
@@ -104,11 +106,18 @@ export function RevisionEditor({
   const [saveState, saveAction, savePending] = useActionState<ReviewActionState, FormData>(saveGroundTruthAction, null);
   const [resolveState, resolveAction, resolvePending] = useActionState<ReviewActionState, FormData>(resolveTruthRequest, null);
   const resolveDecisionRef = useRef<HTMLInputElement>(null);
+  const [requestDecisions, setRequestDecisions] = useState<Record<number, TimelineRequestDecision>>(() => {
+    const indices = new Set([
+      ...performance.songs.map((item) => item.index),
+      ...(initialDraft ?? []).map((item) => item.songIndex),
+    ]);
+    return Object.fromEntries([...indices].map((index) => [index, "accept"])) as Record<number, TimelineRequestDecision>;
+  });
 
   const song = songs[currentIndex] ?? songs[0];
   const currentStart = parseTimeInput(song?.clipStart ?? "") ?? song?.baseStart ?? 0;
   const currentEnd = parseTimeInput(song?.clipEnd ?? "") ?? song?.baseEnd ?? 0;
-  const draft = useMemo<TimelineDraftSong[]>(
+  const proposedDraft = useMemo<TimelineDraftSong[]>(
     () => songs.filter((item) => !item.removed).map((item) => ({
       songIndex: item.index,
       title: item.title.trim(),
@@ -118,14 +127,20 @@ export function RevisionEditor({
     })),
     [songs],
   );
-  const draftJson = JSON.stringify(draft);
+  const requestDraft = useMemo(
+    () => request?.status === "pending"
+      ? applyTimelineRequestDecisions(performance.songs, proposedDraft, requestDecisions)
+      : proposedDraft,
+    [performance.songs, proposedDraft, request?.status, requestDecisions],
+  );
+  const draftJson = JSON.stringify(requestDraft);
   const message = actionMessage(presetState, truthState, saveState, resolveState);
   const isPending = presetPending || truthPending || savePending || resolvePending;
   const requestComparison = useMemo(() => {
     if (!request) return null;
-    const draftByIndex = new Map(draft.map((item) => [item.songIndex, item]));
+    const draftByIndex = new Map(proposedDraft.map((item) => [item.songIndex, item]));
     const groundTruthByIndex = new Map(performance.songs.map((item) => [item.index, item]));
-    const indices = [...new Set([...performance.songs.map((item) => item.index), ...draft.map((item) => item.songIndex)])].sort((a, b) => a - b);
+    const indices = [...new Set([...performance.songs.map((item) => item.index), ...proposedDraft.map((item) => item.songIndex)])].sort((a, b) => a - b);
     return indices.map((index) => {
       const groundTruthSong = groundTruthByIndex.get(index);
       const proposed = draftByIndex.get(index);
@@ -153,18 +168,27 @@ export function RevisionEditor({
           currentConfirmed !== proposedConfirmed,
       };
     });
-  }, [draft, performance.songs, request]);
+  }, [performance.songs, proposedDraft, request]);
   const changedRequestCount = requestComparison?.filter((item) => item.changed).length ?? 0;
+  const acceptedRequestCount = requestComparison?.filter((item) => item.changed && requestDecisions[item.index] !== "keep").length ?? 0;
+
+  function markRequestChangeAsAccepted(index: number) {
+    if (request?.status !== "pending") return;
+    setRequestDecisions((current) => current[index] === "keep" ? { ...current, [index]: "accept" } : current);
+  }
 
   function updateSong(index: number, field: "clipStart" | "clipEnd", value: string) {
+    markRequestChangeAsAccepted(index);
     setSongs((current) => current.map((item) => item.index === index ? { ...item, [field]: value } : item));
   }
 
   function updateTitle(index: number, title: string) {
+    markRequestChangeAsAccepted(index);
     setSongs((current) => current.map((item) => item.index === index ? { ...item, title } : item));
   }
 
   function updateConfirmation(index: number, confirmed: boolean) {
+    markRequestChangeAsAccepted(index);
     setSongs((current) => current.map((item) => item.index === index ? { ...item, confirmed } : item));
   }
 
@@ -194,6 +218,7 @@ export function RevisionEditor({
   }
 
   function setSongRemoved(index: number, removed: boolean) {
+    markRequestChangeAsAccepted(index);
     setSongs((current) => current.map((item) => item.index === index ? { ...item, removed } : item));
   }
 
@@ -251,11 +276,11 @@ export function RevisionEditor({
               <div>
                 <h2 className="text-[13px] font-semibold uppercase tracking-wide text-muted-foreground">Request comparison</h2>
                 <p className="mt-1 text-[12px] text-muted-foreground">
-                  Current ground truth versus the requested timeline. You can edit the proposed values below before applying them.
+                  Current ground truth versus the requested timeline. Choose which changes to apply, keep the current value, or edit the proposed values below.
                 </p>
               </div>
               <span className="font-mono text-[11px] text-muted-foreground">
-                {changedRequestCount} of {requestComparison.length} changed
+                {acceptedRequestCount} of {changedRequestCount} changes selected
               </span>
             </div>
           </div>
@@ -317,6 +342,26 @@ export function RevisionEditor({
                       {item.currentConfirmed !== item.proposedConfirmed && (
                         <div className="mt-1 font-sans text-primary">
                           status changed
+                        </div>
+                      )}
+                      {item.changed && request?.status === "pending" && (
+                        <div className="mt-3 flex flex-wrap gap-1.5 font-sans" role="group" aria-label={`Decision for song ${item.index}`}>
+                          <button
+                            type="button"
+                            onClick={() => setRequestDecisions((current) => ({ ...current, [item.index]: "accept" }))}
+                            aria-pressed={requestDecisions[item.index] !== "keep"}
+                            className={`rounded-md border px-2 py-1 text-[11px] font-medium ${requestDecisions[item.index] !== "keep" ? "border-success/60 bg-success/10 text-success" : "border-input text-muted-foreground hover:text-foreground"}`}
+                          >
+                            Apply request
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setRequestDecisions((current) => ({ ...current, [item.index]: "keep" }))}
+                            aria-pressed={requestDecisions[item.index] === "keep"}
+                            className={`rounded-md border px-2 py-1 text-[11px] font-medium ${requestDecisions[item.index] === "keep" ? "border-primary/60 bg-primary/10 text-primary" : "border-input text-muted-foreground hover:text-foreground"}`}
+                          >
+                            Keep current
+                          </button>
                         </div>
                       )}
                     </td>
@@ -512,7 +557,7 @@ export function RevisionEditor({
             {request ? (
               request.status === "pending" ? (
                 <>
-                  <button formAction={resolveAction} type="submit" onClick={() => { if (resolveDecisionRef.current) resolveDecisionRef.current.value = "approve"; }} disabled={isPending} className="rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground disabled:opacity-60">{resolvePending ? "Applying…" : "Apply as main truth"}</button>
+                  <button formAction={resolveAction} type="submit" onClick={() => { if (resolveDecisionRef.current) resolveDecisionRef.current.value = "approve"; }} disabled={isPending} className="rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground disabled:opacity-60">{resolvePending ? "Applying…" : "Apply selected changes"}</button>
                   <button formAction={resolveAction} type="submit" onClick={() => { if (resolveDecisionRef.current) resolveDecisionRef.current.value = "reject"; }} disabled={isPending} className="rounded-lg border border-primary/50 px-3.5 py-2 text-[13px] font-medium text-primary disabled:opacity-60">Reject request</button>
                 </>
               ) : (

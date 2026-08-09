@@ -15,7 +15,7 @@ export type ReviewActionState = { error?: string; success?: string } | null;
 
 type GroundTruthSaveResult =
   | { error: string; allConfirmed?: never }
-  | { error: null; allConfirmed: boolean };
+  | { error: null; allConfirmed: boolean; appliedChangeCount: number };
 
 type GroundTruthEdit = {
   performance_video_id: string;
@@ -425,13 +425,18 @@ async function saveGroundTruth(
     .eq("video_id", videoId);
   if (performanceError) return { error: "The timeline saved, but verification could not be updated." };
 
-  return { error: null, allConfirmed: draft.every((song) => song.confirmed) };
+  return {
+    error: null,
+    allConfirmed: draft.every((song) => song.confirmed),
+    appliedChangeCount: edits.length,
+  };
 }
 
-function groundTruthSuccessMessage(allConfirmed: boolean) {
+function groundTruthSuccessMessage(allConfirmed: boolean, appliedChangeCount: number) {
+  const prefix = appliedChangeCount === 0 ? "No main-truth changes applied." : "Main truth updated.";
   return allConfirmed
-    ? "Main truth updated and all boundaries confirmed."
-    : "Main truth updated; the performance remains unverified because some boundaries are unconfirmed.";
+    ? `${prefix} All boundaries confirmed.`
+    : `${prefix} The performance remains unverified because some boundaries are unconfirmed.`;
 }
 
 export async function saveGroundTruthAction(
@@ -450,7 +455,7 @@ export async function saveGroundTruthAction(
   revalidatePath(`/video/${videoId}`);
   revalidatePath(`/review/${videoId}`);
   revalidatePath("/review");
-  return { success: groundTruthSuccessMessage(result.allConfirmed) };
+  return { success: groundTruthSuccessMessage(result.allConfirmed, result.appliedChangeCount) };
 }
 
 export async function resolveTruthRequest(
@@ -515,7 +520,7 @@ export async function resolveTruthRequest(
   revalidatePath(`/video/${requestData.request.performanceVideoId}`);
   revalidatePath(`/review/${requestData.request.performanceVideoId}`);
   revalidatePath("/review");
-  return { success: `Request approved and main truth updated. ${groundTruthSuccessMessage(result.allConfirmed)}` };
+  return { success: `Request resolved with selected changes. ${groundTruthSuccessMessage(result.allConfirmed, result.appliedChangeCount)}` };
 }
 
 export async function hideListeningPreset(

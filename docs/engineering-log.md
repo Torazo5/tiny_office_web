@@ -15,6 +15,21 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-09 — Partial revision resolution build verification blocked
+
+- **Symptom and impact:** The new per-song admin revision controls could not be
+  validated with the repository's automated tests, lint, or production build;
+  browser verification is also unavailable without a running app.
+- **Root cause / evidence:** `npm test`, `npm run lint`, and `npm run build`
+  all stopped before Node.js startup with `WSL 1 is not supported` and
+  `Could not determine Node.js install directory`.
+- **Systems and files:** WSL1 Node/npm interop, the revision request editor,
+  review utility tests, and the shared admin header.
+- **Resolution / next action:** Run the same commands and exercise a pending
+  request from WSL2 or another Linux Node.js runtime before deployment.
+- **Verification:** `git diff --check` passed; all three Node-based commands
+  failed before application compilation or test execution.
+
 ### 2026-08-09 — Production profile reads blocked by unapplied migrations
 
 - **Symptom and impact:** Local and production requests failed while loading
