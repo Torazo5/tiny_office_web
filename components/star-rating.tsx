@@ -1,4 +1,4 @@
-/** Filled/empty ★ row — coral filled, muted empty, per the design handoff. Read-only display. */
+/** Read-only ★ row with half-star rendering for ratings in 0.5 increments. */
 export function StarRating({
   rating,
   outOf = 5,
@@ -8,11 +8,30 @@ export function StarRating({
   outOf?: number;
   size?: string;
 }) {
-  const filled = Math.round(rating);
   return (
-    <span className={`${size} tracking-widest`} aria-label={`${rating} out of ${outOf} stars`}>
-      <span className="text-primary">{"★".repeat(filled)}</span>
-      <span className="text-muted">{"★".repeat(Math.max(0, outOf - filled))}</span>
+    <span className={`${size} inline-flex`} aria-label={`${rating} out of ${outOf} stars`}>
+      {Array.from({ length: outOf }, (_, index) => {
+        const starNumber = index + 1;
+        const fill = rating >= starNumber ? "full" : rating >= starNumber - 0.5 ? "half" : "empty";
+        return (
+          <span
+            key={starNumber}
+            aria-hidden
+            className={`leading-none ${
+                fill === "full"
+                  ? "text-primary"
+                  : fill === "half"
+                  ? "bg-clip-text text-transparent"
+                  : "text-muted"
+            }`}
+            style={fill === "half" ? {
+              backgroundImage: "linear-gradient(to right, var(--primary) 50%, var(--muted) 50%)",
+            } : undefined}
+          >
+            ★
+          </span>
+        );
+      })}
     </span>
   );
 }

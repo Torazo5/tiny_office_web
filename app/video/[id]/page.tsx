@@ -4,12 +4,14 @@ import { Header } from "@/components/header";
 import { PlayerProvider } from "@/components/player-context";
 import { SongRow } from "@/components/song-row";
 import { StarRating } from "@/components/star-rating";
+import { RatingReviewPanel } from "@/components/rating-review-panel";
 import { VideoEmbed } from "@/components/video-embed";
 import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { PresetPicker } from "@/components/preset-picker";
 import { getCurrentUser } from "@/lib/auth";
 import { getPlaylists } from "@/lib/data";
 import { getPerformanceWithSelectedPreset } from "@/lib/review-data";
+import { getUserEngagement } from "@/lib/engagement-data";
 
 export default async function VideoPage({
   params,
@@ -21,13 +23,17 @@ export default async function VideoPage({
   const { id } = await params;
   const { preset_id: previewPresetId } = await searchParams;
   const user = await getCurrentUser();
-  const [{ performance, presets, selectedPreset }, playlists] = await Promise.all([
+  const [{ performance, presets, selectedPreset }, engagement, playlists] = await Promise.all([
     getPerformanceWithSelectedPreset(id, user?.id, previewPresetId),
+    getUserEngagement(id, user?.id),
     getPlaylists(),
   ]);
   if (!performance) notFound();
   const songPlaylists = user
     ? playlists.filter((playlist) => playlist.ownerId === user.id && playlist.type === "songs")
+    : [];
+  const videoPlaylists = user
+    ? playlists.filter((playlist) => playlist.ownerId === user.id && playlist.type === "videos")
     : [];
 
   return (
@@ -46,17 +52,20 @@ export default async function VideoPage({
               Tiny Desk Concert{performance.date ? ` · ${performance.date}` : ""} · NPR Music
             </p>
 
-            <div className="flex items-center gap-3.5 py-4 border-y border-border mb-4">
-              <span className="text-[12.5px] font-medium text-muted-foreground">Your rating</span>
-              {/* Unrated placeholder — real per-user rating needs auth first. */}
-              <StarRating rating={0} size="text-[19px]" />
-              <div className="flex-1" />
-              <span className="text-[12.5px] font-medium text-primary cursor-not-allowed">
-                Write a review
-              </span>
-              <span className="text-[12.5px] font-medium text-muted-foreground cursor-not-allowed">
-                + Add to list
-              </span>
+            <RatingReviewPanel
+              videoId={performance.videoId}
+              isSignedIn={Boolean(user)}
+              initialRating={engagement.rating}
+              initialReview={engagement.review}
+            />
+
+            <div className="mb-4 flex items-center gap-3.5">
+              <AddToPlaylistButton
+                item={{ kind: "video", performanceVideoId: performance.videoId }}
+                playlists={videoPlaylists}
+                isSignedIn={Boolean(user)}
+                returnPath={`/video/${performance.videoId}`}
+              />
             </div>
 
             <div className="mb-4 flex flex-wrap items-center justify-between gap-3">

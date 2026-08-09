@@ -59,10 +59,22 @@ export interface Performance {
 }
 
 export interface Review {
+  id?: string;
   user: string;
   rating: number;
   date: string;
   text: string;
+}
+
+export interface UserReview {
+  id: string;
+  performanceVideoId: string;
+  artist: string;
+  performanceDate: string | null;
+  rating: number;
+  text: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface ReviewQueueItem {

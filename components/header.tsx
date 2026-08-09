@@ -53,6 +53,15 @@ export async function Header({
         Playlists
       </Link>
 
+      {user && (
+        <Link
+          href="/profile"
+          className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+        >
+          Profile
+        </Link>
+      )}
+
       <div className="flex-1 max-w-[420px]">
         <Input
           placeholder="Search performances, artists, songs"

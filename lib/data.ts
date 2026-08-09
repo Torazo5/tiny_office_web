@@ -64,7 +64,7 @@ async function loadPerformances(): Promise<Performance[]> {
     supabase.from("ratings").select("performance_video_id, rating"),
     supabase
       .from("reviews")
-      .select("performance_video_id, display_name, rating, text, created_at")
+      .select("id, performance_video_id, display_name, rating, text, created_at")
       .order("created_at", { ascending: false }),
   ]);
 
@@ -91,6 +91,7 @@ async function loadPerformances(): Promise<Performance[]> {
   for (const review of reviewsResult.data ?? []) {
     const reviews = reviewsByPerformance.get(review.performance_video_id) ?? [];
     reviews.push({
+      id: review.id,
       user: review.display_name,
       rating: Number(review.rating),
       date: review.created_at,

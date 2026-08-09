@@ -15,6 +15,23 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
+### 2026-08-09 — Social engagement build validation blocked by WSL1
+
+- **Symptom and impact:** The new half-star rating/review slice could not be
+  validated with the repository's lint, test, or production build commands;
+  automated type and runtime verification is unavailable in this shell.
+- **Root cause / evidence:** `npm run build`, `npm run test`, and `npm run
+  lint` all stopped before starting Node with `WSL 1 is not supported` and
+  `Could not determine Node.js install directory`.
+- **Systems and files:** WSL1 Node/npm interop, the social engagement
+  migration, `app/ratings/actions.ts`, `components/rating-review-panel.tsx`,
+  and the video page.
+- **Resolution / next action:** Run the same commands from WSL2 or another
+  Linux Node runtime, then exercise rating, review, and video-list actions in
+  the browser against the connected Supabase project.
+- **Verification:** `git diff --check` passed; all three Node-based commands
+  failed before reaching the application or test runner.
+
 ### 2026-08-08 — Review workflow Node verification blocked by WSL1
 
 - **Symptom and impact:** The new review editor, preset flow, and admin
