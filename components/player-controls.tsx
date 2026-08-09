@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Repeat2, SkipBack, SkipForward } from "lucide-react";
+import { Repeat2, Shuffle, SkipBack, SkipForward } from "lucide-react";
 import { formatTime } from "@/lib/format";
 
 type PlayerControlsProps = {
@@ -17,6 +17,8 @@ type PlayerControlsProps = {
   onNext?: () => void;
   previousDisabled?: boolean;
   nextDisabled?: boolean;
+  isShuffling?: boolean;
+  onToggleShuffle?: () => void;
   isLooping?: boolean;
   onToggleLoop?: () => void;
   onScrubStart?: () => void;
@@ -40,6 +42,8 @@ export function PlayerControls({
   onNext,
   previousDisabled = false,
   nextDisabled = false,
+  isShuffling = false,
+  onToggleShuffle,
   isLooping = false,
   onToggleLoop,
   onScrubStart,
@@ -129,6 +133,23 @@ export function PlayerControls({
             </button>
           )}
         </div>
+
+        {onToggleShuffle && (
+          <button
+            type="button"
+            onClick={onToggleShuffle}
+            disabled={!isReady}
+            aria-pressed={isShuffling}
+            aria-label={isShuffling ? "Turn off shuffle" : "Shuffle playlist"}
+            className={`absolute left-0 flex h-9 w-9 items-center justify-center rounded-full transition-colors disabled:cursor-wait disabled:opacity-40 ${
+              isShuffling
+                ? "bg-primary/15 text-primary"
+                : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+            }`}
+          >
+            <Shuffle size={18} aria-hidden />
+          </button>
+        )}
 
         {onToggleLoop && (
           <button

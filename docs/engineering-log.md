@@ -79,6 +79,21 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** `git diff --check` passed; both Node-based commands failed
   before application compilation or runtime startup.
 
+### 2026-08-09 — Shuffle transport validation blocked by WSL1 Node launcher
+
+- **Symptom and impact:** The new shuffle control and randomized playback order
+  could not be validated with lint, the production build, or a local browser
+  flow in this shell.
+- **Root cause / evidence:** `npm run lint` and `npm run build` stopped before
+  Node.js startup with `WSL 1 is not supported` and `Could not determine
+  Node.js install directory`.
+- **Systems and files:** WSL/Node.js interop, `components/player-controls.tsx`
+  and `components/playlist-player.tsx`.
+- **Resolution / next action:** Run lint, production build, and the playlist
+  shuffle/transport flow from WSL2 or another Linux Node.js runtime.
+- **Verification:** `git diff --check` passed; both Node-based commands failed
+  before application compilation or runtime startup.
+
 ### 2026-08-09 — Header and playback micro-fix validation blocked by WSL1
 
 - **Symptom and impact:** The requested browse search, live song highlighting,

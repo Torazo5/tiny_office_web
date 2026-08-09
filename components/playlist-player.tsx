@@ -87,20 +87,43 @@ export function PlaylistPlayer({
   const previousTimeRef = useRef(0);
   const scrubbingRef = useRef(false);
   const isLoopingRef = useRef(false);
-  const loadTrackRef = useRef<(index: number) => void>(() => undefined);
+  const isShufflingRef = useRef(false);
+  const shuffleOrderRef = useRef<number[] | null>(null);
+  const shufflePositionRef = useRef(0);
+  const loadTrackRef = useRef<(index: number, preservePlaybackOrder?: boolean) => void>(() => undefined);
   const advanceToNextRef = useRef<() => void>(() => undefined);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTime, setCurrentTime] = useState(tracks[0]?.clipStart ?? 0);
   const [playerState, setPlayerState] = useState<number | null>(null);
   const [isLooping, setIsLooping] = useState(false);
+  const [isShuffling, setIsShuffling] = useState(false);
+  const [shufflePosition, setShufflePosition] = useState(0);
 
   tracksRef.current = tracks;
 
-  function loadTrack(index: number) {
+  function createShuffleOrder(startIndex: number) {
+    const remaining = tracksRef.current
+      .map((_, index) => index)
+      .filter((index) => index !== startIndex);
+    for (let index = remaining.length - 1; index > 0; index -= 1) {
+      const swapIndex = Math.floor(Math.random() * (index + 1));
+      [remaining[index], remaining[swapIndex]] = [remaining[swapIndex], remaining[index]];
+    }
+    return [startIndex, ...remaining];
+  }
+
+  function resetShuffleOrder(startIndex: number) {
+    shuffleOrderRef.current = createShuffleOrder(startIndex);
+    shufflePositionRef.current = 0;
+    setShufflePosition(0);
+  }
+
+  function loadTrack(index: number, preservePlaybackOrder = false) {
     const track = tracksRef.current[index];
     if (!track || !playerRef.current) return;
 
+    if (isShufflingRef.current && !preservePlaybackOrder) resetShuffleOrder(index);
     const previousTrack = tracksRef.current[currentIndexRef.current];
     currentIndexRef.current = index;
     setCurrentIndex(index);
@@ -121,13 +144,41 @@ export function PlaylistPlayer({
 
   function advanceToNext() {
     if (advanceLockRef.current) return;
-    const nextIndex = currentIndexRef.current + 1;
-    if (nextIndex >= tracksRef.current.length) {
-      playerRef.current?.pauseVideo();
-      setPlayerState(2);
+    let nextIndex: number;
+    if (isShufflingRef.current) {
+      if (!shuffleOrderRef.current) resetShuffleOrder(currentIndexRef.current);
+      const shuffleOrder = shuffleOrderRef.current ?? [currentIndexRef.current];
+      const nextPosition = shufflePositionRef.current + 1;
+      if (nextPosition >= shuffleOrder.length) {
+        playerRef.current?.pauseVideo();
+        setPlayerState(2);
+        return;
+      }
+      shufflePositionRef.current = nextPosition;
+      setShufflePosition(nextPosition);
+      nextIndex = shuffleOrder[nextPosition];
+    } else {
+      nextIndex = currentIndexRef.current + 1;
+      if (nextIndex >= tracksRef.current.length) {
+        playerRef.current?.pauseVideo();
+        setPlayerState(2);
+        return;
+      }
+    }
+    loadTrack(nextIndex, true);
+  }
+
+  function advanceToPrevious() {
+    if (isShufflingRef.current) {
+      const shuffleOrder = shuffleOrderRef.current;
+      const previousPosition = shufflePositionRef.current - 1;
+      if (!shuffleOrder || previousPosition < 0) return;
+      shufflePositionRef.current = previousPosition;
+      setShufflePosition(previousPosition);
+      loadTrack(shuffleOrder[previousPosition], true);
       return;
     }
-    loadTrack(nextIndex);
+    loadTrack(Math.max(0, currentIndexRef.current - 1));
   }
 
   function toggleLoop() {
@@ -136,6 +187,19 @@ export function PlaylistPlayer({
       isLoopingRef.current = next;
       return next;
     });
+  }
+
+  function toggleShuffle() {
+    const next = !isShufflingRef.current;
+    isShufflingRef.current = next;
+    setIsShuffling(next);
+    if (next) {
+      resetShuffleOrder(currentIndexRef.current);
+    } else {
+      shuffleOrderRef.current = null;
+      shufflePositionRef.current = 0;
+      setShufflePosition(0);
+    }
   }
 
   loadTrackRef.current = loadTrack;
@@ -174,6 +238,10 @@ export function PlaylistPlayer({
   }, [tracks.length]);
 
   useEffect(() => {
+    if (isShufflingRef.current) resetShuffleOrder(currentIndexRef.current);
+  }, [tracks.length]);
+
+  useEffect(() => {
     let cancelled = false;
 
     if (!tracksRef.current[0] || !iframeRef.current) return;
@@ -203,7 +271,7 @@ export function PlaylistPlayer({
               }
               setPlayerState(event.data);
               if (event.data === PLAYER_ENDED) {
-                if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current);
+                if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current, true);
                 else advanceToNextRef.current();
               }
             },
@@ -250,7 +318,7 @@ export function PlaylistPlayer({
         const effectiveClipEnd = Math.max(track.clipEnd, track.clipStart + 0.5);
         const endThreshold = Math.max(track.clipStart + 0.5, effectiveClipEnd - 0.35);
         if (currentTime >= endThreshold) {
-          if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current);
+          if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current, true);
           else advanceToNextRef.current();
         }
         return;
@@ -267,7 +335,7 @@ export function PlaylistPlayer({
       if (action.type === "stop") {
         const hasNextTrack = currentIndexRef.current + 1 < tracksRef.current.length;
         if (isLoopingRef.current) {
-          loadTrackRef.current(currentIndexRef.current);
+          loadTrackRef.current(currentIndexRef.current, true);
         } else if (hasNextTrack) {
           advanceToNextRef.current();
         } else {
@@ -320,10 +388,14 @@ export function PlaylistPlayer({
         }}
         onSeek={seekTo}
         onSkip={skipBy}
-        onPrevious={() => loadTrack(Math.max(0, currentIndex - 1))}
+        onPrevious={advanceToPrevious}
         onNext={() => advanceToNext()}
-        previousDisabled={currentIndex === 0}
-        nextDisabled={currentIndex >= tracks.length - 1}
+        previousDisabled={isShuffling ? shufflePosition === 0 : currentIndex === 0}
+        nextDisabled={isShuffling
+          ? shufflePosition >= (shuffleOrderRef.current?.length ?? 1) - 1
+          : currentIndex >= tracks.length - 1}
+        isShuffling={isShuffling}
+        onToggleShuffle={toggleShuffle}
         isLooping={isLooping}
         onToggleLoop={toggleLoop}
         onScrubStart={() => {
