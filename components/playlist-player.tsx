@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { PlayerControls } from "@/components/player-controls";
 import type { PlaylistTrack, PlaylistType } from "@/lib/types";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
@@ -44,6 +44,17 @@ function youtubeWindow() {
   return window as YouTubeWindow;
 }
 
+function createShuffleOrder(tracks: PlaylistTrack[], startIndex: number) {
+  const remaining = tracks
+    .map((_, index) => index)
+    .filter((index) => index !== startIndex);
+  for (let index = remaining.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [remaining[index], remaining[swapIndex]] = [remaining[swapIndex], remaining[index]];
+  }
+  return [startIndex, ...remaining];
+}
+
 function loadYouTubeIframeApi() {
   const currentWindow = youtubeWindow();
   if (currentWindow.YT?.Player) return Promise.resolve();
@@ -73,11 +84,15 @@ export function PlaylistPlayer({
   playlistType,
   selectedIndex,
   onSelectionConsumed,
+  onlySongMode = playlistType === "videos",
+  onCurrentTrackChange,
 }: {
   tracks: PlaylistTrack[];
   playlistType: PlaylistType;
   selectedIndex: number | null;
   onSelectionConsumed: () => void;
+  onlySongMode?: boolean;
+  onCurrentTrackChange?: (track: PlaylistTrack) => void;
 }) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
@@ -100,24 +115,11 @@ export function PlaylistPlayer({
   const [isShuffling, setIsShuffling] = useState(false);
   const [shufflePosition, setShufflePosition] = useState(0);
 
-  tracksRef.current = tracks;
-
-  function createShuffleOrder(startIndex: number) {
-    const remaining = tracksRef.current
-      .map((_, index) => index)
-      .filter((index) => index !== startIndex);
-    for (let index = remaining.length - 1; index > 0; index -= 1) {
-      const swapIndex = Math.floor(Math.random() * (index + 1));
-      [remaining[index], remaining[swapIndex]] = [remaining[swapIndex], remaining[index]];
-    }
-    return [startIndex, ...remaining];
-  }
-
-  function resetShuffleOrder(startIndex: number) {
-    shuffleOrderRef.current = createShuffleOrder(startIndex);
+  const resetShuffleOrder = useCallback((startIndex: number) => {
+    shuffleOrderRef.current = createShuffleOrder(tracksRef.current, startIndex);
     shufflePositionRef.current = 0;
     setShufflePosition(0);
-  }
+  }, []);
 
   function loadTrack(index: number, preservePlaybackOrder = false) {
     const track = tracksRef.current[index];
@@ -202,11 +204,7 @@ export function PlaylistPlayer({
     }
   }
 
-  loadTrackRef.current = loadTrack;
-  advanceToNextRef.current = advanceToNext;
-
-  function timelineBounds() {
-    const track = tracksRef.current[currentIndexRef.current];
+  function timelineBounds(track: PlaylistTrack | undefined) {
     if (!track) return { start: 0, end: 0 };
     if (playlistType === "songs") {
       return {
@@ -218,7 +216,7 @@ export function PlaylistPlayer({
   }
 
   function seekTo(seconds: number, allowSeekAhead: boolean) {
-    const { start, end } = timelineBounds();
+    const { start, end } = timelineBounds(tracksRef.current[currentIndexRef.current]);
     const nextTime = Math.min(Math.max(start, seconds), end);
     playerRef.current?.seekTo(nextTime, allowSeekAhead);
     previousTimeRef.current = nextTime;
@@ -230,6 +228,15 @@ export function PlaylistPlayer({
   }
 
   useEffect(() => {
+    tracksRef.current = tracks;
+  }, [tracks]);
+
+  useEffect(() => {
+    loadTrackRef.current = loadTrack;
+    advanceToNextRef.current = advanceToNext;
+  });
+
+  useEffect(() => {
     if (currentIndexRef.current >= tracks.length) {
       const nextIndex = Math.max(0, tracks.length - 1);
       currentIndexRef.current = nextIndex;
@@ -239,7 +246,7 @@ export function PlaylistPlayer({
 
   useEffect(() => {
     if (isShufflingRef.current) resetShuffleOrder(currentIndexRef.current);
-  }, [tracks.length]);
+  }, [resetShuffleOrder, tracks.length]);
 
   useEffect(() => {
     let cancelled = false;
@@ -300,6 +307,11 @@ export function PlaylistPlayer({
   }, [isPlayerReady, onSelectionConsumed, selectedIndex]);
 
   useEffect(() => {
+    const track = tracks[currentIndex];
+    if (track) onCurrentTrackChange?.(track);
+  }, [currentIndex, onCurrentTrackChange, tracks]);
+
+  useEffect(() => {
     if (!isPlayerReady || playerState !== PLAYER_PLAYING) return;
 
     const intervalId = window.setInterval(() => {
@@ -323,6 +335,8 @@ export function PlaylistPlayer({
         }
         return;
       }
+
+      if (!onlySongMode) return;
 
       const action = findOnlySongModeAction(
         track.songClips,
@@ -353,7 +367,7 @@ export function PlaylistPlayer({
     }, 250);
 
     return () => window.clearInterval(intervalId);
-  }, [isPlayerReady, playerState, playlistType]);
+  }, [isPlayerReady, onlySongMode, playerState, playlistType]);
 
   if (tracks.length === 0) return null;
 
@@ -361,7 +375,7 @@ export function PlaylistPlayer({
   const isPlaying = playerState === PLAYER_PLAYING;
   const isBuffering = playerState === PLAYER_BUFFERING;
   const kindLabel = playlistType === "songs" ? "Song playlist" : "Video playlist";
-  const { start: timelineStart, end: timelineEnd } = timelineBounds();
+  const { start: timelineStart, end: timelineEnd } = timelineBounds(currentTrack);
 
   return (
     <section className="mb-8 rounded-xl border border-border bg-card p-4 sm:p-5">
@@ -392,7 +406,7 @@ export function PlaylistPlayer({
         onNext={() => advanceToNext()}
         previousDisabled={isShuffling ? shufflePosition === 0 : currentIndex === 0}
         nextDisabled={isShuffling
-          ? shufflePosition >= (shuffleOrderRef.current?.length ?? 1) - 1
+          ? shufflePosition >= tracks.length - 1
           : currentIndex >= tracks.length - 1}
         isShuffling={isShuffling}
         onToggleShuffle={toggleShuffle}
@@ -419,7 +433,11 @@ export function PlaylistPlayer({
       </div>
       <p className="mt-3 text-[12px] text-muted-foreground/75">
         One player stays mounted while the next {playlistType === "songs" ? "song clip" : "performance"} loads in place.
-        {playlistType === "videos" ? " Full performances skip gaps and advance after the final song." : ""}
+        {playlistType === "videos"
+          ? onlySongMode
+            ? " Full performances skip gaps and advance after the final song."
+            : " Full performances play normally from start to finish."
+          : ""}
       </p>
     </section>
   );

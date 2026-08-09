@@ -60,6 +60,13 @@ export async function Header({
         Playlists
       </Link>
 
+      <Link
+        href="/adventure"
+        className="whitespace-nowrap text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+      >
+        I&apos;m feeling adventurous
+      </Link>
+
       {user && isAdmin && (
         <Link
           href="/review"

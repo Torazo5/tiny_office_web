@@ -43,6 +43,41 @@ tokens, personal data, or full environment-variable values.
   unrelated failing expectation. A read-only policy query confirmed the
   pre-change public policies before the migration attempt.
 
+### 2026-08-09 — Adventure player production verification blocked
+
+- **Symptom and impact:** The new adventure route could not be fully checked
+  with a production build in this environment. Targeted checks for the new
+  route and shared player passed, but the full repository still cannot produce
+  a build artifact here.
+- **Root cause / evidence:** Next.js 16 Turbopack panicked while compiling
+  `app/globals.css` because its child process could not bind to a local port
+  (`Operation not permitted`). Full lint and tests also report unrelated
+  pre-existing failures outside the adventure change.
+- **Systems and files:** Next.js/Turbopack, the local process sandbox,
+  `app/adventure/page.tsx`, `components/adventure-experience.tsx`, and
+  `components/playlist-player.tsx`.
+- **Resolution / next action:** Keep the targeted validation results and run
+  `npm run build` from an environment that permits Turbopack child processes
+  before deployment.
+- **Verification:** Targeted ESLint, `tsc --noEmit`, and `git diff --check`
+  passed. Full lint reports only the existing revision/notification errors,
+  and the existing review utility test remains the only failing test file.
+
+### 2026-08-09 — Adventure player commit blocked by read-only Git metadata
+
+- **Symptom and impact:** The verified adventure-player change could not be
+  staged or committed, so the focused local commit remains pending.
+- **Root cause / evidence:** `git add` again failed with `Unable to create
+  .git/index.lock: Read-only file system`; the workspace is writable but Git
+  metadata is not.
+- **Systems and files:** The repository Git index and the adventure route,
+  adventure experience, header/player updates, and engineering log.
+- **Resolution / next action:** Retry the scoped add and commit from an
+  environment with writable `.git` metadata. Do not push or publish unless
+  requested.
+- **Verification:** No index lock was created; the intended files remain
+  unstaged in `git status --short`.
+
 ### 2026-08-09 — Private playlist commit blocked by read-only Git metadata
 
 - **Symptom and impact:** The focused private-playlist change could not be
