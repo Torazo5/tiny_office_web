@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Header } from "@/components/header";
+import { PlayerProvider } from "@/components/player-context";
 import { SongRow } from "@/components/song-row";
 import { StarRating } from "@/components/star-rating";
 import { RatingReviewPanel } from "@/components/rating-review-panel";
@@ -40,14 +41,13 @@ export default async function VideoPage({
   return (
     <>
       <Header />
-      <main className="p-8 grid gap-8 items-start" style={{ gridTemplateColumns: "1.4fr 1fr" }}>
-        <div>
-            <VideoEmbed
-              videoId={performance.videoId}
-              title={performance.artist}
-              duration={performance.duration}
-              songs={performance.songs}
-            />
+      <PlayerProvider
+        initialStart={performance.songs[0]?.clipStart ?? 0}
+        songs={performance.songs}
+      >
+        <main className="p-8 grid gap-8 items-start" style={{ gridTemplateColumns: "1.4fr 1fr" }}>
+          <div>
+            <VideoEmbed videoId={performance.videoId} duration={performance.duration} />
 
             <h1 className="text-2xl font-bold text-foreground mb-1.5">{performance.artist}</h1>
             <p className="text-sm text-muted-foreground mb-4">
@@ -124,9 +124,9 @@ export default async function VideoPage({
                 </div>
               ))}
             </div>
-        </div>
+          </div>
 
-        <div>
+          <div>
             <h2 className="text-[13px] font-semibold text-muted-foreground uppercase tracking-wide mb-3">
               Songs in this set
             </h2>
@@ -149,8 +149,9 @@ export default async function VideoPage({
                 </div>
               ))}
             </div>
-        </div>
-      </main>
+          </div>
+        </main>
+      </PlayerProvider>
     </>
   );
 }

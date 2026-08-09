@@ -15,25 +15,6 @@ tokens, personal data, or full environment-variable values.
 - **Verification:** Commands, tests, deployment state, or manual steps that
   confirmed the result.
 
-### 2026-08-09 — Persistent mini-player build verification blocked
-
-- **Symptom and impact:** The persistent player change could not be verified
-  with the required lint or production build commands, and a browser flow
-  could not be exercised without a running app.
-- **Root cause / evidence:** The normal WSL Node launcher stopped with
-  `WSL 1 is not supported` and `Could not determine Node.js install
-  directory`. Retrying with the configured workspace runtime launched
-  Windows npm from the Linux UNC working directory, where `eslint` and
-  `next` were not available.
-- **Systems and files:** WSL/Node.js interop, `app/layout.tsx`,
-  `app/video/[id]/page.tsx`, `components/player-context.tsx`,
-  `components/video-embed.tsx`, and `components/persistent-player.tsx`.
-- **Resolution / next action:** Keep the persistent root-layout player and
-  run lint, the production build, and the video-to-browse/profile/playlists
-  navigation flow from WSL2 or another Linux Node.js runtime before deploy.
-- **Verification:** `git diff --check` passed. Both `npm run lint` and
-  `npm run build` failed before ESLint or Next.js compilation began.
-
 ### 2026-08-09 — Private playlist verification and live migration blocked
 
 - **Symptom and impact:** The account-private playlist change could not be
