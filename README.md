@@ -61,7 +61,7 @@ Never expose `SUPABASE_SECRET_KEY`, `ADMIN_PASSWORD`, or
 | `/profile` | Public profile settings, top-four favorites, listening stats, and reviews |
 | `/review` | Password-protected admin queue and preset moderation |
 | `/review/[id]` | Timeline editor for presets, truth requests, and main-truth updates |
-| `/login` | Google sign-in and account creation |
+| `/login` | Google or email/password sign-in and account creation |
 
 ## Product behavior
 
@@ -104,7 +104,7 @@ repository before running the seed again.
 
 ## Admin configuration
 
-The review dashboard requires a signed-in Google account plus these server-only
+The review dashboard requires a signed-in account plus these server-only
 variables:
 
 ```bash
@@ -141,9 +141,10 @@ npx tsc --noEmit
 npm run build
 ```
 
-Also verify the Google OAuth redirect URLs, Supabase migrations and RLS
-policies, catalog seed, admin access, private playlist access, review writes,
-timeline approval, and YouTube playback in a browser. The app includes shared
+Also verify the Google OAuth redirect URLs, the email/password provider with
+Confirm email disabled, Supabase migrations and RLS policies, catalog seed,
+admin access, private playlist access, review writes, timeline approval, and
+YouTube playback in a browser. The app includes shared
 loading, error, and not-found states, but a production browser smoke pass is
 still required.
 

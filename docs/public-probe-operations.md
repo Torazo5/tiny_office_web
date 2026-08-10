@@ -13,6 +13,9 @@ focuses on the release-critical configuration in `public-probe-readiness.md`.
 - In Supabase Auth, set that origin as the Site URL and add
   `https://<host>/auth/callback` to the redirect allow-list. Keep only the
   intended preview origin(s) while testing.
+- Keep Google enabled as an OAuth provider. Also keep Email enabled and turn
+  off **Confirm email** so the email/password option can start a session
+  without verification.
 - Add a short feedback-form URL as `NEXT_PUBLIC_FEEDBACK_URL`. The header only
   renders the Feedback link when this is set.
 - Apply the three `202608101...` migrations before serving the new application
@@ -33,7 +36,7 @@ focuses on the release-critical configuration in `public-probe-readiness.md`.
 
 ## Authenticated smoke test
 
-Use a non-production test Google account after deploy:
+Use a non-production test account (Google or email/password) after deploy:
 
 1. Open the catalog signed out, press **Play a song**, and verify a performance
    and its first song can be reached without signing in.

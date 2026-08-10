@@ -17,7 +17,7 @@ export function ProfileSettings({
       <div className="mb-4">
         <h2 className="text-[13px] font-semibold uppercase tracking-wide text-muted-foreground">Public profile</h2>
         <p className="mt-1 text-[12.5px] text-muted-foreground">
-          Choose what other listeners see. Your Google account name stays private.
+          Choose what other listeners see. Your account email stays private.
         </p>
       </div>
       <form action={action} className="grid gap-4 sm:grid-cols-[1fr_1fr_auto] sm:items-end">
