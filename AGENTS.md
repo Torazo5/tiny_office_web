@@ -40,6 +40,20 @@ tell the user why (for example, a read-only `.git` sandbox) and provide the
 exact `git add` and `git commit` commands for the files it changed. Do not
 push unless explicitly instructed.
 
+### Scoped command permissions
+
+Keep the normal workspace sandbox enabled. If a required build, development
+server, or Git write is blocked by the sandbox, request a one-time elevated
+approval for the narrowest exact command instead of switching the whole task
+to Full access. Do not assume approval is granted; report a denial or failure
+and continue with a safer alternative when possible.
+
+For Git writes, stage explicit paths rather than using `git add .` when the
+worktree contains unrelated edits. Before committing, verify
+`git diff --cached --check`, `git diff --cached --stat`, and
+`git diff --cached --name-only`. Never push, publish, or run destructive Git
+commands unless the user explicitly asks.
+
 ### Functional verification before commits
 
 Before creating a commit for a code or configuration change, run `npm run
