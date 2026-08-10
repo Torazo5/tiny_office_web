@@ -1,9 +1,10 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import { Shuffle } from "lucide-react";
+import { History, Shuffle } from "lucide-react";
 import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { PlaylistPlayer } from "@/components/playlist-player";
+import { RecentlyPlayedPanel, useRecentlyPlayed } from "@/components/recently-played";
 import { formatTime } from "@/lib/format";
 import type {
   PlaylistSongOption,
@@ -74,6 +75,9 @@ function AdventureSetup({
   onSourceChange,
   onModeChange,
   onStart,
+  recentlyPlayed,
+  onPlayRecentlyPlayed,
+  onClearRecentlyPlayed,
 }: {
   songOptions: PlaylistSongOption[];
   videoOptions: PlaylistVideoOption[];
@@ -82,22 +86,55 @@ function AdventureSetup({
   onSourceChange: (source: AdventureSource) => void;
   onModeChange: (mode: AdventureMode) => void;
   onStart: () => void;
+  recentlyPlayed: PlaylistTrack[];
+  onPlayRecentlyPlayed: (track: PlaylistTrack) => void;
+  onClearRecentlyPlayed: () => void;
 }) {
   const availableCount = source === "songs" ? songOptions.length : videoOptions.length;
   const availableLabel = source === "songs" ? "song clips" : "performances";
+  const [showRecentlyPlayed, setShowRecentlyPlayed] = useState(false);
 
   return (
     <main className="p-4 sm:p-8">
       <div className="mx-auto max-w-[920px]">
-        <div className="mb-8 max-w-[650px]">
-          <div className="mb-2 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-            Random listening
+        <div className="mb-8 flex flex-col items-start justify-between gap-5 sm:flex-row sm:gap-8">
+          <div className="max-w-[650px]">
+            <div className="mb-2 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+              Random listening
+            </div>
+            <h1 className="mb-2 text-[32px] font-bold text-foreground">I&apos;m feeling adventurous</h1>
+            <p className="text-[14px] leading-relaxed text-muted-foreground">
+              Let Tiny Office choose what plays next. Set the kind of discovery you want, then press start for a shuffled queue.
+            </p>
           </div>
-          <h1 className="mb-2 text-[32px] font-bold text-foreground">I&apos;m feeling adventurous</h1>
-          <p className="text-[14px] leading-relaxed text-muted-foreground">
-            Let Tiny Office choose what plays next. Set the kind of discovery you want, then press start for a shuffled queue.
-          </p>
+          <button
+            type="button"
+            onClick={() => setShowRecentlyPlayed((isOpen) => !isOpen)}
+            aria-expanded={showRecentlyPlayed}
+            className={`inline-flex shrink-0 items-center gap-2 rounded-lg border px-3.5 py-2.5 text-[13px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+              showRecentlyPlayed
+                ? "border-primary/50 bg-primary/10 text-primary"
+                : "border-input text-muted-foreground hover:border-primary/50 hover:text-foreground"
+            }`}
+          >
+            <History aria-hidden className="size-4" />
+            Recently played
+            {recentlyPlayed.length > 0 && (
+              <span className="rounded-full bg-secondary px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground">
+                {recentlyPlayed.length}
+              </span>
+            )}
+          </button>
         </div>
+
+        {showRecentlyPlayed && (
+          <RecentlyPlayedPanel
+            tracks={recentlyPlayed}
+            onPlay={onPlayRecentlyPlayed}
+            onClear={onClearRecentlyPlayed}
+            onClose={() => setShowRecentlyPlayed(false)}
+          />
+        )}
 
         <div className="grid gap-5 lg:grid-cols-2">
           <section className="rounded-xl border border-border bg-card p-5">
@@ -196,11 +233,13 @@ function AdventureSessionPlayer({
   playlists,
   isSignedIn,
   onRestart,
+  onTrackPlay,
 }: {
   session: AdventureSession;
   playlists: PlaylistSummary[];
   isSignedIn: boolean;
   onRestart: () => void;
+  onTrackPlay: (track: PlaylistTrack) => void;
 }) {
   const [currentTrack, setCurrentTrack] = useState<PlaylistTrack | null>(session.tracks[0] ?? null);
   const handleCurrentTrackChange = useCallback((track: PlaylistTrack) => {
@@ -249,6 +288,7 @@ function AdventureSessionPlayer({
           onSelectionConsumed={() => undefined}
           onlySongMode={session.mode === "song-only"}
           onCurrentTrackChange={handleCurrentTrackChange}
+          onTrackPlay={onTrackPlay}
         />
 
         {currentTrack && currentItem && (
@@ -291,6 +331,7 @@ export function AdventureExperience({
   const [source, setSource] = useState<AdventureSource>("songs");
   const [mode, setMode] = useState<AdventureMode>("song-only");
   const [session, setSession] = useState<AdventureSession | null>(null);
+  const { tracks: recentlyPlayed, addTrack, clearTracks } = useRecentlyPlayed();
 
   function startAdventure() {
     const tracks = source === "songs"
@@ -300,6 +341,15 @@ export function AdventureExperience({
     setSession({ source, mode, tracks: shuffle(tracks) });
   }
 
+  function playRecentlyPlayed(track: PlaylistTrack) {
+    const source = track.songIndex === null ? "videos" : "songs";
+    setSession({
+      source,
+      mode: source === "videos" ? "normal" : "song-only",
+      tracks: [{ ...track, index: 1, position: 1 }],
+    });
+  }
+
   if (session) {
     return (
       <AdventureSessionPlayer
@@ -307,6 +357,7 @@ export function AdventureExperience({
         playlists={playlists}
         isSignedIn={isSignedIn}
         onRestart={() => setSession(null)}
+        onTrackPlay={addTrack}
       />
     );
   }
@@ -320,6 +371,9 @@ export function AdventureExperience({
       onSourceChange={setSource}
       onModeChange={setMode}
       onStart={startAdventure}
+      recentlyPlayed={recentlyPlayed}
+      onPlayRecentlyPlayed={playRecentlyPlayed}
+      onClearRecentlyPlayed={clearTracks}
     />
   );
 }

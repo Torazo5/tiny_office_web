@@ -86,6 +86,7 @@ export function PlaylistPlayer({
   onSelectionConsumed,
   onlySongMode = playlistType === "videos",
   onCurrentTrackChange,
+  onTrackPlay,
 }: {
   tracks: PlaylistTrack[];
   playlistType: PlaylistType;
@@ -93,6 +94,7 @@ export function PlaylistPlayer({
   onSelectionConsumed: () => void;
   onlySongMode?: boolean;
   onCurrentTrackChange?: (track: PlaylistTrack) => void;
+  onTrackPlay?: (track: PlaylistTrack) => void;
 }) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
@@ -107,6 +109,7 @@ export function PlaylistPlayer({
   const shufflePositionRef = useRef(0);
   const loadTrackRef = useRef<(index: number, preservePlaybackOrder?: boolean) => void>(() => undefined);
   const advanceToNextRef = useRef<() => void>(() => undefined);
+  const onTrackPlayRef = useRef(onTrackPlay);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTime, setCurrentTime] = useState(tracks[0]?.clipStart ?? 0);
@@ -237,6 +240,10 @@ export function PlaylistPlayer({
   });
 
   useEffect(() => {
+    onTrackPlayRef.current = onTrackPlay;
+  }, [onTrackPlay]);
+
+  useEffect(() => {
     if (currentIndexRef.current >= tracks.length) {
       const nextIndex = Math.max(0, tracks.length - 1);
       currentIndexRef.current = nextIndex;
@@ -277,6 +284,10 @@ export function PlaylistPlayer({
                 setCurrentTime(currentTime);
               }
               setPlayerState(event.data);
+              if (event.data === PLAYER_PLAYING) {
+                const track = tracksRef.current[currentIndexRef.current];
+                if (track) onTrackPlayRef.current?.(track);
+              }
               if (event.data === PLAYER_ENDED) {
                 if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current, true);
                 else advanceToNextRef.current();
