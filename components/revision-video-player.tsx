@@ -190,6 +190,9 @@ export function RevisionVideoPlayer({
   }
 
   const safeCurrentTime = Math.max(0, Math.min(duration, currentTime));
+  const clipStartPercent = duration > 0 ? Math.max(0, Math.min(100, (clipStart / duration) * 100)) : 0;
+  const clipEndPercent = duration > 0 ? Math.max(0, Math.min(100, (clipEnd / duration) * 100)) : 0;
+  const clipWidthPercent = Math.max(0, clipEndPercent - clipStartPercent);
 
   return (
     <section className="overflow-hidden rounded-[10px] border border-border bg-card">
@@ -244,22 +247,30 @@ export function RevisionVideoPlayer({
 
         <label className="block">
           <span className="sr-only">Seek video</span>
-          <input
-            type="range"
-            min={0}
-            max={duration}
-            step={0.1}
-            value={safeCurrentTime}
-            onChange={(event) => seek(event.target.value)}
-            disabled={!isPlayerReady}
-            className="w-full accent-primary disabled:opacity-50"
-            aria-label="Seek revision video"
-          />
+          <div className="relative flex h-5 items-center">
+            <div className="absolute inset-x-0 h-1 rounded-full bg-secondary" aria-hidden="true" />
+            <div
+              className="absolute h-2 rounded-full bg-primary/70 shadow-[0_0_0_1px_oklch(0.68_0.17_25_/_0.35)]"
+              style={{ left: `${clipStartPercent}%`, width: `${clipWidthPercent}%` }}
+              aria-hidden="true"
+            />
+            <input
+              type="range"
+              min={0}
+              max={duration}
+              step={0.1}
+              value={safeCurrentTime}
+              onChange={(event) => seek(event.target.value)}
+              disabled={!isPlayerReady}
+              className="revision-scrubber relative z-10 w-full accent-primary disabled:opacity-50"
+              aria-label="Seek revision video"
+            />
+          </div>
         </label>
 
         <div className="flex flex-wrap justify-between gap-2 font-mono text-[11px] text-muted-foreground">
           <span>{formatTime(safeCurrentTime)} / {formatTime(duration)}</span>
-          <span className="text-primary">Clip {formatTime(clipStart)} – {formatTime(clipEnd)}</span>
+          <span className="text-primary">Highlighted cut {formatTime(clipStart)} – {formatTime(clipEnd)}</span>
         </div>
       </div>
     </section>

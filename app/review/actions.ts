@@ -17,6 +17,14 @@ type GroundTruthSaveResult =
   | { error: string; allConfirmed?: never }
   | { error: null; allConfirmed: boolean; appliedChangeCount: number };
 
+type DatabaseTimelineDraftSong = {
+  song_index: number;
+  title: string;
+  clip_start: number;
+  clip_end: number;
+  confirmed: boolean;
+};
+
 function readText(formData: FormData, name: string, maxLength: number) {
   const value = formData.get(name);
   if (typeof value !== "string") return null;
@@ -46,6 +54,16 @@ function readDraft(formData: FormData): TimelineDraftSong[] | null {
   } catch {
     return null;
   }
+}
+
+function toDatabaseDraft(draft: TimelineDraftSong[]): DatabaseTimelineDraftSong[] {
+  return draft.map((song) => ({
+    song_index: song.songIndex,
+    title: song.title,
+    clip_start: song.clipStart,
+    clip_end: song.clipEnd,
+    confirmed: song.confirmed,
+  }));
 }
 
 function readRemovedSongIndexes(formData: FormData): number[] | null {
@@ -100,9 +118,10 @@ export async function submitListeningPreset(
   const performance = await getPerformance(videoId);
   const draft = readDraft(formData);
   const validationError = validateSubmission(draft, performance);
-  if (validationError) return { error: validationError };
+  if (validationError || !draft) return { error: validationError ?? "This performance could not be loaded." };
 
   const profile = await getUserProfile(user.id);
+  const databaseDraft = toDatabaseDraft(draft);
 
   const presetId = randomUUID();
   const { error } = await supabase.rpc("create_listening_preset_with_songs", {
@@ -111,9 +130,15 @@ export async function submitListeningPreset(
     p_owner_name: formatProfileLabel(profile),
     p_name: name,
     p_note: note || null,
-    p_songs: draft,
+    p_songs: databaseDraft,
   });
-  if (error) return { error: "Could not publish this listening preset. Try again." };
+  if (error) {
+    console.error("[review/submitListeningPreset] Supabase RPC failed", {
+      code: error.code,
+      message: error.message,
+    });
+    return { error: "Could not publish this listening preset. Try again." };
+  }
 
   revalidatePath(`/video/${videoId}`);
   revalidatePath(`/review/${videoId}`);
@@ -133,9 +158,10 @@ export async function submitTruthRequest(
   const performance = await getPerformance(videoId);
   const draft = readDraft(formData);
   const validationError = validateSubmission(draft, performance);
-  if (validationError) return { error: validationError };
+  if (validationError || !draft) return { error: validationError ?? "This performance could not be loaded." };
 
   const profile = await getUserProfile(user.id);
+  const databaseDraft = toDatabaseDraft(draft);
 
   const requestId = randomUUID();
   const { error: requestError } = await supabase.rpc("create_truth_request_with_songs", {
@@ -143,9 +169,13 @@ export async function submitTruthRequest(
     p_performance_video_id: videoId,
     p_requester_name: formatProfileLabel(profile),
     p_note: note || null,
-    p_songs: draft,
+    p_songs: databaseDraft,
   });
   if (requestError) {
+    console.error("[review/submitTruthRequest] Supabase RPC failed", {
+      code: requestError.code,
+      message: requestError.message,
+    });
     if (requestError.code === "23505") return { error: "You already have a pending request for this performance." };
     return { error: "Could not submit the main-truth request. Try again." };
   }
@@ -243,15 +273,22 @@ async function saveGroundTruth(
   if (validationError) return { error: validationError };
 
   const supabase = createAdminClient();
+  const databaseDraft = toDatabaseDraft(draft);
   const { data, error } = await supabase.rpc("apply_ground_truth_changes", {
     p_performance_video_id: videoId,
-    p_draft: draft,
+    p_draft: databaseDraft,
     p_removed_song_indexes: removedSongIndexes,
     p_admin_id: adminId,
     p_request_id: requestId,
     p_resolution_note: resolutionNote,
   });
-  if (error) return { error: "Could not update the official timeline." };
+  if (error) {
+    console.error("[review/saveGroundTruth] Supabase RPC failed", {
+      code: error.code,
+      message: error.message,
+    });
+    return { error: "Could not update the official timeline." };
+  }
 
   const result = Array.isArray(data) ? data[0] : data;
   if (!result) return { error: "The timeline update returned no result." };

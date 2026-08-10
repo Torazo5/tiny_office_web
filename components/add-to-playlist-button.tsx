@@ -27,12 +27,15 @@ export function AddToPlaylistButton({
   const [error, setError] = useState<string | null>(null);
   const isSong = item.kind === "song";
   const playlistLabel = isSong ? "Song playlists" : "Video playlists";
+  const menuPosition = isSong
+    ? "right-0 sm:left-auto sm:right-0 sm:translate-x-0"
+    : "left-1/2 -translate-x-1/2 sm:left-0 sm:right-auto sm:translate-x-0";
 
   if (!isSignedIn) {
     return (
       <Link
         href={{ pathname: "/login", query: { next: returnPath } }}
-        className="inline-flex min-h-9 items-center rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground sm:min-h-0"
+        className="inline-flex min-h-9 shrink-0 items-center rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground sm:min-h-0"
       >
         + Add to playlist
       </Link>
@@ -73,13 +76,13 @@ export function AddToPlaylistButton({
           setError(null);
         }}
         aria-expanded={isOpen}
-        className="inline-flex min-h-9 items-center rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground sm:min-h-0"
+        className="inline-flex min-h-9 shrink-0 items-center rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground sm:min-h-0"
       >
         + Add to playlist
       </button>
 
       {isOpen && (
-        <div className="absolute bottom-full left-1/2 z-20 mb-2 w-[min(16rem,calc(100vw-2rem))] -translate-x-1/2 rounded-lg border border-border bg-card p-2 shadow-lg sm:left-0 sm:w-64 sm:translate-x-0">
+        <div className={`absolute bottom-full z-20 mb-2 w-[min(16rem,calc(100vw-2rem))] rounded-lg border border-border bg-card p-2 shadow-lg sm:w-64 ${menuPosition}`}>
           <div className="px-2 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
             {playlistLabel}
           </div>

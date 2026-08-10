@@ -104,10 +104,29 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-x: clip;
+  }
   body {
     @apply bg-background text-foreground;
   }
   html {
     @apply font-sans;
   }
+}
+
+.revision-scrubber {
+  appearance: none;
+  background: transparent;
+}
+
+.revision-scrubber::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+.revision-scrubber::-moz-range-track {
+  background: transparent;
 }

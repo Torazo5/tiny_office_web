@@ -140,7 +140,7 @@ export default async function VideoPage({
             </h2>
             <div className="flex flex-col gap-0.5">
               {performance.songs.map((song) => (
-                <div key={song.index} className="flex items-center gap-2">
+                <div key={song.index} className="flex min-w-0 items-center gap-2">
                   <div className="min-w-0 flex-1">
                     <SongRow song={song} />
                   </div>
