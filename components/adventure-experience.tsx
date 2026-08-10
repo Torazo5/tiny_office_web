@@ -234,14 +234,21 @@ function AdventureSessionPlayer({
   isSignedIn,
   onRestart,
   onTrackPlay,
+  recentlyPlayed,
+  onPlayRecentlyPlayed,
+  onClearRecentlyPlayed,
 }: {
   session: AdventureSession;
   playlists: PlaylistSummary[];
   isSignedIn: boolean;
   onRestart: () => void;
   onTrackPlay: (track: PlaylistTrack) => void;
+  recentlyPlayed: PlaylistTrack[];
+  onPlayRecentlyPlayed: (track: PlaylistTrack) => void;
+  onClearRecentlyPlayed: () => void;
 }) {
   const [currentTrack, setCurrentTrack] = useState<PlaylistTrack | null>(session.tracks[0] ?? null);
+  const [showRecentlyPlayed, setShowRecentlyPlayed] = useState(false);
   const handleCurrentTrackChange = useCallback((track: PlaylistTrack) => {
     setCurrentTrack(track);
   }, []);
@@ -272,14 +279,43 @@ function AdventureSessionPlayer({
               Everything is shuffled. Save a favorite whenever one finds you.
             </p>
           </div>
-          <button
-            type="button"
-            onClick={onRestart}
-            className="self-start rounded-lg border border-input px-3.5 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:text-foreground sm:self-auto"
-          >
-            Change settings
-          </button>
+          <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto">
+            <button
+              type="button"
+              onClick={() => setShowRecentlyPlayed((isOpen) => !isOpen)}
+              aria-expanded={showRecentlyPlayed}
+              className={`inline-flex items-center gap-2 rounded-lg border px-3.5 py-2 text-[13px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+                showRecentlyPlayed
+                  ? "border-primary/50 bg-primary/10 text-primary"
+                  : "border-input text-muted-foreground hover:border-primary/50 hover:text-foreground"
+              }`}
+            >
+              <History aria-hidden className="size-4" />
+              Recently played
+              {recentlyPlayed.length > 0 && (
+                <span className="rounded-full bg-secondary px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground">
+                  {recentlyPlayed.length}
+                </span>
+              )}
+            </button>
+            <button
+              type="button"
+              onClick={onRestart}
+              className="rounded-lg border border-input px-3.5 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Change settings
+            </button>
+          </div>
         </div>
+
+        {showRecentlyPlayed && (
+          <RecentlyPlayedPanel
+            tracks={recentlyPlayed}
+            onPlay={onPlayRecentlyPlayed}
+            onClear={onClearRecentlyPlayed}
+            onClose={() => setShowRecentlyPlayed(false)}
+          />
+        )}
 
         <PlaylistPlayer
           tracks={session.tracks}
@@ -332,6 +368,15 @@ export function AdventureExperience({
   const [mode, setMode] = useState<AdventureMode>("song-only");
   const [session, setSession] = useState<AdventureSession | null>(null);
   const { tracks: recentlyPlayed, addTrack, clearTracks } = useRecentlyPlayed();
+  const sessionKey = session
+    ? [
+        session.source,
+        session.tracks.length,
+        session.tracks[0]?.performanceVideoId ?? "empty",
+        session.tracks[0]?.songIndex ?? "video",
+        session.tracks[0]?.clipStart ?? 0,
+      ].join(":")
+    : undefined;
 
   function startAdventure() {
     const tracks = source === "songs"
@@ -353,11 +398,15 @@ export function AdventureExperience({
   if (session) {
     return (
       <AdventureSessionPlayer
+        key={sessionKey}
         session={session}
         playlists={playlists}
         isSignedIn={isSignedIn}
         onRestart={() => setSession(null)}
         onTrackPlay={addTrack}
+        recentlyPlayed={recentlyPlayed}
+        onPlayRecentlyPlayed={playRecentlyPlayed}
+        onClearRecentlyPlayed={clearTracks}
       />
     );
   }
