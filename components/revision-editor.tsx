@@ -111,7 +111,13 @@ export function RevisionEditor({
       ...performance.songs.map((item) => item.index),
       ...(initialDraft ?? []).map((item) => item.songIndex),
     ]);
-    return Object.fromEntries([...indices].map((index) => [index, "accept"])) as Record<number, TimelineRequestDecision>;
+    const proposedIndexes = new Set((initialDraft ?? []).map((item) => item.songIndex));
+    return Object.fromEntries([...indices].map((index) => [
+      index,
+      performance.songs.some((item) => item.index === index) && !proposedIndexes.has(index)
+        ? "keep"
+        : "accept",
+    ])) as Record<number, TimelineRequestDecision>;
   });
 
   const song = songs[currentIndex] ?? songs[0];
@@ -170,7 +176,16 @@ export function RevisionEditor({
     });
   }, [performance.songs, proposedDraft, request]);
   const changedRequestCount = requestComparison?.filter((item) => item.changed).length ?? 0;
-  const acceptedRequestCount = requestComparison?.filter((item) => item.changed && requestDecisions[item.index] !== "keep").length ?? 0;
+  const acceptedRequestCount = requestComparison?.filter((item) => {
+    if (!item.changed) return false;
+    if (item.currentTitle && !item.proposedTitle) return requestDecisions[item.index] === "remove";
+    return requestDecisions[item.index] !== "keep";
+  }).length ?? 0;
+  const explicitlyRemovedSongIndexes = request?.status === "pending"
+    ? requestComparison
+      ?.filter((item) => item.currentTitle && !item.proposedTitle && requestDecisions[item.index] === "remove")
+      .map((item) => item.index) ?? []
+    : songs.filter((item) => item.removed && !item.isNew).map((item) => item.index);
 
   function markRequestChangeAsAccepted(index: number) {
     if (request?.status !== "pending") return;
@@ -218,7 +233,9 @@ export function RevisionEditor({
   }
 
   function setSongRemoved(index: number, removed: boolean) {
-    markRequestChangeAsAccepted(index);
+    if (request?.status === "pending") {
+      setRequestDecisions((current) => ({ ...current, [index]: removed ? "remove" : "accept" }));
+    }
     setSongs((current) => current.map((item) => item.index === index ? { ...item, removed } : item));
   }
 
@@ -328,10 +345,11 @@ export function RevisionEditor({
                       )}
                     </td>
                     <td className="px-4 py-3 align-top font-mono text-[11px] text-muted-foreground">
-                      {item.currentStart !== null && item.proposedStart !== null && (
+                      {!item.changed && <div className="font-sans text-[11px] text-success">unchanged</div>}
+                      {item.currentStart !== null && item.proposedStart !== null && item.changed && (
                         <div>start {formatSignedTime(item.proposedStart - item.currentStart)}</div>
                       )}
-                      {item.currentEnd !== null && item.proposedEnd !== null && (
+                      {item.currentEnd !== null && item.proposedEnd !== null && item.changed && (
                         <div className="mt-1">end {formatSignedTime(item.proposedEnd - item.currentEnd)}</div>
                       )}
                       {item.currentTitle !== item.proposedTitle && item.currentTitle !== null && item.proposedTitle !== null && (
@@ -348,11 +366,11 @@ export function RevisionEditor({
                         <div className="mt-3 flex flex-wrap gap-1.5 font-sans" role="group" aria-label={`Decision for song ${item.index}`}>
                           <button
                             type="button"
-                            onClick={() => setRequestDecisions((current) => ({ ...current, [item.index]: "accept" }))}
-                            aria-pressed={requestDecisions[item.index] !== "keep"}
-                            className={`rounded-md border px-2 py-1 text-[11px] font-medium ${requestDecisions[item.index] !== "keep" ? "border-success/60 bg-success/10 text-success" : "border-input text-muted-foreground hover:text-foreground"}`}
+                            onClick={() => setRequestDecisions((current) => ({ ...current, [item.index]: item.currentTitle && !item.proposedTitle ? "remove" : "accept" }))}
+                            aria-pressed={item.currentTitle && !item.proposedTitle ? requestDecisions[item.index] === "remove" : requestDecisions[item.index] !== "keep"}
+                            className={`rounded-md border px-2 py-1 text-[11px] font-medium ${item.currentTitle && !item.proposedTitle ? requestDecisions[item.index] === "remove" : requestDecisions[item.index] !== "keep" ? "border-success/60 bg-success/10 text-success" : "border-input text-muted-foreground hover:text-foreground"}`}
                           >
-                            Apply request
+                            {item.currentTitle && !item.proposedTitle ? "Remove song" : "Apply request"}
                           </button>
                           <button
                             type="button"
@@ -521,6 +539,7 @@ export function RevisionEditor({
       <form className="mt-5 border-t border-border pt-5">
         <input type="hidden" name="performance_video_id" value={performance.videoId} />
         <input type="hidden" name="draft" value={draftJson} />
+        <input type="hidden" name="removed_song_indexes" value={JSON.stringify(explicitlyRemovedSongIndexes)} />
         {request && <input type="hidden" name="request_id" value={request.id} />}
         {isAdmin && request?.status === "pending" && (
           <input ref={resolveDecisionRef} type="hidden" name="decision" defaultValue="approve" />

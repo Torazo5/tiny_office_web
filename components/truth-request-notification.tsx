@@ -1,16 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import type { TruthRequestSummary } from "@/lib/types";
 
 export function TruthRequestNotification({ request }: { request: TruthRequestSummary }) {
   const storageKey = `tiny-office:truth-request-notification:${request.id}`;
-  const [dismissed, setDismissed] = useState(false);
-
-  useEffect(() => {
-    setDismissed(window.localStorage.getItem(storageKey) === "dismissed");
-  }, [storageKey]);
+  const dismissedEvent = `${storageKey}:changed`;
+  const dismissed = useSyncExternalStore(
+    (notify) => {
+      window.addEventListener(dismissedEvent, notify);
+      return () => window.removeEventListener(dismissedEvent, notify);
+    },
+    () => window.localStorage.getItem(storageKey) === "dismissed",
+    () => false,
+  );
 
   if (dismissed) return null;
 
@@ -18,7 +22,7 @@ export function TruthRequestNotification({ request }: { request: TruthRequestSum
 
   function dismiss() {
     window.localStorage.setItem(storageKey, "dismissed");
-    setDismissed(true);
+    window.dispatchEvent(new Event(dismissedEvent));
   }
 
   return (

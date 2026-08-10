@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect } from "react";
+import { trackEvent } from "@/components/analytics";
 
 export default function Error({
   reset,
@@ -8,6 +10,9 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  useEffect(() => {
+    trackEvent({ eventName: "error_shown", source: "route_error", errorCategory: "route_error" });
+  }, []);
   return (
     <main className="flex min-h-[60vh] items-center justify-center p-4 sm:p-8">
       <section className="w-full max-w-[520px] rounded-xl border border-primary/30 bg-card p-6 text-center">

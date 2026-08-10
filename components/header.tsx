@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
+import { SearchForm } from "@/components/search-form";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getCurrentUser } from "@/lib/auth";
 import { getUserProfile } from "@/lib/profile-data";
@@ -80,6 +80,17 @@ export async function Header({
           I&apos;m feeling adventurous
         </Link>
 
+        {process.env.NEXT_PUBLIC_FEEDBACK_URL && (
+          <a
+            href={process.env.NEXT_PUBLIC_FEEDBACK_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="shrink-0 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Feedback
+          </a>
+        )}
+
         {user && isAdmin && (
           <Link
             href="/review"
@@ -90,16 +101,7 @@ export async function Header({
         )}
       </nav>
 
-      <form action="/" method="get" className="order-2 min-w-0 basis-full lg:order-none lg:flex-1 lg:basis-auto lg:max-w-[420px]">
-        <Input
-          type="search"
-          name="q"
-          defaultValue={searchQuery}
-          placeholder="Search performances, artists, songs"
-          className="bg-secondary"
-          aria-label="Search performances, artists, and songs"
-        />
-      </form>
+      <SearchForm searchQuery={searchQuery} />
 
       <div className="hidden lg:block lg:flex-1" />
 

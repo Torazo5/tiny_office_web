@@ -141,6 +141,77 @@ async function loadBrowsePerformances(): Promise<Performance[]> {
   });
 }
 
+export const INITIAL_CATALOG_BATCH_SIZE = 12;
+
+export type BrowsePerformancePage = {
+  performances: Performance[];
+  hasMore: boolean;
+  nextOffset: number;
+};
+
+/**
+ * The home page deliberately loads a small, quality-first slice. Full catalog
+ * reads still power search and the other authenticated product surfaces.
+ */
+export async function getBrowsePerformancePage(
+  offset = 0,
+  limit = INITIAL_CATALOG_BATCH_SIZE,
+): Promise<BrowsePerformancePage> {
+  const safeOffset = Math.max(0, Math.floor(offset));
+  const safeLimit = Math.min(24, Math.max(1, Math.floor(limit)));
+  const supabase = createPublicClient();
+  const performancesResult = await supabase
+    .from("performances")
+    .select("video_id, artist, date, duration, method, confidence_avg, confidence_min, verified", { count: "exact" })
+    .neq("method", "manual")
+    .order("verified", { ascending: false })
+    .order("confidence_avg", { ascending: false })
+    .order("artist")
+    .range(safeOffset, safeOffset + safeLimit - 1);
+  throwIfError("Loading catalog page", performancesResult.error);
+
+  const rows = (performancesResult.data ?? []) as PerformanceRow[];
+  const videoIds = rows.map((row) => row.video_id);
+  if (videoIds.length === 0) {
+    return { performances: [], hasMore: false, nextOffset: safeOffset };
+  }
+
+  const [songsResult, ratingsResult] = await Promise.all([
+    supabase
+      .from("songs")
+      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect")
+      .in("performance_video_id", videoIds)
+      .order("performance_video_id")
+      .order("song_index"),
+    supabase.from("ratings").select("performance_video_id, rating").in("performance_video_id", videoIds),
+  ]);
+  throwIfError("Loading catalog songs", songsResult.error);
+  throwIfError("Loading catalog ratings", ratingsResult.error);
+
+  const songsByPerformance = new Map<string, SongRow[]>();
+  for (const song of (songsResult.data ?? []) as SongRow[]) {
+    const songs = songsByPerformance.get(song.performance_video_id) ?? [];
+    songs.push(song);
+    songsByPerformance.set(song.performance_video_id, songs);
+  }
+  const ratings = ratingsByPerformance((ratingsResult.data ?? []) as BrowseRatingRow[]);
+  const performances = rows.map((row) => {
+    const values = ratings.get(row.video_id) ?? [];
+    return mapPerformance(
+      row,
+      songsByPerformance.get(row.video_id) ?? [],
+      values.length ? values.reduce((total, rating) => total + rating, 0) / values.length : null,
+      values.length,
+    );
+  });
+  const nextOffset = safeOffset + rows.length;
+  return {
+    performances,
+    hasMore: nextOffset < (performancesResult.count ?? nextOffset),
+    nextOffset,
+  };
+}
+
 const getCachedBrowsePerformances = unstable_cache(
   loadBrowsePerformances,
   ["public-browse-performances"],

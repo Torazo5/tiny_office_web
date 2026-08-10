@@ -131,8 +131,11 @@ export function RevisionVideoPlayer({
     stopAtRef.current = null;
     playerRef.current?.seekTo(clipStart, true);
     playerRef.current?.pauseVideo();
-    setCurrentTime(clipStart);
-    setPlayerState(2);
+    const frameId = window.requestAnimationFrame(() => {
+      setCurrentTime(clipStart);
+      setPlayerState(2);
+    });
+    return () => window.cancelAnimationFrame(frameId);
   }, [clipStart, isPlayerReady, songKey]);
 
   useEffect(() => {

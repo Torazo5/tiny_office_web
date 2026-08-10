@@ -48,6 +48,20 @@ function readDraft(formData: FormData): TimelineDraftSong[] | null {
   }
 }
 
+function readRemovedSongIndexes(formData: FormData): number[] | null {
+  const raw = formData.get("removed_song_indexes");
+  if (typeof raw !== "string") return null;
+  try {
+    const parsed = JSON.parse(raw) as unknown;
+    if (!Array.isArray(parsed)) return null;
+    const indexes = parsed.map((value) => Number(value));
+    if (indexes.some((index) => !Number.isInteger(index) || index <= 0)) return null;
+    return [...new Set(indexes)];
+  } catch {
+    return null;
+  }
+}
+
 async function getAuthenticatedUser() {
   const supabase = await createClient();
   const { data, error } = await supabase.auth.getUser();
@@ -208,7 +222,7 @@ export async function unlockAdmin(
   return { success: "Admin mode unlocked." };
 }
 
-export async function lockAdmin(_formData: FormData) {
+export async function lockAdmin() {
   await endAdminSession();
   revalidatePath("/review");
   revalidatePath("/review/[id]", "page");
@@ -217,6 +231,7 @@ export async function lockAdmin(_formData: FormData) {
 async function saveGroundTruth(
   videoId: string,
   draft: TimelineDraftSong[],
+  removedSongIndexes: number[],
   adminId: string,
   requestId: string | null,
   resolutionNote: string | null = null,
@@ -231,6 +246,7 @@ async function saveGroundTruth(
   const { data, error } = await supabase.rpc("apply_ground_truth_changes", {
     p_performance_video_id: videoId,
     p_draft: draft,
+    p_removed_song_indexes: removedSongIndexes,
     p_admin_id: adminId,
     p_request_id: requestId,
     p_resolution_note: resolutionNote,
@@ -264,9 +280,10 @@ export async function saveGroundTruthAction(
   if (!user) return { error: "Admin access is required." };
   const videoId = readText(formData, "performance_video_id", 32);
   const draft = readDraft(formData);
-  if (!videoId || !draft) return { error: "Invalid timeline submission." };
+  const removedSongIndexes = readRemovedSongIndexes(formData);
+  if (!videoId || !draft || !removedSongIndexes) return { error: "Invalid timeline submission." };
 
-  const result = await saveGroundTruth(videoId, draft, user.id, null);
+  const result = await saveGroundTruth(videoId, draft, removedSongIndexes, user.id, null);
   if (result.error !== null) return result;
   revalidatePath("/");
   revalidatePath(`/video/${videoId}`);
@@ -312,9 +329,12 @@ export async function resolveTruthRequest(
   }
 
   const draft = readDraft(formData) ?? requestData.draft;
+  const removedSongIndexes = readRemovedSongIndexes(formData);
+  if (!removedSongIndexes) return { error: "Invalid removal decision." };
   const result = await saveGroundTruth(
     requestData.request.performanceVideoId,
     draft,
+    removedSongIndexes,
     user.id,
     requestId,
     resolutionNote,

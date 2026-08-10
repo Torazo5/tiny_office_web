@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { trackEvent } from "@/components/analytics";
 
 export function LoginForm({ nextPath }: { nextPath?: string }) {
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   async function signInWithGoogle() {
+    trackEvent({ eventName: "sign_in_started", source: "google_oauth" });
     setLoading(true);
     setMessage(null);
 

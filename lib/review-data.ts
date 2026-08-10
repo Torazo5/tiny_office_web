@@ -2,7 +2,7 @@ import "server-only";
 
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
-import { getPerformance, getPerformanceDetail } from "@/lib/data";
+import { getPerformanceDetail } from "@/lib/data";
 import { formatProfileLabel, getProfilesByUserId, type PublicProfile } from "@/lib/profile-data";
 import type {
   ListeningPreset,

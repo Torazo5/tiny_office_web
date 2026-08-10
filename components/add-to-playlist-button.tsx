@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { addPlaylistSong, addPlaylistVideo } from "@/app/playlist/actions";
+import { trackEvent } from "@/components/analytics";
 import type { PlaylistSummary } from "@/lib/types";
 
 type PlaylistItem =
@@ -53,6 +54,12 @@ export function AddToPlaylistButton({
       setError(result.error);
     } else {
       setAddedPlaylistIds((current) => new Set(current).add(playlistId));
+      trackEvent({
+        eventName: "item_added_to_playlist",
+        source: item.kind === "song" ? "song_playlist_menu" : "video_playlist_menu",
+        performanceVideoId: item.performanceVideoId,
+        songIndex: item.kind === "song" ? item.songIndex : undefined,
+      });
     }
     setPendingPlaylistId(null);
   }

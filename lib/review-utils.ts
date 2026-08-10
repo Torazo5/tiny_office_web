@@ -2,7 +2,7 @@ import type { Song, TimelineDraftSong } from "@/lib/types";
 
 export const TIMELINE_NUDGE_SECONDS = 5;
 
-export type TimelineRequestDecision = "accept" | "keep";
+export type TimelineRequestDecision = "accept" | "keep" | "remove";
 
 export function formatTimeInput(totalSeconds: number): string {
   const seconds = Math.max(0, Math.round(totalSeconds));
@@ -36,8 +36,9 @@ export function createTimelineDraft(songs: Song[]): TimelineDraftSong[] {
 
 /**
  * Resolve a request draft into the timeline an admin chose to publish.
- * Missing proposed songs represent removals; missing current songs represent
- * additions. The default is to accept the proposed value for every index.
+ * A missing proposed song is only a proposed removal. The current song remains
+ * unless an admin explicitly chooses the `remove` decision. This mirrors the
+ * database rule so an incomplete request can never delete official data.
  */
 export function applyTimelineRequestDecisions(
   currentSongs: Song[],
@@ -52,8 +53,21 @@ export function applyTimelineRequestDecisions(
   ])].sort((a, b) => a - b);
 
   return indices.flatMap((songIndex) => {
+    const current = currentByIndex.get(songIndex);
+    const proposed = proposedByIndex.get(songIndex);
+
+    if (current && !proposed) {
+      if (decisions[songIndex] === "remove") return [];
+      return [{
+        songIndex: current.index,
+        title: current.title,
+        clipStart: current.clipStart,
+        clipEnd: current.clipEnd,
+        confirmed: !current.suspect,
+      }];
+    }
+
     if (decisions[songIndex] === "keep") {
-      const current = currentByIndex.get(songIndex);
       return current
         ? [{
             songIndex: current.index,
@@ -65,7 +79,6 @@ export function applyTimelineRequestDecisions(
         : [];
     }
 
-    const proposed = proposedByIndex.get(songIndex);
     return proposed ? [proposed] : [];
   });
 }

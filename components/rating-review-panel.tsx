@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { saveRating, saveReview } from "@/app/ratings/actions";
 import { StarPicker } from "@/components/star-picker";
+import { trackEvent } from "@/components/analytics";
 
 export function RatingReviewPanel({
   videoId,
@@ -34,6 +35,7 @@ export function RatingReviewPanel({
       setMessage(result.error);
     } else {
       setMessage(result?.success ?? "Rating saved.");
+      trackEvent({ eventName: "rating_saved", source: "rating_panel", performanceVideoId: videoId });
     }
     setIsSaving(false);
   }
@@ -54,7 +56,10 @@ export function RatingReviewPanel({
     });
     setMessage(result?.error ?? result?.success ?? null);
     setIsSaving(false);
-    if (!result?.error) setIsWriting(false);
+    if (!result?.error) {
+      setIsWriting(false);
+      trackEvent({ eventName: "review_published", source: "rating_panel", performanceVideoId: videoId });
+    }
   }
 
   return (

@@ -5,6 +5,7 @@ import { recordListeningProgress } from "@/app/listening/actions";
 import { PlayerControls } from "@/components/player-controls";
 import { usePlayer } from "@/components/player-context";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
+import { trackEvent } from "@/components/analytics";
 
 type YouTubePlayer = {
   destroy: () => void;
@@ -86,6 +87,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
   const [initialStart] = useState(() => Math.floor(startAt));
   const previousTimeRef = useRef(initialStart);
   const trackingTimeRef = useRef<number | null>(null);
+  const playedSongKeysRef = useRef(new Set<string>());
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [playerState, setPlayerState] = useState<number | null>(null);
   const safeDuration = Math.max(0, duration);
@@ -123,6 +125,15 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
             },
             onStateChange: (event) => {
               if (cancelled) return;
+              if (event.data === YOUTUBE_PLAYER_PLAYING) {
+                const currentTime = event.target.getCurrentTime();
+                const song = songs.find((item) => currentTime >= item.clipStart && currentTime < item.clipEnd);
+                const songKey = `${videoId}:${song?.index ?? "performance"}`;
+                if (!playedSongKeysRef.current.has(songKey)) {
+                  playedSongKeysRef.current.add(songKey);
+                  trackEvent({ eventName: "song_play_started", source: "video_embed", performanceVideoId: videoId, songIndex: song?.index });
+                }
+              }
               if (event.data !== YOUTUBE_PLAYER_BUFFERING) {
                 const currentTime = event.target.getCurrentTime();
                 previousTimeRef.current = currentTime;
@@ -144,7 +155,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       playerRef.current?.destroy();
       playerRef.current = null;
     };
-  }, [setCurrentTime]);
+  }, [setCurrentTime, songs, videoId]);
 
   useEffect(() => {
     if (!isPlayerReady || seekRequestId === 0) return;

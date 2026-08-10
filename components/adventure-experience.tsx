@@ -6,6 +6,7 @@ import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { PlaylistPlayer } from "@/components/playlist-player";
 import { RecentlyPlayedPanel, useRecentlyPlayed } from "@/components/recently-played";
 import { formatTime } from "@/lib/format";
+import { trackEvent } from "@/components/analytics";
 import type {
   PlaylistSongOption,
   PlaylistSummary,
@@ -383,6 +384,7 @@ export function AdventureExperience({
       ? makeSongTracks(songOptions)
       : makeVideoTracks(videoOptions, mode);
     if (tracks.length === 0) return;
+    trackEvent({ eventName: "adventure_started", source, adventureMode: mode });
     setSession({ source, mode, tracks: shuffle(tracks) });
   }
 

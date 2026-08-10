@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { trackEvent } from "@/components/analytics";
 import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { ConfidenceDot } from "@/components/confidence-dot";
 import { StarRating } from "@/components/star-rating";
@@ -16,7 +19,11 @@ export function PerformanceCard({
 }) {
   return (
     <article className="min-w-0">
-      <Link href={`/video/${p.videoId}`} className="group block">
+      <Link
+        href={`/video/${p.videoId}`}
+        onClick={() => trackEvent({ eventName: "performance_opened", source: "catalog_card", performanceVideoId: p.videoId })}
+        className="group block"
+      >
         <div className="relative aspect-video rounded-[10px] overflow-hidden mb-2.5">
           <YouTubeThumbnail
             videoId={p.videoId}
@@ -47,11 +54,20 @@ export function PerformanceCard({
         )}
       </Link>
       <div className="mt-2">
-        <AddToPlaylistButton
-          item={{ kind: "video", performanceVideoId: p.videoId }}
-          playlists={playlists}
-          isSignedIn={isSignedIn}
-        />
+        <div className="flex flex-wrap items-center gap-2">
+          <Link
+            href={`/video/${p.videoId}`}
+            onClick={() => trackEvent({ eventName: "performance_opened", source: "catalog_play_action", performanceVideoId: p.videoId })}
+            className="inline-flex min-h-9 items-center rounded-md bg-primary px-2.5 py-1.5 text-[12px] font-semibold text-primary-foreground transition-opacity hover:opacity-90 sm:min-h-0"
+          >
+            Play a song
+          </Link>
+          <AddToPlaylistButton
+            item={{ kind: "video", performanceVideoId: p.videoId }}
+            playlists={playlists}
+            isSignedIn={isSignedIn}
+          />
+        </div>
       </div>
     </article>
   );

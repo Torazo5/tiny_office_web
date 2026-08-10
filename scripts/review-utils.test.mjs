@@ -45,7 +45,7 @@ test("detects a changed timeline", () => {
   assert.equal(draftChanged([{ ...unchanged[0], ...{ songIndex: 3, title: "Added" } }, unchanged[1]], songs), true);
 });
 
-test("applies or keeps individual timeline request changes", () => {
+test("applies, keeps, and explicitly removes individual timeline request changes", () => {
   const proposed = [
     { songIndex: 1, title: "One (edited)", clipStart: 12, clipEnd: 105, confirmed: true },
     { songIndex: 3, title: "Three", clipStart: 225, clipEnd: 280, confirmed: false },
@@ -61,10 +61,23 @@ test("applies or keeps individual timeline request changes", () => {
   );
 
   assert.deepEqual(
-    applyTimelineRequestDecisions(songs, [{ ...proposed[0] }], { 2: "keep" }),
+    applyTimelineRequestDecisions(songs, [{ ...proposed[0] }], {}),
     [
       { songIndex: 1, title: "One (edited)", clipStart: 12, clipEnd: 105, confirmed: true },
       { songIndex: 2, title: "Two", clipStart: 150, clipEnd: 220, confirmed: true },
+    ],
+  );
+
+  assert.deepEqual(
+    applyTimelineRequestDecisions(songs, [{ ...proposed[0] }], { 2: "remove" }),
+    [{ songIndex: 1, title: "One (edited)", clipStart: 12, clipEnd: 105, confirmed: true }],
+  );
+
+  assert.deepEqual(
+    applyTimelineRequestDecisions(songs, proposed, { 1: "keep", 2: "remove", 3: "accept" }),
+    [
+      { songIndex: 1, title: "One", clipStart: 10, clipEnd: 100, confirmed: true },
+      { songIndex: 3, title: "Three", clipStart: 225, clipEnd: 280, confirmed: false },
     ],
   );
 });
