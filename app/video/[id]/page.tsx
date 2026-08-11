@@ -165,6 +165,7 @@ export default async function VideoPage({
                       song={song}
                       performanceVideoId={performance.videoId}
                       initialHearted={heartedSongKeys.includes(`${performance.videoId}:${song.index}`)}
+                      initialHeartCount={song.heartCount}
                       isSignedIn={Boolean(user)}
                     />
                   </div>

@@ -1,9 +1,10 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
+import { PUBLIC_CATALOG_CACHE_TAG } from "@/lib/data";
 import { createClient } from "@/lib/supabase/server";
 
-export type SongHeartActionState = { error?: string; hearted?: boolean } | null;
+export type SongHeartActionState = { error?: string; hearted?: boolean; heartCount?: number } | null;
 
 export async function toggleSongHeart(
   performanceVideoId: string,
@@ -43,8 +44,17 @@ export async function toggleSongHeart(
     if (error) return { error: "Could not remove this heart." };
   }
 
+  const { data: updatedSong, error: countError } = await supabase
+    .from("songs")
+    .select("heart_count")
+    .eq("performance_video_id", performanceVideoId)
+    .eq("song_index", songIndex)
+    .maybeSingle();
+  if (countError || !updatedSong) return { error: "Your heart changed, but the count could not be refreshed." };
+
+  revalidateTag(PUBLIC_CATALOG_CACHE_TAG, "max");
   revalidatePath(`/video/${performanceVideoId}`);
   revalidatePath("/random-pick");
   revalidatePath("/adventure");
-  return { hearted: shouldHeart };
+  return { hearted: shouldHeart, heartCount: Number(updatedSong.heart_count) };
 }

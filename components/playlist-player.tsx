@@ -710,6 +710,7 @@ export function PlaylistPlayer({
               performanceVideoId={currentTrack.performanceVideoId}
               songIndex={currentTrack.songIndex}
               initialHearted={initialHeartedSongKeys.includes(`${currentTrack.performanceVideoId}:${currentTrack.songIndex}`)}
+              initialHeartCount={currentTrack.heartCount}
               isSignedIn={isSignedIn}
               returnPath={songHeartReturnPath}
             />

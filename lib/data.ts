@@ -38,6 +38,7 @@ type SongRow = {
   clip_end: number;
   confidence: number;
   suspect: boolean;
+  heart_count?: number;
 };
 
 type BrowseRatingRow = {
@@ -68,6 +69,7 @@ function mapSong(song: SongRow): Song {
     clipEnd: Number(song.clip_end),
     confidence: song.confidence,
     suspect: song.suspect,
+    heartCount: Number(song.heart_count ?? 0),
   };
 }
 
@@ -123,7 +125,7 @@ async function loadBrowsePerformances(): Promise<Performance[]> {
       .order("artist"),
     supabase
       .from("songs")
-      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect")
+      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, heart_count")
       .order("performance_video_id")
       .order("song_index"),
     supabase.from("ratings").select("performance_video_id, rating"),
@@ -191,7 +193,7 @@ export async function getBrowsePerformancePage(
   const [songsResult, ratingsResult] = await Promise.all([
     supabase
       .from("songs")
-      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect")
+      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, heart_count")
       .in("performance_video_id", videoIds)
       .order("performance_video_id")
       .order("song_index"),
@@ -247,7 +249,7 @@ async function loadPerformance(videoId: string): Promise<Performance | null> {
       .maybeSingle(),
     supabase
       .from("songs")
-      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect")
+      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, heart_count")
       .eq("performance_video_id", videoId)
       .order("song_index"),
   ]);
@@ -568,6 +570,7 @@ const loadPlaylistOptions = cache(async () => {
       clipStart: song.clipStart,
       clipEnd: song.clipEnd,
       duration: Math.max(0, song.clipEnd - song.clipStart),
+      heartCount: song.heartCount,
     })),
   );
   const videoOptions: PlaylistVideoOption[] = performances.map((performance) => ({

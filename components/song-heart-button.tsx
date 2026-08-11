@@ -9,16 +9,19 @@ export function SongHeartButton({
   performanceVideoId,
   songIndex,
   initialHearted = false,
+  initialHeartCount = 0,
   isSignedIn,
   returnPath,
 }: {
   performanceVideoId: string;
   songIndex: number;
   initialHearted?: boolean;
+  initialHeartCount?: number;
   isSignedIn: boolean;
   returnPath: string;
 }) {
   const [hearted, setHearted] = useState(initialHearted);
+  const [heartCount, setHeartCount] = useState(initialHeartCount);
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
@@ -28,9 +31,10 @@ export function SongHeartButton({
         href={{ pathname: "/login", query: { next: returnPath } }}
         aria-label="Sign in to heart this song"
         title="Sign in to heart this song"
-        className="inline-flex size-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary"
+        className="inline-flex h-9 items-center gap-1.5 rounded-md px-2 text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary"
       >
         <Heart aria-hidden className="size-4" />
+        <span className="font-mono text-[11px]">{heartCount}</span>
       </Link>
     );
   }
@@ -45,6 +49,7 @@ export function SongHeartButton({
         return;
       }
       setHearted(result?.hearted ?? nextHearted);
+      setHeartCount(result?.heartCount ?? heartCount + (nextHearted ? 1 : -1));
     });
   }
 
@@ -57,11 +62,12 @@ export function SongHeartButton({
         aria-pressed={hearted}
         aria-label={hearted ? "Remove heart from this song" : "Heart this song"}
         title={hearted ? "Remove heart" : "Heart this song"}
-        className={`inline-flex size-9 items-center justify-center rounded-md transition-colors disabled:cursor-wait disabled:opacity-60 ${
+        className={`inline-flex h-9 items-center gap-1.5 rounded-md px-2 font-mono text-[11px] transition-colors disabled:cursor-wait disabled:opacity-60 ${
           hearted ? "bg-primary/12 text-primary" : "text-muted-foreground hover:bg-primary/10 hover:text-primary"
         }`}
       >
         <Heart aria-hidden className={`size-4 ${hearted ? "fill-current" : ""}`} />
+        <span>{heartCount}</span>
       </button>
       {error && <span className="sr-only" role="status">{error}</span>}
     </span>

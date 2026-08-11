@@ -28,6 +28,8 @@ export interface Song {
   confidence: number;
   /** from candidates[].suspect */
   suspect: boolean;
+  /** Public aggregate count of hearts for this song. */
+  heartCount?: number;
   /** Whether the current signed-in listener has hearted this song. */
   hearted?: boolean;
 }
@@ -168,6 +170,7 @@ export interface PlaylistTrack {
   clipEnd: number;
   /** seconds */
   duration: number;
+  heartCount?: number;
   /** Song boundaries used to skip gaps during full-performance playback. */
   songClips: PlaylistSongClip[];
 }
@@ -200,6 +203,7 @@ export interface PlaylistSongOption {
   clipStart: number;
   clipEnd: number;
   duration: number;
+  heartCount?: number;
 }
 
 export interface PlaylistVideoOption {

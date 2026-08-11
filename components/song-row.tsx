@@ -11,11 +11,13 @@ export function SongRow({
   song,
   performanceVideoId,
   initialHearted = false,
+  initialHeartCount = 0,
   isSignedIn = false,
 }: {
   song: Song;
   performanceVideoId?: string;
   initialHearted?: boolean;
+  initialHeartCount?: number;
   isSignedIn?: boolean;
 }) {
   const { currentTime, setStartAt } = usePlayer();
@@ -65,6 +67,7 @@ export function SongRow({
           performanceVideoId={performanceVideoId}
           songIndex={song.index}
           initialHearted={initialHearted}
+          initialHeartCount={initialHeartCount}
           isSignedIn={isSignedIn}
           returnPath={`/video/${performanceVideoId}`}
         />
