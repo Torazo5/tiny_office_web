@@ -51,6 +51,20 @@ export default async function BrowsePage({
             : "Pick a performance, then start listening to a song right away."}
         </p>
 
+        {!query && (
+          <section className="mb-8 max-w-3xl rounded-xl border border-border bg-card/50 p-4 sm:p-5" aria-labelledby="about-heading">
+            <h2 id="about-heading" className="text-[14px] font-semibold text-foreground">
+              About
+            </h2>
+            <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
+              Hi I&apos;m just a coder that is a big fan of Tiny Desk, and wanted a better way to listen to it while building a bigger community. I don&apos;t mean any harm to NPR or Tiny Desk, this is just a way I thought I could enhance some people&apos;s listening experience. If you have any feedback I am happy to receive it at{" "}
+              <a className="text-primary underline decoration-primary/40 underline-offset-2 transition-colors hover:text-foreground" href="mailto:torazo.tokuda@gmail.com">
+                torazo.tokuda@gmail.com
+              </a>
+            </p>
+          </section>
+        )}
+
         {!query && catalogPage ? (
           <CatalogGrid
             initialPerformances={catalogPage.performances}
