@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { Repeat2, Shuffle, SkipBack, SkipForward } from "lucide-react";
 import { formatTime } from "@/lib/format";
+import { VolumeMeter } from "@/components/volume-meter";
 
 type PlayerControlsProps = {
   currentTime: number;
@@ -23,6 +24,8 @@ type PlayerControlsProps = {
   onToggleLoop?: () => void;
   onScrubStart?: () => void;
   onScrubEnd?: () => void;
+  volume: number;
+  onVolumeChange: (volume: number) => void;
 };
 
 function clamp(value: number, min: number, max: number) {
@@ -48,6 +51,8 @@ export function PlayerControls({
   onToggleLoop,
   onScrubStart,
   onScrubEnd,
+  volume,
+  onVolumeChange,
 }: PlayerControlsProps) {
   const duration = Math.max(0, rangeEnd - rangeStart);
   const sliderMax = Math.max(0.1, duration);
@@ -215,6 +220,10 @@ export function PlayerControls({
       <div className="mt-1 flex justify-between gap-2 font-mono text-[11px] text-muted-foreground">
         <span>{formatTime(displayedValue)}</span>
         <span>{formatTime(duration)}</span>
+      </div>
+
+      <div className="mt-3 border-t border-border pt-3">
+        <VolumeMeter value={volume} onChange={onVolumeChange} disabled={!isReady} />
       </div>
     </section>
   );

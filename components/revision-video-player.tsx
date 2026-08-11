@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { VolumeMeter } from "@/components/volume-meter";
 import { formatTime } from "@/lib/format";
 import {
   createYouTubePlayer,
@@ -34,10 +35,17 @@ export function RevisionVideoPlayer({
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [playerState, setPlayerState] = useState<number | null>(null);
   const [currentTime, setCurrentTime] = useState(clipStart);
+  const [volume, setVolume] = useState(100);
 
   function getPlayer() {
     const player = playerRef.current;
     return isYouTubePlayer(player) ? player : null;
+  }
+
+  function setPlayerVolume(player: YouTubePlayer, nextVolume: number) {
+    const normalizedVolume = Math.min(100, Math.max(0, Math.round(nextVolume)));
+    player.setVolume(normalizedVolume);
+    setVolume(normalizedVolume);
   }
 
   useEffect(() => {
@@ -53,6 +61,7 @@ export function RevisionVideoPlayer({
             playerRef.current = event.target;
             event.target.seekTo(initialClipStartRef.current, true);
             setCurrentTime(initialClipStartRef.current);
+            setVolume(Math.min(100, Math.max(0, event.target.getVolume())));
             setPlayerState(event.target.getPlayerState());
             setIsPlayerReady(true);
           },
@@ -191,6 +200,17 @@ export function RevisionVideoPlayer({
           >
             Play full performance
           </button>
+        </div>
+
+        <div className="border-t border-border pt-3">
+          <VolumeMeter
+            value={volume}
+            disabled={!isPlayerReady}
+            onChange={(nextVolume) => {
+              const player = getPlayer();
+              if (player) setPlayerVolume(player, nextVolume);
+            }}
+          />
         </div>
 
         <label className="block">
