@@ -4,10 +4,12 @@ export type YouTubePlayer = {
   destroy: () => void;
   getCurrentTime: () => number;
   getPlayerState: () => number;
+  getVolume: () => number;
   loadVideoById: (videoId: string, startSeconds?: number) => void;
   pauseVideo: () => void;
   playVideo: () => void;
   seekTo: (seconds: number, allowSeekAhead: boolean) => void;
+  setVolume: (volume: number) => void;
 };
 
 export type YouTubePlayerEvent = { target: unknown };
@@ -57,10 +59,12 @@ export function isYouTubePlayer(value: unknown): value is YouTubePlayer {
     "destroy",
     "getCurrentTime",
     "getPlayerState",
+    "getVolume",
     "loadVideoById",
     "pauseVideo",
     "playVideo",
     "seekTo",
+    "setVolume",
   ].every((method) => typeof player[method] === "function");
 }
 
