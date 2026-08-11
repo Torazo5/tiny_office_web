@@ -11,6 +11,7 @@ import {
   equalPowerFadeGain,
   fadeDurationFromCurrentTime,
   getBuiltInFadeWindow,
+  specialFadeOutGain,
   type FadeWindow,
 } from "@/lib/playback-fade";
 import { trackEvent } from "@/components/analytics";
@@ -110,8 +111,10 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       const activePlayer = getPlayer();
       if (!activePlayer) return clearTransition();
       const progress = Math.min(1, (performance.now() - startedAt) / (seconds * 1000));
-      const nextVolume = equalPower && to === 0
-        ? from * equalPowerFadeGain(progress)
+      const nextVolume = to === 0
+        ? from * (equalPower
+          ? equalPowerFadeGain(progress)
+          : specialFadeOutGain(progress, seconds))
         : from + (to - from) * progress;
       activePlayer.setVolume(Math.round(nextVolume));
       if (progress >= 1) {

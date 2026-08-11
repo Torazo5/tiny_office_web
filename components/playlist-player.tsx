@@ -12,6 +12,7 @@ import {
   equalPowerFadeGain,
   fadeDurationFromCurrentTime,
   getBuiltInFadeWindow,
+  specialFadeOutGain,
   type FadeWindow,
 } from "@/lib/playback-fade";
 import {
@@ -187,7 +188,9 @@ export function PlaylistPlayer({
 
       const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
       currentPlayer.setVolume(Math.round(
-        fadeVolumeRef.current * (fadeWindow ? equalPowerFadeGain(progress) : 1 - progress),
+        fadeVolumeRef.current * (fadeWindow
+          ? equalPowerFadeGain(progress)
+          : specialFadeOutGain(progress, fadeDuration)),
       ));
       if (progress >= 1) {
         clearFadeTimer();
@@ -225,7 +228,9 @@ export function PlaylistPlayer({
       }
       const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
       currentPlayer.setVolume(Math.round(
-        fadeVolumeRef.current * (fadeWindow ? equalPowerFadeGain(progress) : 1 - progress),
+        fadeVolumeRef.current * (fadeWindow
+          ? equalPowerFadeGain(progress)
+          : specialFadeOutGain(progress, fadeDuration)),
       ));
       if (progress >= 1) {
         clearFadeTimer();
@@ -375,7 +380,9 @@ export function PlaylistPlayer({
       }
       const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
       currentPlayer.setVolume(Math.round(
-        fadeVolumeRef.current * (fadeWindow ? equalPowerFadeGain(progress) : 1 - progress),
+        fadeVolumeRef.current * (fadeWindow
+          ? equalPowerFadeGain(progress)
+          : specialFadeOutGain(progress, fadeDuration)),
       ));
       if (progress >= 1) {
         clearFadeTimer();

@@ -12,8 +12,8 @@ export type PlaybackSettings = {
 };
 
 const SEAMLESS_PLAYBACK_SETTINGS: PlaybackSettings = {
-  gapSeconds: 0.25,
-  fadeOutSeconds: 2.2,
+  gapSeconds: 2.5,
+  fadeOutSeconds: 2,
   fadeInSeconds: 1.2,
   cutAudience: true,
   builtInFade: true,
