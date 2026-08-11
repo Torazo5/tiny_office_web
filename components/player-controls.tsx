@@ -165,7 +165,57 @@ export function PlayerControls({
         </div>
 
         {showMore && (
-          <div className="mt-2 flex items-center gap-2 border-t border-border pt-2">
+          <div className="mt-2 flex flex-wrap items-center gap-2 border-t border-border pt-2">
+            {onPrevious && (
+              <button
+                type="button"
+                onClick={onPrevious}
+                disabled={!isReady || previousDisabled}
+                className="flex h-8 w-8 items-center justify-center rounded-md border border-input text-muted-foreground transition-colors hover:text-foreground disabled:cursor-default disabled:opacity-40"
+                aria-label="Previous song"
+              >
+                <SkipBack size={16} aria-hidden />
+              </button>
+            )}
+            {onNext && (
+              <button
+                type="button"
+                onClick={onNext}
+                disabled={!isReady || nextDisabled}
+                className="flex h-8 w-8 items-center justify-center rounded-md border border-input text-muted-foreground transition-colors hover:text-foreground disabled:cursor-default disabled:opacity-40"
+                aria-label="Next song"
+              >
+                <SkipForward size={16} aria-hidden />
+              </button>
+            )}
+            {onToggleShuffle && (
+              <button
+                type="button"
+                onClick={onToggleShuffle}
+                disabled={!isReady}
+                aria-pressed={isShuffling}
+                className={`flex h-8 w-8 items-center justify-center rounded-md border transition-colors disabled:cursor-wait disabled:opacity-40 ${
+                  isShuffling ? "border-primary/50 bg-primary/10 text-primary" : "border-input text-muted-foreground hover:text-foreground"
+                }`}
+                aria-label={isShuffling ? "Turn off shuffle" : "Shuffle playlist"}
+              >
+                <Shuffle size={16} aria-hidden />
+              </button>
+            )}
+            {onToggleLoop && (
+              <button
+                type="button"
+                onClick={onToggleLoop}
+                disabled={!isReady}
+                aria-pressed={isLooping}
+                className={`flex h-8 w-8 items-center justify-center rounded-md border transition-colors disabled:cursor-wait disabled:opacity-40 ${
+                  isLooping ? "border-primary/50 bg-primary/10 text-primary" : "border-input text-muted-foreground hover:text-foreground"
+                }`}
+                aria-label={isLooping ? "Turn off loop" : "Loop current song"}
+              >
+                <Repeat2 size={16} aria-hidden />
+              </button>
+            )}
             <button
               type="button"
               onClick={() => onSkip(-10)}

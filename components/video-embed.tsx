@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Music2 } from "lucide-react";
 import { recordListeningProgress } from "@/app/listening/actions";
 import { PlayerControls } from "@/components/player-controls";
 import { PlaybackCustomizer } from "@/components/playback-customizer";
@@ -341,13 +342,17 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
             aria-pressed={onlySongMode}
             onClick={() => setOnlySongMode(!onlySongMode)}
             data-feature-hint="only-song-mode"
-            className={`shrink-0 rounded-md border px-2 py-1.5 text-[11px] font-medium transition-colors ${
+            className={`group relative inline-flex shrink-0 items-center gap-1.5 overflow-hidden rounded-md border px-2 py-1.5 text-[11px] font-semibold transition-all ${
               onlySongMode
-                ? "border-primary/50 bg-primary/10 text-primary"
-                : "border-input text-muted-foreground hover:text-foreground"
+                ? "border-primary/60 bg-primary/15 text-primary shadow-[0_0_18px_oklch(0.68_0.17_25_/_0.25)]"
+                : "border-primary/30 bg-[linear-gradient(120deg,oklch(0.68_0.17_25_/_0.12),transparent)] text-foreground hover:-translate-y-px hover:border-primary/60 hover:shadow-[0_0_16px_oklch(0.68_0.17_25_/_0.18)]"
             }`}
+            title="Skip applause and talk between mapped songs"
           >
-            Songs only
+            <span aria-hidden className="pointer-events-none absolute inset-y-0 left-0 w-8 -translate-x-full skew-x-[-20deg] bg-primary/25 transition-transform duration-500 group-hover:translate-x-[430%]" />
+            <Music2 aria-hidden size={13} className="relative" />
+            <span className="relative sm:hidden">Songs</span>
+            <span className="relative hidden sm:inline">Only songs</span>
           </button>
         }
       />

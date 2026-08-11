@@ -655,6 +655,7 @@ export function PlaylistPlayer({
           if (player) setPlayerVolume(player, nextVolume);
         }}
         playButtonHintTarget={playButtonHintTarget}
+        compact
       />
 
       <PlaybackCustomizer

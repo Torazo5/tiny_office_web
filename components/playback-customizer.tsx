@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { SlidersHorizontal, Sparkles } from "lucide-react";
 import { savePlaybackDefaults } from "@/app/profile/actions";
 import {
   PLAYBACK_PRESETS,
@@ -57,12 +58,17 @@ export function PlaybackCustomizer({
 
   return (
     <div className="mt-3">
-      <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-border bg-secondary/25 px-3 py-2.5">
-        <div>
-          <div className="text-[12px] font-medium text-foreground">Transitions</div>
+      <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-primary/30 bg-[radial-gradient(circle_at_top_left,oklch(0.68_0.17_25_/_0.14),transparent_52%)] px-3 py-2.5">
+        <div className="flex min-w-0 items-center gap-2.5">
+          <span className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-primary/35 bg-primary/10 text-primary shadow-[0_0_18px_oklch(0.68_0.17_25_/_0.15)]">
+            <Sparkles aria-hidden size={15} />
+          </span>
+          <div>
+          <div className="text-[12px] font-semibold text-foreground">Shape the handoff</div>
           <p className="text-[11px] text-muted-foreground">
             {secondsLabel(settings.gapSeconds)} gap · {secondsLabel(settings.fadeOutSeconds)} out · {secondsLabel(settings.fadeInSeconds)} in
           </p>
+          </div>
         </div>
         <button
           type="button"
@@ -72,9 +78,10 @@ export function PlaybackCustomizer({
             setOpen(true);
           }}
           data-feature-hint="playback-settings"
-          className="rounded-md border border-input bg-background px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:text-foreground"
+          className="group inline-flex items-center gap-1.5 rounded-md border border-primary/45 bg-primary/10 px-2.5 py-1.5 text-[12px] font-semibold text-primary transition-all hover:-translate-y-px hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_18px_oklch(0.68_0.17_25_/_0.25)]"
         >
-          Customize playback
+          <SlidersHorizontal aria-hidden size={14} className="transition-transform group-hover:rotate-12" />
+          Customize
         </button>
       </div>
       {message && <p className="mt-2 text-[11.5px] text-success">{message}</p>}
