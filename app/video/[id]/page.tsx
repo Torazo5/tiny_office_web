@@ -72,13 +72,6 @@ export default async function VideoPage({
             </p>
             <p className="mb-4 text-[11px] text-muted-foreground/70">Used {methodLabel}</p>
 
-            <RatingSummary
-              average={performance.avgRating}
-              ratingCount={performance.ratingCount}
-              reviewCount={performance.reviews.length}
-              distribution={performance.ratingDistribution ?? []}
-            />
-
             <RatingReviewPanel
               videoId={performance.videoId}
               isSignedIn={Boolean(user)}
@@ -93,21 +86,6 @@ export default async function VideoPage({
                 isSignedIn={Boolean(user)}
                 returnPath={`/video/${performance.videoId}`}
               />
-            </div>
-
-            <div data-feature-hint="timeline-editor" className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-lg">
-              <Link
-                href={revisionHref}
-                className="rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground"
-              >
-                Customize timeline
-              </Link>
-              <Link
-                href={revisionHref}
-                className="text-[12.5px] font-medium text-muted-foreground hover:text-foreground"
-              >
-                Open revision editor →
-              </Link>
             </div>
 
             <PresetPicker
@@ -153,36 +131,60 @@ export default async function VideoPage({
             </div>
           </div>
 
-          <div data-feature-hint="song-list" className="min-w-0 rounded-lg">
-            <h2 className="text-[13px] font-semibold text-muted-foreground uppercase tracking-wide mb-3">
-              Songs in this set
-            </h2>
-            <div className="flex flex-col gap-0.5">
-              {performance.songs.map((song) => (
-                <div key={song.index} className="flex min-w-0 items-center gap-2">
-                  <div className="min-w-0 flex-1">
-                    <SongRow
-                      song={song}
-                      performanceVideoId={performance.videoId}
-                      initialHearted={heartedSongKeys.includes(`${performance.videoId}:${song.index}`)}
-                      initialHeartCount={song.heartCount}
+          <aside className="min-w-0 rounded-lg">
+            <div data-feature-hint="song-list">
+              <h2 className="text-[13px] font-semibold text-muted-foreground uppercase tracking-wide mb-3">
+                Songs in this set
+              </h2>
+              <div className="flex flex-col gap-0.5">
+                {performance.songs.map((song) => (
+                  <div key={song.index} className="flex min-w-0 items-center gap-2">
+                    <div className="min-w-0 flex-1">
+                      <SongRow
+                        song={song}
+                        performanceVideoId={performance.videoId}
+                        initialHearted={heartedSongKeys.includes(`${performance.videoId}:${song.index}`)}
+                        initialHeartCount={song.heartCount}
+                        isSignedIn={Boolean(user)}
+                      />
+                    </div>
+                    <AddToPlaylistButton
+                      item={{
+                        kind: "song",
+                        performanceVideoId: performance.videoId,
+                        songIndex: song.index,
+                      }}
+                      playlists={songPlaylists}
                       isSignedIn={Boolean(user)}
+                      returnPath={`/video/${performance.videoId}`}
                     />
                   </div>
-                  <AddToPlaylistButton
-                    item={{
-                      kind: "song",
-                      performanceVideoId: performance.videoId,
-                      songIndex: song.index,
-                    }}
-                    playlists={songPlaylists}
-                    isSignedIn={Boolean(user)}
-                    returnPath={`/video/${performance.videoId}`}
-                  />
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+
+            <RatingSummary
+              average={performance.avgRating}
+              ratingCount={performance.ratingCount}
+              reviewCount={performance.reviews.length}
+              distribution={performance.ratingDistribution ?? []}
+            />
+
+            <div data-feature-hint="timeline-editor" className="flex flex-wrap items-center justify-between gap-3 rounded-lg">
+              <Link
+                href={revisionHref}
+                className="rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground"
+              >
+                Customize timeline
+              </Link>
+              <Link
+                href={revisionHref}
+                className="text-[12.5px] font-medium text-muted-foreground hover:text-foreground"
+              >
+                Open revision editor →
+              </Link>
+            </div>
+          </aside>
         </main>
       </PlayerProvider>
     </>
