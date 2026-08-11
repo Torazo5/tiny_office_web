@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useCallback, useContext, useState } from "react";
+import { createContext, useCallback, useContext, useMemo, useState } from "react";
 import type { Song } from "@/lib/types";
 import type { PlaybackSettings } from "@/lib/playback-settings";
 
@@ -21,6 +21,16 @@ const PlayerContext = createContext<{
   playbackSettings: PlaybackSettings;
   setPlaybackSettings: (settings: PlaybackSettings) => void;
   isSignedIn: boolean;
+} | null>(null);
+
+/**
+ * Song rows only need the active clip and a seek callback. Keeping this
+ * separate from the live playback clock means the full song list does not
+ * re-render four times a second while a video is playing.
+ */
+const SongActivityContext = createContext<{
+  activeSongIndex: number | null;
+  setStartAt: (seconds: number) => void;
 } | null>(null);
 
 export function PlayerProvider({
@@ -47,12 +57,21 @@ export function PlayerProvider({
     setSeekRequestId((requestId) => requestId + 1);
     setCurrentTime(seconds);
   }, []);
+  const activeSongIndex = songs.find(
+    (song) => currentTime >= song.clipStart && currentTime < Math.max(song.clipEnd, song.clipStart + 0.5),
+  )?.index ?? null;
+  const songActivity = useMemo(
+    () => ({ activeSongIndex, setStartAt }),
+    [activeSongIndex, setStartAt],
+  );
 
   return (
     <PlayerContext.Provider
       value={{ songs, startAt, setStartAt, seekRequestId, currentTime, setCurrentTime, onlySongMode, setOnlySongMode, playbackSettings, setPlaybackSettings, isSignedIn }}
     >
-      {children}
+      <SongActivityContext.Provider value={songActivity}>
+        {children}
+      </SongActivityContext.Provider>
     </PlayerContext.Provider>
   );
 }
@@ -60,5 +79,11 @@ export function PlayerProvider({
 export function usePlayer() {
   const ctx = useContext(PlayerContext);
   if (!ctx) throw new Error("usePlayer must be used within a PlayerProvider");
+  return ctx;
+}
+
+export function useSongActivity() {
+  const ctx = useContext(SongActivityContext);
+  if (!ctx) throw new Error("useSongActivity must be used within a PlayerProvider");
   return ctx;
 }

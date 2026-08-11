@@ -100,13 +100,14 @@ async function loadPresets(
   const ids = (presetRows ?? []).map((preset) => preset.id);
   if (ids.length === 0) return [];
 
-  const profiles = await getProfilesByUserId((presetRows ?? []).map((preset) => preset.owner_id));
-
-  const { data: songRows, error: songError } = await client
-    .from("listening_preset_songs")
-    .select("preset_id, song_index, title, clip_start, clip_end")
-    .in("preset_id", ids)
-    .order("song_index");
+  const [profiles, { data: songRows, error: songError }] = await Promise.all([
+    getProfilesByUserId((presetRows ?? []).map((preset) => preset.owner_id)),
+    client
+      .from("listening_preset_songs")
+      .select("preset_id, song_index, title, clip_start, clip_end")
+      .in("preset_id", ids)
+      .order("song_index"),
+  ]);
   throwIfError("Loading listening preset songs", songError);
 
   return mapPresets(presetRows as PresetRow[], (songRows ?? []) as PresetSongRow[], profiles);

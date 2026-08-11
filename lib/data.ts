@@ -295,12 +295,13 @@ async function loadPerformanceDetail(videoId: string, currentUserId: string | nu
 
   const reviews = (reviewsResult.data ?? []) as ReviewRow[];
   const reviewIds = reviews.map((review) => review.id);
-  const likesResult = reviewIds.length
-    ? await supabase.from("review_likes").select("review_id, user_id").in("review_id", reviewIds)
-    : { data: [], error: null };
+  const [likesResult, reviewProfiles] = await Promise.all([
+    reviewIds.length
+      ? supabase.from("review_likes").select("review_id, user_id").in("review_id", reviewIds)
+      : Promise.resolve({ data: [], error: null }),
+    getProfilesByUserId(reviews.map((review) => review.user_id)),
+  ]);
   throwIfError("Loading performance review likes", likesResult.error);
-
-  const reviewProfiles = await getProfilesByUserId(reviews.map((review) => review.user_id));
   const likesByReview = new Map<string, { count: number; liked: boolean }>();
   for (const like of likesResult.data ?? []) {
     const current = likesByReview.get(like.review_id) ?? { count: 0, liked: false };

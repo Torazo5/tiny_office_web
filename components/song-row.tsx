@@ -1,7 +1,7 @@
 "use client";
 
 import { ConfidenceDot } from "@/components/confidence-dot";
-import { usePlayer } from "@/components/player-context";
+import { useSongActivity } from "@/components/player-context";
 import { SongHeartButton } from "@/components/song-heart-button";
 import { formatClipDuration, formatTime } from "@/lib/format";
 import type { Song } from "@/lib/types";
@@ -20,13 +20,12 @@ export function SongRow({
   initialHeartCount?: number;
   isSignedIn?: boolean;
 }) {
-  const { currentTime, setStartAt } = usePlayer();
+  const { activeSongIndex, setStartAt } = useSongActivity();
   // `suspect` is the persisted boundary decision. An admin can confirm a
   // low-confidence AI boundary after listening, so confidence must not
   // override that explicit decision.
   const confirmed = !song.suspect;
-  const effectiveClipEnd = Math.max(song.clipEnd, song.clipStart + 0.5);
-  const active = currentTime >= song.clipStart && currentTime < effectiveClipEnd;
+  const active = activeSongIndex === song.index;
 
   return (
     <div className={`flex items-center gap-1 rounded-lg transition-colors ${active ? "bg-primary/10 ring-1 ring-inset ring-primary/40" : "hover:bg-secondary/60"}`}>
