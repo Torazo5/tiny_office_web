@@ -68,6 +68,7 @@ export function PlaylistPlayer({
   const isFadingRef = useRef(false);
   const fadeVolumeRef = useRef(100);
   const restoreVolumeRef = useRef<number | null>(null);
+  const volumeRef = useRef(100);
   const loadTrackRef = useRef<(index: number, preservePlaybackOrder?: boolean) => void>(() => undefined);
   const advanceToNextRef = useRef<() => void>(() => undefined);
   const fadeOutAndAdvanceRef = useRef<() => void>(() => undefined);
@@ -118,7 +119,7 @@ export function PlaylistPlayer({
     if (!isFadingRef.current) return;
     clearFadeTimer();
     const player = getPlayer();
-    if (player) setPlayerVolume(player, restoreVolumeRef.current ?? fadeVolumeRef.current);
+    if (player) player.setVolume(restoreVolumeRef.current ?? volumeRef.current);
     restoreVolumeRef.current = null;
     isFadingRef.current = false;
   }
@@ -140,6 +141,7 @@ export function PlaylistPlayer({
   function setPlayerVolume(player: YouTubePlayer, nextVolume: number) {
     const normalizedVolume = Math.min(100, Math.max(0, Math.round(nextVolume)));
     player.setVolume(normalizedVolume);
+    volumeRef.current = normalizedVolume;
     setVolume(normalizedVolume);
   }
 
@@ -153,7 +155,7 @@ export function PlaylistPlayer({
     }
 
     isFadingRef.current = true;
-    fadeVolumeRef.current = getCurrentVolume(player);
+    fadeVolumeRef.current = volumeRef.current;
     restoreVolumeRef.current = fadeVolumeRef.current;
     const startedAt = performance.now();
 
@@ -166,7 +168,7 @@ export function PlaylistPlayer({
       }
 
       const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
-      setPlayerVolume(currentPlayer, fadeVolumeRef.current * (1 - progress));
+      currentPlayer.setVolume(Math.round(fadeVolumeRef.current * (1 - progress)));
       if (progress >= 1) {
         clearFadeTimer();
         isFadingRef.current = false;
@@ -189,7 +191,7 @@ export function PlaylistPlayer({
       return;
     }
     isFadingRef.current = true;
-    fadeVolumeRef.current = getCurrentVolume(player);
+    fadeVolumeRef.current = volumeRef.current;
     const startedAt = performance.now();
     const tick = () => {
       const currentPlayer = getPlayer();
@@ -199,13 +201,13 @@ export function PlaylistPlayer({
         return;
       }
       const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
-      setPlayerVolume(currentPlayer, fadeVolumeRef.current * (1 - progress));
+      currentPlayer.setVolume(Math.round(fadeVolumeRef.current * (1 - progress)));
       if (progress >= 1) {
         clearFadeTimer();
         isFadingRef.current = false;
         currentPlayer.seekTo(end, true);
         currentPlayer.pauseVideo();
-        setPlayerVolume(currentPlayer, fadeVolumeRef.current);
+        currentPlayer.setVolume(fadeVolumeRef.current);
         previousTimeRef.current = end;
         setCurrentTime(end);
         setPlayerState(2);
@@ -219,8 +221,8 @@ export function PlaylistPlayer({
     const fadeDuration = playbackSettingsRef.current.fadeInSeconds;
     if (fadeDuration <= 0) return;
     clearTransitionTimers();
-    const targetVolume = getCurrentVolume(player);
-    setPlayerVolume(player, 0);
+    const targetVolume = volumeRef.current;
+    player.setVolume(0);
     const startedAt = performance.now();
     const tick = () => {
       const currentPlayer = getPlayer();
@@ -229,7 +231,7 @@ export function PlaylistPlayer({
         return;
       }
       const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
-      setPlayerVolume(currentPlayer, targetVolume * progress);
+      currentPlayer.setVolume(Math.round(targetVolume * progress));
       if (progress >= 1 && fadeInTimerRef.current !== null) {
         window.clearInterval(fadeInTimerRef.current);
         fadeInTimerRef.current = null;
@@ -254,7 +256,7 @@ export function PlaylistPlayer({
     setCurrentTime(startAt);
     advanceLockRef.current = true;
     if (restoreVolumeRef.current !== null) {
-      setPlayerVolume(player, restoreVolumeRef.current);
+      player.setVolume(restoreVolumeRef.current);
       restoreVolumeRef.current = null;
     }
     if (previousTrack?.performanceVideoId === track.performanceVideoId) {
@@ -332,7 +334,7 @@ export function PlaylistPlayer({
       return;
     }
     isFadingRef.current = true;
-    fadeVolumeRef.current = getCurrentVolume(player);
+    fadeVolumeRef.current = volumeRef.current;
     const startedAt = performance.now();
     const tick = () => {
       const currentPlayer = getPlayer();
@@ -342,11 +344,11 @@ export function PlaylistPlayer({
         return;
       }
       const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
-      setPlayerVolume(currentPlayer, fadeVolumeRef.current * (1 - progress));
+      currentPlayer.setVolume(Math.round(fadeVolumeRef.current * (1 - progress)));
       if (progress >= 1) {
         clearFadeTimer();
         isFadingRef.current = false;
-        setPlayerVolume(currentPlayer, fadeVolumeRef.current);
+        currentPlayer.setVolume(fadeVolumeRef.current);
         beginGap();
       }
     };
@@ -461,7 +463,7 @@ export function PlaylistPlayer({
             const currentTime = event.target.getCurrentTime();
             previousTimeRef.current = currentTime;
             setCurrentTime(currentTime);
-            setVolume(getCurrentVolume(event.target));
+            setPlayerVolume(event.target, getCurrentVolume(event.target));
             setPlayerState(event.target.getPlayerState());
             setIsPlayerReady(true);
           },

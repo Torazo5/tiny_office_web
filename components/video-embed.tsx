@@ -47,6 +47,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
   const transitionTimerRef = useRef<number | null>(null);
   const fadeTimerRef = useRef<number | null>(null);
   const isTransitioningRef = useRef(false);
+  const volumeRef = useRef(100);
   const transitionToSongRef = useRef<(nextStart: number) => void>(() => undefined);
   const fadeOutAndStopRef = useRef<(end: number) => void>(() => undefined);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
@@ -67,6 +68,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
   function setPlayerVolume(player: YouTubePlayer, nextVolume: number) {
     const normalizedVolume = Math.min(100, Math.max(0, Math.round(nextVolume)));
     player.setVolume(normalizedVolume);
+    volumeRef.current = normalizedVolume;
     setVolume(normalizedVolume);
   }
 
@@ -92,7 +94,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
 
   function fade(player: YouTubePlayer, from: number, to: number, seconds: number, onComplete: () => void) {
     if (seconds <= 0) {
-      setPlayerVolume(player, to);
+      player.setVolume(to);
       onComplete();
       return;
     }
@@ -101,7 +103,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       const activePlayer = getPlayer();
       if (!activePlayer) return clearTransition();
       const progress = Math.min(1, (performance.now() - startedAt) / (seconds * 1000));
-      setPlayerVolume(activePlayer, from + (to - from) * progress);
+      activePlayer.setVolume(Math.round(from + (to - from) * progress));
       if (progress >= 1) {
         if (fadeTimerRef.current !== null) window.clearInterval(fadeTimerRef.current);
         fadeTimerRef.current = null;
@@ -116,7 +118,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
     const player = getPlayer();
     if (!player || isTransitioningRef.current) return;
     isTransitioningRef.current = true;
-    const volume = Math.min(100, Math.max(0, player.getVolume()));
+    const volume = volumeRef.current;
     fade(player, volume, 0, playbackSettings.fadeOutSeconds, () => {
       player.pauseVideo();
       transitionTimerRef.current = window.setTimeout(() => {
@@ -135,7 +137,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
     const player = getPlayer();
     if (!player || isTransitioningRef.current) return;
     isTransitioningRef.current = true;
-    const volume = Math.min(100, Math.max(0, player.getVolume()));
+    const volume = volumeRef.current;
     fade(player, volume, 0, playbackSettings.fadeOutSeconds, () => {
       const activePlayer = getPlayer();
       if (!activePlayer) return clearTransition();
@@ -167,7 +169,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
             previousTimeRef.current = currentTime;
             trackingTimeRef.current = currentTime;
             setCurrentTime(currentTime);
-            setVolume(Math.min(100, Math.max(0, event.target.getVolume())));
+            setPlayerVolume(event.target, event.target.getVolume());
             setPlayerState(event.target.getPlayerState());
             setIsPlayerReady(true);
           },
@@ -348,7 +350,10 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
           const player = getPlayer();
           if (!player) return;
           if (playerState === YOUTUBE_PLAYER_PLAYING) player.pauseVideo();
-          else player.playVideo();
+          else {
+            player.setVolume(volumeRef.current);
+            player.playVideo();
+          }
         }}
         onSeek={seekTo}
         onSkip={skipBy}
