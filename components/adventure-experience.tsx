@@ -7,6 +7,7 @@ import { PlaylistPlayer } from "@/components/playlist-player";
 import { AdventurePlayFeatureHints, AdventureSetupFeatureHints } from "@/components/feature-hints";
 import { RecentlyPlayedPanel, useRecentlyPlayed } from "@/components/recently-played";
 import { trackEvent } from "@/components/analytics";
+import { filterAdventureSongOptions, isAdventureSongRollable } from "@/lib/adventure";
 import type { PlaybackSettings } from "@/lib/playback-settings";
 import type {
   PlaylistSongOption,
@@ -35,7 +36,7 @@ function shuffle<T>(items: readonly T[]): T[] {
 
 function makeSongTracks(options: PlaylistSongOption[]): PlaylistTrack[] {
   return options
-    .filter((song) => song.clipEnd > song.clipStart)
+    .filter(isAdventureSongRollable)
     .map((song, index) => ({
       ...song,
       index: index + 1,
@@ -206,6 +207,11 @@ function AdventureSetup({
             <p className="mt-1 text-[12.5px] text-muted-foreground">
               You can save any pick to one of your private playlists while it plays.
             </p>
+            {source === "songs" && (
+              <p className="mt-1 text-[12.5px] text-muted-foreground">
+                Clips under one minute are skipped automatically.
+              </p>
+            )}
           </div>
           <button
             type="button"
@@ -370,6 +376,7 @@ export function AdventureExperience({
   const [mode, setMode] = useState<AdventureMode>("song-only");
   const [session, setSession] = useState<AdventureSession | null>(null);
   const { tracks: recentlyPlayed, addTrack, clearTracks } = useRecentlyPlayed();
+  const rollableSongOptions = filterAdventureSongOptions(songOptions);
   const sessionKey = session
     ? [
         session.source,
@@ -382,7 +389,7 @@ export function AdventureExperience({
 
   function startAdventure() {
     const tracks = source === "songs"
-      ? makeSongTracks(songOptions)
+      ? makeSongTracks(rollableSongOptions)
       : makeVideoTracks(videoOptions, mode);
     if (tracks.length === 0) return;
     trackEvent({ eventName: "adventure_started", source, adventureMode: mode });
@@ -418,7 +425,7 @@ export function AdventureExperience({
 
   return (
     <AdventureSetup
-      songOptions={songOptions}
+      songOptions={rollableSongOptions}
       videoOptions={videoOptions}
       source={source}
       mode={mode}

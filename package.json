@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "test": "node --experimental-strip-types --test scripts/fuzzy-search.test.mjs scripts/only-song-mode.test.mjs scripts/playback-fade.test.mjs scripts/playback-settings.test.mjs scripts/review-utils.test.mjs",
+    "test": "node --experimental-strip-types --test scripts/adventure.test.mjs scripts/fuzzy-search.test.mjs scripts/only-song-mode.test.mjs scripts/playback-fade.test.mjs scripts/playback-settings.test.mjs scripts/review-utils.test.mjs",
     "start": "next start",
     "lint": "eslint",
     "seed:pipeline": "node --env-file-if-exists=.env.local scripts/seed-pipeline.mjs"
