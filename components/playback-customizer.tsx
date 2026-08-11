@@ -64,7 +64,7 @@ export function PlaybackCustomizer({
             <Sparkles aria-hidden size={15} />
           </span>
           <div>
-          <div className="text-[12px] font-semibold text-foreground">Shape the handoff</div>
+          <div className="text-[12px] font-semibold text-foreground">Playback controls</div>
           <p className="text-[11px] text-muted-foreground">
             {secondsLabel(settings.gapSeconds)} gap · {secondsLabel(settings.fadeOutSeconds)} out · {secondsLabel(settings.fadeInSeconds)} in
           </p>
