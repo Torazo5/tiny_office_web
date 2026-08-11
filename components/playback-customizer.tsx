@@ -44,6 +44,7 @@ export function PlaybackCustomizer({
 
   function saveAsDefault() {
     const next = normalizePlaybackSettings(draft);
+    close();
     startSaving(async () => {
       const result = await savePlaybackDefaults(next);
       if ("error" in result) {
@@ -51,7 +52,6 @@ export function PlaybackCustomizer({
         return;
       }
       setMessage("Applied and saved as your account default.");
-      close();
     });
   }
 
@@ -106,7 +106,7 @@ export function PlaybackCustomizer({
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h2 id="playback-customizer-title" className="text-base font-semibold text-foreground">Customize playback</h2>
-                    <p className="mt-1 text-[12.5px] leading-relaxed text-muted-foreground">Set the space and volume shape between songs.</p>
+                    <p className="mt-1 text-[12.5px] leading-relaxed text-muted-foreground">Fade-out finishes at a song&apos;s end; fade-in begins at the next song&apos;s start.</p>
                   </div>
                   <button type="button" onClick={close} className="rounded-md px-2 py-1 text-[12px] text-muted-foreground hover:text-foreground" aria-label="Close playback customization">Close</button>
                 </div>
@@ -118,7 +118,12 @@ export function PlaybackCustomizer({
                       onClick={() => setDraft(preset.settings)}
                       className="rounded-lg border border-input bg-secondary/30 p-3 text-left transition-colors hover:border-primary/50"
                     >
-                      <span className="block text-[12px] font-semibold text-foreground">{preset.name}</span>
+                      <span className="flex items-center gap-1.5 text-[12px] font-semibold text-foreground">
+                        {preset.name}
+                        {preset.id === "seamless" && (
+                          <span className="rounded-full bg-primary/15 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide text-primary">Recommended</span>
+                        )}
+                      </span>
                       <span className="mt-1 block text-[11px] leading-snug text-muted-foreground">{preset.description}</span>
                     </button>
                   ))}

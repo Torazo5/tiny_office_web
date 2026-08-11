@@ -71,6 +71,7 @@ export function PlaylistPlayer({
   const loadTrackRef = useRef<(index: number, preservePlaybackOrder?: boolean) => void>(() => undefined);
   const advanceToNextRef = useRef<() => void>(() => undefined);
   const fadeOutAndAdvanceRef = useRef<() => void>(() => undefined);
+  const fadeOutAndStopRef = useRef<(end: number) => void>(() => undefined);
   const beginGapBeforeNextRef = useRef<() => void>(() => undefined);
   const transitionWithinVideoRef = useRef<(nextSongStart: number) => void>(() => undefined);
   const onTrackPlayRef = useRef(onTrackPlay);
@@ -166,6 +167,43 @@ export function PlaylistPlayer({
       }
     };
 
+    tick();
+    fadeTimerRef.current = window.setInterval(tick, FADE_INTERVAL_MS);
+  }
+
+  function fadeOutAndStop(end: number) {
+    const player = getPlayer();
+    const fadeDuration = playbackSettingsRef.current.fadeOutSeconds;
+    if (!player || isFadingRef.current) return;
+    if (fadeDuration <= 0) {
+      player.seekTo(end, true);
+      player.pauseVideo();
+      setPlayerState(2);
+      return;
+    }
+    isFadingRef.current = true;
+    fadeVolumeRef.current = getCurrentVolume(player);
+    const startedAt = performance.now();
+    const tick = () => {
+      const currentPlayer = getPlayer();
+      if (!currentPlayer) {
+        clearFadeTimer();
+        isFadingRef.current = false;
+        return;
+      }
+      const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
+      currentPlayer.setVolume(Math.round(fadeVolumeRef.current * (1 - progress)));
+      if (progress >= 1) {
+        clearFadeTimer();
+        isFadingRef.current = false;
+        currentPlayer.seekTo(end, true);
+        currentPlayer.pauseVideo();
+        currentPlayer.setVolume(fadeVolumeRef.current);
+        previousTimeRef.current = end;
+        setCurrentTime(end);
+        setPlayerState(2);
+      }
+    };
     tick();
     fadeTimerRef.current = window.setInterval(tick, FADE_INTERVAL_MS);
   }
@@ -378,6 +416,7 @@ export function PlaylistPlayer({
     loadTrackRef.current = loadTrack;
     advanceToNextRef.current = advanceToNext;
     fadeOutAndAdvanceRef.current = fadeOutAndAdvance;
+    fadeOutAndStopRef.current = fadeOutAndStop;
     beginGapBeforeNextRef.current = beginGapBeforeNext;
     transitionWithinVideoRef.current = transitionWithinVideo;
   });
@@ -492,6 +531,7 @@ export function PlaylistPlayer({
         if (currentTime >= endThreshold) {
           if (isFadingRef.current) return;
           if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current, true);
+          else if (!upcomingTrackExists()) fadeOutAndStopRef.current(effectiveClipEnd);
           else if (fadeDuration > 0) fadeOutAndAdvanceRef.current();
           else beginGapBeforeNextRef.current();
         }
@@ -500,6 +540,25 @@ export function PlaylistPlayer({
 
       const shouldCutAudience = onlySongMode || playbackSettingsRef.current.cutAudience;
       if (!shouldCutAudience) return;
+
+      const playableClips = track.songClips.filter((clip) => clip.clipEnd > clip.clipStart);
+      const currentClipIndex = playableClips.findIndex(
+        (clip) => currentTime >= clip.clipStart && currentTime < clip.clipEnd,
+      );
+      if (currentClipIndex >= 0) {
+        const currentClip = playableClips[currentClipIndex];
+        const transitionAt = Math.max(
+          currentClip.clipStart,
+          currentClip.clipEnd - playbackSettingsRef.current.fadeOutSeconds,
+        );
+        if (currentTime >= transitionAt && !isFadingRef.current) {
+          const nextClip = playableClips[currentClipIndex + 1];
+          if (nextClip) transitionWithinVideoRef.current(nextClip.clipStart);
+          else if (upcomingTrackExists()) fadeOutAndAdvanceRef.current();
+          else fadeOutAndStopRef.current(currentClip.clipEnd);
+          return;
+        }
+      }
 
       const action = findOnlySongModeAction(
         track.songClips,

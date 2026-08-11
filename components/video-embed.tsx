@@ -48,6 +48,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
   const fadeTimerRef = useRef<number | null>(null);
   const isTransitioningRef = useRef(false);
   const transitionToSongRef = useRef<(nextStart: number) => void>(() => undefined);
+  const fadeOutAndStopRef = useRef<(end: number) => void>(() => undefined);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [playerState, setPlayerState] = useState<number | null>(null);
   const safeDuration = Math.max(0, duration);
@@ -123,8 +124,25 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
     });
   }
 
+  function fadeOutAndStop(end: number) {
+    const player = getPlayer();
+    if (!player || isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
+    const volume = Math.min(100, Math.max(0, player.getVolume()));
+    fade(player, volume, 0, playbackSettings.fadeOutSeconds, () => {
+      const activePlayer = getPlayer();
+      if (!activePlayer) return clearTransition();
+      activePlayer.seekTo(end, true);
+      activePlayer.pauseVideo();
+      previousTimeRef.current = end;
+      setStartAt(end);
+      clearTransition();
+    });
+  }
+
   useEffect(() => {
     transitionToSongRef.current = transitionToSong;
+    fadeOutAndStopRef.current = fadeOutAndStop;
   });
 
   useEffect(() => {
@@ -235,6 +253,23 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       if (!isYouTubePlayer(player) || player.getPlayerState() !== YOUTUBE_PLAYER_PLAYING) return;
 
       const currentTime = player.getCurrentTime();
+      const playableSongs = songs.filter((song) => song.clipEnd > song.clipStart);
+      const currentSongIndex = playableSongs.findIndex(
+        (song) => currentTime >= song.clipStart && currentTime < song.clipEnd,
+      );
+      if (currentSongIndex >= 0) {
+        const currentSong = playableSongs[currentSongIndex];
+        const transitionAt = Math.max(
+          currentSong.clipStart,
+          currentSong.clipEnd - playbackSettings.fadeOutSeconds,
+        );
+        if (currentTime >= transitionAt && !isTransitioningRef.current) {
+          const nextSong = playableSongs[currentSongIndex + 1];
+          if (nextSong) transitionToSongRef.current(nextSong.clipStart);
+          else fadeOutAndStopRef.current(currentSong.clipEnd);
+          return;
+        }
+      }
       const action = findOnlySongModeAction(
         songs,
         previousTimeRef.current,
