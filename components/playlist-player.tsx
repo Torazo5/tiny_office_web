@@ -612,7 +612,7 @@ export function PlaylistPlayer({
   const { start: timelineStart, end: timelineEnd } = timelineBounds(currentTrack);
 
   return (
-    <section className="mb-8 rounded-xl border border-border bg-card p-4 sm:p-5">
+    <section className="mb-8 rounded-xl border border-border bg-card p-4 sm:p-5 md:max-w-[680px]">
       <div className="relative aspect-video overflow-hidden rounded-lg border border-border bg-black">
         <div ref={playerHostRef} className="absolute inset-0 h-full w-full" aria-label="Playlist player" />
       </div>
