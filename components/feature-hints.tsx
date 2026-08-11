@@ -69,6 +69,11 @@ const ADVENTURE_PLAY_STEPS: HintStep[] = [
     title: "Your first pick is ready",
     detail: "Press play to start listening. The queue will keep the next pick ready for you.",
   },
+  {
+    target: "playback-settings",
+    title: "Set the handoff between songs",
+    detail: "Customize the gap and fades here whenever you want the queue to feel more seamless—or give each song a little breathing room.",
+  },
 ];
 
 function subscribe(onStoreChange: () => void) {
@@ -230,7 +235,7 @@ export function VideoFeatureHints() {
 
   return (
     <GuidedHints
-      storageKey="tiny-office:feature-hints:video"
+      storageKey="tiny-office:feature-hints:video-spotlight-v2"
       steps={VIDEO_STEPS}
       beforeStepChange={(nextStep) => {
         // Playback settings live behind only-song mode, so reveal them as the
@@ -250,5 +255,5 @@ export function AdventureSetupFeatureHints() {
 }
 
 export function AdventurePlayFeatureHints() {
-  return <GuidedHints storageKey="tiny-office:feature-hints:adventure-play" steps={ADVENTURE_PLAY_STEPS} />;
+  return <GuidedHints storageKey="tiny-office:feature-hints:adventure-play-spotlight-v2" steps={ADVENTURE_PLAY_STEPS} />;
 }
