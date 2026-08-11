@@ -7,6 +7,7 @@ import { PlaylistPlayer } from "@/components/playlist-player";
 import { RecentlyPlayedPanel, useRecentlyPlayed } from "@/components/recently-played";
 import { formatTime } from "@/lib/format";
 import { trackEvent } from "@/components/analytics";
+import type { PlaybackSettings } from "@/lib/playback-settings";
 import type {
   PlaylistSongOption,
   PlaylistSummary,
@@ -238,6 +239,7 @@ function AdventureSessionPlayer({
   recentlyPlayed,
   onPlayRecentlyPlayed,
   onClearRecentlyPlayed,
+  initialPlaybackSettings,
 }: {
   session: AdventureSession;
   playlists: PlaylistSummary[];
@@ -247,6 +249,7 @@ function AdventureSessionPlayer({
   recentlyPlayed: PlaylistTrack[];
   onPlayRecentlyPlayed: (track: PlaylistTrack) => void;
   onClearRecentlyPlayed: () => void;
+  initialPlaybackSettings: PlaybackSettings;
 }) {
   const [currentTrack, setCurrentTrack] = useState<PlaylistTrack | null>(session.tracks[0] ?? null);
   const [showRecentlyPlayed, setShowRecentlyPlayed] = useState(false);
@@ -326,6 +329,8 @@ function AdventureSessionPlayer({
           onlySongMode={session.mode === "song-only"}
           onCurrentTrackChange={handleCurrentTrackChange}
           onTrackPlay={onTrackPlay}
+          initialPlaybackSettings={initialPlaybackSettings}
+          isSignedIn={isSignedIn}
         />
 
         {currentTrack && currentItem && (
@@ -359,11 +364,13 @@ export function AdventureExperience({
   videoOptions,
   playlists,
   isSignedIn,
+  initialPlaybackSettings,
 }: {
   songOptions: PlaylistSongOption[];
   videoOptions: PlaylistVideoOption[];
   playlists: PlaylistSummary[];
   isSignedIn: boolean;
+  initialPlaybackSettings: PlaybackSettings;
 }) {
   const [source, setSource] = useState<AdventureSource>("songs");
   const [mode, setMode] = useState<AdventureMode>("song-only");
@@ -409,6 +416,7 @@ export function AdventureExperience({
         recentlyPlayed={recentlyPlayed}
         onPlayRecentlyPlayed={playRecentlyPlayed}
         onClearRecentlyPlayed={clearTracks}
+        initialPlaybackSettings={initialPlaybackSettings}
       />
     );
   }

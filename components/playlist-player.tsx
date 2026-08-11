@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { PlayerControls } from "@/components/player-controls";
+import { PlaybackCustomizer } from "@/components/playback-customizer";
+import { DEFAULT_PLAYBACK_SETTINGS, type PlaybackSettings } from "@/lib/playback-settings";
 import type { PlaylistTrack, PlaylistType } from "@/lib/types";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
 import {
@@ -15,15 +17,6 @@ const PLAYER_ENDED = 0;
 const PLAYER_PLAYING = 1;
 const PLAYER_BUFFERING = 3;
 const FADE_INTERVAL_MS = 50;
-
-type FadeMode = "off" | "short" | "medium" | "long";
-
-const FADE_DURATIONS: Record<FadeMode, number> = {
-  off: 0,
-  short: 0.5,
-  medium: 1,
-  long: 1.5,
-};
 
 function createShuffleOrder(tracks: PlaylistTrack[], startIndex: number) {
   const remaining = tracks
@@ -42,6 +35,8 @@ export function PlaylistPlayer({
   selectedIndex,
   onSelectionConsumed,
   onlySongMode = playlistType === "videos",
+  initialPlaybackSettings = DEFAULT_PLAYBACK_SETTINGS,
+  isSignedIn = false,
   onCurrentTrackChange,
   onTrackPlay,
 }: {
@@ -50,6 +45,8 @@ export function PlaylistPlayer({
   selectedIndex: number | null;
   onSelectionConsumed: () => void;
   onlySongMode?: boolean;
+  initialPlaybackSettings?: PlaybackSettings;
+  isSignedIn?: boolean;
   onCurrentTrackChange?: (track: PlaylistTrack) => void;
   onTrackPlay?: (track: PlaylistTrack) => void;
 }) {
@@ -64,14 +61,18 @@ export function PlaylistPlayer({
   const isShufflingRef = useRef(false);
   const shuffleOrderRef = useRef<number[] | null>(null);
   const shufflePositionRef = useRef(0);
-  const fadeModeRef = useRef<FadeMode>("off");
+  const playbackSettingsRef = useRef(initialPlaybackSettings);
   const fadeTimerRef = useRef<number | null>(null);
+  const fadeInTimerRef = useRef<number | null>(null);
+  const gapTimerRef = useRef<number | null>(null);
   const isFadingRef = useRef(false);
   const fadeVolumeRef = useRef(100);
   const restoreVolumeRef = useRef<number | null>(null);
   const loadTrackRef = useRef<(index: number, preservePlaybackOrder?: boolean) => void>(() => undefined);
   const advanceToNextRef = useRef<() => void>(() => undefined);
   const fadeOutAndAdvanceRef = useRef<() => void>(() => undefined);
+  const beginGapBeforeNextRef = useRef<() => void>(() => undefined);
+  const transitionWithinVideoRef = useRef<(nextSongStart: number) => void>(() => undefined);
   const onTrackPlayRef = useRef(onTrackPlay);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -80,7 +81,7 @@ export function PlaylistPlayer({
   const [isLooping, setIsLooping] = useState(false);
   const [isShuffling, setIsShuffling] = useState(false);
   const [shufflePosition, setShufflePosition] = useState(0);
-  const [fadeMode, setFadeMode] = useState<FadeMode>("off");
+  const [playbackSettings, setPlaybackSettings] = useState(initialPlaybackSettings);
 
   function getPlayer() {
     const player = playerRef.current;
@@ -97,6 +98,17 @@ export function PlaylistPlayer({
     if (fadeTimerRef.current !== null) {
       window.clearInterval(fadeTimerRef.current);
       fadeTimerRef.current = null;
+    }
+  }
+
+  function clearTransitionTimers() {
+    if (fadeInTimerRef.current !== null) {
+      window.clearInterval(fadeInTimerRef.current);
+      fadeInTimerRef.current = null;
+    }
+    if (gapTimerRef.current !== null) {
+      window.clearTimeout(gapTimerRef.current);
+      gapTimerRef.current = null;
     }
   }
 
@@ -125,10 +137,10 @@ export function PlaylistPlayer({
 
   function fadeOutAndAdvance() {
     const player = getPlayer();
-    const fadeDuration = FADE_DURATIONS[fadeModeRef.current];
+    const fadeDuration = playbackSettingsRef.current.fadeOutSeconds;
     if (isFadingRef.current) return;
     if (!player || fadeDuration <= 0 || !upcomingTrackExists()) {
-      advanceToNextRef.current();
+      beginGapBeforeNext();
       return;
     }
 
@@ -150,7 +162,7 @@ export function PlaylistPlayer({
       if (progress >= 1) {
         clearFadeTimer();
         isFadingRef.current = false;
-        advanceToNextRef.current();
+        beginGapBeforeNext();
       }
     };
 
@@ -158,14 +170,31 @@ export function PlaylistPlayer({
     fadeTimerRef.current = window.setInterval(tick, FADE_INTERVAL_MS);
   }
 
-  function changeFadeMode(nextMode: FadeMode) {
-    fadeModeRef.current = nextMode;
-    setFadeMode(nextMode);
-
-    if (nextMode === "off") cancelFade();
+  function beginFadeIn(player: YouTubePlayer) {
+    const fadeDuration = playbackSettingsRef.current.fadeInSeconds;
+    if (fadeDuration <= 0) return;
+    clearTransitionTimers();
+    const targetVolume = getCurrentVolume(player);
+    player.setVolume(0);
+    const startedAt = performance.now();
+    const tick = () => {
+      const currentPlayer = getPlayer();
+      if (!currentPlayer) {
+        clearTransitionTimers();
+        return;
+      }
+      const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
+      currentPlayer.setVolume(Math.round(targetVolume * progress));
+      if (progress >= 1 && fadeInTimerRef.current !== null) {
+        window.clearInterval(fadeInTimerRef.current);
+        fadeInTimerRef.current = null;
+      }
+    };
+    tick();
+    fadeInTimerRef.current = window.setInterval(tick, FADE_INTERVAL_MS);
   }
 
-  function loadTrack(index: number, preservePlaybackOrder = false) {
+  function loadTrack(index: number, preservePlaybackOrder = false, fadeIn = false) {
     const track = tracksRef.current[index];
     const player = getPlayer();
     if (!track || !player) return;
@@ -189,6 +218,7 @@ export function PlaylistPlayer({
     } else {
       player.loadVideoById(track.performanceVideoId, Math.max(0, track.clipStart));
     }
+    if (fadeIn) window.setTimeout(() => beginFadeIn(player), 120);
     window.setTimeout(() => {
       advanceLockRef.current = false;
     }, 800);
@@ -217,7 +247,66 @@ export function PlaylistPlayer({
         return;
       }
     }
-    loadTrack(nextIndex, true);
+    loadTrack(nextIndex, true, true);
+  }
+
+  function beginGapBeforeNext() {
+    clearTransitionTimers();
+    const player = getPlayer();
+    if (!player || !upcomingTrackExists()) {
+      advanceToNextRef.current();
+      return;
+    }
+    player.pauseVideo();
+    gapTimerRef.current = window.setTimeout(() => {
+      gapTimerRef.current = null;
+      advanceToNextRef.current();
+    }, playbackSettingsRef.current.gapSeconds * 1000);
+  }
+
+  function transitionWithinVideo(nextSongStart: number) {
+    const player = getPlayer();
+    if (!player) return;
+    const beginGap = () => {
+      player.pauseVideo();
+      clearTransitionTimers();
+      gapTimerRef.current = window.setTimeout(() => {
+        gapTimerRef.current = null;
+        const currentPlayer = getPlayer();
+        if (!currentPlayer) return;
+        currentPlayer.seekTo(nextSongStart, true);
+        currentPlayer.playVideo();
+        previousTimeRef.current = nextSongStart;
+        setCurrentTime(nextSongStart);
+        beginFadeIn(currentPlayer);
+      }, playbackSettingsRef.current.gapSeconds * 1000);
+    };
+    const fadeDuration = playbackSettingsRef.current.fadeOutSeconds;
+    if (fadeDuration <= 0 || isFadingRef.current) {
+      beginGap();
+      return;
+    }
+    isFadingRef.current = true;
+    fadeVolumeRef.current = getCurrentVolume(player);
+    const startedAt = performance.now();
+    const tick = () => {
+      const currentPlayer = getPlayer();
+      if (!currentPlayer) {
+        clearFadeTimer();
+        isFadingRef.current = false;
+        return;
+      }
+      const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
+      currentPlayer.setVolume(Math.round(fadeVolumeRef.current * (1 - progress)));
+      if (progress >= 1) {
+        clearFadeTimer();
+        isFadingRef.current = false;
+        currentPlayer.setVolume(fadeVolumeRef.current);
+        beginGap();
+      }
+    };
+    tick();
+    fadeTimerRef.current = window.setInterval(tick, FADE_INTERVAL_MS);
   }
 
   function advanceToPrevious() {
@@ -282,9 +371,15 @@ export function PlaylistPlayer({
   }, [tracks]);
 
   useEffect(() => {
+    playbackSettingsRef.current = playbackSettings;
+  }, [playbackSettings]);
+
+  useEffect(() => {
     loadTrackRef.current = loadTrack;
     advanceToNextRef.current = advanceToNext;
     fadeOutAndAdvanceRef.current = fadeOutAndAdvance;
+    beginGapBeforeNextRef.current = beginGapBeforeNext;
+    transitionWithinVideoRef.current = transitionWithinVideo;
   });
 
   useEffect(() => {
@@ -339,7 +434,7 @@ export function PlaylistPlayer({
             if (event.data === PLAYER_ENDED) {
               if (isFadingRef.current) return;
               if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current, true);
-              else advanceToNextRef.current();
+              else beginGapBeforeNextRef.current();
             }
           },
         }, firstTrack.clipStart);
@@ -353,6 +448,7 @@ export function PlaylistPlayer({
     return () => {
       cancelled = true;
       clearFadeTimer();
+      clearTransitionTimers();
       isFadingRef.current = false;
       restoreVolumeRef.current = null;
       const player = playerRef.current;
@@ -391,18 +487,19 @@ export function PlaylistPlayer({
 
       if (playlistType === "songs") {
         const effectiveClipEnd = Math.max(track.clipEnd, track.clipStart + 0.5);
-        const fadeDuration = FADE_DURATIONS[fadeModeRef.current];
+        const fadeDuration = playbackSettingsRef.current.fadeOutSeconds;
         const endThreshold = Math.max(track.clipStart + 0.5, effectiveClipEnd - (fadeDuration || 0.35));
         if (currentTime >= endThreshold) {
           if (isFadingRef.current) return;
           if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current, true);
           else if (fadeDuration > 0) fadeOutAndAdvanceRef.current();
-          else advanceToNextRef.current();
+          else beginGapBeforeNextRef.current();
         }
         return;
       }
 
-      if (!onlySongMode) return;
+      const shouldCutAudience = onlySongMode || playbackSettingsRef.current.cutAudience;
+      if (!shouldCutAudience) return;
 
       const action = findOnlySongModeAction(
         track.songClips,
@@ -417,7 +514,7 @@ export function PlaylistPlayer({
         if (isLoopingRef.current) {
           loadTrackRef.current(currentIndexRef.current, true);
         } else if (hasNextTrack) {
-          advanceToNextRef.current();
+          beginGapBeforeNextRef.current();
         } else {
           const stopAt = Math.max(0, action.end);
           player.seekTo(stopAt, true);
@@ -429,7 +526,7 @@ export function PlaylistPlayer({
       }
 
       previousTimeRef.current = action.start;
-      player.seekTo(action.start, true);
+      transitionWithinVideoRef.current(action.start);
     }, 250);
 
     return () => window.clearInterval(intervalId);
@@ -481,28 +578,11 @@ export function PlaylistPlayer({
         }}
       />
 
-      {playlistType === "songs" && (
-        <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-border bg-secondary/25 px-3 py-2.5">
-          <div>
-            <label htmlFor="playlist-fade-mode" className="text-[12px] font-medium text-foreground">
-              Fade out
-            </label>
-            <p className="text-[11px] text-muted-foreground">Tail only; the next song starts at full volume.</p>
-          </div>
-          <select
-            id="playlist-fade-mode"
-            value={fadeMode}
-            onChange={(event) => changeFadeMode(event.target.value as FadeMode)}
-            disabled={!isPlayerReady}
-            className="rounded-md border border-input bg-background px-2 py-1.5 text-[12px] text-foreground outline-none focus:border-primary disabled:cursor-wait disabled:opacity-50"
-          >
-            <option value="off">Off</option>
-            <option value="short">Short · 0.5s</option>
-            <option value="medium">Medium · 1.0s</option>
-            <option value="long">Long · 1.5s</option>
-          </select>
-        </div>
-      )}
+      <PlaybackCustomizer
+        settings={playbackSettings}
+        onSettingsChange={setPlaybackSettings}
+        isSignedIn={isSignedIn}
+      />
 
       <div className="mt-3 flex flex-wrap items-center gap-3">
         <div className="min-w-0 flex-1 sm:ml-2">

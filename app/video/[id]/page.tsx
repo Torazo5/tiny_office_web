@@ -15,6 +15,8 @@ import { getCurrentUser } from "@/lib/auth";
 import { getPlaylists } from "@/lib/data";
 import { getPerformanceWithSelectedPreset } from "@/lib/review-data";
 import { getUserEngagement } from "@/lib/engagement-data";
+import { getPlaybackDefaults } from "@/lib/profile-data";
+import { DEFAULT_PLAYBACK_SETTINGS } from "@/lib/playback-settings";
 
 export default async function VideoPage({
   params,
@@ -29,10 +31,11 @@ export default async function VideoPage({
     ? requestedCut
     : undefined;
   const user = await getCurrentUser();
-  const [{ performance, presets, selectedPreset, selectedCut, cutVariants }, engagement, playlists] = await Promise.all([
+  const [{ performance, presets, selectedPreset, selectedCut, cutVariants }, engagement, playlists, playbackDefaults] = await Promise.all([
     getPerformanceWithSelectedPreset(id, user?.id, previewPresetId, cutKey),
     getUserEngagement(id, user?.id),
     getPlaylists(user?.id ?? null),
+    user ? getPlaybackDefaults(user.id) : Promise.resolve(DEFAULT_PLAYBACK_SETTINGS),
   ]);
   if (!performance) notFound();
   const songPlaylists = user
@@ -55,6 +58,8 @@ export default async function VideoPage({
       <PlayerProvider
         initialStart={performance.songs[0]?.clipStart ?? 0}
         songs={performance.songs}
+        initialPlaybackSettings={playbackDefaults}
+        isSignedIn={Boolean(user)}
       >
         <main className="grid min-w-0 items-start gap-8 p-4 sm:p-8 lg:grid-cols-[1.4fr_1fr]">
           <div className="min-w-0">

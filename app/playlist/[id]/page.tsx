@@ -4,6 +4,7 @@ import { PlaylistDetail } from "@/components/playlist-detail";
 import { PlaylistSignInGate } from "@/components/playlist-sign-in-gate";
 import { getCurrentUser } from "@/lib/auth";
 import { getPlaylist, getPlaylistOptions } from "@/lib/data";
+import { getPlaybackDefaults } from "@/lib/profile-data";
 
 /**
  * Playlist metadata and track membership come from Supabase. The persistent
@@ -29,9 +30,10 @@ export default async function PlaylistPage({
     );
   }
 
-  const [playlist, options] = await Promise.all([
+  const [playlist, options, playbackDefaults] = await Promise.all([
     getPlaylist(id, user.id),
     getPlaylistOptions(),
+    getPlaybackDefaults(user.id),
   ]);
   if (!playlist) notFound();
   const canManage = playlist.ownerId === user.id;
@@ -45,6 +47,7 @@ export default async function PlaylistPage({
         videoCatalog={options.videoOptions}
         canManage={canManage}
         isSignedIn
+        initialPlaybackSettings={playbackDefaults}
       />
     </>
   );

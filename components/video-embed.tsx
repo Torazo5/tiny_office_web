@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { recordListeningProgress } from "@/app/listening/actions";
 import { PlayerControls } from "@/components/player-controls";
+import { PlaybackCustomizer } from "@/components/playback-customizer";
 import { usePlayer } from "@/components/player-context";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
 import { trackEvent } from "@/components/analytics";
@@ -31,6 +32,9 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
     setCurrentTime,
     onlySongMode,
     setOnlySongMode,
+    playbackSettings,
+    setPlaybackSettings,
+    isSignedIn,
   } = usePlayer();
   const playerHostRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
@@ -40,6 +44,10 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
   const previousTimeRef = useRef(initialStart);
   const trackingTimeRef = useRef<number | null>(null);
   const playedSongKeysRef = useRef(new Set<string>());
+  const transitionTimerRef = useRef<number | null>(null);
+  const fadeTimerRef = useRef<number | null>(null);
+  const isTransitioningRef = useRef(false);
+  const transitionToSongRef = useRef<(nextStart: number) => void>(() => undefined);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [playerState, setPlayerState] = useState<number | null>(null);
   const safeDuration = Math.max(0, duration);
@@ -65,6 +73,59 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
   function skipBy(seconds: number) {
     seekTo(currentTime + seconds, true);
   }
+
+  function clearTransition() {
+    if (transitionTimerRef.current !== null) window.clearTimeout(transitionTimerRef.current);
+    if (fadeTimerRef.current !== null) window.clearInterval(fadeTimerRef.current);
+    transitionTimerRef.current = null;
+    fadeTimerRef.current = null;
+    isTransitioningRef.current = false;
+  }
+
+  function fade(player: YouTubePlayer, from: number, to: number, seconds: number, onComplete: () => void) {
+    if (seconds <= 0) {
+      player.setVolume(to);
+      onComplete();
+      return;
+    }
+    const startedAt = performance.now();
+    const tick = () => {
+      const activePlayer = getPlayer();
+      if (!activePlayer) return clearTransition();
+      const progress = Math.min(1, (performance.now() - startedAt) / (seconds * 1000));
+      activePlayer.setVolume(Math.round(from + (to - from) * progress));
+      if (progress >= 1) {
+        if (fadeTimerRef.current !== null) window.clearInterval(fadeTimerRef.current);
+        fadeTimerRef.current = null;
+        onComplete();
+      }
+    };
+    tick();
+    fadeTimerRef.current = window.setInterval(tick, 50);
+  }
+
+  function transitionToSong(nextStart: number) {
+    const player = getPlayer();
+    if (!player || isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
+    const volume = Math.min(100, Math.max(0, player.getVolume()));
+    fade(player, volume, 0, playbackSettings.fadeOutSeconds, () => {
+      player.pauseVideo();
+      transitionTimerRef.current = window.setTimeout(() => {
+        const activePlayer = getPlayer();
+        if (!activePlayer) return clearTransition();
+        activePlayer.seekTo(nextStart, true);
+        activePlayer.playVideo();
+        previousTimeRef.current = nextStart;
+        setStartAt(nextStart);
+        fade(activePlayer, 0, volume, playbackSettings.fadeInSeconds, clearTransition);
+      }, playbackSettings.gapSeconds * 1000);
+    });
+  }
+
+  useEffect(() => {
+    transitionToSongRef.current = transitionToSong;
+  });
 
   useEffect(() => {
     let cancelled = false;
@@ -113,6 +174,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
 
     return () => {
       cancelled = true;
+      clearTransition();
       const player = playerRef.current;
       if (isYouTubePlayer(player)) player.destroy();
       playerRef.current = null;
@@ -192,11 +254,11 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       }
 
       previousTimeRef.current = action.start;
-      setStartAt(action.start);
+      transitionToSongRef.current(action.start);
     }, 250);
 
     return () => window.clearInterval(intervalId);
-  }, [isPlayerReady, onlySongMode, playerState, setStartAt, songs]);
+  }, [isPlayerReady, onlySongMode, playerState, playbackSettings, setStartAt, songs]);
 
   return (
     <div className="mb-4">
@@ -224,6 +286,14 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       <div className="relative aspect-video rounded-[10px] overflow-hidden border border-border bg-black">
         <div ref={playerHostRef} className="absolute inset-0 h-full w-full" aria-label="Tiny Desk Concert" />
       </div>
+
+      {onlySongMode && (
+        <PlaybackCustomizer
+          settings={playbackSettings}
+          onSettingsChange={setPlaybackSettings}
+          isSignedIn={isSignedIn}
+        />
+      )}
 
       <PlayerControls
         currentTime={currentTime}

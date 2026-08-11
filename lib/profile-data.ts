@@ -3,6 +3,7 @@ import "server-only";
 import { createHash } from "node:crypto";
 import { cache } from "react";
 import { createClient } from "@/lib/supabase/server";
+import { normalizePlaybackSettings, type PlaybackSettings } from "@/lib/playback-settings";
 import type { Performance } from "@/lib/types";
 
 export const DEFAULT_PROFILE_DISPLAY_NAME = "Anonymous";
@@ -18,6 +19,13 @@ type ProfileRow = {
   user_id: string;
   display_name: string;
   tag: string;
+};
+
+type PlaybackSettingsRow = {
+  playback_gap_seconds: number | string | null;
+  playback_fade_out_seconds: number | string | null;
+  playback_fade_in_seconds: number | string | null;
+  playback_cut_audience: boolean | null;
 };
 
 function defaultTag(userId: string) {
@@ -76,6 +84,23 @@ export async function getProfilesByUserId(userIds: readonly string[]) {
 
 export const getUserProfile = cache(async (userId: string) => {
   return (await getProfilesByUserId([userId])).get(userId)!;
+});
+
+export const getPlaybackDefaults = cache(async (userId: string): Promise<PlaybackSettings> => {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("profiles")
+    .select("playback_gap_seconds, playback_fade_out_seconds, playback_fade_in_seconds, playback_cut_audience")
+    .eq("user_id", userId)
+    .maybeSingle();
+  if (error) throw new Error(`Loading playback defaults: ${error.message}`);
+  const row = data as PlaybackSettingsRow | null;
+  return normalizePlaybackSettings(row ? {
+    gapSeconds: row.playback_gap_seconds === null ? undefined : Number(row.playback_gap_seconds),
+    fadeOutSeconds: row.playback_fade_out_seconds === null ? undefined : Number(row.playback_fade_out_seconds),
+    fadeInSeconds: row.playback_fade_in_seconds === null ? undefined : Number(row.playback_fade_in_seconds),
+    cutAudience: row.playback_cut_audience === null ? undefined : row.playback_cut_audience,
+  } : undefined);
 });
 
 export type ProfileFavorite = {

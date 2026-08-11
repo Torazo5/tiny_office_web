@@ -5,12 +5,15 @@ import {
   getPlaylistOptions,
   getPlaylists,
 } from "@/lib/data";
+import { getPlaybackDefaults } from "@/lib/profile-data";
+import { DEFAULT_PLAYBACK_SETTINGS } from "@/lib/playback-settings";
 
 export default async function AdventurePage() {
-  const [options, playlists, user] = await Promise.all([
+  const user = await getCurrentUser();
+  const [options, playlists, playbackDefaults] = await Promise.all([
     getPlaylistOptions(),
-    getPlaylists(),
-    getCurrentUser(),
+    getPlaylists(user?.id),
+    user ? getPlaybackDefaults(user.id) : Promise.resolve(DEFAULT_PLAYBACK_SETTINGS),
   ]);
 
   return (
@@ -21,6 +24,7 @@ export default async function AdventurePage() {
         videoOptions={options.videoOptions}
         playlists={playlists}
         isSignedIn={Boolean(user)}
+        initialPlaybackSettings={playbackDefaults}
       />
     </>
   );

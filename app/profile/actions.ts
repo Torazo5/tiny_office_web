@@ -1,10 +1,12 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { normalizePlaybackSettings, type PlaybackSettings } from "@/lib/playback-settings";
 import { createClient } from "@/lib/supabase/server";
 
 export type FavoriteActionState = { error?: string; success?: string } | null;
 export type ProfileActionState = { error?: string; success?: string } | null;
+export type PlaybackDefaultsActionState = { error?: string } | { success: true };
 
 async function getAuthenticatedUser() {
   const supabase = await createClient();
@@ -60,6 +62,43 @@ export async function updateProfile(
   revalidatePath("/profile");
   revalidatePath("/");
   return { success: "Profile saved." };
+}
+
+export async function savePlaybackDefaults(
+  settings: PlaybackSettings,
+): Promise<PlaybackDefaultsActionState> {
+  const { supabase, user } = await getAuthenticatedUser();
+  if (!user) return { error: "Sign in to save playback defaults." };
+
+  const normalized = normalizePlaybackSettings(settings);
+  const { data: profile, error: profileError } = await supabase
+    .from("profiles")
+    .select("user_id")
+    .eq("user_id", user.id)
+    .maybeSingle();
+  if (profileError) return { error: "Could not save playback defaults. Try again." };
+
+  const { error } = await supabase.from("profiles").upsert(
+    {
+      user_id: user.id,
+      ...(profile ? {} : {
+        display_name: "Anonymous",
+        tag: `listener_${user.id.replaceAll("-", "").slice(0, 8).toLowerCase()}`,
+      }),
+      playback_gap_seconds: normalized.gapSeconds,
+      playback_fade_out_seconds: normalized.fadeOutSeconds,
+      playback_fade_in_seconds: normalized.fadeInSeconds,
+      playback_cut_audience: normalized.cutAudience,
+      updated_at: new Date().toISOString(),
+    },
+    { onConflict: "user_id" },
+  );
+  if (error) return { error: "Could not save playback defaults. Try again." };
+
+  revalidatePath("/profile");
+  revalidatePath("/playlist");
+  revalidatePath("/adventure");
+  return { success: true };
 }
 
 export async function saveFavorite(

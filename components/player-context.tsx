@@ -2,6 +2,7 @@
 
 import { createContext, useCallback, useContext, useState } from "react";
 import type { Song } from "@/lib/types";
+import type { PlaybackSettings } from "@/lib/playback-settings";
 
 /**
  * Shares the embed's current timestamp between the video embed and the song
@@ -17,21 +18,29 @@ const PlayerContext = createContext<{
   songs: Song[];
   onlySongMode: boolean;
   setOnlySongMode: (enabled: boolean) => void;
+  playbackSettings: PlaybackSettings;
+  setPlaybackSettings: (settings: PlaybackSettings) => void;
+  isSignedIn: boolean;
 } | null>(null);
 
 export function PlayerProvider({
   initialStart,
   songs,
+  initialPlaybackSettings,
+  isSignedIn,
   children,
 }: {
   initialStart: number;
   songs: Song[];
+  initialPlaybackSettings: PlaybackSettings;
+  isSignedIn: boolean;
   children: React.ReactNode;
 }) {
   const [startAt, setStartAtState] = useState(initialStart);
   const [seekRequestId, setSeekRequestId] = useState(0);
   const [currentTime, setCurrentTime] = useState(initialStart);
   const [onlySongMode, setOnlySongMode] = useState(false);
+  const [playbackSettings, setPlaybackSettings] = useState(initialPlaybackSettings);
 
   const setStartAt = useCallback((seconds: number) => {
     setStartAtState(seconds);
@@ -41,7 +50,7 @@ export function PlayerProvider({
 
   return (
     <PlayerContext.Provider
-      value={{ songs, startAt, setStartAt, seekRequestId, currentTime, setCurrentTime, onlySongMode, setOnlySongMode }}
+      value={{ songs, startAt, setStartAt, seekRequestId, currentTime, setCurrentTime, onlySongMode, setOnlySongMode, playbackSettings, setPlaybackSettings, isSignedIn }}
     >
       {children}
     </PlayerContext.Provider>

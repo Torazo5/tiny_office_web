@@ -17,6 +17,7 @@ import type {
   PlaylistTrack,
   PlaylistVideoOption,
 } from "@/lib/types";
+import type { PlaybackSettings } from "@/lib/playback-settings";
 
 function songKey(videoId: string, songIndex: number) {
   return `song:${videoId}:${songIndex}`;
@@ -38,12 +39,14 @@ export function PlaylistDetail({
   videoCatalog,
   canManage,
   isSignedIn,
+  initialPlaybackSettings,
 }: {
   playlist: Playlist;
   songCatalog: PlaylistSongOption[];
   videoCatalog: PlaylistVideoOption[];
   canManage: boolean;
   isSignedIn: boolean;
+  initialPlaybackSettings: PlaybackSettings;
 }) {
   const router = useRouter();
   const [tracks, setTracks] = useState(playlist.tracks);
@@ -172,6 +175,8 @@ export function PlaylistDetail({
           playlistType={playlist.type}
           selectedIndex={selectedTrackIndex}
           onSelectionConsumed={() => setSelectedTrackIndex(null)}
+          initialPlaybackSettings={initialPlaybackSettings}
+          isSignedIn={isSignedIn}
         />
       )}
 
