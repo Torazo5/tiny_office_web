@@ -1,0 +1,237 @@
+{
+  "video_id": "t8UKQJZsv4o",
+  "title": "Weezer: NPR Music Tiny Desk Concert",
+  "duration": 952,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/t8UKQJZsv4o.mp3",
+  "description_songs": [
+    "Long Time Sunshine",
+    "Living in L.A.",
+    "Across the Sea",
+    "High as a Kite"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (2 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 4 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 2,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 2.88,
+      "duration": 2.88,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 181.92,
+      "end": 190.07999999999998,
+      "duration": 8.159999999999997,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 201.6,
+      "end": 203.51999999999998,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 420.0,
+      "end": 428.64,
+      "duration": 8.639999999999986,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 430.56,
+      "end": 435.36,
+      "duration": 4.800000000000011,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 701.28,
+      "end": 707.52,
+      "duration": 6.240000000000009,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 934.56,
+      "end": 949.92,
+      "duration": 15.360000000000014,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 2.88,
+      "song": "Long Time Sunshine",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 2.88,
+      "clip_end": 180.92,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 181.92,
+      "song": "Living in L.A.",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 190.07999999999998,
+      "clip_end": 419.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 420.0,
+      "song": "Across the Sea",
+      "corroboration": 0,
+      "silence_match": 418.325,
+      "clip_start": 435.36,
+      "clip_end": 700.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 701.28,
+      "song": "High as a Kite",
+      "corroboration": 0,
+      "silence_match": 699.518,
+      "clip_start": 707.52,
+      "clip_end": 933.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 190.65,
+      "end": 191.519,
+      "duration": 0.869354
+    },
+    {
+      "start": 191.53,
+      "end": 194.554,
+      "duration": 3.02404
+    },
+    {
+      "start": 194.623,
+      "end": 196.672,
+      "duration": 2.04915
+    },
+    {
+      "start": 199.438,
+      "end": 202.133,
+      "duration": 2.6946
+    },
+    {
+      "start": 203.145,
+      "end": 205.268,
+      "duration": 2.12279
+    },
+    {
+      "start": 418.325,
+      "end": 419.178,
+      "duration": 0.852833
+    },
+    {
+      "start": 431.519,
+      "end": 434.582,
+      "duration": 3.06331
+    },
+    {
+      "start": 446.489,
+      "end": 447.981,
+      "duration": 1.49167
+    },
+    {
+      "start": 449.825,
+      "end": 451.347,
+      "duration": 1.52233
+    },
+    {
+      "start": 699.518,
+      "end": 700.271,
+      "duration": 0.753042
+    },
+    {
+      "start": 704.696,
+      "end": 705.938,
+      "duration": 1.24238
+    },
+    {
+      "start": 705.953,
+      "end": 706.656,
+      "duration": 0.702812
+    },
+    {
+      "start": 706.697,
+      "end": 707.403,
+      "duration": 0.705937
+    },
+    {
+      "start": 707.414,
+      "end": 708.144,
+      "duration": 0.729854
+    },
+    {
+      "start": 708.157,
+      "end": 708.79,
+      "duration": 0.632333
+    },
+    {
+      "start": 949.085,
+      "end": 949.587,
+      "duration": 0.502312
+    },
+    {
+      "start": 949.587,
+      "end": 951.995,
+      "duration": 2.40769
+    }
+  ],
+  "confidence": {
+    "scores": [
+      51,
+      51,
+      66,
+      66
+    ],
+    "avg": 58.5,
+    "min": 51
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/t8UKQJZsv4o.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

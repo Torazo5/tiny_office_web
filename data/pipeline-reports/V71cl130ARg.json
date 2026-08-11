@@ -1,0 +1,281 @@
+{
+  "video_id": "V71cl130ARg",
+  "title": "Tobe Nwigwe: NPR Music Tiny Desk Concert",
+  "duration": 971,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/V71cl130ARg.mp3",
+  "description_songs": [
+    "Houston Tribute",
+    "Caged Birds",
+    "Against the Grain",
+    "Shine",
+    "I'm Dope"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 5 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 4 usable episode(s), took top 4; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 149.28,
+      "end": 151.2,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 159.84,
+      "end": 161.76,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 163.2,
+      "end": 164.64,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 165.12,
+      "end": 167.51999999999998,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 266.88,
+      "end": 269.28000000000003,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 291.36,
+      "end": 293.28000000000003,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 293.76,
+      "end": 302.40000000000003,
+      "duration": 8.640000000000043,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 329.28,
+      "end": 330.72,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 507.84,
+      "end": 509.28,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 540.96,
+      "end": 546.24,
+      "duration": 5.279999999999973,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 548.16,
+      "end": 549.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 732.9599999999999,
+      "end": 734.4,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 734.88,
+      "end": 754.08,
+      "duration": 19.200000000000045,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 754.56,
+      "end": 784.3199999999999,
+      "duration": 29.75999999999999,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 942.7199999999999,
+      "end": 944.64,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 945.12,
+      "end": 962.88,
+      "duration": 17.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Houston Tribute",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 292.76,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 293.76,
+      "song": "Caged Birds",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 302.40000000000003,
+      "clip_end": 539.96,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 540.96,
+      "song": "Against the Grain",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 549.6,
+      "clip_end": 733.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 734.88,
+      "song": "Shine",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 754.08,
+      "clip_end": 754.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 1,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 754.56,
+      "song": "I'm Dope",
+      "corroboration": 0,
+      "silence_match": 754.05,
+      "clip_start": 754.08,
+      "clip_end": 754.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 16,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.672937,
+      "duration": 0.672937
+    },
+    {
+      "start": 750.981,
+      "end": 752.11,
+      "duration": 1.1284
+    },
+    {
+      "start": 754.05,
+      "end": 755.213,
+      "duration": 1.1625
+    },
+    {
+      "start": 769.548,
+      "end": 770.053,
+      "duration": 0.505083
+    },
+    {
+      "start": 770.716,
+      "end": 771.282,
+      "duration": 0.566167
+    },
+    {
+      "start": 771.878,
+      "end": 772.428,
+      "duration": 0.549438
+    },
+    {
+      "start": 773.744,
+      "end": 774.248,
+      "duration": 0.504583
+    },
+    {
+      "start": 783.683,
+      "end": 784.274,
+      "duration": 0.590271
+    },
+    {
+      "start": 943.399,
+      "end": 944.093,
+      "duration": 0.694187
+    },
+    {
+      "start": 962.854,
+      "end": 971.024,
+      "duration": 8.16987
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      51,
+      51,
+      1,
+      16
+    ],
+    "avg": 35.4,
+    "min": 1
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/V71cl130ARg.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

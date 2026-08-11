@@ -2,7 +2,7 @@
   "video_id": "fOAIrUZbOwo",
   "title": "Billie Eilish: Tiny Desk Concert",
   "duration": 1338,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/fOAIrUZbOwo.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/fOAIrUZbOwo.mp3",
   "description_songs": [
     "THE GREATEST",
     "L'AMOUR DE MA VIE",
@@ -58,12 +58,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 22,
-      "clip_end": 340.32,
+      "clip_end": 339.32,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 60
+      "confidence": 60,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 403,
@@ -71,12 +72,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 385.92,
-      "clip_end": 601.92,
+      "clip_end": 600.92,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 712,
@@ -84,12 +86,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 695.52,
-      "clip_end": 994.0799999999999,
+      "clip_end": 993.0799999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 1107,
@@ -97,12 +100,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 1089.12,
-      "clip_end": 1299.84,
+      "clip_end": 1298.84,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -357,7 +361,10 @@
     "avg": 66.0,
     "min": 60
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/fOAIrUZbOwo.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

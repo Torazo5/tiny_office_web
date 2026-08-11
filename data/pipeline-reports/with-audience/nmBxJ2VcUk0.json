@@ -1,0 +1,159 @@
+{
+  "video_id": "nmBxJ2VcUk0",
+  "title": "Tank: Tiny Desk Concert",
+  "duration": 1097,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/nmBxJ2VcUk0.mp3",
+  "description_songs": [
+    "Slowly",
+    "Coldest",
+    "Do What It Do",
+    "O",
+    "Naked",
+    "Regret",
+    "When We",
+    "Dirty",
+    "Can't Let It Show",
+    "Slow",
+    "See Through Love",
+    "Maybe I Deserve",
+    "I Deserve",
+    "Please Don't Go"
+  ],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 14 description songs (1 candidate(s) checked)",
+    "B_yamnet": "failed \u2014 only 1 usable episode(s) (of 2 valid, 7 total), need 13",
+    "C_silence": "failed \u2014 only 11 usable gap(s), need 13",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 2.4,
+      "end": 3.84,
+      "duration": 1.44,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 16.32,
+      "end": 21.12,
+      "duration": 4.800000000000001,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 250.07999999999998,
+      "end": 253.43999999999997,
+      "duration": 3.359999999999985,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 481.44,
+      "end": 483.36,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 499.68,
+      "end": 501.6,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1070.3999999999999,
+      "end": 1070.8799999999999,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1077.12,
+      "end": 1096.32,
+      "duration": 19.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 6.83408,
+      "end": 7.50456,
+      "duration": 0.670479
+    },
+    {
+      "start": 9.55979,
+      "end": 10.288,
+      "duration": 0.728208
+    },
+    {
+      "start": 12.251,
+      "end": 12.7934,
+      "duration": 0.542333
+    },
+    {
+      "start": 54.2582,
+      "end": 54.9078,
+      "duration": 0.649583
+    },
+    {
+      "start": 485.265,
+      "end": 485.851,
+      "duration": 0.585208
+    },
+    {
+      "start": 488.357,
+      "end": 488.899,
+      "duration": 0.541896
+    },
+    {
+      "start": 495.283,
+      "end": 495.826,
+      "duration": 0.542917
+    },
+    {
+      "start": 503.771,
+      "end": 504.454,
+      "duration": 0.682937
+    },
+    {
+      "start": 718.726,
+      "end": 719.273,
+      "duration": 0.546625
+    },
+    {
+      "start": 1084.19,
+      "end": 1085.0,
+      "duration": 0.804521
+    },
+    {
+      "start": 1085.08,
+      "end": 1086.66,
+      "duration": 1.58706
+    },
+    {
+      "start": 1095.07,
+      "end": 1097.11,
+      "duration": 2.0345
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

@@ -1,0 +1,219 @@
+{
+  "video_id": "SqPtIkxSxI0",
+  "title": "Maggie Rogers: NPR Music Tiny Desk Concert",
+  "duration": 873,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/SqPtIkxSxI0.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 238.56,
+      "end": 269.28000000000003,
+      "duration": 30.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 504.0,
+      "end": 602.88,
+      "duration": 98.88,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 851.52,
+      "end": 871.68,
+      "duration": 20.159999999999968,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 52.4557,
+      "end": 53.0378,
+      "duration": 0.582146
+    },
+    {
+      "start": 234.004,
+      "end": 238.313,
+      "duration": 4.30915
+    },
+    {
+      "start": 251.426,
+      "end": 252.039,
+      "duration": 0.613062
+    },
+    {
+      "start": 252.483,
+      "end": 253.52,
+      "duration": 1.03702
+    },
+    {
+      "start": 254.488,
+      "end": 255.286,
+      "duration": 0.798208
+    },
+    {
+      "start": 258.486,
+      "end": 259.309,
+      "duration": 0.822917
+    },
+    {
+      "start": 261.707,
+      "end": 262.602,
+      "duration": 0.895813
+    },
+    {
+      "start": 263.04,
+      "end": 263.809,
+      "duration": 0.769854
+    },
+    {
+      "start": 266.197,
+      "end": 267.516,
+      "duration": 1.31892
+    },
+    {
+      "start": 268.038,
+      "end": 268.869,
+      "duration": 0.831583
+    },
+    {
+      "start": 269.499,
+      "end": 270.045,
+      "duration": 0.545667
+    },
+    {
+      "start": 270.077,
+      "end": 270.654,
+      "duration": 0.576875
+    },
+    {
+      "start": 270.702,
+      "end": 271.268,
+      "duration": 0.5665
+    },
+    {
+      "start": 501.525,
+      "end": 503.364,
+      "duration": 1.83858
+    },
+    {
+      "start": 516.017,
+      "end": 516.563,
+      "duration": 0.545146
+    },
+    {
+      "start": 521.182,
+      "end": 521.768,
+      "duration": 0.585729
+    },
+    {
+      "start": 523.589,
+      "end": 525.11,
+      "duration": 1.52021
+    },
+    {
+      "start": 525.74,
+      "end": 526.291,
+      "duration": 0.550542
+    },
+    {
+      "start": 550.499,
+      "end": 551.214,
+      "duration": 0.715625
+    },
+    {
+      "start": 551.787,
+      "end": 552.573,
+      "duration": 0.785521
+    },
+    {
+      "start": 552.579,
+      "end": 554.45,
+      "duration": 1.87035
+    },
+    {
+      "start": 558.416,
+      "end": 559.091,
+      "duration": 0.674917
+    },
+    {
+      "start": 559.519,
+      "end": 560.664,
+      "duration": 1.14546
+    },
+    {
+      "start": 563.753,
+      "end": 564.916,
+      "duration": 1.16277
+    },
+    {
+      "start": 566.918,
+      "end": 567.832,
+      "duration": 0.9135
+    },
+    {
+      "start": 571.246,
+      "end": 571.895,
+      "duration": 0.648583
+    },
+    {
+      "start": 585.888,
+      "end": 586.681,
+      "duration": 0.792896
+    },
+    {
+      "start": 601.173,
+      "end": 602.54,
+      "duration": 1.36698
+    },
+    {
+      "start": 602.922,
+      "end": 605.239,
+      "duration": 2.31685
+    },
+    {
+      "start": 836.172,
+      "end": 836.803,
+      "duration": 0.630521
+    },
+    {
+      "start": 850.056,
+      "end": 851.751,
+      "duration": 1.69565
+    },
+    {
+      "start": 871.272,
+      "end": 872.722,
+      "duration": 1.44962
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

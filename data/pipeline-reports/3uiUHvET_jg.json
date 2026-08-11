@@ -1,0 +1,547 @@
+{
+  "video_id": "3uiUHvET_jg",
+  "title": "Yo-Yo Ma: NPR Music Tiny Desk Concert",
+  "duration": 729,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/3uiUHvET_jg.mp3",
+  "description_songs": [
+    "J.S. Bach: \"Prelude (from Suite No. 1 for Solo Cello)",
+    "J.S. Bach: \"Sarabande (from Suite No. 6 for Solo Cello)",
+    "J.S. Bach: \"Gigue (from Suite No. 3 for Solo Cello)"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 10 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 135.35999999999999,
+      "end": 162.71999999999997,
+      "duration": 27.359999999999985,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 169.44,
+      "end": 170.88,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 179.04,
+      "end": 180.48,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 181.44,
+      "end": 186.71999999999997,
+      "duration": 5.279999999999973,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 187.68,
+      "end": 195.35999999999999,
+      "duration": 7.679999999999978,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 201.6,
+      "end": 203.04,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 206.88,
+      "end": 217.43999999999997,
+      "duration": 10.559999999999974,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 217.92,
+      "end": 220.79999999999998,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 221.76,
+      "end": 225.6,
+      "duration": 3.8400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 226.07999999999998,
+      "end": 228.48,
+      "duration": 2.4000000000000057,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 229.44,
+      "end": 249.6,
+      "duration": 20.159999999999997,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 250.07999999999998,
+      "end": 287.52,
+      "duration": 37.44,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 288.0,
+      "end": 311.04,
+      "duration": 23.04000000000002,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 313.92,
+      "end": 326.40000000000003,
+      "duration": 12.480000000000018,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 327.36,
+      "end": 334.08,
+      "duration": 6.71999999999997,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 334.56,
+      "end": 338.88,
+      "duration": 4.319999999999993,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 583.1999999999999,
+      "end": 628.32,
+      "duration": 45.12000000000012,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 711.8399999999999,
+      "end": 726.72,
+      "duration": 14.88000000000011,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "J.S. Bach: \"Prelude (from Suite No. 1 for Solo Cello)",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 134.35999999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 135.35999999999999,
+      "song": "J.S. Bach: \"Sarabande (from Suite No. 6 for Solo Cello)",
+      "corroboration": 0,
+      "silence_match": 133.564,
+      "clip_start": 135.35999999999999,
+      "clip_end": 583.1999999999999,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 50
+    },
+    {
+      "seconds": 583.1999999999999,
+      "song": "J.S. Bach: \"Gigue (from Suite No. 3 for Solo Cello)",
+      "corroboration": 0,
+      "silence_match": 578.077,
+      "clip_start": 628.32,
+      "clip_end": 710.8399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.630354,
+      "duration": 0.630354
+    },
+    {
+      "start": 65.3432,
+      "end": 67.3361,
+      "duration": 1.99292
+    },
+    {
+      "start": 133.564,
+      "end": 135.062,
+      "duration": 1.49735
+    },
+    {
+      "start": 152.156,
+      "end": 152.661,
+      "duration": 0.505
+    },
+    {
+      "start": 155.944,
+      "end": 156.599,
+      "duration": 0.655021
+    },
+    {
+      "start": 161.366,
+      "end": 162.002,
+      "duration": 0.636354
+    },
+    {
+      "start": 169.742,
+      "end": 170.528,
+      "duration": 0.785687
+    },
+    {
+      "start": 177.636,
+      "end": 179.719,
+      "duration": 2.08271
+    },
+    {
+      "start": 184.528,
+      "end": 185.062,
+      "duration": 0.534438
+    },
+    {
+      "start": 186.506,
+      "end": 188.271,
+      "duration": 1.76485
+    },
+    {
+      "start": 191.847,
+      "end": 192.371,
+      "duration": 0.523937
+    },
+    {
+      "start": 192.774,
+      "end": 193.563,
+      "duration": 0.788458
+    },
+    {
+      "start": 194.853,
+      "end": 196.392,
+      "duration": 1.53862
+    },
+    {
+      "start": 199.067,
+      "end": 199.589,
+      "duration": 0.521375
+    },
+    {
+      "start": 206.224,
+      "end": 207.552,
+      "duration": 1.32777
+    },
+    {
+      "start": 209.9,
+      "end": 211.296,
+      "duration": 1.39512
+    },
+    {
+      "start": 212.893,
+      "end": 213.484,
+      "duration": 0.591313
+    },
+    {
+      "start": 220.74,
+      "end": 222.245,
+      "duration": 1.505
+    },
+    {
+      "start": 224.488,
+      "end": 225.112,
+      "duration": 0.62375
+    },
+    {
+      "start": 228.011,
+      "end": 230.307,
+      "duration": 2.29623
+    },
+    {
+      "start": 235.032,
+      "end": 235.813,
+      "duration": 0.781708
+    },
+    {
+      "start": 239.259,
+      "end": 239.924,
+      "duration": 0.664937
+    },
+    {
+      "start": 242.755,
+      "end": 243.7,
+      "duration": 0.945583
+    },
+    {
+      "start": 245.262,
+      "end": 245.769,
+      "duration": 0.506458
+    },
+    {
+      "start": 246.322,
+      "end": 247.339,
+      "duration": 1.01652
+    },
+    {
+      "start": 249.698,
+      "end": 250.916,
+      "duration": 1.21769
+    },
+    {
+      "start": 255.693,
+      "end": 256.239,
+      "duration": 0.545604
+    },
+    {
+      "start": 262.849,
+      "end": 263.982,
+      "duration": 1.13323
+    },
+    {
+      "start": 282.952,
+      "end": 283.541,
+      "duration": 0.589854
+    },
+    {
+      "start": 287.457,
+      "end": 288.391,
+      "duration": 0.933125
+    },
+    {
+      "start": 289.836,
+      "end": 290.351,
+      "duration": 0.51475
+    },
+    {
+      "start": 293.003,
+      "end": 293.95,
+      "duration": 0.946937
+    },
+    {
+      "start": 298.512,
+      "end": 299.652,
+      "duration": 1.13985
+    },
+    {
+      "start": 309.316,
+      "end": 309.958,
+      "duration": 0.641896
+    },
+    {
+      "start": 322.658,
+      "end": 323.965,
+      "duration": 1.30692
+    },
+    {
+      "start": 326.212,
+      "end": 328.09,
+      "duration": 1.87821
+    },
+    {
+      "start": 333.916,
+      "end": 335.334,
+      "duration": 1.41815
+    },
+    {
+      "start": 336.131,
+      "end": 336.988,
+      "duration": 0.8575
+    },
+    {
+      "start": 338.423,
+      "end": 339.643,
+      "duration": 1.21946
+    },
+    {
+      "start": 342.36,
+      "end": 343.172,
+      "duration": 0.81275
+    },
+    {
+      "start": 346.213,
+      "end": 347.123,
+      "duration": 0.910146
+    },
+    {
+      "start": 350.181,
+      "end": 350.769,
+      "duration": 0.588187
+    },
+    {
+      "start": 352.304,
+      "end": 352.836,
+      "duration": 0.531396
+    },
+    {
+      "start": 353.268,
+      "end": 354.317,
+      "duration": 1.04827
+    },
+    {
+      "start": 359.999,
+      "end": 360.786,
+      "duration": 0.787583
+    },
+    {
+      "start": 364.975,
+      "end": 369.169,
+      "duration": 4.19321
+    },
+    {
+      "start": 371.927,
+      "end": 372.535,
+      "duration": 0.607833
+    },
+    {
+      "start": 375.79,
+      "end": 376.588,
+      "duration": 0.797375
+    },
+    {
+      "start": 382.574,
+      "end": 383.799,
+      "duration": 1.22581
+    },
+    {
+      "start": 390.108,
+      "end": 391.031,
+      "duration": 0.922833
+    },
+    {
+      "start": 395.31,
+      "end": 395.859,
+      "duration": 0.549
+    },
+    {
+      "start": 395.87,
+      "end": 397.029,
+      "duration": 1.15881
+    },
+    {
+      "start": 397.193,
+      "end": 399.812,
+      "duration": 2.61931
+    },
+    {
+      "start": 412.2,
+      "end": 413.38,
+      "duration": 1.17979
+    },
+    {
+      "start": 425.168,
+      "end": 426.972,
+      "duration": 1.80469
+    },
+    {
+      "start": 484.101,
+      "end": 485.74,
+      "duration": 1.63923
+    },
+    {
+      "start": 494.917,
+      "end": 495.525,
+      "duration": 0.60775
+    },
+    {
+      "start": 498.559,
+      "end": 499.814,
+      "duration": 1.25585
+    },
+    {
+      "start": 504.86,
+      "end": 505.36,
+      "duration": 0.500479
+    },
+    {
+      "start": 511.816,
+      "end": 514.344,
+      "duration": 2.52779
+    },
+    {
+      "start": 574.876,
+      "end": 576.806,
+      "duration": 1.92937
+    },
+    {
+      "start": 578.077,
+      "end": 582.955,
+      "duration": 4.87775
+    },
+    {
+      "start": 614.529,
+      "end": 615.064,
+      "duration": 0.535042
+    },
+    {
+      "start": 617.074,
+      "end": 617.6,
+      "duration": 0.52675
+    },
+    {
+      "start": 620.412,
+      "end": 620.928,
+      "duration": 0.515833
+    },
+    {
+      "start": 625.836,
+      "end": 626.438,
+      "duration": 0.601979
+    },
+    {
+      "start": 726.175,
+      "end": 729.397,
+      "duration": 3.22175
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      50,
+      66
+    ],
+    "avg": 58.0,
+    "min": 50
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/3uiUHvET_jg.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

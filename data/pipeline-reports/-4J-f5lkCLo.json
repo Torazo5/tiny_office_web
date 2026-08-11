@@ -1,0 +1,403 @@
+{
+  "video_id": "-4J-f5lkCLo",
+  "title": "Thee Sacred Souls: Tiny Desk Concert",
+  "duration": 1233,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/-4J-f5lkCLo.mp3",
+  "description_songs": [
+    "Will I See You Again?",
+    "Love Is The Way",
+    "Easier Said Than Done",
+    "Love Comes Easy",
+    "Can I Call You Rose?"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 902 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 256.32,
+      "end": 341.76,
+      "duration": 85.44,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 532.8,
+      "end": 541.44,
+      "duration": 8.6400000000001,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 711.8399999999999,
+      "end": 732.96,
+      "duration": 21.12000000000012,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 941.76,
+      "end": 998.4,
+      "duration": 56.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1200.0,
+      "end": 1231.2,
+      "duration": 31.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Will I See You Again?",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 255.32,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 340,
+      "song": "Love Is The Way",
+      "corroboration": 0,
+      "silence_match": 341.594,
+      "clip_start": 341.76,
+      "clip_end": 531.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 542,
+      "song": "Easier Said Than Done",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 541.44,
+      "clip_end": 710.8399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 734,
+      "song": "Love Comes Easy",
+      "corroboration": 0,
+      "silence_match": 732.781,
+      "clip_start": 732.96,
+      "clip_end": 940.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 999,
+      "song": "Can I Call You Rose?",
+      "corroboration": 0,
+      "silence_match": 998.304,
+      "clip_start": 998.4,
+      "clip_end": 1199.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 8.65294,
+      "end": 9.34623,
+      "duration": 0.693292
+    },
+    {
+      "start": 253.826,
+      "end": 254.921,
+      "duration": 1.09471
+    },
+    {
+      "start": 265.616,
+      "end": 266.125,
+      "duration": 0.508896
+    },
+    {
+      "start": 268.92,
+      "end": 269.561,
+      "duration": 0.641
+    },
+    {
+      "start": 272.842,
+      "end": 273.383,
+      "duration": 0.541854
+    },
+    {
+      "start": 274.534,
+      "end": 275.17,
+      "duration": 0.636083
+    },
+    {
+      "start": 279.917,
+      "end": 280.934,
+      "duration": 1.01698
+    },
+    {
+      "start": 282.263,
+      "end": 283.267,
+      "duration": 1.0035
+    },
+    {
+      "start": 285.354,
+      "end": 286.148,
+      "duration": 0.793583
+    },
+    {
+      "start": 287.27,
+      "end": 288.637,
+      "duration": 1.36625
+    },
+    {
+      "start": 289.149,
+      "end": 290.35,
+      "duration": 1.20146
+    },
+    {
+      "start": 294.568,
+      "end": 296.763,
+      "duration": 2.1959
+    },
+    {
+      "start": 301.848,
+      "end": 302.458,
+      "duration": 0.609833
+    },
+    {
+      "start": 304.177,
+      "end": 305.317,
+      "duration": 1.14044
+    },
+    {
+      "start": 306.862,
+      "end": 308.065,
+      "duration": 1.2031
+    },
+    {
+      "start": 308.483,
+      "end": 309.002,
+      "duration": 0.519042
+    },
+    {
+      "start": 310.58,
+      "end": 311.11,
+      "duration": 0.529958
+    },
+    {
+      "start": 311.113,
+      "end": 311.713,
+      "duration": 0.599875
+    },
+    {
+      "start": 313.512,
+      "end": 315.257,
+      "duration": 1.74454
+    },
+    {
+      "start": 317.709,
+      "end": 318.796,
+      "duration": 1.08633
+    },
+    {
+      "start": 319.302,
+      "end": 320.346,
+      "duration": 1.04352
+    },
+    {
+      "start": 321.173,
+      "end": 322.626,
+      "duration": 1.45329
+    },
+    {
+      "start": 323.407,
+      "end": 324.632,
+      "duration": 1.22454
+    },
+    {
+      "start": 325.274,
+      "end": 325.967,
+      "duration": 0.693375
+    },
+    {
+      "start": 329.12,
+      "end": 329.898,
+      "duration": 0.778
+    },
+    {
+      "start": 331.959,
+      "end": 332.858,
+      "duration": 0.899042
+    },
+    {
+      "start": 333.614,
+      "end": 334.932,
+      "duration": 1.31862
+    },
+    {
+      "start": 335.738,
+      "end": 337.206,
+      "duration": 1.46802
+    },
+    {
+      "start": 337.207,
+      "end": 338.155,
+      "duration": 0.948083
+    },
+    {
+      "start": 341.594,
+      "end": 342.411,
+      "duration": 0.816708
+    },
+    {
+      "start": 342.441,
+      "end": 343.715,
+      "duration": 1.27398
+    },
+    {
+      "start": 343.716,
+      "end": 344.383,
+      "duration": 0.667667
+    },
+    {
+      "start": 344.43,
+      "end": 345.038,
+      "duration": 0.608167
+    },
+    {
+      "start": 708.543,
+      "end": 710.018,
+      "duration": 1.47513
+    },
+    {
+      "start": 719.735,
+      "end": 720.689,
+      "duration": 0.954
+    },
+    {
+      "start": 720.714,
+      "end": 721.511,
+      "duration": 0.797229
+    },
+    {
+      "start": 722.915,
+      "end": 723.624,
+      "duration": 0.709437
+    },
+    {
+      "start": 732.781,
+      "end": 734.959,
+      "duration": 2.17858
+    },
+    {
+      "start": 951.307,
+      "end": 953.064,
+      "duration": 1.75648
+    },
+    {
+      "start": 960.147,
+      "end": 960.681,
+      "duration": 0.533833
+    },
+    {
+      "start": 967.129,
+      "end": 967.636,
+      "duration": 0.506833
+    },
+    {
+      "start": 973.15,
+      "end": 973.818,
+      "duration": 0.668562
+    },
+    {
+      "start": 998.304,
+      "end": 1000.55,
+      "duration": 2.24154
+    },
+    {
+      "start": 1017.6,
+      "end": 1018.2,
+      "duration": 0.602146
+    },
+    {
+      "start": 1065.8,
+      "end": 1066.9,
+      "duration": 1.09308
+    },
+    {
+      "start": 1067.05,
+      "end": 1067.63,
+      "duration": 0.580625
+    },
+    {
+      "start": 1114.91,
+      "end": 1115.46,
+      "duration": 0.54575
+    },
+    {
+      "start": 1115.59,
+      "end": 1116.13,
+      "duration": 0.541625
+    },
+    {
+      "start": 1116.38,
+      "end": 1117.12,
+      "duration": 0.744625
+    },
+    {
+      "start": 1230.86,
+      "end": 1232.96,
+      "duration": 2.09206
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      61,
+      76,
+      76
+    ],
+    "avg": 68.4,
+    "min": 53
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/-4J-f5lkCLo.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

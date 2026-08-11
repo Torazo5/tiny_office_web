@@ -1,0 +1,381 @@
+{
+  "video_id": "aKWV7b3j5P0",
+  "title": "Carla Morrison: Tiny Desk Concert",
+  "duration": 1403,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/aKWV7b3j5P0.mp3",
+  "description_songs": [
+    "Contigo",
+    "Encontrarme",
+    "Te Regalo",
+    "Disfruto"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2500 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 268.32,
+      "end": 298.08,
+      "duration": 29.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 298.56,
+      "end": 346.56,
+      "duration": 48.0,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 633.12,
+      "end": 698.4,
+      "duration": 65.27999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 950.4,
+      "end": 995.52,
+      "duration": 45.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 996.0,
+      "end": 1093.44,
+      "duration": 97.44000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1093.44,
+      "end": 1099.2,
+      "duration": 5.759999999999991,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1370.8799999999999,
+      "end": 1394.8799999999999,
+      "duration": 24.0,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1399.2,
+      "end": 1402.56,
+      "duration": 3.3599999999999,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 8,
+      "song": "Contigo",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 8,
+      "clip_end": 268.32,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 349,
+      "song": "Encontrarme",
+      "corroboration": 0,
+      "silence_match": 346.342,
+      "clip_start": 346.56,
+      "clip_end": 633.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 701,
+      "song": "Te Regalo",
+      "corroboration": 0,
+      "silence_match": 701.628,
+      "clip_start": 698.4,
+      "clip_end": 950.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 1100,
+      "song": "Disfruto",
+      "corroboration": 0,
+      "silence_match": 1099.72,
+      "clip_start": 1099.2,
+      "clip_end": 1370.8799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 288.764,
+      "end": 289.373,
+      "duration": 0.608833
+    },
+    {
+      "start": 290.959,
+      "end": 292.511,
+      "duration": 1.55208
+    },
+    {
+      "start": 297.803,
+      "end": 298.341,
+      "duration": 0.538104
+    },
+    {
+      "start": 298.341,
+      "end": 298.871,
+      "duration": 0.529729
+    },
+    {
+      "start": 299.745,
+      "end": 300.915,
+      "duration": 1.17004
+    },
+    {
+      "start": 302.244,
+      "end": 303.075,
+      "duration": 0.830792
+    },
+    {
+      "start": 305.769,
+      "end": 306.678,
+      "duration": 0.908937
+    },
+    {
+      "start": 312.355,
+      "end": 312.857,
+      "duration": 0.501812
+    },
+    {
+      "start": 318.738,
+      "end": 319.259,
+      "duration": 0.521771
+    },
+    {
+      "start": 324.06,
+      "end": 324.736,
+      "duration": 0.675729
+    },
+    {
+      "start": 327.912,
+      "end": 328.415,
+      "duration": 0.503458
+    },
+    {
+      "start": 339.431,
+      "end": 340.165,
+      "duration": 0.734667
+    },
+    {
+      "start": 344.592,
+      "end": 345.404,
+      "duration": 0.811479
+    },
+    {
+      "start": 346.342,
+      "end": 349.202,
+      "duration": 2.86025
+    },
+    {
+      "start": 367.582,
+      "end": 369.175,
+      "duration": 1.59344
+    },
+    {
+      "start": 645.998,
+      "end": 646.776,
+      "duration": 0.777667
+    },
+    {
+      "start": 650.627,
+      "end": 651.135,
+      "duration": 0.507917
+    },
+    {
+      "start": 655.31,
+      "end": 656.29,
+      "duration": 0.979104
+    },
+    {
+      "start": 675.712,
+      "end": 676.355,
+      "duration": 0.643437
+    },
+    {
+      "start": 687.394,
+      "end": 688.02,
+      "duration": 0.625125
+    },
+    {
+      "start": 698.381,
+      "end": 699.158,
+      "duration": 0.776937
+    },
+    {
+      "start": 699.193,
+      "end": 701.284,
+      "duration": 2.09104
+    },
+    {
+      "start": 701.628,
+      "end": 702.286,
+      "duration": 0.658792
+    },
+    {
+      "start": 702.552,
+      "end": 703.205,
+      "duration": 0.653354
+    },
+    {
+      "start": 703.5,
+      "end": 704.181,
+      "duration": 0.680396
+    },
+    {
+      "start": 704.418,
+      "end": 705.111,
+      "duration": 0.692979
+    },
+    {
+      "start": 708.342,
+      "end": 708.846,
+      "duration": 0.503604
+    },
+    {
+      "start": 733.576,
+      "end": 734.126,
+      "duration": 0.550271
+    },
+    {
+      "start": 734.345,
+      "end": 735.03,
+      "duration": 0.684875
+    },
+    {
+      "start": 959.066,
+      "end": 959.587,
+      "duration": 0.520625
+    },
+    {
+      "start": 965.352,
+      "end": 965.908,
+      "duration": 0.556146
+    },
+    {
+      "start": 969.24,
+      "end": 969.956,
+      "duration": 0.716625
+    },
+    {
+      "start": 1001.73,
+      "end": 1002.25,
+      "duration": 0.52125
+    },
+    {
+      "start": 1004.72,
+      "end": 1005.41,
+      "duration": 0.688375
+    },
+    {
+      "start": 1011.37,
+      "end": 1011.9,
+      "duration": 0.527292
+    },
+    {
+      "start": 1018.51,
+      "end": 1019.05,
+      "duration": 0.544479
+    },
+    {
+      "start": 1020.6,
+      "end": 1021.11,
+      "duration": 0.512646
+    },
+    {
+      "start": 1026.28,
+      "end": 1026.82,
+      "duration": 0.536896
+    },
+    {
+      "start": 1027.77,
+      "end": 1028.33,
+      "duration": 0.562229
+    },
+    {
+      "start": 1035.91,
+      "end": 1036.46,
+      "duration": 0.547354
+    },
+    {
+      "start": 1053.75,
+      "end": 1054.33,
+      "duration": 0.584708
+    },
+    {
+      "start": 1059.13,
+      "end": 1059.82,
+      "duration": 0.689146
+    },
+    {
+      "start": 1089.22,
+      "end": 1089.72,
+      "duration": 0.503271
+    },
+    {
+      "start": 1099.72,
+      "end": 1101.04,
+      "duration": 1.32065
+    },
+    {
+      "start": 1395.92,
+      "end": 1399.78,
+      "duration": 3.86431
+    },
+    {
+      "start": 1402.21,
+      "end": 1403.29,
+      "duration": 1.07698
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76,
+      76
+    ],
+    "avg": 70.2,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

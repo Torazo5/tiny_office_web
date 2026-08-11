@@ -1,0 +1,406 @@
+{
+  "video_id": "f7gIBB7jKc0",
+  "title": "Clipse: Tiny Desk Concert",
+  "duration": 1356,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/f7gIBB7jKc0.mp3",
+  "description_songs": [
+    "Virginia",
+    "Keys Open Doors",
+    "Momma I'm So Sorry",
+    "Chains & Whips",
+    "Birds Don't Sing",
+    "Grindin"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 657 likes, matched all 6 description song(s), retained 6 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 1,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 5.76,
+      "end": 7.68,
+      "duration": 1.92,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 430.08,
+      "end": 433.44,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 584.64,
+      "end": 594.72,
+      "duration": 10.080000000000041,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 707.52,
+      "end": 708.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 799.1999999999999,
+      "end": 875.04,
+      "duration": 75.84000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 996.9599999999999,
+      "end": 998.4,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1094.3999999999999,
+      "end": 1097.28,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1098.24,
+      "end": 1102.56,
+      "duration": 4.319999999999936,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1103.04,
+      "end": 1104.96,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1105.44,
+      "end": 1106.8799999999999,
+      "duration": 1.4399999999998272,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1107.36,
+      "end": 1109.28,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1109.76,
+      "end": 1111.2,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1112.1599999999999,
+      "end": 1130.8799999999999,
+      "duration": 18.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1294.08,
+      "end": 1295.04,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1311.36,
+      "end": 1312.32,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1314.24,
+      "end": 1315.2,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1320.0,
+      "end": 1321.44,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1321.44,
+      "end": 1351.68,
+      "duration": 30.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 12,
+      "song": "Virginia",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 7.68,
+      "clip_end": 242,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 242,
+      "song": "Keys Open Doors",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 242,
+      "clip_end": 444,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 444,
+      "song": "Momma I'm So Sorry",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 433.44,
+      "clip_end": 584.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 651,
+      "song": "Chains & Whips",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 651,
+      "clip_end": 799.1999999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 885,
+      "song": "Birds Don't Sing",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 875.04,
+      "clip_end": 1112.1599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 1143,
+      "song": "Grindin",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1130.8799999999999,
+      "clip_end": 1294.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.970875,
+      "duration": 0.970875
+    },
+    {
+      "start": 639.004,
+      "end": 639.554,
+      "duration": 0.549333
+    },
+    {
+      "start": 819.533,
+      "end": 820.47,
+      "duration": 0.93725
+    },
+    {
+      "start": 820.765,
+      "end": 821.667,
+      "duration": 0.9015
+    },
+    {
+      "start": 822.053,
+      "end": 822.885,
+      "duration": 0.832042
+    },
+    {
+      "start": 822.895,
+      "end": 823.884,
+      "duration": 0.988625
+    },
+    {
+      "start": 826.234,
+      "end": 827.963,
+      "duration": 1.72896
+    },
+    {
+      "start": 829.675,
+      "end": 830.555,
+      "duration": 0.880188
+    },
+    {
+      "start": 833.809,
+      "end": 834.521,
+      "duration": 0.711708
+    },
+    {
+      "start": 836.115,
+      "end": 837.132,
+      "duration": 1.01767
+    },
+    {
+      "start": 837.453,
+      "end": 838.151,
+      "duration": 0.698292
+    },
+    {
+      "start": 839.622,
+      "end": 840.212,
+      "duration": 0.590208
+    },
+    {
+      "start": 843.609,
+      "end": 844.93,
+      "duration": 1.32121
+    },
+    {
+      "start": 854.241,
+      "end": 856.767,
+      "duration": 2.526
+    },
+    {
+      "start": 858.234,
+      "end": 858.873,
+      "duration": 0.638708
+    },
+    {
+      "start": 859.321,
+      "end": 860.141,
+      "duration": 0.8195
+    },
+    {
+      "start": 861.746,
+      "end": 862.582,
+      "duration": 0.836708
+    },
+    {
+      "start": 862.628,
+      "end": 863.159,
+      "duration": 0.53075
+    },
+    {
+      "start": 871.671,
+      "end": 872.874,
+      "duration": 1.20319
+    },
+    {
+      "start": 1093.94,
+      "end": 1094.95,
+      "duration": 1.01612
+    },
+    {
+      "start": 1097.22,
+      "end": 1098.92,
+      "duration": 1.70252
+    },
+    {
+      "start": 1102.21,
+      "end": 1103.59,
+      "duration": 1.38348
+    },
+    {
+      "start": 1104.91,
+      "end": 1106.12,
+      "duration": 1.21177
+    },
+    {
+      "start": 1106.51,
+      "end": 1108.11,
+      "duration": 1.60494
+    },
+    {
+      "start": 1109.02,
+      "end": 1110.26,
+      "duration": 1.23896
+    },
+    {
+      "start": 1110.75,
+      "end": 1112.08,
+      "duration": 1.32746
+    },
+    {
+      "start": 1127.62,
+      "end": 1128.16,
+      "duration": 0.544333
+    },
+    {
+      "start": 1129.06,
+      "end": 1129.56,
+      "duration": 0.502396
+    },
+    {
+      "start": 1344.55,
+      "end": 1345.2,
+      "duration": 0.650521
+    },
+    {
+      "start": 1345.2,
+      "end": 1345.73,
+      "duration": 0.531125
+    },
+    {
+      "start": 1345.91,
+      "end": 1355.98,
+      "duration": 10.0692
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      45,
+      61,
+      53,
+      61,
+      61
+    ],
+    "avg": 55.7,
+    "min": 45
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

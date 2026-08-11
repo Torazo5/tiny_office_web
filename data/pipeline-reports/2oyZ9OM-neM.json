@@ -1,0 +1,370 @@
+{
+  "video_id": "2oyZ9OM-neM",
+  "title": "Ludovico Einaudi: Tiny Desk Concert",
+  "duration": 1282,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/2oyZ9OM-neM.mp3",
+  "description_songs": [
+    "Experience",
+    "Fly",
+    "Flora",
+    "Low Mist"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1200 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 253.92,
+      "end": 304.8,
+      "duration": 50.880000000000024,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 579.84,
+      "end": 586.08,
+      "duration": 6.240000000000009,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 955.68,
+      "end": 961.92,
+      "duration": 6.240000000000009,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1244.1599999999999,
+      "end": 1262.3999999999999,
+      "duration": 18.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Experience",
+      "corroboration": 2,
+      "silence_match": 3.33621,
+      "clip_start": 0,
+      "clip_end": 252.92,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 82,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 310,
+      "song": "Fly",
+      "corroboration": 2,
+      "silence_match": 304.98,
+      "clip_start": 304.8,
+      "clip_end": 578.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 592,
+      "song": "Flora",
+      "corroboration": 2,
+      "silence_match": 594.521,
+      "clip_start": 586.08,
+      "clip_end": 954.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 962,
+      "song": "Low Mist",
+      "corroboration": 2,
+      "silence_match": 961.885,
+      "clip_start": 961.92,
+      "clip_end": 1243.1599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 3.33621,
+      "end": 3.97448,
+      "duration": 0.638271
+    },
+    {
+      "start": 12.709,
+      "end": 13.5572,
+      "duration": 0.848167
+    },
+    {
+      "start": 24.121,
+      "end": 28.0956,
+      "duration": 3.97463
+    },
+    {
+      "start": 170.654,
+      "end": 171.295,
+      "duration": 0.641312
+    },
+    {
+      "start": 175.322,
+      "end": 176.23,
+      "duration": 0.907542
+    },
+    {
+      "start": 180.321,
+      "end": 180.952,
+      "duration": 0.630437
+    },
+    {
+      "start": 251.867,
+      "end": 253.841,
+      "duration": 1.97427
+    },
+    {
+      "start": 263.308,
+      "end": 263.859,
+      "duration": 0.550917
+    },
+    {
+      "start": 267.061,
+      "end": 267.84,
+      "duration": 0.779438
+    },
+    {
+      "start": 274.129,
+      "end": 274.915,
+      "duration": 0.786
+    },
+    {
+      "start": 280.684,
+      "end": 281.516,
+      "duration": 0.832208
+    },
+    {
+      "start": 285.174,
+      "end": 285.985,
+      "duration": 0.810875
+    },
+    {
+      "start": 287.687,
+      "end": 288.566,
+      "duration": 0.878917
+    },
+    {
+      "start": 290.251,
+      "end": 291.168,
+      "duration": 0.916896
+    },
+    {
+      "start": 291.207,
+      "end": 291.987,
+      "duration": 0.780062
+    },
+    {
+      "start": 304.98,
+      "end": 311.768,
+      "duration": 6.7874
+    },
+    {
+      "start": 577.059,
+      "end": 579.163,
+      "duration": 2.10473
+    },
+    {
+      "start": 579.202,
+      "end": 579.897,
+      "duration": 0.694562
+    },
+    {
+      "start": 586.353,
+      "end": 592.388,
+      "duration": 6.035
+    },
+    {
+      "start": 594.521,
+      "end": 596.457,
+      "duration": 1.93629
+    },
+    {
+      "start": 599.881,
+      "end": 601.865,
+      "duration": 1.9844
+    },
+    {
+      "start": 604.766,
+      "end": 606.345,
+      "duration": 1.57898
+    },
+    {
+      "start": 608.907,
+      "end": 612.619,
+      "duration": 3.7121
+    },
+    {
+      "start": 615.605,
+      "end": 616.863,
+      "duration": 1.25787
+    },
+    {
+      "start": 620.083,
+      "end": 622.736,
+      "duration": 2.65296
+    },
+    {
+      "start": 625.966,
+      "end": 628.036,
+      "duration": 2.07004
+    },
+    {
+      "start": 630.015,
+      "end": 634.468,
+      "duration": 4.45377
+    },
+    {
+      "start": 638.01,
+      "end": 638.525,
+      "duration": 0.515333
+    },
+    {
+      "start": 642.244,
+      "end": 642.85,
+      "duration": 0.606646
+    },
+    {
+      "start": 643.116,
+      "end": 644.758,
+      "duration": 1.64183
+    },
+    {
+      "start": 648.707,
+      "end": 650.128,
+      "duration": 1.42117
+    },
+    {
+      "start": 652.81,
+      "end": 656.913,
+      "duration": 4.10281
+    },
+    {
+      "start": 659.008,
+      "end": 661.022,
+      "duration": 2.01346
+    },
+    {
+      "start": 664.652,
+      "end": 667.533,
+      "duration": 2.88098
+    },
+    {
+      "start": 672.131,
+      "end": 674.653,
+      "duration": 2.52271
+    },
+    {
+      "start": 675.635,
+      "end": 676.767,
+      "duration": 1.13202
+    },
+    {
+      "start": 678.121,
+      "end": 683.632,
+      "duration": 5.51119
+    },
+    {
+      "start": 686.455,
+      "end": 687.425,
+      "duration": 0.969417
+    },
+    {
+      "start": 687.44,
+      "end": 688.7,
+      "duration": 1.25967
+    },
+    {
+      "start": 691.391,
+      "end": 692.278,
+      "duration": 0.887604
+    },
+    {
+      "start": 921.03,
+      "end": 922.275,
+      "duration": 1.24517
+    },
+    {
+      "start": 929.623,
+      "end": 932.966,
+      "duration": 3.34329
+    },
+    {
+      "start": 937.42,
+      "end": 939.92,
+      "duration": 2.50031
+    },
+    {
+      "start": 943.153,
+      "end": 955.753,
+      "duration": 12.6
+    },
+    {
+      "start": 961.885,
+      "end": 963.301,
+      "duration": 1.416
+    },
+    {
+      "start": 1008.84,
+      "end": 1010.57,
+      "duration": 1.72829
+    },
+    {
+      "start": 1241.76,
+      "end": 1244.78,
+      "duration": 3.02687
+    },
+    {
+      "start": 1262.87,
+      "end": 1281.79,
+      "duration": 18.9202
+    }
+  ],
+  "confidence": {
+    "scores": [
+      82,
+      90,
+      90,
+      90
+    ],
+    "avg": 88.0,
+    "min": 82
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/2oyZ9OM-neM.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

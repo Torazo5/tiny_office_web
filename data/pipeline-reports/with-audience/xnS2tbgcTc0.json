@@ -1,0 +1,285 @@
+{
+  "video_id": "xnS2tbgcTc0",
+  "title": "Summer Walker: NPR Music Tiny Desk Concert",
+  "duration": 888,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/xnS2tbgcTc0.mp3",
+  "description_songs": [
+    "Session 32",
+    "Wasted",
+    "Girls Need Love",
+    "Riot",
+    "Playing Games"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2400 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 160.79999999999998,
+      "end": 165.6,
+      "duration": 4.800000000000011,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 318.24,
+      "end": 323.52,
+      "duration": 5.279999999999973,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 487.68,
+      "end": 551.04,
+      "duration": 63.35999999999996,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 667.68,
+      "end": 685.92,
+      "duration": 18.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 841.92,
+      "end": 879.36,
+      "duration": 37.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Session 32",
+      "corroboration": 1,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 160.79999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 170,
+      "song": "Wasted",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 165.6,
+      "clip_end": 318.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 325,
+      "song": "Girls Need Love",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 323.52,
+      "clip_end": 487.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 554,
+      "song": "Riot",
+      "corroboration": 0,
+      "silence_match": 553.782,
+      "clip_start": 551.04,
+      "clip_end": 667.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 689,
+      "song": "Playing Games",
+      "corroboration": 0,
+      "silence_match": 685.919,
+      "clip_start": 685.92,
+      "clip_end": 841.92,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.10675,
+      "duration": 5.10675
+    },
+    {
+      "start": 18.9838,
+      "end": 19.9916,
+      "duration": 1.00781
+    },
+    {
+      "start": 158.137,
+      "end": 160.362,
+      "duration": 2.22473
+    },
+    {
+      "start": 160.38,
+      "end": 160.898,
+      "duration": 0.518312
+    },
+    {
+      "start": 245.937,
+      "end": 246.613,
+      "duration": 0.676229
+    },
+    {
+      "start": 340.775,
+      "end": 341.432,
+      "duration": 0.657458
+    },
+    {
+      "start": 486.072,
+      "end": 486.651,
+      "duration": 0.578958
+    },
+    {
+      "start": 515.843,
+      "end": 518.935,
+      "duration": 3.0921
+    },
+    {
+      "start": 521.23,
+      "end": 521.804,
+      "duration": 0.573771
+    },
+    {
+      "start": 522.277,
+      "end": 523.056,
+      "duration": 0.778687
+    },
+    {
+      "start": 527.733,
+      "end": 528.351,
+      "duration": 0.618729
+    },
+    {
+      "start": 544.903,
+      "end": 545.504,
+      "duration": 0.601687
+    },
+    {
+      "start": 550.669,
+      "end": 553.196,
+      "duration": 2.52733
+    },
+    {
+      "start": 553.782,
+      "end": 554.285,
+      "duration": 0.502437
+    },
+    {
+      "start": 554.451,
+      "end": 555.263,
+      "duration": 0.811583
+    },
+    {
+      "start": 561.493,
+      "end": 562.266,
+      "duration": 0.772833
+    },
+    {
+      "start": 563.797,
+      "end": 564.596,
+      "duration": 0.799229
+    },
+    {
+      "start": 578.17,
+      "end": 578.887,
+      "duration": 0.717208
+    },
+    {
+      "start": 615.313,
+      "end": 615.953,
+      "duration": 0.640271
+    },
+    {
+      "start": 664.688,
+      "end": 665.229,
+      "duration": 0.540958
+    },
+    {
+      "start": 665.36,
+      "end": 667.232,
+      "duration": 1.87267
+    },
+    {
+      "start": 681.338,
+      "end": 682.64,
+      "duration": 1.30135
+    },
+    {
+      "start": 683.246,
+      "end": 683.892,
+      "duration": 0.645917
+    },
+    {
+      "start": 684.449,
+      "end": 685.031,
+      "duration": 0.58275
+    },
+    {
+      "start": 685.919,
+      "end": 689.212,
+      "duration": 3.2931
+    },
+    {
+      "start": 870.162,
+      "end": 870.735,
+      "duration": 0.572875
+    },
+    {
+      "start": 871.216,
+      "end": 871.767,
+      "duration": 0.550937
+    },
+    {
+      "start": 880.413,
+      "end": 887.687,
+      "duration": 7.27415
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      61,
+      68,
+      76,
+      76
+    ],
+    "avg": 71.2,
+    "min": 61
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

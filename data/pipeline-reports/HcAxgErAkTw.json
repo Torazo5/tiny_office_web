@@ -1,0 +1,114 @@
+{
+  "video_id": "HcAxgErAkTw",
+  "title": "Cigarettes After Sex: NPR Music Tiny Desk Concert",
+  "duration": 899,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/HcAxgErAkTw.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 4,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 326.4,
+      "end": 347.52,
+      "duration": 21.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 564.48,
+      "end": 578.88,
+      "duration": 14.399999999999977,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 881.28,
+      "end": 891.84,
+      "duration": 10.56000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 324.763,
+      "end": 326.326,
+      "duration": 1.56344
+    },
+    {
+      "start": 340.634,
+      "end": 342.543,
+      "duration": 1.90881
+    },
+    {
+      "start": 342.548,
+      "end": 343.052,
+      "duration": 0.503979
+    },
+    {
+      "start": 343.677,
+      "end": 346.451,
+      "duration": 2.77462
+    },
+    {
+      "start": 346.501,
+      "end": 347.249,
+      "duration": 0.747625
+    },
+    {
+      "start": 347.349,
+      "end": 347.981,
+      "duration": 0.631625
+    },
+    {
+      "start": 563.7,
+      "end": 564.807,
+      "duration": 1.10642
+    },
+    {
+      "start": 576.288,
+      "end": 577.595,
+      "duration": 1.3064
+    },
+    {
+      "start": 578.845,
+      "end": 580.563,
+      "duration": 1.7179
+    },
+    {
+      "start": 880.503,
+      "end": 881.1,
+      "duration": 0.597
+    },
+    {
+      "start": 891.683,
+      "end": 898.752,
+      "duration": 7.06854
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

@@ -1,0 +1,216 @@
+{
+  "video_id": "SjFo6l4c-oc",
+  "title": "Gary Clark Jr.: NPR Music Tiny Desk Concert",
+  "duration": 919,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/SjFo6l4c-oc.mp3",
+  "description_songs": [
+    "What About Us",
+    "When I'm Gone",
+    "Pearl Cadillac"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 203 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 255.35999999999999,
+      "end": 300.48,
+      "duration": 45.12000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 522.24,
+      "end": 552.0,
+      "duration": 29.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 555.84,
+      "end": 557.76,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 559.1999999999999,
+      "end": 560.64,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 888.0,
+      "end": 918.72,
+      "duration": 30.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "What About Us",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 254.35999999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 301,
+      "song": "When I'm Gone",
+      "corroboration": 0,
+      "silence_match": 301.458,
+      "clip_start": 300.48,
+      "clip_end": 521.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 559,
+      "song": "Pearl Cadillac",
+      "corroboration": 0,
+      "silence_match": 558.371,
+      "clip_start": 560.64,
+      "clip_end": 887.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 270.091,
+      "end": 270.616,
+      "duration": 0.524021
+    },
+    {
+      "start": 281.278,
+      "end": 282.409,
+      "duration": 1.13102
+    },
+    {
+      "start": 284.209,
+      "end": 285.156,
+      "duration": 0.946875
+    },
+    {
+      "start": 285.779,
+      "end": 286.379,
+      "duration": 0.600104
+    },
+    {
+      "start": 297.502,
+      "end": 298.195,
+      "duration": 0.693229
+    },
+    {
+      "start": 300.076,
+      "end": 301.203,
+      "duration": 1.1264
+    },
+    {
+      "start": 301.458,
+      "end": 302.033,
+      "duration": 0.574396
+    },
+    {
+      "start": 302.058,
+      "end": 302.584,
+      "duration": 0.525625
+    },
+    {
+      "start": 302.599,
+      "end": 303.108,
+      "duration": 0.509271
+    },
+    {
+      "start": 537.924,
+      "end": 538.648,
+      "duration": 0.724458
+    },
+    {
+      "start": 542.409,
+      "end": 544.299,
+      "duration": 1.8894
+    },
+    {
+      "start": 551.005,
+      "end": 551.526,
+      "duration": 0.520396
+    },
+    {
+      "start": 551.557,
+      "end": 552.179,
+      "duration": 0.622333
+    },
+    {
+      "start": 555.082,
+      "end": 556.513,
+      "duration": 1.43104
+    },
+    {
+      "start": 558.371,
+      "end": 559.769,
+      "duration": 1.3979
+    },
+    {
+      "start": 560.526,
+      "end": 561.275,
+      "duration": 0.748687
+    },
+    {
+      "start": 886.012,
+      "end": 887.34,
+      "duration": 1.32744
+    },
+    {
+      "start": 912.312,
+      "end": 912.864,
+      "duration": 0.551771
+    },
+    {
+      "start": 917.918,
+      "end": 919.22,
+      "duration": 1.30175
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76
+    ],
+    "avg": 68.3,
+    "min": 53
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/SjFo6l4c-oc.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

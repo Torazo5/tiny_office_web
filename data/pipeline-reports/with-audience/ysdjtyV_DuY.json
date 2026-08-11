@@ -1,0 +1,402 @@
+{
+  "video_id": "ysdjtyV_DuY",
+  "title": "The Lumineers: NPR Music Tiny Desk Concert",
+  "duration": 1480,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/ysdjtyV_DuY.mp3",
+  "description_songs": [
+    "Gloria",
+    "Leader of the Landslide",
+    "April (instrumental)",
+    "Salt And The Sea",
+    "Stubborn Love"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2700 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.96,
+      "end": 3.84,
+      "duration": 2.88,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 207.84,
+      "end": 345.12,
+      "duration": 137.28,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 698.4,
+      "end": 712.8,
+      "duration": 14.399999999999977,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 733.92,
+      "end": 737.28,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 739.1999999999999,
+      "end": 740.64,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 743.52,
+      "end": 747.36,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 748.3199999999999,
+      "end": 749.76,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 750.24,
+      "end": 752.16,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 758.88,
+      "end": 760.8,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 761.76,
+      "end": 763.2,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 768.9599999999999,
+      "end": 771.36,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 774.72,
+      "end": 780.0,
+      "duration": 5.279999999999973,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 782.4,
+      "end": 784.3199999999999,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 787.1999999999999,
+      "end": 788.64,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1101.12,
+      "end": 1174.08,
+      "duration": 72.96000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1448.1599999999999,
+      "end": 1476.96,
+      "duration": 28.800000000000182,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 8,
+      "song": "Gloria",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 3.84,
+      "clip_end": 207.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 345,
+      "song": "Leader of the Landslide",
+      "corroboration": 0,
+      "silence_match": 344.847,
+      "clip_start": 345.12,
+      "clip_end": 698.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 785,
+      "song": "April (instrumental)",
+      "corroboration": 0,
+      "silence_match": 788.376,
+      "clip_start": 788.64,
+      "clip_end": 844,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 844,
+      "song": "Salt And The Sea",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 844,
+      "clip_end": 1101.12,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 1170,
+      "song": "Stubborn Love",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1174.08,
+      "clip_end": 1448.1599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.637042,
+      "duration": 0.637042
+    },
+    {
+      "start": 207.404,
+      "end": 208.128,
+      "duration": 0.724646
+    },
+    {
+      "start": 221.693,
+      "end": 222.516,
+      "duration": 0.822917
+    },
+    {
+      "start": 222.748,
+      "end": 223.395,
+      "duration": 0.647479
+    },
+    {
+      "start": 223.396,
+      "end": 224.776,
+      "duration": 1.38081
+    },
+    {
+      "start": 224.965,
+      "end": 226.349,
+      "duration": 1.38427
+    },
+    {
+      "start": 231.937,
+      "end": 232.466,
+      "duration": 0.528167
+    },
+    {
+      "start": 232.889,
+      "end": 233.439,
+      "duration": 0.549875
+    },
+    {
+      "start": 235.472,
+      "end": 236.587,
+      "duration": 1.115
+    },
+    {
+      "start": 236.645,
+      "end": 238.74,
+      "duration": 2.09523
+    },
+    {
+      "start": 239.364,
+      "end": 240.221,
+      "duration": 0.856354
+    },
+    {
+      "start": 288.403,
+      "end": 288.907,
+      "duration": 0.504333
+    },
+    {
+      "start": 290.221,
+      "end": 290.834,
+      "duration": 0.612729
+    },
+    {
+      "start": 297.458,
+      "end": 298.13,
+      "duration": 0.671833
+    },
+    {
+      "start": 298.13,
+      "end": 298.681,
+      "duration": 0.550375
+    },
+    {
+      "start": 302.556,
+      "end": 303.139,
+      "duration": 0.583562
+    },
+    {
+      "start": 305.069,
+      "end": 305.62,
+      "duration": 0.550917
+    },
+    {
+      "start": 316.669,
+      "end": 317.815,
+      "duration": 1.14617
+    },
+    {
+      "start": 330.494,
+      "end": 331.136,
+      "duration": 0.642708
+    },
+    {
+      "start": 340.807,
+      "end": 341.336,
+      "duration": 0.529792
+    },
+    {
+      "start": 344.847,
+      "end": 345.394,
+      "duration": 0.547167
+    },
+    {
+      "start": 345.394,
+      "end": 346.132,
+      "duration": 0.738792
+    },
+    {
+      "start": 457.307,
+      "end": 457.832,
+      "duration": 0.524104
+    },
+    {
+      "start": 458.662,
+      "end": 459.282,
+      "duration": 0.620396
+    },
+    {
+      "start": 694.744,
+      "end": 698.58,
+      "duration": 3.83646
+    },
+    {
+      "start": 728.159,
+      "end": 728.709,
+      "duration": 0.549979
+    },
+    {
+      "start": 758.412,
+      "end": 758.956,
+      "duration": 0.543167
+    },
+    {
+      "start": 788.376,
+      "end": 789.089,
+      "duration": 0.713562
+    },
+    {
+      "start": 790.256,
+      "end": 791.655,
+      "duration": 1.39912
+    },
+    {
+      "start": 1099.46,
+      "end": 1100.75,
+      "duration": 1.29092
+    },
+    {
+      "start": 1116.65,
+      "end": 1119.73,
+      "duration": 3.0854
+    },
+    {
+      "start": 1147.65,
+      "end": 1148.44,
+      "duration": 0.789083
+    },
+    {
+      "start": 1149.31,
+      "end": 1149.98,
+      "duration": 0.674854
+    },
+    {
+      "start": 1150.58,
+      "end": 1151.08,
+      "duration": 0.506083
+    },
+    {
+      "start": 1159.21,
+      "end": 1159.79,
+      "duration": 0.585208
+    },
+    {
+      "start": 1476.78,
+      "end": 1479.95,
+      "duration": 3.16533
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      76,
+      68,
+      53,
+      61
+    ],
+    "avg": 63.8,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

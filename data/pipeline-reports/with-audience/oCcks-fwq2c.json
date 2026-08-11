@@ -1,0 +1,330 @@
+{
+  "video_id": "oCcks-fwq2c",
+  "title": "Post Malone: Tiny Desk Concert",
+  "duration": 1088,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/oCcks-fwq2c.mp3",
+  "description_songs": [
+    "Sunflower",
+    "I Fall Apart",
+    "Circles",
+    "Enough Is Enough"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1300 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 2,
+    "rejected": 1,
+    "filtered_entries": 2
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 185.28,
+      "end": 258.24,
+      "duration": 72.96000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 468.0,
+      "end": 494.4,
+      "duration": 26.399999999999977,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 503.03999999999996,
+      "end": 504.48,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 740.16,
+      "end": 796.8,
+      "duration": 56.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1004.64,
+      "end": 1083.36,
+      "duration": 78.71999999999991,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Sunflower",
+      "corroboration": 1,
+      "silence_match": 0.390875,
+      "clip_start": 0,
+      "clip_end": 185.28,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 255,
+      "song": "I Fall Apart",
+      "corroboration": 1,
+      "silence_match": 254.843,
+      "clip_start": 258.24,
+      "clip_end": 468.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 502,
+      "song": "Circles",
+      "corroboration": 0,
+      "silence_match": 502.56,
+      "clip_start": 504.48,
+      "clip_end": 740.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 796,
+      "song": "Enough Is Enough",
+      "corroboration": 0,
+      "silence_match": 796.559,
+      "clip_start": 796.8,
+      "clip_end": 1004.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.390875,
+      "end": 1.13042,
+      "duration": 0.739542
+    },
+    {
+      "start": 1.13698,
+      "end": 1.87333,
+      "duration": 0.736354
+    },
+    {
+      "start": 1.89725,
+      "end": 2.65129,
+      "duration": 0.754042
+    },
+    {
+      "start": 205.733,
+      "end": 207.321,
+      "duration": 1.58819
+    },
+    {
+      "start": 211.196,
+      "end": 211.961,
+      "duration": 0.764729
+    },
+    {
+      "start": 242.516,
+      "end": 243.642,
+      "duration": 1.12585
+    },
+    {
+      "start": 243.642,
+      "end": 244.427,
+      "duration": 0.785021
+    },
+    {
+      "start": 247.18,
+      "end": 247.687,
+      "duration": 0.506896
+    },
+    {
+      "start": 254.843,
+      "end": 255.909,
+      "duration": 1.06621
+    },
+    {
+      "start": 275.95,
+      "end": 276.463,
+      "duration": 0.513417
+    },
+    {
+      "start": 288.747,
+      "end": 289.305,
+      "duration": 0.558042
+    },
+    {
+      "start": 301.798,
+      "end": 302.332,
+      "duration": 0.534354
+    },
+    {
+      "start": 466.73,
+      "end": 468.02,
+      "duration": 1.28958
+    },
+    {
+      "start": 486.106,
+      "end": 486.883,
+      "duration": 0.776562
+    },
+    {
+      "start": 489.35,
+      "end": 492.482,
+      "duration": 3.13225
+    },
+    {
+      "start": 492.784,
+      "end": 493.89,
+      "duration": 1.10577
+    },
+    {
+      "start": 499.585,
+      "end": 500.489,
+      "duration": 0.903958
+    },
+    {
+      "start": 500.963,
+      "end": 502.051,
+      "duration": 1.08777
+    },
+    {
+      "start": 502.56,
+      "end": 503.083,
+      "duration": 0.522875
+    },
+    {
+      "start": 506.099,
+      "end": 506.698,
+      "duration": 0.598667
+    },
+    {
+      "start": 506.718,
+      "end": 507.253,
+      "duration": 0.535187
+    },
+    {
+      "start": 507.273,
+      "end": 507.814,
+      "duration": 0.540625
+    },
+    {
+      "start": 507.834,
+      "end": 508.363,
+      "duration": 0.529521
+    },
+    {
+      "start": 612.605,
+      "end": 614.285,
+      "duration": 1.67942
+    },
+    {
+      "start": 757.899,
+      "end": 758.409,
+      "duration": 0.509854
+    },
+    {
+      "start": 760.482,
+      "end": 762.34,
+      "duration": 1.85881
+    },
+    {
+      "start": 778.679,
+      "end": 779.184,
+      "duration": 0.504937
+    },
+    {
+      "start": 781.86,
+      "end": 782.612,
+      "duration": 0.752396
+    },
+    {
+      "start": 787.478,
+      "end": 788.903,
+      "duration": 1.42512
+    },
+    {
+      "start": 790.011,
+      "end": 790.588,
+      "duration": 0.576229
+    },
+    {
+      "start": 796.559,
+      "end": 797.305,
+      "duration": 0.746563
+    },
+    {
+      "start": 797.338,
+      "end": 798.082,
+      "duration": 0.744042
+    },
+    {
+      "start": 847.381,
+      "end": 848.139,
+      "duration": 0.757875
+    },
+    {
+      "start": 905.986,
+      "end": 906.555,
+      "duration": 0.569771
+    },
+    {
+      "start": 906.831,
+      "end": 907.537,
+      "duration": 0.706021
+    },
+    {
+      "start": 1047.34,
+      "end": 1047.98,
+      "duration": 0.640021
+    },
+    {
+      "start": 1076.27,
+      "end": 1077.21,
+      "duration": 0.937667
+    },
+    {
+      "start": 1077.37,
+      "end": 1078.51,
+      "duration": 1.13623
+    },
+    {
+      "start": 1081.67,
+      "end": 1082.79,
+      "duration": 1.11881
+    },
+    {
+      "start": 1084.25,
+      "end": 1087.72,
+      "duration": 3.47033
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      83,
+      76,
+      76
+    ],
+    "avg": 77.5,
+    "min": 75
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

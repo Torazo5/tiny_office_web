@@ -1,0 +1,211 @@
+{
+  "video_id": "BIY_lEg8kBA",
+  "title": "Kehlani: Tiny Desk Concert",
+  "duration": 895,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/BIY_lEg8kBA.mp3",
+  "description_songs": [
+    "Nights Like This",
+    "Distraction",
+    "The Way",
+    "Can I",
+    "After Hours"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2900 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 0.48,
+      "duration": 0.48,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 376.32,
+      "end": 376.8,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 379.2,
+      "end": 383.52,
+      "duration": 4.319999999999993,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 450.24,
+      "end": 452.16,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 522.24,
+      "end": 528.0,
+      "duration": 5.759999999999991,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 538.56,
+      "end": 541.44,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 542.4,
+      "end": 543.84,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 544.3199999999999,
+      "end": 546.72,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 552.96,
+      "end": 555.84,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 561.12,
+      "end": 564.0,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 566.4,
+      "end": 567.84,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 575.04,
+      "end": 576.48,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 861.6,
+      "end": 892.8,
+      "duration": 31.199999999999932,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Nights Like This",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 0.48,
+      "clip_end": 170,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 170,
+      "song": "Distraction",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 170,
+      "clip_end": 295,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 52
+    },
+    {
+      "seconds": 295,
+      "song": "The Way",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 295,
+      "clip_end": 376.32,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 388,
+      "song": "Can I",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 383.52,
+      "clip_end": 522.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 594,
+      "song": "After Hours",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 576.48,
+      "clip_end": 861.6,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 886.121,
+      "end": 886.893,
+      "duration": 0.772562
+    },
+    {
+      "start": 892.526,
+      "end": 894.607,
+      "duration": 2.08117
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      52,
+      60,
+      68,
+      68
+    ],
+    "avg": 61.6,
+    "min": 52
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

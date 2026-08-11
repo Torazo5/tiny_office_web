@@ -58,6 +58,15 @@ export interface Performance {
   reviews: Review[];
 }
 
+export type PerformanceCutKey = "no-audience" | "with-audience";
+
+export interface PerformanceCutVariant {
+  key: PerformanceCutKey;
+  name: string;
+  description: string;
+  songs: ListeningPresetSong[];
+}
+
 export interface Review {
   id?: string;
   user: string;

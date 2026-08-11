@@ -90,17 +90,19 @@ The `supabase/migrations/` directory is the schema source of truth. Apply all
 migrations in order, including the private-playlist and transactional-write
 migrations, through the approved Supabase deployment workflow.
 
-The checked-in pipeline snapshot in `data/pipeline-reports/` contains 48 source
-report JSON files plus `_mass_pull_summary.json`. Seed or refresh the catalog
-with:
+The checked-in pipeline snapshot in `data/pipeline-reports/` contains the
+default no-audience cut (199 source report JSON files plus
+`_mass_pull_summary.json`). The previous applause-inclusive cut is preserved
+under `data/pipeline-reports/with-audience/`. Seed or refresh both cuts with:
 
 ```bash
 npm run seed:pipeline
 ```
 
-That command upserts performances and songs and removes stale pipeline rows.
-The reports are a snapshot, not a live sync; refresh them from the pipeline
-repository before running the seed again.
+That command upserts the default performances and songs, refreshes both cut
+variants, and removes stale pipeline rows. The reports are a snapshot, not a
+live sync; refresh them from the pipeline repository before running the seed
+again.
 
 ## Admin configuration
 

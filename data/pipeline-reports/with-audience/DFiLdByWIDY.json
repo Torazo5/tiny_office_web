@@ -1,0 +1,305 @@
+{
+  "video_id": "DFiLdByWIDY",
+  "title": "Lizzo: NPR Music Tiny Desk Concert",
+  "duration": 1019,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/DFiLdByWIDY.mp3",
+  "description_songs": [
+    "Cuz I Love You",
+    "Truth Hurts",
+    "Juice"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 33 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 6.72,
+      "end": 8.16,
+      "duration": 1.4400000000000004,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 8.64,
+      "end": 11.04,
+      "duration": 2.3999999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 16.32,
+      "end": 17.76,
+      "duration": 1.4400000000000013,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 188.16,
+      "end": 190.55999999999997,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 229.92,
+      "end": 231.35999999999999,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 231.84,
+      "end": 253.92,
+      "duration": 22.079999999999984,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 263.52,
+      "end": 265.92,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 292.32,
+      "end": 294.24,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 297.59999999999997,
+      "end": 299.04,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 308.15999999999997,
+      "end": 310.56,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 362.88,
+      "end": 365.28000000000003,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 448.8,
+      "end": 450.72,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 535.1999999999999,
+      "end": 537.12,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 537.12,
+      "end": 544.32,
+      "duration": 7.2000000000000455,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 547.1999999999999,
+      "end": 547.68,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 550.0799999999999,
+      "end": 550.56,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 562.0799999999999,
+      "end": 563.52,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 571.68,
+      "end": 573.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 580.3199999999999,
+      "end": 583.2,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 608.64,
+      "end": 610.56,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 628.3199999999999,
+      "end": 629.76,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 632.16,
+      "end": 633.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 636.48,
+      "end": 638.4,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 716.16,
+      "end": 717.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 996.9599999999999,
+      "end": 1017.6,
+      "duration": 20.6400000000001,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Cuz I Love You",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 17.76,
+      "clip_end": 231.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 368,
+      "song": "Truth Hurts",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 365.28000000000003,
+      "clip_end": 537.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 672,
+      "song": "Juice",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 638.4,
+      "clip_end": 996.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.28887,
+      "duration": 5.28887
+    },
+    {
+      "start": 43.8358,
+      "end": 45.965,
+      "duration": 2.12921
+    },
+    {
+      "start": 47.8097,
+      "end": 48.4313,
+      "duration": 0.621646
+    },
+    {
+      "start": 147.46,
+      "end": 147.999,
+      "duration": 0.539396
+    },
+    {
+      "start": 229.285,
+      "end": 229.964,
+      "duration": 0.678312
+    },
+    {
+      "start": 249.475,
+      "end": 250.197,
+      "duration": 0.721938
+    },
+    {
+      "start": 263.059,
+      "end": 264.41,
+      "duration": 1.35119
+    },
+    {
+      "start": 316.499,
+      "end": 317.268,
+      "duration": 0.769292
+    },
+    {
+      "start": 320.591,
+      "end": 321.408,
+      "duration": 0.81675
+    },
+    {
+      "start": 1017.47,
+      "end": 1019.02,
+      "duration": 1.54937
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      61,
+      61
+    ],
+    "avg": 66.0,
+    "min": 61
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

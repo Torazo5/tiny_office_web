@@ -1,0 +1,568 @@
+{
+  "video_id": "jVyb_yLGrHE",
+  "title": "Wale: NPR Music Tiny Desk Concert",
+  "duration": 1699,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/jVyb_yLGrHE.mp3",
+  "description_songs": [
+    "Lotus Flower Bomb",
+    "LoveHate Thing",
+    "CC White",
+    "Sexy Lady",
+    "Sue Me",
+    "On Chill"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 6 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 13 usable episode(s), took top 5; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 4.32,
+      "end": 6.24,
+      "duration": 1.92,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 7.68,
+      "end": 19.2,
+      "duration": 11.52,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 247.2,
+      "end": 262.08,
+      "duration": 14.879999999999995,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 264.48,
+      "end": 285.6,
+      "duration": 21.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 444.96,
+      "end": 491.04,
+      "duration": 46.08000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 693.12,
+      "end": 695.52,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 716.64,
+      "end": 718.08,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 783.36,
+      "end": 784.3199999999999,
+      "duration": 0.9599999999999227,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 788.64,
+      "end": 821.76,
+      "duration": 33.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 961.4399999999999,
+      "end": 962.4,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 966.24,
+      "end": 967.68,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 967.68,
+      "end": 1001.28,
+      "duration": 33.60000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1007.52,
+      "end": 1008.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1075.2,
+      "end": 1076.6399999999999,
+      "duration": 1.4399999999998272,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1221.12,
+      "end": 1248.96,
+      "duration": 27.840000000000146,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1267.68,
+      "end": 1291.68,
+      "duration": 24.0,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1292.1599999999999,
+      "end": 1299.84,
+      "duration": 7.680000000000064,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1302.72,
+      "end": 1305.6,
+      "duration": 2.8799999999998818,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1306.08,
+      "end": 1325.76,
+      "duration": 19.680000000000064,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1327.2,
+      "end": 1334.3999999999999,
+      "duration": 7.199999999999818,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1626.72,
+      "end": 1629.12,
+      "duration": 2.3999999999998636,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Lotus Flower Bomb",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 19.2,
+      "clip_end": 247.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 264.48,
+      "song": "LoveHate Thing",
+      "corroboration": 0,
+      "silence_match": 270.282,
+      "clip_start": 285.6,
+      "clip_end": 444.96,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 444.96,
+      "song": "CC White",
+      "corroboration": 0,
+      "silence_match": 443.294,
+      "clip_start": 491.04,
+      "clip_end": 783.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 788.64,
+      "song": "Sexy Lady",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 821.76,
+      "clip_end": 961.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 967.68,
+      "song": "Sue Me",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1001.28,
+      "clip_end": 1221.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 1221.12,
+      "song": "On Chill",
+      "corroboration": 0,
+      "silence_match": 1224.21,
+      "clip_start": 1221.12,
+      "clip_end": 1699,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 50
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.10033,
+      "duration": 5.10033
+    },
+    {
+      "start": 17.9586,
+      "end": 18.5645,
+      "duration": 0.605875
+    },
+    {
+      "start": 252.575,
+      "end": 253.186,
+      "duration": 0.611104
+    },
+    {
+      "start": 257.099,
+      "end": 257.912,
+      "duration": 0.812646
+    },
+    {
+      "start": 270.282,
+      "end": 270.948,
+      "duration": 0.666125
+    },
+    {
+      "start": 271.41,
+      "end": 272.418,
+      "duration": 1.00875
+    },
+    {
+      "start": 273.391,
+      "end": 274.003,
+      "duration": 0.612687
+    },
+    {
+      "start": 279.699,
+      "end": 280.212,
+      "duration": 0.513208
+    },
+    {
+      "start": 443.294,
+      "end": 444.352,
+      "duration": 1.05812
+    },
+    {
+      "start": 460.22,
+      "end": 461.184,
+      "duration": 0.963187
+    },
+    {
+      "start": 464.438,
+      "end": 465.195,
+      "duration": 0.757667
+    },
+    {
+      "start": 468.122,
+      "end": 468.692,
+      "duration": 0.5695
+    },
+    {
+      "start": 469.324,
+      "end": 470.336,
+      "duration": 1.012
+    },
+    {
+      "start": 472.776,
+      "end": 473.409,
+      "duration": 0.633062
+    },
+    {
+      "start": 476.962,
+      "end": 478.112,
+      "duration": 1.14969
+    },
+    {
+      "start": 478.182,
+      "end": 479.095,
+      "duration": 0.913042
+    },
+    {
+      "start": 479.172,
+      "end": 479.843,
+      "duration": 0.670542
+    },
+    {
+      "start": 481.388,
+      "end": 481.892,
+      "duration": 0.503521
+    },
+    {
+      "start": 481.93,
+      "end": 482.585,
+      "duration": 0.655729
+    },
+    {
+      "start": 482.607,
+      "end": 484.047,
+      "duration": 1.44067
+    },
+    {
+      "start": 488.216,
+      "end": 489.111,
+      "duration": 0.894604
+    },
+    {
+      "start": 798.272,
+      "end": 798.877,
+      "duration": 0.605
+    },
+    {
+      "start": 799.257,
+      "end": 800.112,
+      "duration": 0.85575
+    },
+    {
+      "start": 800.936,
+      "end": 802.539,
+      "duration": 1.60269
+    },
+    {
+      "start": 802.961,
+      "end": 803.497,
+      "duration": 0.535208
+    },
+    {
+      "start": 804.355,
+      "end": 805.047,
+      "duration": 0.692167
+    },
+    {
+      "start": 810.152,
+      "end": 810.874,
+      "duration": 0.722417
+    },
+    {
+      "start": 815.225,
+      "end": 816.088,
+      "duration": 0.862479
+    },
+    {
+      "start": 818.165,
+      "end": 818.685,
+      "duration": 0.519479
+    },
+    {
+      "start": 820.765,
+      "end": 821.418,
+      "duration": 0.653833
+    },
+    {
+      "start": 977.765,
+      "end": 978.452,
+      "duration": 0.687146
+    },
+    {
+      "start": 980.573,
+      "end": 981.126,
+      "duration": 0.55325
+    },
+    {
+      "start": 981.725,
+      "end": 982.355,
+      "duration": 0.630354
+    },
+    {
+      "start": 992.151,
+      "end": 992.851,
+      "duration": 0.700167
+    },
+    {
+      "start": 993.111,
+      "end": 993.893,
+      "duration": 0.781479
+    },
+    {
+      "start": 995.007,
+      "end": 995.744,
+      "duration": 0.736875
+    },
+    {
+      "start": 997.136,
+      "end": 997.651,
+      "duration": 0.515708
+    },
+    {
+      "start": 998.274,
+      "end": 998.971,
+      "duration": 0.697
+    },
+    {
+      "start": 999.38,
+      "end": 1000.3,
+      "duration": 0.922
+    },
+    {
+      "start": 1000.98,
+      "end": 1001.93,
+      "duration": 0.944187
+    },
+    {
+      "start": 1224.21,
+      "end": 1225.28,
+      "duration": 1.06906
+    },
+    {
+      "start": 1231.26,
+      "end": 1231.82,
+      "duration": 0.561229
+    },
+    {
+      "start": 1232.36,
+      "end": 1232.93,
+      "duration": 0.567729
+    },
+    {
+      "start": 1234.8,
+      "end": 1235.42,
+      "duration": 0.619021
+    },
+    {
+      "start": 1243.13,
+      "end": 1243.75,
+      "duration": 0.611521
+    },
+    {
+      "start": 1244.84,
+      "end": 1245.34,
+      "duration": 0.500125
+    },
+    {
+      "start": 1245.84,
+      "end": 1246.37,
+      "duration": 0.536
+    },
+    {
+      "start": 1248.74,
+      "end": 1249.53,
+      "duration": 0.790542
+    },
+    {
+      "start": 1250.45,
+      "end": 1251.25,
+      "duration": 0.798937
+    },
+    {
+      "start": 1251.3,
+      "end": 1251.95,
+      "duration": 0.642146
+    },
+    {
+      "start": 1252.05,
+      "end": 1252.62,
+      "duration": 0.570958
+    },
+    {
+      "start": 1270.15,
+      "end": 1270.95,
+      "duration": 0.803396
+    },
+    {
+      "start": 1270.95,
+      "end": 1271.57,
+      "duration": 0.611833
+    },
+    {
+      "start": 1281.67,
+      "end": 1282.41,
+      "duration": 0.74025
+    },
+    {
+      "start": 1284.3,
+      "end": 1284.84,
+      "duration": 0.534792
+    },
+    {
+      "start": 1285.25,
+      "end": 1285.98,
+      "duration": 0.726729
+    },
+    {
+      "start": 1288.1,
+      "end": 1288.78,
+      "duration": 0.677479
+    },
+    {
+      "start": 1334.68,
+      "end": 1335.84,
+      "duration": 1.15831
+    },
+    {
+      "start": 1691.22,
+      "end": 1698.83,
+      "duration": 7.60919
+    }
+  ],
+  "confidence": {
+    "scores": [
+      66,
+      66,
+      66,
+      51,
+      51,
+      50
+    ],
+    "avg": 58.3,
+    "min": 50
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

@@ -1,0 +1,96 @@
+{
+  "video_id": "-rl26QKPHtE",
+  "title": "Mariachi Flor De Toloache: NPR Music Tiny Desk Concert",
+  "duration": 1228,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/-rl26QKPHtE.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 296.64,
+      "end": 314.88,
+      "duration": 18.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 329.76,
+      "end": 330.24,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 929.76,
+      "end": 957.6,
+      "duration": 27.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1200.48,
+      "end": 1227.36,
+      "duration": 26.87999999999988,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 979.41,
+      "end": 980.179,
+      "duration": 0.769458
+    },
+    {
+      "start": 983.742,
+      "end": 984.253,
+      "duration": 0.511667
+    },
+    {
+      "start": 985.043,
+      "end": 986.068,
+      "duration": 1.02452
+    },
+    {
+      "start": 986.104,
+      "end": 987.286,
+      "duration": 1.18138
+    },
+    {
+      "start": 996.258,
+      "end": 996.897,
+      "duration": 0.638479
+    },
+    {
+      "start": 1227.24,
+      "end": 1228.15,
+      "duration": 0.905458
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

@@ -1,0 +1,302 @@
+{
+  "video_id": "-vLoM-EqWq8",
+  "title": "Chika: NPR Music Tiny Desk Concert",
+  "duration": 1081,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/-vLoM-EqWq8.mp3",
+  "description_songs": [
+    "Industry Games",
+    "Balencies",
+    "Crown",
+    "Intro"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 915 likes, matched all 4 description song(s), retained 4 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 3
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 42.239999999999995,
+      "end": 43.67999999999999,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 57.599999999999994,
+      "end": 59.99999999999999,
+      "duration": 2.3999999999999986,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 70.56,
+      "end": 72.0,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 73.92,
+      "end": 75.36,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 77.28,
+      "end": 80.16,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 109.92,
+      "end": 111.36,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 160.32,
+      "end": 164.16,
+      "duration": 3.8400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 164.16,
+      "end": 239.99999999999997,
+      "duration": 75.83999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 362.88,
+      "end": 365.28000000000003,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 457.91999999999996,
+      "end": 459.84,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 463.68,
+      "end": 466.08,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 467.03999999999996,
+      "end": 468.96,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 479.03999999999996,
+      "end": 480.48,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 483.35999999999996,
+      "end": 536.16,
+      "duration": 52.80000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 684.0,
+      "end": 685.4399999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 686.4,
+      "end": 782.4,
+      "duration": 96.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 822.7199999999999,
+      "end": 824.16,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 860.64,
+      "end": 862.08,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 866.4,
+      "end": 867.84,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 877.4399999999999,
+      "end": 878.88,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1051.2,
+      "end": 1078.08,
+      "duration": 26.87999999999988,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Industry Games",
+      "corroboration": 1,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 164.16,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 536,
+      "song": "Balencies",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 536.16,
+      "clip_end": 686.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 783,
+      "song": "Crown",
+      "corroboration": 2,
+      "silence_match": 781.771,
+      "clip_start": 782.4,
+      "clip_end": 951,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 82
+    },
+    {
+      "seconds": 951,
+      "song": "Intro",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 951,
+      "clip_end": 1051.2,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.08206,
+      "duration": 5.08206
+    },
+    {
+      "start": 161.865,
+      "end": 162.482,
+      "duration": 0.616292
+    },
+    {
+      "start": 176.816,
+      "end": 177.648,
+      "duration": 0.832521
+    },
+    {
+      "start": 242.366,
+      "end": 242.934,
+      "duration": 0.568917
+    },
+    {
+      "start": 244.558,
+      "end": 245.891,
+      "duration": 1.33319
+    },
+    {
+      "start": 248.293,
+      "end": 248.86,
+      "duration": 0.566292
+    },
+    {
+      "start": 250.56,
+      "end": 251.79,
+      "duration": 1.22952
+    },
+    {
+      "start": 750.1,
+      "end": 750.622,
+      "duration": 0.522125
+    },
+    {
+      "start": 779.442,
+      "end": 780.299,
+      "duration": 0.857167
+    },
+    {
+      "start": 781.771,
+      "end": 782.334,
+      "duration": 0.562896
+    },
+    {
+      "start": 1049.22,
+      "end": 1049.98,
+      "duration": 0.763687
+    },
+    {
+      "start": 1077.59,
+      "end": 1080.88,
+      "duration": 3.28912
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      75,
+      82,
+      60
+    ],
+    "avg": 73.0,
+    "min": 60
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

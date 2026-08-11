@@ -1,0 +1,304 @@
+{
+  "video_id": "4iQmPv_dTI0",
+  "title": "Fred again..: Tiny Desk Concert",
+  "duration": 1604,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/4iQmPv_dTI0.mp3",
+  "description_songs": [
+    "Kyle (i found you)",
+    "Roze (forgive)",
+    "Adam (interlude)",
+    "Me (heavy)",
+    "Berwyn (interlude)",
+    "Delilah (pull me out of this)",
+    "Faisal (envelops me)"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1200 likes, matched all 7 description song(s), retained 7 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 282.24,
+      "end": 282.72,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 606.24,
+      "end": 615.36,
+      "duration": 9.120000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 615.84,
+      "end": 622.08,
+      "duration": 6.240000000000009,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 623.52,
+      "end": 625.92,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 908.64,
+      "end": 910.08,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1243.68,
+      "end": 1245.6,
+      "duration": 1.9199999999998454,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1265.28,
+      "end": 1266.72,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1268.1599999999999,
+      "end": 1270.08,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1281.12,
+      "end": 1285.92,
+      "duration": 4.800000000000182,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1563.84,
+      "end": 1565.28,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1568.1599999999999,
+      "end": 1570.56,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1570.56,
+      "end": 1592.6399999999999,
+      "duration": 22.079999999999927,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 267,
+      "song": "Kyle (i found you)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 282.72,
+      "clip_end": 606.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 603,
+      "song": "Roze (forgive)",
+      "corroboration": 0,
+      "silence_match": 602.432,
+      "clip_start": 622.08,
+      "clip_end": 647,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 647,
+      "song": "Adam (interlude)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 625.92,
+      "clip_end": 904,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 904,
+      "song": "Me (heavy)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 910.08,
+      "clip_end": 1262,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 1262,
+      "song": "Delilah (pull me out of this)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1270.08,
+      "clip_end": 1150,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 3
+    },
+    {
+      "seconds": 1150,
+      "song": "Berwyn (interlude)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1150,
+      "clip_end": 1570.56,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 1568,
+      "song": "Faisal (envelops me)",
+      "corroboration": 0,
+      "silence_match": 1565.54,
+      "clip_start": 1570.56,
+      "clip_end": 1604,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 1.18098,
+      "duration": 1.18098
+    },
+    {
+      "start": 273.584,
+      "end": 274.205,
+      "duration": 0.62075
+    },
+    {
+      "start": 602.432,
+      "end": 605.139,
+      "duration": 2.70715
+    },
+    {
+      "start": 605.209,
+      "end": 607.404,
+      "duration": 2.19546
+    },
+    {
+      "start": 615.462,
+      "end": 616.37,
+      "duration": 0.907729
+    },
+    {
+      "start": 622.197,
+      "end": 624.193,
+      "duration": 1.99594
+    },
+    {
+      "start": 1273.75,
+      "end": 1274.77,
+      "duration": 1.02598
+    },
+    {
+      "start": 1526.17,
+      "end": 1527.76,
+      "duration": 1.58758
+    },
+    {
+      "start": 1529.04,
+      "end": 1530.16,
+      "duration": 1.12492
+    },
+    {
+      "start": 1539.29,
+      "end": 1540.23,
+      "duration": 0.942708
+    },
+    {
+      "start": 1553.22,
+      "end": 1554.6,
+      "duration": 1.38242
+    },
+    {
+      "start": 1556.35,
+      "end": 1557.76,
+      "duration": 1.41215
+    },
+    {
+      "start": 1560.33,
+      "end": 1561.02,
+      "duration": 0.685125
+    },
+    {
+      "start": 1565.54,
+      "end": 1568.93,
+      "duration": 3.3899
+    },
+    {
+      "start": 1591.94,
+      "end": 1592.48,
+      "duration": 0.530979
+    },
+    {
+      "start": 1592.48,
+      "end": 1604.07,
+      "duration": 11.5888
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      68,
+      53,
+      53,
+      3,
+      53,
+      68
+    ],
+    "avg": 51.3,
+    "min": 3
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

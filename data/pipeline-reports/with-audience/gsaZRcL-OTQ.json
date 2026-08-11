@@ -1,0 +1,333 @@
+{
+  "video_id": "gsaZRcL-OTQ",
+  "title": "JID: Tiny Desk Concert",
+  "duration": 1323,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/gsaZRcL-OTQ.mp3",
+  "description_songs": [
+    "Galaxy",
+    "Workin Out",
+    "Off da Zoinkys",
+    "Never",
+    "Sistanem",
+    "Surround Sound",
+    "Kody Blu 31"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2600 likes, matched all 7 description song(s), retained 7 timestamp(s), filtered 2 non-song chapter entries"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 2
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 92.16,
+      "end": 93.6,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 144.96,
+      "end": 146.39999999999998,
+      "duration": 1.4399999999999693,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 335.03999999999996,
+      "end": 345.12,
+      "duration": 10.080000000000041,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 384.96,
+      "end": 386.4,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 406.08,
+      "end": 412.32,
+      "duration": 6.240000000000009,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 428.15999999999997,
+      "end": 429.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 430.08,
+      "end": 432.48,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 444.0,
+      "end": 447.36,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 490.56,
+      "end": 492.48,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 527.52,
+      "end": 530.88,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 542.4,
+      "end": 543.84,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 545.28,
+      "end": 564.48,
+      "duration": 19.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 730.0799999999999,
+      "end": 748.8,
+      "duration": 18.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 927.36,
+      "end": 929.28,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 929.28,
+      "end": 955.1999999999999,
+      "duration": 25.91999999999996,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 959.52,
+      "end": 961.4399999999999,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 964.3199999999999,
+      "end": 966.72,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 969.5999999999999,
+      "end": 971.04,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1287.36,
+      "end": 1304.16,
+      "duration": 16.800000000000182,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 1,
+      "song": "Galaxy",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1,
+      "clip_end": 50,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 50,
+      "song": "Workin Out",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 50,
+      "clip_end": 216,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 216,
+      "song": "Off da Zoinkys",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 216,
+      "clip_end": 335.03999999999996,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 422,
+      "song": "Never",
+      "corroboration": 1,
+      "silence_match": 422.58,
+      "clip_start": 432.48,
+      "clip_end": 545.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 575,
+      "song": "Sistanem",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 564.48,
+      "clip_end": 730.0799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 745,
+      "song": "Surround Sound",
+      "corroboration": 0,
+      "silence_match": 743.424,
+      "clip_start": 748.8,
+      "clip_end": 929.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 971,
+      "song": "Kody Blu 31",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 971.04,
+      "clip_end": 1287.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 334.312,
+      "end": 334.817,
+      "duration": 0.505229
+    },
+    {
+      "start": 347.462,
+      "end": 349.817,
+      "duration": 2.35517
+    },
+    {
+      "start": 422.58,
+      "end": 423.345,
+      "duration": 0.765396
+    },
+    {
+      "start": 467.614,
+      "end": 468.166,
+      "duration": 0.551708
+    },
+    {
+      "start": 729.127,
+      "end": 730.163,
+      "duration": 1.03585
+    },
+    {
+      "start": 741.788,
+      "end": 742.497,
+      "duration": 0.7085
+    },
+    {
+      "start": 743.424,
+      "end": 744.521,
+      "duration": 1.09677
+    },
+    {
+      "start": 977.569,
+      "end": 978.45,
+      "duration": 0.880521
+    },
+    {
+      "start": 1067.0,
+      "end": 1067.51,
+      "duration": 0.508333
+    },
+    {
+      "start": 1073.59,
+      "end": 1074.15,
+      "duration": 0.554208
+    },
+    {
+      "start": 1193.06,
+      "end": 1193.57,
+      "duration": 0.509604
+    },
+    {
+      "start": 1304.42,
+      "end": 1322.92,
+      "duration": 18.5065
+    }
+  ],
+  "confidence": {
+    "scores": [
+      45,
+      45,
+      60,
+      83,
+      61,
+      76,
+      61
+    ],
+    "avg": 61.6,
+    "min": 45
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

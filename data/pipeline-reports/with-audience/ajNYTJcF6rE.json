@@ -1,0 +1,342 @@
+{
+  "video_id": "ajNYTJcF6rE",
+  "title": "Scarface: Tiny Desk Concert",
+  "duration": 1887,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/ajNYTJcF6rE.mp3",
+  "description_songs": [
+    "On My Block",
+    "Mary Jane",
+    "Smile",
+    "I Seen a Man Die",
+    "F**k Faces",
+    "Mind Playing Tricks on Me"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1500 likes, matched all 6 description song(s), retained 6 timestamp(s), filtered 4 non-song chapter entries"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 4
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 255.84,
+      "end": 266.40000000000003,
+      "duration": 10.56000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 288.0,
+      "end": 289.92,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 574.56,
+      "end": 576.0,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 577.4399999999999,
+      "end": 581.76,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 582.24,
+      "end": 584.64,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 586.56,
+      "end": 593.76,
+      "duration": 7.2000000000000455,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 805.92,
+      "end": 847.68,
+      "duration": 41.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 882.24,
+      "end": 884.64,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 888.0,
+      "end": 889.92,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1231.2,
+      "end": 1232.6399999999999,
+      "duration": 1.4399999999998272,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1879.1999999999998,
+      "end": 1884.96,
+      "duration": 5.760000000000218,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 84,
+      "song": "On My Block",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 84,
+      "clip_end": 255.84,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 271,
+      "song": "Mary Jane",
+      "corroboration": 0,
+      "silence_match": 271.474,
+      "clip_start": 289.92,
+      "clip_end": 586.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 596,
+      "song": "Smile",
+      "corroboration": 0,
+      "silence_match": 592.568,
+      "clip_start": 593.76,
+      "clip_end": 805.92,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 941,
+      "song": "I Seen a Man Die",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 941,
+      "clip_end": 1246,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 1246,
+      "song": "F**k Faces",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1232.6399999999999,
+      "clip_end": 1564,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 1564,
+      "song": "Mind Playing Tricks on Me",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1564,
+      "clip_end": 1879.1999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.501146,
+      "duration": 0.501146
+    },
+    {
+      "start": 265.918,
+      "end": 267.315,
+      "duration": 1.39731
+    },
+    {
+      "start": 267.525,
+      "end": 268.326,
+      "duration": 0.801208
+    },
+    {
+      "start": 271.474,
+      "end": 272.281,
+      "duration": 0.807
+    },
+    {
+      "start": 272.483,
+      "end": 273.269,
+      "duration": 0.785771
+    },
+    {
+      "start": 273.48,
+      "end": 274.282,
+      "duration": 0.802833
+    },
+    {
+      "start": 289.962,
+      "end": 290.964,
+      "duration": 1.0016
+    },
+    {
+      "start": 587.174,
+      "end": 587.831,
+      "duration": 0.656104
+    },
+    {
+      "start": 589.169,
+      "end": 590.309,
+      "duration": 1.14006
+    },
+    {
+      "start": 592.568,
+      "end": 595.355,
+      "duration": 2.78748
+    },
+    {
+      "start": 813.645,
+      "end": 814.47,
+      "duration": 0.825083
+    },
+    {
+      "start": 816.18,
+      "end": 818.087,
+      "duration": 1.90752
+    },
+    {
+      "start": 819.684,
+      "end": 822.566,
+      "duration": 2.88152
+    },
+    {
+      "start": 830.678,
+      "end": 831.611,
+      "duration": 0.933458
+    },
+    {
+      "start": 831.922,
+      "end": 832.522,
+      "duration": 0.599792
+    },
+    {
+      "start": 832.902,
+      "end": 835.794,
+      "duration": 2.89225
+    },
+    {
+      "start": 848.404,
+      "end": 848.908,
+      "duration": 0.503563
+    },
+    {
+      "start": 870.378,
+      "end": 870.957,
+      "duration": 0.578958
+    },
+    {
+      "start": 931.554,
+      "end": 932.503,
+      "duration": 0.949458
+    },
+    {
+      "start": 1232.68,
+      "end": 1233.29,
+      "duration": 0.609375
+    },
+    {
+      "start": 1234.09,
+      "end": 1234.69,
+      "duration": 0.606854
+    },
+    {
+      "start": 1234.73,
+      "end": 1236.07,
+      "duration": 1.34183
+    },
+    {
+      "start": 1236.9,
+      "end": 1237.78,
+      "duration": 0.87975
+    },
+    {
+      "start": 1238.15,
+      "end": 1238.82,
+      "duration": 0.670146
+    },
+    {
+      "start": 1868.47,
+      "end": 1869.06,
+      "duration": 0.583229
+    },
+    {
+      "start": 1869.07,
+      "end": 1870.23,
+      "duration": 1.1625
+    },
+    {
+      "start": 1870.23,
+      "end": 1879.98,
+      "duration": 9.74977
+    },
+    {
+      "start": 1884.54,
+      "end": 1887.35,
+      "duration": 2.80958
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76,
+      45,
+      53,
+      53
+    ],
+    "avg": 59.3,
+    "min": 45
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

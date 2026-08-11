@@ -2,7 +2,7 @@
   "video_id": "L_BHC2l30pY",
   "title": "Sam Smith: Tiny Desk Concert",
   "duration": 1247,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/L_BHC2l30pY.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/L_BHC2l30pY.mp3",
   "description_songs": [
     "Stay With Me",
     "How Do You Sleep",
@@ -93,12 +93,13 @@
       "corroboration": 2,
       "silence_match": null,
       "clip_start": 1,
-      "clip_end": 228.48,
+      "clip_end": 227.48,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 67
+      "confidence": 67,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 277,
@@ -106,12 +107,13 @@
       "corroboration": 2,
       "silence_match": 276.992,
       "clip_start": 277.44,
-      "clip_end": 468.0,
+      "clip_end": 467.0,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 626,
@@ -119,12 +121,13 @@
       "corroboration": 2,
       "silence_match": 627.053,
       "clip_start": 622.56,
-      "clip_end": 918.7199999999999,
+      "clip_end": 917.7199999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 992,
@@ -132,7 +135,7 @@
       "corroboration": 2,
       "silence_match": 992.283,
       "clip_start": 992,
-      "clip_end": 1200.0,
+      "clip_end": 1199.0,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [
@@ -156,7 +159,8 @@
         }
       ],
       "suspect": false,
-      "confidence": 82
+      "confidence": 82,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -456,7 +460,10 @@
     "avg": 82.2,
     "min": 67
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/L_BHC2l30pY.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

@@ -1,0 +1,427 @@
+{
+  "video_id": "Gse1LKXuV2M",
+  "title": "Chaka Khan: Tiny Desk Concert",
+  "duration": 2057,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/Gse1LKXuV2M.mp3",
+  "description_songs": [
+    "Tell Me Something Good",
+    "What Cha\u2019 Gonna Do For Me",
+    "Stay",
+    "Sweet Thing",
+    "Through the Fire",
+    "Ain\u2019t Nobody",
+    "I\u2019m Every Woman"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 4800 likes, matched all 7 description song(s), retained 7 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 242.39999999999998,
+      "end": 301.92,
+      "duration": 59.52000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1078.08,
+      "end": 1410.72,
+      "duration": 332.6400000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1724.6399999999999,
+      "end": 1725.12,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 2016.96,
+      "end": 2041.9199999999998,
+      "duration": 24.95999999999981,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 2048.64,
+      "end": 2054.88,
+      "duration": 6.2400000000002365,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 1,
+      "song": "Tell Me Something Good",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1,
+      "clip_end": 241.39999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 302,
+      "song": "What Cha\u2019 Gonna Do For Me",
+      "corroboration": 0,
+      "silence_match": 302.155,
+      "clip_start": 301.92,
+      "clip_end": 545,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 545,
+      "song": "Stay",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 545,
+      "clip_end": 733,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 733,
+      "song": "Sweet Thing",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 733,
+      "clip_end": 944,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 944,
+      "song": "Through the Fire",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 944,
+      "clip_end": 1077.08,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1412,
+      "song": "Ain\u2019t Nobody",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1410.72,
+      "clip_end": 1723.6399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1741,
+      "song": "I\u2019m Every Woman",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1725.12,
+      "clip_end": 2015.96,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 261.259,
+      "end": 261.822,
+      "duration": 0.562917
+    },
+    {
+      "start": 272.513,
+      "end": 273.014,
+      "duration": 0.50125
+    },
+    {
+      "start": 278.455,
+      "end": 279.123,
+      "duration": 0.668167
+    },
+    {
+      "start": 289.652,
+      "end": 290.694,
+      "duration": 1.04177
+    },
+    {
+      "start": 292.595,
+      "end": 293.539,
+      "duration": 0.943937
+    },
+    {
+      "start": 301.597,
+      "end": 302.135,
+      "duration": 0.537771
+    },
+    {
+      "start": 302.155,
+      "end": 302.736,
+      "duration": 0.580979
+    },
+    {
+      "start": 1088.93,
+      "end": 1089.54,
+      "duration": 0.6115
+    },
+    {
+      "start": 1089.54,
+      "end": 1090.35,
+      "duration": 0.809729
+    },
+    {
+      "start": 1091.62,
+      "end": 1092.36,
+      "duration": 0.735833
+    },
+    {
+      "start": 1093.48,
+      "end": 1094.33,
+      "duration": 0.848375
+    },
+    {
+      "start": 1100.7,
+      "end": 1101.39,
+      "duration": 0.692646
+    },
+    {
+      "start": 1110.02,
+      "end": 1110.55,
+      "duration": 0.530875
+    },
+    {
+      "start": 1113.23,
+      "end": 1114.25,
+      "duration": 1.01881
+    },
+    {
+      "start": 1115.53,
+      "end": 1116.5,
+      "duration": 0.977938
+    },
+    {
+      "start": 1147.82,
+      "end": 1149.62,
+      "duration": 1.80554
+    },
+    {
+      "start": 1158.47,
+      "end": 1159.06,
+      "duration": 0.589104
+    },
+    {
+      "start": 1160.44,
+      "end": 1160.96,
+      "duration": 0.521646
+    },
+    {
+      "start": 1171.56,
+      "end": 1172.34,
+      "duration": 0.787917
+    },
+    {
+      "start": 1177.16,
+      "end": 1177.74,
+      "duration": 0.588729
+    },
+    {
+      "start": 1179.05,
+      "end": 1179.67,
+      "duration": 0.619687
+    },
+    {
+      "start": 1181.74,
+      "end": 1182.76,
+      "duration": 1.02427
+    },
+    {
+      "start": 1186.79,
+      "end": 1187.51,
+      "duration": 0.724187
+    },
+    {
+      "start": 1201.63,
+      "end": 1202.16,
+      "duration": 0.528937
+    },
+    {
+      "start": 1214.74,
+      "end": 1215.28,
+      "duration": 0.533521
+    },
+    {
+      "start": 1220.34,
+      "end": 1220.87,
+      "duration": 0.527854
+    },
+    {
+      "start": 1224.76,
+      "end": 1225.43,
+      "duration": 0.671063
+    },
+    {
+      "start": 1227.68,
+      "end": 1228.2,
+      "duration": 0.514083
+    },
+    {
+      "start": 1235.13,
+      "end": 1236.11,
+      "duration": 0.979083
+    },
+    {
+      "start": 1247.84,
+      "end": 1248.63,
+      "duration": 0.783104
+    },
+    {
+      "start": 1250.01,
+      "end": 1250.54,
+      "duration": 0.529125
+    },
+    {
+      "start": 1251.05,
+      "end": 1251.61,
+      "duration": 0.555167
+    },
+    {
+      "start": 1252.83,
+      "end": 1253.72,
+      "duration": 0.895979
+    },
+    {
+      "start": 1255.33,
+      "end": 1256.06,
+      "duration": 0.733396
+    },
+    {
+      "start": 1278.66,
+      "end": 1279.44,
+      "duration": 0.776667
+    },
+    {
+      "start": 1291.7,
+      "end": 1292.86,
+      "duration": 1.16031
+    },
+    {
+      "start": 1293.6,
+      "end": 1294.12,
+      "duration": 0.525771
+    },
+    {
+      "start": 1294.93,
+      "end": 1295.53,
+      "duration": 0.607167
+    },
+    {
+      "start": 1296.98,
+      "end": 1297.7,
+      "duration": 0.716521
+    },
+    {
+      "start": 1303.54,
+      "end": 1304.07,
+      "duration": 0.531146
+    },
+    {
+      "start": 1306.67,
+      "end": 1307.36,
+      "duration": 0.686354
+    },
+    {
+      "start": 1316.16,
+      "end": 1317.29,
+      "duration": 1.126
+    },
+    {
+      "start": 1320.03,
+      "end": 1320.69,
+      "duration": 0.663813
+    },
+    {
+      "start": 1322.3,
+      "end": 1322.81,
+      "duration": 0.517167
+    },
+    {
+      "start": 1360.57,
+      "end": 1361.49,
+      "duration": 0.9195
+    },
+    {
+      "start": 1385.16,
+      "end": 1386.94,
+      "duration": 1.77987
+    },
+    {
+      "start": 2039.25,
+      "end": 2039.9,
+      "duration": 0.652875
+    },
+    {
+      "start": 2039.9,
+      "end": 2049.05,
+      "duration": 9.15131
+    },
+    {
+      "start": 2054.69,
+      "end": 2056.94,
+      "duration": 2.25237
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      68,
+      45,
+      45,
+      53,
+      61,
+      61
+    ],
+    "avg": 55.1,
+    "min": 45
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/Gse1LKXuV2M.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

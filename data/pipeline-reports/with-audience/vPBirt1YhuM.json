@@ -1,0 +1,395 @@
+{
+  "video_id": "vPBirt1YhuM",
+  "title": "Jacob Collier: NPR Music Tiny Desk Concert",
+  "duration": 1175,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/vPBirt1YhuM.mp3",
+  "description_songs": [
+    "Make Me Cry",
+    "Feel",
+    "It Don't Matter"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 39 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 262.08,
+      "end": 313.44,
+      "duration": 51.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 701.28,
+      "end": 751.68,
+      "duration": 50.39999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 758.88,
+      "end": 761.76,
+      "duration": 2.8799999999999955,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 763.68,
+      "end": 770.88,
+      "duration": 7.2000000000000455,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 773.28,
+      "end": 775.2,
+      "duration": 1.9200000000000728,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 777.6,
+      "end": 782.4,
+      "duration": 4.7999999999999545,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 789.6,
+      "end": 790.08,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 797.28,
+      "end": 800.16,
+      "duration": 2.8799999999999955,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 862.56,
+      "end": 863.04,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1150.56,
+      "end": 1173.6,
+      "duration": 23.039999999999964,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Make Me Cry",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 262.08,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 314,
+      "song": "Feel",
+      "corroboration": 0,
+      "silence_match": 312.964,
+      "clip_start": 313.44,
+      "clip_end": 701.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 752,
+      "song": "It Don't Matter",
+      "corroboration": 0,
+      "silence_match": 751.495,
+      "clip_start": 770.88,
+      "clip_end": 773.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 26
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 1.7279,
+      "duration": 1.7279
+    },
+    {
+      "start": 10.4068,
+      "end": 12.4057,
+      "duration": 1.9989
+    },
+    {
+      "start": 17.8414,
+      "end": 18.5104,
+      "duration": 0.669063
+    },
+    {
+      "start": 32.0586,
+      "end": 33.065,
+      "duration": 1.00633
+    },
+    {
+      "start": 41.283,
+      "end": 41.8271,
+      "duration": 0.544104
+    },
+    {
+      "start": 48.983,
+      "end": 49.8899,
+      "duration": 0.906854
+    },
+    {
+      "start": 56.7638,
+      "end": 57.6739,
+      "duration": 0.910062
+    },
+    {
+      "start": 58.8942,
+      "end": 59.5088,
+      "duration": 0.614625
+    },
+    {
+      "start": 230.651,
+      "end": 233.814,
+      "duration": 3.16279
+    },
+    {
+      "start": 246.191,
+      "end": 247.239,
+      "duration": 1.04796
+    },
+    {
+      "start": 252.186,
+      "end": 254.279,
+      "duration": 2.0929
+    },
+    {
+      "start": 260.438,
+      "end": 262.351,
+      "duration": 1.91394
+    },
+    {
+      "start": 295.674,
+      "end": 296.25,
+      "duration": 0.575479
+    },
+    {
+      "start": 305.346,
+      "end": 305.916,
+      "duration": 0.569875
+    },
+    {
+      "start": 306.662,
+      "end": 307.214,
+      "duration": 0.551771
+    },
+    {
+      "start": 308.921,
+      "end": 309.757,
+      "duration": 0.836125
+    },
+    {
+      "start": 310.627,
+      "end": 311.17,
+      "duration": 0.542979
+    },
+    {
+      "start": 312.057,
+      "end": 312.813,
+      "duration": 0.756208
+    },
+    {
+      "start": 312.964,
+      "end": 317.627,
+      "duration": 4.66235
+    },
+    {
+      "start": 318.271,
+      "end": 318.782,
+      "duration": 0.511042
+    },
+    {
+      "start": 319.769,
+      "end": 320.288,
+      "duration": 0.519083
+    },
+    {
+      "start": 322.407,
+      "end": 323.292,
+      "duration": 0.885521
+    },
+    {
+      "start": 325.401,
+      "end": 326.281,
+      "duration": 0.88025
+    },
+    {
+      "start": 328.322,
+      "end": 329.777,
+      "duration": 1.45448
+    },
+    {
+      "start": 340.995,
+      "end": 341.502,
+      "duration": 0.507125
+    },
+    {
+      "start": 352.817,
+      "end": 353.64,
+      "duration": 0.822313
+    },
+    {
+      "start": 376.673,
+      "end": 377.719,
+      "duration": 1.04548
+    },
+    {
+      "start": 448.515,
+      "end": 449.404,
+      "duration": 0.889792
+    },
+    {
+      "start": 489.308,
+      "end": 490.424,
+      "duration": 1.11546
+    },
+    {
+      "start": 604.112,
+      "end": 605.366,
+      "duration": 1.25396
+    },
+    {
+      "start": 699.907,
+      "end": 701.035,
+      "duration": 1.12748
+    },
+    {
+      "start": 715.435,
+      "end": 715.974,
+      "duration": 0.538562
+    },
+    {
+      "start": 717.02,
+      "end": 718.657,
+      "duration": 1.63633
+    },
+    {
+      "start": 739.36,
+      "end": 740.568,
+      "duration": 1.20746
+    },
+    {
+      "start": 740.89,
+      "end": 741.883,
+      "duration": 0.993167
+    },
+    {
+      "start": 743.058,
+      "end": 743.699,
+      "duration": 0.641125
+    },
+    {
+      "start": 743.993,
+      "end": 745.131,
+      "duration": 1.13758
+    },
+    {
+      "start": 745.24,
+      "end": 746.312,
+      "duration": 1.07187
+    },
+    {
+      "start": 746.975,
+      "end": 748.008,
+      "duration": 1.03306
+    },
+    {
+      "start": 750.238,
+      "end": 751.445,
+      "duration": 1.20702
+    },
+    {
+      "start": 751.495,
+      "end": 752.776,
+      "duration": 1.28158
+    },
+    {
+      "start": 753.587,
+      "end": 754.309,
+      "duration": 0.721917
+    },
+    {
+      "start": 754.353,
+      "end": 755.549,
+      "duration": 1.19554
+    },
+    {
+      "start": 755.706,
+      "end": 756.353,
+      "duration": 0.646542
+    },
+    {
+      "start": 760.335,
+      "end": 761.046,
+      "duration": 0.711417
+    },
+    {
+      "start": 792.172,
+      "end": 792.673,
+      "duration": 0.501104
+    },
+    {
+      "start": 1148.88,
+      "end": 1150.12,
+      "duration": 1.23831
+    },
+    {
+      "start": 1172.85,
+      "end": 1173.36,
+      "duration": 0.512042
+    },
+    {
+      "start": 1173.63,
+      "end": 1175.23,
+      "duration": 1.60283
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      26
+    ],
+    "avg": 56.7,
+    "min": 26
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

@@ -2,7 +2,7 @@
   "video_id": "w4WiXKGCJhg",
   "title": "Chappell Roan: Tiny Desk Concert",
   "duration": 1381,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/w4WiXKGCJhg.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/w4WiXKGCJhg.mp3",
   "description_songs": [
     "Casual",
     "Pink Pony Club",
@@ -94,12 +94,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 14,
-      "clip_end": 222.72,
+      "clip_end": 221.72,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 53
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 300,
@@ -107,12 +108,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 285.12,
-      "clip_end": 530.4,
+      "clip_end": 529.4,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 603,
@@ -120,12 +122,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 584.64,
-      "clip_end": 805.4399999999999,
+      "clip_end": 804.4399999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 905,
@@ -133,12 +136,13 @@
       "corroboration": 0,
       "silence_match": 904.846,
       "clip_start": 909.12,
-      "clip_end": 1106.3999999999999,
+      "clip_end": 1105.3999999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 1170,
@@ -146,12 +150,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 1162.08,
-      "clip_end": 1358.8799999999999,
+      "clip_end": 1357.8799999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -442,7 +447,10 @@
     "avg": 62.4,
     "min": 53
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/w4WiXKGCJhg.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

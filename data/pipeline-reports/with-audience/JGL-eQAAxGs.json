@@ -1,0 +1,201 @@
+{
+  "video_id": "JGL-eQAAxGs",
+  "title": "Monsieur Perin\u00e9: NPR Music Tiny Desk Concert",
+  "duration": 1116,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/JGL-eQAAxGs.mp3",
+  "description_songs": [
+    "Nuestra Canci\u00f3n",
+    "Sabor A Mi",
+    "La Muerte"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 4 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 388.8,
+      "end": 400.8,
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 415.2,
+      "end": 417.12,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 418.08,
+      "end": 420.0,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 420.47999999999996,
+      "end": 422.4,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 424.32,
+      "end": 427.2,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 428.15999999999997,
+      "end": 430.56,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 431.52,
+      "end": 433.44,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 621.12,
+      "end": 627.84,
+      "duration": 6.720000000000027,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1062.24,
+      "end": 1068.48,
+      "duration": 6.240000000000009,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1074.24,
+      "end": 1084.8,
+      "duration": 10.559999999999945,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Nuestra Canci\u00f3n",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 388.8,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 388.8,
+      "song": "Sabor A Mi",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 400.8,
+      "clip_end": 621.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 1074.24,
+      "song": "La Muerte",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1084.8,
+      "clip_end": 1116,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 400.644,
+      "end": 401.636,
+      "duration": 0.991729
+    },
+    {
+      "start": 401.645,
+      "end": 402.377,
+      "duration": 0.732646
+    },
+    {
+      "start": 402.791,
+      "end": 404.888,
+      "duration": 2.09658
+    },
+    {
+      "start": 419.744,
+      "end": 421.094,
+      "duration": 1.34962
+    },
+    {
+      "start": 423.755,
+      "end": 424.813,
+      "duration": 1.05881
+    },
+    {
+      "start": 427.33,
+      "end": 427.999,
+      "duration": 0.669875
+    },
+    {
+      "start": 435.332,
+      "end": 436.86,
+      "duration": 1.5279
+    },
+    {
+      "start": 436.905,
+      "end": 437.585,
+      "duration": 0.679937
+    },
+    {
+      "start": 438.005,
+      "end": 439.016,
+      "duration": 1.01046
+    },
+    {
+      "start": 1080.69,
+      "end": 1081.31,
+      "duration": 0.623479
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      51,
+      43
+    ],
+    "avg": 45.7,
+    "min": 43
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

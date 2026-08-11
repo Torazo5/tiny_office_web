@@ -1,0 +1,101 @@
+{
+  "video_id": "zhVgbZdMdb0",
+  "title": "Thundercat: NPR Music Tiny Desk Concert",
+  "duration": 636,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/zhVgbZdMdb0.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 182.4,
+      "end": 197.76,
+      "duration": 15.359999999999985,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 373.91999999999996,
+      "end": 375.84000000000003,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 376.8,
+      "end": 389.28000000000003,
+      "duration": 12.480000000000018,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 611.52,
+      "end": 635.04,
+      "duration": 23.519999999999982,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 181.838,
+      "end": 182.653,
+      "duration": 0.814458
+    },
+    {
+      "start": 197.769,
+      "end": 200.721,
+      "duration": 2.95194
+    },
+    {
+      "start": 374.218,
+      "end": 374.783,
+      "duration": 0.565646
+    },
+    {
+      "start": 389.839,
+      "end": 390.688,
+      "duration": 0.848979
+    },
+    {
+      "start": 390.99,
+      "end": 391.863,
+      "duration": 0.873312
+    },
+    {
+      "start": 609.692,
+      "end": 610.962,
+      "duration": 1.27065
+    },
+    {
+      "start": 634.659,
+      "end": 636.053,
+      "duration": 1.39408
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

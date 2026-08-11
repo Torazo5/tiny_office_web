@@ -1,0 +1,310 @@
+{
+  "video_id": "XWIvfE01J0k",
+  "title": "Edward Sharpe And The Magnetic Zeroes: NPR Music Tiny Desk Concert",
+  "duration": 884,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/XWIvfE01J0k.mp3",
+  "description_songs": [
+    "The set included",
+    "Janglin",
+    "Home",
+    "40 Day Daydream"
+  ],
+  "method": "silence",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (1 candidate(s) checked)",
+    "B_yamnet": "failed \u2014 only 2 usable episode(s) (of 3 valid, 9 total), need 3",
+    "C_silence": "ok \u2014 29 usable gap(s), took top 3 by duration"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 2.4,
+      "end": 3.84,
+      "duration": 1.44,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 144.0,
+      "end": 145.44,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 244.32,
+      "end": 245.76,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 256.32,
+      "end": 257.76,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 533.76,
+      "end": 535.68,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 539.52,
+      "end": 545.76,
+      "duration": 6.240000000000009,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 586.56,
+      "end": 599.52,
+      "duration": 12.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 609.12,
+      "end": 613.92,
+      "duration": 4.7999999999999545,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 862.0799999999999,
+      "end": 884.16,
+      "duration": 22.08000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 1.77202,
+      "song": "The set included",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 3.84,
+      "clip_end": 392.801,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 392.801,
+      "song": "Janglin",
+      "corroboration": 0,
+      "silence_match": 392.801,
+      "clip_start": 392.801,
+      "clip_end": 539.52,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 614.324,
+      "song": "Home",
+      "corroboration": 0,
+      "silence_match": 614.324,
+      "clip_start": 613.92,
+      "clip_end": 787.515,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 787.515,
+      "song": "40 Day Daydream",
+      "corroboration": 0,
+      "silence_match": 787.515,
+      "clip_start": 787.515,
+      "clip_end": 862.0799999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 1.77202,
+      "duration": 1.77202
+    },
+    {
+      "start": 146.991,
+      "end": 147.536,
+      "duration": 0.544604
+    },
+    {
+      "start": 147.831,
+      "end": 148.564,
+      "duration": 0.733104
+    },
+    {
+      "start": 157.169,
+      "end": 157.674,
+      "duration": 0.505646
+    },
+    {
+      "start": 293.733,
+      "end": 294.252,
+      "duration": 0.518896
+    },
+    {
+      "start": 307.079,
+      "end": 307.726,
+      "duration": 0.646604
+    },
+    {
+      "start": 392.801,
+      "end": 394.536,
+      "duration": 1.73465
+    },
+    {
+      "start": 482.652,
+      "end": 483.213,
+      "duration": 0.561063
+    },
+    {
+      "start": 534.226,
+      "end": 534.899,
+      "duration": 0.672521
+    },
+    {
+      "start": 536.285,
+      "end": 537.156,
+      "duration": 0.871
+    },
+    {
+      "start": 540.33,
+      "end": 541.257,
+      "duration": 0.927375
+    },
+    {
+      "start": 542.355,
+      "end": 542.993,
+      "duration": 0.638083
+    },
+    {
+      "start": 544.371,
+      "end": 545.272,
+      "duration": 0.900562
+    },
+    {
+      "start": 596.564,
+      "end": 597.074,
+      "duration": 0.509917
+    },
+    {
+      "start": 599.281,
+      "end": 599.946,
+      "duration": 0.664542
+    },
+    {
+      "start": 610.794,
+      "end": 611.296,
+      "duration": 0.5025
+    },
+    {
+      "start": 612.878,
+      "end": 613.594,
+      "duration": 0.716729
+    },
+    {
+      "start": 614.324,
+      "end": 615.496,
+      "duration": 1.17106
+    },
+    {
+      "start": 616.951,
+      "end": 617.531,
+      "duration": 0.579479
+    },
+    {
+      "start": 617.645,
+      "end": 618.182,
+      "duration": 0.536979
+    },
+    {
+      "start": 618.299,
+      "end": 618.859,
+      "duration": 0.559833
+    },
+    {
+      "start": 618.953,
+      "end": 619.487,
+      "duration": 0.533833
+    },
+    {
+      "start": 780.335,
+      "end": 780.929,
+      "duration": 0.593875
+    },
+    {
+      "start": 787.515,
+      "end": 788.737,
+      "duration": 1.22154
+    },
+    {
+      "start": 788.839,
+      "end": 789.515,
+      "duration": 0.675854
+    },
+    {
+      "start": 796.093,
+      "end": 797.23,
+      "duration": 1.13608
+    },
+    {
+      "start": 798.924,
+      "end": 799.692,
+      "duration": 0.767813
+    },
+    {
+      "start": 833.608,
+      "end": 834.331,
+      "duration": 0.722396
+    },
+    {
+      "start": 834.331,
+      "end": 834.936,
+      "duration": 0.604687
+    },
+    {
+      "start": 862.863,
+      "end": 863.399,
+      "duration": 0.536042
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      43,
+      43,
+      43
+    ],
+    "avg": 43.0,
+    "min": 43
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

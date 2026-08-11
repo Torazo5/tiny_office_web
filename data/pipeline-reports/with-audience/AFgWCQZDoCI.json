@@ -1,0 +1,433 @@
+{
+  "video_id": "AFgWCQZDoCI",
+  "title": "Wicked: Tiny Desk Concert",
+  "duration": 1501,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/AFgWCQZDoCI.mp3",
+  "description_songs": [
+    "Defying Gravity",
+    "Popular",
+    "I'm Not That Girl",
+    "For Good"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 727 likes, matched all 4 description song(s), retained 4 timestamp(s), filtered 3 non-song chapter entries"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 3
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 230.88,
+      "end": 305.76,
+      "duration": 74.88,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 305.76,
+      "end": 370.56,
+      "duration": 64.80000000000001,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 374.4,
+      "end": 486.24,
+      "duration": 111.84000000000003,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 522.72,
+      "end": 524.16,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 537.6,
+      "end": 540.48,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 551.04,
+      "end": 553.44,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 632.16,
+      "end": 633.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 686.4,
+      "end": 702.24,
+      "duration": 15.840000000000032,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 702.24,
+      "end": 802.56,
+      "duration": 100.31999999999994,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1033.44,
+      "end": 1077.12,
+      "duration": 43.679999999999836,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1077.6,
+      "end": 1174.08,
+      "duration": 96.48000000000002,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1174.56,
+      "end": 1188.48,
+      "duration": 13.920000000000073,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1188.96,
+      "end": 1212.0,
+      "duration": 23.039999999999964,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1462.08,
+      "end": 1499.52,
+      "duration": 37.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Defying Gravity",
+      "corroboration": 0,
+      "silence_match": 5.57681,
+      "clip_start": 0,
+      "clip_end": 230.88,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 488,
+      "song": "Popular",
+      "corroboration": 0,
+      "silence_match": 487.955,
+      "clip_start": 486.24,
+      "clip_end": 686.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 862,
+      "song": "I'm Not That Girl",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 862,
+      "clip_end": 1033.44,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 1212,
+      "song": "For Good",
+      "corroboration": 0,
+      "silence_match": 1211.96,
+      "clip_start": 1212.0,
+      "clip_end": 1462.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 5.57681,
+      "end": 6.25806,
+      "duration": 0.68125
+    },
+    {
+      "start": 7.12113,
+      "end": 7.652,
+      "duration": 0.530875
+    },
+    {
+      "start": 10.6601,
+      "end": 11.3619,
+      "duration": 0.701792
+    },
+    {
+      "start": 41.0391,
+      "end": 41.9724,
+      "duration": 0.933292
+    },
+    {
+      "start": 45.0509,
+      "end": 46.6454,
+      "duration": 1.59446
+    },
+    {
+      "start": 300.121,
+      "end": 300.685,
+      "duration": 0.564396
+    },
+    {
+      "start": 385.477,
+      "end": 386.024,
+      "duration": 0.547312
+    },
+    {
+      "start": 404.294,
+      "end": 404.904,
+      "duration": 0.610521
+    },
+    {
+      "start": 419.006,
+      "end": 419.785,
+      "duration": 0.778896
+    },
+    {
+      "start": 436.384,
+      "end": 436.913,
+      "duration": 0.528521
+    },
+    {
+      "start": 471.946,
+      "end": 472.448,
+      "duration": 0.502458
+    },
+    {
+      "start": 486.65,
+      "end": 487.423,
+      "duration": 0.773083
+    },
+    {
+      "start": 487.955,
+      "end": 489.212,
+      "duration": 1.25669
+    },
+    {
+      "start": 510.598,
+      "end": 511.341,
+      "duration": 0.743375
+    },
+    {
+      "start": 536.738,
+      "end": 537.783,
+      "duration": 1.04479
+    },
+    {
+      "start": 538.161,
+      "end": 539.092,
+      "duration": 0.930729
+    },
+    {
+      "start": 539.548,
+      "end": 540.596,
+      "duration": 1.0489
+    },
+    {
+      "start": 541.212,
+      "end": 542.4,
+      "duration": 1.18754
+    },
+    {
+      "start": 601.03,
+      "end": 601.677,
+      "duration": 0.647687
+    },
+    {
+      "start": 651.189,
+      "end": 651.781,
+      "duration": 0.592458
+    },
+    {
+      "start": 654.347,
+      "end": 654.865,
+      "duration": 0.518375
+    },
+    {
+      "start": 715.957,
+      "end": 716.504,
+      "duration": 0.546729
+    },
+    {
+      "start": 747.214,
+      "end": 747.832,
+      "duration": 0.618479
+    },
+    {
+      "start": 796.134,
+      "end": 796.68,
+      "duration": 0.546396
+    },
+    {
+      "start": 802.365,
+      "end": 803.559,
+      "duration": 1.19446
+    },
+    {
+      "start": 803.747,
+      "end": 805.163,
+      "duration": 1.41562
+    },
+    {
+      "start": 870.146,
+      "end": 871.855,
+      "duration": 1.70887
+    },
+    {
+      "start": 986.053,
+      "end": 988.209,
+      "duration": 2.15585
+    },
+    {
+      "start": 1021.8,
+      "end": 1022.43,
+      "duration": 0.628
+    },
+    {
+      "start": 1032.58,
+      "end": 1033.37,
+      "duration": 0.790479
+    },
+    {
+      "start": 1054.22,
+      "end": 1054.8,
+      "duration": 0.576604
+    },
+    {
+      "start": 1056.86,
+      "end": 1057.37,
+      "duration": 0.513146
+    },
+    {
+      "start": 1062.63,
+      "end": 1063.18,
+      "duration": 0.551125
+    },
+    {
+      "start": 1078.0,
+      "end": 1078.67,
+      "duration": 0.665937
+    },
+    {
+      "start": 1100.64,
+      "end": 1101.23,
+      "duration": 0.588062
+    },
+    {
+      "start": 1110.42,
+      "end": 1111.14,
+      "duration": 0.721979
+    },
+    {
+      "start": 1118.22,
+      "end": 1118.81,
+      "duration": 0.588854
+    },
+    {
+      "start": 1146.6,
+      "end": 1147.12,
+      "duration": 0.516792
+    },
+    {
+      "start": 1172.3,
+      "end": 1172.9,
+      "duration": 0.604083
+    },
+    {
+      "start": 1173.62,
+      "end": 1174.52,
+      "duration": 0.899896
+    },
+    {
+      "start": 1174.52,
+      "end": 1175.12,
+      "duration": 0.600437
+    },
+    {
+      "start": 1176.09,
+      "end": 1177.08,
+      "duration": 0.998
+    },
+    {
+      "start": 1180.63,
+      "end": 1181.14,
+      "duration": 0.505417
+    },
+    {
+      "start": 1189.62,
+      "end": 1190.16,
+      "duration": 0.544125
+    },
+    {
+      "start": 1211.96,
+      "end": 1213.1,
+      "duration": 1.13592
+    },
+    {
+      "start": 1487.71,
+      "end": 1488.38,
+      "duration": 0.662771
+    },
+    {
+      "start": 1491.37,
+      "end": 1492.2,
+      "duration": 0.835229
+    },
+    {
+      "start": 1499.17,
+      "end": 1500.88,
+      "duration": 1.71262
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      53,
+      76
+    ],
+    "avg": 68.2,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

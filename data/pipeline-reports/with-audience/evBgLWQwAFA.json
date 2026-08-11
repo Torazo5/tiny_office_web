@@ -1,0 +1,349 @@
+{
+  "video_id": "evBgLWQwAFA",
+  "title": "Aurora: NPR Music Tiny Desk Concert",
+  "duration": 801,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/evBgLWQwAFA.mp3",
+  "description_songs": [
+    "Runaway",
+    "Murder Song (5, 4, 3, 2, 1)",
+    "Running With The Wolves"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 682 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 249.12,
+      "end": 251.04,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 258.24,
+      "end": 266.88,
+      "duration": 8.639999999999986,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 273.12,
+      "end": 283.68,
+      "duration": 10.560000000000002,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 284.15999999999997,
+      "end": 288.48,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 288.96,
+      "end": 291.84000000000003,
+      "duration": 2.8800000000000523,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 294.24,
+      "end": 296.64,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 504.47999999999996,
+      "end": 517.44,
+      "duration": 12.960000000000093,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 520.8,
+      "end": 522.24,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 526.56,
+      "end": 535.68,
+      "duration": 9.120000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 536.16,
+      "end": 538.56,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 770.4,
+      "end": 774.24,
+      "duration": 3.840000000000032,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 776.16,
+      "end": 800.16,
+      "duration": 24.0,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 1,
+      "song": "Runaway",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1,
+      "clip_end": 258.24,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 297,
+      "song": "Murder Song (5, 4, 3, 2, 1)",
+      "corroboration": 0,
+      "silence_match": 296.577,
+      "clip_start": 296.64,
+      "clip_end": 504.47999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 538,
+      "song": "Running With The Wolves",
+      "corroboration": 0,
+      "silence_match": 537.992,
+      "clip_start": 538.56,
+      "clip_end": 770.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 65.4475,
+      "end": 66.3702,
+      "duration": 0.922625
+    },
+    {
+      "start": 244.133,
+      "end": 244.831,
+      "duration": 0.697854
+    },
+    {
+      "start": 248.336,
+      "end": 249.68,
+      "duration": 1.34392
+    },
+    {
+      "start": 254.571,
+      "end": 258.893,
+      "duration": 4.32129
+    },
+    {
+      "start": 275.395,
+      "end": 275.926,
+      "duration": 0.530396
+    },
+    {
+      "start": 277.728,
+      "end": 278.59,
+      "duration": 0.86175
+    },
+    {
+      "start": 279.769,
+      "end": 280.496,
+      "duration": 0.726604
+    },
+    {
+      "start": 288.412,
+      "end": 289.522,
+      "duration": 1.10994
+    },
+    {
+      "start": 292.878,
+      "end": 293.542,
+      "duration": 0.664833
+    },
+    {
+      "start": 295.873,
+      "end": 296.391,
+      "duration": 0.517396
+    },
+    {
+      "start": 296.577,
+      "end": 297.674,
+      "duration": 1.09719
+    },
+    {
+      "start": 308.043,
+      "end": 308.964,
+      "duration": 0.920542
+    },
+    {
+      "start": 370.28,
+      "end": 371.213,
+      "duration": 0.932896
+    },
+    {
+      "start": 419.995,
+      "end": 420.617,
+      "duration": 0.621479
+    },
+    {
+      "start": 460.768,
+      "end": 463.713,
+      "duration": 2.94498
+    },
+    {
+      "start": 473.829,
+      "end": 474.473,
+      "duration": 0.64425
+    },
+    {
+      "start": 474.475,
+      "end": 475.248,
+      "duration": 0.772729
+    },
+    {
+      "start": 480.88,
+      "end": 481.638,
+      "duration": 0.757937
+    },
+    {
+      "start": 486.402,
+      "end": 488.333,
+      "duration": 1.93027
+    },
+    {
+      "start": 490.351,
+      "end": 491.985,
+      "duration": 1.63333
+    },
+    {
+      "start": 493.653,
+      "end": 495.726,
+      "duration": 2.07238
+    },
+    {
+      "start": 497.029,
+      "end": 497.837,
+      "duration": 0.807896
+    },
+    {
+      "start": 497.992,
+      "end": 503.903,
+      "duration": 5.91056
+    },
+    {
+      "start": 521.971,
+      "end": 523.212,
+      "duration": 1.24083
+    },
+    {
+      "start": 527.416,
+      "end": 528.902,
+      "duration": 1.48631
+    },
+    {
+      "start": 534.665,
+      "end": 535.635,
+      "duration": 0.969792
+    },
+    {
+      "start": 536.637,
+      "end": 537.874,
+      "duration": 1.23779
+    },
+    {
+      "start": 537.992,
+      "end": 539.304,
+      "duration": 1.31235
+    },
+    {
+      "start": 601.947,
+      "end": 602.512,
+      "duration": 0.564729
+    },
+    {
+      "start": 608.706,
+      "end": 609.216,
+      "duration": 0.510583
+    },
+    {
+      "start": 767.993,
+      "end": 769.919,
+      "duration": 1.92633
+    },
+    {
+      "start": 792.587,
+      "end": 793.259,
+      "duration": 0.671562
+    },
+    {
+      "start": 794.888,
+      "end": 795.397,
+      "duration": 0.508583
+    },
+    {
+      "start": 795.659,
+      "end": 796.505,
+      "duration": 0.845646
+    },
+    {
+      "start": 797.163,
+      "end": 797.818,
+      "duration": 0.654979
+    },
+    {
+      "start": 797.856,
+      "end": 799.584,
+      "duration": 1.72779
+    },
+    {
+      "start": 799.584,
+      "end": 800.81,
+      "duration": 1.22583
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76
+    ],
+    "avg": 68.3,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

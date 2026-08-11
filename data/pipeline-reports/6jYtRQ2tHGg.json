@@ -1,0 +1,407 @@
+{
+  "video_id": "6jYtRQ2tHGg",
+  "title": "Norah Jones: Tiny Desk Concert",
+  "duration": 1139,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/6jYtRQ2tHGg.mp3",
+  "description_songs": [
+    "Paradise",
+    "Swept Up in the Night",
+    "Staring at the Wall",
+    "Come Away With Me"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 537 likes, matched all 4 description song(s), retained 8 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 208.32,
+      "end": 262.08,
+      "duration": 53.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 268.32,
+      "end": 270.24,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 502.08,
+      "end": 531.84,
+      "duration": 29.760000000000048,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 536.64,
+      "end": 538.08,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 540.0,
+      "end": 542.88,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 543.84,
+      "end": 545.28,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 828.48,
+      "end": 874.56,
+      "duration": 46.07999999999993,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1094.8799999999999,
+      "end": 1124.6399999999999,
+      "duration": 29.75999999999999,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1131.84,
+      "end": 1138.56,
+      "duration": 6.720000000000027,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 2,
+      "song": "Paradise",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 2,
+      "clip_end": 2,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 10
+    },
+    {
+      "seconds": 2,
+      "song": "Paradise",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 2,
+      "clip_end": 2,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 10
+    },
+    {
+      "seconds": 272,
+      "song": "Swept Up in the Night",
+      "corroboration": 0,
+      "silence_match": 271.306,
+      "clip_start": 270.24,
+      "clip_end": 272,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 18
+    },
+    {
+      "seconds": 272,
+      "song": "Swept Up in the Night",
+      "corroboration": 0,
+      "silence_match": 271.306,
+      "clip_start": 270.24,
+      "clip_end": 272,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 18
+    },
+    {
+      "seconds": 547,
+      "song": "Staring at the Wall",
+      "corroboration": 0,
+      "silence_match": 545.998,
+      "clip_start": 545.28,
+      "clip_end": 547,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 18
+    },
+    {
+      "seconds": 547,
+      "song": "Staring at the Wall",
+      "corroboration": 0,
+      "silence_match": 545.998,
+      "clip_start": 545.28,
+      "clip_end": 547,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 18
+    },
+    {
+      "seconds": 876,
+      "song": "Come Away With Me",
+      "corroboration": 0,
+      "silence_match": 874.23,
+      "clip_start": 874.56,
+      "clip_end": 876,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 18
+    },
+    {
+      "seconds": 876,
+      "song": "Come Away With Me",
+      "corroboration": 0,
+      "silence_match": 874.23,
+      "clip_start": 874.56,
+      "clip_end": 876,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 18
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 2.55937,
+      "duration": 2.55937
+    },
+    {
+      "start": 205.29,
+      "end": 205.841,
+      "duration": 0.551417
+    },
+    {
+      "start": 205.869,
+      "end": 207.619,
+      "duration": 1.75008
+    },
+    {
+      "start": 228.24,
+      "end": 229.071,
+      "duration": 0.83025
+    },
+    {
+      "start": 260.249,
+      "end": 261.004,
+      "duration": 0.755021
+    },
+    {
+      "start": 261.69,
+      "end": 263.661,
+      "duration": 1.97083
+    },
+    {
+      "start": 265.075,
+      "end": 266.095,
+      "duration": 1.02035
+    },
+    {
+      "start": 267.664,
+      "end": 268.405,
+      "duration": 0.740479
+    },
+    {
+      "start": 271.306,
+      "end": 271.897,
+      "duration": 0.590646
+    },
+    {
+      "start": 500.181,
+      "end": 501.481,
+      "duration": 1.29958
+    },
+    {
+      "start": 514.316,
+      "end": 516.559,
+      "duration": 2.2431
+    },
+    {
+      "start": 517.099,
+      "end": 518.664,
+      "duration": 1.56529
+    },
+    {
+      "start": 524.038,
+      "end": 524.719,
+      "duration": 0.680875
+    },
+    {
+      "start": 526.029,
+      "end": 527.104,
+      "duration": 1.07454
+    },
+    {
+      "start": 528.282,
+      "end": 530.699,
+      "duration": 2.41629
+    },
+    {
+      "start": 532.005,
+      "end": 533.282,
+      "duration": 1.27704
+    },
+    {
+      "start": 537.699,
+      "end": 540.629,
+      "duration": 2.92998
+    },
+    {
+      "start": 541.048,
+      "end": 541.824,
+      "duration": 0.775625
+    },
+    {
+      "start": 543.372,
+      "end": 544.159,
+      "duration": 0.787521
+    },
+    {
+      "start": 545.998,
+      "end": 547.649,
+      "duration": 1.6516
+    },
+    {
+      "start": 825.656,
+      "end": 826.908,
+      "duration": 1.2524
+    },
+    {
+      "start": 841.727,
+      "end": 842.294,
+      "duration": 0.567021
+    },
+    {
+      "start": 842.294,
+      "end": 844.456,
+      "duration": 2.16194
+    },
+    {
+      "start": 845.059,
+      "end": 846.903,
+      "duration": 1.84342
+    },
+    {
+      "start": 856.997,
+      "end": 857.553,
+      "duration": 0.555875
+    },
+    {
+      "start": 859.323,
+      "end": 860.235,
+      "duration": 0.911937
+    },
+    {
+      "start": 865.058,
+      "end": 865.729,
+      "duration": 0.670583
+    },
+    {
+      "start": 866.667,
+      "end": 867.974,
+      "duration": 1.30642
+    },
+    {
+      "start": 871.616,
+      "end": 872.429,
+      "duration": 0.812083
+    },
+    {
+      "start": 873.117,
+      "end": 873.744,
+      "duration": 0.627417
+    },
+    {
+      "start": 874.23,
+      "end": 877.302,
+      "duration": 3.07171
+    },
+    {
+      "start": 881.208,
+      "end": 881.913,
+      "duration": 0.705167
+    },
+    {
+      "start": 977.543,
+      "end": 978.672,
+      "duration": 1.12885
+    },
+    {
+      "start": 1066.44,
+      "end": 1067.12,
+      "duration": 0.677958
+    },
+    {
+      "start": 1092.26,
+      "end": 1092.99,
+      "duration": 0.731146
+    },
+    {
+      "start": 1092.99,
+      "end": 1093.92,
+      "duration": 0.931937
+    },
+    {
+      "start": 1121.44,
+      "end": 1132.56,
+      "duration": 11.1192
+    },
+    {
+      "start": 1138.19,
+      "end": 1139.44,
+      "duration": 1.25031
+    }
+  ],
+  "confidence": {
+    "scores": [
+      10,
+      10,
+      18,
+      18,
+      18,
+      18,
+      18,
+      18
+    ],
+    "avg": 16.0,
+    "min": 10
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/6jYtRQ2tHGg.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

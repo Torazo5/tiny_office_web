@@ -2,7 +2,7 @@
   "video_id": "oLgZo6Qi3Uo",
   "title": "Hozier: NPR Music Tiny Desk Concert",
   "duration": 911,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/oLgZo6Qi3Uo.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/oLgZo6Qi3Uo.mp3",
   "description_songs": [],
   "method": "manual",
   "resolve_notes": {
@@ -13,7 +13,7 @@
   },
   "comment_filter": {
     "cross_checked": false,
-    "parsed": 2,
+    "parsed": 3,
     "accepted": 0,
     "rejected": 0,
     "filtered_entries": 0
@@ -290,7 +290,10 @@
     "avg": 0,
     "min": 0
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
 }

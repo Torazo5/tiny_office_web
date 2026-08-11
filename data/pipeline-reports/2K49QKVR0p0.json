@@ -1,0 +1,244 @@
+{
+  "video_id": "2K49QKVR0p0",
+  "title": "Superorganism: NPR Music Tiny Desk Concert",
+  "duration": 609,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/2K49QKVR0p0.mp3",
+  "description_songs": [
+    "The Prawn Song",
+    "Night Time",
+    "Something for Your M.I.N.D."
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (2 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 6 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 2,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 13.44,
+      "end": 14.879999999999999,
+      "duration": 1.4399999999999995,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 25.439999999999998,
+      "end": 25.919999999999998,
+      "duration": 0.4800000000000004,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 36.96,
+      "end": 37.44,
+      "duration": 0.4799999999999969,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 43.199999999999996,
+      "end": 43.67999999999999,
+      "duration": 0.4799999999999969,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 69.6,
+      "end": 71.04,
+      "duration": 1.440000000000012,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 137.76,
+      "end": 140.64,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 157.92,
+      "end": 159.35999999999999,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 178.56,
+      "end": 191.51999999999998,
+      "duration": 12.95999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 408.96,
+      "end": 432.48,
+      "duration": 23.52000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 488.64,
+      "end": 489.12,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 588.0,
+      "end": 589.4399999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 590.88,
+      "end": 605.28,
+      "duration": 14.399999999999977,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "The Prawn Song",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 14.879999999999999,
+      "clip_end": 177.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [
+        {
+          "start": 25.44,
+          "end": 25.92,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.907,
+          "music_run_sec": 14.75,
+          "anchor_start": 69.6
+        },
+        {
+          "start": 36.96,
+          "end": 37.44,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.899,
+          "music_run_sec": 14.75,
+          "anchor_start": 69.6
+        },
+        {
+          "start": 43.2,
+          "end": 43.68,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.908,
+          "music_run_sec": 13.25,
+          "anchor_start": 69.6
+        }
+      ],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 178.56,
+      "song": "Night Time",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 191.51999999999998,
+      "clip_end": 407.96,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 408.96,
+      "song": "Something for Your M.I.N.D.",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 432.48,
+      "clip_end": 589.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [
+        {
+          "start": 488.64,
+          "end": 489.12,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.926,
+          "music_run_sec": 16.75,
+          "anchor_start": 588.0
+        }
+      ],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 190.288,
+      "end": 191.731,
+      "duration": 1.44269
+    },
+    {
+      "start": 369.927,
+      "end": 370.659,
+      "duration": 0.732187
+    },
+    {
+      "start": 429.922,
+      "end": 430.596,
+      "duration": 0.674542
+    },
+    {
+      "start": 430.636,
+      "end": 433.134,
+      "duration": 2.49788
+    },
+    {
+      "start": 434.107,
+      "end": 434.858,
+      "duration": 0.751604
+    },
+    {
+      "start": 437.472,
+      "end": 438.192,
+      "duration": 0.720521
+    },
+    {
+      "start": 604.886,
+      "end": 609.083,
+      "duration": 4.19654
+    }
+  ],
+  "confidence": {
+    "scores": [
+      51,
+      51,
+      51
+    ],
+    "avg": 51.0,
+    "min": 51
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/2K49QKVR0p0.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

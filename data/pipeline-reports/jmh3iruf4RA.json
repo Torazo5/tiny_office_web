@@ -1,0 +1,375 @@
+{
+  "video_id": "jmh3iruf4RA",
+  "title": "Olivia Rodrigo: Tiny Desk Concert",
+  "duration": 1095,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/jmh3iruf4RA.mp3",
+  "description_songs": [
+    "love is embarrassing",
+    "vampire",
+    "lacy",
+    "making the bed"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 4400 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 149.76,
+      "end": 164.64,
+      "duration": 14.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 165.12,
+      "end": 243.35999999999999,
+      "duration": 78.23999999999998,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 244.79999999999998,
+      "end": 249.6,
+      "duration": 4.800000000000011,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 426.71999999999997,
+      "end": 428.16,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 501.59999999999997,
+      "end": 558.24,
+      "duration": 56.64000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 757.4399999999999,
+      "end": 813.6,
+      "duration": 56.16000000000008,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1034.8799999999999,
+      "end": 1060.32,
+      "duration": 25.440000000000055,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1062.24,
+      "end": 1067.52,
+      "duration": 5.279999999999973,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1085.28,
+      "end": 1090.56,
+      "duration": 5.279999999999973,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "love is embarrassing",
+      "corroboration": 1,
+      "silence_match": 0.299687,
+      "clip_start": 0,
+      "clip_end": 148.76,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 250,
+      "song": "vampire",
+      "corroboration": 1,
+      "silence_match": 249.619,
+      "clip_start": 249.6,
+      "clip_end": 500.59999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 556,
+      "song": "lacy",
+      "corroboration": 0,
+      "silence_match": 557.809,
+      "clip_start": 558.24,
+      "clip_end": 756.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 814,
+      "song": "making the bed",
+      "corroboration": 1,
+      "silence_match": 813.38,
+      "clip_start": 813.6,
+      "clip_end": 1033.8799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.299687,
+      "end": 1.05742,
+      "duration": 0.757729
+    },
+    {
+      "start": 1.07054,
+      "end": 1.83104,
+      "duration": 0.7605
+    },
+    {
+      "start": 1.85431,
+      "end": 2.42479,
+      "duration": 0.570479
+    },
+    {
+      "start": 149.265,
+      "end": 149.781,
+      "duration": 0.516896
+    },
+    {
+      "start": 171.205,
+      "end": 171.741,
+      "duration": 0.535708
+    },
+    {
+      "start": 188.285,
+      "end": 188.933,
+      "duration": 0.647604
+    },
+    {
+      "start": 195.355,
+      "end": 195.855,
+      "duration": 0.500458
+    },
+    {
+      "start": 196.264,
+      "end": 196.805,
+      "duration": 0.541479
+    },
+    {
+      "start": 203.054,
+      "end": 203.75,
+      "duration": 0.695708
+    },
+    {
+      "start": 206.567,
+      "end": 207.09,
+      "duration": 0.522292
+    },
+    {
+      "start": 209.606,
+      "end": 210.155,
+      "duration": 0.548104
+    },
+    {
+      "start": 214.385,
+      "end": 215.074,
+      "duration": 0.689187
+    },
+    {
+      "start": 218.154,
+      "end": 218.839,
+      "duration": 0.685562
+    },
+    {
+      "start": 224.689,
+      "end": 225.469,
+      "duration": 0.779312
+    },
+    {
+      "start": 228.78,
+      "end": 229.331,
+      "duration": 0.550562
+    },
+    {
+      "start": 230.99,
+      "end": 231.567,
+      "duration": 0.576646
+    },
+    {
+      "start": 242.896,
+      "end": 243.704,
+      "duration": 0.807958
+    },
+    {
+      "start": 249.619,
+      "end": 255.527,
+      "duration": 5.90767
+    },
+    {
+      "start": 357.014,
+      "end": 358.846,
+      "duration": 1.83252
+    },
+    {
+      "start": 389.17,
+      "end": 390.788,
+      "duration": 1.61794
+    },
+    {
+      "start": 525.08,
+      "end": 525.862,
+      "duration": 0.781333
+    },
+    {
+      "start": 527.94,
+      "end": 528.534,
+      "duration": 0.594667
+    },
+    {
+      "start": 532.727,
+      "end": 533.309,
+      "duration": 0.581125
+    },
+    {
+      "start": 557.809,
+      "end": 560.514,
+      "duration": 2.70477
+    },
+    {
+      "start": 561.384,
+      "end": 562.745,
+      "duration": 1.36029
+    },
+    {
+      "start": 719.222,
+      "end": 719.852,
+      "duration": 0.629812
+    },
+    {
+      "start": 719.852,
+      "end": 720.982,
+      "duration": 1.13042
+    },
+    {
+      "start": 756.448,
+      "end": 757.017,
+      "duration": 0.569
+    },
+    {
+      "start": 771.781,
+      "end": 772.427,
+      "duration": 0.645979
+    },
+    {
+      "start": 780.696,
+      "end": 781.212,
+      "duration": 0.516312
+    },
+    {
+      "start": 788.646,
+      "end": 789.166,
+      "duration": 0.520583
+    },
+    {
+      "start": 792.079,
+      "end": 792.597,
+      "duration": 0.518667
+    },
+    {
+      "start": 792.964,
+      "end": 793.666,
+      "duration": 0.702313
+    },
+    {
+      "start": 795.901,
+      "end": 796.583,
+      "duration": 0.682229
+    },
+    {
+      "start": 801.427,
+      "end": 801.978,
+      "duration": 0.550271
+    },
+    {
+      "start": 809.649,
+      "end": 810.583,
+      "duration": 0.934354
+    },
+    {
+      "start": 813.38,
+      "end": 817.782,
+      "duration": 4.40267
+    },
+    {
+      "start": 858.22,
+      "end": 859.757,
+      "duration": 1.53671
+    },
+    {
+      "start": 936.355,
+      "end": 938.036,
+      "duration": 1.6804
+    },
+    {
+      "start": 1029.61,
+      "end": 1034.62,
+      "duration": 5.0039
+    },
+    {
+      "start": 1067.98,
+      "end": 1085.81,
+      "duration": 17.8252
+    },
+    {
+      "start": 1090.37,
+      "end": 1095.1,
+      "duration": 4.72469
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      83,
+      76,
+      83
+    ],
+    "avg": 79.2,
+    "min": 75
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/jmh3iruf4RA.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

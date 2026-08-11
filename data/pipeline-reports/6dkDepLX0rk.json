@@ -2,7 +2,7 @@
   "video_id": "6dkDepLX0rk",
   "title": "Stromae: Tiny Desk Concert",
   "duration": 975,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/6dkDepLX0rk.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/6dkDepLX0rk.mp3",
   "description_songs": [
     "L\u2019enfer",
     "Sant\u00e9",
@@ -107,12 +107,13 @@
       "corroboration": 1,
       "silence_match": 0.0,
       "clip_start": 0,
-      "clip_end": 194.4,
+      "clip_end": 193.4,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 275,
@@ -120,12 +121,13 @@
       "corroboration": 2,
       "silence_match": 274.818,
       "clip_start": 276.96000000000004,
-      "clip_end": 464.64,
+      "clip_end": 463.64,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 495,
@@ -133,12 +135,13 @@
       "corroboration": 1,
       "silence_match": 494.727,
       "clip_start": 494.88,
-      "clip_end": 702.72,
+      "clip_end": 701.72,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 769,
@@ -146,12 +149,13 @@
       "corroboration": 1,
       "silence_match": 769.165,
       "clip_start": 775.68,
-      "clip_end": 813.12,
+      "clip_end": 812.12,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -311,7 +315,10 @@
     "avg": 82.8,
     "min": 75
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/6dkDepLX0rk.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

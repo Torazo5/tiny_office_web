@@ -1,0 +1,392 @@
+{
+  "video_id": "n7w0-KgZMdY",
+  "title": "Miguel: NPR Music Tiny Desk Concert",
+  "duration": 795,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/n7w0-KgZMdY.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 208.79999999999998,
+      "end": 212.15999999999997,
+      "duration": 3.359999999999985,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 214.56,
+      "end": 267.36,
+      "duration": 52.80000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 414.71999999999997,
+      "end": 416.16,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 493.91999999999996,
+      "end": 556.32,
+      "duration": 62.40000000000009,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 744.9599999999999,
+      "end": 746.88,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 748.8,
+      "end": 773.76,
+      "duration": 24.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.156125,
+      "end": 0.879812,
+      "duration": 0.723687
+    },
+    {
+      "start": 29.8987,
+      "end": 30.4289,
+      "duration": 0.53025
+    },
+    {
+      "start": 174.617,
+      "end": 175.704,
+      "duration": 1.0865
+    },
+    {
+      "start": 180.108,
+      "end": 180.772,
+      "duration": 0.664187
+    },
+    {
+      "start": 185.321,
+      "end": 186.033,
+      "duration": 0.7125
+    },
+    {
+      "start": 186.201,
+      "end": 187.339,
+      "duration": 1.13837
+    },
+    {
+      "start": 200.373,
+      "end": 201.838,
+      "duration": 1.46494
+    },
+    {
+      "start": 201.974,
+      "end": 203.707,
+      "duration": 1.73265
+    },
+    {
+      "start": 205.422,
+      "end": 208.149,
+      "duration": 2.72683
+    },
+    {
+      "start": 208.172,
+      "end": 209.376,
+      "duration": 1.20435
+    },
+    {
+      "start": 209.824,
+      "end": 210.346,
+      "duration": 0.521604
+    },
+    {
+      "start": 210.35,
+      "end": 211.109,
+      "duration": 0.759542
+    },
+    {
+      "start": 223.521,
+      "end": 224.067,
+      "duration": 0.545979
+    },
+    {
+      "start": 227.61,
+      "end": 228.729,
+      "duration": 1.11923
+    },
+    {
+      "start": 229.859,
+      "end": 230.467,
+      "duration": 0.607708
+    },
+    {
+      "start": 240.242,
+      "end": 240.846,
+      "duration": 0.604708
+    },
+    {
+      "start": 243.51,
+      "end": 244.401,
+      "duration": 0.890312
+    },
+    {
+      "start": 248.78,
+      "end": 249.388,
+      "duration": 0.608812
+    },
+    {
+      "start": 251.643,
+      "end": 252.166,
+      "duration": 0.52325
+    },
+    {
+      "start": 255.185,
+      "end": 255.921,
+      "duration": 0.736125
+    },
+    {
+      "start": 256.197,
+      "end": 257.209,
+      "duration": 1.01238
+    },
+    {
+      "start": 261.082,
+      "end": 261.603,
+      "duration": 0.521792
+    },
+    {
+      "start": 262.824,
+      "end": 263.563,
+      "duration": 0.738667
+    },
+    {
+      "start": 263.94,
+      "end": 264.817,
+      "duration": 0.877854
+    },
+    {
+      "start": 268.08,
+      "end": 269.885,
+      "duration": 1.80412
+    },
+    {
+      "start": 413.03,
+      "end": 413.592,
+      "duration": 0.562646
+    },
+    {
+      "start": 413.65,
+      "end": 414.155,
+      "duration": 0.505229
+    },
+    {
+      "start": 419.548,
+      "end": 420.244,
+      "duration": 0.695875
+    },
+    {
+      "start": 429.22,
+      "end": 429.725,
+      "duration": 0.505604
+    },
+    {
+      "start": 463.915,
+      "end": 464.439,
+      "duration": 0.523604
+    },
+    {
+      "start": 468.58,
+      "end": 469.101,
+      "duration": 0.520271
+    },
+    {
+      "start": 470.915,
+      "end": 471.658,
+      "duration": 0.743062
+    },
+    {
+      "start": 484.704,
+      "end": 485.226,
+      "duration": 0.521167
+    },
+    {
+      "start": 489.717,
+      "end": 490.416,
+      "duration": 0.69925
+    },
+    {
+      "start": 490.443,
+      "end": 492.606,
+      "duration": 2.16277
+    },
+    {
+      "start": 507.193,
+      "end": 508.196,
+      "duration": 1.00277
+    },
+    {
+      "start": 508.197,
+      "end": 509.312,
+      "duration": 1.11488
+    },
+    {
+      "start": 509.312,
+      "end": 510.871,
+      "duration": 1.55927
+    },
+    {
+      "start": 511.777,
+      "end": 512.671,
+      "duration": 0.893458
+    },
+    {
+      "start": 513.744,
+      "end": 514.826,
+      "duration": 1.08267
+    },
+    {
+      "start": 518.115,
+      "end": 518.969,
+      "duration": 0.854354
+    },
+    {
+      "start": 522.613,
+      "end": 523.562,
+      "duration": 0.949562
+    },
+    {
+      "start": 528.501,
+      "end": 529.491,
+      "duration": 0.990042
+    },
+    {
+      "start": 530.892,
+      "end": 531.907,
+      "duration": 1.0156
+    },
+    {
+      "start": 535.155,
+      "end": 535.877,
+      "duration": 0.721729
+    },
+    {
+      "start": 536.584,
+      "end": 537.241,
+      "duration": 0.656125
+    },
+    {
+      "start": 540.765,
+      "end": 541.426,
+      "duration": 0.661333
+    },
+    {
+      "start": 542.977,
+      "end": 543.491,
+      "duration": 0.514396
+    },
+    {
+      "start": 545.953,
+      "end": 546.519,
+      "duration": 0.565354
+    },
+    {
+      "start": 548.84,
+      "end": 549.544,
+      "duration": 0.704042
+    },
+    {
+      "start": 551.437,
+      "end": 552.242,
+      "duration": 0.804917
+    },
+    {
+      "start": 553.057,
+      "end": 553.737,
+      "duration": 0.679708
+    },
+    {
+      "start": 554.784,
+      "end": 555.544,
+      "duration": 0.760437
+    },
+    {
+      "start": 556.153,
+      "end": 558.113,
+      "duration": 1.9605
+    },
+    {
+      "start": 567.785,
+      "end": 568.406,
+      "duration": 0.620125
+    },
+    {
+      "start": 575.994,
+      "end": 576.504,
+      "duration": 0.51025
+    },
+    {
+      "start": 612.884,
+      "end": 613.472,
+      "duration": 0.588062
+    },
+    {
+      "start": 733.496,
+      "end": 734.13,
+      "duration": 0.633979
+    },
+    {
+      "start": 740.379,
+      "end": 740.999,
+      "duration": 0.620104
+    },
+    {
+      "start": 744.077,
+      "end": 745.711,
+      "duration": 1.63362
+    },
+    {
+      "start": 745.867,
+      "end": 746.465,
+      "duration": 0.598396
+    },
+    {
+      "start": 768.506,
+      "end": 769.547,
+      "duration": 1.04098
+    },
+    {
+      "start": 773.447,
+      "end": 794.9,
+      "duration": 21.4536
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

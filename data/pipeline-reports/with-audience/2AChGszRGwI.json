@@ -1,0 +1,426 @@
+{
+  "video_id": "2AChGszRGwI",
+  "title": "Common At The White House: NPR Music Tiny Desk Concert",
+  "duration": 1300,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/2AChGszRGwI.mp3",
+  "description_songs": [
+    "I Used To Love H.E.R.",
+    "Letter To The Free",
+    "The Day The Women Took Over",
+    "Little Chicago Boy"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 215 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 1,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 1.92,
+      "end": 23.04,
+      "duration": 21.119999999999997,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 23.04,
+      "end": 26.88,
+      "duration": 3.84,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 194.4,
+      "end": 207.35999999999999,
+      "duration": 12.95999999999998,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 208.32,
+      "end": 330.24,
+      "duration": 121.92000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 417.12,
+      "end": 418.56,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 637.4399999999999,
+      "end": 660.48,
+      "duration": 23.040000000000077,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 677.28,
+      "end": 678.72,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 727.68,
+      "end": 729.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 956.64,
+      "end": 958.56,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 959.04,
+      "end": 978.24,
+      "duration": 19.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 981.5999999999999,
+      "end": 983.52,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 992.16,
+      "end": 994.0799999999999,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 996.0,
+      "end": 997.92,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 998.88,
+      "end": 1000.3199999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1001.28,
+      "end": 1003.1999999999999,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1009.92,
+      "end": 1012.3199999999999,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1253.28,
+      "end": 1254.72,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1255.2,
+      "end": 1286.8799999999999,
+      "duration": 31.679999999999836,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 25,
+      "song": "I Used To Love H.E.R.",
+      "corroboration": 0,
+      "silence_match": 21.8,
+      "clip_start": 26.88,
+      "clip_end": 194.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 320,
+      "song": "Letter To The Free",
+      "corroboration": 0,
+      "silence_match": 320.443,
+      "clip_start": 330.24,
+      "clip_end": 637.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 662,
+      "song": "The Day The Women Took Over",
+      "corroboration": 0,
+      "silence_match": 660.392,
+      "clip_start": 678.72,
+      "clip_end": 959.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 1010,
+      "song": "Little Chicago Boy",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1012.3199999999999,
+      "clip_end": 1255.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 2.63373,
+      "duration": 2.63373
+    },
+    {
+      "start": 5.28885,
+      "end": 6.12204,
+      "duration": 0.833187
+    },
+    {
+      "start": 17.258,
+      "end": 17.9706,
+      "duration": 0.712583
+    },
+    {
+      "start": 18.5111,
+      "end": 19.3873,
+      "duration": 0.876188
+    },
+    {
+      "start": 20.5582,
+      "end": 21.066,
+      "duration": 0.507729
+    },
+    {
+      "start": 21.8,
+      "end": 22.879,
+      "duration": 1.079
+    },
+    {
+      "start": 205.38,
+      "end": 206.102,
+      "duration": 0.722771
+    },
+    {
+      "start": 206.102,
+      "end": 208.562,
+      "duration": 2.45954
+    },
+    {
+      "start": 218.093,
+      "end": 219.28,
+      "duration": 1.18723
+    },
+    {
+      "start": 225.863,
+      "end": 226.571,
+      "duration": 0.707917
+    },
+    {
+      "start": 227.03,
+      "end": 227.819,
+      "duration": 0.7895
+    },
+    {
+      "start": 235.537,
+      "end": 236.499,
+      "duration": 0.961833
+    },
+    {
+      "start": 236.832,
+      "end": 237.368,
+      "duration": 0.5365
+    },
+    {
+      "start": 240.45,
+      "end": 241.106,
+      "duration": 0.655687
+    },
+    {
+      "start": 246.509,
+      "end": 247.068,
+      "duration": 0.559354
+    },
+    {
+      "start": 247.995,
+      "end": 248.515,
+      "duration": 0.51975
+    },
+    {
+      "start": 249.787,
+      "end": 250.305,
+      "duration": 0.518354
+    },
+    {
+      "start": 279.54,
+      "end": 280.159,
+      "duration": 0.618896
+    },
+    {
+      "start": 285.572,
+      "end": 286.313,
+      "duration": 0.74125
+    },
+    {
+      "start": 288.655,
+      "end": 289.514,
+      "duration": 0.858667
+    },
+    {
+      "start": 296.761,
+      "end": 297.377,
+      "duration": 0.615875
+    },
+    {
+      "start": 300.527,
+      "end": 301.324,
+      "duration": 0.796917
+    },
+    {
+      "start": 305.526,
+      "end": 306.131,
+      "duration": 0.60575
+    },
+    {
+      "start": 306.66,
+      "end": 307.198,
+      "duration": 0.538542
+    },
+    {
+      "start": 308.215,
+      "end": 308.827,
+      "duration": 0.611958
+    },
+    {
+      "start": 313.191,
+      "end": 313.727,
+      "duration": 0.536333
+    },
+    {
+      "start": 317.218,
+      "end": 320.344,
+      "duration": 3.12573
+    },
+    {
+      "start": 320.443,
+      "end": 321.647,
+      "duration": 1.20423
+    },
+    {
+      "start": 335.617,
+      "end": 336.12,
+      "duration": 0.503333
+    },
+    {
+      "start": 338.399,
+      "end": 338.925,
+      "duration": 0.526125
+    },
+    {
+      "start": 636.081,
+      "end": 637.775,
+      "duration": 1.69435
+    },
+    {
+      "start": 650.961,
+      "end": 651.926,
+      "duration": 0.964979
+    },
+    {
+      "start": 652.776,
+      "end": 654.388,
+      "duration": 1.61194
+    },
+    {
+      "start": 655.606,
+      "end": 656.743,
+      "duration": 1.13744
+    },
+    {
+      "start": 656.951,
+      "end": 658.089,
+      "duration": 1.13829
+    },
+    {
+      "start": 660.392,
+      "end": 664.477,
+      "duration": 4.08488
+    },
+    {
+      "start": 952.245,
+      "end": 952.797,
+      "duration": 0.551937
+    },
+    {
+      "start": 954.349,
+      "end": 954.917,
+      "duration": 0.567187
+    },
+    {
+      "start": 958.269,
+      "end": 958.92,
+      "duration": 0.651042
+    },
+    {
+      "start": 1251.43,
+      "end": 1253.91,
+      "duration": 2.47581
+    },
+    {
+      "start": 1286.66,
+      "end": 1299.64,
+      "duration": 12.9842
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      76,
+      76,
+      61
+    ],
+    "avg": 72.2,
+    "min": 61
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

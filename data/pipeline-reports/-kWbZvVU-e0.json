@@ -1,0 +1,823 @@
+{
+  "video_id": "-kWbZvVU-e0",
+  "title": "Chance The Rapper: NPR Music Tiny Desk Concert",
+  "duration": 772,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/-kWbZvVU-e0.mp3",
+  "description_songs": [
+    "Juke Jam",
+    "They Won't Go When I Go\" (written by Stevie Wonder)"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 376 likes, matched all 2 description song(s), retained 2 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 7.68,
+      "duration": 7.68,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 11.04,
+      "end": 57.599999999999994,
+      "duration": 46.559999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 285.12,
+      "end": 285.6,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 292.32,
+      "end": 292.8,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 311.03999999999996,
+      "end": 312.96,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 316.8,
+      "end": 319.2,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 326.88,
+      "end": 330.24,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 330.71999999999997,
+      "end": 343.68,
+      "duration": 12.960000000000036,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 345.59999999999997,
+      "end": 347.52,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 350.88,
+      "end": 362.4,
+      "duration": 11.519999999999982,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 362.88,
+      "end": 380.64,
+      "duration": 17.75999999999999,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 381.12,
+      "end": 387.36,
+      "duration": 6.240000000000009,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 387.84,
+      "end": 391.68,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 393.12,
+      "end": 395.52,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 396.0,
+      "end": 397.92,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 398.88,
+      "end": 403.2,
+      "duration": 4.319999999999993,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 404.64,
+      "end": 408.48,
+      "duration": 3.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 412.8,
+      "end": 423.84,
+      "duration": 11.039999999999964,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 424.32,
+      "end": 427.2,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 428.15999999999997,
+      "end": 444.0,
+      "duration": 15.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 444.96,
+      "end": 450.24,
+      "duration": 5.28000000000003,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 450.71999999999997,
+      "end": 455.52,
+      "duration": 4.800000000000011,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 456.0,
+      "end": 458.4,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 459.35999999999996,
+      "end": 460.8,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 461.28,
+      "end": 484.8,
+      "duration": 23.52000000000004,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 485.76,
+      "end": 489.6,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 490.56,
+      "end": 492.0,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 492.47999999999996,
+      "end": 494.88,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 495.84,
+      "end": 502.08,
+      "duration": 6.240000000000009,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 502.56,
+      "end": 510.24,
+      "duration": 7.680000000000007,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 511.2,
+      "end": 523.68,
+      "duration": 12.479999999999961,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 528.48,
+      "end": 533.28,
+      "duration": 4.7999999999999545,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 534.24,
+      "end": 536.16,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 538.0799999999999,
+      "end": 540.0,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 540.96,
+      "end": 544.8,
+      "duration": 3.839999999999918,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 545.28,
+      "end": 546.72,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 549.12,
+      "end": 566.4,
+      "duration": 17.279999999999973,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 751.68,
+      "end": 754.56,
+      "duration": 2.8799999999999955,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 757.92,
+      "end": 758.4,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 71,
+      "song": "Juke Jam",
+      "corroboration": 0,
+      "silence_match": 76.9647,
+      "clip_start": 57.599999999999994,
+      "clip_end": 284.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 565,
+      "song": "They Won't Go When I Go\" (written by Stevie Wonder)",
+      "corroboration": 1,
+      "silence_match": 564.247,
+      "clip_start": 566.4,
+      "clip_end": 750.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 16.8301,
+      "end": 17.6312,
+      "duration": 0.801083
+    },
+    {
+      "start": 18.1515,
+      "end": 19.1403,
+      "duration": 0.98875
+    },
+    {
+      "start": 21.2366,
+      "end": 21.8975,
+      "duration": 0.660958
+    },
+    {
+      "start": 22.6816,
+      "end": 23.366,
+      "duration": 0.684375
+    },
+    {
+      "start": 23.7155,
+      "end": 24.8843,
+      "duration": 1.16877
+    },
+    {
+      "start": 24.8843,
+      "end": 25.5175,
+      "duration": 0.63325
+    },
+    {
+      "start": 27.4856,
+      "end": 27.9909,
+      "duration": 0.505271
+    },
+    {
+      "start": 33.4112,
+      "end": 33.9882,
+      "duration": 0.577021
+    },
+    {
+      "start": 34.0164,
+      "end": 34.6586,
+      "duration": 0.642229
+    },
+    {
+      "start": 36.4136,
+      "end": 36.9701,
+      "duration": 0.556583
+    },
+    {
+      "start": 37.5859,
+      "end": 38.0871,
+      "duration": 0.501167
+    },
+    {
+      "start": 39.409,
+      "end": 39.9683,
+      "duration": 0.559312
+    },
+    {
+      "start": 40.6022,
+      "end": 41.147,
+      "duration": 0.544792
+    },
+    {
+      "start": 48.6697,
+      "end": 49.6811,
+      "duration": 1.0114
+    },
+    {
+      "start": 51.5614,
+      "end": 52.4641,
+      "duration": 0.902708
+    },
+    {
+      "start": 54.5199,
+      "end": 57.243,
+      "duration": 2.72315
+    },
+    {
+      "start": 57.2889,
+      "end": 58.1708,
+      "duration": 0.881896
+    },
+    {
+      "start": 58.2244,
+      "end": 59.1649,
+      "duration": 0.940479
+    },
+    {
+      "start": 59.2213,
+      "end": 60.5351,
+      "duration": 1.31383
+    },
+    {
+      "start": 76.9647,
+      "end": 78.18,
+      "duration": 1.21525
+    },
+    {
+      "start": 303.098,
+      "end": 303.667,
+      "duration": 0.568354
+    },
+    {
+      "start": 307.178,
+      "end": 307.685,
+      "duration": 0.506792
+    },
+    {
+      "start": 334.175,
+      "end": 335.033,
+      "duration": 0.857958
+    },
+    {
+      "start": 335.75,
+      "end": 336.395,
+      "duration": 0.644562
+    },
+    {
+      "start": 339.408,
+      "end": 340.148,
+      "duration": 0.739417
+    },
+    {
+      "start": 340.542,
+      "end": 341.185,
+      "duration": 0.642979
+    },
+    {
+      "start": 342.003,
+      "end": 342.513,
+      "duration": 0.51025
+    },
+    {
+      "start": 343.375,
+      "end": 345.069,
+      "duration": 1.69425
+    },
+    {
+      "start": 348.632,
+      "end": 351.553,
+      "duration": 2.92067
+    },
+    {
+      "start": 352.662,
+      "end": 353.646,
+      "duration": 0.984146
+    },
+    {
+      "start": 354.626,
+      "end": 355.628,
+      "duration": 1.00202
+    },
+    {
+      "start": 356.75,
+      "end": 358.057,
+      "duration": 1.30694
+    },
+    {
+      "start": 358.62,
+      "end": 359.907,
+      "duration": 1.28698
+    },
+    {
+      "start": 362.393,
+      "end": 363.357,
+      "duration": 0.963792
+    },
+    {
+      "start": 366.266,
+      "end": 366.952,
+      "duration": 0.686271
+    },
+    {
+      "start": 371.551,
+      "end": 372.585,
+      "duration": 1.0339
+    },
+    {
+      "start": 373.156,
+      "end": 373.913,
+      "duration": 0.756958
+    },
+    {
+      "start": 374.685,
+      "end": 375.435,
+      "duration": 0.750542
+    },
+    {
+      "start": 376.505,
+      "end": 377.138,
+      "duration": 0.632729
+    },
+    {
+      "start": 378.195,
+      "end": 378.779,
+      "duration": 0.584062
+    },
+    {
+      "start": 380.949,
+      "end": 381.575,
+      "duration": 0.626271
+    },
+    {
+      "start": 384.614,
+      "end": 385.59,
+      "duration": 0.976083
+    },
+    {
+      "start": 386.921,
+      "end": 387.875,
+      "duration": 0.953937
+    },
+    {
+      "start": 389.768,
+      "end": 391.095,
+      "duration": 1.3274
+    },
+    {
+      "start": 400.253,
+      "end": 401.962,
+      "duration": 1.7091
+    },
+    {
+      "start": 419.296,
+      "end": 420.186,
+      "duration": 0.889687
+    },
+    {
+      "start": 422.678,
+      "end": 423.253,
+      "duration": 0.574875
+    },
+    {
+      "start": 423.681,
+      "end": 424.448,
+      "duration": 0.766312
+    },
+    {
+      "start": 425.825,
+      "end": 426.573,
+      "duration": 0.748292
+    },
+    {
+      "start": 427.171,
+      "end": 429.075,
+      "duration": 1.90473
+    },
+    {
+      "start": 431.054,
+      "end": 432.233,
+      "duration": 1.17894
+    },
+    {
+      "start": 432.926,
+      "end": 434.151,
+      "duration": 1.22575
+    },
+    {
+      "start": 435.924,
+      "end": 436.749,
+      "duration": 0.825667
+    },
+    {
+      "start": 439.702,
+      "end": 440.258,
+      "duration": 0.555417
+    },
+    {
+      "start": 443.955,
+      "end": 445.895,
+      "duration": 1.94056
+    },
+    {
+      "start": 450.145,
+      "end": 450.645,
+      "duration": 0.500208
+    },
+    {
+      "start": 450.669,
+      "end": 451.255,
+      "duration": 0.585229
+    },
+    {
+      "start": 453.359,
+      "end": 454.4,
+      "duration": 1.0405
+    },
+    {
+      "start": 455.427,
+      "end": 456.919,
+      "duration": 1.49162
+    },
+    {
+      "start": 458.588,
+      "end": 459.497,
+      "duration": 0.909146
+    },
+    {
+      "start": 460.607,
+      "end": 461.893,
+      "duration": 1.286
+    },
+    {
+      "start": 463.811,
+      "end": 464.373,
+      "duration": 0.561792
+    },
+    {
+      "start": 467.11,
+      "end": 467.629,
+      "duration": 0.518604
+    },
+    {
+      "start": 471.285,
+      "end": 472.582,
+      "duration": 1.29644
+    },
+    {
+      "start": 473.835,
+      "end": 474.387,
+      "duration": 0.551896
+    },
+    {
+      "start": 474.69,
+      "end": 475.321,
+      "duration": 0.630937
+    },
+    {
+      "start": 476.366,
+      "end": 477.081,
+      "duration": 0.715396
+    },
+    {
+      "start": 479.707,
+      "end": 480.746,
+      "duration": 1.03967
+    },
+    {
+      "start": 484.065,
+      "end": 486.341,
+      "duration": 2.276
+    },
+    {
+      "start": 487.338,
+      "end": 488.362,
+      "duration": 1.02417
+    },
+    {
+      "start": 489.528,
+      "end": 491.207,
+      "duration": 1.67923
+    },
+    {
+      "start": 491.782,
+      "end": 492.963,
+      "duration": 1.18081
+    },
+    {
+      "start": 494.781,
+      "end": 496.317,
+      "duration": 1.53635
+    },
+    {
+      "start": 497.536,
+      "end": 498.634,
+      "duration": 1.09796
+    },
+    {
+      "start": 500.117,
+      "end": 500.948,
+      "duration": 0.831104
+    },
+    {
+      "start": 501.838,
+      "end": 502.905,
+      "duration": 1.06746
+    },
+    {
+      "start": 504.254,
+      "end": 505.316,
+      "duration": 1.06175
+    },
+    {
+      "start": 506.765,
+      "end": 507.586,
+      "duration": 0.821521
+    },
+    {
+      "start": 510.182,
+      "end": 511.723,
+      "duration": 1.54135
+    },
+    {
+      "start": 512.766,
+      "end": 513.537,
+      "duration": 0.770562
+    },
+    {
+      "start": 515.204,
+      "end": 515.879,
+      "duration": 0.674438
+    },
+    {
+      "start": 517.832,
+      "end": 518.479,
+      "duration": 0.647479
+    },
+    {
+      "start": 522.077,
+      "end": 522.992,
+      "duration": 0.915333
+    },
+    {
+      "start": 523.356,
+      "end": 524.155,
+      "duration": 0.7995
+    },
+    {
+      "start": 527.358,
+      "end": 528.564,
+      "duration": 1.20637
+    },
+    {
+      "start": 529.614,
+      "end": 530.463,
+      "duration": 0.849271
+    },
+    {
+      "start": 533.04,
+      "end": 535.131,
+      "duration": 2.09021
+    },
+    {
+      "start": 536.132,
+      "end": 538.997,
+      "duration": 2.86469
+    },
+    {
+      "start": 539.968,
+      "end": 541.361,
+      "duration": 1.3926
+    },
+    {
+      "start": 542.867,
+      "end": 543.564,
+      "duration": 0.696729
+    },
+    {
+      "start": 544.515,
+      "end": 545.805,
+      "duration": 1.29012
+    },
+    {
+      "start": 546.552,
+      "end": 548.811,
+      "duration": 2.25892
+    },
+    {
+      "start": 564.247,
+      "end": 566.934,
+      "duration": 2.6864
+    },
+    {
+      "start": 571.593,
+      "end": 572.239,
+      "duration": 0.646146
+    },
+    {
+      "start": 578.062,
+      "end": 578.772,
+      "duration": 0.709771
+    },
+    {
+      "start": 604.706,
+      "end": 605.472,
+      "duration": 0.76625
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      83
+    ],
+    "avg": 79.5,
+    "min": 76
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

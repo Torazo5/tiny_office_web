@@ -2,7 +2,7 @@
   "video_id": "cMIJsoaxRjk",
   "title": "Justin Timberlake: Tiny Desk Concert",
   "duration": 1540,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/cMIJsoaxRjk.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/cMIJsoaxRjk.mp3",
   "description_songs": [
     "Se\u00f1orita",
     "Rock Your Body",
@@ -95,12 +95,13 @@
       "corroboration": 2,
       "silence_match": null,
       "clip_start": 140,
-      "clip_end": 275.03999999999996,
+      "clip_end": 274.03999999999996,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 67
+      "confidence": 67,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 280,
@@ -108,12 +109,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 284.16,
-      "clip_end": 444.0,
+      "clip_end": 443.0,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 450,
@@ -121,12 +123,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 452.16,
-      "clip_end": 632.16,
+      "clip_end": 631.16,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 764,
@@ -134,12 +137,13 @@
       "corroboration": 2,
       "silence_match": 764.246,
       "clip_start": 761.28,
-      "clip_end": 996.9599999999999,
+      "clip_end": 995.9599999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 1000,
@@ -147,12 +151,13 @@
       "corroboration": 2,
       "silence_match": null,
       "clip_start": 1000.3199999999999,
-      "clip_end": 1168.32,
+      "clip_end": 1167.32,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 1196,
@@ -160,12 +165,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 1204.32,
-      "clip_end": 1498.56,
+      "clip_end": 1497.56,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -333,7 +339,10 @@
     "avg": 67.7,
     "min": 45
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/cMIJsoaxRjk.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

@@ -2,7 +2,7 @@
   "video_id": "IUMTaAQ43lY",
   "title": "Tom Misch: NPR Music Tiny Desk Concert",
   "duration": 1045,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/IUMTaAQ43lY.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/IUMTaAQ43lY.mp3",
   "description_songs": [
     "It Runs Through Me",
     "I Wish",
@@ -64,12 +64,13 @@
       "corroboration": 1,
       "silence_match": 0.0,
       "clip_start": 0,
-      "clip_end": 265.44,
+      "clip_end": 264.44,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 275,
@@ -77,12 +78,13 @@
       "corroboration": 2,
       "silence_match": null,
       "clip_start": 274.56,
-      "clip_end": 605.28,
+      "clip_end": 604.28,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 644,
@@ -90,12 +92,13 @@
       "corroboration": 2,
       "silence_match": null,
       "clip_start": 642.72,
-      "clip_end": 1007.04,
+      "clip_end": 1006.04,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -149,7 +152,10 @@
     "avg": 75.0,
     "min": 75
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/IUMTaAQ43lY.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

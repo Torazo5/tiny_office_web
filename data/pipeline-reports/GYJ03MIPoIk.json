@@ -1,0 +1,430 @@
+{
+  "video_id": "GYJ03MIPoIk",
+  "title": "Megan Thee Stallion: NPR Music Tiny Desk Concert",
+  "duration": 1559,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/GYJ03MIPoIk.mp3",
+  "description_songs": [
+    "Realer",
+    "Freak Nasty",
+    "Cash S",
+    "Big Ole Freak",
+    "Hot Girl Summer",
+    "F****** Around",
+    "Money Good"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 7 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 6 usable episode(s), took top 6; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 152.16,
+      "end": 183.35999999999999,
+      "duration": 31.19999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 372.47999999999996,
+      "end": 423.84,
+      "duration": 51.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 431.52,
+      "end": 433.92,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 436.8,
+      "end": 438.24,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 466.56,
+      "end": 468.0,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 525.6,
+      "end": 527.04,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 558.72,
+      "end": 588.96,
+      "duration": 30.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 598.0799999999999,
+      "end": 600.48,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 783.36,
+      "end": 809.28,
+      "duration": 25.91999999999996,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 858.7199999999999,
+      "end": 860.16,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 908.16,
+      "end": 909.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 974.4,
+      "end": 976.3199999999999,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 976.3199999999999,
+      "end": 1032.48,
+      "duration": 56.16000000000008,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1143.84,
+      "end": 1146.24,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1242.24,
+      "end": 1294.08,
+      "duration": 51.83999999999992,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1325.28,
+      "end": 1326.72,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1335.84,
+      "end": 1337.28,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1397.76,
+      "end": 1399.68,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1400.6399999999999,
+      "end": 1402.56,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1452.0,
+      "end": 1453.92,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1454.8799999999999,
+      "end": 1456.32,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1479.84,
+      "end": 1551.84,
+      "duration": 72.0,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Realer",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 151.16,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 152.16,
+      "song": "Freak Nasty",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 183.35999999999999,
+      "clip_end": 371.47999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 372.47999999999996,
+      "song": "Cash S",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 423.84,
+      "clip_end": 557.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 558.72,
+      "song": "Big Ole Freak",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 588.96,
+      "clip_end": 782.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 783.36,
+      "song": "Hot Girl Summer",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 809.28,
+      "clip_end": 975.3199999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 976.3199999999999,
+      "song": "F****** Around",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1032.48,
+      "clip_end": 1241.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1242.24,
+      "song": "Money Good",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1294.08,
+      "clip_end": 1478.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.22481,
+      "duration": 5.22481
+    },
+    {
+      "start": 169.565,
+      "end": 170.083,
+      "duration": 0.518208
+    },
+    {
+      "start": 185.744,
+      "end": 186.294,
+      "duration": 0.549583
+    },
+    {
+      "start": 384.506,
+      "end": 385.192,
+      "duration": 0.685729
+    },
+    {
+      "start": 387.116,
+      "end": 387.701,
+      "duration": 0.585437
+    },
+    {
+      "start": 388.147,
+      "end": 388.71,
+      "duration": 0.562271
+    },
+    {
+      "start": 393.591,
+      "end": 394.109,
+      "duration": 0.517354
+    },
+    {
+      "start": 397.136,
+      "end": 398.039,
+      "duration": 0.902979
+    },
+    {
+      "start": 400.825,
+      "end": 402.576,
+      "duration": 1.75098
+    },
+    {
+      "start": 578.623,
+      "end": 579.124,
+      "duration": 0.501062
+    },
+    {
+      "start": 588.883,
+      "end": 590.422,
+      "duration": 1.53854
+    },
+    {
+      "start": 590.438,
+      "end": 591.284,
+      "duration": 0.845979
+    },
+    {
+      "start": 791.614,
+      "end": 792.329,
+      "duration": 0.715375
+    },
+    {
+      "start": 794.431,
+      "end": 794.981,
+      "duration": 0.550063
+    },
+    {
+      "start": 795.497,
+      "end": 796.194,
+      "duration": 0.6965
+    },
+    {
+      "start": 808.953,
+      "end": 811.641,
+      "duration": 2.68802
+    },
+    {
+      "start": 1005.14,
+      "end": 1005.76,
+      "duration": 0.620208
+    },
+    {
+      "start": 1008.48,
+      "end": 1009.13,
+      "duration": 0.645375
+    },
+    {
+      "start": 1010.38,
+      "end": 1012.1,
+      "duration": 1.71792
+    },
+    {
+      "start": 1262.04,
+      "end": 1262.7,
+      "duration": 0.664542
+    },
+    {
+      "start": 1271.54,
+      "end": 1272.09,
+      "duration": 0.551208
+    },
+    {
+      "start": 1274.52,
+      "end": 1275.05,
+      "duration": 0.534542
+    },
+    {
+      "start": 1279.79,
+      "end": 1281.57,
+      "duration": 1.77594
+    },
+    {
+      "start": 1515.04,
+      "end": 1515.83,
+      "duration": 0.788958
+    },
+    {
+      "start": 1551.13,
+      "end": 1558.86,
+      "duration": 7.73381
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      51,
+      51,
+      51,
+      51,
+      51,
+      51
+    ],
+    "avg": 52.0,
+    "min": 51
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

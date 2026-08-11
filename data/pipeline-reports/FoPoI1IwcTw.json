@@ -1,0 +1,357 @@
+{
+  "video_id": "FoPoI1IwcTw",
+  "title": "Yusuf/Cat Stevens: NPR Music Tiny Desk Concert",
+  "duration": 891,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/FoPoI1IwcTw.mp3",
+  "description_songs": [
+    "I Was Raised In Babylon\" (1:08)",
+    "The First Cut Is the Deepest\" (4:32)",
+    "Doors\" (7:45)",
+    "Father and Son\" (10:38)"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 190 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 3.36,
+      "duration": 3.36,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 4.32,
+      "end": 33.599999999999994,
+      "duration": 29.279999999999994,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 36.48,
+      "end": 38.4,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 38.879999999999995,
+      "end": 41.279999999999994,
+      "duration": 2.3999999999999986,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 43.199999999999996,
+      "end": 53.76,
+      "duration": 10.560000000000002,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 54.239999999999995,
+      "end": 67.68,
+      "duration": 13.440000000000012,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 239.04,
+      "end": 271.2,
+      "duration": 32.16,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 443.52,
+      "end": 464.16,
+      "duration": 20.640000000000043,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 621.6,
+      "end": 637.92,
+      "duration": 16.319999999999936,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 827.04,
+      "end": 860.16,
+      "duration": 33.120000000000005,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 71,
+      "song": "I Was Raised In Babylon\" (1:08)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 67.68,
+      "clip_end": 238.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 273,
+      "song": "The First Cut Is the Deepest\" (4:32)",
+      "corroboration": 0,
+      "silence_match": 270.874,
+      "clip_start": 271.2,
+      "clip_end": 442.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 465,
+      "song": "Doors\" (7:45)",
+      "corroboration": 0,
+      "silence_match": 464.26,
+      "clip_start": 464.16,
+      "clip_end": 620.6,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 640,
+      "song": "Father and Son\" (10:38)",
+      "corroboration": 0,
+      "silence_match": 637.458,
+      "clip_start": 637.92,
+      "clip_end": 826.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.510375,
+      "duration": 0.510375
+    },
+    {
+      "start": 3.42723,
+      "end": 4.00204,
+      "duration": 0.574812
+    },
+    {
+      "start": 4.12723,
+      "end": 4.79794,
+      "duration": 0.670708
+    },
+    {
+      "start": 6.12296,
+      "end": 6.87325,
+      "duration": 0.750292
+    },
+    {
+      "start": 9.52733,
+      "end": 10.1796,
+      "duration": 0.652271
+    },
+    {
+      "start": 10.6162,
+      "end": 11.2272,
+      "duration": 0.610958
+    },
+    {
+      "start": 16.0921,
+      "end": 16.6918,
+      "duration": 0.59975
+    },
+    {
+      "start": 17.4224,
+      "end": 18.0768,
+      "duration": 0.654396
+    },
+    {
+      "start": 19.4756,
+      "end": 20.0101,
+      "duration": 0.5345
+    },
+    {
+      "start": 22.1812,
+      "end": 23.0524,
+      "duration": 0.87125
+    },
+    {
+      "start": 25.5235,
+      "end": 26.0672,
+      "duration": 0.543708
+    },
+    {
+      "start": 27.8978,
+      "end": 28.6201,
+      "duration": 0.722333
+    },
+    {
+      "start": 31.6139,
+      "end": 32.5186,
+      "duration": 0.904708
+    },
+    {
+      "start": 37.902,
+      "end": 38.4916,
+      "duration": 0.589625
+    },
+    {
+      "start": 45.0991,
+      "end": 45.6288,
+      "duration": 0.529646
+    },
+    {
+      "start": 45.9779,
+      "end": 46.8136,
+      "duration": 0.835688
+    },
+    {
+      "start": 48.5882,
+      "end": 49.3173,
+      "duration": 0.729104
+    },
+    {
+      "start": 50.1334,
+      "end": 50.724,
+      "duration": 0.590604
+    },
+    {
+      "start": 260.312,
+      "end": 261.332,
+      "duration": 1.02002
+    },
+    {
+      "start": 262.766,
+      "end": 263.487,
+      "duration": 0.721354
+    },
+    {
+      "start": 264.959,
+      "end": 266.776,
+      "duration": 1.81731
+    },
+    {
+      "start": 267.056,
+      "end": 267.685,
+      "duration": 0.628188
+    },
+    {
+      "start": 270.874,
+      "end": 272.171,
+      "duration": 1.29646
+    },
+    {
+      "start": 281.098,
+      "end": 282.081,
+      "duration": 0.983292
+    },
+    {
+      "start": 343.083,
+      "end": 343.637,
+      "duration": 0.554729
+    },
+    {
+      "start": 380.486,
+      "end": 381.005,
+      "duration": 0.518854
+    },
+    {
+      "start": 442.449,
+      "end": 443.475,
+      "duration": 1.02654
+    },
+    {
+      "start": 464.26,
+      "end": 464.9,
+      "duration": 0.639687
+    },
+    {
+      "start": 489.892,
+      "end": 490.691,
+      "duration": 0.798562
+    },
+    {
+      "start": 616.631,
+      "end": 621.312,
+      "duration": 4.68106
+    },
+    {
+      "start": 636.141,
+      "end": 637.084,
+      "duration": 0.942417
+    },
+    {
+      "start": 637.458,
+      "end": 637.975,
+      "duration": 0.517042
+    },
+    {
+      "start": 643.935,
+      "end": 644.918,
+      "duration": 0.982375
+    },
+    {
+      "start": 647.725,
+      "end": 648.413,
+      "duration": 0.687542
+    },
+    {
+      "start": 824.863,
+      "end": 826.933,
+      "duration": 2.06992
+    },
+    {
+      "start": 860.177,
+      "end": 861.742,
+      "duration": 1.56506
+    },
+    {
+      "start": 890.65,
+      "end": 891.321,
+      "duration": 0.670771
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      76,
+      76,
+      76
+    ],
+    "avg": 72.2,
+    "min": 61
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/FoPoI1IwcTw.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

@@ -1,0 +1,199 @@
+{
+  "video_id": "B_ymY0xG0LI",
+  "title": "Moonchild: NPR Music Tiny Desk Concert",
+  "duration": 1201,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/B_ymY0xG0LI.mp3",
+  "description_songs": [
+    "Money",
+    "The Other Side",
+    "The List"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 5 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 307.68,
+      "end": 325.92,
+      "duration": 18.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 697.4399999999999,
+      "end": 708.48,
+      "duration": 11.040000000000077,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 708.9599999999999,
+      "end": 823.68,
+      "duration": 114.72000000000003,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 824.16,
+      "end": 830.88,
+      "duration": 6.720000000000027,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1187.04,
+      "end": 1187.52,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1190.3999999999999,
+      "end": 1191.84,
+      "duration": 1.4400000000000546,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Money",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 306.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 307.68,
+      "song": "The Other Side",
+      "corroboration": 0,
+      "silence_match": 306.208,
+      "clip_start": 325.92,
+      "clip_end": 696.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 697.4399999999999,
+      "song": "The List",
+      "corroboration": 0,
+      "silence_match": 695.449,
+      "clip_start": 708.48,
+      "clip_end": 708.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 16,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.18769,
+      "duration": 5.18769
+    },
+    {
+      "start": 264.645,
+      "end": 265.324,
+      "duration": 0.678979
+    },
+    {
+      "start": 272.52,
+      "end": 273.218,
+      "duration": 0.697937
+    },
+    {
+      "start": 275.163,
+      "end": 275.793,
+      "duration": 0.629917
+    },
+    {
+      "start": 306.208,
+      "end": 307.835,
+      "duration": 1.62673
+    },
+    {
+      "start": 321.693,
+      "end": 322.364,
+      "duration": 0.671354
+    },
+    {
+      "start": 325.871,
+      "end": 328.057,
+      "duration": 2.18575
+    },
+    {
+      "start": 391.495,
+      "end": 392.071,
+      "duration": 0.575729
+    },
+    {
+      "start": 695.449,
+      "end": 696.675,
+      "duration": 1.22606
+    },
+    {
+      "start": 709.066,
+      "end": 709.654,
+      "duration": 0.587375
+    },
+    {
+      "start": 757.778,
+      "end": 758.283,
+      "duration": 0.505667
+    },
+    {
+      "start": 767.673,
+      "end": 768.558,
+      "duration": 0.885312
+    },
+    {
+      "start": 783.99,
+      "end": 784.533,
+      "duration": 0.542813
+    },
+    {
+      "start": 1192.29,
+      "end": 1200.67,
+      "duration": 8.38081
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      66,
+      16
+    ],
+    "avg": 46.7,
+    "min": 16
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

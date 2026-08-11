@@ -1,0 +1,350 @@
+{
+  "video_id": "C3lcprigQ0E",
+  "title": "Anthony Hamilton: NPR Music Tiny Desk Concert",
+  "duration": 1228,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/C3lcprigQ0E.mp3",
+  "description_songs": [
+    "Amen",
+    "Best Of Me",
+    "Cool",
+    "Charlene"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 723 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 202.56,
+      "end": 258.24,
+      "duration": 55.68000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 507.84,
+      "end": 546.24,
+      "duration": 38.400000000000034,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 767.04,
+      "end": 811.1999999999999,
+      "duration": 44.15999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 820.3199999999999,
+      "end": 823.1999999999999,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 823.68,
+      "end": 825.6,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 827.04,
+      "end": 828.96,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 830.88,
+      "end": 833.76,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 836.16,
+      "end": 840.96,
+      "duration": 4.800000000000068,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1146.24,
+      "end": 1146.72,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1152.0,
+      "end": 1195.2,
+      "duration": 43.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Amen",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 202.56,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 258,
+      "song": "Best Of Me",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 258.24,
+      "clip_end": 507.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 549,
+      "song": "Cool",
+      "corroboration": 0,
+      "silence_match": 548.693,
+      "clip_start": 546.24,
+      "clip_end": 767.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 846,
+      "song": "Charlene",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 840.96,
+      "clip_end": 1146.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 194.361,
+      "end": 194.902,
+      "duration": 0.541042
+    },
+    {
+      "start": 219.733,
+      "end": 221.041,
+      "duration": 1.30785
+    },
+    {
+      "start": 230.626,
+      "end": 231.276,
+      "duration": 0.649979
+    },
+    {
+      "start": 232.216,
+      "end": 233.121,
+      "duration": 0.904667
+    },
+    {
+      "start": 233.648,
+      "end": 234.39,
+      "duration": 0.742
+    },
+    {
+      "start": 238.115,
+      "end": 238.646,
+      "duration": 0.531
+    },
+    {
+      "start": 239.472,
+      "end": 240.27,
+      "duration": 0.797833
+    },
+    {
+      "start": 241.008,
+      "end": 242.101,
+      "duration": 1.0935
+    },
+    {
+      "start": 244.026,
+      "end": 244.732,
+      "duration": 0.706417
+    },
+    {
+      "start": 246.782,
+      "end": 247.703,
+      "duration": 0.921167
+    },
+    {
+      "start": 247.886,
+      "end": 248.751,
+      "duration": 0.865771
+    },
+    {
+      "start": 250.299,
+      "end": 251.091,
+      "duration": 0.791125
+    },
+    {
+      "start": 523.398,
+      "end": 524.388,
+      "duration": 0.989604
+    },
+    {
+      "start": 526.656,
+      "end": 528.446,
+      "duration": 1.79087
+    },
+    {
+      "start": 530.79,
+      "end": 531.929,
+      "duration": 1.13935
+    },
+    {
+      "start": 535.25,
+      "end": 535.893,
+      "duration": 0.643833
+    },
+    {
+      "start": 537.874,
+      "end": 538.673,
+      "duration": 0.7995
+    },
+    {
+      "start": 543.568,
+      "end": 544.355,
+      "duration": 0.786417
+    },
+    {
+      "start": 545.911,
+      "end": 548.0,
+      "duration": 2.08879
+    },
+    {
+      "start": 548.019,
+      "end": 548.63,
+      "duration": 0.611062
+    },
+    {
+      "start": 548.693,
+      "end": 549.315,
+      "duration": 0.621854
+    },
+    {
+      "start": 549.393,
+      "end": 550.041,
+      "duration": 0.648521
+    },
+    {
+      "start": 801.211,
+      "end": 801.823,
+      "duration": 0.611896
+    },
+    {
+      "start": 801.881,
+      "end": 802.486,
+      "duration": 0.605
+    },
+    {
+      "start": 802.493,
+      "end": 803.117,
+      "duration": 0.624062
+    },
+    {
+      "start": 803.872,
+      "end": 804.483,
+      "duration": 0.611021
+    },
+    {
+      "start": 806.057,
+      "end": 806.598,
+      "duration": 0.540979
+    },
+    {
+      "start": 807.89,
+      "end": 808.47,
+      "duration": 0.579771
+    },
+    {
+      "start": 808.77,
+      "end": 809.416,
+      "duration": 0.646104
+    },
+    {
+      "start": 809.956,
+      "end": 811.506,
+      "duration": 1.55052
+    },
+    {
+      "start": 1052.56,
+      "end": 1053.17,
+      "duration": 0.612021
+    },
+    {
+      "start": 1082.69,
+      "end": 1083.28,
+      "duration": 0.594896
+    },
+    {
+      "start": 1169.81,
+      "end": 1172.79,
+      "duration": 2.98221
+    },
+    {
+      "start": 1183.16,
+      "end": 1185.56,
+      "duration": 2.39688
+    },
+    {
+      "start": 1186.67,
+      "end": 1187.4,
+      "duration": 0.727271
+    },
+    {
+      "start": 1191.28,
+      "end": 1191.9,
+      "duration": 0.619188
+    },
+    {
+      "start": 1193.98,
+      "end": 1195.94,
+      "duration": 1.95883
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      76,
+      61
+    ],
+    "avg": 62.8,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

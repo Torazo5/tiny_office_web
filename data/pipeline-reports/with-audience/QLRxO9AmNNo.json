@@ -1,0 +1,193 @@
+{
+  "video_id": "QLRxO9AmNNo",
+  "title": "SsingSsing: NPR Music Tiny Desk Concert",
+  "duration": 901,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/QLRxO9AmNNo.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 292.8,
+      "end": 315.84000000000003,
+      "duration": 23.04000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 616.8,
+      "end": 630.24,
+      "duration": 13.440000000000055,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 635.04,
+      "end": 636.48,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 882.24,
+      "end": 900.96,
+      "duration": 18.720000000000027,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.303042,
+      "end": 0.946646,
+      "duration": 0.643604
+    },
+    {
+      "start": 1.12923,
+      "end": 1.74687,
+      "duration": 0.617646
+    },
+    {
+      "start": 1.91606,
+      "end": 2.55535,
+      "duration": 0.639292
+    },
+    {
+      "start": 2.71723,
+      "end": 3.38798,
+      "duration": 0.67075
+    },
+    {
+      "start": 3.54133,
+      "end": 4.1989,
+      "duration": 0.657562
+    },
+    {
+      "start": 4.34194,
+      "end": 4.98262,
+      "duration": 0.640687
+    },
+    {
+      "start": 6.8106,
+      "end": 7.42017,
+      "duration": 0.609563
+    },
+    {
+      "start": 7.57958,
+      "end": 8.2154,
+      "duration": 0.635813
+    },
+    {
+      "start": 8.38562,
+      "end": 9.02148,
+      "duration": 0.635854
+    },
+    {
+      "start": 9.18927,
+      "end": 9.81975,
+      "duration": 0.630479
+    },
+    {
+      "start": 306.442,
+      "end": 308.333,
+      "duration": 1.89035
+    },
+    {
+      "start": 311.692,
+      "end": 313.031,
+      "duration": 1.33937
+    },
+    {
+      "start": 313.983,
+      "end": 315.514,
+      "duration": 1.53121
+    },
+    {
+      "start": 315.652,
+      "end": 317.522,
+      "duration": 1.869
+    },
+    {
+      "start": 318.516,
+      "end": 319.064,
+      "duration": 0.547646
+    },
+    {
+      "start": 319.064,
+      "end": 320.186,
+      "duration": 1.12237
+    },
+    {
+      "start": 320.231,
+      "end": 320.959,
+      "duration": 0.728563
+    },
+    {
+      "start": 320.972,
+      "end": 321.714,
+      "duration": 0.741896
+    },
+    {
+      "start": 321.731,
+      "end": 322.444,
+      "duration": 0.713458
+    },
+    {
+      "start": 630.291,
+      "end": 632.845,
+      "duration": 2.55458
+    },
+    {
+      "start": 633.332,
+      "end": 634.732,
+      "duration": 1.39975
+    },
+    {
+      "start": 634.945,
+      "end": 635.75,
+      "duration": 0.805333
+    },
+    {
+      "start": 636.29,
+      "end": 636.906,
+      "duration": 0.616729
+    },
+    {
+      "start": 638.541,
+      "end": 640.414,
+      "duration": 1.87331
+    },
+    {
+      "start": 640.448,
+      "end": 642.03,
+      "duration": 1.58227
+    },
+    {
+      "start": 899.885,
+      "end": 901.283,
+      "duration": 1.39765
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

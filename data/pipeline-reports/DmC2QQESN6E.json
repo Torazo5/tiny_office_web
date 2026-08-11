@@ -1,0 +1,284 @@
+{
+  "video_id": "DmC2QQESN6E",
+  "title": "WILLOW: Tiny Desk Concert",
+  "duration": 1190,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/DmC2QQESN6E.mp3",
+  "description_songs": [
+    "Symptom of Life",
+    "Split",
+    "Wait a Minute!",
+    "Run!",
+    "Big Feelings"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 5 description songs (2 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 4 usable episode(s), took top 4; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 2,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 185.28,
+      "end": 211.2,
+      "duration": 25.919999999999987,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 419.52,
+      "end": 440.16,
+      "duration": 20.640000000000043,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 654.72,
+      "end": 677.28,
+      "duration": 22.559999999999945,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 871.1999999999999,
+      "end": 897.6,
+      "duration": 26.40000000000009,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1149.6,
+      "end": 1187.04,
+      "duration": 37.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Symptom of Life",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 184.28,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 185.28,
+      "song": "Split",
+      "corroboration": 0,
+      "silence_match": 184.704,
+      "clip_start": 211.2,
+      "clip_end": 418.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 419.52,
+      "song": "Wait a Minute!",
+      "corroboration": 0,
+      "silence_match": 418.665,
+      "clip_start": 440.16,
+      "clip_end": 653.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 654.72,
+      "song": "Run!",
+      "corroboration": 0,
+      "silence_match": 653.872,
+      "clip_start": 677.28,
+      "clip_end": 870.1999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 871.1999999999999,
+      "song": "Big Feelings",
+      "corroboration": 0,
+      "silence_match": 868.805,
+      "clip_start": 897.6,
+      "clip_end": 1148.6,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 2.48992,
+      "duration": 2.48992
+    },
+    {
+      "start": 6.77194,
+      "end": 7.60506,
+      "duration": 0.833125
+    },
+    {
+      "start": 183.642,
+      "end": 184.704,
+      "duration": 1.06223
+    },
+    {
+      "start": 184.704,
+      "end": 185.256,
+      "duration": 0.551812
+    },
+    {
+      "start": 205.111,
+      "end": 205.627,
+      "duration": 0.516292
+    },
+    {
+      "start": 211.129,
+      "end": 211.661,
+      "duration": 0.532667
+    },
+    {
+      "start": 418.665,
+      "end": 419.231,
+      "duration": 0.565542
+    },
+    {
+      "start": 439.877,
+      "end": 440.855,
+      "duration": 0.977979
+    },
+    {
+      "start": 440.916,
+      "end": 441.511,
+      "duration": 0.595
+    },
+    {
+      "start": 441.552,
+      "end": 442.14,
+      "duration": 0.587979
+    },
+    {
+      "start": 442.181,
+      "end": 442.75,
+      "duration": 0.569375
+    },
+    {
+      "start": 444.087,
+      "end": 444.659,
+      "duration": 0.571771
+    },
+    {
+      "start": 446.545,
+      "end": 447.099,
+      "duration": 0.553979
+    },
+    {
+      "start": 449.057,
+      "end": 449.883,
+      "duration": 0.825104
+    },
+    {
+      "start": 653.872,
+      "end": 654.477,
+      "duration": 0.604292
+    },
+    {
+      "start": 674.021,
+      "end": 675.896,
+      "duration": 1.87473
+    },
+    {
+      "start": 676.772,
+      "end": 678.417,
+      "duration": 1.64483
+    },
+    {
+      "start": 868.805,
+      "end": 870.332,
+      "duration": 1.52727
+    },
+    {
+      "start": 886.693,
+      "end": 887.25,
+      "duration": 0.556958
+    },
+    {
+      "start": 890.752,
+      "end": 891.361,
+      "duration": 0.609875
+    },
+    {
+      "start": 893.778,
+      "end": 894.48,
+      "duration": 0.702042
+    },
+    {
+      "start": 896.139,
+      "end": 896.832,
+      "duration": 0.69325
+    },
+    {
+      "start": 897.196,
+      "end": 899.171,
+      "duration": 1.97517
+    },
+    {
+      "start": 1147.16,
+      "end": 1148.98,
+      "duration": 1.82533
+    },
+    {
+      "start": 1178.47,
+      "end": 1179.43,
+      "duration": 0.95275
+    },
+    {
+      "start": 1188.57,
+      "end": 1189.73,
+      "duration": 1.16067
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      66,
+      66,
+      66,
+      66
+    ],
+    "avg": 64.4,
+    "min": 58
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/DmC2QQESN6E.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

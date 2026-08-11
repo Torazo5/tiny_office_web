@@ -15,28 +15,62 @@ const supabase = createClient(supabaseUrl, secretKey, {
   auth: { autoRefreshToken: false, persistSession: false },
 });
 
+const EXPECTED_REPORT_COUNT = 199;
 const reportsDir = join(process.cwd(), "data", "pipeline-reports");
-const reportFiles = (await readdir(reportsDir))
-  .filter((file) => file.endsWith(".json") && file !== "_mass_pull_summary.json")
-  .sort();
+const REPORT_VARIANTS = [
+  {
+    key: "no-audience",
+    name: "No audience · tighter cut",
+    description: "Stops song clips before audience applause and room response.",
+    directory: reportsDir,
+  },
+  {
+    key: "with-audience",
+    name: "With applause · less tight cut",
+    description: "Keeps more of the applause and room response around each song.",
+    directory: join(reportsDir, "with-audience"),
+  },
+];
 
-const reports = await Promise.all(
-  reportFiles.map(async (file) => JSON.parse(await readFile(join(reportsDir, file), "utf8"))),
+async function readReports(directory, variantKey) {
+  const reportFiles = (await readdir(directory))
+    .filter((file) => file.endsWith(".json") && file !== "_mass_pull_summary.json")
+    .sort();
+  const reports = await Promise.all(
+    reportFiles.map(async (file) => JSON.parse(await readFile(join(directory, file), "utf8"))),
+  );
+
+  if (reports.length !== EXPECTED_REPORT_COUNT) {
+    throw new Error(
+      `Expected exactly ${EXPECTED_REPORT_COUNT} ${variantKey} reports, found ${reports.length}.`,
+    );
+  }
+
+  const reportVideoIds = reports.map((report) => report.video_id);
+  if (reportVideoIds.some((videoId) => typeof videoId !== "string" || videoId.length === 0)) {
+    throw new Error(`Every ${variantKey} report must have a non-empty video_id.`);
+  }
+  if (new Set(reportVideoIds).size !== reportVideoIds.length) {
+    throw new Error(`The ${variantKey} snapshot contains duplicate video IDs.`);
+  }
+  if (reportVideoIds.includes("gMp0SlkVU8w")) {
+    throw new Error("The failed gMp0SlkVU8w ID must stay excluded.");
+  }
+
+  return reports;
+}
+
+const reportsByVariant = new Map(
+  await Promise.all(
+    REPORT_VARIANTS.map(async (variant) => [variant.key, await readReports(variant.directory, variant.key)]),
+  ),
 );
-
-if (reports.length !== 48) {
-  throw new Error(`Expected exactly 48 refined_v2 reports, found ${reports.length}.`);
-}
-
+const reports = reportsByVariant.get("no-audience");
+const previousReports = reportsByVariant.get("with-audience");
 const reportVideoIds = reports.map((report) => report.video_id);
-if (reportVideoIds.some((videoId) => typeof videoId !== "string" || videoId.length === 0)) {
-  throw new Error("Every refined_v2 report must have a non-empty video_id.");
-}
-if (new Set(reportVideoIds).size !== reportVideoIds.length) {
-  throw new Error("The refined_v2 snapshot contains duplicate video IDs.");
-}
-if (reportVideoIds.includes("gMp0SlkVU8w") || reportVideoIds.includes("K6tzeZLjUNE")) {
-  throw new Error("The invalid gMp0SlkVU8w/K6tzeZLjUNE IDs must stay excluded.");
+const previousReportVideoIds = previousReports.map((report) => report.video_id);
+if (reportVideoIds.some((videoId, index) => videoId !== previousReportVideoIds[index])) {
+  throw new Error("The no-audience and with-audience snapshots must contain the same video IDs.");
 }
 
 const artistFromTitle = (title) => title.split(":", 1)[0].trim() || title.trim();
@@ -54,8 +88,9 @@ const performances = reports.map((report) => ({
   source_title: report.title,
 }));
 
-const songs = reports.flatMap((report) =>
+const makeSongs = (variantReports, variantKey) => variantReports.flatMap((report) =>
   (report.candidates ?? []).map((candidate, index) => ({
+    variant_key: variantKey,
     performance_video_id: report.video_id,
     song_index: index + 1,
     title: String(candidate.song ?? "Untitled"),
@@ -64,6 +99,14 @@ const songs = reports.flatMap((report) =>
     confidence: confidenceValue(candidate.confidence),
     suspect: Boolean(candidate.suspect),
   })),
+);
+
+const songs = makeSongs(reports, "no-audience").map(({ variant_key, ...song }) => {
+  if (variant_key !== "no-audience") throw new Error("Unexpected default cut variant key.");
+  return song;
+});
+const variantSongs = REPORT_VARIANTS.flatMap((variant) =>
+  makeSongs(reportsByVariant.get(variant.key), variant.key),
 );
 
 const reportVideoIdSet = new Set(reportVideoIds);
@@ -131,38 +174,65 @@ if (songs.length > 0) {
   if (songsError) throw songsError;
 }
 
-const demoPlaylist = {
-  id: "late-night-sets",
-  name: "Late Night Sets",
-  playlist_type: "songs",
-  owner_name: "You",
-  visibility: "public",
-};
+const { error: variantsError } = await supabase
+  .from("performance_cut_variants")
+  .upsert(
+    REPORT_VARIANTS.map((variant, sortOrder) => ({
+      variant_key: variant.key,
+      name: variant.name,
+      description: variant.description,
+      is_default: variant.key === "no-audience",
+      sort_order: sortOrder,
+    })),
+    { onConflict: "variant_key" },
+  );
+if (variantsError) throw variantsError;
 
-const { error: playlistError } = await supabase.from("playlists").upsert(demoPlaylist, { onConflict: "id" });
-if (playlistError) throw playlistError;
+const expectedVariantSongKeys = new Set(
+  variantSongs.map((song) => `${song.variant_key}:${song.performance_video_id}:${song.song_index}`),
+);
+const { data: existingVariantSongs, error: existingVariantSongsError } = await supabase
+  .from("performance_cut_variant_songs")
+  .select("variant_key, performance_video_id, song_index")
+  .in("performance_video_id", reportVideoIds);
+if (existingVariantSongsError) throw existingVariantSongsError;
 
-const demoTracks = [
-  [1, "XfzpYcwiUrA", 1],
-  [2, "jIIuzB11dsA", 1],
-  [3, "FvVnP8G6ITs", 1],
-  [4, "ferZnZ0_rSM", 1],
-  [6, "y38qQRg3UDI", 4],
-  [7, "cMIJsoaxRjk", 6],
-].map(([position, performance_video_id, song_index]) => ({
-  playlist_id: demoPlaylist.id,
-  position,
-  performance_video_id,
-  song_index,
-}));
-
-if (demoTracks.some((track) => !reportVideoIdSet.has(track.performance_video_id))) {
-  throw new Error("The demo playlist contains a video outside the refined_v2 snapshot.");
+const obsoleteVariantSongIndexes = new Map();
+for (const song of existingVariantSongs ?? []) {
+  const key = `${song.variant_key}:${song.performance_video_id}:${song.song_index}`;
+  if (!expectedVariantSongKeys.has(key)) {
+    const indexesByVideo = obsoleteVariantSongIndexes.get(song.variant_key) ?? new Map();
+    const indexes = indexesByVideo.get(song.performance_video_id) ?? [];
+    indexes.push(song.song_index);
+    indexesByVideo.set(song.performance_video_id, indexes);
+    obsoleteVariantSongIndexes.set(song.variant_key, indexesByVideo);
+  }
 }
 
-const { error: tracksError } = await supabase
-  .from("playlist_tracks")
-  .upsert(demoTracks, { onConflict: "playlist_id,position" });
-if (tracksError) throw tracksError;
+let removedVariantSongCount = 0;
+for (const [variantKey, indexesByVideo] of obsoleteVariantSongIndexes) {
+  for (const [videoId, songIndexes] of indexesByVideo) {
+    const { error } = await supabase
+      .from("performance_cut_variant_songs")
+      .delete()
+      .eq("variant_key", variantKey)
+      .eq("performance_video_id", videoId)
+      .in("song_index", songIndexes);
+    if (error) throw error;
+    removedVariantSongCount += songIndexes.length;
+  }
+}
+if (removedVariantSongCount > 0) {
+  console.log(`Removed ${removedVariantSongCount} obsolete cut-variant songs.`);
+}
 
-console.log(`Seeded ${performances.length} performances and ${songs.length} songs.`);
+if (variantSongs.length > 0) {
+  const { error: variantSongsError } = await supabase
+    .from("performance_cut_variant_songs")
+    .upsert(variantSongs, { onConflict: "variant_key,performance_video_id,song_index" });
+  if (variantSongsError) throw variantSongsError;
+}
+
+console.log(
+  `Seeded ${performances.length} default performances, ${songs.length} default songs, and ${variantSongs.length} cut-variant songs.`,
+);

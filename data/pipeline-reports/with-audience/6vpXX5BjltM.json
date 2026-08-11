@@ -1,0 +1,372 @@
+{
+  "video_id": "6vpXX5BjltM",
+  "title": "St. Paul And The Broken Bones: NPR Music Tiny Desk Concert",
+  "duration": 831,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/6vpXX5BjltM.mp3",
+  "description_songs": [
+    "Half The City",
+    "Call Me",
+    "Broken Bones And Pocket Change"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 94 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 208.32,
+      "end": 229.43999999999997,
+      "duration": 21.119999999999976,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 234.72,
+      "end": 237.11999999999998,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 419.03999999999996,
+      "end": 424.32,
+      "duration": 5.28000000000003,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 427.68,
+      "end": 429.6,
+      "duration": 1.920000000000016,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 433.44,
+      "end": 449.28000000000003,
+      "duration": 15.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 758.88,
+      "end": 800.16,
+      "duration": 41.27999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Half The City",
+      "corroboration": 1,
+      "silence_match": 0.52225,
+      "clip_start": 0,
+      "clip_end": 208.32,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 237,
+      "song": "Call Me",
+      "corroboration": 0,
+      "silence_match": 237.24,
+      "clip_start": 237.11999999999998,
+      "clip_end": 419.03999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 449,
+      "song": "Broken Bones And Pocket Change",
+      "corroboration": 1,
+      "silence_match": 448.922,
+      "clip_start": 449.28000000000003,
+      "clip_end": 758.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.52225,
+      "end": 1.08304,
+      "duration": 0.560792
+    },
+    {
+      "start": 225.571,
+      "end": 226.291,
+      "duration": 0.719958
+    },
+    {
+      "start": 226.403,
+      "end": 227.242,
+      "duration": 0.838646
+    },
+    {
+      "start": 227.643,
+      "end": 228.61,
+      "duration": 0.967187
+    },
+    {
+      "start": 229.613,
+      "end": 230.162,
+      "duration": 0.548333
+    },
+    {
+      "start": 233.814,
+      "end": 235.51,
+      "duration": 1.6955
+    },
+    {
+      "start": 235.52,
+      "end": 236.349,
+      "duration": 0.828583
+    },
+    {
+      "start": 236.565,
+      "end": 237.204,
+      "duration": 0.638792
+    },
+    {
+      "start": 237.24,
+      "end": 237.768,
+      "duration": 0.527792
+    },
+    {
+      "start": 434.973,
+      "end": 435.787,
+      "duration": 0.813437
+    },
+    {
+      "start": 436.116,
+      "end": 436.841,
+      "duration": 0.724958
+    },
+    {
+      "start": 440.006,
+      "end": 440.777,
+      "duration": 0.771333
+    },
+    {
+      "start": 444.083,
+      "end": 444.669,
+      "duration": 0.585583
+    },
+    {
+      "start": 444.7,
+      "end": 445.478,
+      "duration": 0.778625
+    },
+    {
+      "start": 448.922,
+      "end": 449.518,
+      "duration": 0.59625
+    },
+    {
+      "start": 452.554,
+      "end": 453.578,
+      "duration": 1.02356
+    },
+    {
+      "start": 453.796,
+      "end": 454.93,
+      "duration": 1.13402
+    },
+    {
+      "start": 455.08,
+      "end": 456.235,
+      "duration": 1.15467
+    },
+    {
+      "start": 456.255,
+      "end": 457.542,
+      "duration": 1.28708
+    },
+    {
+      "start": 457.594,
+      "end": 459.996,
+      "duration": 2.402
+    },
+    {
+      "start": 460.112,
+      "end": 461.232,
+      "duration": 1.12044
+    },
+    {
+      "start": 461.45,
+      "end": 462.538,
+      "duration": 1.08781
+    },
+    {
+      "start": 462.659,
+      "end": 465.14,
+      "duration": 2.48102
+    },
+    {
+      "start": 465.29,
+      "end": 466.42,
+      "duration": 1.12915
+    },
+    {
+      "start": 466.422,
+      "end": 467.731,
+      "duration": 1.3091
+    },
+    {
+      "start": 467.795,
+      "end": 469.029,
+      "duration": 1.23438
+    },
+    {
+      "start": 469.038,
+      "end": 470.338,
+      "duration": 1.29929
+    },
+    {
+      "start": 470.853,
+      "end": 471.626,
+      "duration": 0.772292
+    },
+    {
+      "start": 473.361,
+      "end": 474.204,
+      "duration": 0.842375
+    },
+    {
+      "start": 474.329,
+      "end": 475.469,
+      "duration": 1.14094
+    },
+    {
+      "start": 475.969,
+      "end": 476.83,
+      "duration": 0.86025
+    },
+    {
+      "start": 476.871,
+      "end": 477.463,
+      "duration": 0.591958
+    },
+    {
+      "start": 479.468,
+      "end": 480.328,
+      "duration": 0.859583
+    },
+    {
+      "start": 481.417,
+      "end": 482.149,
+      "duration": 0.732417
+    },
+    {
+      "start": 484.265,
+      "end": 484.847,
+      "duration": 0.581937
+    },
+    {
+      "start": 489.616,
+      "end": 491.645,
+      "duration": 2.02975
+    },
+    {
+      "start": 501.087,
+      "end": 502.364,
+      "duration": 1.2774
+    },
+    {
+      "start": 510.822,
+      "end": 512.735,
+      "duration": 1.91323
+    },
+    {
+      "start": 514.041,
+      "end": 514.712,
+      "duration": 0.671729
+    },
+    {
+      "start": 516.822,
+      "end": 517.422,
+      "duration": 0.599896
+    },
+    {
+      "start": 626.877,
+      "end": 629.187,
+      "duration": 2.3096
+    },
+    {
+      "start": 629.272,
+      "end": 630.606,
+      "duration": 1.33425
+    },
+    {
+      "start": 637.562,
+      "end": 641.223,
+      "duration": 3.66125
+    },
+    {
+      "start": 650.567,
+      "end": 651.444,
+      "duration": 0.877563
+    },
+    {
+      "start": 651.578,
+      "end": 652.407,
+      "duration": 0.829125
+    },
+    {
+      "start": 757.205,
+      "end": 758.178,
+      "duration": 0.972458
+    },
+    {
+      "start": 793.818,
+      "end": 794.453,
+      "duration": 0.63525
+    },
+    {
+      "start": 796.659,
+      "end": 797.902,
+      "duration": 1.24308
+    },
+    {
+      "start": 798.157,
+      "end": 799.004,
+      "duration": 0.847187
+    },
+    {
+      "start": 799.7,
+      "end": 800.881,
+      "duration": 1.18117
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      76,
+      83
+    ],
+    "avg": 78.0,
+    "min": 75
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

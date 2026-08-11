@@ -1,0 +1,204 @@
+{
+  "video_id": "YkkKUARRpeU",
+  "title": "Rhye: NPR Music Tiny Desk Concert",
+  "duration": 1117,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/YkkKUARRpeU.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 252.0,
+      "end": 264.48,
+      "duration": 12.480000000000018,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 672.9599999999999,
+      "end": 688.3199999999999,
+      "duration": 15.360000000000014,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1092.48,
+      "end": 1115.52,
+      "duration": 23.039999999999964,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.50925,
+      "duration": 0.50925
+    },
+    {
+      "start": 0.705125,
+      "end": 1.21329,
+      "duration": 0.508167
+    },
+    {
+      "start": 1.29898,
+      "end": 1.91185,
+      "duration": 0.612875
+    },
+    {
+      "start": 2.07906,
+      "end": 2.61642,
+      "duration": 0.537354
+    },
+    {
+      "start": 2.73442,
+      "end": 3.32615,
+      "duration": 0.591729
+    },
+    {
+      "start": 3.49415,
+      "end": 4.05056,
+      "duration": 0.556417
+    },
+    {
+      "start": 4.15687,
+      "end": 4.76513,
+      "duration": 0.60825
+    },
+    {
+      "start": 4.94912,
+      "end": 5.48692,
+      "duration": 0.537792
+    },
+    {
+      "start": 5.60506,
+      "end": 6.19577,
+      "duration": 0.590708
+    },
+    {
+      "start": 153.085,
+      "end": 153.614,
+      "duration": 0.528458
+    },
+    {
+      "start": 249.251,
+      "end": 251.802,
+      "duration": 2.551
+    },
+    {
+      "start": 265.293,
+      "end": 267.191,
+      "duration": 1.89771
+    },
+    {
+      "start": 267.318,
+      "end": 272.85,
+      "duration": 5.53142
+    },
+    {
+      "start": 384.311,
+      "end": 384.874,
+      "duration": 0.563146
+    },
+    {
+      "start": 670.147,
+      "end": 673.181,
+      "duration": 3.034
+    },
+    {
+      "start": 688.227,
+      "end": 694.128,
+      "duration": 5.90171
+    },
+    {
+      "start": 694.128,
+      "end": 695.288,
+      "duration": 1.15992
+    },
+    {
+      "start": 695.289,
+      "end": 697.615,
+      "duration": 2.32621
+    },
+    {
+      "start": 697.616,
+      "end": 698.79,
+      "duration": 1.17452
+    },
+    {
+      "start": 698.79,
+      "end": 702.865,
+      "duration": 4.07427
+    },
+    {
+      "start": 996.287,
+      "end": 996.793,
+      "duration": 0.505917
+    },
+    {
+      "start": 1009.86,
+      "end": 1010.56,
+      "duration": 0.698937
+    },
+    {
+      "start": 1050.92,
+      "end": 1051.77,
+      "duration": 0.853521
+    },
+    {
+      "start": 1063.1,
+      "end": 1063.91,
+      "duration": 0.809833
+    },
+    {
+      "start": 1074.59,
+      "end": 1076.19,
+      "duration": 1.5925
+    },
+    {
+      "start": 1076.28,
+      "end": 1078.22,
+      "duration": 1.93881
+    },
+    {
+      "start": 1083.67,
+      "end": 1085.92,
+      "duration": 2.2494
+    },
+    {
+      "start": 1087.99,
+      "end": 1092.89,
+      "duration": 4.89604
+    },
+    {
+      "start": 1116.09,
+      "end": 1116.88,
+      "duration": 0.794667
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

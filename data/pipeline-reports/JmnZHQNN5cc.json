@@ -1,0 +1,265 @@
+{
+  "video_id": "JmnZHQNN5cc",
+  "title": "Caroline Polachek: Tiny Desk Concert",
+  "duration": 1087,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/JmnZHQNN5cc.mp3",
+  "description_songs": [
+    "Pretty In Possible",
+    "Blood And Butter",
+    "Sunset",
+    "I Believe"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 117 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 1,
+    "rejected": 2,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 211.67999999999998,
+      "end": 229.43999999999997,
+      "duration": 17.75999999999999,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 498.24,
+      "end": 526.08,
+      "duration": 27.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 708.48,
+      "end": 778.56,
+      "duration": 70.07999999999993,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1050.24,
+      "end": 1085.76,
+      "duration": 35.51999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Pretty In Possible",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 210.67999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 236,
+      "song": "Blood And Butter",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 229.43999999999997,
+      "clip_end": 497.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 538,
+      "song": "Sunset",
+      "corroboration": 0,
+      "silence_match": 534.01,
+      "clip_start": 526.08,
+      "clip_end": 707.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 782,
+      "song": "I Believe",
+      "corroboration": 0,
+      "silence_match": 778.187,
+      "clip_start": 778.56,
+      "clip_end": 1049.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.505021,
+      "duration": 0.505021
+    },
+    {
+      "start": 8.15035,
+      "end": 8.99271,
+      "duration": 0.842354
+    },
+    {
+      "start": 9.40323,
+      "end": 10.2385,
+      "duration": 0.835292
+    },
+    {
+      "start": 17.9135,
+      "end": 18.7686,
+      "duration": 0.855146
+    },
+    {
+      "start": 19.2624,
+      "end": 20.5004,
+      "duration": 1.23804
+    },
+    {
+      "start": 201.012,
+      "end": 201.687,
+      "duration": 0.675458
+    },
+    {
+      "start": 209.317,
+      "end": 210.159,
+      "duration": 0.841875
+    },
+    {
+      "start": 210.577,
+      "end": 211.81,
+      "duration": 1.2335
+    },
+    {
+      "start": 229.243,
+      "end": 231.65,
+      "duration": 2.4071
+    },
+    {
+      "start": 496.554,
+      "end": 497.873,
+      "duration": 1.31883
+    },
+    {
+      "start": 520.414,
+      "end": 520.921,
+      "duration": 0.507
+    },
+    {
+      "start": 521.752,
+      "end": 522.87,
+      "duration": 1.11885
+    },
+    {
+      "start": 525.644,
+      "end": 529.422,
+      "duration": 3.7781
+    },
+    {
+      "start": 529.437,
+      "end": 530.932,
+      "duration": 1.4945
+    },
+    {
+      "start": 531.561,
+      "end": 532.807,
+      "duration": 1.24627
+    },
+    {
+      "start": 534.01,
+      "end": 534.547,
+      "duration": 0.537146
+    },
+    {
+      "start": 707.375,
+      "end": 709.016,
+      "duration": 1.64108
+    },
+    {
+      "start": 730.858,
+      "end": 731.647,
+      "duration": 0.788958
+    },
+    {
+      "start": 734.52,
+      "end": 735.09,
+      "duration": 0.570292
+    },
+    {
+      "start": 737.733,
+      "end": 738.249,
+      "duration": 0.515312
+    },
+    {
+      "start": 750.865,
+      "end": 751.387,
+      "duration": 0.522146
+    },
+    {
+      "start": 765.99,
+      "end": 767.869,
+      "duration": 1.8796
+    },
+    {
+      "start": 769.535,
+      "end": 770.039,
+      "duration": 0.504563
+    },
+    {
+      "start": 770.705,
+      "end": 771.449,
+      "duration": 0.743938
+    },
+    {
+      "start": 778.187,
+      "end": 782.437,
+      "duration": 4.25004
+    },
+    {
+      "start": 1079.34,
+      "end": 1082.2,
+      "duration": 2.85431
+    },
+    {
+      "start": 1085.58,
+      "end": 1087.18,
+      "duration": 1.59896
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      61,
+      76,
+      76
+    ],
+    "avg": 70.2,
+    "min": 61
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/JmnZHQNN5cc.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

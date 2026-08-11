@@ -1,0 +1,300 @@
+{
+  "video_id": "ieoiAeL-uow",
+  "title": "Dave Matthews: NPR Music Tiny Desk Concert",
+  "duration": 1422,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/ieoiAeL-uow.mp3",
+  "description_songs": [
+    "Samurai Cop (Oh Joy Begin)",
+    "Here on Out",
+    "Don't Drink the Water",
+    "Mercy",
+    "So Damn Lucky"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 835 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 261.12,
+      "end": 305.28000000000003,
+      "duration": 44.160000000000025,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 481.44,
+      "end": 531.36,
+      "duration": 49.920000000000016,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 874.0799999999999,
+      "end": 947.04,
+      "duration": 72.96000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1130.3999999999999,
+      "end": 1141.44,
+      "duration": 11.040000000000191,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1399.2,
+      "end": 1419.36,
+      "duration": 20.159999999999854,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 2,
+      "song": "Samurai Cop (Oh Joy Begin)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 2,
+      "clip_end": 261.12,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 305,
+      "song": "Here on Out",
+      "corroboration": 0,
+      "silence_match": 305.141,
+      "clip_start": 305.28000000000003,
+      "clip_end": 481.44,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 532,
+      "song": "Don't Drink the Water",
+      "corroboration": 0,
+      "silence_match": 531.571,
+      "clip_start": 531.36,
+      "clip_end": 874.0799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 948,
+      "song": "Mercy",
+      "corroboration": 0,
+      "silence_match": 946.37,
+      "clip_start": 947.04,
+      "clip_end": 1130.3999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 1142,
+      "song": "So Damn Lucky",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1141.44,
+      "clip_end": 1399.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 276.314,
+      "end": 276.999,
+      "duration": 0.684479
+    },
+    {
+      "start": 289.083,
+      "end": 289.591,
+      "duration": 0.508771
+    },
+    {
+      "start": 295.615,
+      "end": 296.119,
+      "duration": 0.504458
+    },
+    {
+      "start": 298.446,
+      "end": 299.72,
+      "duration": 1.27337
+    },
+    {
+      "start": 299.72,
+      "end": 300.574,
+      "duration": 0.853708
+    },
+    {
+      "start": 300.887,
+      "end": 302.274,
+      "duration": 1.38667
+    },
+    {
+      "start": 302.299,
+      "end": 303.184,
+      "duration": 0.884229
+    },
+    {
+      "start": 304.557,
+      "end": 305.136,
+      "duration": 0.579292
+    },
+    {
+      "start": 305.141,
+      "end": 306.475,
+      "duration": 1.33363
+    },
+    {
+      "start": 498.498,
+      "end": 499.119,
+      "duration": 0.620667
+    },
+    {
+      "start": 499.119,
+      "end": 499.671,
+      "duration": 0.551729
+    },
+    {
+      "start": 503.356,
+      "end": 503.866,
+      "duration": 0.509813
+    },
+    {
+      "start": 505.67,
+      "end": 506.186,
+      "duration": 0.516396
+    },
+    {
+      "start": 506.188,
+      "end": 506.824,
+      "duration": 0.635687
+    },
+    {
+      "start": 510.104,
+      "end": 510.659,
+      "duration": 0.555396
+    },
+    {
+      "start": 511.27,
+      "end": 511.813,
+      "duration": 0.543521
+    },
+    {
+      "start": 515.093,
+      "end": 515.716,
+      "duration": 0.622812
+    },
+    {
+      "start": 531.571,
+      "end": 532.195,
+      "duration": 0.624625
+    },
+    {
+      "start": 893.47,
+      "end": 894.532,
+      "duration": 1.06217
+    },
+    {
+      "start": 896.97,
+      "end": 897.817,
+      "duration": 0.846458
+    },
+    {
+      "start": 900.81,
+      "end": 901.988,
+      "duration": 1.17756
+    },
+    {
+      "start": 904.925,
+      "end": 906.214,
+      "duration": 1.28935
+    },
+    {
+      "start": 907.371,
+      "end": 907.905,
+      "duration": 0.53475
+    },
+    {
+      "start": 909.386,
+      "end": 910.133,
+      "duration": 0.746875
+    },
+    {
+      "start": 911.181,
+      "end": 912.208,
+      "duration": 1.02644
+    },
+    {
+      "start": 920.574,
+      "end": 921.107,
+      "duration": 0.532458
+    },
+    {
+      "start": 921.851,
+      "end": 922.553,
+      "duration": 0.702479
+    },
+    {
+      "start": 944.425,
+      "end": 945.07,
+      "duration": 0.644042
+    },
+    {
+      "start": 946.37,
+      "end": 948.616,
+      "duration": 2.24635
+    },
+    {
+      "start": 1127.87,
+      "end": 1129.07,
+      "duration": 1.1949
+    },
+    {
+      "start": 1418.73,
+      "end": 1421.89,
+      "duration": 3.15327
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76,
+      76,
+      61
+    ],
+    "avg": 68.4,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

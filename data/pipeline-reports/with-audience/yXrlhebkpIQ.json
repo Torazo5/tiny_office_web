@@ -1,0 +1,113 @@
+{
+  "video_id": "yXrlhebkpIQ",
+  "title": "Jorja Smith: NPR Music Tiny Desk Concert",
+  "duration": 749,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/yXrlhebkpIQ.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 3,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 187.2,
+      "end": 227.04,
+      "duration": 39.84,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 321.12,
+      "end": 323.04,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 463.68,
+      "end": 474.72,
+      "duration": 11.04000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 732.0,
+      "end": 747.36,
+      "duration": 15.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 185.476,
+      "end": 186.344,
+      "duration": 0.868062
+    },
+    {
+      "start": 201.264,
+      "end": 201.992,
+      "duration": 0.727708
+    },
+    {
+      "start": 218.758,
+      "end": 219.322,
+      "duration": 0.564354
+    },
+    {
+      "start": 224.496,
+      "end": 225.881,
+      "duration": 1.38435
+    },
+    {
+      "start": 225.881,
+      "end": 226.503,
+      "duration": 0.622396
+    },
+    {
+      "start": 226.563,
+      "end": 227.164,
+      "duration": 0.601875
+    },
+    {
+      "start": 227.235,
+      "end": 227.768,
+      "duration": 0.533937
+    },
+    {
+      "start": 471.382,
+      "end": 471.976,
+      "duration": 0.59475
+    },
+    {
+      "start": 474.578,
+      "end": 476.551,
+      "duration": 1.97265
+    },
+    {
+      "start": 746.929,
+      "end": 748.46,
+      "duration": 1.53177
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

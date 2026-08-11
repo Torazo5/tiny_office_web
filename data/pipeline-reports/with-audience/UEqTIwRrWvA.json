@@ -1,0 +1,365 @@
+{
+  "video_id": "UEqTIwRrWvA",
+  "title": "31 Minutos: Tiny Desk Concert",
+  "duration": 1269,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/UEqTIwRrWvA.mp3",
+  "description_songs": [
+    "Mi Equilibrio Espiritual",
+    "Bailan sin Cesar",
+    "Objeci\u00f3n Denegada",
+    "Calurosa Navidad",
+    "Mi Mu\u00f1eca me Habl\u00f3",
+    "Arwrarwrirwrarwro",
+    "Yo Nunca Vi Televisi\u00f3n (Y Luego S\u00ed Pero Despu\u00e9s No)"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 7 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 8 usable episode(s), took top 6; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 168.48,
+      "end": 173.27999999999997,
+      "duration": 4.799999999999983,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 297.12,
+      "end": 312.96,
+      "duration": 15.839999999999975,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 317.76,
+      "end": 336.96,
+      "duration": 19.19999999999999,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 337.44,
+      "end": 339.36,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 446.4,
+      "end": 447.84,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 496.79999999999995,
+      "end": 498.24,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 505.91999999999996,
+      "end": 544.8,
+      "duration": 38.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 548.16,
+      "end": 564.0,
+      "duration": 15.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 704.16,
+      "end": 705.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 828.0,
+      "end": 886.08,
+      "duration": 58.08000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 891.36,
+      "end": 902.88,
+      "duration": 11.519999999999982,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1051.2,
+      "end": 1056.96,
+      "duration": 5.759999999999991,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1062.24,
+      "end": 1063.68,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1234.56,
+      "end": 1236.96,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1240.8,
+      "end": 1243.2,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1245.6,
+      "end": 1247.04,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1250.3999999999999,
+      "end": 1268.16,
+      "duration": 17.76000000000022,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Mi Equilibrio Espiritual",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 168.48,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 168.48,
+      "song": "Bailan sin Cesar",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 173.27999999999997,
+      "clip_end": 297.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 297.12,
+      "song": "Objeci\u00f3n Denegada",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 312.96,
+      "clip_end": 317.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 1
+    },
+    {
+      "seconds": 317.76,
+      "song": "Calurosa Navidad",
+      "corroboration": 0,
+      "silence_match": 318.353,
+      "clip_start": 336.96,
+      "clip_end": 505.91999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 505.91999999999996,
+      "song": "Mi Mu\u00f1eca me Habl\u00f3",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 498.24,
+      "clip_end": 505.91999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 1
+    },
+    {
+      "seconds": 548.16,
+      "song": "Arwrarwrirwrarwro",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 564.0,
+      "clip_end": 828.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 828.0,
+      "song": "Yo Nunca Vi Televisi\u00f3n (Y Luego S\u00ed Pero Despu\u00e9s No)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 828.0,
+      "clip_end": 1269,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 35
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 10.2915,
+      "end": 10.8528,
+      "duration": 0.561333
+    },
+    {
+      "start": 304.442,
+      "end": 304.986,
+      "duration": 0.543625
+    },
+    {
+      "start": 307.978,
+      "end": 308.841,
+      "duration": 0.862792
+    },
+    {
+      "start": 318.353,
+      "end": 318.908,
+      "duration": 0.555167
+    },
+    {
+      "start": 334.449,
+      "end": 335.159,
+      "duration": 0.709833
+    },
+    {
+      "start": 338.009,
+      "end": 338.543,
+      "duration": 0.533417
+    },
+    {
+      "start": 339.548,
+      "end": 340.092,
+      "duration": 0.543583
+    },
+    {
+      "start": 349.661,
+      "end": 350.587,
+      "duration": 0.925479
+    },
+    {
+      "start": 834.474,
+      "end": 835.087,
+      "duration": 0.612958
+    },
+    {
+      "start": 846.596,
+      "end": 847.118,
+      "duration": 0.521937
+    },
+    {
+      "start": 851.995,
+      "end": 852.521,
+      "duration": 0.526604
+    },
+    {
+      "start": 860.422,
+      "end": 861.099,
+      "duration": 0.677
+    },
+    {
+      "start": 866.469,
+      "end": 867.089,
+      "duration": 0.620271
+    },
+    {
+      "start": 867.147,
+      "end": 868.085,
+      "duration": 0.937667
+    },
+    {
+      "start": 869.078,
+      "end": 869.6,
+      "duration": 0.521854
+    },
+    {
+      "start": 869.964,
+      "end": 870.475,
+      "duration": 0.510875
+    },
+    {
+      "start": 872.885,
+      "end": 874.809,
+      "duration": 1.92383
+    },
+    {
+      "start": 875.808,
+      "end": 876.33,
+      "duration": 0.521521
+    },
+    {
+      "start": 1065.3,
+      "end": 1066.04,
+      "duration": 0.740229
+    },
+    {
+      "start": 1073.18,
+      "end": 1073.72,
+      "duration": 0.542854
+    },
+    {
+      "start": 1268.22,
+      "end": 1268.81,
+      "duration": 0.588646
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      51,
+      1,
+      66,
+      1,
+      51,
+      35
+    ],
+    "avg": 35.4,
+    "min": 1
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

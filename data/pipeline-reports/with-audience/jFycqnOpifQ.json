@@ -1,0 +1,523 @@
+{
+  "video_id": "jFycqnOpifQ",
+  "title": "Nickel Creek: NPR Music Tiny Desk Concert",
+  "duration": 1200,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/jFycqnOpifQ.mp3",
+  "description_songs": [
+    "Destination",
+    "Rest Of My Life",
+    "21st Of May",
+    "Elephant In The Corn"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 44 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 2.4,
+      "end": 10.08,
+      "duration": 7.68,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 245.28,
+      "end": 312.48,
+      "duration": 67.20000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 536.64,
+      "end": 548.64,
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 565.92,
+      "end": 567.36,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 576.0,
+      "end": 579.36,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 580.3199999999999,
+      "end": 586.08,
+      "duration": 5.760000000000105,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 586.56,
+      "end": 591.36,
+      "duration": 4.800000000000068,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 592.3199999999999,
+      "end": 596.16,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 597.6,
+      "end": 599.04,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 773.28,
+      "end": 794.4,
+      "duration": 21.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 800.16,
+      "end": 801.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 802.0799999999999,
+      "end": 804.0,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 804.9599999999999,
+      "end": 807.84,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 808.3199999999999,
+      "end": 811.1999999999999,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 816.0,
+      "end": 817.92,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 820.3199999999999,
+      "end": 822.72,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 823.68,
+      "end": 827.04,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1145.76,
+      "end": 1167.36,
+      "duration": 21.59999999999991,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1170.72,
+      "end": 1188.0,
+      "duration": 17.279999999999973,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Destination",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 10.08,
+      "clip_end": 245.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 311,
+      "song": "Rest Of My Life",
+      "corroboration": 0,
+      "silence_match": 306.897,
+      "clip_start": 312.48,
+      "clip_end": 536.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 608,
+      "song": "21st Of May",
+      "corroboration": 0,
+      "silence_match": 607.836,
+      "clip_start": 599.04,
+      "clip_end": 773.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 828,
+      "song": "Elephant In The Corn",
+      "corroboration": 0,
+      "silence_match": 826.196,
+      "clip_start": 827.04,
+      "clip_end": 1145.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 2.44456,
+      "duration": 2.44456
+    },
+    {
+      "start": 159.017,
+      "end": 159.613,
+      "duration": 0.595938
+    },
+    {
+      "start": 263.445,
+      "end": 264.003,
+      "duration": 0.557771
+    },
+    {
+      "start": 271.865,
+      "end": 272.58,
+      "duration": 0.715521
+    },
+    {
+      "start": 275.995,
+      "end": 276.755,
+      "duration": 0.760083
+    },
+    {
+      "start": 279.079,
+      "end": 280.056,
+      "duration": 0.977875
+    },
+    {
+      "start": 280.572,
+      "end": 281.494,
+      "duration": 0.922104
+    },
+    {
+      "start": 281.715,
+      "end": 282.43,
+      "duration": 0.714458
+    },
+    {
+      "start": 284.033,
+      "end": 284.999,
+      "duration": 0.965854
+    },
+    {
+      "start": 286.78,
+      "end": 287.475,
+      "duration": 0.695562
+    },
+    {
+      "start": 287.934,
+      "end": 288.538,
+      "duration": 0.603917
+    },
+    {
+      "start": 293.854,
+      "end": 294.659,
+      "duration": 0.804417
+    },
+    {
+      "start": 294.787,
+      "end": 295.447,
+      "duration": 0.660062
+    },
+    {
+      "start": 296.405,
+      "end": 297.066,
+      "duration": 0.661312
+    },
+    {
+      "start": 299.637,
+      "end": 300.197,
+      "duration": 0.559958
+    },
+    {
+      "start": 300.394,
+      "end": 301.035,
+      "duration": 0.641229
+    },
+    {
+      "start": 301.433,
+      "end": 302.027,
+      "duration": 0.594667
+    },
+    {
+      "start": 306.897,
+      "end": 307.963,
+      "duration": 1.06621
+    },
+    {
+      "start": 315.764,
+      "end": 316.442,
+      "duration": 0.678479
+    },
+    {
+      "start": 317.831,
+      "end": 318.543,
+      "duration": 0.711667
+    },
+    {
+      "start": 321.214,
+      "end": 321.727,
+      "duration": 0.512375
+    },
+    {
+      "start": 322.194,
+      "end": 323.386,
+      "duration": 1.19248
+    },
+    {
+      "start": 323.641,
+      "end": 324.987,
+      "duration": 1.34615
+    },
+    {
+      "start": 330.84,
+      "end": 331.539,
+      "duration": 0.699979
+    },
+    {
+      "start": 336.573,
+      "end": 337.666,
+      "duration": 1.09308
+    },
+    {
+      "start": 347.385,
+      "end": 347.893,
+      "duration": 0.508271
+    },
+    {
+      "start": 349.837,
+      "end": 350.695,
+      "duration": 0.857854
+    },
+    {
+      "start": 380.676,
+      "end": 381.815,
+      "duration": 1.13908
+    },
+    {
+      "start": 382.043,
+      "end": 382.955,
+      "duration": 0.912896
+    },
+    {
+      "start": 528.033,
+      "end": 529.169,
+      "duration": 1.1361
+    },
+    {
+      "start": 529.457,
+      "end": 530.303,
+      "duration": 0.845396
+    },
+    {
+      "start": 535.505,
+      "end": 536.339,
+      "duration": 0.834542
+    },
+    {
+      "start": 556.774,
+      "end": 557.296,
+      "duration": 0.521667
+    },
+    {
+      "start": 559.236,
+      "end": 559.811,
+      "duration": 0.574833
+    },
+    {
+      "start": 559.827,
+      "end": 561.001,
+      "duration": 1.1739
+    },
+    {
+      "start": 577.534,
+      "end": 578.19,
+      "duration": 0.65625
+    },
+    {
+      "start": 586.47,
+      "end": 586.994,
+      "duration": 0.524438
+    },
+    {
+      "start": 588.448,
+      "end": 589.184,
+      "duration": 0.735042
+    },
+    {
+      "start": 591.035,
+      "end": 591.73,
+      "duration": 0.6945
+    },
+    {
+      "start": 592.231,
+      "end": 593.262,
+      "duration": 1.03038
+    },
+    {
+      "start": 597.507,
+      "end": 598.05,
+      "duration": 0.542646
+    },
+    {
+      "start": 598.487,
+      "end": 599.026,
+      "duration": 0.539396
+    },
+    {
+      "start": 600.883,
+      "end": 601.789,
+      "duration": 0.906292
+    },
+    {
+      "start": 601.852,
+      "end": 602.993,
+      "duration": 1.14058
+    },
+    {
+      "start": 603.2,
+      "end": 603.866,
+      "duration": 0.666229
+    },
+    {
+      "start": 604.815,
+      "end": 607.558,
+      "duration": 2.74269
+    },
+    {
+      "start": 607.836,
+      "end": 609.716,
+      "duration": 1.88029
+    },
+    {
+      "start": 801.234,
+      "end": 802.201,
+      "duration": 0.967021
+    },
+    {
+      "start": 803.781,
+      "end": 804.283,
+      "duration": 0.502312
+    },
+    {
+      "start": 806.744,
+      "end": 809.177,
+      "duration": 2.43383
+    },
+    {
+      "start": 810.251,
+      "end": 811.246,
+      "duration": 0.994417
+    },
+    {
+      "start": 815.267,
+      "end": 816.16,
+      "duration": 0.893333
+    },
+    {
+      "start": 817.427,
+      "end": 817.953,
+      "duration": 0.525896
+    },
+    {
+      "start": 819.07,
+      "end": 819.786,
+      "duration": 0.715854
+    },
+    {
+      "start": 819.876,
+      "end": 820.456,
+      "duration": 0.580187
+    },
+    {
+      "start": 826.196,
+      "end": 828.431,
+      "duration": 2.23475
+    },
+    {
+      "start": 1086.41,
+      "end": 1087.64,
+      "duration": 1.22744
+    },
+    {
+      "start": 1180.47,
+      "end": 1182.12,
+      "duration": 1.64608
+    },
+    {
+      "start": 1183.37,
+      "end": 1200.33,
+      "duration": 16.9631
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      76,
+      76,
+      76
+    ],
+    "avg": 76.0,
+    "min": 76
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

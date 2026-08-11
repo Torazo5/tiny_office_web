@@ -1,0 +1,321 @@
+{
+  "video_id": "D8UWsFMVj_Q",
+  "title": "Karol G: Tiny Desk Concert",
+  "duration": 1021,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/D8UWsFMVj_Q.mp3",
+  "description_songs": [
+    "CAROLINA",
+    "GUCCI LOS PA\u00d1OS",
+    "PERO T\u00da",
+    "MERCURIO"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 643 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 170.4,
+      "end": 174.23999999999998,
+      "duration": 3.839999999999975,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 174.72,
+      "end": 234.23999999999998,
+      "duration": 59.51999999999998,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 414.24,
+      "end": 465.12,
+      "duration": 50.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 665.76,
+      "end": 737.28,
+      "duration": 71.51999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 820.8,
+      "end": 822.24,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 905.76,
+      "end": 965.76,
+      "duration": 60.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1007.52,
+      "end": 1019.52,
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 1,
+      "song": "CAROLINA",
+      "corroboration": 1,
+      "silence_match": 0.0,
+      "clip_start": 1,
+      "clip_end": 169.4,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 235,
+      "song": "GUCCI LOS PA\u00d1OS",
+      "corroboration": 1,
+      "silence_match": 234.394,
+      "clip_start": 234.23999999999998,
+      "clip_end": 413.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 467,
+      "song": "PERO T\u00da",
+      "corroboration": 1,
+      "silence_match": 465.187,
+      "clip_start": 465.12,
+      "clip_end": 664.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 738,
+      "song": "MERCURIO",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 737.28,
+      "clip_end": 904.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.547021,
+      "duration": 0.547021
+    },
+    {
+      "start": 13.1332,
+      "end": 13.6396,
+      "duration": 0.506396
+    },
+    {
+      "start": 104.689,
+      "end": 105.381,
+      "duration": 0.691958
+    },
+    {
+      "start": 105.396,
+      "end": 106.055,
+      "duration": 0.658875
+    },
+    {
+      "start": 190.51,
+      "end": 191.067,
+      "duration": 0.556292
+    },
+    {
+      "start": 191.651,
+      "end": 192.341,
+      "duration": 0.690167
+    },
+    {
+      "start": 213.045,
+      "end": 213.743,
+      "duration": 0.697562
+    },
+    {
+      "start": 231.714,
+      "end": 232.24,
+      "duration": 0.526292
+    },
+    {
+      "start": 234.394,
+      "end": 237.108,
+      "duration": 2.71392
+    },
+    {
+      "start": 394.033,
+      "end": 395.033,
+      "duration": 0.999833
+    },
+    {
+      "start": 395.395,
+      "end": 396.229,
+      "duration": 0.833729
+    },
+    {
+      "start": 396.229,
+      "end": 396.917,
+      "duration": 0.687917
+    },
+    {
+      "start": 432.818,
+      "end": 433.728,
+      "duration": 0.910312
+    },
+    {
+      "start": 433.728,
+      "end": 434.346,
+      "duration": 0.617375
+    },
+    {
+      "start": 437.427,
+      "end": 437.992,
+      "duration": 0.564646
+    },
+    {
+      "start": 438.531,
+      "end": 440.426,
+      "duration": 1.89512
+    },
+    {
+      "start": 449.321,
+      "end": 450.573,
+      "duration": 1.25185
+    },
+    {
+      "start": 459.525,
+      "end": 460.596,
+      "duration": 1.07037
+    },
+    {
+      "start": 463.298,
+      "end": 463.821,
+      "duration": 0.522979
+    },
+    {
+      "start": 464.126,
+      "end": 464.912,
+      "duration": 0.786854
+    },
+    {
+      "start": 465.187,
+      "end": 465.795,
+      "duration": 0.607896
+    },
+    {
+      "start": 557.276,
+      "end": 559.99,
+      "duration": 2.7135
+    },
+    {
+      "start": 587.249,
+      "end": 588.048,
+      "duration": 0.799312
+    },
+    {
+      "start": 679.703,
+      "end": 680.432,
+      "duration": 0.729396
+    },
+    {
+      "start": 724.416,
+      "end": 724.969,
+      "duration": 0.552521
+    },
+    {
+      "start": 763.667,
+      "end": 764.344,
+      "duration": 0.676854
+    },
+    {
+      "start": 929.217,
+      "end": 929.751,
+      "duration": 0.534625
+    },
+    {
+      "start": 948.688,
+      "end": 949.28,
+      "duration": 0.592521
+    },
+    {
+      "start": 949.523,
+      "end": 950.277,
+      "duration": 0.753896
+    },
+    {
+      "start": 955.918,
+      "end": 956.664,
+      "duration": 0.745917
+    },
+    {
+      "start": 962.371,
+      "end": 962.917,
+      "duration": 0.546438
+    },
+    {
+      "start": 1007.02,
+      "end": 1007.56,
+      "duration": 0.541042
+    },
+    {
+      "start": 1019.12,
+      "end": 1019.62,
+      "duration": 0.504729
+    },
+    {
+      "start": 1019.62,
+      "end": 1020.56,
+      "duration": 0.940562
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      83,
+      83,
+      68
+    ],
+    "avg": 77.2,
+    "min": 68
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/D8UWsFMVj_Q.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

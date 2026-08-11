@@ -1,0 +1,288 @@
+{
+  "video_id": "XyHkoKwPtaw",
+  "title": "Sean Paul: Tiny Desk Concert",
+  "duration": 1240,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/XyHkoKwPtaw.mp3",
+  "description_songs": [
+    "Gimme the Light",
+    "Get Busy",
+    "Infiltrate",
+    "I'm Still in Love With You",
+    "Deport Them",
+    "Like Glue",
+    "Temperature"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2700 likes, matched all 7 description song(s), retained 7 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 238.56,
+      "end": 273.12,
+      "duration": 34.56,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 372.96,
+      "end": 375.36,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 383.52,
+      "end": 384.96,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 562.0799999999999,
+      "end": 599.52,
+      "duration": 37.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 612.0,
+      "end": 613.4399999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 881.28,
+      "end": 907.1999999999999,
+      "duration": 25.91999999999996,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1193.28,
+      "end": 1193.76,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1212.96,
+      "end": 1214.8799999999999,
+      "duration": 1.9199999999998454,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1214.8799999999999,
+      "end": 1238.8799999999999,
+      "duration": 24.0,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Gimme the Light",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 112,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 52
+    },
+    {
+      "seconds": 112,
+      "song": "Get Busy",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 112,
+      "clip_end": 238.56,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 272,
+      "song": "Infiltrate",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 273.12,
+      "clip_end": 392,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 392,
+      "song": "I'm Still in Love With You",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 384.96,
+      "clip_end": 562.0799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 600,
+      "song": "Like Glue",
+      "corroboration": 1,
+      "silence_match": 594.929,
+      "clip_start": 613.4399999999999,
+      "clip_end": 744,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 744,
+      "song": "Deport Them",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 744,
+      "clip_end": 881.28,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 897,
+      "song": "Temperature",
+      "corroboration": 0,
+      "silence_match": 893.284,
+      "clip_start": 907.1999999999999,
+      "clip_end": 1193.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 250.492,
+      "end": 251.092,
+      "duration": 0.600542
+    },
+    {
+      "start": 254.858,
+      "end": 255.406,
+      "duration": 0.547521
+    },
+    {
+      "start": 258.489,
+      "end": 259.4,
+      "duration": 0.911625
+    },
+    {
+      "start": 260.45,
+      "end": 261.19,
+      "duration": 0.739896
+    },
+    {
+      "start": 262.591,
+      "end": 263.427,
+      "duration": 0.835958
+    },
+    {
+      "start": 575.913,
+      "end": 577.378,
+      "duration": 1.46571
+    },
+    {
+      "start": 577.644,
+      "end": 578.584,
+      "duration": 0.939708
+    },
+    {
+      "start": 579.842,
+      "end": 581.252,
+      "duration": 1.41027
+    },
+    {
+      "start": 581.712,
+      "end": 583.118,
+      "duration": 1.40579
+    },
+    {
+      "start": 591.927,
+      "end": 592.74,
+      "duration": 0.813271
+    },
+    {
+      "start": 594.929,
+      "end": 595.828,
+      "duration": 0.898417
+    },
+    {
+      "start": 891.622,
+      "end": 892.967,
+      "duration": 1.34496
+    },
+    {
+      "start": 893.284,
+      "end": 894.065,
+      "duration": 0.781417
+    },
+    {
+      "start": 1234.27,
+      "end": 1234.78,
+      "duration": 0.504333
+    },
+    {
+      "start": 1235.43,
+      "end": 1236.45,
+      "duration": 1.0224
+    },
+    {
+      "start": 1238.12,
+      "end": 1238.82,
+      "duration": 0.698812
+    },
+    {
+      "start": 1238.82,
+      "end": 1239.46,
+      "duration": 0.641479
+    }
+  ],
+  "confidence": {
+    "scores": [
+      52,
+      60,
+      60,
+      61,
+      75,
+      53,
+      76
+    ],
+    "avg": 62.4,
+    "min": 52
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

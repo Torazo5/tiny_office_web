@@ -1,0 +1,352 @@
+{
+  "video_id": "YleSYAEYdrg",
+  "title": "Tems: Tiny Desk Concert",
+  "duration": 1221,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/YleSYAEYdrg.mp3",
+  "description_songs": [
+    "Me & U",
+    "Ice T",
+    "Unfortunate",
+    "Forever",
+    "Love Me JeJe"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1500 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 191.51999999999998,
+      "end": 218.39999999999998,
+      "duration": 26.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 464.15999999999997,
+      "end": 503.04,
+      "duration": 38.88000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 704.16,
+      "end": 720.48,
+      "duration": 16.32000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 907.1999999999999,
+      "end": 978.24,
+      "duration": 71.04000000000008,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1165.9199999999998,
+      "end": 1207.2,
+      "duration": 41.2800000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1212.48,
+      "end": 1219.2,
+      "duration": 6.720000000000027,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Me & U",
+      "corroboration": 0,
+      "silence_match": 0.473958,
+      "clip_start": 0,
+      "clip_end": 191.51999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 219,
+      "song": "Ice T",
+      "corroboration": 0,
+      "silence_match": 218.335,
+      "clip_start": 218.39999999999998,
+      "clip_end": 464.15999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 500,
+      "song": "Unfortunate",
+      "corroboration": 0,
+      "silence_match": 500.562,
+      "clip_start": 503.04,
+      "clip_end": 704.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 719,
+      "song": "Forever",
+      "corroboration": 0,
+      "silence_match": 719.137,
+      "clip_start": 720.48,
+      "clip_end": 907.1999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 975,
+      "song": "Love Me JeJe",
+      "corroboration": 0,
+      "silence_match": 977.171,
+      "clip_start": 978.24,
+      "clip_end": 1165.9199999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.473958,
+      "end": 1.46462,
+      "duration": 0.990667
+    },
+    {
+      "start": 190.557,
+      "end": 191.081,
+      "duration": 0.523813
+    },
+    {
+      "start": 205.423,
+      "end": 206.123,
+      "duration": 0.700229
+    },
+    {
+      "start": 218.335,
+      "end": 221.413,
+      "duration": 3.07871
+    },
+    {
+      "start": 475.895,
+      "end": 476.479,
+      "duration": 0.583625
+    },
+    {
+      "start": 476.842,
+      "end": 477.734,
+      "duration": 0.891292
+    },
+    {
+      "start": 479.575,
+      "end": 480.621,
+      "duration": 1.04583
+    },
+    {
+      "start": 483.656,
+      "end": 484.614,
+      "duration": 0.958271
+    },
+    {
+      "start": 484.617,
+      "end": 485.169,
+      "duration": 0.552187
+    },
+    {
+      "start": 489.72,
+      "end": 490.591,
+      "duration": 0.871146
+    },
+    {
+      "start": 491.925,
+      "end": 492.628,
+      "duration": 0.703313
+    },
+    {
+      "start": 493.164,
+      "end": 494.637,
+      "duration": 1.47262
+    },
+    {
+      "start": 498.523,
+      "end": 499.16,
+      "duration": 0.637729
+    },
+    {
+      "start": 499.17,
+      "end": 500.141,
+      "duration": 0.971083
+    },
+    {
+      "start": 500.562,
+      "end": 504.15,
+      "duration": 3.58883
+    },
+    {
+      "start": 708.433,
+      "end": 709.167,
+      "duration": 0.733958
+    },
+    {
+      "start": 712.38,
+      "end": 713.543,
+      "duration": 1.16331
+    },
+    {
+      "start": 715.871,
+      "end": 716.739,
+      "duration": 0.868021
+    },
+    {
+      "start": 717.26,
+      "end": 718.119,
+      "duration": 0.858604
+    },
+    {
+      "start": 719.137,
+      "end": 719.961,
+      "duration": 0.824104
+    },
+    {
+      "start": 719.993,
+      "end": 720.895,
+      "duration": 0.902021
+    },
+    {
+      "start": 915.251,
+      "end": 915.827,
+      "duration": 0.575583
+    },
+    {
+      "start": 916.912,
+      "end": 917.578,
+      "duration": 0.666
+    },
+    {
+      "start": 918.542,
+      "end": 919.749,
+      "duration": 1.20744
+    },
+    {
+      "start": 923.106,
+      "end": 923.884,
+      "duration": 0.77825
+    },
+    {
+      "start": 928.524,
+      "end": 929.13,
+      "duration": 0.606667
+    },
+    {
+      "start": 932.603,
+      "end": 933.339,
+      "duration": 0.735875
+    },
+    {
+      "start": 933.34,
+      "end": 934.049,
+      "duration": 0.708812
+    },
+    {
+      "start": 935.039,
+      "end": 936.058,
+      "duration": 1.01927
+    },
+    {
+      "start": 939.271,
+      "end": 940.131,
+      "duration": 0.859437
+    },
+    {
+      "start": 941.632,
+      "end": 942.188,
+      "duration": 0.556146
+    },
+    {
+      "start": 945.798,
+      "end": 946.944,
+      "duration": 1.1455
+    },
+    {
+      "start": 950.862,
+      "end": 951.47,
+      "duration": 0.608125
+    },
+    {
+      "start": 952.547,
+      "end": 953.313,
+      "duration": 0.766188
+    },
+    {
+      "start": 955.258,
+      "end": 955.833,
+      "duration": 0.575354
+    },
+    {
+      "start": 961.424,
+      "end": 962.546,
+      "duration": 1.1215
+    },
+    {
+      "start": 977.171,
+      "end": 977.675,
+      "duration": 0.503229
+    },
+    {
+      "start": 1205.87,
+      "end": 1206.57,
+      "duration": 0.693729
+    },
+    {
+      "start": 1206.57,
+      "end": 1213.34,
+      "duration": 6.77738
+    },
+    {
+      "start": 1218.98,
+      "end": 1221.23,
+      "duration": 2.25346
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      76,
+      76,
+      76
+    ],
+    "avg": 74.4,
+    "min": 68
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

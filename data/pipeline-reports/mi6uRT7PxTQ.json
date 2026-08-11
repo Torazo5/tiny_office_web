@@ -1,0 +1,252 @@
+{
+  "video_id": "mi6uRT7PxTQ",
+  "title": "Death Cab For Cutie: NPR Music Tiny Desk Concert",
+  "duration": 1095,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/mi6uRT7PxTQ.mp3",
+  "description_songs": [
+    "Black Sun",
+    "No Room In Frame",
+    "Your Heart Is An Empty Room",
+    "Passenger Seat"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 692 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.48,
+      "end": 8.16,
+      "duration": 7.68,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 295.2,
+      "end": 312.48,
+      "duration": 17.28000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 546.72,
+      "end": 563.52,
+      "duration": 16.799999999999955,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 795.36,
+      "end": 840.0,
+      "duration": 44.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1037.76,
+      "end": 1067.04,
+      "duration": 29.279999999999973,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 7,
+      "song": "Black Sun",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 8.16,
+      "clip_end": 294.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 313,
+      "song": "No Room In Frame",
+      "corroboration": 0,
+      "silence_match": 312.44,
+      "clip_start": 312.48,
+      "clip_end": 545.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 563,
+      "song": "Your Heart Is An Empty Room",
+      "corroboration": 0,
+      "silence_match": 563.367,
+      "clip_start": 563.52,
+      "clip_end": 794.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 840,
+      "song": "Passenger Seat",
+      "corroboration": 0,
+      "silence_match": 839.952,
+      "clip_start": 840.0,
+      "clip_end": 1036.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 312.44,
+      "end": 313.486,
+      "duration": 1.04662
+    },
+    {
+      "start": 545.111,
+      "end": 546.043,
+      "duration": 0.932979
+    },
+    {
+      "start": 563.367,
+      "end": 564.29,
+      "duration": 0.923167
+    },
+    {
+      "start": 792.05,
+      "end": 794.933,
+      "duration": 2.88252
+    },
+    {
+      "start": 821.572,
+      "end": 822.346,
+      "duration": 0.774125
+    },
+    {
+      "start": 823.131,
+      "end": 823.806,
+      "duration": 0.674625
+    },
+    {
+      "start": 839.204,
+      "end": 839.884,
+      "duration": 0.679708
+    },
+    {
+      "start": 839.952,
+      "end": 841.017,
+      "duration": 1.0649
+    },
+    {
+      "start": 844.215,
+      "end": 846.009,
+      "duration": 1.79385
+    },
+    {
+      "start": 849.178,
+      "end": 850.564,
+      "duration": 1.38567
+    },
+    {
+      "start": 853.577,
+      "end": 855.01,
+      "duration": 1.4331
+    },
+    {
+      "start": 862.923,
+      "end": 863.986,
+      "duration": 1.06215
+    },
+    {
+      "start": 867.456,
+      "end": 868.382,
+      "duration": 0.926687
+    },
+    {
+      "start": 871.385,
+      "end": 872.69,
+      "duration": 1.30546
+    },
+    {
+      "start": 876.174,
+      "end": 877.167,
+      "duration": 0.9935
+    },
+    {
+      "start": 998.937,
+      "end": 999.439,
+      "duration": 0.502208
+    },
+    {
+      "start": 1017.58,
+      "end": 1018.26,
+      "duration": 0.686021
+    },
+    {
+      "start": 1018.91,
+      "end": 1020.46,
+      "duration": 1.55321
+    },
+    {
+      "start": 1020.9,
+      "end": 1022.83,
+      "duration": 1.92894
+    },
+    {
+      "start": 1026.17,
+      "end": 1027.63,
+      "duration": 1.46369
+    },
+    {
+      "start": 1031.0,
+      "end": 1032.46,
+      "duration": 1.46294
+    },
+    {
+      "start": 1033.14,
+      "end": 1037.3,
+      "duration": 4.16242
+    },
+    {
+      "start": 1064.73,
+      "end": 1065.56,
+      "duration": 0.825417
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      76,
+      76,
+      76
+    ],
+    "avg": 72.2,
+    "min": 61
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

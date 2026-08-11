@@ -1,0 +1,282 @@
+{
+  "video_id": "ze4xcmBFvaE",
+  "title": "Jon Batiste: NPR Music Tiny Desk Concert",
+  "duration": 1003,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/ze4xcmBFvaE.mp3",
+  "description_songs": [
+    "Cry",
+    "Coltrane",
+    "Tell The Truth",
+    "I Need You"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 596 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 379.68,
+      "end": 492.96,
+      "duration": 113.27999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 688.3199999999999,
+      "end": 731.52,
+      "duration": 43.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 969.5999999999999,
+      "end": 992.16,
+      "duration": 22.56000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 13,
+      "song": "Cry",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 13,
+      "clip_end": 249,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 249,
+      "song": "Coltrane",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 249,
+      "clip_end": 378.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 493,
+      "song": "Tell The Truth",
+      "corroboration": 1,
+      "silence_match": 490.686,
+      "clip_start": 492.96,
+      "clip_end": 687.3199999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 733,
+      "song": "I Need You",
+      "corroboration": 1,
+      "silence_match": 731.337,
+      "clip_start": 731.52,
+      "clip_end": 968.5999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 2.63398,
+      "duration": 2.63398
+    },
+    {
+      "start": 376.424,
+      "end": 377.715,
+      "duration": 1.29025
+    },
+    {
+      "start": 400.536,
+      "end": 401.301,
+      "duration": 0.764833
+    },
+    {
+      "start": 402.1,
+      "end": 402.725,
+      "duration": 0.625083
+    },
+    {
+      "start": 403.807,
+      "end": 404.384,
+      "duration": 0.577333
+    },
+    {
+      "start": 406.165,
+      "end": 406.802,
+      "duration": 0.637083
+    },
+    {
+      "start": 408.23,
+      "end": 408.803,
+      "duration": 0.573354
+    },
+    {
+      "start": 412.495,
+      "end": 413.005,
+      "duration": 0.509875
+    },
+    {
+      "start": 420.812,
+      "end": 421.956,
+      "duration": 1.14408
+    },
+    {
+      "start": 423.691,
+      "end": 424.348,
+      "duration": 0.657
+    },
+    {
+      "start": 432.326,
+      "end": 433.064,
+      "duration": 0.738542
+    },
+    {
+      "start": 446.018,
+      "end": 446.6,
+      "duration": 0.581896
+    },
+    {
+      "start": 455.955,
+      "end": 456.823,
+      "duration": 0.867729
+    },
+    {
+      "start": 457.901,
+      "end": 459.045,
+      "duration": 1.14406
+    },
+    {
+      "start": 469.093,
+      "end": 470.078,
+      "duration": 0.985271
+    },
+    {
+      "start": 471.025,
+      "end": 471.824,
+      "duration": 0.799042
+    },
+    {
+      "start": 480.451,
+      "end": 481.306,
+      "duration": 0.854521
+    },
+    {
+      "start": 483.059,
+      "end": 483.949,
+      "duration": 0.889958
+    },
+    {
+      "start": 489.699,
+      "end": 490.685,
+      "duration": 0.986521
+    },
+    {
+      "start": 490.686,
+      "end": 493.307,
+      "duration": 2.62069
+    },
+    {
+      "start": 712.106,
+      "end": 713.2,
+      "duration": 1.09385
+    },
+    {
+      "start": 713.769,
+      "end": 714.434,
+      "duration": 0.664896
+    },
+    {
+      "start": 714.59,
+      "end": 716.112,
+      "duration": 1.52177
+    },
+    {
+      "start": 716.744,
+      "end": 718.045,
+      "duration": 1.30083
+    },
+    {
+      "start": 718.883,
+      "end": 719.392,
+      "duration": 0.508229
+    },
+    {
+      "start": 720.626,
+      "end": 721.87,
+      "duration": 1.24354
+    },
+    {
+      "start": 723.319,
+      "end": 724.271,
+      "duration": 0.952562
+    },
+    {
+      "start": 724.904,
+      "end": 726.136,
+      "duration": 1.23258
+    },
+    {
+      "start": 727.127,
+      "end": 728.711,
+      "duration": 1.58398
+    },
+    {
+      "start": 731.337,
+      "end": 732.348,
+      "duration": 1.01085
+    },
+    {
+      "start": 766.775,
+      "end": 768.189,
+      "duration": 1.41377
+    },
+    {
+      "start": 991.484,
+      "end": 1002.51,
+      "duration": 11.0257
+    }
+  ],
+  "confidence": {
+    "scores": [
+      45,
+      53,
+      83,
+      83
+    ],
+    "avg": 66.0,
+    "min": 45
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/ze4xcmBFvaE.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

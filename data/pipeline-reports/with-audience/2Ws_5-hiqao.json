@@ -1,0 +1,162 @@
+{
+  "video_id": "2Ws_5-hiqao",
+  "title": "Seu Jorge: NPR Music Tiny Desk Concert From The Archives",
+  "duration": 1113,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/2Ws_5-hiqao.mp3",
+  "description_songs": [
+    "Jasmine Garsd | September 13, 2010"
+  ],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 1 description songs (2 candidate(s) checked)",
+    "B_yamnet": "failed \u2014 not enough songs or no talk/applause spans detected",
+    "C_silence": "failed \u2014 not enough songs or no silence detected",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 2,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 308.15999999999997,
+      "end": 321.6,
+      "duration": 13.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 511.68,
+      "end": 513.12,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 513.12,
+      "end": 528.48,
+      "duration": 15.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 822.24,
+      "end": 854.4,
+      "duration": 32.15999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1085.28,
+      "end": 1112.6399999999999,
+      "duration": 27.3599999999999,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.13604,
+      "duration": 5.13604
+    },
+    {
+      "start": 305.951,
+      "end": 307.298,
+      "duration": 1.34725
+    },
+    {
+      "start": 319.845,
+      "end": 320.722,
+      "duration": 0.877188
+    },
+    {
+      "start": 510.829,
+      "end": 512.391,
+      "duration": 1.56217
+    },
+    {
+      "start": 526.367,
+      "end": 527.696,
+      "duration": 1.32854
+    },
+    {
+      "start": 527.696,
+      "end": 535.716,
+      "duration": 8.0201
+    },
+    {
+      "start": 819.64,
+      "end": 821.262,
+      "duration": 1.62181
+    },
+    {
+      "start": 833.968,
+      "end": 835.989,
+      "duration": 2.02104
+    },
+    {
+      "start": 836.567,
+      "end": 838.798,
+      "duration": 2.23077
+    },
+    {
+      "start": 840.425,
+      "end": 841.342,
+      "duration": 0.916687
+    },
+    {
+      "start": 845.743,
+      "end": 846.586,
+      "duration": 0.842271
+    },
+    {
+      "start": 847.279,
+      "end": 848.949,
+      "duration": 1.66956
+    },
+    {
+      "start": 849.286,
+      "end": 853.654,
+      "duration": 4.36796
+    },
+    {
+      "start": 853.696,
+      "end": 859.529,
+      "duration": 5.83221
+    },
+    {
+      "start": 919.352,
+      "end": 919.894,
+      "duration": 0.541875
+    },
+    {
+      "start": 1029.66,
+      "end": 1030.2,
+      "duration": 0.538604
+    },
+    {
+      "start": 1083.5,
+      "end": 1084.49,
+      "duration": 0.989417
+    },
+    {
+      "start": 1112.33,
+      "end": 1113.28,
+      "duration": 0.955542
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

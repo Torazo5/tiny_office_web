@@ -2,7 +2,7 @@
   "video_id": "jIIuzB11dsA",
   "title": "Harry Styles: NPR Music Tiny Desk Concert",
   "duration": 1153,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/jIIuzB11dsA.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/jIIuzB11dsA.mp3",
   "description_songs": [
     "Cherry",
     "Watermelon Sugar",
@@ -86,12 +86,13 @@
       "corroboration": 2,
       "silence_match": 4.85171,
       "clip_start": 0,
-      "clip_end": 203.04,
+      "clip_end": 202.04,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 82
+      "confidence": 82,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 300,
@@ -99,12 +100,13 @@
       "corroboration": 1,
       "silence_match": 298.949,
       "clip_start": 300.0,
-      "clip_end": 489.12,
+      "clip_end": 488.12,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 636,
@@ -112,12 +114,13 @@
       "corroboration": 2,
       "silence_match": 636.742,
       "clip_start": 636.96,
-      "clip_end": 833.76,
+      "clip_end": 832.76,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 912,
@@ -125,12 +128,13 @@
       "corroboration": 2,
       "silence_match": 906.215,
       "clip_start": 913.4399999999999,
-      "clip_end": 1127.04,
+      "clip_end": 1126.04,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -610,7 +614,10 @@
     "avg": 86.2,
     "min": 82
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/jIIuzB11dsA.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

@@ -1,0 +1,243 @@
+{
+  "video_id": "grWRQ0cONXA",
+  "title": "Wiz Khalifa: Tiny Desk Concert",
+  "duration": 1254,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/grWRQ0cONXA.mp3",
+  "description_songs": [
+    "Red Eye",
+    "Mezmorized",
+    "The Kid Frankie",
+    "Never Been",
+    "Up",
+    "Crime Bud and Women"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1400 likes, matched all 6 description song(s), retained 6 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 1.92,
+      "end": 3.36,
+      "duration": 1.44,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 166.56,
+      "end": 177.6,
+      "duration": 11.039999999999992,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 400.8,
+      "end": 412.8,
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 558.72,
+      "end": 565.4399999999999,
+      "duration": 6.719999999999914,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 756.48,
+      "end": 764.64,
+      "duration": 8.159999999999968,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 996.9599999999999,
+      "end": 1009.92,
+      "duration": 12.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1185.6,
+      "end": 1235.04,
+      "duration": 49.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 12,
+      "song": "Red Eye",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 3.36,
+      "clip_end": 165.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 201,
+      "song": "Mezmorized",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 177.6,
+      "clip_end": 399.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 428,
+      "song": "The Kid Frankie",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 412.8,
+      "clip_end": 557.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 585,
+      "song": "Never Been",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 565.4399999999999,
+      "clip_end": 755.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 777,
+      "song": "Up",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 764.64,
+      "clip_end": 995.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1028,
+      "song": "Crime Bud and Women",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 1009.92,
+      "clip_end": 1184.6,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.688896,
+      "duration": 0.688896
+    },
+    {
+      "start": 177.496,
+      "end": 183.239,
+      "duration": 5.74352
+    },
+    {
+      "start": 183.24,
+      "end": 187.729,
+      "duration": 4.48925
+    },
+    {
+      "start": 413.231,
+      "end": 416.028,
+      "duration": 2.79775
+    },
+    {
+      "start": 565.151,
+      "end": 565.714,
+      "duration": 0.562771
+    },
+    {
+      "start": 565.714,
+      "end": 566.226,
+      "duration": 0.512813
+    },
+    {
+      "start": 566.246,
+      "end": 569.678,
+      "duration": 3.43227
+    },
+    {
+      "start": 570.218,
+      "end": 573.286,
+      "duration": 3.06817
+    },
+    {
+      "start": 753.33,
+      "end": 754.16,
+      "duration": 0.830167
+    },
+    {
+      "start": 1010.2,
+      "end": 1010.74,
+      "duration": 0.536271
+    },
+    {
+      "start": 1010.74,
+      "end": 1016.36,
+      "duration": 5.61888
+    },
+    {
+      "start": 1234.17,
+      "end": 1254.38,
+      "duration": 20.2121
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      68,
+      68,
+      68,
+      61,
+      68
+    ],
+    "avg": 65.7,
+    "min": 61
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/grWRQ0cONXA.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

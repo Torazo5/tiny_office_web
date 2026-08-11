@@ -1,0 +1,354 @@
+{
+  "video_id": "mhyD2qchkEw",
+  "title": "Sylvan Esso: NPR Music Tiny Desk Concert",
+  "duration": 1035,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/mhyD2qchkEw.mp3",
+  "description_songs": [
+    "Coffee",
+    "H.S.K.T.",
+    "Come Down"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 4 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 83.52,
+      "end": 85.44,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 261.59999999999997,
+      "end": 300.0,
+      "duration": 38.400000000000034,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 312.96,
+      "end": 319.68,
+      "duration": 6.720000000000027,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 332.64,
+      "end": 334.08,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 344.64,
+      "end": 346.56,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 356.15999999999997,
+      "end": 357.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 469.91999999999996,
+      "end": 471.36,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 585.6,
+      "end": 693.6,
+      "duration": 108.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 972.48,
+      "end": 1004.64,
+      "duration": 32.15999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Coffee",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 261.59999999999997,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 261.59999999999997,
+      "song": "H.S.K.T.",
+      "corroboration": 0,
+      "silence_match": 259.82,
+      "clip_start": 261.59999999999997,
+      "clip_end": 585.6,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 50
+    },
+    {
+      "seconds": 585.6,
+      "song": "Come Down",
+      "corroboration": 0,
+      "silence_match": 584.729,
+      "clip_start": 693.6,
+      "clip_end": 972.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 165.45,
+      "end": 166.179,
+      "duration": 0.729062
+    },
+    {
+      "start": 167.509,
+      "end": 168.537,
+      "duration": 1.0279
+    },
+    {
+      "start": 169.893,
+      "end": 170.937,
+      "duration": 1.04354
+    },
+    {
+      "start": 259.82,
+      "end": 261.569,
+      "duration": 1.7481
+    },
+    {
+      "start": 312.289,
+      "end": 313.764,
+      "duration": 1.47523
+    },
+    {
+      "start": 314.426,
+      "end": 315.021,
+      "duration": 0.595
+    },
+    {
+      "start": 316.729,
+      "end": 317.349,
+      "duration": 0.620687
+    },
+    {
+      "start": 318.59,
+      "end": 319.173,
+      "duration": 0.582854
+    },
+    {
+      "start": 319.527,
+      "end": 322.185,
+      "duration": 2.65835
+    },
+    {
+      "start": 584.729,
+      "end": 585.694,
+      "duration": 0.965458
+    },
+    {
+      "start": 606.041,
+      "end": 607.018,
+      "duration": 0.97625
+    },
+    {
+      "start": 609.583,
+      "end": 610.796,
+      "duration": 1.21296
+    },
+    {
+      "start": 611.785,
+      "end": 613.232,
+      "duration": 1.44706
+    },
+    {
+      "start": 615.267,
+      "end": 615.841,
+      "duration": 0.573917
+    },
+    {
+      "start": 618.307,
+      "end": 618.889,
+      "duration": 0.581479
+    },
+    {
+      "start": 632.989,
+      "end": 634.261,
+      "duration": 1.27283
+    },
+    {
+      "start": 635.266,
+      "end": 636.364,
+      "duration": 1.09837
+    },
+    {
+      "start": 643.828,
+      "end": 645.023,
+      "duration": 1.19429
+    },
+    {
+      "start": 646.328,
+      "end": 648.045,
+      "duration": 1.7171
+    },
+    {
+      "start": 649.097,
+      "end": 649.775,
+      "duration": 0.678521
+    },
+    {
+      "start": 652.665,
+      "end": 655.84,
+      "duration": 3.17456
+    },
+    {
+      "start": 656.191,
+      "end": 657.384,
+      "duration": 1.19312
+    },
+    {
+      "start": 660.545,
+      "end": 661.15,
+      "duration": 0.604542
+    },
+    {
+      "start": 664.774,
+      "end": 665.453,
+      "duration": 0.679146
+    },
+    {
+      "start": 684.621,
+      "end": 685.161,
+      "duration": 0.539646
+    },
+    {
+      "start": 685.936,
+      "end": 686.461,
+      "duration": 0.52575
+    },
+    {
+      "start": 693.392,
+      "end": 693.902,
+      "duration": 0.510479
+    },
+    {
+      "start": 693.999,
+      "end": 694.604,
+      "duration": 0.604583
+    },
+    {
+      "start": 695.27,
+      "end": 696.33,
+      "duration": 1.05952
+    },
+    {
+      "start": 733.391,
+      "end": 734.332,
+      "duration": 0.940854
+    },
+    {
+      "start": 735.152,
+      "end": 735.987,
+      "duration": 0.835083
+    },
+    {
+      "start": 742.567,
+      "end": 743.387,
+      "duration": 0.820167
+    },
+    {
+      "start": 744.528,
+      "end": 745.417,
+      "duration": 0.888813
+    },
+    {
+      "start": 746.565,
+      "end": 749.076,
+      "duration": 2.51117
+    },
+    {
+      "start": 749.282,
+      "end": 749.892,
+      "duration": 0.609187
+    },
+    {
+      "start": 752.432,
+      "end": 754.983,
+      "duration": 2.55131
+    },
+    {
+      "start": 754.983,
+      "end": 756.537,
+      "duration": 1.55437
+    },
+    {
+      "start": 769.881,
+      "end": 770.72,
+      "duration": 0.839479
+    },
+    {
+      "start": 781.141,
+      "end": 781.958,
+      "duration": 0.817021
+    },
+    {
+      "start": 968.878,
+      "end": 972.21,
+      "duration": 3.33165
+    },
+    {
+      "start": 993.391,
+      "end": 994.013,
+      "duration": 0.622687
+    },
+    {
+      "start": 995.653,
+      "end": 996.165,
+      "duration": 0.512708
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      50,
+      66
+    ],
+    "avg": 53.0,
+    "min": 43
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

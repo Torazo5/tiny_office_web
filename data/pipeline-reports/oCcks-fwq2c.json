@@ -2,7 +2,7 @@
   "video_id": "oCcks-fwq2c",
   "title": "Post Malone: Tiny Desk Concert",
   "duration": 1088,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/oCcks-fwq2c.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/oCcks-fwq2c.mp3",
   "description_songs": [
     "Sunflower",
     "I Fall Apart",
@@ -65,12 +65,13 @@
       "corroboration": 1,
       "silence_match": 0.390875,
       "clip_start": 0,
-      "clip_end": 185.28,
+      "clip_end": 184.28,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 255,
@@ -78,12 +79,13 @@
       "corroboration": 1,
       "silence_match": 254.843,
       "clip_start": 258.24,
-      "clip_end": 468.0,
+      "clip_end": 467.0,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 502,
@@ -91,12 +93,13 @@
       "corroboration": 0,
       "silence_match": 502.56,
       "clip_start": 504.48,
-      "clip_end": 740.16,
+      "clip_end": 739.16,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 796,
@@ -104,12 +107,13 @@
       "corroboration": 0,
       "silence_match": 796.559,
       "clip_start": 796.8,
-      "clip_end": 1004.64,
+      "clip_end": 1003.64,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -324,7 +328,10 @@
     "avg": 77.5,
     "min": 75
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/oCcks-fwq2c.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

@@ -1,0 +1,211 @@
+{
+  "video_id": "1alXHOMDBN4",
+  "title": "Freddie Gibbs And Madlib: NPR Music Tiny Desk Concert",
+  "duration": 757,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/1alXHOMDBN4.mp3",
+  "description_songs": [
+    "Education",
+    "Gat Damn",
+    "Soul Right",
+    "Freestyle S"
+  ],
+  "method": "silence",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (0 candidate(s) checked)",
+    "B_yamnet": "failed \u2014 only 2 usable episode(s) (of 3 valid, 4 total), need 3",
+    "C_silence": "ok \u2014 14 usable gap(s), took top 3 by duration"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 283.2,
+      "end": 310.56,
+      "duration": 27.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 492.47999999999996,
+      "end": 493.92,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 496.32,
+      "end": 529.44,
+      "duration": 33.12000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 687.8399999999999,
+      "end": 746.88,
+      "duration": 59.04000000000008,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 4.397,
+      "song": "Education",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 4.397,
+      "clip_end": 282.2,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 312.446,
+      "song": "Gat Damn",
+      "corroboration": 0,
+      "silence_match": 312.446,
+      "clip_start": 310.56,
+      "clip_end": 314.609,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 0
+    },
+    {
+      "seconds": 314.609,
+      "song": "Soul Right",
+      "corroboration": 0,
+      "silence_match": 314.609,
+      "clip_start": 314.609,
+      "clip_end": 495.32,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 508.422,
+      "song": "Freestyle S",
+      "corroboration": 0,
+      "silence_match": 508.422,
+      "clip_start": 493.92,
+      "clip_end": 495.32,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 1,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 4.397,
+      "duration": 4.397
+    },
+    {
+      "start": 297.997,
+      "end": 298.63,
+      "duration": 0.633229
+    },
+    {
+      "start": 301.506,
+      "end": 302.855,
+      "duration": 1.34858
+    },
+    {
+      "start": 304.966,
+      "end": 305.526,
+      "duration": 0.559438
+    },
+    {
+      "start": 307.449,
+      "end": 308.147,
+      "duration": 0.698229
+    },
+    {
+      "start": 312.446,
+      "end": 314.581,
+      "duration": 2.13483
+    },
+    {
+      "start": 314.609,
+      "end": 316.534,
+      "duration": 1.92533
+    },
+    {
+      "start": 508.422,
+      "end": 510.824,
+      "duration": 2.40165
+    },
+    {
+      "start": 527.107,
+      "end": 527.933,
+      "duration": 0.826417
+    },
+    {
+      "start": 527.984,
+      "end": 528.702,
+      "duration": 0.717917
+    },
+    {
+      "start": 708.728,
+      "end": 710.364,
+      "duration": 1.63583
+    },
+    {
+      "start": 721.215,
+      "end": 721.911,
+      "duration": 0.69625
+    },
+    {
+      "start": 723.606,
+      "end": 724.209,
+      "duration": 0.60225
+    },
+    {
+      "start": 724.216,
+      "end": 725.13,
+      "duration": 0.91325
+    },
+    {
+      "start": 725.154,
+      "end": 725.893,
+      "duration": 0.738646
+    },
+    {
+      "start": 746.939,
+      "end": 756.564,
+      "duration": 9.62542
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      0,
+      43,
+      1
+    ],
+    "avg": 21.8,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/1alXHOMDBN4.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

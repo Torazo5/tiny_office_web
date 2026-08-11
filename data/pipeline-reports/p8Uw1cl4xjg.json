@@ -1,0 +1,341 @@
+{
+  "video_id": "p8Uw1cl4xjg",
+  "title": "Big Daddy Kane: NPR Music Tiny Desk Concert",
+  "duration": 1142,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/p8Uw1cl4xjg.mp3",
+  "description_songs": [
+    "Raw"
+  ],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 1 description songs (0 candidate(s) checked)",
+    "B_yamnet": "failed \u2014 not enough songs or no talk/applause spans detected",
+    "C_silence": "failed \u2014 not enough songs or no silence detected",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 116.16,
+      "end": 117.6,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 118.08,
+      "end": 120.0,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 120.47999999999999,
+      "end": 121.92,
+      "duration": 1.440000000000012,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 123.36,
+      "end": 124.8,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 162.72,
+      "end": 165.11999999999998,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 170.88,
+      "end": 172.32,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 243.84,
+      "end": 245.76,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 268.8,
+      "end": 270.24,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 380.15999999999997,
+      "end": 384.0,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 384.0,
+      "end": 416.64,
+      "duration": 32.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 647.04,
+      "end": 649.4399999999999,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 651.84,
+      "end": 691.68,
+      "duration": 39.83999999999992,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 692.64,
+      "end": 747.36,
+      "duration": 54.72000000000003,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 747.36,
+      "end": 776.16,
+      "duration": 28.799999999999955,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 886.56,
+      "end": 888.0,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1002.24,
+      "end": 1043.52,
+      "duration": 41.27999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1090.56,
+      "end": 1093.44,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1128.48,
+      "end": 1135.2,
+      "duration": 6.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 381.332,
+      "end": 381.839,
+      "duration": 0.506792
+    },
+    {
+      "start": 382.965,
+      "end": 383.587,
+      "duration": 0.622312
+    },
+    {
+      "start": 396.07,
+      "end": 396.8,
+      "duration": 0.730708
+    },
+    {
+      "start": 397.002,
+      "end": 397.635,
+      "duration": 0.633167
+    },
+    {
+      "start": 399.054,
+      "end": 399.75,
+      "duration": 0.696667
+    },
+    {
+      "start": 399.911,
+      "end": 400.787,
+      "duration": 0.875687
+    },
+    {
+      "start": 412.441,
+      "end": 413.242,
+      "duration": 0.80175
+    },
+    {
+      "start": 414.988,
+      "end": 415.548,
+      "duration": 0.559729
+    },
+    {
+      "start": 416.241,
+      "end": 417.888,
+      "duration": 1.64679
+    },
+    {
+      "start": 417.907,
+      "end": 418.469,
+      "duration": 0.562771
+    },
+    {
+      "start": 418.493,
+      "end": 419.042,
+      "duration": 0.548625
+    },
+    {
+      "start": 419.075,
+      "end": 419.641,
+      "duration": 0.565417
+    },
+    {
+      "start": 419.673,
+      "end": 420.191,
+      "duration": 0.518167
+    },
+    {
+      "start": 672.178,
+      "end": 673.369,
+      "duration": 1.19071
+    },
+    {
+      "start": 679.2,
+      "end": 680.439,
+      "duration": 1.23873
+    },
+    {
+      "start": 680.93,
+      "end": 681.621,
+      "duration": 0.690437
+    },
+    {
+      "start": 682.908,
+      "end": 684.04,
+      "duration": 1.1321
+    },
+    {
+      "start": 690.768,
+      "end": 691.417,
+      "duration": 0.648875
+    },
+    {
+      "start": 693.342,
+      "end": 694.404,
+      "duration": 1.06169
+    },
+    {
+      "start": 702.404,
+      "end": 702.927,
+      "duration": 0.522813
+    },
+    {
+      "start": 707.004,
+      "end": 707.532,
+      "duration": 0.527167
+    },
+    {
+      "start": 721.312,
+      "end": 721.875,
+      "duration": 0.562562
+    },
+    {
+      "start": 722.428,
+      "end": 723.032,
+      "duration": 0.604167
+    },
+    {
+      "start": 740.928,
+      "end": 741.549,
+      "duration": 0.620854
+    },
+    {
+      "start": 754.929,
+      "end": 755.454,
+      "duration": 0.524521
+    },
+    {
+      "start": 756.44,
+      "end": 757.955,
+      "duration": 1.51425
+    },
+    {
+      "start": 760.327,
+      "end": 761.247,
+      "duration": 0.920063
+    },
+    {
+      "start": 766.906,
+      "end": 767.686,
+      "duration": 0.780208
+    },
+    {
+      "start": 769.223,
+      "end": 770.267,
+      "duration": 1.0445
+    },
+    {
+      "start": 771.946,
+      "end": 772.875,
+      "duration": 0.929271
+    },
+    {
+      "start": 773.164,
+      "end": 773.885,
+      "duration": 0.721083
+    },
+    {
+      "start": 773.885,
+      "end": 774.717,
+      "duration": 0.831396
+    },
+    {
+      "start": 775.56,
+      "end": 777.086,
+      "duration": 1.52679
+    },
+    {
+      "start": 1030.91,
+      "end": 1031.76,
+      "duration": 0.840958
+    },
+    {
+      "start": 1132.85,
+      "end": 1142.35,
+      "duration": 9.50092
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

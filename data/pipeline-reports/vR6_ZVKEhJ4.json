@@ -2,7 +2,7 @@
   "video_id": "vR6_ZVKEhJ4",
   "title": "Ne-Yo: Tiny Desk Concert",
   "duration": 1394,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/vR6_ZVKEhJ4.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/vR6_ZVKEhJ4.mp3",
   "description_songs": [
     "Because Of You",
     "So Sick",
@@ -90,12 +90,13 @@
       "corroboration": 1,
       "silence_match": 0.488771,
       "clip_start": 0,
-      "clip_end": 152.16,
+      "clip_end": 151.16,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 202,
@@ -116,12 +117,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 354,
-      "clip_end": 480.47999999999996,
+      "clip_end": 479.47999999999996,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 60
+      "confidence": 60,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 540,
@@ -155,12 +157,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 786,
-      "clip_end": 861.12,
+      "clip_end": 860.12,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 60
+      "confidence": 60,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 920,
@@ -168,12 +171,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 890.88,
-      "clip_end": 1090.08,
+      "clip_end": 1089.08,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 1110,
@@ -181,7 +185,7 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 1097.76,
-      "clip_end": 1368.48,
+      "clip_end": 1367.48,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [
@@ -205,7 +209,8 @@
         }
       ],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -244,7 +249,10 @@
     "avg": 62.9,
     "min": 52
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/vR6_ZVKEhJ4.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

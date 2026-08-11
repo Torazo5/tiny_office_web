@@ -1,0 +1,323 @@
+{
+  "video_id": "AzUHNjKMeV4",
+  "title": "Wet Leg: Tiny Desk Concert",
+  "duration": 1020,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/AzUHNjKMeV4.mp3",
+  "description_songs": [
+    "CPR",
+    "mangetout",
+    "davina mccall",
+    "11:21"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 725 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 179.04,
+      "end": 197.76,
+      "duration": 18.72,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 442.56,
+      "end": 488.64,
+      "duration": 46.079999999999984,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 717.6,
+      "end": 754.08,
+      "duration": 36.48000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 987.36,
+      "end": 1007.52,
+      "duration": 20.159999999999968,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 14,
+      "song": "CPR",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 14,
+      "clip_end": 179.04,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 229,
+      "song": "mangetout",
+      "corroboration": 0,
+      "silence_match": 228.093,
+      "clip_start": 197.76,
+      "clip_end": 442.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 490,
+      "song": "davina mccall",
+      "corroboration": 0,
+      "silence_match": 488.694,
+      "clip_start": 488.64,
+      "clip_end": 717.6,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 762,
+      "song": "11:21",
+      "corroboration": 0,
+      "silence_match": 762.094,
+      "clip_start": 754.08,
+      "clip_end": 987.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.753167,
+      "duration": 0.753167
+    },
+    {
+      "start": 177.102,
+      "end": 178.096,
+      "duration": 0.993979
+    },
+    {
+      "start": 192.449,
+      "end": 193.029,
+      "duration": 0.580292
+    },
+    {
+      "start": 203.269,
+      "end": 203.783,
+      "duration": 0.513667
+    },
+    {
+      "start": 207.435,
+      "end": 208.433,
+      "duration": 0.998188
+    },
+    {
+      "start": 210.422,
+      "end": 211.901,
+      "duration": 1.47927
+    },
+    {
+      "start": 218.188,
+      "end": 220.103,
+      "duration": 1.91567
+    },
+    {
+      "start": 221.003,
+      "end": 222.199,
+      "duration": 1.19592
+    },
+    {
+      "start": 225.986,
+      "end": 228.082,
+      "duration": 2.09644
+    },
+    {
+      "start": 228.093,
+      "end": 229.433,
+      "duration": 1.34006
+    },
+    {
+      "start": 442.035,
+      "end": 442.675,
+      "duration": 0.640208
+    },
+    {
+      "start": 455.193,
+      "end": 456.769,
+      "duration": 1.57602
+    },
+    {
+      "start": 456.77,
+      "end": 457.541,
+      "duration": 0.771542
+    },
+    {
+      "start": 457.777,
+      "end": 458.373,
+      "duration": 0.595562
+    },
+    {
+      "start": 461.391,
+      "end": 462.169,
+      "duration": 0.778583
+    },
+    {
+      "start": 467.54,
+      "end": 469.004,
+      "duration": 1.46471
+    },
+    {
+      "start": 469.3,
+      "end": 471.096,
+      "duration": 1.79619
+    },
+    {
+      "start": 471.685,
+      "end": 472.409,
+      "duration": 0.724021
+    },
+    {
+      "start": 475.136,
+      "end": 476.037,
+      "duration": 0.901187
+    },
+    {
+      "start": 483.149,
+      "end": 485.309,
+      "duration": 2.15965
+    },
+    {
+      "start": 485.47,
+      "end": 487.021,
+      "duration": 1.55044
+    },
+    {
+      "start": 487.908,
+      "end": 488.51,
+      "duration": 0.601833
+    },
+    {
+      "start": 488.694,
+      "end": 489.692,
+      "duration": 0.998
+    },
+    {
+      "start": 735.269,
+      "end": 736.427,
+      "duration": 1.15783
+    },
+    {
+      "start": 736.65,
+      "end": 737.204,
+      "duration": 0.55425
+    },
+    {
+      "start": 737.312,
+      "end": 739.305,
+      "duration": 1.99367
+    },
+    {
+      "start": 740.005,
+      "end": 741.155,
+      "duration": 1.14992
+    },
+    {
+      "start": 743.223,
+      "end": 743.826,
+      "duration": 0.603229
+    },
+    {
+      "start": 745.202,
+      "end": 746.39,
+      "duration": 1.18773
+    },
+    {
+      "start": 746.529,
+      "end": 747.525,
+      "duration": 0.995792
+    },
+    {
+      "start": 747.539,
+      "end": 750.03,
+      "duration": 2.49142
+    },
+    {
+      "start": 750.04,
+      "end": 750.747,
+      "duration": 0.707437
+    },
+    {
+      "start": 751.139,
+      "end": 753.362,
+      "duration": 2.22352
+    },
+    {
+      "start": 753.825,
+      "end": 754.856,
+      "duration": 1.03092
+    },
+    {
+      "start": 754.929,
+      "end": 762.092,
+      "duration": 7.16244
+    },
+    {
+      "start": 762.094,
+      "end": 762.964,
+      "duration": 0.870146
+    },
+    {
+      "start": 762.966,
+      "end": 763.928,
+      "duration": 0.961542
+    },
+    {
+      "start": 763.932,
+      "end": 764.893,
+      "duration": 0.960792
+    },
+    {
+      "start": 764.896,
+      "end": 765.771,
+      "duration": 0.875021
+    },
+    {
+      "start": 1006.31,
+      "end": 1020.02,
+      "duration": 13.7048
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76,
+      76
+    ],
+    "avg": 70.2,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

@@ -2,7 +2,7 @@
   "video_id": "4iQmPv_dTI0",
   "title": "Fred again..: Tiny Desk Concert",
   "duration": 1604,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/4iQmPv_dTI0.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/4iQmPv_dTI0.mp3",
   "description_songs": [
     "Kyle (i found you)",
     "Roze (forgive)",
@@ -117,12 +117,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 282.72,
-      "clip_end": 606.24,
+      "clip_end": 605.24,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 603,
@@ -182,12 +183,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 1150,
-      "clip_end": 1570.56,
+      "clip_end": 1569.56,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 53
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 1568,
@@ -298,7 +300,10 @@
     "avg": 51.3,
     "min": 3
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/4iQmPv_dTI0.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

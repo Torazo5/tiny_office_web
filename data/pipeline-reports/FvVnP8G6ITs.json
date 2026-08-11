@@ -2,7 +2,7 @@
   "video_id": "FvVnP8G6ITs",
   "title": "Taylor Swift: NPR Music Tiny Desk Concert",
   "duration": 1739,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/FvVnP8G6ITs.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/FvVnP8G6ITs.mp3",
   "description_songs": [
     "The Man",
     "Lover",
@@ -156,12 +156,13 @@
       "corroboration": 4,
       "silence_match": 148.916,
       "clip_start": 152.16,
-      "clip_end": 290.88,
+      "clip_end": 289.88,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 97
+      "confidence": 97,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 538,
@@ -169,12 +170,13 @@
       "corroboration": 3,
       "silence_match": 536.697,
       "clip_start": 540.0,
-      "clip_end": 764.16,
+      "clip_end": 763.16,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 97
+      "confidence": 97,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 960,
@@ -182,12 +184,13 @@
       "corroboration": 4,
       "silence_match": 954.741,
       "clip_start": 961.92,
-      "clip_end": 1163.52,
+      "clip_end": 1162.52,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 97
+      "confidence": 97,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 1379,
@@ -195,12 +198,13 @@
       "corroboration": 4,
       "silence_match": null,
       "clip_start": 1377.12,
-      "clip_end": 1710.72,
+      "clip_end": 1709.72,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 82
+      "confidence": 82,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -705,7 +709,10 @@
     "avg": 93.2,
     "min": 82
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/FvVnP8G6ITs.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

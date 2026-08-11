@@ -2,7 +2,7 @@
   "video_id": "DFiLdByWIDY",
   "title": "Lizzo: NPR Music Tiny Desk Concert",
   "duration": 1019,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/DFiLdByWIDY.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/DFiLdByWIDY.mp3",
   "description_songs": [
     "Cuz I Love You",
     "Truth Hurts",
@@ -204,12 +204,13 @@
       "corroboration": 0,
       "silence_match": 0.0,
       "clip_start": 17.76,
-      "clip_end": 231.84,
+      "clip_end": 230.84,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 368,
@@ -217,12 +218,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 365.28000000000003,
-      "clip_end": 537.12,
+      "clip_end": 536.12,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 672,
@@ -230,12 +232,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 638.4,
-      "clip_end": 996.9599999999999,
+      "clip_end": 995.9599999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -299,7 +302,10 @@
     "avg": 66.0,
     "min": 61
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/DFiLdByWIDY.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

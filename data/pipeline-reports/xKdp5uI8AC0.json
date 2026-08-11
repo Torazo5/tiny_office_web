@@ -1,0 +1,437 @@
+{
+  "video_id": "xKdp5uI8AC0",
+  "title": "Alt-J: NPR Music Tiny Desk Concert",
+  "duration": 797,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/xKdp5uI8AC0.mp3",
+  "description_songs": [
+    "Tessellate",
+    "Something Good",
+    "Matilda"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 3 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 182.4,
+      "end": 192.95999999999998,
+      "duration": 10.559999999999974,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 199.68,
+      "end": 201.6,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 204.0,
+      "end": 207.83999999999997,
+      "duration": 3.839999999999975,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 437.76,
+      "end": 442.56,
+      "duration": 4.800000000000011,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 447.84,
+      "end": 449.76,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 450.71999999999997,
+      "end": 452.16,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 452.64,
+      "end": 454.56,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 455.03999999999996,
+      "end": 458.88,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 459.84,
+      "end": 462.24,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 467.03999999999996,
+      "end": 472.32,
+      "duration": 5.28000000000003,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 478.56,
+      "end": 481.44,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 482.88,
+      "end": 484.8,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 493.44,
+      "end": 494.88,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 498.71999999999997,
+      "end": 502.56,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 754.56,
+      "end": 775.68,
+      "duration": 21.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Tessellate",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 181.4,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 182.4,
+      "song": "Something Good",
+      "corroboration": 0,
+      "silence_match": 177.93,
+      "clip_start": 201.6,
+      "clip_end": 436.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 437.76,
+      "song": "Matilda",
+      "corroboration": 0,
+      "silence_match": 434.108,
+      "clip_start": 454.56,
+      "clip_end": 466.03999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 16,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 1.6361,
+      "duration": 1.6361
+    },
+    {
+      "start": 1.6381,
+      "end": 2.14944,
+      "duration": 0.511333
+    },
+    {
+      "start": 177.93,
+      "end": 182.109,
+      "duration": 4.17965
+    },
+    {
+      "start": 189.43,
+      "end": 195.37,
+      "duration": 5.94027
+    },
+    {
+      "start": 195.87,
+      "end": 196.388,
+      "duration": 0.518062
+    },
+    {
+      "start": 198.012,
+      "end": 200.183,
+      "duration": 2.17088
+    },
+    {
+      "start": 200.945,
+      "end": 206.469,
+      "duration": 5.52417
+    },
+    {
+      "start": 207.488,
+      "end": 208.779,
+      "duration": 1.29117
+    },
+    {
+      "start": 210.07,
+      "end": 211.989,
+      "duration": 1.91917
+    },
+    {
+      "start": 212.605,
+      "end": 213.382,
+      "duration": 0.777417
+    },
+    {
+      "start": 214.042,
+      "end": 215.672,
+      "duration": 1.63004
+    },
+    {
+      "start": 216.456,
+      "end": 218.848,
+      "duration": 2.3924
+    },
+    {
+      "start": 219.045,
+      "end": 220.671,
+      "duration": 1.62637
+    },
+    {
+      "start": 434.108,
+      "end": 435.908,
+      "duration": 1.79985
+    },
+    {
+      "start": 443.95,
+      "end": 446.283,
+      "duration": 2.33312
+    },
+    {
+      "start": 446.535,
+      "end": 447.121,
+      "duration": 0.585917
+    },
+    {
+      "start": 447.939,
+      "end": 450.144,
+      "duration": 2.20498
+    },
+    {
+      "start": 450.145,
+      "end": 451.325,
+      "duration": 1.17975
+    },
+    {
+      "start": 451.724,
+      "end": 453.911,
+      "duration": 2.18746
+    },
+    {
+      "start": 454.456,
+      "end": 455.51,
+      "duration": 1.05492
+    },
+    {
+      "start": 457.158,
+      "end": 457.814,
+      "duration": 0.655833
+    },
+    {
+      "start": 458.924,
+      "end": 459.474,
+      "duration": 0.550937
+    },
+    {
+      "start": 459.731,
+      "end": 461.481,
+      "duration": 1.74967
+    },
+    {
+      "start": 461.481,
+      "end": 463.132,
+      "duration": 1.65035
+    },
+    {
+      "start": 463.167,
+      "end": 464.566,
+      "duration": 1.39962
+    },
+    {
+      "start": 465.455,
+      "end": 466.575,
+      "duration": 1.11975
+    },
+    {
+      "start": 466.588,
+      "end": 467.852,
+      "duration": 1.26383
+    },
+    {
+      "start": 470.035,
+      "end": 470.901,
+      "duration": 0.865458
+    },
+    {
+      "start": 474.026,
+      "end": 474.693,
+      "duration": 0.667646
+    },
+    {
+      "start": 474.739,
+      "end": 475.982,
+      "duration": 1.24296
+    },
+    {
+      "start": 476.219,
+      "end": 477.256,
+      "duration": 1.03756
+    },
+    {
+      "start": 477.864,
+      "end": 479.287,
+      "duration": 1.4226
+    },
+    {
+      "start": 485.456,
+      "end": 488.595,
+      "duration": 3.13877
+    },
+    {
+      "start": 488.853,
+      "end": 489.529,
+      "duration": 0.675792
+    },
+    {
+      "start": 490.666,
+      "end": 491.451,
+      "duration": 0.784896
+    },
+    {
+      "start": 493.802,
+      "end": 496.367,
+      "duration": 2.5651
+    },
+    {
+      "start": 496.369,
+      "end": 499.496,
+      "duration": 3.12746
+    },
+    {
+      "start": 500.664,
+      "end": 501.22,
+      "duration": 0.556458
+    },
+    {
+      "start": 503.621,
+      "end": 504.662,
+      "duration": 1.04121
+    },
+    {
+      "start": 504.699,
+      "end": 505.879,
+      "duration": 1.18048
+    },
+    {
+      "start": 506.24,
+      "end": 509.259,
+      "duration": 3.01906
+    },
+    {
+      "start": 510.016,
+      "end": 513.079,
+      "duration": 3.06271
+    },
+    {
+      "start": 747.202,
+      "end": 747.829,
+      "duration": 0.627208
+    },
+    {
+      "start": 749.361,
+      "end": 750.239,
+      "duration": 0.877188
+    },
+    {
+      "start": 750.239,
+      "end": 754.512,
+      "duration": 4.2731
+    },
+    {
+      "start": 765.612,
+      "end": 767.076,
+      "duration": 1.46383
+    },
+    {
+      "start": 767.131,
+      "end": 767.739,
+      "duration": 0.608854
+    },
+    {
+      "start": 768.75,
+      "end": 769.269,
+      "duration": 0.519333
+    },
+    {
+      "start": 776.792,
+      "end": 797.199,
+      "duration": 20.4068
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      66,
+      16
+    ],
+    "avg": 46.7,
+    "min": 16
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/xKdp5uI8AC0.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

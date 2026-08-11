@@ -1,0 +1,228 @@
+{
+  "video_id": "xbuDoIUMlCs",
+  "title": "Car\u00edn Le\u00f3n: Tiny Desk Concert",
+  "duration": 889,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/xbuDoIUMlCs.mp3",
+  "description_songs": [
+    "Ese Vato No Te Queda",
+    "Lado Fr\u00e1gil",
+    "El Amor de Mi Herida",
+    "Por la Suave"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 3 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 233.76,
+      "end": 249.11999999999998,
+      "duration": 15.359999999999985,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 404.64,
+      "end": 406.08,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 431.52,
+      "end": 448.32,
+      "duration": 16.80000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 583.68,
+      "end": 624.96,
+      "duration": 41.280000000000086,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 864.0,
+      "end": 884.16,
+      "duration": 20.159999999999968,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Ese Vato No Te Queda",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 232.76,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 233.76,
+      "song": "Lado Fr\u00e1gil",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 249.11999999999998,
+      "clip_end": 430.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 431.52,
+      "song": "El Amor de Mi Herida",
+      "corroboration": 0,
+      "silence_match": 426.093,
+      "clip_start": 448.32,
+      "clip_end": 582.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 583.68,
+      "song": "Por la Suave",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 624.96,
+      "clip_end": 863.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.547583,
+      "duration": 0.547583
+    },
+    {
+      "start": 243.837,
+      "end": 244.881,
+      "duration": 1.04381
+    },
+    {
+      "start": 249.461,
+      "end": 251.827,
+      "duration": 2.36612
+    },
+    {
+      "start": 404.65,
+      "end": 405.814,
+      "duration": 1.16373
+    },
+    {
+      "start": 408.483,
+      "end": 409.117,
+      "duration": 0.633125
+    },
+    {
+      "start": 409.46,
+      "end": 410.345,
+      "duration": 0.885188
+    },
+    {
+      "start": 425.189,
+      "end": 425.777,
+      "duration": 0.588021
+    },
+    {
+      "start": 426.093,
+      "end": 426.775,
+      "duration": 0.682333
+    },
+    {
+      "start": 447.777,
+      "end": 448.834,
+      "duration": 1.05712
+    },
+    {
+      "start": 577.476,
+      "end": 578.542,
+      "duration": 1.06621
+    },
+    {
+      "start": 594.162,
+      "end": 594.801,
+      "duration": 0.638813
+    },
+    {
+      "start": 601.507,
+      "end": 602.038,
+      "duration": 0.531542
+    },
+    {
+      "start": 607.977,
+      "end": 608.699,
+      "duration": 0.722646
+    },
+    {
+      "start": 609.711,
+      "end": 610.213,
+      "duration": 0.502229
+    },
+    {
+      "start": 616.007,
+      "end": 616.837,
+      "duration": 0.8295
+    },
+    {
+      "start": 624.671,
+      "end": 625.557,
+      "duration": 0.885813
+    },
+    {
+      "start": 626.467,
+      "end": 627.511,
+      "duration": 1.04402
+    },
+    {
+      "start": 884.428,
+      "end": 889.097,
+      "duration": 4.6684
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      51,
+      66,
+      51
+    ],
+    "avg": 56.5,
+    "min": 51
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/xbuDoIUMlCs.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

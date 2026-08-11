@@ -1,0 +1,155 @@
+{
+  "video_id": "IUMTaAQ43lY",
+  "title": "Tom Misch: NPR Music Tiny Desk Concert",
+  "duration": 1045,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/IUMTaAQ43lY.mp3",
+  "description_songs": [
+    "It Runs Through Me",
+    "I Wish",
+    "Movie"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 834 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 265.44,
+      "end": 274.56,
+      "duration": 9.120000000000005,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 605.28,
+      "end": 614.88,
+      "duration": 9.600000000000023,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 620.16,
+      "end": 622.08,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 622.56,
+      "end": 642.72,
+      "duration": 20.160000000000082,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1007.04,
+      "end": 1034.4,
+      "duration": 27.360000000000127,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "It Runs Through Me",
+      "corroboration": 1,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 265.44,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 275,
+      "song": "I Wish",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 274.56,
+      "clip_end": 605.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 644,
+      "song": "Movie",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 642.72,
+      "clip_end": 1007.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.515375,
+      "duration": 0.515375
+    },
+    {
+      "start": 262.863,
+      "end": 264.412,
+      "duration": 1.54963
+    },
+    {
+      "start": 409.539,
+      "end": 410.216,
+      "duration": 0.676521
+    },
+    {
+      "start": 620.292,
+      "end": 621.027,
+      "duration": 0.734458
+    },
+    {
+      "start": 677.531,
+      "end": 678.607,
+      "duration": 1.07637
+    },
+    {
+      "start": 807.162,
+      "end": 807.838,
+      "duration": 0.675958
+    },
+    {
+      "start": 1006.33,
+      "end": 1006.94,
+      "duration": 0.601083
+    },
+    {
+      "start": 1034.17,
+      "end": 1044.92,
+      "duration": 10.7529
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      75,
+      75
+    ],
+    "avg": 75.0,
+    "min": 75
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

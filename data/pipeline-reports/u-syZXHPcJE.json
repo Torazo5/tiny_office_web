@@ -1,0 +1,191 @@
+{
+  "video_id": "u-syZXHPcJE",
+  "title": "Run The Jewels: NPR Music Tiny Desk Concert",
+  "duration": 699,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/u-syZXHPcJE.mp3",
+  "description_songs": [
+    "Talk To Me",
+    "Legend Has It",
+    "A Report To The Shareholders"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 200 likes, matched all 3 description song(s), retained 3 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.96,
+      "end": 22.56,
+      "duration": 21.599999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 33.6,
+      "end": 35.519999999999996,
+      "duration": 1.9199999999999946,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 85.92,
+      "end": 87.84,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 90.24,
+      "end": 92.16,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 143.51999999999998,
+      "end": 144.95999999999998,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 147.84,
+      "end": 150.71999999999997,
+      "duration": 2.879999999999967,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 177.6,
+      "end": 194.88,
+      "duration": 17.28,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 396.96,
+      "end": 474.72,
+      "duration": 77.76000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 635.04,
+      "end": 636.48,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 636.9599999999999,
+      "end": 696.48,
+      "duration": 59.520000000000095,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 21,
+      "song": "Talk To Me",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 35.519999999999996,
+      "clip_end": 146.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 189,
+      "song": "Legend Has It",
+      "corroboration": 0,
+      "silence_match": 192.104,
+      "clip_start": 194.88,
+      "clip_end": 395.96,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 475,
+      "song": "A Report To The Shareholders",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 474.72,
+      "clip_end": 635.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 97.4135,
+      "end": 98.1682,
+      "duration": 0.754687
+    },
+    {
+      "start": 192.104,
+      "end": 192.619,
+      "duration": 0.514375
+    },
+    {
+      "start": 196.303,
+      "end": 197.098,
+      "duration": 0.795417
+    },
+    {
+      "start": 395.318,
+      "end": 395.836,
+      "duration": 0.518292
+    },
+    {
+      "start": 424.839,
+      "end": 425.973,
+      "duration": 1.13471
+    },
+    {
+      "start": 434.394,
+      "end": 435.331,
+      "duration": 0.937562
+    },
+    {
+      "start": 696.301,
+      "end": 698.456,
+      "duration": 2.15492
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      76,
+      61
+    ],
+    "avg": 66.0,
+    "min": 61
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/u-syZXHPcJE.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

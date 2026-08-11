@@ -1,0 +1,384 @@
+{
+  "video_id": "tCrLnfwX088",
+  "title": "Liniker e os Caramelows: NPR Music Tiny Desk Concert",
+  "duration": 1117,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/tCrLnfwX088.mp3",
+  "description_songs": [
+    "Calm\u00f4",
+    "Tua",
+    "Remonta"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 193 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 251.04,
+      "end": 332.64,
+      "duration": 81.6,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 603.84,
+      "end": 612.96,
+      "duration": 9.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 621.6,
+      "end": 623.52,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 633.12,
+      "end": 635.04,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 643.1999999999999,
+      "end": 644.64,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 651.84,
+      "end": 653.28,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 654.72,
+      "end": 656.64,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 725.76,
+      "end": 734.88,
+      "duration": 9.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 734.88,
+      "end": 781.92,
+      "duration": 47.039999999999964,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1098.24,
+      "end": 1114.56,
+      "duration": 16.319999999999936,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 249,
+      "song": "Calm\u00f4",
+      "corroboration": 0,
+      "silence_match": 248.606,
+      "clip_start": 249,
+      "clip_end": 250.04,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 18,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 724,
+      "song": "Tua",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 734.88,
+      "clip_end": 1095,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 1095,
+      "song": "Remonta",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1114.56,
+      "clip_end": 1117,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 3
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 3.93442,
+      "duration": 3.93442
+    },
+    {
+      "start": 248.606,
+      "end": 251.422,
+      "duration": 2.81569
+    },
+    {
+      "start": 261.871,
+      "end": 262.679,
+      "duration": 0.807917
+    },
+    {
+      "start": 265.873,
+      "end": 266.571,
+      "duration": 0.698375
+    },
+    {
+      "start": 273.34,
+      "end": 274.073,
+      "duration": 0.732812
+    },
+    {
+      "start": 274.073,
+      "end": 274.974,
+      "duration": 0.900375
+    },
+    {
+      "start": 275.994,
+      "end": 276.693,
+      "duration": 0.698771
+    },
+    {
+      "start": 277.412,
+      "end": 278.394,
+      "duration": 0.981708
+    },
+    {
+      "start": 293.125,
+      "end": 293.707,
+      "duration": 0.582146
+    },
+    {
+      "start": 297.919,
+      "end": 298.657,
+      "duration": 0.738021
+    },
+    {
+      "start": 303.374,
+      "end": 304.007,
+      "duration": 0.632937
+    },
+    {
+      "start": 312.666,
+      "end": 313.538,
+      "duration": 0.872833
+    },
+    {
+      "start": 321.902,
+      "end": 322.434,
+      "duration": 0.532625
+    },
+    {
+      "start": 324.229,
+      "end": 327.123,
+      "duration": 2.89381
+    },
+    {
+      "start": 329.365,
+      "end": 331.915,
+      "duration": 2.54981
+    },
+    {
+      "start": 608.728,
+      "end": 610.997,
+      "duration": 2.26883
+    },
+    {
+      "start": 617.016,
+      "end": 617.578,
+      "duration": 0.562021
+    },
+    {
+      "start": 618.692,
+      "end": 622.357,
+      "duration": 3.66479
+    },
+    {
+      "start": 632.086,
+      "end": 633.981,
+      "duration": 1.89498
+    },
+    {
+      "start": 641.182,
+      "end": 643.755,
+      "duration": 2.57292
+    },
+    {
+      "start": 644.72,
+      "end": 645.407,
+      "duration": 0.686646
+    },
+    {
+      "start": 653.387,
+      "end": 655.358,
+      "duration": 1.97079
+    },
+    {
+      "start": 658.214,
+      "end": 658.81,
+      "duration": 0.596687
+    },
+    {
+      "start": 661.408,
+      "end": 662.096,
+      "duration": 0.687917
+    },
+    {
+      "start": 668.554,
+      "end": 669.278,
+      "duration": 0.724125
+    },
+    {
+      "start": 672.021,
+      "end": 672.767,
+      "duration": 0.745937
+    },
+    {
+      "start": 672.826,
+      "end": 676.367,
+      "duration": 3.54085
+    },
+    {
+      "start": 684.541,
+      "end": 688.277,
+      "duration": 3.73562
+    },
+    {
+      "start": 692.376,
+      "end": 693.007,
+      "duration": 0.631437
+    },
+    {
+      "start": 742.124,
+      "end": 742.931,
+      "duration": 0.806542
+    },
+    {
+      "start": 749.495,
+      "end": 750.288,
+      "duration": 0.793104
+    },
+    {
+      "start": 751.884,
+      "end": 752.878,
+      "duration": 0.993417
+    },
+    {
+      "start": 755.178,
+      "end": 755.745,
+      "duration": 0.566625
+    },
+    {
+      "start": 758.245,
+      "end": 759.078,
+      "duration": 0.833021
+    },
+    {
+      "start": 761.15,
+      "end": 762.024,
+      "duration": 0.874437
+    },
+    {
+      "start": 762.381,
+      "end": 763.556,
+      "duration": 1.1754
+    },
+    {
+      "start": 765.681,
+      "end": 766.486,
+      "duration": 0.805396
+    },
+    {
+      "start": 768.404,
+      "end": 769.172,
+      "duration": 0.768333
+    },
+    {
+      "start": 769.957,
+      "end": 770.613,
+      "duration": 0.655937
+    },
+    {
+      "start": 773.805,
+      "end": 774.731,
+      "duration": 0.925875
+    },
+    {
+      "start": 777.286,
+      "end": 778.167,
+      "duration": 0.880937
+    },
+    {
+      "start": 779.121,
+      "end": 779.64,
+      "duration": 0.519458
+    },
+    {
+      "start": 780.885,
+      "end": 781.758,
+      "duration": 0.872708
+    },
+    {
+      "start": 782.232,
+      "end": 782.8,
+      "duration": 0.567562
+    },
+    {
+      "start": 783.308,
+      "end": 785.891,
+      "duration": 2.58331
+    },
+    {
+      "start": 1114.54,
+      "end": 1117.25,
+      "duration": 2.71577
+    }
+  ],
+  "confidence": {
+    "scores": [
+      18,
+      53,
+      3
+    ],
+    "avg": 24.7,
+    "min": 3
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/tCrLnfwX088.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

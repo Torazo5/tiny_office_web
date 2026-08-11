@@ -1,0 +1,271 @@
+{
+  "video_id": "rMWjbb2l5BE",
+  "title": "Daniel Caesar: Tiny Desk Concert",
+  "duration": 1192,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/rMWjbb2l5BE.mp3",
+  "description_songs": [
+    "Rain Down",
+    "Emily's Song",
+    "Moon",
+    "Who Knows",
+    "Sins of the Father"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 3100 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 4,
+    "accepted": 3,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 1155.84,
+      "end": 1180.8,
+      "duration": 24.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 12,
+      "song": "Rain Down",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 12,
+      "clip_end": 165,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 59
+    },
+    {
+      "seconds": 165,
+      "song": "Emily's Song",
+      "corroboration": 2,
+      "silence_match": 166.767,
+      "clip_start": 165,
+      "clip_end": 299,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 74
+    },
+    {
+      "seconds": 299,
+      "song": "Moon",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 299,
+      "clip_end": 548,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 52
+    },
+    {
+      "seconds": 548,
+      "song": "Who Knows",
+      "corroboration": 1,
+      "silence_match": 544.096,
+      "clip_start": 548,
+      "clip_end": 764,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 67
+    },
+    {
+      "seconds": 764,
+      "song": "Sins of the Father",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 764,
+      "clip_end": 1154.84,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 67,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 45.2877,
+      "end": 46.3431,
+      "duration": 1.05537
+    },
+    {
+      "start": 152.159,
+      "end": 153.071,
+      "duration": 0.911771
+    },
+    {
+      "start": 156.086,
+      "end": 156.788,
+      "duration": 0.702417
+    },
+    {
+      "start": 159.615,
+      "end": 160.361,
+      "duration": 0.746
+    },
+    {
+      "start": 163.216,
+      "end": 163.91,
+      "duration": 0.693792
+    },
+    {
+      "start": 166.767,
+      "end": 167.533,
+      "duration": 0.766375
+    },
+    {
+      "start": 177.884,
+      "end": 178.576,
+      "duration": 0.692604
+    },
+    {
+      "start": 181.465,
+      "end": 182.208,
+      "duration": 0.743125
+    },
+    {
+      "start": 196.043,
+      "end": 196.755,
+      "duration": 0.712187
+    },
+    {
+      "start": 285.07,
+      "end": 285.685,
+      "duration": 0.614812
+    },
+    {
+      "start": 544.096,
+      "end": 544.708,
+      "duration": 0.612958
+    },
+    {
+      "start": 722.766,
+      "end": 723.687,
+      "duration": 0.9215
+    },
+    {
+      "start": 726.449,
+      "end": 728.011,
+      "duration": 1.56231
+    },
+    {
+      "start": 734.293,
+      "end": 735.919,
+      "duration": 1.62625
+    },
+    {
+      "start": 742.969,
+      "end": 743.952,
+      "duration": 0.982167
+    },
+    {
+      "start": 985.088,
+      "end": 989.532,
+      "duration": 4.44352
+    },
+    {
+      "start": 989.532,
+      "end": 996.173,
+      "duration": 6.64106
+    },
+    {
+      "start": 996.18,
+      "end": 997.268,
+      "duration": 1.08804
+    },
+    {
+      "start": 997.532,
+      "end": 998.109,
+      "duration": 0.577292
+    },
+    {
+      "start": 998.937,
+      "end": 1000.24,
+      "duration": 1.2995
+    },
+    {
+      "start": 1000.35,
+      "end": 1002.77,
+      "duration": 2.42148
+    },
+    {
+      "start": 1005.87,
+      "end": 1006.44,
+      "duration": 0.566021
+    },
+    {
+      "start": 1016.4,
+      "end": 1017.61,
+      "duration": 1.20419
+    },
+    {
+      "start": 1031.11,
+      "end": 1032.4,
+      "duration": 1.29608
+    },
+    {
+      "start": 1046.42,
+      "end": 1047.01,
+      "duration": 0.586417
+    },
+    {
+      "start": 1090.49,
+      "end": 1091.01,
+      "duration": 0.522146
+    },
+    {
+      "start": 1118.83,
+      "end": 1119.97,
+      "duration": 1.13435
+    },
+    {
+      "start": 1150.67,
+      "end": 1154.89,
+      "duration": 4.22833
+    },
+    {
+      "start": 1155.1,
+      "end": 1156.27,
+      "duration": 1.16979
+    },
+    {
+      "start": 1181.52,
+      "end": 1191.94,
+      "duration": 10.4162
+    }
+  ],
+  "confidence": {
+    "scores": [
+      59,
+      74,
+      52,
+      67,
+      67
+    ],
+    "avg": 63.8,
+    "min": 52
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/rMWjbb2l5BE.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

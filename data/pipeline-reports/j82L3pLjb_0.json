@@ -2,7 +2,7 @@
   "video_id": "j82L3pLjb_0",
   "title": "Coldplay: NPR Music Tiny Desk Concert",
   "duration": 1093,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/j82L3pLjb_0.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/j82L3pLjb_0.mp3",
   "description_songs": [
     "Cry Cry Cry",
     "Viva La Vida",
@@ -114,12 +114,13 @@
       "corroboration": 2,
       "silence_match": null,
       "clip_start": 174,
-      "clip_end": 383.52,
+      "clip_end": 382.52,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 67
+      "confidence": 67,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 487,
@@ -140,12 +141,13 @@
       "corroboration": 2,
       "silence_match": null,
       "clip_start": 628,
-      "clip_end": 812.64,
+      "clip_end": 811.64,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 67
+      "confidence": 67,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 877,
@@ -153,12 +155,13 @@
       "corroboration": 2,
       "silence_match": 874.714,
       "clip_start": 875.04,
-      "clip_end": 1072.32,
+      "clip_end": 1071.32,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -214,7 +217,10 @@
     "avg": 73.0,
     "min": 67
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/j82L3pLjb_0.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

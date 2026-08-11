@@ -1,0 +1,175 @@
+{
+  "video_id": "hxxcEzM8r-4",
+  "title": "H.E.R.: NPR Music Tiny Desk Concert",
+  "duration": 1132,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/hxxcEzM8r-4.mp3",
+  "description_songs": [
+    "Going\" (Interlude)",
+    "Feel A Way",
+    "Hard Place",
+    "Focus"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1100 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 144.0,
+      "end": 145.44,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 152.16,
+      "end": 154.55999999999997,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 384.47999999999996,
+      "end": 407.52,
+      "duration": 23.04000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 690.24,
+      "end": 739.68,
+      "duration": 49.43999999999994,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1110.24,
+      "end": 1125.12,
+      "duration": 14.879999999999882,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 10,
+      "song": "Going\" (Interlude)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 10,
+      "clip_end": 163,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 163,
+      "song": "Feel A Way",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 154.55999999999997,
+      "clip_end": 384.47999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 407,
+      "song": "Hard Place",
+      "corroboration": 1,
+      "silence_match": 403.637,
+      "clip_start": 407.52,
+      "clip_end": 690.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 743,
+      "song": "Focus",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 739.68,
+      "clip_end": 1110.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.10067,
+      "duration": 5.10067
+    },
+    {
+      "start": 395.182,
+      "end": 396.186,
+      "duration": 1.0041
+    },
+    {
+      "start": 396.795,
+      "end": 398.12,
+      "duration": 1.32431
+    },
+    {
+      "start": 399.451,
+      "end": 399.976,
+      "duration": 0.525687
+    },
+    {
+      "start": 403.637,
+      "end": 406.073,
+      "duration": 2.43548
+    },
+    {
+      "start": 707.739,
+      "end": 708.469,
+      "duration": 0.729708
+    },
+    {
+      "start": 719.533,
+      "end": 720.087,
+      "duration": 0.554167
+    },
+    {
+      "start": 861.839,
+      "end": 862.654,
+      "duration": 0.814937
+    },
+    {
+      "start": 1125.08,
+      "end": 1131.55,
+      "duration": 6.47425
+    }
+  ],
+  "confidence": {
+    "scores": [
+      45,
+      68,
+      83,
+      61
+    ],
+    "avg": 64.2,
+    "min": 45
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

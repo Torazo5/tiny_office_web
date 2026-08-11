@@ -1,0 +1,243 @@
+{
+  "video_id": "Z0UISCEe52Y",
+  "title": "Beirut: NPR Music Tiny Desk Concert",
+  "duration": 707,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/Z0UISCEe52Y.mp3",
+  "description_songs": [
+    "East Harlem",
+    "Sante Fe",
+    "Serbian Cocek"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (2 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 3 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 2,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 189.6,
+      "end": 201.11999999999998,
+      "duration": 11.519999999999982,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 208.32,
+      "end": 209.76,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 213.6,
+      "end": 219.83999999999997,
+      "duration": 6.239999999999981,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 472.79999999999995,
+      "end": 479.52,
+      "duration": 6.720000000000027,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 482.88,
+      "end": 486.24,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 684.9599999999999,
+      "end": 706.56,
+      "duration": 21.600000000000023,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "East Harlem",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 189.6,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 189.6,
+      "song": "Sante Fe",
+      "corroboration": 0,
+      "silence_match": 188.544,
+      "clip_start": 201.11999999999998,
+      "clip_end": 213.6,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 16
+    },
+    {
+      "seconds": 472.79999999999995,
+      "song": "Serbian Cocek",
+      "corroboration": 0,
+      "silence_match": 471.391,
+      "clip_start": 486.24,
+      "clip_end": 684.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 188.544,
+      "end": 189.294,
+      "duration": 0.750312
+    },
+    {
+      "start": 199.45,
+      "end": 201.122,
+      "duration": 1.67215
+    },
+    {
+      "start": 208.529,
+      "end": 209.674,
+      "duration": 1.1455
+    },
+    {
+      "start": 212.345,
+      "end": 213.308,
+      "duration": 0.96325
+    },
+    {
+      "start": 219.774,
+      "end": 222.866,
+      "duration": 3.09196
+    },
+    {
+      "start": 471.391,
+      "end": 472.905,
+      "duration": 1.51369
+    },
+    {
+      "start": 481.764,
+      "end": 483.78,
+      "duration": 2.01623
+    },
+    {
+      "start": 484.499,
+      "end": 485.037,
+      "duration": 0.538146
+    },
+    {
+      "start": 485.451,
+      "end": 488.331,
+      "duration": 2.88025
+    },
+    {
+      "start": 488.354,
+      "end": 489.252,
+      "duration": 0.898521
+    },
+    {
+      "start": 489.557,
+      "end": 490.261,
+      "duration": 0.703917
+    },
+    {
+      "start": 491.786,
+      "end": 492.862,
+      "duration": 1.07585
+    },
+    {
+      "start": 500.381,
+      "end": 501.329,
+      "duration": 0.948229
+    },
+    {
+      "start": 506.985,
+      "end": 507.487,
+      "duration": 0.502229
+    },
+    {
+      "start": 512.112,
+      "end": 512.695,
+      "duration": 0.583104
+    },
+    {
+      "start": 512.798,
+      "end": 513.687,
+      "duration": 0.888917
+    },
+    {
+      "start": 514.1,
+      "end": 514.735,
+      "duration": 0.635875
+    },
+    {
+      "start": 558.689,
+      "end": 559.5,
+      "duration": 0.810875
+    },
+    {
+      "start": 662.989,
+      "end": 663.586,
+      "duration": 0.597958
+    },
+    {
+      "start": 700.792,
+      "end": 701.451,
+      "duration": 0.659542
+    },
+    {
+      "start": 701.85,
+      "end": 702.458,
+      "duration": 0.608354
+    },
+    {
+      "start": 703.83,
+      "end": 704.381,
+      "duration": 0.551187
+    },
+    {
+      "start": 704.574,
+      "end": 705.702,
+      "duration": 1.12767
+    },
+    {
+      "start": 706.375,
+      "end": 707.408,
+      "duration": 1.03304
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      16,
+      66
+    ],
+    "avg": 41.7,
+    "min": 16
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

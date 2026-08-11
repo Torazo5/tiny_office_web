@@ -1,0 +1,288 @@
+{
+  "video_id": "kMnDHUKGMWs",
+  "title": "Foster The People: NPR Music Tiny Desk Concert",
+  "duration": 637,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/kMnDHUKGMWs.mp3",
+  "description_songs": [
+    "Houdini",
+    "Helena Beat",
+    "Pumped Up Kicks"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 814 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 181.44,
+      "end": 192.48,
+      "duration": 11.039999999999992,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 201.6,
+      "end": 203.99999999999997,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 206.4,
+      "end": 208.79999999999998,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 396.0,
+      "end": 399.36,
+      "duration": 3.3600000000000136,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 407.03999999999996,
+      "end": 417.12,
+      "duration": 10.080000000000041,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 419.03999999999996,
+      "end": 420.48,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 425.76,
+      "end": 427.2,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 432.0,
+      "end": 434.88,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 435.84,
+      "end": 438.72,
+      "duration": 2.8800000000000523,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 615.36,
+      "end": 616.8,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 618.72,
+      "end": 635.04,
+      "duration": 16.319999999999936,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Houdini",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 180.44,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 210,
+      "song": "Helena Beat",
+      "corroboration": 0,
+      "silence_match": 208.252,
+      "clip_start": 208.79999999999998,
+      "clip_end": 395.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 440,
+      "song": "Pumped Up Kicks",
+      "corroboration": 1,
+      "silence_match": 438.43,
+      "clip_start": 438.72,
+      "clip_end": 617.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 180.577,
+      "end": 181.28,
+      "duration": 0.702333
+    },
+    {
+      "start": 196.006,
+      "end": 196.636,
+      "duration": 0.630229
+    },
+    {
+      "start": 200.853,
+      "end": 202.269,
+      "duration": 1.41567
+    },
+    {
+      "start": 203.576,
+      "end": 204.398,
+      "duration": 0.822229
+    },
+    {
+      "start": 204.406,
+      "end": 207.126,
+      "duration": 2.72017
+    },
+    {
+      "start": 208.252,
+      "end": 210.216,
+      "duration": 1.96352
+    },
+    {
+      "start": 393.549,
+      "end": 394.969,
+      "duration": 1.41927
+    },
+    {
+      "start": 405.542,
+      "end": 406.285,
+      "duration": 0.743563
+    },
+    {
+      "start": 410.548,
+      "end": 411.208,
+      "duration": 0.660042
+    },
+    {
+      "start": 411.32,
+      "end": 412.309,
+      "duration": 0.988708
+    },
+    {
+      "start": 413.089,
+      "end": 414.526,
+      "duration": 1.43754
+    },
+    {
+      "start": 415.136,
+      "end": 416.23,
+      "duration": 1.0939
+    },
+    {
+      "start": 416.606,
+      "end": 418.068,
+      "duration": 1.46179
+    },
+    {
+      "start": 419.243,
+      "end": 419.991,
+      "duration": 0.747771
+    },
+    {
+      "start": 422.056,
+      "end": 422.588,
+      "duration": 0.532125
+    },
+    {
+      "start": 427.815,
+      "end": 429.168,
+      "duration": 1.35325
+    },
+    {
+      "start": 431.517,
+      "end": 432.413,
+      "duration": 0.895646
+    },
+    {
+      "start": 434.955,
+      "end": 435.581,
+      "duration": 0.625604
+    },
+    {
+      "start": 438.43,
+      "end": 440.519,
+      "duration": 2.08933
+    },
+    {
+      "start": 616.649,
+      "end": 618.129,
+      "duration": 1.47933
+    },
+    {
+      "start": 627.436,
+      "end": 628.573,
+      "duration": 1.13671
+    },
+    {
+      "start": 628.957,
+      "end": 630.003,
+      "duration": 1.04667
+    },
+    {
+      "start": 631.67,
+      "end": 632.584,
+      "duration": 0.914083
+    },
+    {
+      "start": 633.315,
+      "end": 633.915,
+      "duration": 0.599896
+    },
+    {
+      "start": 635.267,
+      "end": 637.144,
+      "duration": 1.87665
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      76,
+      83
+    ],
+    "avg": 73.0,
+    "min": 60
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/kMnDHUKGMWs.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

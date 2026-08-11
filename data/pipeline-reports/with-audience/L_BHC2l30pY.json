@@ -1,0 +1,462 @@
+{
+  "video_id": "L_BHC2l30pY",
+  "title": "Sam Smith: Tiny Desk Concert",
+  "duration": 1247,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/L_BHC2l30pY.mp3",
+  "description_songs": [
+    "Stay With Me",
+    "How Do You Sleep",
+    "Lay Me Down (feat. LaDonna Harley-Peters)",
+    "Unholy"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 5900 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 5,
+    "accepted": 3,
+    "rejected": 2,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 228.48,
+      "end": 277.44,
+      "duration": 48.96000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 468.0,
+      "end": 471.36,
+      "duration": 3.3600000000000136,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 511.2,
+      "end": 607.2,
+      "duration": 96.00000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 618.72,
+      "end": 622.56,
+      "duration": 3.839999999999918,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 653.28,
+      "end": 656.16,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 918.7199999999999,
+      "end": 1016.16,
+      "duration": 97.44000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1020.0,
+      "end": 1020.48,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1022.88,
+      "end": 1023.36,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1200.0,
+      "end": 1234.08,
+      "duration": 34.07999999999993,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 1,
+      "song": "Stay With Me",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 1,
+      "clip_end": 228.48,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 67
+    },
+    {
+      "seconds": 277,
+      "song": "How Do You Sleep",
+      "corroboration": 2,
+      "silence_match": 276.992,
+      "clip_start": 277.44,
+      "clip_end": 468.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 626,
+      "song": "Lay Me Down (feat. LaDonna Harley-Peters)",
+      "corroboration": 2,
+      "silence_match": 627.053,
+      "clip_start": 622.56,
+      "clip_end": 918.7199999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 992,
+      "song": "Unholy",
+      "corroboration": 2,
+      "silence_match": 992.283,
+      "clip_start": 992,
+      "clip_end": 1200.0,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [
+        {
+          "start": 1020.0,
+          "end": 1020.48,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.938,
+          "music_run_sec": 25.0,
+          "anchor_start": 1200.0
+        },
+        {
+          "start": 1022.88,
+          "end": 1023.36,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.94,
+          "music_run_sec": 25.0,
+          "anchor_start": 1200.0
+        }
+      ],
+      "suspect": false,
+      "confidence": 82
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 246.648,
+      "end": 247.706,
+      "duration": 1.05783
+    },
+    {
+      "start": 256.235,
+      "end": 258.449,
+      "duration": 2.21365
+    },
+    {
+      "start": 262.633,
+      "end": 263.387,
+      "duration": 0.754042
+    },
+    {
+      "start": 266.286,
+      "end": 267.064,
+      "duration": 0.778271
+    },
+    {
+      "start": 269.646,
+      "end": 270.333,
+      "duration": 0.686833
+    },
+    {
+      "start": 272.621,
+      "end": 273.41,
+      "duration": 0.789813
+    },
+    {
+      "start": 276.992,
+      "end": 278.153,
+      "duration": 1.16035
+    },
+    {
+      "start": 286.41,
+      "end": 287.09,
+      "duration": 0.680312
+    },
+    {
+      "start": 292.104,
+      "end": 292.912,
+      "duration": 0.807104
+    },
+    {
+      "start": 533.358,
+      "end": 534.981,
+      "duration": 1.62346
+    },
+    {
+      "start": 536.473,
+      "end": 537.149,
+      "duration": 0.675958
+    },
+    {
+      "start": 540.292,
+      "end": 541.625,
+      "duration": 1.33275
+    },
+    {
+      "start": 546.463,
+      "end": 547.035,
+      "duration": 0.572792
+    },
+    {
+      "start": 552.561,
+      "end": 555.691,
+      "duration": 3.12954
+    },
+    {
+      "start": 557.226,
+      "end": 558.23,
+      "duration": 1.00392
+    },
+    {
+      "start": 559.242,
+      "end": 559.827,
+      "duration": 0.584354
+    },
+    {
+      "start": 560.531,
+      "end": 561.095,
+      "duration": 0.563646
+    },
+    {
+      "start": 563.048,
+      "end": 563.867,
+      "duration": 0.819
+    },
+    {
+      "start": 564.292,
+      "end": 564.842,
+      "duration": 0.550104
+    },
+    {
+      "start": 565.63,
+      "end": 566.388,
+      "duration": 0.758521
+    },
+    {
+      "start": 570.716,
+      "end": 571.325,
+      "duration": 0.608292
+    },
+    {
+      "start": 576.13,
+      "end": 576.733,
+      "duration": 0.603187
+    },
+    {
+      "start": 581.712,
+      "end": 582.302,
+      "duration": 0.589729
+    },
+    {
+      "start": 587.521,
+      "end": 588.223,
+      "duration": 0.701396
+    },
+    {
+      "start": 595.469,
+      "end": 595.985,
+      "duration": 0.515583
+    },
+    {
+      "start": 606.975,
+      "end": 608.246,
+      "duration": 1.27058
+    },
+    {
+      "start": 608.318,
+      "end": 609.504,
+      "duration": 1.18554
+    },
+    {
+      "start": 613.292,
+      "end": 614.56,
+      "duration": 1.26856
+    },
+    {
+      "start": 615.605,
+      "end": 616.231,
+      "duration": 0.625312
+    },
+    {
+      "start": 616.331,
+      "end": 617.244,
+      "duration": 0.912292
+    },
+    {
+      "start": 623.087,
+      "end": 624.109,
+      "duration": 1.022
+    },
+    {
+      "start": 624.38,
+      "end": 625.033,
+      "duration": 0.652979
+    },
+    {
+      "start": 627.053,
+      "end": 627.604,
+      "duration": 0.550271
+    },
+    {
+      "start": 628.085,
+      "end": 629.944,
+      "duration": 1.85877
+    },
+    {
+      "start": 637.331,
+      "end": 638.105,
+      "duration": 0.774104
+    },
+    {
+      "start": 639.396,
+      "end": 640.02,
+      "duration": 0.624354
+    },
+    {
+      "start": 641.06,
+      "end": 641.885,
+      "duration": 0.825167
+    },
+    {
+      "start": 650.091,
+      "end": 651.216,
+      "duration": 1.12456
+    },
+    {
+      "start": 651.804,
+      "end": 652.57,
+      "duration": 0.766
+    },
+    {
+      "start": 669.724,
+      "end": 670.333,
+      "duration": 0.608729
+    },
+    {
+      "start": 681.036,
+      "end": 682.03,
+      "duration": 0.993667
+    },
+    {
+      "start": 685.236,
+      "end": 685.976,
+      "duration": 0.740229
+    },
+    {
+      "start": 960.087,
+      "end": 960.65,
+      "duration": 0.562917
+    },
+    {
+      "start": 965.284,
+      "end": 965.786,
+      "duration": 0.501917
+    },
+    {
+      "start": 969.039,
+      "end": 969.653,
+      "duration": 0.614646
+    },
+    {
+      "start": 972.013,
+      "end": 973.091,
+      "duration": 1.07763
+    },
+    {
+      "start": 977.663,
+      "end": 978.326,
+      "duration": 0.662667
+    },
+    {
+      "start": 985.809,
+      "end": 986.36,
+      "duration": 0.551479
+    },
+    {
+      "start": 988.166,
+      "end": 988.732,
+      "duration": 0.566583
+    },
+    {
+      "start": 992.283,
+      "end": 993.455,
+      "duration": 1.17204
+    },
+    {
+      "start": 994.049,
+      "end": 996.936,
+      "duration": 2.88704
+    },
+    {
+      "start": 997.018,
+      "end": 997.844,
+      "duration": 0.825396
+    },
+    {
+      "start": 997.96,
+      "end": 998.482,
+      "duration": 0.521854
+    },
+    {
+      "start": 999.08,
+      "end": 999.592,
+      "duration": 0.511958
+    },
+    {
+      "start": 999.761,
+      "end": 1000.51,
+      "duration": 0.748625
+    },
+    {
+      "start": 1007.65,
+      "end": 1008.19,
+      "duration": 0.545104
+    },
+    {
+      "start": 1233.45,
+      "end": 1247.33,
+      "duration": 13.8842
+    }
+  ],
+  "confidence": {
+    "scores": [
+      67,
+      90,
+      90,
+      82
+    ],
+    "avg": 82.2,
+    "min": 67
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

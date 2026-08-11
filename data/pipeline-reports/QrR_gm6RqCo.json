@@ -2,7 +2,7 @@
   "video_id": "QrR_gm6RqCo",
   "title": "Mac Miller: NPR Music Tiny Desk Concert",
   "duration": 1029,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/QrR_gm6RqCo.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/QrR_gm6RqCo.mp3",
   "description_songs": [
     "Small Worlds",
     "What's the Use? (Feat. Thundercat)",
@@ -100,12 +100,13 @@
       "corroboration": 0,
       "silence_match": 0.0,
       "clip_start": 0.0,
-      "clip_end": 279.36,
+      "clip_end": 278.36,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 58
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 279.36,
@@ -113,12 +114,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 311.04,
-      "clip_end": 334.56,
+      "clip_end": 333.56,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 51
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 671.04,
@@ -126,12 +128,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 697.4399999999999,
-      "clip_end": 995.52,
+      "clip_end": 994.52,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 51
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -390,7 +393,10 @@
     "avg": 53.3,
     "min": 51
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/QrR_gm6RqCo.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

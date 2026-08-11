@@ -2,7 +2,7 @@
   "video_id": "9HUV5a7MgS4",
   "title": "Lianne La Havas: NPR Music Tiny Desk Concert",
   "duration": 860,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/9HUV5a7MgS4.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/9HUV5a7MgS4.mp3",
   "description_songs": [
     "What You Don't Do",
     "Unstoppable",
@@ -114,12 +114,13 @@
       "corroboration": 0,
       "silence_match": 0.252125,
       "clip_start": 15.84,
-      "clip_end": 210.23999999999998,
+      "clip_end": 209.23999999999998,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 66
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 210.23999999999998,
@@ -127,12 +128,13 @@
       "corroboration": 0,
       "silence_match": 208.11,
       "clip_start": 233.27999999999997,
-      "clip_end": 509.76,
+      "clip_end": 508.76,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 66
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 776.64,
@@ -384,7 +386,10 @@
     "avg": 63.3,
     "min": 58
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/9HUV5a7MgS4.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

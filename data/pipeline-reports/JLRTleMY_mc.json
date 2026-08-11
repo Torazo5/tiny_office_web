@@ -1,0 +1,353 @@
+{
+  "video_id": "JLRTleMY_mc",
+  "title": "Tallest Man on Earth: NPR Music Tiny Desk Concert",
+  "duration": 718,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/JLRTleMY_mc.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 172.79999999999998,
+      "end": 181.43999999999997,
+      "duration": 8.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 393.12,
+      "end": 398.4,
+      "duration": 5.279999999999973,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 404.15999999999997,
+      "end": 413.76,
+      "duration": 9.600000000000023,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 414.71999999999997,
+      "end": 423.84,
+      "duration": 9.120000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 425.28,
+      "end": 428.64,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 429.12,
+      "end": 433.44,
+      "duration": 4.319999999999993,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 434.88,
+      "end": 438.24,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 441.59999999999997,
+      "end": 443.04,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 443.52,
+      "end": 444.96,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 698.4,
+      "end": 716.64,
+      "duration": 18.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.19346,
+      "duration": 5.19346
+    },
+    {
+      "start": 5.72598,
+      "end": 6.2646,
+      "duration": 0.538625
+    },
+    {
+      "start": 20.8245,
+      "end": 21.5,
+      "duration": 0.6755
+    },
+    {
+      "start": 169.256,
+      "end": 170.346,
+      "duration": 1.0894
+    },
+    {
+      "start": 171.45,
+      "end": 172.555,
+      "duration": 1.10423
+    },
+    {
+      "start": 378.876,
+      "end": 379.409,
+      "duration": 0.532312
+    },
+    {
+      "start": 387.143,
+      "end": 387.89,
+      "duration": 0.747104
+    },
+    {
+      "start": 388.122,
+      "end": 388.857,
+      "duration": 0.735375
+    },
+    {
+      "start": 389.609,
+      "end": 391.897,
+      "duration": 2.28825
+    },
+    {
+      "start": 391.984,
+      "end": 392.918,
+      "duration": 0.933937
+    },
+    {
+      "start": 411.134,
+      "end": 411.748,
+      "duration": 0.614187
+    },
+    {
+      "start": 413.339,
+      "end": 413.985,
+      "duration": 0.646208
+    },
+    {
+      "start": 417.371,
+      "end": 417.888,
+      "duration": 0.517104
+    },
+    {
+      "start": 419.505,
+      "end": 420.636,
+      "duration": 1.1311
+    },
+    {
+      "start": 420.69,
+      "end": 421.529,
+      "duration": 0.838417
+    },
+    {
+      "start": 423.05,
+      "end": 426.186,
+      "duration": 3.13592
+    },
+    {
+      "start": 426.606,
+      "end": 427.401,
+      "duration": 0.794729
+    },
+    {
+      "start": 428.558,
+      "end": 429.678,
+      "duration": 1.12023
+    },
+    {
+      "start": 430.312,
+      "end": 432.108,
+      "duration": 1.7965
+    },
+    {
+      "start": 432.167,
+      "end": 435.523,
+      "duration": 3.3561
+    },
+    {
+      "start": 435.549,
+      "end": 436.058,
+      "duration": 0.508396
+    },
+    {
+      "start": 436.328,
+      "end": 436.862,
+      "duration": 0.533375
+    },
+    {
+      "start": 439.72,
+      "end": 440.334,
+      "duration": 0.614292
+    },
+    {
+      "start": 440.376,
+      "end": 442.348,
+      "duration": 1.9716
+    },
+    {
+      "start": 442.949,
+      "end": 444.339,
+      "duration": 1.38983
+    },
+    {
+      "start": 444.391,
+      "end": 444.9,
+      "duration": 0.508563
+    },
+    {
+      "start": 445.735,
+      "end": 446.867,
+      "duration": 1.13198
+    },
+    {
+      "start": 450.175,
+      "end": 451.523,
+      "duration": 1.34813
+    },
+    {
+      "start": 451.737,
+      "end": 454.195,
+      "duration": 2.45804
+    },
+    {
+      "start": 454.464,
+      "end": 455.329,
+      "duration": 0.864833
+    },
+    {
+      "start": 455.33,
+      "end": 456.409,
+      "duration": 1.07963
+    },
+    {
+      "start": 456.819,
+      "end": 457.542,
+      "duration": 0.723333
+    },
+    {
+      "start": 457.566,
+      "end": 458.718,
+      "duration": 1.15267
+    },
+    {
+      "start": 463.637,
+      "end": 464.213,
+      "duration": 0.576625
+    },
+    {
+      "start": 464.617,
+      "end": 465.437,
+      "duration": 0.819396
+    },
+    {
+      "start": 465.464,
+      "end": 468.207,
+      "duration": 2.74233
+    },
+    {
+      "start": 468.736,
+      "end": 469.468,
+      "duration": 0.732
+    },
+    {
+      "start": 469.514,
+      "end": 470.11,
+      "duration": 0.596062
+    },
+    {
+      "start": 478.355,
+      "end": 479.082,
+      "duration": 0.726917
+    },
+    {
+      "start": 663.628,
+      "end": 664.202,
+      "duration": 0.573688
+    },
+    {
+      "start": 671.032,
+      "end": 672.4,
+      "duration": 1.36785
+    },
+    {
+      "start": 672.807,
+      "end": 673.457,
+      "duration": 0.650125
+    },
+    {
+      "start": 674.528,
+      "end": 675.167,
+      "duration": 0.639479
+    },
+    {
+      "start": 675.258,
+      "end": 675.935,
+      "duration": 0.676812
+    },
+    {
+      "start": 687.456,
+      "end": 688.404,
+      "duration": 0.947146
+    },
+    {
+      "start": 688.682,
+      "end": 690.482,
+      "duration": 1.7999
+    },
+    {
+      "start": 697.247,
+      "end": 697.877,
+      "duration": 0.629396
+    },
+    {
+      "start": 697.877,
+      "end": 698.432,
+      "duration": 0.554917
+    },
+    {
+      "start": 716.835,
+      "end": 717.949,
+      "duration": 1.1141
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

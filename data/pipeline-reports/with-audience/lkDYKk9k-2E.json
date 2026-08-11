@@ -1,0 +1,211 @@
+{
+  "video_id": "lkDYKk9k-2E",
+  "title": "Tyler Childers: NPR Music Tiny Desk Concert",
+  "duration": 580,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/lkDYKk9k-2E.mp3",
+  "description_songs": [
+    "Nose on the Grindstone",
+    "22nd Winter",
+    "Lady May"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 149 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 166.07999999999998,
+      "end": 172.32,
+      "duration": 6.240000000000009,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 187.2,
+      "end": 192.95999999999998,
+      "duration": 5.759999999999991,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 195.84,
+      "end": 202.07999999999998,
+      "duration": 6.239999999999981,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 204.48,
+      "end": 205.92,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 365.76,
+      "end": 370.56,
+      "duration": 4.800000000000011,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 372.47999999999996,
+      "end": 373.44,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 383.52,
+      "end": 385.44,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 562.0799999999999,
+      "end": 574.56,
+      "duration": 12.480000000000018,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 11,
+      "song": "Nose on the Grindstone",
+      "corroboration": 0,
+      "silence_match": 6.1749,
+      "clip_start": 11,
+      "clip_end": 166.07999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 206,
+      "song": "22nd Winter",
+      "corroboration": 0,
+      "silence_match": 205.651,
+      "clip_start": 205.92,
+      "clip_end": 365.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 387,
+      "song": "Lady May",
+      "corroboration": 0,
+      "silence_match": 386.233,
+      "clip_start": 385.44,
+      "clip_end": 562.0799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 6.13606,
+      "duration": 6.13606
+    },
+    {
+      "start": 6.1749,
+      "end": 6.85033,
+      "duration": 0.675438
+    },
+    {
+      "start": 164.09,
+      "end": 164.65,
+      "duration": 0.560208
+    },
+    {
+      "start": 164.651,
+      "end": 166.272,
+      "duration": 1.62142
+    },
+    {
+      "start": 177.307,
+      "end": 178.12,
+      "duration": 0.812854
+    },
+    {
+      "start": 200.105,
+      "end": 201.065,
+      "duration": 0.959187
+    },
+    {
+      "start": 205.651,
+      "end": 206.386,
+      "duration": 0.735542
+    },
+    {
+      "start": 376.803,
+      "end": 377.353,
+      "duration": 0.550438
+    },
+    {
+      "start": 377.573,
+      "end": 378.135,
+      "duration": 0.562333
+    },
+    {
+      "start": 378.338,
+      "end": 379.959,
+      "duration": 1.62067
+    },
+    {
+      "start": 380.085,
+      "end": 380.861,
+      "duration": 0.775937
+    },
+    {
+      "start": 383.508,
+      "end": 384.054,
+      "duration": 0.545479
+    },
+    {
+      "start": 386.233,
+      "end": 387.293,
+      "duration": 1.05983
+    },
+    {
+      "start": 388.881,
+      "end": 390.069,
+      "duration": 1.1881
+    },
+    {
+      "start": 574.68,
+      "end": 580.302,
+      "duration": 5.62158
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      76
+    ],
+    "avg": 73.3,
+    "min": 68
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

@@ -1,0 +1,116 @@
+{
+  "video_id": "PBKa-AAy_vo",
+  "title": "Daniel Caesar: NPR Music Tiny Desk Concert",
+  "duration": 993,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/PBKa-AAy_vo.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 4,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 272.64,
+      "end": 277.44,
+      "duration": 4.800000000000011,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 644.16,
+      "end": 652.32,
+      "duration": 8.160000000000082,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 967.68,
+      "end": 985.4399999999999,
+      "duration": 17.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.46212,
+      "duration": 5.46212
+    },
+    {
+      "start": 263.407,
+      "end": 264.349,
+      "duration": 0.942125
+    },
+    {
+      "start": 281.929,
+      "end": 282.643,
+      "duration": 0.714
+    },
+    {
+      "start": 285.54,
+      "end": 286.052,
+      "duration": 0.511458
+    },
+    {
+      "start": 287.753,
+      "end": 288.604,
+      "duration": 0.851271
+    },
+    {
+      "start": 291.739,
+      "end": 292.278,
+      "duration": 0.539
+    },
+    {
+      "start": 294.101,
+      "end": 294.876,
+      "duration": 0.774708
+    },
+    {
+      "start": 300.252,
+      "end": 301.063,
+      "duration": 0.811708
+    },
+    {
+      "start": 619.611,
+      "end": 620.121,
+      "duration": 0.509979
+    },
+    {
+      "start": 642.394,
+      "end": 643.245,
+      "duration": 0.851625
+    },
+    {
+      "start": 984.724,
+      "end": 986.654,
+      "duration": 1.92971
+    },
+    {
+      "start": 987.018,
+      "end": 993.257,
+      "duration": 6.23873
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

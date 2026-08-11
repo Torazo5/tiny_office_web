@@ -1,0 +1,229 @@
+{
+  "video_id": "WSIb1ViLWDI",
+  "title": "SiR: NPR Music Tiny Desk Concert",
+  "duration": 930,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/WSIb1ViLWDI.mp3",
+  "description_songs": [
+    "The Recipe",
+    "New Sky",
+    "Wires In The Way",
+    "John Redcorn"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 477 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 190.56,
+      "end": 198.71999999999997,
+      "duration": 8.159999999999968,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 388.8,
+      "end": 400.32,
+      "duration": 11.519999999999982,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 406.08,
+      "end": 413.76,
+      "duration": 7.680000000000007,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 420.96,
+      "end": 424.32,
+      "duration": 3.3600000000000136,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 431.52,
+      "end": 445.44,
+      "duration": 13.920000000000016,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 452.15999999999997,
+      "end": 453.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 465.12,
+      "end": 466.56,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 473.28,
+      "end": 475.2,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 696.9599999999999,
+      "end": 713.76,
+      "duration": 16.800000000000068,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 904.3199999999999,
+      "end": 905.76,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 906.24,
+      "end": 929.28,
+      "duration": 23.039999999999964,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 6,
+      "song": "The Recipe",
+      "corroboration": 1,
+      "silence_match": 0.0,
+      "clip_start": 6,
+      "clip_end": 189.56,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 199,
+      "song": "New Sky",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 198.71999999999997,
+      "clip_end": 387.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 484,
+      "song": "Wires In The Way",
+      "corroboration": 1,
+      "silence_match": 480.021,
+      "clip_start": 475.2,
+      "clip_end": 695.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 724,
+      "song": "John Redcorn",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 713.76,
+      "clip_end": 905.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.3071,
+      "duration": 5.3071
+    },
+    {
+      "start": 189.803,
+      "end": 190.74,
+      "duration": 0.937125
+    },
+    {
+      "start": 447.329,
+      "end": 447.837,
+      "duration": 0.507333
+    },
+    {
+      "start": 457.883,
+      "end": 458.567,
+      "duration": 0.6845
+    },
+    {
+      "start": 462.876,
+      "end": 463.842,
+      "duration": 0.966
+    },
+    {
+      "start": 480.021,
+      "end": 480.905,
+      "duration": 0.883854
+    },
+    {
+      "start": 489.736,
+      "end": 490.338,
+      "duration": 0.602646
+    },
+    {
+      "start": 508.203,
+      "end": 508.911,
+      "duration": 0.707854
+    },
+    {
+      "start": 691.28,
+      "end": 696.855,
+      "duration": 5.57523
+    },
+    {
+      "start": 928.521,
+      "end": 930.112,
+      "duration": 1.5906
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      68,
+      83,
+      61
+    ],
+    "avg": 71.8,
+    "min": 61
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

@@ -1,0 +1,212 @@
+{
+  "video_id": "fnIu25lXXY8",
+  "title": "Sampha: NPR Music Tiny Desk Concert",
+  "duration": 938,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/fnIu25lXXY8.mp3",
+  "description_songs": [
+    "Plastic 100\u00b0C",
+    "(No One Knows Me) Like the Piano",
+    "Blood On Me"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 834 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 1,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 378.71999999999997,
+      "end": 408.96,
+      "duration": 30.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 624.0,
+      "end": 646.08,
+      "duration": 22.08000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 911.04,
+      "end": 932.64,
+      "duration": 21.600000000000023,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 46,
+      "song": "Plastic 100\u00b0C",
+      "corroboration": 0,
+      "silence_match": 47.7396,
+      "clip_start": 46,
+      "clip_end": 377.71999999999997,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 415,
+      "song": "(No One Knows Me) Like the Piano",
+      "corroboration": 0,
+      "silence_match": 409.671,
+      "clip_start": 408.96,
+      "clip_end": 623.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 645,
+      "song": "Blood On Me",
+      "corroboration": 0,
+      "silence_match": 645.894,
+      "clip_start": 646.08,
+      "clip_end": 910.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.751708,
+      "duration": 0.751708
+    },
+    {
+      "start": 47.7396,
+      "end": 49.3796,
+      "duration": 1.64002
+    },
+    {
+      "start": 120.834,
+      "end": 123.111,
+      "duration": 2.2779
+    },
+    {
+      "start": 266.336,
+      "end": 266.906,
+      "duration": 0.569875
+    },
+    {
+      "start": 375.556,
+      "end": 377.712,
+      "duration": 2.15631
+    },
+    {
+      "start": 393.027,
+      "end": 393.783,
+      "duration": 0.755646
+    },
+    {
+      "start": 397.384,
+      "end": 398.159,
+      "duration": 0.774875
+    },
+    {
+      "start": 401.812,
+      "end": 402.601,
+      "duration": 0.788687
+    },
+    {
+      "start": 405.957,
+      "end": 406.82,
+      "duration": 0.863125
+    },
+    {
+      "start": 409.671,
+      "end": 416.621,
+      "duration": 6.94996
+    },
+    {
+      "start": 424.037,
+      "end": 424.71,
+      "duration": 0.673583
+    },
+    {
+      "start": 424.833,
+      "end": 425.669,
+      "duration": 0.835729
+    },
+    {
+      "start": 622.575,
+      "end": 623.27,
+      "duration": 0.69475
+    },
+    {
+      "start": 623.349,
+      "end": 624.418,
+      "duration": 1.06854
+    },
+    {
+      "start": 636.274,
+      "end": 636.951,
+      "duration": 0.676354
+    },
+    {
+      "start": 638.429,
+      "end": 639.168,
+      "duration": 0.738687
+    },
+    {
+      "start": 639.541,
+      "end": 641.125,
+      "duration": 1.58485
+    },
+    {
+      "start": 645.894,
+      "end": 646.748,
+      "duration": 0.854125
+    },
+    {
+      "start": 655.708,
+      "end": 656.274,
+      "duration": 0.56625
+    },
+    {
+      "start": 910.432,
+      "end": 911.582,
+      "duration": 1.14973
+    },
+    {
+      "start": 932.199,
+      "end": 937.982,
+      "duration": 5.78262
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      76
+    ],
+    "avg": 73.3,
+    "min": 68
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/fnIu25lXXY8.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

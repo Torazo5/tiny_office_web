@@ -2,7 +2,7 @@
   "video_id": "QKzobTCIRDw",
   "title": "Tank And The Bangas: NPR Music Tiny Desk Concert",
   "duration": 1429,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/QKzobTCIRDw.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/QKzobTCIRDw.mp3",
   "description_songs": [
     "Boxes And Squares",
     "Quick",
@@ -79,12 +79,13 @@
       "corroboration": 0,
       "silence_match": 18.142,
       "clip_start": 18.72,
-      "clip_end": 755.04,
+      "clip_end": 754.04,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 66
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 764.16,
@@ -92,12 +93,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 765.12,
-      "clip_end": 827.04,
+      "clip_end": 826.04,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 51
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 1370.3999999999999,
@@ -105,12 +107,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 1374.24,
-      "clip_end": 1376.6399999999999,
+      "clip_end": 1375.6399999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": true,
-      "confidence": 1
+      "confidence": 1,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -159,7 +162,10 @@
     "avg": 39.3,
     "min": 1
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/QKzobTCIRDw.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

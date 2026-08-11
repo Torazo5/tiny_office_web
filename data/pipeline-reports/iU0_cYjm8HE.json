@@ -1,0 +1,144 @@
+{
+  "video_id": "iU0_cYjm8HE",
+  "title": "Rakim: NPR Music Tiny Desk Concert",
+  "duration": 577,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/iU0_cYjm8HE.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 156.48,
+      "end": 188.64,
+      "duration": 32.16,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 311.52,
+      "end": 347.52,
+      "duration": 36.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 552.48,
+      "end": 570.24,
+      "duration": 17.75999999999999,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 80.0795,
+      "end": 80.683,
+      "duration": 0.603417
+    },
+    {
+      "start": 154.799,
+      "end": 155.331,
+      "duration": 0.531354
+    },
+    {
+      "start": 176.993,
+      "end": 177.529,
+      "duration": 0.536167
+    },
+    {
+      "start": 178.175,
+      "end": 179.139,
+      "duration": 0.964375
+    },
+    {
+      "start": 181.065,
+      "end": 182.493,
+      "duration": 1.42798
+    },
+    {
+      "start": 183.056,
+      "end": 185.183,
+      "duration": 2.12652
+    },
+    {
+      "start": 185.186,
+      "end": 186.605,
+      "duration": 1.41873
+    },
+    {
+      "start": 186.885,
+      "end": 187.387,
+      "duration": 0.501854
+    },
+    {
+      "start": 187.479,
+      "end": 188.025,
+      "duration": 0.545292
+    },
+    {
+      "start": 188.768,
+      "end": 189.3,
+      "duration": 0.531708
+    },
+    {
+      "start": 321.48,
+      "end": 322.362,
+      "duration": 0.881875
+    },
+    {
+      "start": 322.368,
+      "end": 322.929,
+      "duration": 0.561167
+    },
+    {
+      "start": 324.086,
+      "end": 324.894,
+      "duration": 0.808187
+    },
+    {
+      "start": 326.631,
+      "end": 327.178,
+      "duration": 0.546354
+    },
+    {
+      "start": 329.567,
+      "end": 330.408,
+      "duration": 0.840938
+    },
+    {
+      "start": 344.059,
+      "end": 344.667,
+      "duration": 0.607187
+    },
+    {
+      "start": 570.575,
+      "end": 577.039,
+      "duration": 6.46406
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

@@ -1,0 +1,326 @@
+{
+  "video_id": "y-PLr-BPxKU",
+  "title": "Nelly Furtado: Tiny Desk Concert",
+  "duration": 1296,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/y-PLr-BPxKU.mp3",
+  "description_songs": [
+    "Say It Right",
+    "Explode",
+    "Powerless (Say What You Want)",
+    "Promiscuous",
+    "All Good Things (Come To An End)",
+    "I'm Like A Bird",
+    "Get Ur Freak On (Remix)",
+    "Love Bites",
+    "Eat Your Man",
+    "Give It To Me",
+    "Maneater"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 6000 likes, matched all 11 description song(s), retained 11 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 246.72,
+      "end": 280.8,
+      "duration": 34.08000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 391.68,
+      "end": 547.2,
+      "duration": 155.52000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 688.3199999999999,
+      "end": 749.28,
+      "duration": 60.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 852.48,
+      "end": 852.96,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1025.28,
+      "end": 1061.76,
+      "duration": 36.48000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1252.8,
+      "end": 1294.56,
+      "duration": 41.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Say It Right",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 83,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 52
+    },
+    {
+      "seconds": 83,
+      "song": "Explode",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 83,
+      "clip_end": 205,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 52
+    },
+    {
+      "seconds": 205,
+      "song": "Powerless (Say What You Want)",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 205,
+      "clip_end": 245.72,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 285,
+      "song": "Promiscuous",
+      "corroboration": 1,
+      "silence_match": 280.232,
+      "clip_start": 280.8,
+      "clip_end": 390.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 549,
+      "song": "All Good Things (Come To An End)",
+      "corroboration": 1,
+      "silence_match": 546.893,
+      "clip_start": 547.2,
+      "clip_end": 631,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 631,
+      "song": "I'm Like A Bird",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 631,
+      "clip_end": 687.3199999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 750,
+      "song": "Get Ur Freak On (Remix)",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 749.28,
+      "clip_end": 851.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 851,
+      "song": "Love Bites",
+      "corroboration": 1,
+      "silence_match": 849.469,
+      "clip_start": 852.96,
+      "clip_end": 932,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 932,
+      "song": "Eat Your Man",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 932,
+      "clip_end": 961,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 52
+    },
+    {
+      "seconds": 961,
+      "song": "Give It To Me",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 961,
+      "clip_end": 1024.28,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1063,
+      "song": "Maneater",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 1061.76,
+      "clip_end": 1251.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 260.588,
+      "end": 261.213,
+      "duration": 0.624583
+    },
+    {
+      "start": 280.232,
+      "end": 285.532,
+      "duration": 5.29931
+    },
+    {
+      "start": 424.97,
+      "end": 426.474,
+      "duration": 1.5035
+    },
+    {
+      "start": 431.461,
+      "end": 432.463,
+      "duration": 1.00171
+    },
+    {
+      "start": 442.044,
+      "end": 442.718,
+      "duration": 0.6735
+    },
+    {
+      "start": 498.499,
+      "end": 499.239,
+      "duration": 0.740396
+    },
+    {
+      "start": 514.017,
+      "end": 514.577,
+      "duration": 0.560708
+    },
+    {
+      "start": 544.89,
+      "end": 545.734,
+      "duration": 0.844271
+    },
+    {
+      "start": 546.893,
+      "end": 549.445,
+      "duration": 2.55233
+    },
+    {
+      "start": 721.633,
+      "end": 722.159,
+      "duration": 0.526292
+    },
+    {
+      "start": 724.358,
+      "end": 724.949,
+      "duration": 0.590562
+    },
+    {
+      "start": 735.48,
+      "end": 736.141,
+      "duration": 0.6615
+    },
+    {
+      "start": 741.41,
+      "end": 742.271,
+      "duration": 0.860854
+    },
+    {
+      "start": 849.469,
+      "end": 849.981,
+      "duration": 0.512854
+    },
+    {
+      "start": 1295.39,
+      "end": 1296.17,
+      "duration": 0.781792
+    }
+  ],
+  "confidence": {
+    "scores": [
+      52,
+      52,
+      60,
+      83,
+      75,
+      60,
+      68,
+      75,
+      52,
+      60,
+      68
+    ],
+    "avg": 64.1,
+    "min": 52
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/y-PLr-BPxKU.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

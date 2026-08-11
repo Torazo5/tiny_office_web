@@ -1,0 +1,708 @@
+{
+  "video_id": "qn6rgisZm1M",
+  "title": "Jorge Drexler: NPR Music Tiny Desk Concert",
+  "duration": 1199,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/qn6rgisZm1M.mp3",
+  "description_songs": [
+    "Movimiento",
+    "Silencio",
+    "Asilo",
+    "Telefonia"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 11 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 34.56,
+      "end": 35.99999999999999,
+      "duration": 1.4399999999999906,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 130.56,
+      "end": 131.99999999999997,
+      "duration": 1.4399999999999693,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 147.35999999999999,
+      "end": 148.79999999999998,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 150.72,
+      "end": 152.64,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 158.88,
+      "end": 161.27999999999997,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 220.32,
+      "end": 221.76,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 222.23999999999998,
+      "end": 224.15999999999997,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 227.04,
+      "end": 228.48,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 230.88,
+      "end": 233.27999999999997,
+      "duration": 2.3999999999999773,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 235.2,
+      "end": 236.15999999999997,
+      "duration": 0.9599999999999795,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 238.56,
+      "end": 312.96,
+      "duration": 74.39999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 321.59999999999997,
+      "end": 324.48,
+      "duration": 2.8800000000000523,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 324.96,
+      "end": 327.36,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 329.76,
+      "end": 341.28000000000003,
+      "duration": 11.520000000000039,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 342.24,
+      "end": 343.68,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 569.28,
+      "end": 577.92,
+      "duration": 8.639999999999986,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 586.0799999999999,
+      "end": 588.0,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 589.92,
+      "end": 598.08,
+      "duration": 8.160000000000082,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 599.04,
+      "end": 614.88,
+      "duration": 15.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 616.3199999999999,
+      "end": 620.16,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 620.64,
+      "end": 633.12,
+      "duration": 12.480000000000018,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 643.68,
+      "end": 648.96,
+      "duration": 5.280000000000086,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 891.8399999999999,
+      "end": 905.28,
+      "duration": 13.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 909.12,
+      "end": 910.56,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 912.9599999999999,
+      "end": 915.84,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 916.3199999999999,
+      "end": 919.68,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 941.76,
+      "end": 943.68,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 949.4399999999999,
+      "end": 950.88,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 961.4399999999999,
+      "end": 970.56,
+      "duration": 9.120000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1160.1599999999999,
+      "end": 1189.44,
+      "duration": 29.2800000000002,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Movimiento",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 229.88,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 238.56,
+      "song": "Silencio",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 236.15999999999997,
+      "clip_end": 237.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 1,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 569.28,
+      "song": "Asilo",
+      "corroboration": 0,
+      "silence_match": 566.556,
+      "clip_start": 588.0,
+      "clip_end": 588.92,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 16,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 891.8399999999999,
+      "song": "Telefonia",
+      "corroboration": 0,
+      "silence_match": 888.494,
+      "clip_start": 910.56,
+      "clip_end": 960.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 228.296,
+      "end": 230.873,
+      "duration": 2.57615
+    },
+    {
+      "start": 245.552,
+      "end": 247.644,
+      "duration": 2.09204
+    },
+    {
+      "start": 250.884,
+      "end": 251.445,
+      "duration": 0.561229
+    },
+    {
+      "start": 287.016,
+      "end": 287.783,
+      "duration": 0.767021
+    },
+    {
+      "start": 290.288,
+      "end": 290.859,
+      "duration": 0.570917
+    },
+    {
+      "start": 298.002,
+      "end": 298.659,
+      "duration": 0.656792
+    },
+    {
+      "start": 299.884,
+      "end": 300.483,
+      "duration": 0.599375
+    },
+    {
+      "start": 302.184,
+      "end": 302.898,
+      "duration": 0.714729
+    },
+    {
+      "start": 302.953,
+      "end": 303.798,
+      "duration": 0.844313
+    },
+    {
+      "start": 304.55,
+      "end": 305.515,
+      "duration": 0.965292
+    },
+    {
+      "start": 306.482,
+      "end": 307.061,
+      "duration": 0.578708
+    },
+    {
+      "start": 307.749,
+      "end": 308.354,
+      "duration": 0.60525
+    },
+    {
+      "start": 309.42,
+      "end": 310.572,
+      "duration": 1.15165
+    },
+    {
+      "start": 311.701,
+      "end": 313.222,
+      "duration": 1.521
+    },
+    {
+      "start": 314.152,
+      "end": 314.799,
+      "duration": 0.647625
+    },
+    {
+      "start": 315.558,
+      "end": 316.462,
+      "duration": 0.904708
+    },
+    {
+      "start": 316.544,
+      "end": 317.213,
+      "duration": 0.668542
+    },
+    {
+      "start": 317.675,
+      "end": 320.243,
+      "duration": 2.56858
+    },
+    {
+      "start": 320.447,
+      "end": 322.269,
+      "duration": 1.82125
+    },
+    {
+      "start": 343.521,
+      "end": 344.766,
+      "duration": 1.24458
+    },
+    {
+      "start": 347.671,
+      "end": 348.351,
+      "duration": 0.679917
+    },
+    {
+      "start": 351.181,
+      "end": 351.917,
+      "duration": 0.735771
+    },
+    {
+      "start": 378.935,
+      "end": 384.301,
+      "duration": 5.36573
+    },
+    {
+      "start": 391.401,
+      "end": 391.953,
+      "duration": 0.551625
+    },
+    {
+      "start": 418.965,
+      "end": 424.526,
+      "duration": 5.5619
+    },
+    {
+      "start": 509.567,
+      "end": 515.733,
+      "duration": 6.16542
+    },
+    {
+      "start": 515.74,
+      "end": 522.087,
+      "duration": 6.34656
+    },
+    {
+      "start": 522.091,
+      "end": 522.881,
+      "duration": 0.789854
+    },
+    {
+      "start": 566.556,
+      "end": 568.188,
+      "duration": 1.6324
+    },
+    {
+      "start": 579.488,
+      "end": 580.027,
+      "duration": 0.539125
+    },
+    {
+      "start": 580.222,
+      "end": 580.792,
+      "duration": 0.569812
+    },
+    {
+      "start": 580.804,
+      "end": 581.316,
+      "duration": 0.512396
+    },
+    {
+      "start": 582.211,
+      "end": 583.158,
+      "duration": 0.947083
+    },
+    {
+      "start": 587.781,
+      "end": 588.633,
+      "duration": 0.852146
+    },
+    {
+      "start": 591.325,
+      "end": 592.105,
+      "duration": 0.779375
+    },
+    {
+      "start": 595.053,
+      "end": 596.153,
+      "duration": 1.10048
+    },
+    {
+      "start": 598.065,
+      "end": 599.248,
+      "duration": 1.18287
+    },
+    {
+      "start": 603.183,
+      "end": 604.077,
+      "duration": 0.894125
+    },
+    {
+      "start": 604.588,
+      "end": 605.353,
+      "duration": 0.764896
+    },
+    {
+      "start": 606.892,
+      "end": 607.623,
+      "duration": 0.731125
+    },
+    {
+      "start": 608.716,
+      "end": 609.959,
+      "duration": 1.24367
+    },
+    {
+      "start": 613.451,
+      "end": 614.157,
+      "duration": 0.705479
+    },
+    {
+      "start": 614.412,
+      "end": 617.02,
+      "duration": 2.60823
+    },
+    {
+      "start": 620.045,
+      "end": 621.336,
+      "duration": 1.29142
+    },
+    {
+      "start": 625.117,
+      "end": 626.258,
+      "duration": 1.14152
+    },
+    {
+      "start": 626.367,
+      "end": 626.881,
+      "duration": 0.514458
+    },
+    {
+      "start": 627.248,
+      "end": 627.885,
+      "duration": 0.636875
+    },
+    {
+      "start": 630.552,
+      "end": 631.394,
+      "duration": 0.841417
+    },
+    {
+      "start": 660.5,
+      "end": 661.367,
+      "duration": 0.866687
+    },
+    {
+      "start": 665.256,
+      "end": 666.029,
+      "duration": 0.773396
+    },
+    {
+      "start": 668.441,
+      "end": 669.133,
+      "duration": 0.692021
+    },
+    {
+      "start": 671.897,
+      "end": 672.989,
+      "duration": 1.09275
+    },
+    {
+      "start": 690.126,
+      "end": 690.693,
+      "duration": 0.567354
+    },
+    {
+      "start": 691.096,
+      "end": 691.898,
+      "duration": 0.802646
+    },
+    {
+      "start": 697.095,
+      "end": 697.92,
+      "duration": 0.824854
+    },
+    {
+      "start": 769.292,
+      "end": 770.007,
+      "duration": 0.714417
+    },
+    {
+      "start": 773.826,
+      "end": 774.704,
+      "duration": 0.87825
+    },
+    {
+      "start": 776.265,
+      "end": 777.043,
+      "duration": 0.777875
+    },
+    {
+      "start": 888.494,
+      "end": 892.382,
+      "duration": 3.88821
+    },
+    {
+      "start": 910.417,
+      "end": 911.279,
+      "duration": 0.861979
+    },
+    {
+      "start": 912.923,
+      "end": 913.716,
+      "duration": 0.792604
+    },
+    {
+      "start": 913.716,
+      "end": 914.404,
+      "duration": 0.688271
+    },
+    {
+      "start": 916.475,
+      "end": 917.529,
+      "duration": 1.05387
+    },
+    {
+      "start": 918.549,
+      "end": 919.487,
+      "duration": 0.937583
+    },
+    {
+      "start": 921.535,
+      "end": 922.266,
+      "duration": 0.731042
+    },
+    {
+      "start": 922.89,
+      "end": 923.607,
+      "duration": 0.716771
+    },
+    {
+      "start": 924.601,
+      "end": 925.159,
+      "duration": 0.557458
+    },
+    {
+      "start": 934.361,
+      "end": 934.88,
+      "duration": 0.51975
+    },
+    {
+      "start": 935.186,
+      "end": 935.889,
+      "duration": 0.702562
+    },
+    {
+      "start": 937.795,
+      "end": 938.815,
+      "duration": 1.01983
+    },
+    {
+      "start": 939.297,
+      "end": 940.866,
+      "duration": 1.56931
+    },
+    {
+      "start": 942.024,
+      "end": 944.168,
+      "duration": 2.14469
+    },
+    {
+      "start": 944.835,
+      "end": 945.439,
+      "duration": 0.603583
+    },
+    {
+      "start": 958.451,
+      "end": 960.08,
+      "duration": 1.62919
+    },
+    {
+      "start": 960.081,
+      "end": 961.005,
+      "duration": 0.923958
+    },
+    {
+      "start": 961.005,
+      "end": 962.083,
+      "duration": 1.07865
+    },
+    {
+      "start": 967.302,
+      "end": 968.377,
+      "duration": 1.07535
+    },
+    {
+      "start": 970.185,
+      "end": 974.566,
+      "duration": 4.38094
+    },
+    {
+      "start": 1189.94,
+      "end": 1199.25,
+      "duration": 9.3144
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      1,
+      16,
+      66
+    ],
+    "avg": 31.5,
+    "min": 1
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/qn6rgisZm1M.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

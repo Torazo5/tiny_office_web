@@ -1,0 +1,463 @@
+{
+  "video_id": "pRERgcQe-fQ",
+  "title": "Nile Rodgers & CHIC: Tiny Desk Concert",
+  "duration": 1808,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/pRERgcQe-fQ.mp3",
+  "description_songs": [
+    "Le Freak",
+    "I'm Coming Out",
+    "We Are Family",
+    "Get Lucky",
+    "Good Times",
+    "Let's Dance"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1200 likes, matched all 6 description song(s), retained 6 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 4
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 138.24,
+      "end": 139.67999999999998,
+      "duration": 1.4399999999999693,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 139.68,
+      "end": 217.92,
+      "duration": 78.23999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 532.3199999999999,
+      "end": 534.72,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 534.72,
+      "end": 552.0,
+      "duration": 17.279999999999973,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 563.52,
+      "end": 564.0,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 576.9599999999999,
+      "end": 578.4,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 578.4,
+      "end": 579.36,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 590.88,
+      "end": 592.8,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 601.4399999999999,
+      "end": 603.36,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 653.28,
+      "end": 686.88,
+      "duration": 33.60000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 728.16,
+      "end": 817.92,
+      "duration": 89.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 987.8399999999999,
+      "end": 1020.48,
+      "duration": 32.6400000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1338.72,
+      "end": 1351.68,
+      "duration": 12.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1355.52,
+      "end": 1403.52,
+      "duration": 48.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1473.12,
+      "end": 1473.6,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1477.44,
+      "end": 1477.92,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1485.12,
+      "end": 1485.6,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1489.44,
+      "end": 1489.92,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1494.72,
+      "end": 1495.2,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1668.96,
+      "end": 1669.44,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1738.08,
+      "end": 1786.56,
+      "duration": 48.48000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1789.9199999999998,
+      "end": 1807.68,
+      "duration": 17.76000000000022,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Le Freak",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 138.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 67,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 213,
+      "song": "I'm Coming Out",
+      "corroboration": 1,
+      "silence_match": 213.337,
+      "clip_start": 217.92,
+      "clip_end": 364,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 364,
+      "song": "We Are Family",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 364,
+      "clip_end": 533.72,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 67,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 814,
+      "song": "Get Lucky",
+      "corroboration": 2,
+      "silence_match": 812.133,
+      "clip_start": 817.92,
+      "clip_end": 986.8399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1020,
+      "song": "Good Times",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 1020.48,
+      "clip_end": 1337.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1403,
+      "song": "Let's Dance",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1403.52,
+      "clip_end": 1667.96,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [
+        {
+          "start": 1473.12,
+          "end": 1473.6,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.856,
+          "music_run_sec": 14.5,
+          "anchor_start": 1738.08
+        },
+        {
+          "start": 1477.44,
+          "end": 1477.92,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.856,
+          "music_run_sec": 14.5,
+          "anchor_start": 1738.08
+        },
+        {
+          "start": 1485.12,
+          "end": 1485.6,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.854,
+          "music_run_sec": 12.75,
+          "anchor_start": 1738.08
+        },
+        {
+          "start": 1489.44,
+          "end": 1489.92,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.852,
+          "music_run_sec": 12.75,
+          "anchor_start": 1738.08
+        },
+        {
+          "start": 1494.72,
+          "end": 1495.2,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.849,
+          "music_run_sec": 12.75,
+          "anchor_start": 1738.08
+        }
+      ],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 70.4222,
+      "end": 71.1662,
+      "duration": 0.743958
+    },
+    {
+      "start": 180.212,
+      "end": 181.461,
+      "duration": 1.24913
+    },
+    {
+      "start": 184.172,
+      "end": 184.686,
+      "duration": 0.513646
+    },
+    {
+      "start": 202.583,
+      "end": 203.119,
+      "duration": 0.535875
+    },
+    {
+      "start": 208.545,
+      "end": 209.173,
+      "duration": 0.628104
+    },
+    {
+      "start": 213.337,
+      "end": 213.979,
+      "duration": 0.642458
+    },
+    {
+      "start": 519.031,
+      "end": 521.21,
+      "duration": 2.17919
+    },
+    {
+      "start": 521.211,
+      "end": 522.136,
+      "duration": 0.925625
+    },
+    {
+      "start": 525.012,
+      "end": 525.79,
+      "duration": 0.777479
+    },
+    {
+      "start": 527.038,
+      "end": 527.936,
+      "duration": 0.897646
+    },
+    {
+      "start": 600.704,
+      "end": 601.327,
+      "duration": 0.623771
+    },
+    {
+      "start": 607.282,
+      "end": 610.607,
+      "duration": 3.32537
+    },
+    {
+      "start": 611.654,
+      "end": 613.129,
+      "duration": 1.47471
+    },
+    {
+      "start": 613.904,
+      "end": 615.404,
+      "duration": 1.50023
+    },
+    {
+      "start": 679.316,
+      "end": 680.001,
+      "duration": 0.684729
+    },
+    {
+      "start": 683.305,
+      "end": 683.88,
+      "duration": 0.575146
+    },
+    {
+      "start": 684.476,
+      "end": 684.978,
+      "duration": 0.502188
+    },
+    {
+      "start": 755.845,
+      "end": 756.48,
+      "duration": 0.634354
+    },
+    {
+      "start": 756.759,
+      "end": 757.342,
+      "duration": 0.583417
+    },
+    {
+      "start": 757.792,
+      "end": 758.891,
+      "duration": 1.09923
+    },
+    {
+      "start": 773.528,
+      "end": 774.207,
+      "duration": 0.679542
+    },
+    {
+      "start": 812.133,
+      "end": 812.768,
+      "duration": 0.634792
+    },
+    {
+      "start": 1381.54,
+      "end": 1382.21,
+      "duration": 0.667937
+    },
+    {
+      "start": 1395.17,
+      "end": 1396.08,
+      "duration": 0.9025
+    },
+    {
+      "start": 1396.68,
+      "end": 1397.19,
+      "duration": 0.516479
+    },
+    {
+      "start": 1805.9,
+      "end": 1806.41,
+      "duration": 0.512354
+    }
+  ],
+  "confidence": {
+    "scores": [
+      67,
+      75,
+      67,
+      90,
+      75,
+      61
+    ],
+    "avg": 72.5,
+    "min": 61
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/pRERgcQe-fQ.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

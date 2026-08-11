@@ -1,0 +1,334 @@
+{
+  "video_id": "up8ODGFWgFg",
+  "title": "Usher: Tiny Desk Concert",
+  "duration": 1487,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/up8ODGFWgFg.mp3",
+  "description_songs": [
+    "You Make Me Wanna...",
+    "Superstar",
+    "U Don't Have to Call",
+    "Nice & Slow",
+    "Confessions Part II",
+    "My Way"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 837 likes, matched all 6 description song(s), retained 6 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 1,
+    "rejected": 2,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 6.24,
+      "duration": 6.24,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 7.68,
+      "end": 12.0,
+      "duration": 4.32,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 16.32,
+      "end": 17.76,
+      "duration": 1.4400000000000013,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 232.32,
+      "end": 265.92,
+      "duration": 33.60000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 269.28,
+      "end": 272.64,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 278.4,
+      "end": 281.28000000000003,
+      "duration": 2.8800000000000523,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 439.68,
+      "end": 447.84,
+      "duration": 8.159999999999968,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 639.36,
+      "end": 714.72,
+      "duration": 75.36000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 896.16,
+      "end": 910.56,
+      "duration": 14.399999999999977,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 914.88,
+      "end": 916.8,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 929.76,
+      "end": 931.1999999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 943.1999999999999,
+      "end": 945.12,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 973.92,
+      "end": 976.3199999999999,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1017.5999999999999,
+      "end": 1020.0,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1077.12,
+      "end": 1078.56,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1211.04,
+      "end": 1266.24,
+      "duration": 55.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1454.8799999999999,
+      "end": 1482.72,
+      "duration": 27.840000000000146,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 83,
+      "song": "You Make Me Wanna...",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 83,
+      "clip_end": 232.32,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 295,
+      "song": "Superstar",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 281.28000000000003,
+      "clip_end": 439.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 447,
+      "song": "U Don't Have to Call",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 447.84,
+      "clip_end": 639.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 715,
+      "song": "Nice & Slow",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 714.72,
+      "clip_end": 896.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 977,
+      "song": "Confessions Part II",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 976.3199999999999,
+      "clip_end": 1211.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 1266,
+      "song": "My Way",
+      "corroboration": 0,
+      "silence_match": 1266.03,
+      "clip_start": 1266.24,
+      "clip_end": 1454.8799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 2.00769,
+      "end": 2.52329,
+      "duration": 0.515604
+    },
+    {
+      "start": 3.43054,
+      "end": 4.03515,
+      "duration": 0.604604
+    },
+    {
+      "start": 10.7701,
+      "end": 11.3445,
+      "duration": 0.574396
+    },
+    {
+      "start": 11.662,
+      "end": 12.405,
+      "duration": 0.743
+    },
+    {
+      "start": 231.076,
+      "end": 231.647,
+      "duration": 0.571313
+    },
+    {
+      "start": 250.311,
+      "end": 250.965,
+      "duration": 0.654312
+    },
+    {
+      "start": 667.048,
+      "end": 667.558,
+      "duration": 0.510229
+    },
+    {
+      "start": 689.404,
+      "end": 689.973,
+      "duration": 0.569792
+    },
+    {
+      "start": 697.612,
+      "end": 700.082,
+      "duration": 2.46971
+    },
+    {
+      "start": 701.647,
+      "end": 702.566,
+      "duration": 0.91925
+    },
+    {
+      "start": 1022.13,
+      "end": 1022.86,
+      "duration": 0.729938
+    },
+    {
+      "start": 1240.52,
+      "end": 1241.47,
+      "duration": 0.951208
+    },
+    {
+      "start": 1264.22,
+      "end": 1265.37,
+      "duration": 1.1454
+    },
+    {
+      "start": 1265.41,
+      "end": 1266.0,
+      "duration": 0.589208
+    },
+    {
+      "start": 1266.03,
+      "end": 1266.64,
+      "duration": 0.613187
+    },
+    {
+      "start": 1266.68,
+      "end": 1267.26,
+      "duration": 0.581708
+    },
+    {
+      "start": 1479.1,
+      "end": 1479.86,
+      "duration": 0.764021
+    },
+    {
+      "start": 1482.29,
+      "end": 1486.58,
+      "duration": 4.28696
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      61,
+      61,
+      61,
+      76
+    ],
+    "avg": 62.2,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

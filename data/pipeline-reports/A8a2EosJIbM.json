@@ -1,0 +1,693 @@
+{
+  "video_id": "A8a2EosJIbM",
+  "title": "Hobo Johnson and The Lovemakers: NPR Music Tiny Desk Concert",
+  "duration": 921,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/A8a2EosJIbM.mp3",
+  "description_songs": [
+    "Romeo & Juliet",
+    "Sex in the City",
+    "Peach Scone",
+    "Creve Coeur 1"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 7 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 33.12,
+      "end": 34.559999999999995,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 40.32,
+      "end": 42.239999999999995,
+      "duration": 1.9199999999999946,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 47.519999999999996,
+      "end": 49.44,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 53.28,
+      "end": 55.67999999999999,
+      "duration": 2.3999999999999915,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 68.64,
+      "end": 70.08,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 81.6,
+      "end": 84.48,
+      "duration": 2.8800000000000097,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 96.0,
+      "end": 98.88,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 104.64,
+      "end": 106.08,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 110.88,
+      "end": 113.28,
+      "duration": 2.4000000000000057,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 124.8,
+      "end": 127.67999999999999,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 170.88,
+      "end": 173.76,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 174.72,
+      "end": 193.43999999999997,
+      "duration": 18.71999999999997,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 193.92,
+      "end": 213.11999999999998,
+      "duration": 19.19999999999999,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 213.6,
+      "end": 215.04,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 215.51999999999998,
+      "end": 230.87999999999997,
+      "duration": 15.359999999999985,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 241.92,
+      "end": 243.35999999999999,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 248.16,
+      "end": 250.07999999999998,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 255.84,
+      "end": 257.28000000000003,
+      "duration": 1.4400000000000261,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 262.08,
+      "end": 263.52,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 283.2,
+      "end": 284.64,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 308.64,
+      "end": 310.08,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 311.03999999999996,
+      "end": 313.44,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 317.76,
+      "end": 319.2,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 338.88,
+      "end": 340.32,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 381.12,
+      "end": 382.56,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 387.84,
+      "end": 390.24,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 390.71999999999997,
+      "end": 394.08,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 394.08,
+      "end": 448.32,
+      "duration": 54.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 475.2,
+      "end": 476.64,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 477.12,
+      "end": 491.52,
+      "duration": 14.399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 528.96,
+      "end": 531.36,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 577.4399999999999,
+      "end": 578.88,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 584.16,
+      "end": 585.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 590.4,
+      "end": 591.84,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 598.0799999999999,
+      "end": 604.32,
+      "duration": 6.240000000000123,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 644.16,
+      "end": 646.08,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 647.52,
+      "end": 648.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 663.36,
+      "end": 664.8,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 703.1999999999999,
+      "end": 705.12,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 705.6,
+      "end": 721.4399999999999,
+      "duration": 15.839999999999918,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 744.48,
+      "end": 745.92,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 845.76,
+      "end": 847.1999999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 853.4399999999999,
+      "end": 854.88,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 858.7199999999999,
+      "end": 860.16,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 900.9599999999999,
+      "end": 911.52,
+      "duration": 10.56000000000006,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Romeo & Juliet",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 173.72,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 215.51999999999998,
+      "song": "Sex in the City",
+      "corroboration": 0,
+      "silence_match": 214.579,
+      "clip_start": 230.87999999999997,
+      "clip_end": 393.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 394.08,
+      "song": "Peach Scone",
+      "corroboration": 0,
+      "silence_match": 391.781,
+      "clip_start": 448.32,
+      "clip_end": 476.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 705.6,
+      "song": "Creve Coeur 1",
+      "corroboration": 0,
+      "silence_match": 704.642,
+      "clip_start": 721.4399999999999,
+      "clip_end": 899.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 11.1751,
+      "end": 12.0678,
+      "duration": 0.892708
+    },
+    {
+      "start": 126.937,
+      "end": 127.61,
+      "duration": 0.672792
+    },
+    {
+      "start": 173.628,
+      "end": 174.947,
+      "duration": 1.3186
+    },
+    {
+      "start": 181.596,
+      "end": 182.158,
+      "duration": 0.562042
+    },
+    {
+      "start": 183.403,
+      "end": 184.03,
+      "duration": 0.626875
+    },
+    {
+      "start": 192.143,
+      "end": 192.722,
+      "duration": 0.578896
+    },
+    {
+      "start": 193.172,
+      "end": 194.452,
+      "duration": 1.28044
+    },
+    {
+      "start": 196.415,
+      "end": 196.918,
+      "duration": 0.502771
+    },
+    {
+      "start": 200.631,
+      "end": 201.158,
+      "duration": 0.526875
+    },
+    {
+      "start": 201.64,
+      "end": 202.151,
+      "duration": 0.510583
+    },
+    {
+      "start": 208.27,
+      "end": 209.123,
+      "duration": 0.852583
+    },
+    {
+      "start": 209.725,
+      "end": 210.94,
+      "duration": 1.21483
+    },
+    {
+      "start": 212.815,
+      "end": 214.546,
+      "duration": 1.7314
+    },
+    {
+      "start": 214.579,
+      "end": 215.274,
+      "duration": 0.69525
+    },
+    {
+      "start": 228.205,
+      "end": 228.921,
+      "duration": 0.716938
+    },
+    {
+      "start": 234.816,
+      "end": 236.114,
+      "duration": 1.29854
+    },
+    {
+      "start": 241.483,
+      "end": 242.496,
+      "duration": 1.01327
+    },
+    {
+      "start": 262.62,
+      "end": 263.535,
+      "duration": 0.915771
+    },
+    {
+      "start": 305.168,
+      "end": 305.71,
+      "duration": 0.541604
+    },
+    {
+      "start": 326.105,
+      "end": 326.752,
+      "duration": 0.647354
+    },
+    {
+      "start": 332.186,
+      "end": 333.196,
+      "duration": 1.00954
+    },
+    {
+      "start": 389.942,
+      "end": 391.534,
+      "duration": 1.59117
+    },
+    {
+      "start": 391.781,
+      "end": 392.853,
+      "duration": 1.07215
+    },
+    {
+      "start": 413.349,
+      "end": 414.759,
+      "duration": 1.40998
+    },
+    {
+      "start": 421.488,
+      "end": 422.778,
+      "duration": 1.2905
+    },
+    {
+      "start": 424.098,
+      "end": 424.673,
+      "duration": 0.57575
+    },
+    {
+      "start": 428.303,
+      "end": 429.277,
+      "duration": 0.974875
+    },
+    {
+      "start": 438.52,
+      "end": 439.272,
+      "duration": 0.752104
+    },
+    {
+      "start": 441.574,
+      "end": 443.073,
+      "duration": 1.49875
+    },
+    {
+      "start": 443.088,
+      "end": 443.984,
+      "duration": 0.896167
+    },
+    {
+      "start": 448.669,
+      "end": 449.455,
+      "duration": 0.785125
+    },
+    {
+      "start": 473.055,
+      "end": 474.474,
+      "duration": 1.41821
+    },
+    {
+      "start": 476.631,
+      "end": 477.659,
+      "duration": 1.02754
+    },
+    {
+      "start": 482.967,
+      "end": 483.715,
+      "duration": 0.747479
+    },
+    {
+      "start": 503.55,
+      "end": 504.143,
+      "duration": 0.592958
+    },
+    {
+      "start": 509.918,
+      "end": 510.42,
+      "duration": 0.502083
+    },
+    {
+      "start": 529.224,
+      "end": 530.088,
+      "duration": 0.864333
+    },
+    {
+      "start": 531.447,
+      "end": 532.047,
+      "duration": 0.599771
+    },
+    {
+      "start": 576.852,
+      "end": 577.926,
+      "duration": 1.07387
+    },
+    {
+      "start": 599.4,
+      "end": 600.51,
+      "duration": 1.11046
+    },
+    {
+      "start": 601.063,
+      "end": 601.666,
+      "duration": 0.603021
+    },
+    {
+      "start": 602.902,
+      "end": 603.954,
+      "duration": 1.05198
+    },
+    {
+      "start": 671.115,
+      "end": 672.212,
+      "duration": 1.0965
+    },
+    {
+      "start": 672.416,
+      "end": 674.057,
+      "duration": 1.64077
+    },
+    {
+      "start": 674.381,
+      "end": 676.329,
+      "duration": 1.94875
+    },
+    {
+      "start": 676.603,
+      "end": 677.131,
+      "duration": 0.527729
+    },
+    {
+      "start": 703.821,
+      "end": 704.468,
+      "duration": 0.647312
+    },
+    {
+      "start": 704.642,
+      "end": 705.623,
+      "duration": 0.980583
+    },
+    {
+      "start": 718.919,
+      "end": 719.873,
+      "duration": 0.9545
+    },
+    {
+      "start": 721.436,
+      "end": 724.703,
+      "duration": 3.26694
+    },
+    {
+      "start": 737.554,
+      "end": 739.042,
+      "duration": 1.48756
+    },
+    {
+      "start": 846.378,
+      "end": 847.45,
+      "duration": 1.07227
+    },
+    {
+      "start": 897.457,
+      "end": 899.164,
+      "duration": 1.70727
+    },
+    {
+      "start": 899.168,
+      "end": 900.613,
+      "duration": 1.44519
+    },
+    {
+      "start": 910.902,
+      "end": 920.973,
+      "duration": 10.0711
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      66,
+      66,
+      66
+    ],
+    "avg": 60.2,
+    "min": 43
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/A8a2EosJIbM.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

@@ -2,7 +2,7 @@
   "video_id": "up8ODGFWgFg",
   "title": "Usher: Tiny Desk Concert",
   "duration": 1487,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/up8ODGFWgFg.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/up8ODGFWgFg.mp3",
   "description_songs": [
     "You Make Me Wanna...",
     "Superstar",
@@ -151,12 +151,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 83,
-      "clip_end": 232.32,
+      "clip_end": 231.32,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 53
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 295,
@@ -164,12 +165,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 281.28000000000003,
-      "clip_end": 439.68,
+      "clip_end": 438.68,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 447,
@@ -177,12 +179,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 447.84,
-      "clip_end": 639.36,
+      "clip_end": 638.36,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 715,
@@ -190,12 +193,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 714.72,
-      "clip_end": 896.16,
+      "clip_end": 895.16,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 977,
@@ -203,12 +207,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 976.3199999999999,
-      "clip_end": 1211.04,
+      "clip_end": 1210.04,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 1266,
@@ -216,12 +221,13 @@
       "corroboration": 0,
       "silence_match": 1266.03,
       "clip_start": 1266.24,
-      "clip_end": 1454.8799999999999,
+      "clip_end": 1453.8799999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -328,7 +334,10 @@
     "avg": 62.2,
     "min": 53
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/up8ODGFWgFg.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

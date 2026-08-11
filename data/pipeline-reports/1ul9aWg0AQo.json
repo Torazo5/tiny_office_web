@@ -1,0 +1,299 @@
+{
+  "video_id": "1ul9aWg0AQo",
+  "title": "Faye Webster: Tiny Desk Concert",
+  "duration": 1187,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/1ul9aWg0AQo.mp3",
+  "description_songs": [
+    "In A Good Way",
+    "But Not Kiss",
+    "Underdressed at the Symphony",
+    "Jonny",
+    "Jonny (Reprise)"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 5 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 9 usable episode(s), took top 4; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 240.0,
+      "end": 247.2,
+      "duration": 7.199999999999989,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 490.56,
+      "end": 497.28,
+      "duration": 6.71999999999997,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 710.4,
+      "end": 720.0,
+      "duration": 9.600000000000023,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 734.88,
+      "end": 742.08,
+      "duration": 7.2000000000000455,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 746.88,
+      "end": 748.3199999999999,
+      "duration": 1.4399999999999409,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 754.0799999999999,
+      "end": 754.56,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 758.4,
+      "end": 759.36,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 768.48,
+      "end": 770.4,
+      "duration": 1.919999999999959,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 777.6,
+      "end": 779.52,
+      "duration": 1.919999999999959,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1102.56,
+      "end": 1104.0,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1146.24,
+      "end": 1173.12,
+      "duration": 26.87999999999988,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "In A Good Way",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 239.0,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 240.0,
+      "song": "But Not Kiss",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 247.2,
+      "clip_end": 489.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 490.56,
+      "song": "Underdressed at the Symphony",
+      "corroboration": 0,
+      "silence_match": 489.014,
+      "clip_start": 497.28,
+      "clip_end": 709.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 710.4,
+      "song": "Jonny",
+      "corroboration": 0,
+      "silence_match": 708.793,
+      "clip_start": 720.0,
+      "clip_end": 733.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 16,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 734.88,
+      "song": "Jonny (Reprise)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 754.56,
+      "clip_end": 1145.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [
+        {
+          "start": 758.4,
+          "end": 759.36,
+          "duration": 0.96,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.945,
+          "music_run_sec": 39.5,
+          "anchor_start": 1102.56
+        },
+        {
+          "start": 768.48,
+          "end": 770.4,
+          "duration": 1.92,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.941,
+          "music_run_sec": 39.5,
+          "anchor_start": 1102.56
+        },
+        {
+          "start": 777.6,
+          "end": 779.52,
+          "duration": 1.92,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.939,
+          "music_run_sec": 39.5,
+          "anchor_start": 1102.56
+        }
+      ],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.722958,
+      "duration": 0.722958
+    },
+    {
+      "start": 16.392,
+      "end": 17.7464,
+      "duration": 1.35433
+    },
+    {
+      "start": 21.8374,
+      "end": 22.367,
+      "duration": 0.529604
+    },
+    {
+      "start": 489.014,
+      "end": 489.902,
+      "duration": 0.888354
+    },
+    {
+      "start": 708.793,
+      "end": 710.073,
+      "duration": 1.28004
+    },
+    {
+      "start": 938.919,
+      "end": 939.826,
+      "duration": 0.907208
+    },
+    {
+      "start": 1005.73,
+      "end": 1006.36,
+      "duration": 0.624146
+    },
+    {
+      "start": 1025.88,
+      "end": 1026.62,
+      "duration": 0.746708
+    },
+    {
+      "start": 1027.21,
+      "end": 1028.01,
+      "duration": 0.8045
+    },
+    {
+      "start": 1047.86,
+      "end": 1048.43,
+      "duration": 0.572771
+    },
+    {
+      "start": 1115.05,
+      "end": 1115.59,
+      "duration": 0.541271
+    },
+    {
+      "start": 1136.91,
+      "end": 1137.74,
+      "duration": 0.828812
+    },
+    {
+      "start": 1138.26,
+      "end": 1139.79,
+      "duration": 1.53285
+    },
+    {
+      "start": 1144.18,
+      "end": 1145.74,
+      "duration": 1.56787
+    },
+    {
+      "start": 1173.34,
+      "end": 1187.11,
+      "duration": 13.7716
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      51,
+      66,
+      16,
+      51
+    ],
+    "avg": 48.4,
+    "min": 16
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/1ul9aWg0AQo.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

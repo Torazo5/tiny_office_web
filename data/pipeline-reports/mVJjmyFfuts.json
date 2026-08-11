@@ -1,0 +1,450 @@
+{
+  "video_id": "mVJjmyFfuts",
+  "title": "Christian Scott aTunde Adjuah: NPR Music Tiny Desk Concert",
+  "duration": 2029,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/mVJjmyFfuts.mp3",
+  "description_songs": [
+    "TWIN",
+    "West Of The West",
+    "K.K.P.D."
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 80 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 3
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.48,
+      "end": 3.36,
+      "duration": 2.88,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 371.03999999999996,
+      "end": 381.12,
+      "duration": 10.080000000000041,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 381.59999999999997,
+      "end": 486.24,
+      "duration": 104.64000000000004,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 487.2,
+      "end": 494.88,
+      "duration": 7.680000000000007,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 928.3199999999999,
+      "end": 979.1999999999999,
+      "duration": 50.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 979.68,
+      "end": 1082.8799999999999,
+      "duration": 103.19999999999993,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1083.36,
+      "end": 1152.48,
+      "duration": 69.12000000000012,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1152.96,
+      "end": 1305.6,
+      "duration": 152.63999999999987,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1306.56,
+      "end": 1311.36,
+      "duration": 4.7999999999999545,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1899.36,
+      "end": 2005.44,
+      "duration": 106.08000000000015,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 2010.72,
+      "end": 2022.72,
+      "duration": 12.0,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 2025.12,
+      "end": 2028.96,
+      "duration": 3.8400000000001455,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "TWIN",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 3.36,
+      "clip_end": 370.03999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 500,
+      "song": "West Of The West",
+      "corroboration": 1,
+      "silence_match": 498.486,
+      "clip_start": 494.88,
+      "clip_end": 927.3199999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1310,
+      "song": "K.K.P.D.",
+      "corroboration": 1,
+      "silence_match": 1305.16,
+      "clip_start": 1311.36,
+      "clip_end": 1898.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 388.506,
+      "end": 389.072,
+      "duration": 0.565896
+    },
+    {
+      "start": 407.248,
+      "end": 408.042,
+      "duration": 0.793854
+    },
+    {
+      "start": 494.222,
+      "end": 495.237,
+      "duration": 1.01513
+    },
+    {
+      "start": 496.13,
+      "end": 497.626,
+      "duration": 1.49604
+    },
+    {
+      "start": 498.486,
+      "end": 501.35,
+      "duration": 2.86338
+    },
+    {
+      "start": 944.882,
+      "end": 945.401,
+      "duration": 0.518667
+    },
+    {
+      "start": 955.266,
+      "end": 955.828,
+      "duration": 0.561396
+    },
+    {
+      "start": 968.011,
+      "end": 968.557,
+      "duration": 0.545937
+    },
+    {
+      "start": 973.034,
+      "end": 973.54,
+      "duration": 0.506458
+    },
+    {
+      "start": 974.465,
+      "end": 974.971,
+      "duration": 0.505854
+    },
+    {
+      "start": 975.21,
+      "end": 975.782,
+      "duration": 0.572083
+    },
+    {
+      "start": 982.824,
+      "end": 983.33,
+      "duration": 0.506333
+    },
+    {
+      "start": 992.294,
+      "end": 992.865,
+      "duration": 0.571458
+    },
+    {
+      "start": 993.797,
+      "end": 994.406,
+      "duration": 0.609125
+    },
+    {
+      "start": 994.694,
+      "end": 995.597,
+      "duration": 0.902875
+    },
+    {
+      "start": 1002.72,
+      "end": 1003.25,
+      "duration": 0.53375
+    },
+    {
+      "start": 1008.36,
+      "end": 1008.9,
+      "duration": 0.540229
+    },
+    {
+      "start": 1011.97,
+      "end": 1012.58,
+      "duration": 0.6145
+    },
+    {
+      "start": 1030.87,
+      "end": 1031.55,
+      "duration": 0.68125
+    },
+    {
+      "start": 1032.81,
+      "end": 1033.62,
+      "duration": 0.809875
+    },
+    {
+      "start": 1044.87,
+      "end": 1045.69,
+      "duration": 0.820125
+    },
+    {
+      "start": 1050.71,
+      "end": 1051.24,
+      "duration": 0.527792
+    },
+    {
+      "start": 1061.33,
+      "end": 1061.97,
+      "duration": 0.637521
+    },
+    {
+      "start": 1065.1,
+      "end": 1065.76,
+      "duration": 0.660771
+    },
+    {
+      "start": 1075.83,
+      "end": 1076.47,
+      "duration": 0.630667
+    },
+    {
+      "start": 1093.63,
+      "end": 1094.2,
+      "duration": 0.563458
+    },
+    {
+      "start": 1100.69,
+      "end": 1101.35,
+      "duration": 0.66625
+    },
+    {
+      "start": 1109.61,
+      "end": 1110.19,
+      "duration": 0.576271
+    },
+    {
+      "start": 1112.54,
+      "end": 1113.19,
+      "duration": 0.649708
+    },
+    {
+      "start": 1123.83,
+      "end": 1124.43,
+      "duration": 0.602563
+    },
+    {
+      "start": 1152.63,
+      "end": 1153.26,
+      "duration": 0.637875
+    },
+    {
+      "start": 1156.78,
+      "end": 1157.37,
+      "duration": 0.588437
+    },
+    {
+      "start": 1161.48,
+      "end": 1162.03,
+      "duration": 0.548063
+    },
+    {
+      "start": 1163.11,
+      "end": 1163.79,
+      "duration": 0.683812
+    },
+    {
+      "start": 1167.26,
+      "end": 1167.92,
+      "duration": 0.657708
+    },
+    {
+      "start": 1177.8,
+      "end": 1178.3,
+      "duration": 0.503521
+    },
+    {
+      "start": 1182.05,
+      "end": 1182.56,
+      "duration": 0.512521
+    },
+    {
+      "start": 1186.01,
+      "end": 1186.55,
+      "duration": 0.533375
+    },
+    {
+      "start": 1205.08,
+      "end": 1205.68,
+      "duration": 0.599354
+    },
+    {
+      "start": 1212.37,
+      "end": 1212.93,
+      "duration": 0.558063
+    },
+    {
+      "start": 1247.88,
+      "end": 1248.63,
+      "duration": 0.74975
+    },
+    {
+      "start": 1279.77,
+      "end": 1280.32,
+      "duration": 0.550292
+    },
+    {
+      "start": 1297.07,
+      "end": 1297.74,
+      "duration": 0.667854
+    },
+    {
+      "start": 1305.16,
+      "end": 1306.09,
+      "duration": 0.927292
+    },
+    {
+      "start": 1896.96,
+      "end": 1897.7,
+      "duration": 0.734583
+    },
+    {
+      "start": 1897.75,
+      "end": 1898.83,
+      "duration": 1.07725
+    },
+    {
+      "start": 1971.49,
+      "end": 1972.08,
+      "duration": 0.584146
+    },
+    {
+      "start": 1973.89,
+      "end": 1977.53,
+      "duration": 3.64452
+    },
+    {
+      "start": 1980.94,
+      "end": 1982.23,
+      "duration": 1.29629
+    },
+    {
+      "start": 1983.08,
+      "end": 1983.7,
+      "duration": 0.620042
+    },
+    {
+      "start": 1985.37,
+      "end": 1987.06,
+      "duration": 1.68848
+    },
+    {
+      "start": 1990.42,
+      "end": 1994.09,
+      "duration": 3.66154
+    },
+    {
+      "start": 1994.35,
+      "end": 1997.52,
+      "duration": 3.16715
+    },
+    {
+      "start": 1997.9,
+      "end": 1999.18,
+      "duration": 1.27365
+    },
+    {
+      "start": 2002.79,
+      "end": 2003.33,
+      "duration": 0.540396
+    },
+    {
+      "start": 2023.22,
+      "end": 2023.91,
+      "duration": 0.687646
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      83,
+      83
+    ],
+    "avg": 78.0,
+    "min": 68
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/mVJjmyFfuts.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

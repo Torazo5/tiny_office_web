@@ -1,0 +1,232 @@
+{
+  "video_id": "GVDJ8O3lPBA",
+  "title": "Tash Sultana: Tiny Desk Concert",
+  "duration": 1537,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/GVDJ8O3lPBA.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 422.4,
+      "end": 439.2,
+      "duration": 16.80000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 443.52,
+      "end": 447.36,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 454.08,
+      "end": 458.88,
+      "duration": 4.800000000000011,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 459.35999999999996,
+      "end": 460.8,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1045.92,
+      "end": 1079.52,
+      "duration": 33.59999999999991,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1515.36,
+      "end": 1536.96,
+      "duration": 21.600000000000136,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 402.837,
+      "end": 403.589,
+      "duration": 0.752062
+    },
+    {
+      "start": 415.924,
+      "end": 416.598,
+      "duration": 0.6735
+    },
+    {
+      "start": 416.774,
+      "end": 417.73,
+      "duration": 0.956292
+    },
+    {
+      "start": 420.73,
+      "end": 422.073,
+      "duration": 1.34223
+    },
+    {
+      "start": 437.192,
+      "end": 438.418,
+      "duration": 1.22583
+    },
+    {
+      "start": 444.747,
+      "end": 445.597,
+      "duration": 0.849896
+    },
+    {
+      "start": 446.658,
+      "end": 447.187,
+      "duration": 0.529229
+    },
+    {
+      "start": 452.457,
+      "end": 453.54,
+      "duration": 1.08262
+    },
+    {
+      "start": 453.542,
+      "end": 454.046,
+      "duration": 0.503812
+    },
+    {
+      "start": 457.061,
+      "end": 457.655,
+      "duration": 0.593917
+    },
+    {
+      "start": 458.661,
+      "end": 459.819,
+      "duration": 1.15775
+    },
+    {
+      "start": 460.497,
+      "end": 463.424,
+      "duration": 2.92787
+    },
+    {
+      "start": 465.787,
+      "end": 466.72,
+      "duration": 0.933083
+    },
+    {
+      "start": 493.397,
+      "end": 494.144,
+      "duration": 0.7465
+    },
+    {
+      "start": 908.624,
+      "end": 909.977,
+      "duration": 1.35319
+    },
+    {
+      "start": 1060.38,
+      "end": 1061.21,
+      "duration": 0.835938
+    },
+    {
+      "start": 1062.05,
+      "end": 1062.85,
+      "duration": 0.797146
+    },
+    {
+      "start": 1063.64,
+      "end": 1064.66,
+      "duration": 1.01925
+    },
+    {
+      "start": 1067.93,
+      "end": 1068.76,
+      "duration": 0.826
+    },
+    {
+      "start": 1072.97,
+      "end": 1074.23,
+      "duration": 1.26335
+    },
+    {
+      "start": 1075.63,
+      "end": 1076.65,
+      "duration": 1.01285
+    },
+    {
+      "start": 1077.1,
+      "end": 1078.16,
+      "duration": 1.05312
+    },
+    {
+      "start": 1079.7,
+      "end": 1082.09,
+      "duration": 2.39292
+    },
+    {
+      "start": 1090.97,
+      "end": 1092.26,
+      "duration": 1.2816
+    },
+    {
+      "start": 1169.04,
+      "end": 1169.67,
+      "duration": 0.630292
+    },
+    {
+      "start": 1191.02,
+      "end": 1192.53,
+      "duration": 1.50321
+    },
+    {
+      "start": 1219.87,
+      "end": 1220.44,
+      "duration": 0.572771
+    },
+    {
+      "start": 1333.94,
+      "end": 1334.45,
+      "duration": 0.511583
+    },
+    {
+      "start": 1533.33,
+      "end": 1533.83,
+      "duration": 0.502437
+    },
+    {
+      "start": 1533.84,
+      "end": 1535.45,
+      "duration": 1.61779
+    },
+    {
+      "start": 1536.61,
+      "end": 1537.17,
+      "duration": 0.563292
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

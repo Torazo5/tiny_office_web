@@ -1,0 +1,129 @@
+{
+  "video_id": "0lNFHD0lUAQ",
+  "title": "Mitski: NPR Music Tiny Desk Concert",
+  "duration": 513,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/0lNFHD0lUAQ.mp3",
+  "description_songs": [
+    "Townie",
+    "Class Of 2013",
+    "Last Words Of A Shooting Star"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 4700 likes, matched all 3 description song(s), retained 3 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 130.07999999999998,
+      "end": 130.55999999999997,
+      "duration": 0.47999999999998977,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 133.44,
+      "end": 133.92,
+      "duration": 0.47999999999998977,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 259.2,
+      "end": 273.12,
+      "duration": 13.920000000000016,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 456.47999999999996,
+      "end": 481.92,
+      "duration": 25.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 2,
+      "song": "Townie",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 2,
+      "clip_end": 129.07999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 137,
+      "song": "Class Of 2013",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 133.92,
+      "clip_end": 258.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 273,
+      "song": "Last Words Of A Shooting Star",
+      "corroboration": 0,
+      "silence_match": 273.514,
+      "clip_start": 273.12,
+      "clip_end": 455.47999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 267.684,
+      "end": 269.379,
+      "duration": 1.69562
+    },
+    {
+      "start": 273.514,
+      "end": 274.476,
+      "duration": 0.962437
+    },
+    {
+      "start": 482.055,
+      "end": 483.064,
+      "duration": 1.00875
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      61,
+      76
+    ],
+    "avg": 65.7,
+    "min": 60
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/0lNFHD0lUAQ.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

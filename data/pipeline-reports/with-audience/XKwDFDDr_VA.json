@@ -1,0 +1,379 @@
+{
+  "video_id": "XKwDFDDr_VA",
+  "title": "Hadestown: NPR Music Tiny Desk Concert",
+  "duration": 1584,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/XKwDFDDr_VA.mp3",
+  "description_songs": [
+    "Way Down Hadestown",
+    "Come Home With Me/Wedding Song",
+    "When The Chips Are Down",
+    "Flowers",
+    "Why We Build The Wall"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2200 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 2,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 226.07999999999998,
+      "end": 227.99999999999997,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 266.4,
+      "end": 269.76,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 299.03999999999996,
+      "end": 393.6,
+      "duration": 94.56000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 729.6,
+      "end": 782.4,
+      "duration": 52.799999999999955,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 912.48,
+      "end": 945.12,
+      "duration": 32.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1175.04,
+      "end": 1205.76,
+      "duration": 30.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1211.52,
+      "end": 1219.2,
+      "duration": 7.680000000000064,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1221.12,
+      "end": 1288.8,
+      "duration": 67.68000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1340.1599999999999,
+      "end": 1343.04,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1480.32,
+      "end": 1483.2,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1538.3999999999999,
+      "end": 1571.04,
+      "duration": 32.6400000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1576.32,
+      "end": 1579.68,
+      "duration": 3.3600000000001273,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 5,
+      "song": "Way Down Hadestown",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 5,
+      "clip_end": 299.03999999999996,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 399,
+      "song": "Come Home With Me/Wedding Song",
+      "corroboration": 1,
+      "silence_match": 399.695,
+      "clip_start": 393.6,
+      "clip_end": 729.6,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 783,
+      "song": "When The Chips Are Down",
+      "corroboration": 1,
+      "silence_match": 778.829,
+      "clip_start": 782.4,
+      "clip_end": 912.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 952,
+      "song": "Flowers",
+      "corroboration": 1,
+      "silence_match": 953.105,
+      "clip_start": 945.12,
+      "clip_end": 1175.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 1292,
+      "song": "Why We Build The Wall",
+      "corroboration": 1,
+      "silence_match": 1287.55,
+      "clip_start": 1288.8,
+      "clip_end": 1538.3999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 263.537,
+      "end": 264.919,
+      "duration": 1.38162
+    },
+    {
+      "start": 267.192,
+      "end": 268.162,
+      "duration": 0.969687
+    },
+    {
+      "start": 289.249,
+      "end": 290.4,
+      "duration": 1.15131
+    },
+    {
+      "start": 388.758,
+      "end": 390.167,
+      "duration": 1.40885
+    },
+    {
+      "start": 393.716,
+      "end": 395.971,
+      "duration": 2.25533
+    },
+    {
+      "start": 397.114,
+      "end": 397.663,
+      "duration": 0.549146
+    },
+    {
+      "start": 397.776,
+      "end": 398.342,
+      "duration": 0.565021
+    },
+    {
+      "start": 399.695,
+      "end": 400.335,
+      "duration": 0.639958
+    },
+    {
+      "start": 400.413,
+      "end": 400.998,
+      "duration": 0.584917
+    },
+    {
+      "start": 402.351,
+      "end": 402.997,
+      "duration": 0.646458
+    },
+    {
+      "start": 404.334,
+      "end": 404.991,
+      "duration": 0.657104
+    },
+    {
+      "start": 408.238,
+      "end": 408.865,
+      "duration": 0.6265
+    },
+    {
+      "start": 410.905,
+      "end": 411.555,
+      "duration": 0.649729
+    },
+    {
+      "start": 418.843,
+      "end": 419.451,
+      "duration": 0.607542
+    },
+    {
+      "start": 630.853,
+      "end": 631.848,
+      "duration": 0.994896
+    },
+    {
+      "start": 632.845,
+      "end": 633.82,
+      "duration": 0.975208
+    },
+    {
+      "start": 633.947,
+      "end": 634.479,
+      "duration": 0.532854
+    },
+    {
+      "start": 634.594,
+      "end": 635.132,
+      "duration": 0.538792
+    },
+    {
+      "start": 641.852,
+      "end": 642.519,
+      "duration": 0.667396
+    },
+    {
+      "start": 756.896,
+      "end": 757.545,
+      "duration": 0.649271
+    },
+    {
+      "start": 778.829,
+      "end": 783.327,
+      "duration": 4.49781
+    },
+    {
+      "start": 911.48,
+      "end": 912.057,
+      "duration": 0.57675
+    },
+    {
+      "start": 938.644,
+      "end": 939.243,
+      "duration": 0.599479
+    },
+    {
+      "start": 944.061,
+      "end": 944.677,
+      "duration": 0.616625
+    },
+    {
+      "start": 944.984,
+      "end": 951.024,
+      "duration": 6.03967
+    },
+    {
+      "start": 953.105,
+      "end": 953.864,
+      "duration": 0.759396
+    },
+    {
+      "start": 958.703,
+      "end": 959.527,
+      "duration": 0.824229
+    },
+    {
+      "start": 1106.36,
+      "end": 1107.54,
+      "duration": 1.18754
+    },
+    {
+      "start": 1135.89,
+      "end": 1138.26,
+      "duration": 2.36419
+    },
+    {
+      "start": 1173.91,
+      "end": 1175.18,
+      "duration": 1.27146
+    },
+    {
+      "start": 1207.96,
+      "end": 1212.24,
+      "duration": 4.28244
+    },
+    {
+      "start": 1230.42,
+      "end": 1231.14,
+      "duration": 0.719229
+    },
+    {
+      "start": 1280.68,
+      "end": 1281.24,
+      "duration": 0.567729
+    },
+    {
+      "start": 1287.55,
+      "end": 1292.43,
+      "duration": 4.87265
+    },
+    {
+      "start": 1527.52,
+      "end": 1528.22,
+      "duration": 0.704
+    },
+    {
+      "start": 1568.03,
+      "end": 1577.11,
+      "duration": 9.07942
+    },
+    {
+      "start": 1579.54,
+      "end": 1583.84,
+      "duration": 4.30921
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      83,
+      83,
+      83,
+      83
+    ],
+    "avg": 77.0,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

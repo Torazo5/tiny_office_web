@@ -1,0 +1,391 @@
+{
+  "video_id": "Vrk2Q9AZrYI",
+  "title": "SWV: Tiny Desk Concert",
+  "duration": 1514,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/Vrk2Q9AZrYI.mp3",
+  "description_songs": [
+    "I'm So Into You",
+    "Right Here (Human Nature Radio Mix)",
+    "You're the One",
+    "You're Always On My Mind",
+    "Rain",
+    "Weak",
+    "Anything (Old Skool Radio Version)"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 5600 likes, matched all 7 description song(s), retained 7 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 133.92,
+      "end": 135.83999999999997,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 137.76,
+      "end": 138.23999999999998,
+      "duration": 0.47999999999998977,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 145.44,
+      "end": 147.35999999999999,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 231.84,
+      "end": 239.04,
+      "duration": 7.199999999999989,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 550.56,
+      "end": 554.88,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 555.36,
+      "end": 559.68,
+      "duration": 4.319999999999936,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 560.16,
+      "end": 562.56,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 563.04,
+      "end": 565.4399999999999,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 566.88,
+      "end": 591.84,
+      "duration": 24.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 606.24,
+      "end": 608.16,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 608.64,
+      "end": 610.08,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 613.92,
+      "end": 615.36,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 620.64,
+      "end": 623.04,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 623.52,
+      "end": 625.92,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 626.88,
+      "end": 628.32,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 832.8,
+      "end": 833.76,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 845.76,
+      "end": 847.1999999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 848.64,
+      "end": 850.08,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 850.56,
+      "end": 852.48,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 852.9599999999999,
+      "end": 854.4,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 855.8399999999999,
+      "end": 857.76,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 863.52,
+      "end": 864.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 869.76,
+      "end": 871.1999999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 883.1999999999999,
+      "end": 888.0,
+      "duration": 4.800000000000068,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1241.28,
+      "end": 1297.44,
+      "duration": 56.16000000000008,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1399.6799999999998,
+      "end": 1406.3999999999999,
+      "duration": 6.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1475.04,
+      "end": 1500.48,
+      "duration": 25.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1505.76,
+      "end": 1512.48,
+      "duration": 6.720000000000027,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "I'm So Into You",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 137.76,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 153,
+      "song": "Right Here (Human Nature Radio Mix)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 147.35999999999999,
+      "clip_end": 231.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 287,
+      "song": "You're the One",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 287,
+      "clip_end": 370,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 370,
+      "song": "You're Always On My Mind",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 370,
+      "clip_end": 566.88,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 646,
+      "song": "Rain",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 628.32,
+      "clip_end": 832.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 889,
+      "song": "Weak",
+      "corroboration": 0,
+      "silence_match": 887.933,
+      "clip_start": 888.0,
+      "clip_end": 1241.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 1299,
+      "song": "Anything (Old Skool Radio Version)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1297.44,
+      "clip_end": 1399.6799999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 360.004,
+      "end": 360.684,
+      "duration": 0.68
+    },
+    {
+      "start": 573.634,
+      "end": 574.141,
+      "duration": 0.507396
+    },
+    {
+      "start": 595.437,
+      "end": 596.043,
+      "duration": 0.605979
+    },
+    {
+      "start": 629.378,
+      "end": 630.174,
+      "duration": 0.795625
+    },
+    {
+      "start": 858.096,
+      "end": 859.083,
+      "duration": 0.986187
+    },
+    {
+      "start": 862.913,
+      "end": 863.515,
+      "duration": 0.602375
+    },
+    {
+      "start": 887.933,
+      "end": 889.115,
+      "duration": 1.18202
+    },
+    {
+      "start": 1261.1,
+      "end": 1261.76,
+      "duration": 0.660438
+    },
+    {
+      "start": 1285.69,
+      "end": 1286.28,
+      "duration": 0.589604
+    },
+    {
+      "start": 1495.48,
+      "end": 1506.6,
+      "duration": 11.1175
+    },
+    {
+      "start": 1512.23,
+      "end": 1513.69,
+      "duration": 1.45748
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      45,
+      53,
+      61,
+      76,
+      61
+    ],
+    "avg": 58.6,
+    "min": 45
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

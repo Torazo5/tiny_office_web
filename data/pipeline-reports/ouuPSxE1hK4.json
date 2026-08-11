@@ -2,7 +2,7 @@
   "video_id": "ouuPSxE1hK4",
   "title": "Bad Bunny: Tiny Desk Concert",
   "duration": 2021,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/ouuPSxE1hK4.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/ouuPSxE1hK4.mp3",
   "description_songs": [
     "PIToRRO DE COCO",
     "VOY A LLeVARTE PA PR",
@@ -304,12 +304,13 @@
       "corroboration": 1,
       "silence_match": 5.41269,
       "clip_start": 11,
-      "clip_end": 216.95999999999998,
+      "clip_end": 215.95999999999998,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 271,
@@ -317,12 +318,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 257.28000000000003,
-      "clip_end": 418.56,
+      "clip_end": 417.56,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 458,
@@ -330,12 +332,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 439.68,
-      "clip_end": 651.36,
+      "clip_end": 650.36,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 751,
@@ -343,12 +346,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 740.16,
-      "clip_end": 981.12,
+      "clip_end": 980.12,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 1309,
@@ -356,12 +360,13 @@
       "corroboration": 2,
       "silence_match": null,
       "clip_start": 1325.76,
-      "clip_end": 1802.8799999999999,
+      "clip_end": 1801.8799999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -1107,7 +1112,10 @@
     "avg": 70.8,
     "min": 68
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/ouuPSxE1hK4.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

@@ -2,7 +2,7 @@
   "video_id": "C3lcprigQ0E",
   "title": "Anthony Hamilton: NPR Music Tiny Desk Concert",
   "duration": 1228,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/C3lcprigQ0E.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/C3lcprigQ0E.mp3",
   "description_songs": [
     "Amen",
     "Best Of Me",
@@ -100,12 +100,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 0,
-      "clip_end": 202.56,
+      "clip_end": 201.56,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 53
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 258,
@@ -113,12 +114,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 258.24,
-      "clip_end": 507.84,
+      "clip_end": 506.84,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 549,
@@ -126,12 +128,13 @@
       "corroboration": 0,
       "silence_match": 548.693,
       "clip_start": 546.24,
-      "clip_end": 767.04,
+      "clip_end": 766.04,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 846,
@@ -139,12 +142,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 840.96,
-      "clip_end": 1146.24,
+      "clip_end": 1145.24,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -344,7 +348,10 @@
     "avg": 62.8,
     "min": 53
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/C3lcprigQ0E.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

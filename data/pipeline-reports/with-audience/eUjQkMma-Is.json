@@ -1,0 +1,117 @@
+{
+  "video_id": "eUjQkMma-Is",
+  "title": "Parcels: Tiny Desk Concert",
+  "duration": 1118,
+  "audio_path": null,
+  "description_songs": [
+    "Leaveyourlove",
+    "Tieduprightnow",
+    "Ifyoucall",
+    "Yougotmefeeling",
+    "Gamesofluck",
+    "Finallyover"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 551 likes, matched all 6 description song(s), retained 6 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": null,
+  "boundary_spans": [],
+  "candidates": [
+    {
+      "seconds": 10,
+      "song": "Leaveyourlove",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 10,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 64,
+      "song": "Tieduprightnow",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 64,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 250,
+      "song": "Ifyoucall",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 250,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 417,
+      "song": "Yougotmefeeling",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 417,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 653,
+      "song": "Gamesofluck",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 653,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 876,
+      "song": "Finallyover",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 876,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    }
+  ],
+  "silence_intervals": [],
+  "confidence": {
+    "scores": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "avg": 45.0,
+    "min": 45
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

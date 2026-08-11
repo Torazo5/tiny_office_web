@@ -2,18 +2,16 @@
   "video_id": "vWLJeqLPfSU",
   "title": "Khruangbin: NPR Music Tiny Desk Concert",
   "duration": 693,
-  "audio_path": null,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/vWLJeqLPfSU.mp3",
   "description_songs": [
     "Maria Tambi\u00e9n",
     "August 10",
     "White Gloves"
   ],
-  "method": "manual",
+  "method": "yamnet",
   "resolve_notes": {
     "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
-    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
-    "C_silence": "failed \u2014 not enough songs or no silence detected",
-    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+    "B_yamnet": "ok \u2014 2 usable episode(s), took top 2; trailing outro excluded"
   },
   "comment_filter": {
     "cross_checked": true,
@@ -22,16 +20,124 @@
     "rejected": 0,
     "filtered_entries": 0
   },
-  "refine_method": null,
-  "boundary_spans": [],
-  "candidates": [],
-  "silence_intervals": [],
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 188.16,
+      "end": 196.32,
+      "duration": 8.159999999999997,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 453.59999999999997,
+      "end": 463.2,
+      "duration": 9.600000000000023,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 657.12,
+      "end": 683.04,
+      "duration": 25.91999999999996,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Maria Tambi\u00e9n",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 187.16,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 188.16,
+      "song": "August 10",
+      "corroboration": 0,
+      "silence_match": 186.568,
+      "clip_start": 196.32,
+      "clip_end": 452.59999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 453.59999999999997,
+      "song": "White Gloves",
+      "corroboration": 0,
+      "silence_match": 452.394,
+      "clip_start": 463.2,
+      "clip_end": 656.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 186.568,
+      "end": 187.275,
+      "duration": 0.706979
+    },
+    {
+      "start": 196.3,
+      "end": 197.373,
+      "duration": 1.0736
+    },
+    {
+      "start": 197.45,
+      "end": 198.096,
+      "duration": 0.645646
+    },
+    {
+      "start": 452.394,
+      "end": 453.059,
+      "duration": 0.664542
+    },
+    {
+      "start": 463.352,
+      "end": 467.855,
+      "duration": 4.50217
+    },
+    {
+      "start": 654.279,
+      "end": 657.395,
+      "duration": 3.1159
+    },
+    {
+      "start": 683.193,
+      "end": 692.825,
+      "duration": 9.6324
+    }
+  ],
   "confidence": {
-    "scores": [],
-    "avg": 0,
-    "min": 0
+    "scores": [
+      43,
+      66,
+      66
+    ],
+    "avg": 58.3,
+    "min": 43
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
 }

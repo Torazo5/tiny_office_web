@@ -1,0 +1,302 @@
+{
+  "video_id": "QKFjQbCKEgA",
+  "title": "Maverick City Music: Tiny Desk Concert",
+  "duration": 1142,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/QKFjQbCKEgA.mp3",
+  "description_songs": [
+    "Man of Your Word",
+    "Million Little Miracles",
+    "Jireh",
+    "Kingdom\" (feat. Kirk Franklin)"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 6 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 319.68,
+      "end": 333.6,
+      "duration": 13.920000000000016,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 604.3199999999999,
+      "end": 605.76,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 606.24,
+      "end": 608.16,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 615.36,
+      "end": 616.8,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 622.56,
+      "end": 624.0,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 659.04,
+      "end": 661.92,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 662.4,
+      "end": 666.24,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 668.64,
+      "end": 670.56,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 685.4399999999999,
+      "end": 687.84,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 691.1999999999999,
+      "end": 696.0,
+      "duration": 4.800000000000068,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 696.48,
+      "end": 703.68,
+      "duration": 7.199999999999932,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 708.48,
+      "end": 723.84,
+      "duration": 15.360000000000014,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 724.3199999999999,
+      "end": 740.16,
+      "duration": 15.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1090.56,
+      "end": 1095.84,
+      "duration": 5.279999999999973,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1106.3999999999999,
+      "end": 1109.28,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1115.04,
+      "end": 1116.48,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1121.28,
+      "end": 1122.72,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1123.2,
+      "end": 1128.0,
+      "duration": 4.7999999999999545,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1132.32,
+      "end": 1133.28,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1137.6,
+      "end": 1140.96,
+      "duration": 3.3600000000001273,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Man of Your Word",
+      "corroboration": 0,
+      "silence_match": 0.433083,
+      "clip_start": 0.0,
+      "clip_end": 318.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 319.68,
+      "song": "Million Little Miracles",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 333.6,
+      "clip_end": 695.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1090.56,
+      "song": "Jireh",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1109.28,
+      "clip_end": 1122.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 1,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1123.2,
+      "song": "Kingdom\" (feat. Kirk Franklin)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1140.96,
+      "clip_end": 1142,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.433083,
+      "end": 1.1499,
+      "duration": 0.716812
+    },
+    {
+      "start": 186.367,
+      "end": 187.012,
+      "duration": 0.645625
+    },
+    {
+      "start": 187.296,
+      "end": 187.826,
+      "duration": 0.529292
+    },
+    {
+      "start": 189.755,
+      "end": 190.277,
+      "duration": 0.521854
+    },
+    {
+      "start": 190.493,
+      "end": 191.13,
+      "duration": 0.637375
+    },
+    {
+      "start": 195.458,
+      "end": 196.118,
+      "duration": 0.660167
+    },
+    {
+      "start": 196.342,
+      "end": 197.398,
+      "duration": 1.05679
+    },
+    {
+      "start": 736.348,
+      "end": 736.975,
+      "duration": 0.627021
+    },
+    {
+      "start": 740.55,
+      "end": 741.476,
+      "duration": 0.925479
+    },
+    {
+      "start": 1132.91,
+      "end": 1133.5,
+      "duration": 0.591292
+    },
+    {
+      "start": 1133.6,
+      "end": 1138.44,
+      "duration": 4.84321
+    },
+    {
+      "start": 1140.86,
+      "end": 1141.9,
+      "duration": 1.03438
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      51,
+      1,
+      0
+    ],
+    "avg": 27.5,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/QKFjQbCKEgA.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

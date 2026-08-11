@@ -1,0 +1,171 @@
+{
+  "video_id": "pre9lE3Wa78",
+  "title": "Raveena: NPR Music Tiny Desk Concert",
+  "duration": 1045,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/pre9lE3Wa78.mp3",
+  "description_songs": [
+    "Honey",
+    "Bloom",
+    "Still Dreaming"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 112 likes, matched all 3 description song(s), retained 3 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 1,
+    "rejected": 1,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 325.92,
+      "end": 328.8,
+      "duration": 2.8799999999999955,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 330.71999999999997,
+      "end": 346.56,
+      "duration": 15.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 351.84,
+      "end": 355.2,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 356.15999999999997,
+      "end": 357.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 360.47999999999996,
+      "end": 364.32,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 366.24,
+      "end": 371.04,
+      "duration": 4.800000000000011,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 739.1999999999999,
+      "end": 744.48,
+      "duration": 5.280000000000086,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1018.56,
+      "end": 1030.08,
+      "duration": 11.519999999999982,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 13,
+      "song": "Honey",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 13,
+      "clip_end": 325.92,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 382,
+      "song": "Bloom",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 371.04,
+      "clip_end": 739.1999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 746,
+      "song": "Still Dreaming",
+      "corroboration": 0,
+      "silence_match": 746.28,
+      "clip_start": 744.48,
+      "clip_end": 1018.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.741979,
+      "duration": 0.741979
+    },
+    {
+      "start": 737.83,
+      "end": 738.356,
+      "duration": 0.526208
+    },
+    {
+      "start": 746.28,
+      "end": 746.785,
+      "duration": 0.504167
+    },
+    {
+      "start": 746.864,
+      "end": 747.778,
+      "duration": 0.914917
+    },
+    {
+      "start": 747.856,
+      "end": 748.74,
+      "duration": 0.883625
+    },
+    {
+      "start": 748.82,
+      "end": 749.468,
+      "duration": 0.647771
+    },
+    {
+      "start": 1030.92,
+      "end": 1044.51,
+      "duration": 13.59
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      76
+    ],
+    "avg": 63.3,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

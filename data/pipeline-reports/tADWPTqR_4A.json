@@ -1,0 +1,185 @@
+{
+  "video_id": "tADWPTqR_4A",
+  "title": "Julien Baker: NPR Music Tiny Desk Concert",
+  "duration": 786,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/tADWPTqR_4A.mp3",
+  "description_songs": [
+    "Sprained Ankle",
+    "Funeral Pyre",
+    "Something"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 53 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 1,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 170.4,
+      "end": 181.43999999999997,
+      "duration": 11.039999999999964,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 191.51999999999998,
+      "end": 192.95999999999998,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 194.4,
+      "end": 195.83999999999997,
+      "duration": 1.4399999999999693,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 199.2,
+      "end": 200.64,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 459.35999999999996,
+      "end": 471.84,
+      "duration": 12.480000000000018,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 480.47999999999996,
+      "end": 486.24,
+      "duration": 5.760000000000048,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 736.8,
+      "end": 752.16,
+      "duration": 15.360000000000014,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Sprained Ankle",
+      "corroboration": 0,
+      "silence_match": 5.68596,
+      "clip_start": 0,
+      "clip_end": 169.4,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 181,
+      "song": "Funeral Pyre",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 200.64,
+      "clip_end": 458.35999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 469,
+      "song": "Something",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 486.24,
+      "clip_end": 735.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 5.68596,
+      "end": 7.32975,
+      "duration": 1.64379
+    },
+    {
+      "start": 197.154,
+      "end": 198.072,
+      "duration": 0.917875
+    },
+    {
+      "start": 455.491,
+      "end": 459.248,
+      "duration": 3.75694
+    },
+    {
+      "start": 478.745,
+      "end": 480.21,
+      "duration": 1.46592
+    },
+    {
+      "start": 485.97,
+      "end": 486.742,
+      "duration": 0.772208
+    },
+    {
+      "start": 487.854,
+      "end": 488.43,
+      "duration": 0.575292
+    },
+    {
+      "start": 488.55,
+      "end": 492.338,
+      "duration": 3.7885
+    },
+    {
+      "start": 492.36,
+      "end": 497.414,
+      "duration": 5.05396
+    },
+    {
+      "start": 735.54,
+      "end": 736.09,
+      "duration": 0.550187
+    },
+    {
+      "start": 752.09,
+      "end": 753.319,
+      "duration": 1.22931
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      61,
+      61
+    ],
+    "avg": 63.3,
+    "min": 61
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/tADWPTqR_4A.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

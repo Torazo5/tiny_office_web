@@ -2,7 +2,7 @@
   "video_id": "ferZnZ0_rSM",
   "title": "Anderson .Paak & The Free Nationals: NPR Music Tiny Desk Concert",
   "duration": 938,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/ferZnZ0_rSM.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/ferZnZ0_rSM.mp3",
   "description_songs": [
     "Come Down",
     "Heart Don't Stand A Chance",
@@ -94,12 +94,13 @@
       "corroboration": 0,
       "silence_match": 7.11515,
       "clip_start": 8.16,
-      "clip_end": 176.64,
+      "clip_end": 175.64,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 66
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 176.64,
@@ -107,12 +108,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 223.67999999999998,
-      "clip_end": 404.64,
+      "clip_end": 403.64,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 51
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 404.64,
@@ -120,12 +122,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 454.56,
-      "clip_end": 641.28,
+      "clip_end": 640.28,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 51
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 641.28,
@@ -133,12 +136,13 @@
       "corroboration": 0,
       "silence_match": 639.672,
       "clip_start": 708.96,
-      "clip_end": 907.68,
+      "clip_end": 906.68,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 66
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -328,7 +332,10 @@
     "avg": 58.5,
     "min": 51
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/ferZnZ0_rSM.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

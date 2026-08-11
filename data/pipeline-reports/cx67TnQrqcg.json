@@ -1,0 +1,267 @@
+{
+  "video_id": "cx67TnQrqcg",
+  "title": "The Lion King: Tiny Desk Concert",
+  "duration": 1155,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/cx67TnQrqcg.mp3",
+  "description_songs": [
+    "Circle of Life",
+    "They Live in You",
+    "Can You Feel the Love Tonight",
+    "Hakuna Matata",
+    "Endless Night / Shadowland",
+    "Circle of Life\u201d (Reprise)"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 6 description songs (2 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 6 usable episode(s), took top 5; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 2,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 15.36,
+      "end": 16.8,
+      "duration": 1.4400000000000013,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 216.95999999999998,
+      "end": 226.07999999999998,
+      "duration": 9.120000000000005,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 370.08,
+      "end": 454.08,
+      "duration": 84.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 592.3199999999999,
+      "end": 660.96,
+      "duration": 68.6400000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 728.64,
+      "end": 732.48,
+      "duration": 3.840000000000032,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 738.24,
+      "end": 742.08,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 745.4399999999999,
+      "end": 748.3199999999999,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 749.28,
+      "end": 753.12,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 800.16,
+      "end": 804.0,
+      "duration": 3.840000000000032,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1036.32,
+      "end": 1045.92,
+      "duration": 9.600000000000136,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1119.84,
+      "end": 1148.6399999999999,
+      "duration": 28.799999999999955,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Circle of Life",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 16.8,
+      "clip_end": 215.95999999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 216.95999999999998,
+      "song": "They Live in You",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 226.07999999999998,
+      "clip_end": 369.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 370.08,
+      "song": "Can You Feel the Love Tonight",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 454.08,
+      "clip_end": 591.3199999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 592.3199999999999,
+      "song": "Hakuna Matata",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 660.96,
+      "clip_end": 727.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 728.64,
+      "song": "Endless Night / Shadowland",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 748.3199999999999,
+      "clip_end": 799.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1036.32,
+      "song": "Circle of Life\u201d (Reprise)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1045.92,
+      "clip_end": 1118.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 1.1439,
+      "duration": 1.1439
+    },
+    {
+      "start": 400.494,
+      "end": 401.356,
+      "duration": 0.862021
+    },
+    {
+      "start": 448.714,
+      "end": 449.271,
+      "duration": 0.557042
+    },
+    {
+      "start": 453.606,
+      "end": 454.531,
+      "duration": 0.924875
+    },
+    {
+      "start": 577.126,
+      "end": 577.628,
+      "duration": 0.501833
+    },
+    {
+      "start": 609.145,
+      "end": 609.693,
+      "duration": 0.547375
+    },
+    {
+      "start": 654.352,
+      "end": 655.118,
+      "duration": 0.765583
+    },
+    {
+      "start": 804.573,
+      "end": 809.805,
+      "duration": 5.23192
+    },
+    {
+      "start": 1015.98,
+      "end": 1016.53,
+      "duration": 0.549146
+    },
+    {
+      "start": 1113.6,
+      "end": 1114.14,
+      "duration": 0.541604
+    },
+    {
+      "start": 1148.65,
+      "end": 1154.62,
+      "duration": 5.97415
+    }
+  ],
+  "confidence": {
+    "scores": [
+      66,
+      51,
+      51,
+      51,
+      51,
+      51
+    ],
+    "avg": 53.5,
+    "min": 51
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/cx67TnQrqcg.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

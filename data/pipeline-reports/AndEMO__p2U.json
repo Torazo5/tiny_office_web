@@ -1,0 +1,346 @@
+{
+  "video_id": "AndEMO__p2U",
+  "title": "Suzanne Vega: NPR Music Tiny Desk Concert",
+  "duration": 1101,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/AndEMO__p2U.mp3",
+  "description_songs": [
+    "Luka",
+    "Crack In The Wall",
+    "I Never Wear White",
+    "Tom's Diner"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 4 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 7.68,
+      "duration": 7.68,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 8.64,
+      "end": 12.0,
+      "duration": 3.3599999999999994,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 15.84,
+      "end": 17.76,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 18.72,
+      "end": 20.64,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 248.64,
+      "end": 263.52,
+      "duration": 14.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 274.08,
+      "end": 290.40000000000003,
+      "duration": 16.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 565.92,
+      "end": 576.48,
+      "duration": 10.56000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 583.68,
+      "end": 588.0,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 588.48,
+      "end": 590.88,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 594.72,
+      "end": 597.6,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 784.8,
+      "end": 813.6,
+      "duration": 28.800000000000068,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 888.0,
+      "end": 889.4399999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 998.88,
+      "end": 1000.3199999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1057.44,
+      "end": 1088.16,
+      "duration": 30.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 7.68,
+      "song": "Luka",
+      "corroboration": 0,
+      "silence_match": 8.00104,
+      "clip_start": 20.64,
+      "clip_end": 247.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 248.64,
+      "song": "Crack In The Wall",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 263.52,
+      "clip_end": 273.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 1,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 565.92,
+      "song": "I Never Wear White",
+      "corroboration": 0,
+      "silence_match": 560.0,
+      "clip_start": 576.48,
+      "clip_end": 783.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 784.8,
+      "song": "Tom's Diner",
+      "corroboration": 0,
+      "silence_match": 783.166,
+      "clip_start": 813.6,
+      "clip_end": 1056.44,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.5375,
+      "end": 1.60437,
+      "duration": 1.06688
+    },
+    {
+      "start": 5.78992,
+      "end": 6.40506,
+      "duration": 0.615146
+    },
+    {
+      "start": 8.00104,
+      "end": 9.33877,
+      "duration": 1.33773
+    },
+    {
+      "start": 9.8059,
+      "end": 10.3879,
+      "duration": 0.581979
+    },
+    {
+      "start": 12.2051,
+      "end": 12.822,
+      "duration": 0.616875
+    },
+    {
+      "start": 21.7484,
+      "end": 22.6224,
+      "duration": 0.873979
+    },
+    {
+      "start": 23.8221,
+      "end": 26.1133,
+      "duration": 2.29119
+    },
+    {
+      "start": 264.678,
+      "end": 266.125,
+      "duration": 1.44725
+    },
+    {
+      "start": 266.912,
+      "end": 268.216,
+      "duration": 1.30412
+    },
+    {
+      "start": 268.908,
+      "end": 269.661,
+      "duration": 0.753208
+    },
+    {
+      "start": 269.719,
+      "end": 270.5,
+      "duration": 0.780813
+    },
+    {
+      "start": 270.512,
+      "end": 271.288,
+      "duration": 0.775937
+    },
+    {
+      "start": 283.902,
+      "end": 284.436,
+      "duration": 0.533854
+    },
+    {
+      "start": 290.65,
+      "end": 294.506,
+      "duration": 3.85656
+    },
+    {
+      "start": 560.0,
+      "end": 560.505,
+      "duration": 0.504188
+    },
+    {
+      "start": 576.68,
+      "end": 577.338,
+      "duration": 0.657792
+    },
+    {
+      "start": 577.364,
+      "end": 580.14,
+      "duration": 2.77631
+    },
+    {
+      "start": 580.148,
+      "end": 581.25,
+      "duration": 1.10162
+    },
+    {
+      "start": 581.25,
+      "end": 584.527,
+      "duration": 3.27758
+    },
+    {
+      "start": 588.204,
+      "end": 588.733,
+      "duration": 0.528896
+    },
+    {
+      "start": 591.129,
+      "end": 593.336,
+      "duration": 2.20667
+    },
+    {
+      "start": 593.337,
+      "end": 594.009,
+      "duration": 0.672833
+    },
+    {
+      "start": 594.339,
+      "end": 596.581,
+      "duration": 2.24167
+    },
+    {
+      "start": 596.603,
+      "end": 597.172,
+      "duration": 0.568458
+    },
+    {
+      "start": 783.166,
+      "end": 783.991,
+      "duration": 0.825625
+    },
+    {
+      "start": 798.676,
+      "end": 800.711,
+      "duration": 2.03479
+    },
+    {
+      "start": 810.412,
+      "end": 814.849,
+      "duration": 4.437
+    },
+    {
+      "start": 1056.25,
+      "end": 1057.29,
+      "duration": 1.03483
+    },
+    {
+      "start": 1084.26,
+      "end": 1100.5,
+      "duration": 16.2414
+    }
+  ],
+  "confidence": {
+    "scores": [
+      66,
+      1,
+      66,
+      66
+    ],
+    "avg": 49.8,
+    "min": 1
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/AndEMO__p2U.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

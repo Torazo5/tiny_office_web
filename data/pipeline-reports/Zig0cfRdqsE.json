@@ -1,0 +1,405 @@
+{
+  "video_id": "Zig0cfRdqsE",
+  "title": "Maxwell: Tiny Desk Concert",
+  "duration": 1814,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/Zig0cfRdqsE.mp3",
+  "description_songs": [
+    "Sumthin' Sumthin",
+    "Bad Habits",
+    "Lifetime",
+    "Pretty Wings",
+    "Simply Beautiful",
+    "Ascension (Don't Ever Wonder)"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 6 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 9 usable episode(s), took top 5; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 476.15999999999997,
+      "end": 516.48,
+      "duration": 40.32000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 738.24,
+      "end": 749.28,
+      "duration": 11.039999999999964,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1031.52,
+      "end": 1043.52,
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1077.12,
+      "end": 1116.48,
+      "duration": 39.36000000000013,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1307.52,
+      "end": 1352.1599999999999,
+      "duration": 44.63999999999987,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1383.36,
+      "end": 1398.72,
+      "duration": 15.360000000000127,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1567.6799999999998,
+      "end": 1569.12,
+      "duration": 1.4400000000000546,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1577.76,
+      "end": 1578.24,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1585.44,
+      "end": 1607.04,
+      "duration": 21.59999999999991,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1791.84,
+      "end": 1801.44,
+      "duration": 9.600000000000136,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Sumthin' Sumthin",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 475.15999999999997,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 476.15999999999997,
+      "song": "Bad Habits",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 516.48,
+      "clip_end": 737.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1077.12,
+      "song": "Lifetime",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1116.48,
+      "clip_end": 1306.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1307.52,
+      "song": "Pretty Wings",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1352.1599999999999,
+      "clip_end": 1382.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1383.36,
+      "song": "Simply Beautiful",
+      "corroboration": 0,
+      "silence_match": 1383.89,
+      "clip_start": 1398.72,
+      "clip_end": 1566.6799999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1585.44,
+      "song": "Ascension (Don't Ever Wonder)",
+      "corroboration": 0,
+      "silence_match": 1581.99,
+      "clip_start": 1607.04,
+      "clip_end": 1790.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 462.921,
+      "end": 463.863,
+      "duration": 0.941854
+    },
+    {
+      "start": 483.496,
+      "end": 484.025,
+      "duration": 0.529271
+    },
+    {
+      "start": 485.696,
+      "end": 486.204,
+      "duration": 0.507542
+    },
+    {
+      "start": 489.648,
+      "end": 490.451,
+      "duration": 0.802792
+    },
+    {
+      "start": 496.465,
+      "end": 497.05,
+      "duration": 0.585021
+    },
+    {
+      "start": 501.044,
+      "end": 501.988,
+      "duration": 0.943437
+    },
+    {
+      "start": 503.659,
+      "end": 504.178,
+      "duration": 0.519021
+    },
+    {
+      "start": 749.363,
+      "end": 750.005,
+      "duration": 0.642146
+    },
+    {
+      "start": 1064.31,
+      "end": 1064.94,
+      "duration": 0.632771
+    },
+    {
+      "start": 1083.66,
+      "end": 1084.88,
+      "duration": 1.22208
+    },
+    {
+      "start": 1086.47,
+      "end": 1087.06,
+      "duration": 0.582083
+    },
+    {
+      "start": 1087.64,
+      "end": 1088.34,
+      "duration": 0.697937
+    },
+    {
+      "start": 1092.58,
+      "end": 1093.46,
+      "duration": 0.883562
+    },
+    {
+      "start": 1095.71,
+      "end": 1096.55,
+      "duration": 0.844229
+    },
+    {
+      "start": 1099.88,
+      "end": 1100.8,
+      "duration": 0.919833
+    },
+    {
+      "start": 1112.18,
+      "end": 1113.47,
+      "duration": 1.29604
+    },
+    {
+      "start": 1114.56,
+      "end": 1115.22,
+      "duration": 0.658083
+    },
+    {
+      "start": 1116.36,
+      "end": 1117.34,
+      "duration": 0.983833
+    },
+    {
+      "start": 1217.38,
+      "end": 1217.89,
+      "duration": 0.506
+    },
+    {
+      "start": 1313.66,
+      "end": 1314.83,
+      "duration": 1.16842
+    },
+    {
+      "start": 1317.7,
+      "end": 1318.49,
+      "duration": 0.786792
+    },
+    {
+      "start": 1319.07,
+      "end": 1320.38,
+      "duration": 1.30662
+    },
+    {
+      "start": 1322.46,
+      "end": 1323.03,
+      "duration": 0.579146
+    },
+    {
+      "start": 1327.41,
+      "end": 1328.65,
+      "duration": 1.24687
+    },
+    {
+      "start": 1330.07,
+      "end": 1330.92,
+      "duration": 0.848417
+    },
+    {
+      "start": 1333.1,
+      "end": 1333.99,
+      "duration": 0.888562
+    },
+    {
+      "start": 1339.93,
+      "end": 1340.55,
+      "duration": 0.617833
+    },
+    {
+      "start": 1342.11,
+      "end": 1343.01,
+      "duration": 0.892396
+    },
+    {
+      "start": 1347.1,
+      "end": 1348.54,
+      "duration": 1.44079
+    },
+    {
+      "start": 1350.66,
+      "end": 1351.9,
+      "duration": 1.23919
+    },
+    {
+      "start": 1379.33,
+      "end": 1380.25,
+      "duration": 0.922271
+    },
+    {
+      "start": 1382.56,
+      "end": 1383.16,
+      "duration": 0.590625
+    },
+    {
+      "start": 1383.89,
+      "end": 1385.0,
+      "duration": 1.10898
+    },
+    {
+      "start": 1388.25,
+      "end": 1388.82,
+      "duration": 0.577396
+    },
+    {
+      "start": 1388.96,
+      "end": 1390.05,
+      "duration": 1.09729
+    },
+    {
+      "start": 1390.21,
+      "end": 1391.04,
+      "duration": 0.824812
+    },
+    {
+      "start": 1399.05,
+      "end": 1399.56,
+      "duration": 0.514604
+    },
+    {
+      "start": 1568.21,
+      "end": 1569.2,
+      "duration": 0.989271
+    },
+    {
+      "start": 1581.99,
+      "end": 1583.05,
+      "duration": 1.0611
+    },
+    {
+      "start": 1800.39,
+      "end": 1814.12,
+      "duration": 13.7312
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      51,
+      51,
+      51,
+      66,
+      66
+    ],
+    "avg": 54.7,
+    "min": 43
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/Zig0cfRdqsE.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

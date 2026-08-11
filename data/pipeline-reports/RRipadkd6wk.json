@@ -1,0 +1,128 @@
+{
+  "video_id": "RRipadkd6wk",
+  "title": "Tedeschi Trucks Band: Tiny Desk Concert",
+  "duration": 1045,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/RRipadkd6wk.mp3",
+  "description_songs": [
+    "Just As Strange",
+    "Don't Know What It Is",
+    "Anyhow"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 108 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 211.2,
+      "end": 222.71999999999997,
+      "duration": 11.519999999999982,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 495.84,
+      "end": 497.76,
+      "duration": 1.920000000000016,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 507.84,
+      "end": 508.32,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 993.5999999999999,
+      "end": 1013.76,
+      "duration": 20.160000000000082,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 214,
+      "song": "Just As Strange",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 222.71999999999997,
+      "clip_end": 494.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 597,
+      "song": "Don't Know What It Is",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 597,
+      "clip_end": 992.5999999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1045,
+      "song": "Anyhow",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1013.76,
+      "clip_end": 1045,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 223.523,
+      "end": 227.838,
+      "duration": 4.31452
+    },
+    {
+      "start": 488.92,
+      "end": 489.7,
+      "duration": 0.779625
+    },
+    {
+      "start": 509.591,
+      "end": 510.399,
+      "duration": 0.807833
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      53,
+      53
+    ],
+    "avg": 55.7,
+    "min": 53
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/RRipadkd6wk.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

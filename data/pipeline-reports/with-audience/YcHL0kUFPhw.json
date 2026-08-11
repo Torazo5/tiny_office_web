@@ -1,0 +1,75 @@
+{
+  "video_id": "YcHL0kUFPhw",
+  "title": "Chris Stapleton: NPR Music Tiny Desk Concert",
+  "duration": 897,
+  "audio_path": null,
+  "description_songs": [
+    "More Of You",
+    "When The Stars Come Out",
+    "Whiskey And You"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 23 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": null,
+  "boundary_spans": [],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "More Of You",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 312,
+      "song": "When The Stars Come Out",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 312,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 628,
+      "song": "Whiskey And You",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 628,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    }
+  ],
+  "silence_intervals": [],
+  "confidence": {
+    "scores": [
+      45,
+      45,
+      45
+    ],
+    "avg": 45.0,
+    "min": 45
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

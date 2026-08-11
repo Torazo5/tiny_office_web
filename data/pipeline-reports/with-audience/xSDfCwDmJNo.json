@@ -1,0 +1,391 @@
+{
+  "video_id": "xSDfCwDmJNo",
+  "title": "Tame Impala: Tiny Desk Concert",
+  "duration": 1222,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/xSDfCwDmJNo.mp3",
+  "description_songs": [
+    "Borderline",
+    "Loser",
+    "Dracula",
+    "New Person, Same Old Mistakes"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 3400 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 4,
+    "accepted": 4,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 2.4,
+      "duration": 2.4,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 260.15999999999997,
+      "end": 282.24,
+      "duration": 22.08000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 296.15999999999997,
+      "end": 297.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 518.88,
+      "end": 519.36,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 521.76,
+      "end": 528.0,
+      "duration": 6.240000000000009,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 533.28,
+      "end": 536.64,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 539.04,
+      "end": 542.4,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 559.1999999999999,
+      "end": 571.68,
+      "duration": 12.480000000000018,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 574.0799999999999,
+      "end": 591.36,
+      "duration": 17.280000000000086,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 596.64,
+      "end": 598.56,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 600.9599999999999,
+      "end": 602.4,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 800.64,
+      "end": 812.64,
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 816.48,
+      "end": 818.4,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 823.1999999999999,
+      "end": 829.92,
+      "duration": 6.720000000000027,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 833.76,
+      "end": 836.16,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 838.56,
+      "end": 841.92,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 842.88,
+      "end": 846.72,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1195.68,
+      "end": 1219.68,
+      "duration": 24.0,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Borderline",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 2.4,
+      "clip_end": 260.15999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 300,
+      "song": "Loser",
+      "corroboration": 0,
+      "silence_match": 297.203,
+      "clip_start": 297.6,
+      "clip_end": 518.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 610,
+      "song": "Dracula",
+      "corroboration": 3,
+      "silence_match": null,
+      "clip_start": 602.4,
+      "clip_end": 800.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 82
+    },
+    {
+      "seconds": 843,
+      "song": "New Person, Same Old Mistakes",
+      "corroboration": 1,
+      "silence_match": 845.896,
+      "clip_start": 846.72,
+      "clip_end": 1195.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 277.546,
+      "end": 278.203,
+      "duration": 0.657417
+    },
+    {
+      "start": 286.974,
+      "end": 289.737,
+      "duration": 2.76252
+    },
+    {
+      "start": 290.178,
+      "end": 290.716,
+      "duration": 0.538146
+    },
+    {
+      "start": 295.002,
+      "end": 295.508,
+      "duration": 0.506396
+    },
+    {
+      "start": 295.716,
+      "end": 296.282,
+      "duration": 0.566417
+    },
+    {
+      "start": 296.499,
+      "end": 297.017,
+      "duration": 0.5175
+    },
+    {
+      "start": 297.203,
+      "end": 297.767,
+      "duration": 0.563937
+    },
+    {
+      "start": 515.545,
+      "end": 516.559,
+      "duration": 1.0144
+    },
+    {
+      "start": 517.013,
+      "end": 517.577,
+      "duration": 0.56475
+    },
+    {
+      "start": 537.524,
+      "end": 538.384,
+      "duration": 0.860667
+    },
+    {
+      "start": 566.745,
+      "end": 567.457,
+      "duration": 0.712229
+    },
+    {
+      "start": 571.318,
+      "end": 571.973,
+      "duration": 0.654729
+    },
+    {
+      "start": 581.98,
+      "end": 582.629,
+      "duration": 0.648521
+    },
+    {
+      "start": 585.931,
+      "end": 586.707,
+      "duration": 0.775708
+    },
+    {
+      "start": 587.31,
+      "end": 588.629,
+      "duration": 1.31923
+    },
+    {
+      "start": 588.674,
+      "end": 589.308,
+      "duration": 0.634229
+    },
+    {
+      "start": 590.951,
+      "end": 592.012,
+      "duration": 1.06094
+    },
+    {
+      "start": 596.464,
+      "end": 596.988,
+      "duration": 0.523521
+    },
+    {
+      "start": 597.347,
+      "end": 598.469,
+      "duration": 1.12177
+    },
+    {
+      "start": 599.721,
+      "end": 600.315,
+      "duration": 0.593708
+    },
+    {
+      "start": 600.759,
+      "end": 601.681,
+      "duration": 0.921833
+    },
+    {
+      "start": 812.038,
+      "end": 812.577,
+      "duration": 0.539271
+    },
+    {
+      "start": 824.346,
+      "end": 824.848,
+      "duration": 0.502812
+    },
+    {
+      "start": 825.658,
+      "end": 826.551,
+      "duration": 0.892417
+    },
+    {
+      "start": 833.447,
+      "end": 833.978,
+      "duration": 0.530479
+    },
+    {
+      "start": 836.068,
+      "end": 836.702,
+      "duration": 0.633167
+    },
+    {
+      "start": 838.777,
+      "end": 839.492,
+      "duration": 0.71525
+    },
+    {
+      "start": 839.536,
+      "end": 840.581,
+      "duration": 1.04571
+    },
+    {
+      "start": 845.896,
+      "end": 846.404,
+      "duration": 0.508375
+    },
+    {
+      "start": 847.449,
+      "end": 848.649,
+      "duration": 1.19967
+    },
+    {
+      "start": 851.228,
+      "end": 851.754,
+      "duration": 0.525687
+    },
+    {
+      "start": 1110.7,
+      "end": 1111.34,
+      "duration": 0.630521
+    },
+    {
+      "start": 1111.81,
+      "end": 1112.55,
+      "duration": 0.743729
+    },
+    {
+      "start": 1219.66,
+      "end": 1222.26,
+      "duration": 2.60587
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      76,
+      82,
+      83
+    ],
+    "avg": 75.5,
+    "min": 61
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

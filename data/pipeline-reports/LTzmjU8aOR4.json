@@ -1,0 +1,262 @@
+{
+  "video_id": "LTzmjU8aOR4",
+  "title": "Saba: NPR Music Tiny Desk Concert",
+  "duration": 927,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/LTzmjU8aOR4.mp3",
+  "description_songs": [
+    "Busy/Sirens",
+    "Logout",
+    "Heaven All Around Me/Life"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 119 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 317.76,
+      "end": 458.4,
+      "duration": 140.64,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 610.56,
+      "end": 614.4,
+      "duration": 3.840000000000032,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 910.56,
+      "end": 919.1999999999999,
+      "duration": 8.639999999999986,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 5,
+      "song": "Busy/Sirens",
+      "corroboration": 2,
+      "silence_match": 0.0,
+      "clip_start": 5,
+      "clip_end": 316.76,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 82,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 458,
+      "song": "Logout",
+      "corroboration": 2,
+      "silence_match": 458.911,
+      "clip_start": 458.4,
+      "clip_end": 609.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 621,
+      "song": "Heaven All Around Me/Life",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 614.4,
+      "clip_end": 909.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.24617,
+      "duration": 5.24617
+    },
+    {
+      "start": 316.427,
+      "end": 317.61,
+      "duration": 1.18321
+    },
+    {
+      "start": 332.176,
+      "end": 333.621,
+      "duration": 1.44571
+    },
+    {
+      "start": 333.98,
+      "end": 334.55,
+      "duration": 0.569792
+    },
+    {
+      "start": 341.315,
+      "end": 342.632,
+      "duration": 1.31708
+    },
+    {
+      "start": 346.521,
+      "end": 347.185,
+      "duration": 0.663937
+    },
+    {
+      "start": 348.555,
+      "end": 349.732,
+      "duration": 1.17673
+    },
+    {
+      "start": 351.948,
+      "end": 352.746,
+      "duration": 0.7985
+    },
+    {
+      "start": 354.784,
+      "end": 355.502,
+      "duration": 0.718667
+    },
+    {
+      "start": 355.952,
+      "end": 357.024,
+      "duration": 1.07204
+    },
+    {
+      "start": 357.937,
+      "end": 358.85,
+      "duration": 0.912937
+    },
+    {
+      "start": 380.005,
+      "end": 380.523,
+      "duration": 0.517854
+    },
+    {
+      "start": 382.335,
+      "end": 384.146,
+      "duration": 1.8111
+    },
+    {
+      "start": 384.735,
+      "end": 385.241,
+      "duration": 0.505417
+    },
+    {
+      "start": 396.973,
+      "end": 397.614,
+      "duration": 0.641375
+    },
+    {
+      "start": 412.661,
+      "end": 414.366,
+      "duration": 1.70431
+    },
+    {
+      "start": 425.079,
+      "end": 425.813,
+      "duration": 0.733812
+    },
+    {
+      "start": 426.377,
+      "end": 427.036,
+      "duration": 0.658708
+    },
+    {
+      "start": 443.274,
+      "end": 443.835,
+      "duration": 0.561312
+    },
+    {
+      "start": 446.601,
+      "end": 447.383,
+      "duration": 0.7815
+    },
+    {
+      "start": 448.742,
+      "end": 449.409,
+      "duration": 0.667083
+    },
+    {
+      "start": 450.99,
+      "end": 451.737,
+      "duration": 0.747271
+    },
+    {
+      "start": 458.911,
+      "end": 460.345,
+      "duration": 1.43348
+    },
+    {
+      "start": 582.869,
+      "end": 583.55,
+      "duration": 0.680333
+    },
+    {
+      "start": 585.433,
+      "end": 586.582,
+      "duration": 1.14892
+    },
+    {
+      "start": 588.311,
+      "end": 589.081,
+      "duration": 0.769188
+    },
+    {
+      "start": 609.061,
+      "end": 610.709,
+      "duration": 1.6479
+    },
+    {
+      "start": 905.838,
+      "end": 906.867,
+      "duration": 1.02879
+    },
+    {
+      "start": 908.339,
+      "end": 909.637,
+      "duration": 1.2976
+    },
+    {
+      "start": 909.643,
+      "end": 910.239,
+      "duration": 0.595271
+    },
+    {
+      "start": 918.29,
+      "end": 926.569,
+      "duration": 8.27877
+    }
+  ],
+  "confidence": {
+    "scores": [
+      82,
+      90,
+      75
+    ],
+    "avg": 82.3,
+    "min": 75
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/LTzmjU8aOR4.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

@@ -1,0 +1,286 @@
+{
+  "video_id": "JYGmDy7o2H0",
+  "title": "Dermot Kennedy: NPR Music Tiny Desk Concert",
+  "duration": 810,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/JYGmDy7o2H0.mp3",
+  "description_songs": [
+    "Moments Passed",
+    "An Evening I Will Not Forget",
+    "Glory"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 823 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 30.72,
+      "end": 31.2,
+      "duration": 0.4800000000000004,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 265.92,
+      "end": 267.84000000000003,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 267.84,
+      "end": 277.92,
+      "duration": 10.080000000000041,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 521.76,
+      "end": 529.92,
+      "duration": 8.159999999999968,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 536.16,
+      "end": 537.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 538.0799999999999,
+      "end": 540.48,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 546.72,
+      "end": 551.52,
+      "duration": 4.7999999999999545,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 552.96,
+      "end": 556.8,
+      "duration": 3.839999999999918,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 560.16,
+      "end": 562.08,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 788.16,
+      "end": 805.92,
+      "duration": 17.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Moments Passed",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 266.84,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [
+        {
+          "start": 30.72,
+          "end": 31.2,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.949,
+          "music_run_sec": 53.25,
+          "anchor_start": 265.92
+        }
+      ],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 278,
+      "song": "An Evening I Will Not Forget",
+      "corroboration": 0,
+      "silence_match": 277.797,
+      "clip_start": 277.92,
+      "clip_end": 520.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 563,
+      "song": "Glory",
+      "corroboration": 0,
+      "silence_match": 562.181,
+      "clip_start": 562.08,
+      "clip_end": 787.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.562542,
+      "duration": 0.562542
+    },
+    {
+      "start": 266.086,
+      "end": 267.287,
+      "duration": 1.20169
+    },
+    {
+      "start": 277.797,
+      "end": 279.616,
+      "duration": 1.8189
+    },
+    {
+      "start": 280.394,
+      "end": 282.258,
+      "duration": 1.8645
+    },
+    {
+      "start": 297.556,
+      "end": 298.067,
+      "duration": 0.511042
+    },
+    {
+      "start": 530.136,
+      "end": 531.002,
+      "duration": 0.865937
+    },
+    {
+      "start": 531.002,
+      "end": 536.807,
+      "duration": 5.8049
+    },
+    {
+      "start": 537.432,
+      "end": 538.624,
+      "duration": 1.19127
+    },
+    {
+      "start": 539.428,
+      "end": 540.016,
+      "duration": 0.588708
+    },
+    {
+      "start": 540.041,
+      "end": 543.144,
+      "duration": 3.10281
+    },
+    {
+      "start": 543.15,
+      "end": 544.292,
+      "duration": 1.14206
+    },
+    {
+      "start": 544.318,
+      "end": 544.988,
+      "duration": 0.670604
+    },
+    {
+      "start": 545.542,
+      "end": 546.331,
+      "duration": 0.788562
+    },
+    {
+      "start": 547.3,
+      "end": 549.27,
+      "duration": 1.96981
+    },
+    {
+      "start": 550.259,
+      "end": 550.762,
+      "duration": 0.502667
+    },
+    {
+      "start": 551.834,
+      "end": 553.015,
+      "duration": 1.18087
+    },
+    {
+      "start": 553.049,
+      "end": 553.849,
+      "duration": 0.800562
+    },
+    {
+      "start": 554.176,
+      "end": 554.862,
+      "duration": 0.686896
+    },
+    {
+      "start": 556.002,
+      "end": 557.703,
+      "duration": 1.70112
+    },
+    {
+      "start": 558.46,
+      "end": 561.812,
+      "duration": 3.3526
+    },
+    {
+      "start": 562.181,
+      "end": 564.847,
+      "duration": 2.66596
+    },
+    {
+      "start": 759.903,
+      "end": 761.424,
+      "duration": 1.52044
+    },
+    {
+      "start": 786.548,
+      "end": 787.948,
+      "duration": 1.39929
+    },
+    {
+      "start": 806.499,
+      "end": 809.982,
+      "duration": 3.48263
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      76
+    ],
+    "avg": 73.3,
+    "min": 68
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/JYGmDy7o2H0.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

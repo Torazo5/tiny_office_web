@@ -1,0 +1,366 @@
+{
+  "video_id": "CbotsXwCbNE",
+  "title": "Rawayana: Tiny Desk Concert",
+  "duration": 1259,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/CbotsXwCbNE.mp3",
+  "description_songs": [
+    "High (feat. Apache)",
+    "Funky Fiesta",
+    "Feriado",
+    "Merengue Pa\u2019 Cintura",
+    "Dame Un Break"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1100 likes, matched all 5 description song(s), retained 5 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 236.16,
+      "end": 236.64,
+      "duration": 0.47999999999998977,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 241.92,
+      "end": 294.72,
+      "duration": 52.80000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 553.4399999999999,
+      "end": 609.12,
+      "duration": 55.680000000000064,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 769.92,
+      "end": 808.8,
+      "duration": 38.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 967.1999999999999,
+      "end": 1007.04,
+      "duration": 39.84000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1226.8799999999999,
+      "end": 1227.84,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1229.76,
+      "end": 1232.6399999999999,
+      "duration": 2.8799999999998818,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1235.52,
+      "end": 1236.0,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 4,
+      "song": "High (feat. Apache)",
+      "corroboration": 1,
+      "silence_match": 3.48427,
+      "clip_start": 4,
+      "clip_end": 236.16,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 297,
+      "song": "Funky Fiesta",
+      "corroboration": 1,
+      "silence_match": 294.709,
+      "clip_start": 294.72,
+      "clip_end": 553.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 611,
+      "song": "Feriado",
+      "corroboration": 1,
+      "silence_match": 608.741,
+      "clip_start": 609.12,
+      "clip_end": 769.92,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 811,
+      "song": "Merengue Pa\u2019 Cintura",
+      "corroboration": 1,
+      "silence_match": 810.019,
+      "clip_start": 808.8,
+      "clip_end": 967.1999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 1008,
+      "song": "Dame Un Break",
+      "corroboration": 1,
+      "silence_match": 1007.39,
+      "clip_start": 1007.04,
+      "clip_end": 1226.8799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 2.77558,
+      "end": 3.3186,
+      "duration": 0.543021
+    },
+    {
+      "start": 3.48427,
+      "end": 4.56435,
+      "duration": 1.08008
+    },
+    {
+      "start": 7.26856,
+      "end": 7.85696,
+      "duration": 0.588396
+    },
+    {
+      "start": 259.269,
+      "end": 260.003,
+      "duration": 0.733854
+    },
+    {
+      "start": 266.064,
+      "end": 267.436,
+      "duration": 1.37265
+    },
+    {
+      "start": 271.962,
+      "end": 272.938,
+      "duration": 0.976187
+    },
+    {
+      "start": 275.489,
+      "end": 276.451,
+      "duration": 0.962083
+    },
+    {
+      "start": 280.495,
+      "end": 281.896,
+      "duration": 1.40067
+    },
+    {
+      "start": 283.646,
+      "end": 284.43,
+      "duration": 0.784125
+    },
+    {
+      "start": 287.772,
+      "end": 288.274,
+      "duration": 0.501896
+    },
+    {
+      "start": 290.844,
+      "end": 294.511,
+      "duration": 3.66746
+    },
+    {
+      "start": 294.709,
+      "end": 295.345,
+      "duration": 0.636229
+    },
+    {
+      "start": 552.027,
+      "end": 552.789,
+      "duration": 0.761396
+    },
+    {
+      "start": 565.296,
+      "end": 566.197,
+      "duration": 0.900562
+    },
+    {
+      "start": 566.198,
+      "end": 567.429,
+      "duration": 1.2316
+    },
+    {
+      "start": 575.774,
+      "end": 576.286,
+      "duration": 0.512062
+    },
+    {
+      "start": 597.529,
+      "end": 598.368,
+      "duration": 0.839021
+    },
+    {
+      "start": 601.168,
+      "end": 602.839,
+      "duration": 1.67131
+    },
+    {
+      "start": 604.927,
+      "end": 608.611,
+      "duration": 3.68377
+    },
+    {
+      "start": 608.741,
+      "end": 611.411,
+      "duration": 2.66983
+    },
+    {
+      "start": 768.819,
+      "end": 769.756,
+      "duration": 0.937187
+    },
+    {
+      "start": 780.935,
+      "end": 782.585,
+      "duration": 1.6501
+    },
+    {
+      "start": 795.67,
+      "end": 796.499,
+      "duration": 0.828187
+    },
+    {
+      "start": 805.552,
+      "end": 806.666,
+      "duration": 1.1144
+    },
+    {
+      "start": 807.195,
+      "end": 808.118,
+      "duration": 0.923354
+    },
+    {
+      "start": 808.396,
+      "end": 809.786,
+      "duration": 1.39
+    },
+    {
+      "start": 810.019,
+      "end": 811.614,
+      "duration": 1.59537
+    },
+    {
+      "start": 958.451,
+      "end": 959.038,
+      "duration": 0.587396
+    },
+    {
+      "start": 959.054,
+      "end": 959.561,
+      "duration": 0.506812
+    },
+    {
+      "start": 982.061,
+      "end": 983.158,
+      "duration": 1.09673
+    },
+    {
+      "start": 987.027,
+      "end": 988.015,
+      "duration": 0.987854
+    },
+    {
+      "start": 988.235,
+      "end": 988.855,
+      "duration": 0.620146
+    },
+    {
+      "start": 988.886,
+      "end": 989.432,
+      "duration": 0.545187
+    },
+    {
+      "start": 990.889,
+      "end": 991.727,
+      "duration": 0.838562
+    },
+    {
+      "start": 993.203,
+      "end": 995.339,
+      "duration": 2.13567
+    },
+    {
+      "start": 995.841,
+      "end": 996.362,
+      "duration": 0.521583
+    },
+    {
+      "start": 996.488,
+      "end": 997.004,
+      "duration": 0.516479
+    },
+    {
+      "start": 1007.39,
+      "end": 1009.27,
+      "duration": 1.88346
+    },
+    {
+      "start": 1200.0,
+      "end": 1200.71,
+      "duration": 0.713583
+    },
+    {
+      "start": 1237.99,
+      "end": 1258.68,
+      "duration": 20.6927
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      83,
+      83,
+      83,
+      83
+    ],
+    "avg": 81.4,
+    "min": 75
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

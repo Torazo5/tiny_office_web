@@ -1,0 +1,181 @@
+{
+  "video_id": "D7Ti9DRLZEU",
+  "title": "Ari Lennox: NPR Music Tiny Desk Concert",
+  "duration": 900,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/D7Ti9DRLZEU.mp3",
+  "description_songs": [
+    "Speak To Me",
+    "Pop",
+    "New Apartment",
+    "Shea Butter Baby"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 3 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 194.88,
+      "end": 227.51999999999998,
+      "duration": 32.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 401.28,
+      "end": 421.44,
+      "duration": 20.160000000000025,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 649.4399999999999,
+      "end": 688.8,
+      "duration": 39.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 851.52,
+      "end": 889.92,
+      "duration": 38.39999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Speak To Me",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 193.88,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 194.88,
+      "song": "Pop",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 227.51999999999998,
+      "clip_end": 400.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 401.28,
+      "song": "New Apartment",
+      "corroboration": 0,
+      "silence_match": 399.64,
+      "clip_start": 421.44,
+      "clip_end": 648.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 649.4399999999999,
+      "song": "Shea Butter Baby",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 688.8,
+      "clip_end": 850.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.25796,
+      "duration": 5.25796
+    },
+    {
+      "start": 218.123,
+      "end": 219.041,
+      "duration": 0.918
+    },
+    {
+      "start": 399.64,
+      "end": 401.211,
+      "duration": 1.57117
+    },
+    {
+      "start": 410.206,
+      "end": 411.102,
+      "duration": 0.896167
+    },
+    {
+      "start": 413.854,
+      "end": 415.119,
+      "duration": 1.26552
+    },
+    {
+      "start": 666.162,
+      "end": 666.79,
+      "duration": 0.628312
+    },
+    {
+      "start": 667.324,
+      "end": 667.854,
+      "duration": 0.529792
+    },
+    {
+      "start": 690.533,
+      "end": 691.086,
+      "duration": 0.553229
+    },
+    {
+      "start": 850.561,
+      "end": 851.192,
+      "duration": 0.631146
+    },
+    {
+      "start": 890.234,
+      "end": 899.901,
+      "duration": 9.66681
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      51,
+      66,
+      51
+    ],
+    "avg": 56.5,
+    "min": 51
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/D7Ti9DRLZEU.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

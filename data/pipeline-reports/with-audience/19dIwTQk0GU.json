@@ -1,0 +1,254 @@
+{
+  "video_id": "19dIwTQk0GU",
+  "title": "Khalid: NPR Music Tiny Desk Concert",
+  "duration": 809,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/19dIwTQk0GU.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 141.6,
+      "end": 143.04,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 180.48,
+      "end": 182.39999999999998,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 185.28,
+      "end": 200.16,
+      "duration": 14.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 200.64,
+      "end": 246.23999999999998,
+      "duration": 45.599999999999994,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 312.47999999999996,
+      "end": 313.92,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 315.84,
+      "end": 317.76,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 458.4,
+      "end": 478.08,
+      "duration": 19.680000000000007,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 478.56,
+      "end": 528.0,
+      "duration": 49.44,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 528.96,
+      "end": 535.2,
+      "duration": 6.240000000000009,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 535.68,
+      "end": 537.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 538.0799999999999,
+      "end": 547.2,
+      "duration": 9.120000000000118,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 773.28,
+      "end": 802.56,
+      "duration": 29.279999999999973,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 200.099,
+      "end": 201.277,
+      "duration": 1.1784
+    },
+    {
+      "start": 204.316,
+      "end": 204.85,
+      "duration": 0.534021
+    },
+    {
+      "start": 209.29,
+      "end": 209.853,
+      "duration": 0.562937
+    },
+    {
+      "start": 216.29,
+      "end": 216.797,
+      "duration": 0.507208
+    },
+    {
+      "start": 219.816,
+      "end": 220.527,
+      "duration": 0.710812
+    },
+    {
+      "start": 227.154,
+      "end": 227.655,
+      "duration": 0.501271
+    },
+    {
+      "start": 237.831,
+      "end": 238.447,
+      "duration": 0.616042
+    },
+    {
+      "start": 240.437,
+      "end": 241.103,
+      "duration": 0.66575
+    },
+    {
+      "start": 246.015,
+      "end": 246.885,
+      "duration": 0.869521
+    },
+    {
+      "start": 457.72,
+      "end": 458.279,
+      "duration": 0.559146
+    },
+    {
+      "start": 470.745,
+      "end": 472.563,
+      "duration": 1.81783
+    },
+    {
+      "start": 475.191,
+      "end": 476.189,
+      "duration": 0.998021
+    },
+    {
+      "start": 477.77,
+      "end": 479.359,
+      "duration": 1.58844
+    },
+    {
+      "start": 480.285,
+      "end": 480.9,
+      "duration": 0.614938
+    },
+    {
+      "start": 487.227,
+      "end": 487.776,
+      "duration": 0.549104
+    },
+    {
+      "start": 494.317,
+      "end": 494.867,
+      "duration": 0.549146
+    },
+    {
+      "start": 501.29,
+      "end": 501.84,
+      "duration": 0.549583
+    },
+    {
+      "start": 509.223,
+      "end": 509.739,
+      "duration": 0.515667
+    },
+    {
+      "start": 546.271,
+      "end": 547.026,
+      "duration": 0.755042
+    },
+    {
+      "start": 547.163,
+      "end": 547.747,
+      "duration": 0.584292
+    },
+    {
+      "start": 547.785,
+      "end": 548.533,
+      "duration": 0.748479
+    },
+    {
+      "start": 548.573,
+      "end": 549.333,
+      "duration": 0.760479
+    },
+    {
+      "start": 549.37,
+      "end": 550.113,
+      "duration": 0.742708
+    },
+    {
+      "start": 550.138,
+      "end": 550.883,
+      "duration": 0.745062
+    },
+    {
+      "start": 771.965,
+      "end": 772.91,
+      "duration": 0.944896
+    },
+    {
+      "start": 801.547,
+      "end": 802.245,
+      "duration": 0.697417
+    },
+    {
+      "start": 802.248,
+      "end": 809.401,
+      "duration": 7.15269
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

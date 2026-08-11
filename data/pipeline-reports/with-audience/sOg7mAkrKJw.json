@@ -1,0 +1,237 @@
+{
+  "video_id": "sOg7mAkrKJw",
+  "title": "John Prine: NPR Music Tiny Desk Concert",
+  "duration": 930,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/sOg7mAkrKJw.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 144.48,
+      "end": 171.83999999999997,
+      "duration": 27.359999999999985,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 177.6,
+      "end": 183.83999999999997,
+      "duration": 6.239999999999981,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 184.32,
+      "end": 186.23999999999998,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 186.72,
+      "end": 200.16,
+      "duration": 13.439999999999998,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 200.64,
+      "end": 215.51999999999998,
+      "duration": 14.879999999999995,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 430.56,
+      "end": 445.44,
+      "duration": 14.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 457.44,
+      "end": 462.72,
+      "duration": 5.28000000000003,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 647.52,
+      "end": 672.0,
+      "duration": 24.480000000000018,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 677.28,
+      "end": 678.72,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 680.16,
+      "end": 681.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 684.48,
+      "end": 685.92,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 686.4,
+      "end": 688.8,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 689.28,
+      "end": 696.48,
+      "duration": 7.2000000000000455,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 701.28,
+      "end": 705.12,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 707.04,
+      "end": 708.48,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 911.04,
+      "end": 926.4,
+      "duration": 15.360000000000014,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 1.06748,
+      "duration": 1.06748
+    },
+    {
+      "start": 158.61,
+      "end": 159.642,
+      "duration": 1.03258
+    },
+    {
+      "start": 171.751,
+      "end": 173.659,
+      "duration": 1.90802
+    },
+    {
+      "start": 176.351,
+      "end": 177.393,
+      "duration": 1.04198
+    },
+    {
+      "start": 181.523,
+      "end": 182.097,
+      "duration": 0.573917
+    },
+    {
+      "start": 183.819,
+      "end": 184.762,
+      "duration": 0.942708
+    },
+    {
+      "start": 186.265,
+      "end": 187.556,
+      "duration": 1.2906
+    },
+    {
+      "start": 190.177,
+      "end": 190.761,
+      "duration": 0.584021
+    },
+    {
+      "start": 191.167,
+      "end": 191.808,
+      "duration": 0.640708
+    },
+    {
+      "start": 194.162,
+      "end": 194.668,
+      "duration": 0.505979
+    },
+    {
+      "start": 198.013,
+      "end": 198.731,
+      "duration": 0.718417
+    },
+    {
+      "start": 200.029,
+      "end": 200.584,
+      "duration": 0.555396
+    },
+    {
+      "start": 215.303,
+      "end": 216.293,
+      "duration": 0.990208
+    },
+    {
+      "start": 441.91,
+      "end": 442.704,
+      "duration": 0.793604
+    },
+    {
+      "start": 462.535,
+      "end": 463.777,
+      "duration": 1.24221
+    },
+    {
+      "start": 667.223,
+      "end": 667.968,
+      "duration": 0.744667
+    },
+    {
+      "start": 688.804,
+      "end": 689.914,
+      "duration": 1.11
+    },
+    {
+      "start": 925.588,
+      "end": 929.599,
+      "duration": 4.0111
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

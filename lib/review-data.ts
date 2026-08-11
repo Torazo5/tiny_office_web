@@ -5,6 +5,8 @@ import { createClient } from "@/lib/supabase/server";
 import { getPerformanceDetail } from "@/lib/data";
 import { formatProfileLabel, getProfilesByUserId, type PublicProfile } from "@/lib/profile-data";
 import type {
+  PerformanceCutKey,
+  PerformanceCutVariant,
   ListeningPreset,
   Performance,
   TimelineDraftSong,
@@ -28,6 +30,21 @@ type PresetRow = {
 
 type PresetSongRow = {
   preset_id: string;
+  song_index: number;
+  title: string;
+  clip_start: number;
+  clip_end: number;
+};
+
+type PerformanceCutVariantRow = {
+  variant_key: PerformanceCutKey;
+  name: string;
+  description: string;
+};
+
+type PerformanceCutVariantSongRow = {
+  variant_key: PerformanceCutKey;
+  performance_video_id: string;
   song_index: number;
   title: string;
   clip_start: number;
@@ -85,6 +102,47 @@ async function loadPresets(client: Awaited<ReturnType<typeof createClient>>, vid
   throwIfError("Loading listening preset songs", songError);
 
   return mapPresets(presetRows as PresetRow[], (songRows ?? []) as PresetSongRow[], profiles);
+}
+
+async function loadPerformanceCutVariants(
+  client: Awaited<ReturnType<typeof createClient>>,
+  videoId: string,
+) {
+  const [variantsResult, songsResult] = await Promise.all([
+    client
+      .from("performance_cut_variants")
+      .select("variant_key, name, description")
+      .order("sort_order"),
+    client
+      .from("performance_cut_variant_songs")
+      .select("variant_key, performance_video_id, song_index, title, clip_start, clip_end")
+      .eq("performance_video_id", videoId)
+      .order("variant_key")
+      .order("song_index"),
+  ]);
+  throwIfError("Loading performance cut variants", variantsResult.error);
+  throwIfError("Loading performance cut variant songs", songsResult.error);
+
+  const songsByVariant = new Map<PerformanceCutKey, PerformanceCutVariant["songs"]>();
+  for (const song of (songsResult.data ?? []) as PerformanceCutVariantSongRow[]) {
+    const songs = songsByVariant.get(song.variant_key) ?? [];
+    songs.push({
+      songIndex: song.song_index,
+      title: song.title,
+      clipStart: Number(song.clip_start),
+      clipEnd: Number(song.clip_end),
+    });
+    songsByVariant.set(song.variant_key, songs);
+  }
+
+  return ((variantsResult.data ?? []) as PerformanceCutVariantRow[])
+    .filter((variant) => songsByVariant.has(variant.variant_key))
+    .map((variant) => ({
+      key: variant.variant_key,
+      name: variant.name,
+      description: variant.description,
+      songs: songsByVariant.get(variant.variant_key) ?? [],
+    } satisfies PerformanceCutVariant));
 }
 
 export async function getListeningPresets(videoId: string) {
@@ -145,33 +203,68 @@ export function applyListeningPreset(performance: Performance, preset: Listening
   } satisfies Performance;
 }
 
+export function applyPerformanceCut(
+  performance: Performance,
+  variant: PerformanceCutVariant | null,
+) {
+  if (!variant || variant.key === "no-audience") {
+    return performance;
+  }
+  return {
+    ...performance,
+    songs: variant.songs.map((edit) => {
+      const source = performance.songs.find((song) => song.index === edit.songIndex);
+      return source
+        ? { ...source, title: edit.title, clipStart: edit.clipStart, clipEnd: edit.clipEnd }
+        : {
+            index: edit.songIndex,
+            title: edit.title,
+            clipStart: edit.clipStart,
+            clipEnd: edit.clipEnd,
+            confidence: 0,
+            suspect: false,
+          };
+    }),
+  } satisfies Performance;
+}
+
 export async function getPerformanceWithSelectedPreset(
   videoId: string,
   userId?: string,
   previewPresetId?: string,
+  cutKey?: PerformanceCutKey,
 ) {
-  const [performance, presets] = await Promise.all([
+  const [performance, presets, cutVariants] = await Promise.all([
     getPerformanceDetail(videoId, userId ?? null),
     getListeningPresets(videoId),
+    loadPerformanceCutVariants(await createClient(), videoId),
   ]);
-  if (!performance) return { performance, selectedPreset: null, presets };
+  if (!performance) return { performance, selectedPreset: null, selectedCut: null, cutVariants, presets };
+  const selectedCut = cutVariants.find((variant) => variant.key === (cutKey ?? "no-audience"))
+    ?? cutVariants.find((variant) => variant.key === "no-audience")
+    ?? null;
+  const performanceWithCut = applyPerformanceCut(performance, selectedCut);
   if (previewPresetId !== undefined) {
     const selectedPreset = previewPresetId === "ground-truth"
       ? null
       : presets.find((preset) => preset.id === previewPresetId) ?? null;
     return {
-      performance: applyListeningPreset(performance, selectedPreset),
+      performance: applyListeningPreset(performanceWithCut, selectedPreset),
       selectedPreset,
+      selectedCut,
+      cutVariants,
       presets,
     };
   }
-  if (!userId) return { performance, selectedPreset: null, presets };
+  if (!userId) return { performance: performanceWithCut, selectedPreset: null, selectedCut, cutVariants, presets };
 
   const selectedPresetId = await getSelectedPresetId(videoId, userId);
   const selectedPreset = presets.find((preset) => preset.id === selectedPresetId) ?? null;
   return {
-    performance: applyListeningPreset(performance, selectedPreset),
+    performance: applyListeningPreset(performanceWithCut, selectedPreset),
     selectedPreset,
+    selectedCut,
+    cutVariants,
     presets,
   };
 }

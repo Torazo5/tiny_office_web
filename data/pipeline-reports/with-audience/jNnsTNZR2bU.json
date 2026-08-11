@@ -1,0 +1,232 @@
+{
+  "video_id": "jNnsTNZR2bU",
+  "title": "Leon Thomas: Tiny Desk Concert",
+  "duration": 1185,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/jNnsTNZR2bU.mp3",
+  "description_songs": [
+    "VIBES DON'T LIE",
+    "YES IT IS",
+    "MUTT",
+    "Breaking Point",
+    "Treasure In The Hills"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2800 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 224.16,
+      "end": 239.51999999999998,
+      "duration": 15.359999999999985,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 473.76,
+      "end": 491.04,
+      "duration": 17.28000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 648.48,
+      "end": 656.16,
+      "duration": 7.67999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 661.4399999999999,
+      "end": 670.08,
+      "duration": 8.6400000000001,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 929.76,
+      "end": 942.24,
+      "duration": 12.480000000000018,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1140.48,
+      "end": 1176.96,
+      "duration": 36.48000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "VIBES DON'T LIE",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 224.16,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 240,
+      "song": "YES IT IS",
+      "corroboration": 0,
+      "silence_match": 239.871,
+      "clip_start": 239.51999999999998,
+      "clip_end": 473.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 492,
+      "song": "MUTT",
+      "corroboration": 0,
+      "silence_match": 490.997,
+      "clip_start": 491.04,
+      "clip_end": 648.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 672,
+      "song": "Breaking Point",
+      "corroboration": 0,
+      "silence_match": 670.035,
+      "clip_start": 670.08,
+      "clip_end": 929.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 941,
+      "song": "Treasure In The Hills",
+      "corroboration": 0,
+      "silence_match": 943.065,
+      "clip_start": 942.24,
+      "clip_end": 1140.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 238.638,
+      "end": 239.853,
+      "duration": 1.21537
+    },
+    {
+      "start": 239.871,
+      "end": 242.793,
+      "duration": 2.92212
+    },
+    {
+      "start": 243.033,
+      "end": 243.754,
+      "duration": 0.721
+    },
+    {
+      "start": 490.997,
+      "end": 491.974,
+      "duration": 0.977021
+    },
+    {
+      "start": 668.145,
+      "end": 668.691,
+      "duration": 0.546021
+    },
+    {
+      "start": 670.035,
+      "end": 675.345,
+      "duration": 5.31004
+    },
+    {
+      "start": 678.559,
+      "end": 679.44,
+      "duration": 0.880417
+    },
+    {
+      "start": 681.004,
+      "end": 681.823,
+      "duration": 0.819021
+    },
+    {
+      "start": 682.848,
+      "end": 683.44,
+      "duration": 0.592104
+    },
+    {
+      "start": 685.53,
+      "end": 686.533,
+      "duration": 1.00302
+    },
+    {
+      "start": 928.272,
+      "end": 929.231,
+      "duration": 0.9595
+    },
+    {
+      "start": 943.065,
+      "end": 943.972,
+      "duration": 0.907562
+    },
+    {
+      "start": 944.024,
+      "end": 945.118,
+      "duration": 1.0939
+    },
+    {
+      "start": 945.22,
+      "end": 946.319,
+      "duration": 1.09881
+    },
+    {
+      "start": 1172.25,
+      "end": 1175.34,
+      "duration": 3.09948
+    },
+    {
+      "start": 1175.93,
+      "end": 1184.69,
+      "duration": 8.76031
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76,
+      76,
+      76
+    ],
+    "avg": 71.4,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

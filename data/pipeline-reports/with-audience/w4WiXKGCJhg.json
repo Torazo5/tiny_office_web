@@ -1,0 +1,448 @@
+{
+  "video_id": "w4WiXKGCJhg",
+  "title": "Chappell Roan: Tiny Desk Concert",
+  "duration": 1381,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/w4WiXKGCJhg.mp3",
+  "description_songs": [
+    "Casual",
+    "Pink Pony Club",
+    "Picture You",
+    "California",
+    "Red Wine Supernova"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 3000 likes, matched all 5 description song(s), retained 5 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 2,
+    "rejected": 1,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 222.72,
+      "end": 285.12,
+      "duration": 62.400000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 530.4,
+      "end": 576.0,
+      "duration": 45.60000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 580.3199999999999,
+      "end": 582.24,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 582.72,
+      "end": 584.64,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 805.4399999999999,
+      "end": 889.4399999999999,
+      "duration": 84.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 901.92,
+      "end": 905.28,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 906.24,
+      "end": 909.12,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1106.3999999999999,
+      "end": 1162.08,
+      "duration": 55.680000000000064,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1358.8799999999999,
+      "end": 1380.96,
+      "duration": 22.080000000000155,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 14,
+      "song": "Casual",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 14,
+      "clip_end": 222.72,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 300,
+      "song": "Pink Pony Club",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 285.12,
+      "clip_end": 530.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 603,
+      "song": "Picture You",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 584.64,
+      "clip_end": 805.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 905,
+      "song": "California",
+      "corroboration": 0,
+      "silence_match": 904.846,
+      "clip_start": 909.12,
+      "clip_end": 1106.3999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 1170,
+      "song": "Red Wine Supernova",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1162.08,
+      "clip_end": 1358.8799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 242.163,
+      "end": 242.766,
+      "duration": 0.603104
+    },
+    {
+      "start": 248.813,
+      "end": 249.601,
+      "duration": 0.787813
+    },
+    {
+      "start": 261.273,
+      "end": 261.889,
+      "duration": 0.616833
+    },
+    {
+      "start": 271.957,
+      "end": 272.459,
+      "duration": 0.501687
+    },
+    {
+      "start": 273.586,
+      "end": 274.252,
+      "duration": 0.666292
+    },
+    {
+      "start": 278.394,
+      "end": 278.978,
+      "duration": 0.583979
+    },
+    {
+      "start": 280.665,
+      "end": 281.185,
+      "duration": 0.520479
+    },
+    {
+      "start": 281.606,
+      "end": 282.951,
+      "duration": 1.345
+    },
+    {
+      "start": 285.111,
+      "end": 286.812,
+      "duration": 1.70108
+    },
+    {
+      "start": 312.702,
+      "end": 313.281,
+      "duration": 0.578792
+    },
+    {
+      "start": 452.69,
+      "end": 453.463,
+      "duration": 0.773292
+    },
+    {
+      "start": 548.123,
+      "end": 549.965,
+      "duration": 1.84187
+    },
+    {
+      "start": 550.38,
+      "end": 551.283,
+      "duration": 0.902438
+    },
+    {
+      "start": 554.599,
+      "end": 555.107,
+      "duration": 0.508292
+    },
+    {
+      "start": 560.95,
+      "end": 561.918,
+      "duration": 0.968625
+    },
+    {
+      "start": 563.447,
+      "end": 564.173,
+      "duration": 0.725812
+    },
+    {
+      "start": 567.914,
+      "end": 568.509,
+      "duration": 0.594875
+    },
+    {
+      "start": 569.95,
+      "end": 570.629,
+      "duration": 0.679271
+    },
+    {
+      "start": 570.682,
+      "end": 571.308,
+      "duration": 0.626333
+    },
+    {
+      "start": 575.605,
+      "end": 579.622,
+      "duration": 4.01752
+    },
+    {
+      "start": 580.053,
+      "end": 580.812,
+      "duration": 0.758813
+    },
+    {
+      "start": 584.441,
+      "end": 588.285,
+      "duration": 3.84342
+    },
+    {
+      "start": 609.694,
+      "end": 610.554,
+      "duration": 0.860292
+    },
+    {
+      "start": 778.927,
+      "end": 779.693,
+      "duration": 0.766354
+    },
+    {
+      "start": 802.278,
+      "end": 804.988,
+      "duration": 2.70938
+    },
+    {
+      "start": 833.086,
+      "end": 833.953,
+      "duration": 0.867104
+    },
+    {
+      "start": 835.282,
+      "end": 835.93,
+      "duration": 0.648229
+    },
+    {
+      "start": 851.189,
+      "end": 851.886,
+      "duration": 0.696708
+    },
+    {
+      "start": 858.263,
+      "end": 858.962,
+      "duration": 0.698875
+    },
+    {
+      "start": 879.7,
+      "end": 880.352,
+      "duration": 0.651813
+    },
+    {
+      "start": 887.745,
+      "end": 888.253,
+      "duration": 0.507583
+    },
+    {
+      "start": 891.25,
+      "end": 891.91,
+      "duration": 0.659729
+    },
+    {
+      "start": 891.922,
+      "end": 892.533,
+      "duration": 0.611104
+    },
+    {
+      "start": 895.337,
+      "end": 897.935,
+      "duration": 2.59817
+    },
+    {
+      "start": 899.204,
+      "end": 899.89,
+      "duration": 0.685875
+    },
+    {
+      "start": 900.788,
+      "end": 901.835,
+      "duration": 1.0465
+    },
+    {
+      "start": 902.858,
+      "end": 903.685,
+      "duration": 0.826979
+    },
+    {
+      "start": 904.846,
+      "end": 905.571,
+      "duration": 0.72475
+    },
+    {
+      "start": 906.879,
+      "end": 907.422,
+      "duration": 0.543438
+    },
+    {
+      "start": 908.59,
+      "end": 909.372,
+      "duration": 0.782354
+    },
+    {
+      "start": 910.432,
+      "end": 911.264,
+      "duration": 0.831417
+    },
+    {
+      "start": 912.357,
+      "end": 913.236,
+      "duration": 0.879958
+    },
+    {
+      "start": 919.805,
+      "end": 920.504,
+      "duration": 0.699125
+    },
+    {
+      "start": 923.787,
+      "end": 924.382,
+      "duration": 0.595187
+    },
+    {
+      "start": 982.167,
+      "end": 982.849,
+      "duration": 0.681812
+    },
+    {
+      "start": 1047.06,
+      "end": 1047.62,
+      "duration": 0.556417
+    },
+    {
+      "start": 1049.98,
+      "end": 1051.68,
+      "duration": 1.70323
+    },
+    {
+      "start": 1071.07,
+      "end": 1071.78,
+      "duration": 0.712437
+    },
+    {
+      "start": 1096.76,
+      "end": 1097.32,
+      "duration": 0.554292
+    },
+    {
+      "start": 1100.7,
+      "end": 1101.3,
+      "duration": 0.598437
+    },
+    {
+      "start": 1101.45,
+      "end": 1106.57,
+      "duration": 5.12367
+    },
+    {
+      "start": 1151.75,
+      "end": 1152.59,
+      "duration": 0.838896
+    },
+    {
+      "start": 1152.59,
+      "end": 1155.05,
+      "duration": 2.45979
+    },
+    {
+      "start": 1176.1,
+      "end": 1177.13,
+      "duration": 1.0351
+    },
+    {
+      "start": 1358.36,
+      "end": 1358.99,
+      "duration": 0.6285
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      61,
+      76,
+      61
+    ],
+    "avg": 62.4,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

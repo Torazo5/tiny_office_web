@@ -1,0 +1,166 @@
+{
+  "video_id": "_t-nRXwAL1k",
+  "title": "Paramore: NPR Music Tiny Desk Concert",
+  "duration": 761,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/_t-nRXwAL1k.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 5,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 191.51999999999998,
+      "end": 255.35999999999999,
+      "duration": 63.84,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 495.84,
+      "end": 522.72,
+      "duration": 26.880000000000052,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 730.56,
+      "end": 759.84,
+      "duration": 29.280000000000086,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 190.413,
+      "end": 190.916,
+      "duration": 0.502292
+    },
+    {
+      "start": 217.387,
+      "end": 217.889,
+      "duration": 0.501583
+    },
+    {
+      "start": 224.949,
+      "end": 225.592,
+      "duration": 0.643646
+    },
+    {
+      "start": 228.096,
+      "end": 228.756,
+      "duration": 0.659854
+    },
+    {
+      "start": 233.119,
+      "end": 233.685,
+      "duration": 0.566167
+    },
+    {
+      "start": 234.067,
+      "end": 234.613,
+      "duration": 0.546333
+    },
+    {
+      "start": 234.635,
+      "end": 235.627,
+      "duration": 0.992417
+    },
+    {
+      "start": 245.134,
+      "end": 245.725,
+      "duration": 0.591125
+    },
+    {
+      "start": 252.162,
+      "end": 252.918,
+      "duration": 0.75575
+    },
+    {
+      "start": 255.544,
+      "end": 256.25,
+      "duration": 0.70575
+    },
+    {
+      "start": 372.62,
+      "end": 373.356,
+      "duration": 0.736125
+    },
+    {
+      "start": 376.703,
+      "end": 377.631,
+      "duration": 0.927896
+    },
+    {
+      "start": 432.976,
+      "end": 435.345,
+      "duration": 2.36854
+    },
+    {
+      "start": 471.139,
+      "end": 472.59,
+      "duration": 1.45065
+    },
+    {
+      "start": 493.559,
+      "end": 494.977,
+      "duration": 1.4179
+    },
+    {
+      "start": 494.977,
+      "end": 495.881,
+      "duration": 0.904104
+    },
+    {
+      "start": 509.449,
+      "end": 510.012,
+      "duration": 0.563292
+    },
+    {
+      "start": 513.143,
+      "end": 514.716,
+      "duration": 1.57342
+    },
+    {
+      "start": 518.398,
+      "end": 519.1,
+      "duration": 0.701937
+    },
+    {
+      "start": 522.612,
+      "end": 524.922,
+      "duration": 2.31002
+    },
+    {
+      "start": 757.851,
+      "end": 758.964,
+      "duration": 1.1125
+    },
+    {
+      "start": 758.965,
+      "end": 760.558,
+      "duration": 1.59267
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

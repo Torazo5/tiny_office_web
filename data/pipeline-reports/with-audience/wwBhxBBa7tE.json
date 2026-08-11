@@ -1,0 +1,147 @@
+{
+  "video_id": "wwBhxBBa7tE",
+  "title": "Moon Hooch: NPR Music Tiny Desk Concert",
+  "duration": 741,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/wwBhxBBa7tE.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 694.56,
+      "end": 729.12,
+      "duration": 34.56000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 254.375,
+      "end": 255.531,
+      "duration": 1.15552
+    },
+    {
+      "start": 262.145,
+      "end": 263.419,
+      "duration": 1.27377
+    },
+    {
+      "start": 269.926,
+      "end": 271.13,
+      "duration": 1.2041
+    },
+    {
+      "start": 277.63,
+      "end": 278.682,
+      "duration": 1.05256
+    },
+    {
+      "start": 285.208,
+      "end": 286.324,
+      "duration": 1.11596
+    },
+    {
+      "start": 318.786,
+      "end": 319.476,
+      "duration": 0.690771
+    },
+    {
+      "start": 415.598,
+      "end": 416.746,
+      "duration": 1.14752
+    },
+    {
+      "start": 423.005,
+      "end": 424.22,
+      "duration": 1.21469
+    },
+    {
+      "start": 441.286,
+      "end": 442.279,
+      "duration": 0.99375
+    },
+    {
+      "start": 456.149,
+      "end": 456.923,
+      "duration": 0.774687
+    },
+    {
+      "start": 521.758,
+      "end": 522.486,
+      "duration": 0.728437
+    },
+    {
+      "start": 527.558,
+      "end": 528.585,
+      "duration": 1.02713
+    },
+    {
+      "start": 554.658,
+      "end": 555.308,
+      "duration": 0.65025
+    },
+    {
+      "start": 557.146,
+      "end": 557.716,
+      "duration": 0.570375
+    },
+    {
+      "start": 561.983,
+      "end": 562.666,
+      "duration": 0.683063
+    },
+    {
+      "start": 604.456,
+      "end": 605.032,
+      "duration": 0.576333
+    },
+    {
+      "start": 609.425,
+      "end": 609.991,
+      "duration": 0.566896
+    },
+    {
+      "start": 611.778,
+      "end": 612.572,
+      "duration": 0.794208
+    },
+    {
+      "start": 693.602,
+      "end": 695.289,
+      "duration": 1.68612
+    },
+    {
+      "start": 726.927,
+      "end": 727.683,
+      "duration": 0.756062
+    },
+    {
+      "start": 729.293,
+      "end": 740.949,
+      "duration": 11.6557
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

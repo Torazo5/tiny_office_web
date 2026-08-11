@@ -1,0 +1,262 @@
+{
+  "video_id": "eUjQkMma-Is",
+  "title": "Parcels: Tiny Desk Concert",
+  "duration": 1118,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/eUjQkMma-Is.mp3",
+  "description_songs": [
+    "Leaveyourlove",
+    "Tieduprightnow",
+    "Ifyoucall",
+    "Yougotmefeeling",
+    "Gamesofluck",
+    "Finallyover"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 551 likes, matched all 6 description song(s), retained 6 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 637.4399999999999,
+      "end": 644.64,
+      "duration": 7.2000000000000455,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 852.9599999999999,
+      "end": 868.8,
+      "duration": 15.840000000000032,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1087.2,
+      "end": 1112.16,
+      "duration": 24.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 10,
+      "song": "Leaveyourlove",
+      "corroboration": 0,
+      "silence_match": 11.9811,
+      "clip_start": 10,
+      "clip_end": 64,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 64,
+      "song": "Tieduprightnow",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 64,
+      "clip_end": 250,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 250,
+      "song": "Ifyoucall",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 250,
+      "clip_end": 417,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 417,
+      "song": "Yougotmefeeling",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 417,
+      "clip_end": 636.4399999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 653,
+      "song": "Gamesofluck",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 644.64,
+      "clip_end": 851.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 876,
+      "song": "Finallyover",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 868.8,
+      "clip_end": 1086.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.538792,
+      "duration": 0.538792
+    },
+    {
+      "start": 2.89385,
+      "end": 4.11894,
+      "duration": 1.22508
+    },
+    {
+      "start": 7.66073,
+      "end": 8.66542,
+      "duration": 1.00469
+    },
+    {
+      "start": 11.9811,
+      "end": 13.2722,
+      "duration": 1.2911
+    },
+    {
+      "start": 16.6523,
+      "end": 17.3517,
+      "duration": 0.699354
+    },
+    {
+      "start": 17.3519,
+      "end": 17.8986,
+      "duration": 0.546729
+    },
+    {
+      "start": 54.9244,
+      "end": 55.5225,
+      "duration": 0.598104
+    },
+    {
+      "start": 55.5464,
+      "end": 56.0911,
+      "duration": 0.544708
+    },
+    {
+      "start": 238.751,
+      "end": 240.697,
+      "duration": 1.94544
+    },
+    {
+      "start": 240.721,
+      "end": 241.243,
+      "duration": 0.522875
+    },
+    {
+      "start": 241.267,
+      "end": 241.781,
+      "duration": 0.514604
+    },
+    {
+      "start": 526.776,
+      "end": 527.333,
+      "duration": 0.557187
+    },
+    {
+      "start": 661.948,
+      "end": 663.72,
+      "duration": 1.77194
+    },
+    {
+      "start": 669.54,
+      "end": 670.715,
+      "duration": 1.17469
+    },
+    {
+      "start": 679.189,
+      "end": 680.198,
+      "duration": 1.009
+    },
+    {
+      "start": 851.333,
+      "end": 852.119,
+      "duration": 0.785833
+    },
+    {
+      "start": 1056.58,
+      "end": 1057.1,
+      "duration": 0.517958
+    },
+    {
+      "start": 1083.55,
+      "end": 1086.54,
+      "duration": 2.98271
+    },
+    {
+      "start": 1109.79,
+      "end": 1110.37,
+      "duration": 0.587792
+    },
+    {
+      "start": 1110.98,
+      "end": 1111.57,
+      "duration": 0.588229
+    },
+    {
+      "start": 1111.57,
+      "end": 1112.16,
+      "duration": 0.597333
+    },
+    {
+      "start": 1112.47,
+      "end": 1118.37,
+      "duration": 5.8996
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      45,
+      45,
+      53,
+      61,
+      61
+    ],
+    "avg": 54.2,
+    "min": 45
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

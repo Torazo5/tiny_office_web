@@ -1,0 +1,187 @@
+{
+  "video_id": "EkPrXL-H5Qc",
+  "title": "Florence + the Machine: NPR Music Tiny Desk Concert",
+  "duration": 842,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/EkPrXL-H5Qc.mp3",
+  "description_songs": [
+    "June",
+    "Patricia",
+    "Ship to Wreck"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 275 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 224.64,
+      "end": 239.99999999999997,
+      "duration": 15.359999999999985,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 524.16,
+      "end": 572.64,
+      "duration": 48.48000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 824.16,
+      "end": 840.96,
+      "duration": 16.800000000000068,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 13,
+      "song": "June",
+      "corroboration": 0,
+      "silence_match": 13.8662,
+      "clip_start": 13,
+      "clip_end": 223.64,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 242,
+      "song": "Patricia",
+      "corroboration": 1,
+      "silence_match": 242.201,
+      "clip_start": 239.99999999999997,
+      "clip_end": 523.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 573,
+      "song": "Ship to Wreck",
+      "corroboration": 1,
+      "silence_match": 572.156,
+      "clip_start": 572.64,
+      "clip_end": 823.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 3.17577,
+      "end": 4.22775,
+      "duration": 1.05198
+    },
+    {
+      "start": 7.27079,
+      "end": 7.9204,
+      "duration": 0.649604
+    },
+    {
+      "start": 10.522,
+      "end": 11.5468,
+      "duration": 1.02485
+    },
+    {
+      "start": 13.8662,
+      "end": 14.4584,
+      "duration": 0.592146
+    },
+    {
+      "start": 44.6701,
+      "end": 45.5053,
+      "duration": 0.835167
+    },
+    {
+      "start": 223.106,
+      "end": 224.48,
+      "duration": 1.37456
+    },
+    {
+      "start": 242.201,
+      "end": 242.732,
+      "duration": 0.530937
+    },
+    {
+      "start": 243.324,
+      "end": 243.931,
+      "duration": 0.607
+    },
+    {
+      "start": 522.637,
+      "end": 523.816,
+      "duration": 1.1785
+    },
+    {
+      "start": 545.069,
+      "end": 545.787,
+      "duration": 0.71775
+    },
+    {
+      "start": 548.516,
+      "end": 549.199,
+      "duration": 0.682917
+    },
+    {
+      "start": 551.754,
+      "end": 552.53,
+      "duration": 0.776167
+    },
+    {
+      "start": 562.459,
+      "end": 563.19,
+      "duration": 0.731083
+    },
+    {
+      "start": 572.156,
+      "end": 573.945,
+      "duration": 1.78873
+    },
+    {
+      "start": 823.168,
+      "end": 824.47,
+      "duration": 1.30181
+    },
+    {
+      "start": 840.431,
+      "end": 841.898,
+      "duration": 1.46625
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      83,
+      83
+    ],
+    "avg": 78.0,
+    "min": 68
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/EkPrXL-H5Qc.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

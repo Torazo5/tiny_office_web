@@ -1,0 +1,248 @@
+{
+  "video_id": "QGAzPtwUJJU",
+  "title": "Andrew Bird: NPR Music Tiny Desk Concert",
+  "duration": 883,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/QGAzPtwUJJU.mp3",
+  "description_songs": [
+    "Are You Serious",
+    "Roma Fade",
+    "Capsized"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 282 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 259.68,
+      "end": 288.48,
+      "duration": 28.80000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 294.24,
+      "end": 299.04,
+      "duration": 4.800000000000011,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 300.47999999999996,
+      "end": 304.8,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 306.71999999999997,
+      "end": 311.04,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 576.48,
+      "end": 594.72,
+      "duration": 18.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 854.4,
+      "end": 880.3199999999999,
+      "duration": 25.91999999999996,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Are You Serious",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 258.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 308,
+      "song": "Roma Fade",
+      "corroboration": 0,
+      "silence_match": 309.127,
+      "clip_start": 311.04,
+      "clip_end": 575.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 593,
+      "song": "Capsized",
+      "corroboration": 0,
+      "silence_match": 594.724,
+      "clip_start": 594.72,
+      "clip_end": 853.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.555208,
+      "duration": 0.555208
+    },
+    {
+      "start": 0.875937,
+      "end": 1.56148,
+      "duration": 0.685542
+    },
+    {
+      "start": 2.61065,
+      "end": 3.36246,
+      "duration": 0.751812
+    },
+    {
+      "start": 4.49483,
+      "end": 5.11942,
+      "duration": 0.624583
+    },
+    {
+      "start": 7.74681,
+      "end": 8.36231,
+      "duration": 0.6155
+    },
+    {
+      "start": 8.45025,
+      "end": 10.6341,
+      "duration": 2.1839
+    },
+    {
+      "start": 10.6453,
+      "end": 11.2586,
+      "duration": 0.613333
+    },
+    {
+      "start": 11.275,
+      "end": 12.1198,
+      "duration": 0.844792
+    },
+    {
+      "start": 258.632,
+      "end": 259.241,
+      "duration": 0.608792
+    },
+    {
+      "start": 297.279,
+      "end": 298.139,
+      "duration": 0.860208
+    },
+    {
+      "start": 304.772,
+      "end": 305.828,
+      "duration": 1.05531
+    },
+    {
+      "start": 306.226,
+      "end": 306.84,
+      "duration": 0.613417
+    },
+    {
+      "start": 309.127,
+      "end": 309.984,
+      "duration": 0.857042
+    },
+    {
+      "start": 312.487,
+      "end": 313.897,
+      "duration": 1.41021
+    },
+    {
+      "start": 574.644,
+      "end": 576.425,
+      "duration": 1.78146
+    },
+    {
+      "start": 590.292,
+      "end": 591.109,
+      "duration": 0.816354
+    },
+    {
+      "start": 594.724,
+      "end": 595.271,
+      "duration": 0.547021
+    },
+    {
+      "start": 598.057,
+      "end": 599.671,
+      "duration": 1.61373
+    },
+    {
+      "start": 631.469,
+      "end": 632.889,
+      "duration": 1.41942
+    },
+    {
+      "start": 632.917,
+      "end": 633.611,
+      "duration": 0.694479
+    },
+    {
+      "start": 633.649,
+      "end": 634.33,
+      "duration": 0.680583
+    },
+    {
+      "start": 750.427,
+      "end": 751.116,
+      "duration": 0.689479
+    },
+    {
+      "start": 853.957,
+      "end": 854.642,
+      "duration": 0.684646
+    },
+    {
+      "start": 882.264,
+      "end": 883.101,
+      "duration": 0.836833
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      76
+    ],
+    "avg": 73.3,
+    "min": 68
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/QGAzPtwUJJU.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

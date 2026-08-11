@@ -1,0 +1,273 @@
+{
+  "video_id": "vfzu33BfRHE",
+  "title": "Snarky Puppy: NPR Music Tiny Desk Concert",
+  "duration": 1256,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/vfzu33BfRHE.mp3",
+  "description_songs": [
+    "Tarova",
+    "Xavi"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 228 likes, matched all 2 description song(s), retained 2 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 2
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 393.59999999999997,
+      "end": 523.68,
+      "duration": 130.07999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 531.36,
+      "end": 537.12,
+      "duration": 5.759999999999991,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 549.6,
+      "end": 553.44,
+      "duration": 3.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 558.72,
+      "end": 565.92,
+      "duration": 7.199999999999932,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 569.28,
+      "end": 571.2,
+      "duration": 1.9200000000000728,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 574.0799999999999,
+      "end": 596.16,
+      "duration": 22.08000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 609.12,
+      "end": 624.0,
+      "duration": 14.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 648.0,
+      "end": 703.2,
+      "duration": 55.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1214.3999999999999,
+      "end": 1253.76,
+      "duration": 39.36000000000013,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Tarova",
+      "corroboration": 1,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 392.59999999999997,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 713,
+      "song": "Xavi",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 703.2,
+      "clip_end": 1213.3999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 2.06038,
+      "duration": 2.06038
+    },
+    {
+      "start": 331.147,
+      "end": 331.794,
+      "duration": 0.646604
+    },
+    {
+      "start": 407.851,
+      "end": 408.445,
+      "duration": 0.594292
+    },
+    {
+      "start": 453.671,
+      "end": 454.56,
+      "duration": 0.889667
+    },
+    {
+      "start": 454.771,
+      "end": 455.414,
+      "duration": 0.643604
+    },
+    {
+      "start": 460.305,
+      "end": 461.328,
+      "duration": 1.02252
+    },
+    {
+      "start": 476.161,
+      "end": 476.681,
+      "duration": 0.520167
+    },
+    {
+      "start": 486.094,
+      "end": 486.745,
+      "duration": 0.651042
+    },
+    {
+      "start": 503.779,
+      "end": 504.61,
+      "duration": 0.831625
+    },
+    {
+      "start": 509.05,
+      "end": 509.6,
+      "duration": 0.549854
+    },
+    {
+      "start": 512.124,
+      "end": 516.526,
+      "duration": 4.40167
+    },
+    {
+      "start": 578.44,
+      "end": 579.228,
+      "duration": 0.788271
+    },
+    {
+      "start": 585.93,
+      "end": 586.986,
+      "duration": 1.05623
+    },
+    {
+      "start": 651.51,
+      "end": 652.093,
+      "duration": 0.583708
+    },
+    {
+      "start": 655.339,
+      "end": 655.886,
+      "duration": 0.546875
+    },
+    {
+      "start": 662.853,
+      "end": 663.62,
+      "duration": 0.766396
+    },
+    {
+      "start": 663.672,
+      "end": 664.318,
+      "duration": 0.646042
+    },
+    {
+      "start": 671.005,
+      "end": 671.506,
+      "duration": 0.500938
+    },
+    {
+      "start": 673.348,
+      "end": 673.882,
+      "duration": 0.534083
+    },
+    {
+      "start": 674.37,
+      "end": 674.913,
+      "duration": 0.543083
+    },
+    {
+      "start": 676.268,
+      "end": 677.004,
+      "duration": 0.736354
+    },
+    {
+      "start": 677.273,
+      "end": 677.826,
+      "duration": 0.553854
+    },
+    {
+      "start": 680.053,
+      "end": 680.663,
+      "duration": 0.610312
+    },
+    {
+      "start": 683.335,
+      "end": 684.966,
+      "duration": 1.63052
+    },
+    {
+      "start": 693.699,
+      "end": 694.314,
+      "duration": 0.6145
+    },
+    {
+      "start": 695.018,
+      "end": 695.703,
+      "duration": 0.684521
+    },
+    {
+      "start": 703.209,
+      "end": 712.721,
+      "duration": 9.51277
+    },
+    {
+      "start": 1253.33,
+      "end": 1256.22,
+      "duration": 2.88854
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      68
+    ],
+    "avg": 71.5,
+    "min": 68
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/vfzu33BfRHE.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

@@ -2,7 +2,7 @@
   "video_id": "UEqTIwRrWvA",
   "title": "31 Minutos: Tiny Desk Concert",
   "duration": 1269,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/UEqTIwRrWvA.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/UEqTIwRrWvA.mp3",
   "description_songs": [
     "Mi Equilibrio Espiritual",
     "Bailan sin Cesar",
@@ -153,12 +153,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 0.0,
-      "clip_end": 168.48,
+      "clip_end": 167.48,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 43
+      "confidence": 43,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 168.48,
@@ -166,12 +167,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 173.27999999999997,
-      "clip_end": 297.12,
+      "clip_end": 296.12,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 51
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 297.12,
@@ -179,12 +181,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 312.96,
-      "clip_end": 317.76,
+      "clip_end": 316.76,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": true,
-      "confidence": 1
+      "confidence": 1,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 317.76,
@@ -192,12 +195,13 @@
       "corroboration": 0,
       "silence_match": 318.353,
       "clip_start": 336.96,
-      "clip_end": 505.91999999999996,
+      "clip_end": 504.91999999999996,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 66
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 505.91999999999996,
@@ -205,12 +209,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 498.24,
-      "clip_end": 505.91999999999996,
+      "clip_end": 504.91999999999996,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": true,
-      "confidence": 1
+      "confidence": 1,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 548.16,
@@ -218,12 +223,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 564.0,
-      "clip_end": 828.0,
+      "clip_end": 827.0,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 51
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 828.0,
@@ -359,7 +365,10 @@
     "avg": 35.4,
     "min": 1
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/UEqTIwRrWvA.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

@@ -2,7 +2,7 @@
   "video_id": "eB4oFu4BtQ8",
   "title": "The Roots feat. Bilal: NPR Music Tiny Desk Concert",
   "duration": 724,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/eB4oFu4BtQ8.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/eB4oFu4BtQ8.mp3",
   "description_songs": [],
   "method": "manual",
   "resolve_notes": {
@@ -75,7 +75,10 @@
     "avg": 0,
     "min": 0
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
 }

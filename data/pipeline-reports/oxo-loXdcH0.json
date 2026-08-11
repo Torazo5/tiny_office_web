@@ -1,0 +1,376 @@
+{
+  "video_id": "oxo-loXdcH0",
+  "title": "Bono and The Edge: Tiny Desk Concert",
+  "duration": 1272,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/oxo-loXdcH0.mp3",
+  "description_songs": [
+    "Beautiful Day",
+    "In a Little While",
+    "Stuck in a Moment You Can't Get Out Of",
+    "Walk On"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 651 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 257.28,
+      "end": 264.48,
+      "duration": 7.2000000000000455,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 499.68,
+      "end": 608.64,
+      "duration": 108.95999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 883.1999999999999,
+      "end": 906.24,
+      "duration": 23.040000000000077,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 907.68,
+      "end": 965.28,
+      "duration": 57.60000000000002,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 966.7199999999999,
+      "end": 968.64,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1212.0,
+      "end": 1213.44,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1214.3999999999999,
+      "end": 1251.36,
+      "duration": 36.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Beautiful Day",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 256.28,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 301,
+      "song": "In a Little While",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 264.48,
+      "clip_end": 498.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 608,
+      "song": "Stuck in a Moment You Can't Get Out Of",
+      "corroboration": 0,
+      "silence_match": 603.075,
+      "clip_start": 608.64,
+      "clip_end": 882.1999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 969,
+      "song": "Walk On",
+      "corroboration": 0,
+      "silence_match": 968.47,
+      "clip_start": 968.64,
+      "clip_end": 1213.3999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 255.574,
+      "end": 256.193,
+      "duration": 0.618542
+    },
+    {
+      "start": 497.252,
+      "end": 498.295,
+      "duration": 1.04331
+    },
+    {
+      "start": 498.484,
+      "end": 499.616,
+      "duration": 1.13196
+    },
+    {
+      "start": 524.949,
+      "end": 525.89,
+      "duration": 0.940667
+    },
+    {
+      "start": 539.403,
+      "end": 540.091,
+      "duration": 0.6885
+    },
+    {
+      "start": 540.737,
+      "end": 541.247,
+      "duration": 0.510625
+    },
+    {
+      "start": 542.946,
+      "end": 543.855,
+      "duration": 0.908583
+    },
+    {
+      "start": 547.866,
+      "end": 548.599,
+      "duration": 0.733333
+    },
+    {
+      "start": 550.664,
+      "end": 551.258,
+      "duration": 0.593875
+    },
+    {
+      "start": 552.224,
+      "end": 553.078,
+      "duration": 0.853396
+    },
+    {
+      "start": 554.858,
+      "end": 556.176,
+      "duration": 1.3179
+    },
+    {
+      "start": 556.928,
+      "end": 557.469,
+      "duration": 0.541729
+    },
+    {
+      "start": 557.762,
+      "end": 558.998,
+      "duration": 1.23569
+    },
+    {
+      "start": 565.014,
+      "end": 565.635,
+      "duration": 0.620917
+    },
+    {
+      "start": 569.211,
+      "end": 569.848,
+      "duration": 0.636917
+    },
+    {
+      "start": 572.08,
+      "end": 573.003,
+      "duration": 0.923146
+    },
+    {
+      "start": 579.306,
+      "end": 579.842,
+      "duration": 0.535854
+    },
+    {
+      "start": 580.7,
+      "end": 581.296,
+      "duration": 0.595562
+    },
+    {
+      "start": 587.578,
+      "end": 588.46,
+      "duration": 0.882562
+    },
+    {
+      "start": 593.209,
+      "end": 594.18,
+      "duration": 0.971917
+    },
+    {
+      "start": 595.093,
+      "end": 595.973,
+      "duration": 0.879812
+    },
+    {
+      "start": 599.784,
+      "end": 601.417,
+      "duration": 1.63377
+    },
+    {
+      "start": 603.075,
+      "end": 603.721,
+      "duration": 0.645875
+    },
+    {
+      "start": 907.065,
+      "end": 908.246,
+      "duration": 1.18115
+    },
+    {
+      "start": 909.187,
+      "end": 909.822,
+      "duration": 0.635125
+    },
+    {
+      "start": 910.51,
+      "end": 911.067,
+      "duration": 0.556688
+    },
+    {
+      "start": 918.218,
+      "end": 918.922,
+      "duration": 0.704417
+    },
+    {
+      "start": 925.224,
+      "end": 926.037,
+      "duration": 0.8125
+    },
+    {
+      "start": 928.835,
+      "end": 929.391,
+      "duration": 0.555625
+    },
+    {
+      "start": 933.153,
+      "end": 933.726,
+      "duration": 0.572375
+    },
+    {
+      "start": 938.151,
+      "end": 938.945,
+      "duration": 0.794438
+    },
+    {
+      "start": 942.412,
+      "end": 943.152,
+      "duration": 0.740417
+    },
+    {
+      "start": 945.07,
+      "end": 945.598,
+      "duration": 0.528188
+    },
+    {
+      "start": 949.686,
+      "end": 950.273,
+      "duration": 0.586979
+    },
+    {
+      "start": 951.474,
+      "end": 952.303,
+      "duration": 0.828667
+    },
+    {
+      "start": 955.04,
+      "end": 955.701,
+      "duration": 0.661458
+    },
+    {
+      "start": 957.657,
+      "end": 958.574,
+      "duration": 0.917542
+    },
+    {
+      "start": 962.041,
+      "end": 963.259,
+      "duration": 1.21794
+    },
+    {
+      "start": 963.504,
+      "end": 964.438,
+      "duration": 0.934437
+    },
+    {
+      "start": 965.161,
+      "end": 966.139,
+      "duration": 0.9785
+    },
+    {
+      "start": 966.139,
+      "end": 966.663,
+      "duration": 0.523687
+    },
+    {
+      "start": 968.47,
+      "end": 969.7,
+      "duration": 1.22948
+    },
+    {
+      "start": 1202.37,
+      "end": 1203.33,
+      "duration": 0.957167
+    },
+    {
+      "start": 1211.56,
+      "end": 1212.12,
+      "duration": 0.552625
+    },
+    {
+      "start": 1250.86,
+      "end": 1271.65,
+      "duration": 20.7935
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      76,
+      76
+    ],
+    "avg": 66.5,
+    "min": 53
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/oxo-loXdcH0.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

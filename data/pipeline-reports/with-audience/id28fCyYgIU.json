@@ -1,0 +1,174 @@
+{
+  "video_id": "id28fCyYgIU",
+  "title": "Damian 'Jr. Gong' Marley: NPR Music Tiny Desk Concert",
+  "duration": 913,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/id28fCyYgIU.mp3",
+  "description_songs": [
+    "Slave Mill",
+    "So a Child May Follow",
+    "Speak Life"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 3 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 284.15999999999997,
+      "end": 310.56,
+      "duration": 26.400000000000034,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 586.0799999999999,
+      "end": 614.4,
+      "duration": 28.32000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 890.88,
+      "end": 891.36,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 893.76,
+      "end": 909.6,
+      "duration": 15.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Slave Mill",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 284.15999999999997,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 284.15999999999997,
+      "song": "So a Child May Follow",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 310.56,
+      "clip_end": 586.0799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 586.0799999999999,
+      "song": "Speak Life",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 614.4,
+      "clip_end": 890.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 290.703,
+      "end": 291.511,
+      "duration": 0.808021
+    },
+    {
+      "start": 297.731,
+      "end": 298.517,
+      "duration": 0.785896
+    },
+    {
+      "start": 300.315,
+      "end": 300.839,
+      "duration": 0.523396
+    },
+    {
+      "start": 305.987,
+      "end": 306.951,
+      "duration": 0.963687
+    },
+    {
+      "start": 308.274,
+      "end": 309.08,
+      "duration": 0.806625
+    },
+    {
+      "start": 310.19,
+      "end": 311.347,
+      "duration": 1.15665
+    },
+    {
+      "start": 543.609,
+      "end": 544.449,
+      "duration": 0.839771
+    },
+    {
+      "start": 594.319,
+      "end": 595.269,
+      "duration": 0.949792
+    },
+    {
+      "start": 601.185,
+      "end": 601.691,
+      "duration": 0.505729
+    },
+    {
+      "start": 603.673,
+      "end": 604.799,
+      "duration": 1.12604
+    },
+    {
+      "start": 607.042,
+      "end": 607.571,
+      "duration": 0.529021
+    },
+    {
+      "start": 614.366,
+      "end": 614.922,
+      "duration": 0.556042
+    },
+    {
+      "start": 908.582,
+      "end": 913.206,
+      "duration": 4.62417
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      51,
+      51
+    ],
+    "avg": 48.3,
+    "min": 43
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

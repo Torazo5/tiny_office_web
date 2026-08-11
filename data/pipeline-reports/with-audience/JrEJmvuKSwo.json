@@ -1,0 +1,239 @@
+{
+  "video_id": "JrEJmvuKSwo",
+  "title": "Macklemore & Ryan Lewis: NPR Music Tiny Desk Concert",
+  "duration": 885,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/JrEJmvuKSwo.mp3",
+  "description_songs": [
+    "Same Love",
+    "Thrift Shop",
+    "Can't Hold Us"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 763 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 4,
+    "accepted": 4,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 323.52,
+      "end": 359.52,
+      "duration": 36.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 474.71999999999997,
+      "end": 476.16,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 500.64,
+      "end": 502.08,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 574.56,
+      "end": 576.0,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 576.0,
+      "end": 604.32,
+      "duration": 28.32000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 724.3199999999999,
+      "end": 726.72,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 860.16,
+      "end": 884.64,
+      "duration": 24.480000000000018,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Same Love",
+      "corroboration": 3,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 323.52,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 89
+    },
+    {
+      "seconds": 330,
+      "song": "Thrift Shop",
+      "corroboration": 1,
+      "silence_match": 334.296,
+      "clip_start": 330,
+      "clip_end": 576.0,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 581,
+      "song": "Can't Hold Us",
+      "corroboration": 1,
+      "silence_match": 584.022,
+      "clip_start": 576.0,
+      "clip_end": 885,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.01342,
+      "duration": 5.01342
+    },
+    {
+      "start": 34.8119,
+      "end": 35.9144,
+      "duration": 1.10256
+    },
+    {
+      "start": 37.7044,
+      "end": 38.713,
+      "duration": 1.00856
+    },
+    {
+      "start": 40.3392,
+      "end": 41.5781,
+      "duration": 1.23885
+    },
+    {
+      "start": 43.3137,
+      "end": 44.3472,
+      "duration": 1.0335
+    },
+    {
+      "start": 46.4842,
+      "end": 47.1541,
+      "duration": 0.669917
+    },
+    {
+      "start": 320.712,
+      "end": 323.588,
+      "duration": 2.87594
+    },
+    {
+      "start": 334.296,
+      "end": 335.18,
+      "duration": 0.883813
+    },
+    {
+      "start": 335.923,
+      "end": 336.536,
+      "duration": 0.613
+    },
+    {
+      "start": 337.214,
+      "end": 338.07,
+      "duration": 0.856125
+    },
+    {
+      "start": 584.022,
+      "end": 585.244,
+      "duration": 1.22206
+    },
+    {
+      "start": 589.018,
+      "end": 590.391,
+      "duration": 1.37394
+    },
+    {
+      "start": 592.95,
+      "end": 593.784,
+      "duration": 0.833187
+    },
+    {
+      "start": 594.853,
+      "end": 595.381,
+      "duration": 0.528
+    },
+    {
+      "start": 598.692,
+      "end": 599.314,
+      "duration": 0.621646
+    },
+    {
+      "start": 599.753,
+      "end": 600.492,
+      "duration": 0.739375
+    },
+    {
+      "start": 858.805,
+      "end": 859.603,
+      "duration": 0.798021
+    },
+    {
+      "start": 878.363,
+      "end": 879.627,
+      "duration": 1.26415
+    },
+    {
+      "start": 879.64,
+      "end": 880.249,
+      "duration": 0.609187
+    },
+    {
+      "start": 880.432,
+      "end": 882.057,
+      "duration": 1.625
+    },
+    {
+      "start": 882.354,
+      "end": 883.419,
+      "duration": 1.06504
+    },
+    {
+      "start": 884.556,
+      "end": 885.365,
+      "duration": 0.809042
+    }
+  ],
+  "confidence": {
+    "scores": [
+      89,
+      75,
+      75
+    ],
+    "avg": 79.7,
+    "min": 75
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

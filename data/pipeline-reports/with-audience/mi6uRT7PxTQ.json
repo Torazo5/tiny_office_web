@@ -1,0 +1,89 @@
+{
+  "video_id": "mi6uRT7PxTQ",
+  "title": "Death Cab For Cutie: NPR Music Tiny Desk Concert",
+  "duration": 1095,
+  "audio_path": null,
+  "description_songs": [
+    "Black Sun",
+    "No Room In Frame",
+    "Your Heart Is An Empty Room",
+    "Passenger Seat"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 692 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": null,
+  "boundary_spans": [],
+  "candidates": [
+    {
+      "seconds": 7,
+      "song": "Black Sun",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 7,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 313,
+      "song": "No Room In Frame",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 313,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 563,
+      "song": "Your Heart Is An Empty Room",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 563,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 840,
+      "song": "Passenger Seat",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 840,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    }
+  ],
+  "silence_intervals": [],
+  "confidence": {
+    "scores": [
+      45,
+      45,
+      45,
+      45
+    ],
+    "avg": 45.0,
+    "min": 45
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

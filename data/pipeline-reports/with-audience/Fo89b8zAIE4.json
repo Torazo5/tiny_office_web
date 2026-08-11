@@ -1,0 +1,362 @@
+{
+  "video_id": "Fo89b8zAIE4",
+  "title": "Rusowsky: Tiny Desk Concert",
+  "duration": 1169,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/Fo89b8zAIE4.mp3",
+  "description_songs": [
+    "Johnny Glamour",
+    "SOPHIA",
+    "malibU",
+    "(ecco)",
+    "Dolores"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1300 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 168.0,
+      "end": 218.39999999999998,
+      "duration": 50.39999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 394.08,
+      "end": 403.2,
+      "duration": 9.120000000000005,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 609.12,
+      "end": 619.2,
+      "duration": 10.080000000000041,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 873.12,
+      "end": 902.88,
+      "duration": 29.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1109.76,
+      "end": 1113.6,
+      "duration": 3.839999999999918,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1114.08,
+      "end": 1148.6399999999999,
+      "duration": 34.559999999999945,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Johnny Glamour",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 168.0,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 218,
+      "song": "SOPHIA",
+      "corroboration": 0,
+      "silence_match": 212.272,
+      "clip_start": 218.39999999999998,
+      "clip_end": 394.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 412,
+      "song": "malibU",
+      "corroboration": 0,
+      "silence_match": 408.335,
+      "clip_start": 403.2,
+      "clip_end": 609.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 645,
+      "song": "(ecco)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 619.2,
+      "clip_end": 873.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 902,
+      "song": "Dolores",
+      "corroboration": 0,
+      "silence_match": 901.562,
+      "clip_start": 902.88,
+      "clip_end": 1114.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 166.907,
+      "end": 168.135,
+      "duration": 1.22798
+    },
+    {
+      "start": 181.49,
+      "end": 182.325,
+      "duration": 0.834271
+    },
+    {
+      "start": 182.81,
+      "end": 183.512,
+      "duration": 0.701937
+    },
+    {
+      "start": 185.464,
+      "end": 186.092,
+      "duration": 0.627687
+    },
+    {
+      "start": 186.739,
+      "end": 187.27,
+      "duration": 0.530646
+    },
+    {
+      "start": 191.171,
+      "end": 191.781,
+      "duration": 0.610042
+    },
+    {
+      "start": 192.454,
+      "end": 193.098,
+      "duration": 0.643354
+    },
+    {
+      "start": 193.532,
+      "end": 194.344,
+      "duration": 0.812271
+    },
+    {
+      "start": 194.426,
+      "end": 195.5,
+      "duration": 1.07404
+    },
+    {
+      "start": 202.498,
+      "end": 203.317,
+      "duration": 0.819417
+    },
+    {
+      "start": 204.011,
+      "end": 204.621,
+      "duration": 0.610167
+    },
+    {
+      "start": 206.849,
+      "end": 207.555,
+      "duration": 0.706146
+    },
+    {
+      "start": 209.58,
+      "end": 210.081,
+      "duration": 0.501229
+    },
+    {
+      "start": 210.286,
+      "end": 211.145,
+      "duration": 0.858479
+    },
+    {
+      "start": 212.272,
+      "end": 213.382,
+      "duration": 1.10958
+    },
+    {
+      "start": 234.435,
+      "end": 235.016,
+      "duration": 0.581
+    },
+    {
+      "start": 375.25,
+      "end": 376.298,
+      "duration": 1.0479
+    },
+    {
+      "start": 392.029,
+      "end": 393.503,
+      "duration": 1.47429
+    },
+    {
+      "start": 403.831,
+      "end": 406.723,
+      "duration": 2.89173
+    },
+    {
+      "start": 406.878,
+      "end": 408.335,
+      "duration": 1.45667
+    },
+    {
+      "start": 408.335,
+      "end": 413.992,
+      "duration": 5.65665
+    },
+    {
+      "start": 608.12,
+      "end": 609.331,
+      "duration": 1.21075
+    },
+    {
+      "start": 619.196,
+      "end": 629.321,
+      "duration": 10.125
+    },
+    {
+      "start": 629.321,
+      "end": 637.898,
+      "duration": 8.57681
+    },
+    {
+      "start": 638.1,
+      "end": 646.552,
+      "duration": 8.45179
+    },
+    {
+      "start": 664.021,
+      "end": 665.404,
+      "duration": 1.38296
+    },
+    {
+      "start": 871.816,
+      "end": 873.82,
+      "duration": 2.00473
+    },
+    {
+      "start": 889.12,
+      "end": 889.975,
+      "duration": 0.854229
+    },
+    {
+      "start": 890.121,
+      "end": 890.627,
+      "duration": 0.505896
+    },
+    {
+      "start": 891.113,
+      "end": 891.702,
+      "duration": 0.589688
+    },
+    {
+      "start": 892.997,
+      "end": 894.244,
+      "duration": 1.24704
+    },
+    {
+      "start": 895.894,
+      "end": 896.682,
+      "duration": 0.787854
+    },
+    {
+      "start": 897.273,
+      "end": 900.799,
+      "duration": 3.52631
+    },
+    {
+      "start": 901.562,
+      "end": 902.364,
+      "duration": 0.801958
+    },
+    {
+      "start": 997.748,
+      "end": 998.335,
+      "duration": 0.586708
+    },
+    {
+      "start": 1109.52,
+      "end": 1110.63,
+      "duration": 1.10827
+    },
+    {
+      "start": 1111.04,
+      "end": 1111.73,
+      "duration": 0.690896
+    },
+    {
+      "start": 1131.18,
+      "end": 1132.13,
+      "duration": 0.950062
+    },
+    {
+      "start": 1132.98,
+      "end": 1134.82,
+      "duration": 1.83802
+    },
+    {
+      "start": 1135.69,
+      "end": 1136.94,
+      "duration": 1.24892
+    },
+    {
+      "start": 1138.05,
+      "end": 1140.75,
+      "duration": 2.70112
+    },
+    {
+      "start": 1147.4,
+      "end": 1169.04,
+      "duration": 21.6444
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76,
+      61,
+      76
+    ],
+    "avg": 68.4,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

@@ -1,0 +1,262 @@
+{
+  "video_id": "K58JYXhb4YA",
+  "title": "Noname: Tiny Desk Concert",
+  "duration": 904,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/K58JYXhb4YA.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 118.08,
+      "end": 120.48,
+      "duration": 2.4000000000000057,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 121.44,
+      "end": 122.88,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 126.24,
+      "end": 151.2,
+      "duration": 24.959999999999994,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 155.51999999999998,
+      "end": 185.27999999999997,
+      "duration": 29.75999999999999,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 520.3199999999999,
+      "end": 521.76,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 524.16,
+      "end": 525.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 538.0799999999999,
+      "end": 539.52,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 569.76,
+      "end": 577.4399999999999,
+      "duration": 7.67999999999995,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 580.8,
+      "end": 598.08,
+      "duration": 17.280000000000086,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 598.56,
+      "end": 681.6,
+      "duration": 83.04000000000008,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 878.88,
+      "end": 879.36,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 881.28,
+      "end": 900.96,
+      "duration": 19.680000000000064,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 134.382,
+      "end": 135.077,
+      "duration": 0.694208
+    },
+    {
+      "start": 140.261,
+      "end": 140.909,
+      "duration": 0.648083
+    },
+    {
+      "start": 161.9,
+      "end": 162.466,
+      "duration": 0.565542
+    },
+    {
+      "start": 163.285,
+      "end": 163.829,
+      "duration": 0.54375
+    },
+    {
+      "start": 166.323,
+      "end": 166.836,
+      "duration": 0.513042
+    },
+    {
+      "start": 169.49,
+      "end": 170.095,
+      "duration": 0.605354
+    },
+    {
+      "start": 172.925,
+      "end": 173.844,
+      "duration": 0.919021
+    },
+    {
+      "start": 185.225,
+      "end": 187.594,
+      "duration": 2.36865
+    },
+    {
+      "start": 354.523,
+      "end": 355.06,
+      "duration": 0.537
+    },
+    {
+      "start": 452.729,
+      "end": 453.23,
+      "duration": 0.500312
+    },
+    {
+      "start": 508.804,
+      "end": 509.445,
+      "duration": 0.641396
+    },
+    {
+      "start": 572.878,
+      "end": 573.626,
+      "duration": 0.748667
+    },
+    {
+      "start": 574.833,
+      "end": 575.697,
+      "duration": 0.864729
+    },
+    {
+      "start": 577.354,
+      "end": 578.81,
+      "duration": 1.45535
+    },
+    {
+      "start": 610.664,
+      "end": 611.167,
+      "duration": 0.503271
+    },
+    {
+      "start": 611.589,
+      "end": 612.1,
+      "duration": 0.511229
+    },
+    {
+      "start": 613.52,
+      "end": 614.055,
+      "duration": 0.534833
+    },
+    {
+      "start": 614.179,
+      "end": 615.084,
+      "duration": 0.905125
+    },
+    {
+      "start": 629.964,
+      "end": 630.628,
+      "duration": 0.664292
+    },
+    {
+      "start": 631.49,
+      "end": 632.075,
+      "duration": 0.585
+    },
+    {
+      "start": 645.398,
+      "end": 645.946,
+      "duration": 0.548
+    },
+    {
+      "start": 657.739,
+      "end": 658.939,
+      "duration": 1.20023
+    },
+    {
+      "start": 678.112,
+      "end": 678.626,
+      "duration": 0.514229
+    },
+    {
+      "start": 681.336,
+      "end": 682.012,
+      "duration": 0.675333
+    },
+    {
+      "start": 682.029,
+      "end": 682.73,
+      "duration": 0.700854
+    },
+    {
+      "start": 682.733,
+      "end": 683.431,
+      "duration": 0.697542
+    },
+    {
+      "start": 683.444,
+      "end": 684.137,
+      "duration": 0.693
+    },
+    {
+      "start": 901.487,
+      "end": 903.535,
+      "duration": 2.04785
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

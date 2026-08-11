@@ -1,0 +1,37 @@
+{
+  "video_id": "B_ymY0xG0LI",
+  "title": "Moonchild: NPR Music Tiny Desk Concert",
+  "duration": 1201,
+  "audio_path": null,
+  "description_songs": [
+    "Money",
+    "The Other Side",
+    "The List"
+  ],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 not enough songs or no silence detected",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": null,
+  "boundary_spans": [],
+  "candidates": [],
+  "silence_intervals": [],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

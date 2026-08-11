@@ -2,7 +2,7 @@
   "video_id": "Qll7IHN0I4Q",
   "title": "Snoh Aalegra: NPR Music Tiny Desk Concert",
   "duration": 993,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/Qll7IHN0I4Q.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/Qll7IHN0I4Q.mp3",
   "description_songs": [
     "Love Like That",
     "I Want You Around",
@@ -66,12 +66,13 @@
       "corroboration": 2,
       "silence_match": 0.0,
       "clip_start": 2,
-      "clip_end": 367.2,
+      "clip_end": 366.2,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 82
+      "confidence": 82,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 366,
@@ -92,12 +93,13 @@
       "corroboration": 2,
       "silence_match": 380.198,
       "clip_start": 378.24,
-      "clip_end": 569.28,
+      "clip_end": 568.28,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 580,
@@ -105,12 +107,13 @@
       "corroboration": 1,
       "silence_match": 580.292,
       "clip_start": 594.72,
-      "clip_end": 975.8399999999999,
+      "clip_end": 974.8399999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 975,
@@ -214,7 +217,10 @@
     "avg": 58.2,
     "min": 18
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/Qll7IHN0I4Q.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

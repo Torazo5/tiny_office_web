@@ -1,0 +1,391 @@
+{
+  "video_id": "o4Iv7k0aQoc",
+  "title": "Kevin Kaarl: Tiny Desk Concert",
+  "duration": 1182,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/o4Iv7k0aQoc.mp3",
+  "description_songs": [
+    "Me Va a Costar",
+    "Te Quiero Tanto",
+    "V\u00e1monos a Marte",
+    "San Lucas"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2100 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 4,
+    "accepted": 4,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 72.0,
+      "end": 73.44,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 160.32,
+      "end": 161.76,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 259.2,
+      "end": 332.16,
+      "duration": 72.96000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 583.1999999999999,
+      "end": 600.0,
+      "duration": 16.800000000000068,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 830.4,
+      "end": 892.3199999999999,
+      "duration": 61.91999999999996,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1129.9199999999998,
+      "end": 1154.3999999999999,
+      "duration": 24.480000000000018,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1163.04,
+      "end": 1180.32,
+      "duration": 17.279999999999973,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Me Va a Costar",
+      "corroboration": 3,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 258.2,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 89,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 333,
+      "song": "Te Quiero Tanto",
+      "corroboration": 3,
+      "silence_match": 332.368,
+      "clip_start": 332.16,
+      "clip_end": 582.1999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 97,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 603,
+      "song": "V\u00e1monos a Marte",
+      "corroboration": 2,
+      "silence_match": 602.87,
+      "clip_start": 600.0,
+      "clip_end": 829.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 894,
+      "song": "San Lucas",
+      "corroboration": 3,
+      "silence_match": 893.643,
+      "clip_start": 892.3199999999999,
+      "clip_end": 1128.9199999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 97,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.512937,
+      "duration": 0.512937
+    },
+    {
+      "start": 114.81,
+      "end": 116.455,
+      "duration": 1.64458
+    },
+    {
+      "start": 255.627,
+      "end": 257.34,
+      "duration": 1.71315
+    },
+    {
+      "start": 267.326,
+      "end": 267.863,
+      "duration": 0.537021
+    },
+    {
+      "start": 269.234,
+      "end": 269.934,
+      "duration": 0.699812
+    },
+    {
+      "start": 303.756,
+      "end": 304.338,
+      "duration": 0.581583
+    },
+    {
+      "start": 321.54,
+      "end": 322.048,
+      "duration": 0.508042
+    },
+    {
+      "start": 329.587,
+      "end": 330.383,
+      "duration": 0.795167
+    },
+    {
+      "start": 330.439,
+      "end": 331.075,
+      "duration": 0.635146
+    },
+    {
+      "start": 331.075,
+      "end": 332.333,
+      "duration": 1.25808
+    },
+    {
+      "start": 332.368,
+      "end": 332.911,
+      "duration": 0.542667
+    },
+    {
+      "start": 578.653,
+      "end": 579.306,
+      "duration": 0.653062
+    },
+    {
+      "start": 579.559,
+      "end": 580.11,
+      "duration": 0.550896
+    },
+    {
+      "start": 580.157,
+      "end": 582.36,
+      "duration": 2.20329
+    },
+    {
+      "start": 593.516,
+      "end": 594.119,
+      "duration": 0.602458
+    },
+    {
+      "start": 597.436,
+      "end": 598.066,
+      "duration": 0.630229
+    },
+    {
+      "start": 599.57,
+      "end": 600.968,
+      "duration": 1.39831
+    },
+    {
+      "start": 600.972,
+      "end": 601.923,
+      "duration": 0.951958
+    },
+    {
+      "start": 601.925,
+      "end": 602.863,
+      "duration": 0.937208
+    },
+    {
+      "start": 602.87,
+      "end": 603.8,
+      "duration": 0.930792
+    },
+    {
+      "start": 645.519,
+      "end": 648.356,
+      "duration": 2.83715
+    },
+    {
+      "start": 708.709,
+      "end": 709.22,
+      "duration": 0.510104
+    },
+    {
+      "start": 829.666,
+      "end": 830.899,
+      "duration": 1.23313
+    },
+    {
+      "start": 843.101,
+      "end": 843.716,
+      "duration": 0.615458
+    },
+    {
+      "start": 846.465,
+      "end": 846.998,
+      "duration": 0.533021
+    },
+    {
+      "start": 848.08,
+      "end": 848.661,
+      "duration": 0.580875
+    },
+    {
+      "start": 851.351,
+      "end": 852.089,
+      "duration": 0.737604
+    },
+    {
+      "start": 853.687,
+      "end": 854.227,
+      "duration": 0.539958
+    },
+    {
+      "start": 855.086,
+      "end": 856.053,
+      "duration": 0.967125
+    },
+    {
+      "start": 864.294,
+      "end": 864.839,
+      "duration": 0.545687
+    },
+    {
+      "start": 865.84,
+      "end": 866.547,
+      "duration": 0.706729
+    },
+    {
+      "start": 867.446,
+      "end": 868.443,
+      "duration": 0.997125
+    },
+    {
+      "start": 869.638,
+      "end": 870.33,
+      "duration": 0.691625
+    },
+    {
+      "start": 871.648,
+      "end": 872.278,
+      "duration": 0.63
+    },
+    {
+      "start": 876.53,
+      "end": 877.035,
+      "duration": 0.504708
+    },
+    {
+      "start": 884.862,
+      "end": 885.53,
+      "duration": 0.668104
+    },
+    {
+      "start": 890.18,
+      "end": 890.776,
+      "duration": 0.595854
+    },
+    {
+      "start": 893.643,
+      "end": 894.889,
+      "duration": 1.24606
+    },
+    {
+      "start": 1043.08,
+      "end": 1043.69,
+      "duration": 0.607271
+    },
+    {
+      "start": 1043.7,
+      "end": 1044.3,
+      "duration": 0.597812
+    },
+    {
+      "start": 1053.1,
+      "end": 1053.75,
+      "duration": 0.647292
+    },
+    {
+      "start": 1053.78,
+      "end": 1054.39,
+      "duration": 0.609271
+    },
+    {
+      "start": 1054.39,
+      "end": 1055.0,
+      "duration": 0.613146
+    },
+    {
+      "start": 1063.46,
+      "end": 1064.45,
+      "duration": 0.984229
+    },
+    {
+      "start": 1064.59,
+      "end": 1065.67,
+      "duration": 1.07573
+    },
+    {
+      "start": 1151.35,
+      "end": 1152.1,
+      "duration": 0.750292
+    },
+    {
+      "start": 1152.1,
+      "end": 1163.58,
+      "duration": 11.4804
+    },
+    {
+      "start": 1180.03,
+      "end": 1181.73,
+      "duration": 1.70369
+    }
+  ],
+  "confidence": {
+    "scores": [
+      89,
+      97,
+      90,
+      97
+    ],
+    "avg": 93.2,
+    "min": 89
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/o4Iv7k0aQoc.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

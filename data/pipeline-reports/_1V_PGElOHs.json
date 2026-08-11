@@ -1,0 +1,264 @@
+{
+  "video_id": "_1V_PGElOHs",
+  "title": "Nathy Peluso: Tiny Desk Concert",
+  "duration": 1135,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/_1V_PGElOHs.mp3",
+  "description_songs": [
+    "BUENOS AIRES",
+    "APRENDER A AMAR",
+    "LEGENDARIO",
+    "ENVIDIA",
+    "REMEDIO"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1600 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 301.44,
+      "end": 316.32,
+      "duration": 14.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 337.91999999999996,
+      "end": 340.32,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 389.28,
+      "end": 391.2,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 393.12,
+      "end": 395.04,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 396.47999999999996,
+      "end": 397.92,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 425.28,
+      "end": 436.32,
+      "duration": 11.04000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 622.56,
+      "end": 635.52,
+      "duration": 12.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 848.64,
+      "end": 850.08,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 850.0799999999999,
+      "end": 866.4,
+      "duration": 16.32000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1075.2,
+      "end": 1113.6,
+      "duration": 38.399999999999864,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1126.56,
+      "end": 1132.8,
+      "duration": 6.240000000000009,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 300,
+      "song": "BUENOS AIRES",
+      "corroboration": 2,
+      "silence_match": 299.603,
+      "clip_start": 316.32,
+      "clip_end": 420,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 82
+    },
+    {
+      "seconds": 420,
+      "song": "APRENDER A AMAR",
+      "corroboration": 2,
+      "silence_match": 420.421,
+      "clip_start": 436.32,
+      "clip_end": 621.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 621,
+      "song": "LEGENDARIO",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 635.52,
+      "clip_end": 849.0799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 848,
+      "song": "ENVIDIA",
+      "corroboration": 2,
+      "silence_match": 848.438,
+      "clip_start": 866.4,
+      "clip_end": 1074.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1074,
+      "song": "REMEDIO",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 1074,
+      "clip_end": 1074.2,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": true,
+      "confidence": 17,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.505812,
+      "duration": 0.505812
+    },
+    {
+      "start": 76.9318,
+      "end": 77.5738,
+      "duration": 0.642042
+    },
+    {
+      "start": 125.266,
+      "end": 126.152,
+      "duration": 0.886708
+    },
+    {
+      "start": 299.603,
+      "end": 300.388,
+      "duration": 0.785312
+    },
+    {
+      "start": 311.806,
+      "end": 313.922,
+      "duration": 2.11546
+    },
+    {
+      "start": 420.421,
+      "end": 422.767,
+      "duration": 2.34635
+    },
+    {
+      "start": 423.183,
+      "end": 423.879,
+      "duration": 0.69675
+    },
+    {
+      "start": 438.928,
+      "end": 439.434,
+      "duration": 0.506146
+    },
+    {
+      "start": 444.166,
+      "end": 444.993,
+      "duration": 0.826458
+    },
+    {
+      "start": 837.678,
+      "end": 838.463,
+      "duration": 0.784292
+    },
+    {
+      "start": 848.438,
+      "end": 849.074,
+      "duration": 0.636
+    },
+    {
+      "start": 1063.89,
+      "end": 1064.93,
+      "duration": 1.03867
+    },
+    {
+      "start": 1112.6,
+      "end": 1127.09,
+      "duration": 14.4954
+    },
+    {
+      "start": 1132.73,
+      "end": 1134.81,
+      "duration": 2.0799
+    }
+  ],
+  "confidence": {
+    "scores": [
+      82,
+      90,
+      75,
+      90,
+      17
+    ],
+    "avg": 70.8,
+    "min": 17
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/_1V_PGElOHs.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

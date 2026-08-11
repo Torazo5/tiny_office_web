@@ -1,0 +1,215 @@
+{
+  "video_id": "k2QjEgOtCAA",
+  "title": "Mandolin Orange: NPR Music Tiny Desk Concert",
+  "duration": 870,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/k2QjEgOtCAA.mp3",
+  "description_songs": [
+    "Golden Embers",
+    "The Wolves",
+    "Wildfire"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 28 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 271.68,
+      "end": 287.04,
+      "duration": 15.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 292.32,
+      "end": 297.6,
+      "duration": 5.28000000000003,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 516.96,
+      "end": 528.0,
+      "duration": 11.039999999999964,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 537.12,
+      "end": 539.04,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 849.6,
+      "end": 869.28,
+      "duration": 19.67999999999995,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Golden Embers",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 271.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 304,
+      "song": "The Wolves",
+      "corroboration": 0,
+      "silence_match": 300.755,
+      "clip_start": 297.6,
+      "clip_end": 516.96,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 555,
+      "song": "Wildfire",
+      "corroboration": 0,
+      "silence_match": 552.5,
+      "clip_start": 539.04,
+      "clip_end": 849.6,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 269.083,
+      "end": 271.702,
+      "duration": 2.6194
+    },
+    {
+      "start": 285.878,
+      "end": 286.621,
+      "duration": 0.743625
+    },
+    {
+      "start": 291.135,
+      "end": 292.501,
+      "duration": 1.36625
+    },
+    {
+      "start": 297.862,
+      "end": 299.237,
+      "duration": 1.37494
+    },
+    {
+      "start": 299.288,
+      "end": 300.731,
+      "duration": 1.44296
+    },
+    {
+      "start": 300.755,
+      "end": 304.666,
+      "duration": 3.91144
+    },
+    {
+      "start": 515.2,
+      "end": 516.3,
+      "duration": 1.10042
+    },
+    {
+      "start": 535.136,
+      "end": 535.637,
+      "duration": 0.501062
+    },
+    {
+      "start": 535.726,
+      "end": 536.341,
+      "duration": 0.615354
+    },
+    {
+      "start": 536.802,
+      "end": 537.369,
+      "duration": 0.566875
+    },
+    {
+      "start": 541.354,
+      "end": 541.871,
+      "duration": 0.517312
+    },
+    {
+      "start": 543.52,
+      "end": 544.108,
+      "duration": 0.588021
+    },
+    {
+      "start": 544.69,
+      "end": 545.869,
+      "duration": 1.17962
+    },
+    {
+      "start": 546.193,
+      "end": 547.597,
+      "duration": 1.40473
+    },
+    {
+      "start": 548.005,
+      "end": 548.585,
+      "duration": 0.580521
+    },
+    {
+      "start": 549.223,
+      "end": 549.879,
+      "duration": 0.656187
+    },
+    {
+      "start": 550.821,
+      "end": 552.483,
+      "duration": 1.66177
+    },
+    {
+      "start": 552.5,
+      "end": 554.85,
+      "duration": 2.34923
+    },
+    {
+      "start": 847.429,
+      "end": 849.742,
+      "duration": 2.31308
+    },
+    {
+      "start": 868.767,
+      "end": 869.97,
+      "duration": 1.20388
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76
+    ],
+    "avg": 68.3,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

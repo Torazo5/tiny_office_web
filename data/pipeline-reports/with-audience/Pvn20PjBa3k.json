@@ -1,0 +1,227 @@
+{
+  "video_id": "Pvn20PjBa3k",
+  "title": "DJ Premier & The Badder Band: NPR Music Tiny Desk Concert",
+  "duration": 1467,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/Pvn20PjBa3k.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 138.24,
+      "end": 139.67999999999998,
+      "duration": 1.4399999999999693,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 255.84,
+      "end": 257.76,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 260.15999999999997,
+      "end": 262.08,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 615.84,
+      "end": 618.72,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 622.56,
+      "end": 629.28,
+      "duration": 6.720000000000027,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 714.72,
+      "end": 720.48,
+      "duration": 5.759999999999991,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 891.36,
+      "end": 897.12,
+      "duration": 5.759999999999991,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1142.8799999999999,
+      "end": 1145.76,
+      "duration": 2.880000000000109,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1442.8799999999999,
+      "end": 1444.32,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1445.28,
+      "end": 1460.6399999999999,
+      "duration": 15.3599999999999,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1462.56,
+      "end": 1465.44,
+      "duration": 2.880000000000109,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 3.03638,
+      "duration": 3.03638
+    },
+    {
+      "start": 6.66792,
+      "end": 7.25704,
+      "duration": 0.589125
+    },
+    {
+      "start": 22.2444,
+      "end": 24.0177,
+      "duration": 1.77329
+    },
+    {
+      "start": 253.951,
+      "end": 254.452,
+      "duration": 0.501521
+    },
+    {
+      "start": 256.355,
+      "end": 256.862,
+      "duration": 0.507104
+    },
+    {
+      "start": 461.868,
+      "end": 463.209,
+      "duration": 1.34075
+    },
+    {
+      "start": 464.596,
+      "end": 465.137,
+      "duration": 0.540771
+    },
+    {
+      "start": 618.39,
+      "end": 621.42,
+      "duration": 3.0306
+    },
+    {
+      "start": 630.883,
+      "end": 631.459,
+      "duration": 0.576104
+    },
+    {
+      "start": 631.501,
+      "end": 632.046,
+      "duration": 0.544875
+    },
+    {
+      "start": 889.224,
+      "end": 889.907,
+      "duration": 0.683458
+    },
+    {
+      "start": 890.579,
+      "end": 891.796,
+      "duration": 1.21677
+    },
+    {
+      "start": 900.021,
+      "end": 900.791,
+      "duration": 0.770354
+    },
+    {
+      "start": 902.394,
+      "end": 903.338,
+      "duration": 0.944083
+    },
+    {
+      "start": 904.806,
+      "end": 905.534,
+      "duration": 0.727833
+    },
+    {
+      "start": 907.125,
+      "end": 907.866,
+      "duration": 0.740833
+    },
+    {
+      "start": 923.696,
+      "end": 924.383,
+      "duration": 0.686583
+    },
+    {
+      "start": 924.454,
+      "end": 925.021,
+      "duration": 0.566979
+    },
+    {
+      "start": 929.624,
+      "end": 930.222,
+      "duration": 0.598625
+    },
+    {
+      "start": 934.886,
+      "end": 935.435,
+      "duration": 0.548438
+    },
+    {
+      "start": 1165.67,
+      "end": 1166.73,
+      "duration": 1.06296
+    },
+    {
+      "start": 1441.88,
+      "end": 1443.34,
+      "duration": 1.4564
+    },
+    {
+      "start": 1465.0,
+      "end": 1467.39,
+      "duration": 2.3821
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

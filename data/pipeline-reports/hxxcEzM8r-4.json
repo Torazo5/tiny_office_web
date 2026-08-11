@@ -2,7 +2,7 @@
   "video_id": "hxxcEzM8r-4",
   "title": "H.E.R.: NPR Music Tiny Desk Concert",
   "duration": 1132,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/hxxcEzM8r-4.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/hxxcEzM8r-4.mp3",
   "description_songs": [
     "Going\" (Interlude)",
     "Feel A Way",
@@ -78,12 +78,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 154.55999999999997,
-      "clip_end": 384.47999999999996,
+      "clip_end": 383.47999999999996,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 407,
@@ -91,12 +92,13 @@
       "corroboration": 1,
       "silence_match": 403.637,
       "clip_start": 407.52,
-      "clip_end": 690.24,
+      "clip_end": 689.24,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 743,
@@ -104,12 +106,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 739.68,
-      "clip_end": 1110.24,
+      "clip_end": 1109.24,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -169,7 +172,10 @@
     "avg": 64.2,
     "min": 45
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/hxxcEzM8r-4.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

@@ -1,0 +1,89 @@
+{
+  "video_id": "WSIb1ViLWDI",
+  "title": "SiR: NPR Music Tiny Desk Concert",
+  "duration": 930,
+  "audio_path": null,
+  "description_songs": [
+    "The Recipe",
+    "New Sky",
+    "Wires In The Way",
+    "John Redcorn"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 477 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": null,
+  "boundary_spans": [],
+  "candidates": [
+    {
+      "seconds": 6,
+      "song": "The Recipe",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 6,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 52
+    },
+    {
+      "seconds": 199,
+      "song": "New Sky",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 199,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 52
+    },
+    {
+      "seconds": 484,
+      "song": "Wires In The Way",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 484,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 52
+    },
+    {
+      "seconds": 724,
+      "song": "John Redcorn",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 724,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    }
+  ],
+  "silence_intervals": [],
+  "confidence": {
+    "scores": [
+      52,
+      52,
+      52,
+      45
+    ],
+    "avg": 50.2,
+    "min": 45
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

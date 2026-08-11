@@ -1,0 +1,363 @@
+{
+  "video_id": "fOAIrUZbOwo",
+  "title": "Billie Eilish: Tiny Desk Concert",
+  "duration": 1338,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/fOAIrUZbOwo.mp3",
+  "description_songs": [
+    "THE GREATEST",
+    "L'AMOUR DE MA VIE",
+    "i love you",
+    "BIRDS OF A FEATHER"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 7300 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 340.32,
+      "end": 385.92,
+      "duration": 45.60000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 601.92,
+      "end": 695.52,
+      "duration": 93.60000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 994.0799999999999,
+      "end": 1089.12,
+      "duration": 95.03999999999996,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1299.84,
+      "end": 1334.3999999999999,
+      "duration": 34.559999999999945,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 22,
+      "song": "THE GREATEST",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 22,
+      "clip_end": 340.32,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 403,
+      "song": "L'AMOUR DE MA VIE",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 385.92,
+      "clip_end": 601.92,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 712,
+      "song": "i love you",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 695.52,
+      "clip_end": 994.0799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 1107,
+      "song": "BIRDS OF A FEATHER",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 1089.12,
+      "clip_end": 1299.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 4.9551,
+      "duration": 4.9551
+    },
+    {
+      "start": 32.5578,
+      "end": 33.8435,
+      "duration": 1.28565
+    },
+    {
+      "start": 130.26,
+      "end": 132.089,
+      "duration": 1.82944
+    },
+    {
+      "start": 337.075,
+      "end": 339.724,
+      "duration": 2.64906
+    },
+    {
+      "start": 370.47,
+      "end": 371.834,
+      "duration": 1.3641
+    },
+    {
+      "start": 375.148,
+      "end": 375.889,
+      "duration": 0.741
+    },
+    {
+      "start": 379.05,
+      "end": 379.849,
+      "duration": 0.799
+    },
+    {
+      "start": 382.57,
+      "end": 383.155,
+      "duration": 0.585083
+    },
+    {
+      "start": 383.593,
+      "end": 384.144,
+      "duration": 0.551396
+    },
+    {
+      "start": 385.818,
+      "end": 386.451,
+      "duration": 0.633208
+    },
+    {
+      "start": 386.471,
+      "end": 387.097,
+      "duration": 0.625458
+    },
+    {
+      "start": 427.696,
+      "end": 428.239,
+      "duration": 0.543479
+    },
+    {
+      "start": 624.306,
+      "end": 624.963,
+      "duration": 0.657708
+    },
+    {
+      "start": 627.149,
+      "end": 627.863,
+      "duration": 0.714208
+    },
+    {
+      "start": 628.358,
+      "end": 629.121,
+      "duration": 0.762896
+    },
+    {
+      "start": 636.357,
+      "end": 637.227,
+      "duration": 0.870625
+    },
+    {
+      "start": 643.135,
+      "end": 644.752,
+      "duration": 1.6169
+    },
+    {
+      "start": 646.381,
+      "end": 647.563,
+      "duration": 1.18125
+    },
+    {
+      "start": 650.639,
+      "end": 651.301,
+      "duration": 0.661917
+    },
+    {
+      "start": 652.866,
+      "end": 653.883,
+      "duration": 1.01692
+    },
+    {
+      "start": 671.806,
+      "end": 672.426,
+      "duration": 0.620125
+    },
+    {
+      "start": 674.428,
+      "end": 675.246,
+      "duration": 0.818146
+    },
+    {
+      "start": 678.706,
+      "end": 679.37,
+      "duration": 0.663646
+    },
+    {
+      "start": 679.467,
+      "end": 681.364,
+      "duration": 1.89735
+    },
+    {
+      "start": 685.104,
+      "end": 685.789,
+      "duration": 0.685521
+    },
+    {
+      "start": 686.663,
+      "end": 687.696,
+      "duration": 1.03352
+    },
+    {
+      "start": 689.389,
+      "end": 690.116,
+      "duration": 0.727667
+    },
+    {
+      "start": 690.381,
+      "end": 691.053,
+      "duration": 0.671562
+    },
+    {
+      "start": 691.053,
+      "end": 691.582,
+      "duration": 0.529146
+    },
+    {
+      "start": 693.132,
+      "end": 693.665,
+      "duration": 0.533104
+    },
+    {
+      "start": 695.406,
+      "end": 696.239,
+      "duration": 0.83225
+    },
+    {
+      "start": 926.358,
+      "end": 927.863,
+      "duration": 1.50515
+    },
+    {
+      "start": 934.847,
+      "end": 935.408,
+      "duration": 0.56175
+    },
+    {
+      "start": 991.423,
+      "end": 993.851,
+      "duration": 2.42819
+    },
+    {
+      "start": 1013.26,
+      "end": 1014.11,
+      "duration": 0.853042
+    },
+    {
+      "start": 1014.26,
+      "end": 1014.79,
+      "duration": 0.527167
+    },
+    {
+      "start": 1014.86,
+      "end": 1015.51,
+      "duration": 0.649479
+    },
+    {
+      "start": 1017.95,
+      "end": 1018.52,
+      "duration": 0.570208
+    },
+    {
+      "start": 1019.31,
+      "end": 1019.97,
+      "duration": 0.65625
+    },
+    {
+      "start": 1020.63,
+      "end": 1021.98,
+      "duration": 1.34671
+    },
+    {
+      "start": 1024.56,
+      "end": 1025.19,
+      "duration": 0.624875
+    },
+    {
+      "start": 1032.66,
+      "end": 1033.83,
+      "duration": 1.17138
+    },
+    {
+      "start": 1034.09,
+      "end": 1035.46,
+      "duration": 1.37229
+    },
+    {
+      "start": 1035.67,
+      "end": 1036.27,
+      "duration": 0.593083
+    },
+    {
+      "start": 1037.08,
+      "end": 1037.88,
+      "duration": 0.802063
+    },
+    {
+      "start": 1045.33,
+      "end": 1045.91,
+      "duration": 0.5765
+    },
+    {
+      "start": 1081.74,
+      "end": 1082.83,
+      "duration": 1.09096
+    },
+    {
+      "start": 1337.05,
+      "end": 1338.09,
+      "duration": 1.0381
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      68,
+      68,
+      68
+    ],
+    "avg": 66.0,
+    "min": 60
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

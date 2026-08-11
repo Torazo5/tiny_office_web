@@ -1,0 +1,188 @@
+{
+  "video_id": "wMehItNQKAA",
+  "title": "IDLES: NPR Music Tiny Desk Concert",
+  "duration": 786,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/wMehItNQKAA.mp3",
+  "description_songs": [
+    "Never Fight A Man With A Perm",
+    "Mercedes Marxist",
+    "I'm Scum"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 2 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 255.84,
+      "end": 276.48,
+      "duration": 20.640000000000015,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 495.84,
+      "end": 526.08,
+      "duration": 30.240000000000066,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 767.04,
+      "end": 784.3199999999999,
+      "duration": 17.279999999999973,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Never Fight A Man With A Perm",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 254.84,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 43,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 255.84,
+      "song": "Mercedes Marxist",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 276.48,
+      "clip_end": 494.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 495.84,
+      "song": "I'm Scum",
+      "corroboration": 0,
+      "silence_match": 492.219,
+      "clip_start": 526.08,
+      "clip_end": 766.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 89.0801,
+      "end": 89.6104,
+      "duration": 0.530312
+    },
+    {
+      "start": 201.077,
+      "end": 202.095,
+      "duration": 1.01833
+    },
+    {
+      "start": 268.65,
+      "end": 270.282,
+      "duration": 1.63133
+    },
+    {
+      "start": 270.862,
+      "end": 272.046,
+      "duration": 1.1844
+    },
+    {
+      "start": 272.289,
+      "end": 274.162,
+      "duration": 1.87285
+    },
+    {
+      "start": 274.877,
+      "end": 276.293,
+      "duration": 1.41567
+    },
+    {
+      "start": 492.219,
+      "end": 493.801,
+      "duration": 1.58144
+    },
+    {
+      "start": 508.597,
+      "end": 509.324,
+      "duration": 0.727208
+    },
+    {
+      "start": 510.249,
+      "end": 511.507,
+      "duration": 1.25871
+    },
+    {
+      "start": 511.798,
+      "end": 513.053,
+      "duration": 1.25475
+    },
+    {
+      "start": 515.682,
+      "end": 516.283,
+      "duration": 0.600583
+    },
+    {
+      "start": 516.304,
+      "end": 518.84,
+      "duration": 2.53567
+    },
+    {
+      "start": 520.074,
+      "end": 520.652,
+      "duration": 0.577354
+    },
+    {
+      "start": 522.196,
+      "end": 523.141,
+      "duration": 0.944917
+    },
+    {
+      "start": 766.411,
+      "end": 767.005,
+      "duration": 0.593708
+    },
+    {
+      "start": 783.295,
+      "end": 785.624,
+      "duration": 2.32915
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      51,
+      66
+    ],
+    "avg": 53.3,
+    "min": 43
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/wMehItNQKAA.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

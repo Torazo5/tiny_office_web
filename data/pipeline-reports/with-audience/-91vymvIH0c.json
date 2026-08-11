@@ -1,0 +1,280 @@
+{
+  "video_id": "-91vymvIH0c",
+  "title": "Doechii: Tiny Desk Concert",
+  "duration": 1420,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/-91vymvIH0c.mp3",
+  "description_songs": [
+    "BOOM BAP",
+    "BOILED PEANUTS",
+    "DENIAL IS A RIVER",
+    "CATFISH",
+    "NISSAN ALTIMA",
+    "BULLFROG",
+    "HIDE N SEEK",
+    "Black Girl Memoir"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 5900 likes, matched all 8 description song(s), retained 8 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 67.67999999999999,
+      "end": 69.12,
+      "duration": 1.440000000000012,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 69.12,
+      "end": 73.92,
+      "duration": 4.799999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 86.88,
+      "end": 88.32000000000001,
+      "duration": 1.440000000000012,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 545.28,
+      "end": 567.36,
+      "duration": 22.08000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 635.52,
+      "end": 640.8,
+      "duration": 5.279999999999973,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 653.76,
+      "end": 655.68,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 706.0799999999999,
+      "end": 713.28,
+      "duration": 7.2000000000000455,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1020.48,
+      "end": 1028.16,
+      "duration": 7.680000000000064,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1032.96,
+      "end": 1034.4,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1391.04,
+      "end": 1410.24,
+      "duration": 19.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 17,
+      "song": "BOOM BAP",
+      "corroboration": 0,
+      "silence_match": 11.6006,
+      "clip_start": 17,
+      "clip_end": 69.12,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 177,
+      "song": "BOILED PEANUTS",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 177,
+      "clip_end": 277,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 277,
+      "song": "DENIAL IS A RIVER",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 277,
+      "clip_end": 406,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 406,
+      "song": "CATFISH",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 406,
+      "clip_end": 545.28,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 577,
+      "song": "NISSAN ALTIMA",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 567.36,
+      "clip_end": 635.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 751,
+      "song": "BULLFROG",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 713.28,
+      "clip_end": 864,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 864,
+      "song": "HIDE N SEEK",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 864,
+      "clip_end": 1020.48,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 1080,
+      "song": "Black Girl Memoir",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1080,
+      "clip_end": 1391.04,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.972458,
+      "duration": 0.972458
+    },
+    {
+      "start": 10.8098,
+      "end": 11.5495,
+      "duration": 0.739667
+    },
+    {
+      "start": 11.6006,
+      "end": 13.5147,
+      "duration": 1.91406
+    },
+    {
+      "start": 144.095,
+      "end": 145.4,
+      "duration": 1.30465
+    },
+    {
+      "start": 145.403,
+      "end": 146.131,
+      "duration": 0.728167
+    },
+    {
+      "start": 1016.97,
+      "end": 1019.02,
+      "duration": 2.04804
+    },
+    {
+      "start": 1030.96,
+      "end": 1031.56,
+      "duration": 0.597062
+    },
+    {
+      "start": 1039.34,
+      "end": 1039.84,
+      "duration": 0.501333
+    },
+    {
+      "start": 1042.7,
+      "end": 1043.24,
+      "duration": 0.537458
+    },
+    {
+      "start": 1334.08,
+      "end": 1335.25,
+      "duration": 1.164
+    },
+    {
+      "start": 1407.9,
+      "end": 1420.05,
+      "duration": 12.1521
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      45,
+      45,
+      53,
+      61,
+      53,
+      53,
+      53
+    ],
+    "avg": 53.9,
+    "min": 45
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

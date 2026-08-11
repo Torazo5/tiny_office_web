@@ -2,7 +2,7 @@
   "video_id": "xnS2tbgcTc0",
   "title": "Summer Walker: NPR Music Tiny Desk Concert",
   "duration": 888,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/xnS2tbgcTc0.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/xnS2tbgcTc0.mp3",
   "description_songs": [
     "Session 32",
     "Wasted",
@@ -66,12 +66,13 @@
       "corroboration": 1,
       "silence_match": 0.0,
       "clip_start": 0,
-      "clip_end": 160.79999999999998,
+      "clip_end": 159.79999999999998,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 75
+      "confidence": 75,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 170,
@@ -79,12 +80,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 165.6,
-      "clip_end": 318.24,
+      "clip_end": 317.24,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 325,
@@ -92,12 +94,13 @@
       "corroboration": 1,
       "silence_match": null,
       "clip_start": 323.52,
-      "clip_end": 487.68,
+      "clip_end": 486.68,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 554,
@@ -105,12 +108,13 @@
       "corroboration": 0,
       "silence_match": 553.782,
       "clip_start": 551.04,
-      "clip_end": 667.68,
+      "clip_end": 666.68,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 689,
@@ -118,12 +122,13 @@
       "corroboration": 0,
       "silence_match": 685.919,
       "clip_start": 685.92,
-      "clip_end": 841.92,
+      "clip_end": 840.92,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 76
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -279,7 +284,10 @@
     "avg": 71.2,
     "min": 61
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/xnS2tbgcTc0.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

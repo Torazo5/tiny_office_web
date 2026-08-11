@@ -1,0 +1,248 @@
+{
+  "video_id": "4cfmEgpOOZk",
+  "title": "Erykah Badu: NPR Music Tiny Desk Concert",
+  "duration": 908,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/4cfmEgpOOZk.mp3",
+  "description_songs": [
+    "Rimshot",
+    "Green Eyes"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 2 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 1 usable episode(s), took top 1; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 18.24,
+      "end": 21.12,
+      "duration": 2.8800000000000026,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 22.56,
+      "end": 24.48,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 25.439999999999998,
+      "end": 27.36,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 28.32,
+      "end": 29.759999999999998,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 181.44,
+      "end": 193.43999999999997,
+      "duration": 11.999999999999972,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 887.52,
+      "end": 907.1999999999999,
+      "duration": 19.67999999999995,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Rimshot",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 181.44,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58
+    },
+    {
+      "seconds": 181.44,
+      "song": "Green Eyes",
+      "corroboration": 0,
+      "silence_match": 180.064,
+      "clip_start": 193.43999999999997,
+      "clip_end": 887.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.32583,
+      "duration": 5.32583
+    },
+    {
+      "start": 87.0517,
+      "end": 87.6764,
+      "duration": 0.624687
+    },
+    {
+      "start": 171.336,
+      "end": 171.913,
+      "duration": 0.577104
+    },
+    {
+      "start": 178.676,
+      "end": 179.451,
+      "duration": 0.774375
+    },
+    {
+      "start": 180.064,
+      "end": 180.962,
+      "duration": 0.898542
+    },
+    {
+      "start": 192.95,
+      "end": 193.556,
+      "duration": 0.605313
+    },
+    {
+      "start": 199.741,
+      "end": 202.495,
+      "duration": 2.75387
+    },
+    {
+      "start": 208.486,
+      "end": 209.41,
+      "duration": 0.924312
+    },
+    {
+      "start": 211.01,
+      "end": 211.675,
+      "duration": 0.665354
+    },
+    {
+      "start": 211.735,
+      "end": 212.991,
+      "duration": 1.25569
+    },
+    {
+      "start": 212.991,
+      "end": 214.538,
+      "duration": 1.5474
+    },
+    {
+      "start": 223.301,
+      "end": 224.33,
+      "duration": 1.0296
+    },
+    {
+      "start": 224.33,
+      "end": 225.621,
+      "duration": 1.29067
+    },
+    {
+      "start": 247.928,
+      "end": 248.825,
+      "duration": 0.896833
+    },
+    {
+      "start": 253.391,
+      "end": 254.302,
+      "duration": 0.910417
+    },
+    {
+      "start": 294.197,
+      "end": 294.763,
+      "duration": 0.566396
+    },
+    {
+      "start": 304.85,
+      "end": 305.805,
+      "duration": 0.954292
+    },
+    {
+      "start": 326.834,
+      "end": 328.972,
+      "duration": 2.13804
+    },
+    {
+      "start": 858.624,
+      "end": 860.905,
+      "duration": 2.28046
+    },
+    {
+      "start": 862.364,
+      "end": 862.925,
+      "duration": 0.560896
+    },
+    {
+      "start": 863.552,
+      "end": 864.22,
+      "duration": 0.668125
+    },
+    {
+      "start": 864.252,
+      "end": 864.852,
+      "duration": 0.59975
+    },
+    {
+      "start": 866.432,
+      "end": 867.325,
+      "duration": 0.892979
+    },
+    {
+      "start": 868.81,
+      "end": 869.446,
+      "duration": 0.636021
+    },
+    {
+      "start": 871.243,
+      "end": 872.051,
+      "duration": 0.80875
+    },
+    {
+      "start": 873.624,
+      "end": 874.633,
+      "duration": 1.00844
+    },
+    {
+      "start": 885.867,
+      "end": 887.694,
+      "duration": 1.82748
+    },
+    {
+      "start": 906.193,
+      "end": 907.796,
+      "duration": 1.60321
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      66
+    ],
+    "avg": 62.0,
+    "min": 58
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

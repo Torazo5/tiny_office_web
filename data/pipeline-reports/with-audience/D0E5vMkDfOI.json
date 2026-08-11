@@ -1,0 +1,148 @@
+{
+  "video_id": "D0E5vMkDfOI",
+  "title": "Big Thief: NPR Music Tiny Desk Concert",
+  "duration": 563,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/D0E5vMkDfOI.mp3",
+  "description_songs": [
+    "Masterpiece",
+    "Paul",
+    "Lorraine"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 173 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 227.04,
+      "end": 241.92,
+      "duration": 14.879999999999995,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 422.88,
+      "end": 429.6,
+      "duration": 6.720000000000027,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 540.0,
+      "end": 540.48,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 543.84,
+      "end": 556.8,
+      "duration": 12.959999999999923,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Masterpiece",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 227.04,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 241,
+      "song": "Paul",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 241.92,
+      "clip_end": 422.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 429,
+      "song": "Lorraine",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 429.6,
+      "clip_end": 540.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 4.78467,
+      "duration": 4.78467
+    },
+    {
+      "start": 254.375,
+      "end": 255.08,
+      "duration": 0.704937
+    },
+    {
+      "start": 377.119,
+      "end": 379.855,
+      "duration": 2.73623
+    },
+    {
+      "start": 419.92,
+      "end": 422.371,
+      "duration": 2.45094
+    },
+    {
+      "start": 422.372,
+      "end": 423.105,
+      "duration": 0.733354
+    },
+    {
+      "start": 456.789,
+      "end": 457.561,
+      "duration": 0.772083
+    },
+    {
+      "start": 536.093,
+      "end": 540.152,
+      "duration": 4.05875
+    },
+    {
+      "start": 556.942,
+      "end": 563.026,
+      "duration": 6.08419
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      61,
+      61
+    ],
+    "avg": 63.3,
+    "min": 61
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

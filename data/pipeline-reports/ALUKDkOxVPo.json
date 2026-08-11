@@ -1,0 +1,177 @@
+{
+  "video_id": "ALUKDkOxVPo",
+  "title": "Wu-Tang Clan: NPR Music Tiny Desk Concert",
+  "duration": 1244,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/ALUKDkOxVPo.mp3",
+  "description_songs": [
+    "Wu Classics"
+  ],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 1 description songs (3 candidate(s) checked)",
+    "B_yamnet": "failed \u2014 not enough songs or no talk/applause spans detected",
+    "C_silence": "failed \u2014 not enough songs or no silence detected",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 0,
+    "rejected": 3,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 204.48,
+      "end": 206.88,
+      "duration": 2.4000000000000057,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 213.12,
+      "end": 214.55999999999997,
+      "duration": 1.4399999999999693,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 217.92,
+      "end": 227.04,
+      "duration": 9.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 332.15999999999997,
+      "end": 334.08,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 533.28,
+      "end": 534.72,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 535.68,
+      "end": 537.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 567.84,
+      "end": 570.72,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 572.16,
+      "end": 574.56,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 575.04,
+      "end": 578.88,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 646.56,
+      "end": 648.0,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 713.76,
+      "end": 726.24,
+      "duration": 12.480000000000018,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 726.24,
+      "end": 735.36,
+      "duration": 9.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 844.8,
+      "end": 848.16,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 853.92,
+      "end": 906.24,
+      "duration": 52.32000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1122.72,
+      "end": 1124.16,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1124.1599999999999,
+      "end": 1178.3999999999999,
+      "duration": 54.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 868.113,
+      "end": 868.788,
+      "duration": 0.674792
+    },
+    {
+      "start": 1142.1,
+      "end": 1142.61,
+      "duration": 0.510604
+    },
+    {
+      "start": 1148.22,
+      "end": 1148.78,
+      "duration": 0.561896
+    },
+    {
+      "start": 1152.55,
+      "end": 1153.19,
+      "duration": 0.639146
+    },
+    {
+      "start": 1233.07,
+      "end": 1244.04,
+      "duration": 10.9769
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

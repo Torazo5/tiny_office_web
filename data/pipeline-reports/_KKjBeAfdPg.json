@@ -1,0 +1,597 @@
+{
+  "video_id": "_KKjBeAfdPg",
+  "title": "Raphael Saadiq: NPR Music Tiny Desk Concert",
+  "duration": 2217,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/_KKjBeAfdPg.mp3",
+  "description_songs": [
+    "I'm Feeling Love",
+    "Be Here",
+    "This World Is Drunk",
+    "Love You Too Much\" (Lucky Daye)",
+    "Call\" (Lucky Daye)",
+    "Still Ray"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 6 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 9 usable episode(s), took top 5; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 308.15999999999997,
+      "end": 396.0,
+      "duration": 87.84000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 586.56,
+      "end": 587.04,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 681.12,
+      "end": 713.28,
+      "duration": 32.15999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1062.72,
+      "end": 1063.2,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1066.08,
+      "end": 1102.08,
+      "duration": 36.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1453.9199999999998,
+      "end": 1455.84,
+      "duration": 1.9200000000000728,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1495.6799999999998,
+      "end": 1496.1599999999999,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1730.8799999999999,
+      "end": 1821.6,
+      "duration": 90.72000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 2129.2799999999997,
+      "end": 2130.72,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 2140.7999999999997,
+      "end": 2141.2799999999997,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 2208.48,
+      "end": 2208.96,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "I'm Feeling Love",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 307.15999999999997,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 308.15999999999997,
+      "song": "Be Here",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 396.0,
+      "clip_end": 585.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 681.12,
+      "song": "This World Is Drunk",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 713.28,
+      "clip_end": 1061.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1066.08,
+      "song": "Love You Too Much\" (Lucky Daye)",
+      "corroboration": 0,
+      "silence_match": 1067.57,
+      "clip_start": 1102.08,
+      "clip_end": 1452.9199999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1453.9199999999998,
+      "song": "Call\" (Lucky Daye)",
+      "corroboration": 0,
+      "silence_match": 1451.42,
+      "clip_start": 1455.84,
+      "clip_end": 1494.6799999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1730.8799999999999,
+      "song": "Still Ray",
+      "corroboration": 0,
+      "silence_match": 1733.58,
+      "clip_start": 1821.6,
+      "clip_end": 2139.7999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 15.1173,
+      "duration": 15.1173
+    },
+    {
+      "start": 15.1541,
+      "end": 15.7688,
+      "duration": 0.614687
+    },
+    {
+      "start": 15.841,
+      "end": 16.4305,
+      "duration": 0.589437
+    },
+    {
+      "start": 317.733,
+      "end": 319.171,
+      "duration": 1.43704
+    },
+    {
+      "start": 320.234,
+      "end": 321.366,
+      "duration": 1.13146
+    },
+    {
+      "start": 323.431,
+      "end": 324.482,
+      "duration": 1.05079
+    },
+    {
+      "start": 324.916,
+      "end": 325.487,
+      "duration": 0.570812
+    },
+    {
+      "start": 325.762,
+      "end": 326.707,
+      "duration": 0.944167
+    },
+    {
+      "start": 330.994,
+      "end": 332.057,
+      "duration": 1.06346
+    },
+    {
+      "start": 332.065,
+      "end": 332.642,
+      "duration": 0.576896
+    },
+    {
+      "start": 333.18,
+      "end": 334.414,
+      "duration": 1.23465
+    },
+    {
+      "start": 335.414,
+      "end": 335.98,
+      "duration": 0.565875
+    },
+    {
+      "start": 337.646,
+      "end": 338.372,
+      "duration": 0.725979
+    },
+    {
+      "start": 343.886,
+      "end": 344.726,
+      "duration": 0.839833
+    },
+    {
+      "start": 345.466,
+      "end": 346.547,
+      "duration": 1.08117
+    },
+    {
+      "start": 347.106,
+      "end": 347.643,
+      "duration": 0.536854
+    },
+    {
+      "start": 351.145,
+      "end": 352.062,
+      "duration": 0.916958
+    },
+    {
+      "start": 353.743,
+      "end": 354.52,
+      "duration": 0.776917
+    },
+    {
+      "start": 379.072,
+      "end": 380.295,
+      "duration": 1.22362
+    },
+    {
+      "start": 381.11,
+      "end": 381.659,
+      "duration": 0.549229
+    },
+    {
+      "start": 388.68,
+      "end": 389.277,
+      "duration": 0.597313
+    },
+    {
+      "start": 392.063,
+      "end": 392.621,
+      "duration": 0.557896
+    },
+    {
+      "start": 392.63,
+      "end": 394.481,
+      "duration": 1.85121
+    },
+    {
+      "start": 395.823,
+      "end": 396.591,
+      "duration": 0.767771
+    },
+    {
+      "start": 697.11,
+      "end": 699.167,
+      "duration": 2.05719
+    },
+    {
+      "start": 700.713,
+      "end": 701.26,
+      "duration": 0.546479
+    },
+    {
+      "start": 702.059,
+      "end": 703.407,
+      "duration": 1.34846
+    },
+    {
+      "start": 704.732,
+      "end": 705.889,
+      "duration": 1.15613
+    },
+    {
+      "start": 706.301,
+      "end": 707.228,
+      "duration": 0.926437
+    },
+    {
+      "start": 707.596,
+      "end": 708.207,
+      "duration": 0.610479
+    },
+    {
+      "start": 708.278,
+      "end": 709.725,
+      "duration": 1.44715
+    },
+    {
+      "start": 710.411,
+      "end": 711.265,
+      "duration": 0.853417
+    },
+    {
+      "start": 711.925,
+      "end": 712.95,
+      "duration": 1.02487
+    },
+    {
+      "start": 712.958,
+      "end": 714.609,
+      "duration": 1.65133
+    },
+    {
+      "start": 714.616,
+      "end": 715.213,
+      "duration": 0.597125
+    },
+    {
+      "start": 715.256,
+      "end": 715.803,
+      "duration": 0.546479
+    },
+    {
+      "start": 715.855,
+      "end": 716.375,
+      "duration": 0.519542
+    },
+    {
+      "start": 1067.57,
+      "end": 1068.19,
+      "duration": 0.622042
+    },
+    {
+      "start": 1076.16,
+      "end": 1077.33,
+      "duration": 1.17296
+    },
+    {
+      "start": 1085.26,
+      "end": 1085.81,
+      "duration": 0.551979
+    },
+    {
+      "start": 1086.51,
+      "end": 1087.09,
+      "duration": 0.577667
+    },
+    {
+      "start": 1091.52,
+      "end": 1092.1,
+      "duration": 0.575833
+    },
+    {
+      "start": 1094.53,
+      "end": 1095.07,
+      "duration": 0.535104
+    },
+    {
+      "start": 1102.08,
+      "end": 1104.87,
+      "duration": 2.78948
+    },
+    {
+      "start": 1107.58,
+      "end": 1109.83,
+      "duration": 2.24433
+    },
+    {
+      "start": 1451.42,
+      "end": 1452.24,
+      "duration": 0.824521
+    },
+    {
+      "start": 1733.58,
+      "end": 1735.6,
+      "duration": 2.02183
+    },
+    {
+      "start": 1735.82,
+      "end": 1736.57,
+      "duration": 0.743583
+    },
+    {
+      "start": 1738.89,
+      "end": 1740.44,
+      "duration": 1.54798
+    },
+    {
+      "start": 1741.28,
+      "end": 1741.86,
+      "duration": 0.570958
+    },
+    {
+      "start": 1742.45,
+      "end": 1743.0,
+      "duration": 0.547438
+    },
+    {
+      "start": 1745.18,
+      "end": 1745.94,
+      "duration": 0.75575
+    },
+    {
+      "start": 1745.95,
+      "end": 1746.54,
+      "duration": 0.59225
+    },
+    {
+      "start": 1756.33,
+      "end": 1757.0,
+      "duration": 0.669271
+    },
+    {
+      "start": 1757.07,
+      "end": 1760.47,
+      "duration": 3.40102
+    },
+    {
+      "start": 1760.48,
+      "end": 1761.21,
+      "duration": 0.735979
+    },
+    {
+      "start": 1763.44,
+      "end": 1764.14,
+      "duration": 0.695688
+    },
+    {
+      "start": 1766.44,
+      "end": 1768.03,
+      "duration": 1.58852
+    },
+    {
+      "start": 1769.99,
+      "end": 1770.79,
+      "duration": 0.802646
+    },
+    {
+      "start": 1770.98,
+      "end": 1771.89,
+      "duration": 0.908104
+    },
+    {
+      "start": 1772.7,
+      "end": 1773.54,
+      "duration": 0.833292
+    },
+    {
+      "start": 1774.86,
+      "end": 1775.43,
+      "duration": 0.563896
+    },
+    {
+      "start": 1775.64,
+      "end": 1776.81,
+      "duration": 1.17104
+    },
+    {
+      "start": 1785.46,
+      "end": 1786.11,
+      "duration": 0.657187
+    },
+    {
+      "start": 1787.38,
+      "end": 1788.09,
+      "duration": 0.704
+    },
+    {
+      "start": 1796.01,
+      "end": 1796.7,
+      "duration": 0.69025
+    },
+    {
+      "start": 1805.62,
+      "end": 1806.28,
+      "duration": 0.668354
+    },
+    {
+      "start": 1807.15,
+      "end": 1808.12,
+      "duration": 0.963396
+    },
+    {
+      "start": 1808.78,
+      "end": 1809.49,
+      "duration": 0.717625
+    },
+    {
+      "start": 1812.57,
+      "end": 1813.27,
+      "duration": 0.707854
+    },
+    {
+      "start": 1815.56,
+      "end": 1816.63,
+      "duration": 1.06415
+    },
+    {
+      "start": 2011.12,
+      "end": 2011.66,
+      "duration": 0.532896
+    },
+    {
+      "start": 2101.89,
+      "end": 2102.6,
+      "duration": 0.707854
+    },
+    {
+      "start": 2104.74,
+      "end": 2105.44,
+      "duration": 0.698417
+    },
+    {
+      "start": 2135.66,
+      "end": 2136.32,
+      "duration": 0.656
+    },
+    {
+      "start": 2152.89,
+      "end": 2153.44,
+      "duration": 0.552896
+    },
+    {
+      "start": 2209.95,
+      "end": 2216.51,
+      "duration": 6.55331
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      51,
+      51,
+      66,
+      66,
+      66
+    ],
+    "avg": 59.7,
+    "min": 51
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/_KKjBeAfdPg.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

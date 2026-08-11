@@ -1,0 +1,261 @@
+{
+  "video_id": "8zHdLF3-coA",
+  "title": "alt-J: Tiny Desk Concert",
+  "duration": 1025,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/8zHdLF3-coA.mp3",
+  "description_songs": [
+    "3WW",
+    "In Cold Blood",
+    "Warm Foothills",
+    "Taro"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 593 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 2,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 285.12,
+      "end": 300.0,
+      "duration": 14.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 497.76,
+      "end": 499.2,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 500.15999999999997,
+      "end": 516.0,
+      "duration": 15.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 689.28,
+      "end": 723.84,
+      "duration": 34.56000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 796.8,
+      "end": 800.64,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 880.3199999999999,
+      "end": 882.72,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 993.5999999999999,
+      "end": 1024.32,
+      "duration": 30.720000000000027,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "3WW",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 284.12,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 306,
+      "song": "In Cold Blood",
+      "corroboration": 0,
+      "silence_match": 301.533,
+      "clip_start": 300.0,
+      "clip_end": 499.15999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 519,
+      "song": "Warm Foothills",
+      "corroboration": 1,
+      "silence_match": 519.63,
+      "clip_start": 516.0,
+      "clip_end": 688.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 724,
+      "song": "Taro",
+      "corroboration": 0,
+      "silence_match": 723.32,
+      "clip_start": 723.84,
+      "clip_end": 992.5999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 31.7632,
+      "end": 32.3849,
+      "duration": 0.621687
+    },
+    {
+      "start": 33.3829,
+      "end": 33.941,
+      "duration": 0.558104
+    },
+    {
+      "start": 103.364,
+      "end": 105.135,
+      "duration": 1.77108
+    },
+    {
+      "start": 118.33,
+      "end": 120.389,
+      "duration": 2.05896
+    },
+    {
+      "start": 182.17,
+      "end": 183.334,
+      "duration": 1.16444
+    },
+    {
+      "start": 184.783,
+      "end": 186.791,
+      "duration": 2.00792
+    },
+    {
+      "start": 187.26,
+      "end": 189.792,
+      "duration": 2.53196
+    },
+    {
+      "start": 249.992,
+      "end": 250.955,
+      "duration": 0.963042
+    },
+    {
+      "start": 281.911,
+      "end": 285.015,
+      "duration": 3.10421
+    },
+    {
+      "start": 297.603,
+      "end": 298.374,
+      "duration": 0.770542
+    },
+    {
+      "start": 299.865,
+      "end": 301.515,
+      "duration": 1.6495
+    },
+    {
+      "start": 301.533,
+      "end": 306.965,
+      "duration": 5.43231
+    },
+    {
+      "start": 498.76,
+      "end": 499.957,
+      "duration": 1.19758
+    },
+    {
+      "start": 513.452,
+      "end": 514.453,
+      "duration": 1.00106
+    },
+    {
+      "start": 515.76,
+      "end": 519.63,
+      "duration": 3.87002
+    },
+    {
+      "start": 519.63,
+      "end": 520.29,
+      "duration": 0.660813
+    },
+    {
+      "start": 688.359,
+      "end": 688.88,
+      "duration": 0.520437
+    },
+    {
+      "start": 717.327,
+      "end": 717.833,
+      "duration": 0.506625
+    },
+    {
+      "start": 719.007,
+      "end": 719.775,
+      "duration": 0.7685
+    },
+    {
+      "start": 723.32,
+      "end": 725.293,
+      "duration": 1.97367
+    },
+    {
+      "start": 992.934,
+      "end": 993.669,
+      "duration": 0.734875
+    },
+    {
+      "start": 1023.89,
+      "end": 1025.2,
+      "duration": 1.30525
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      76,
+      83,
+      76
+    ],
+    "avg": 73.8,
+    "min": 60
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/8zHdLF3-coA.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

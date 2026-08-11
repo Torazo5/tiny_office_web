@@ -2,7 +2,7 @@
   "video_id": "y38qQRg3UDI",
   "title": "Dua Lipa: Tiny Desk Concert",
   "duration": 1105,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/y38qQRg3UDI.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/y38qQRg3UDI.mp3",
   "description_songs": [
     "Training Season",
     "These Walls",
@@ -86,7 +86,7 @@
       "corroboration": 0,
       "silence_match": 0.0,
       "clip_start": 3,
-      "clip_end": 242.39999999999998,
+      "clip_end": 241.39999999999998,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [
@@ -119,7 +119,8 @@
         }
       ],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 303,
@@ -127,12 +128,13 @@
       "corroboration": 1,
       "silence_match": 302.447,
       "clip_start": 302.40000000000003,
-      "clip_end": 517.4399999999999,
+      "clip_end": 516.4399999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 563,
@@ -140,12 +142,13 @@
       "corroboration": 1,
       "silence_match": 562.09,
       "clip_start": 562.56,
-      "clip_end": 795.36,
+      "clip_end": 794.36,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 878,
@@ -153,12 +156,13 @@
       "corroboration": 1,
       "silence_match": 874.284,
       "clip_start": 877.92,
-      "clip_end": 1064.6399999999999,
+      "clip_end": 1063.6399999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -328,7 +332,10 @@
     "avg": 79.2,
     "min": 68
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/y38qQRg3UDI.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

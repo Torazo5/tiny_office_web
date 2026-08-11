@@ -1,0 +1,347 @@
+{
+  "video_id": "j22KzIF34Xo",
+  "title": "GIV\u0112ON: Tiny Desk Concert",
+  "duration": 1006,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/j22KzIF34Xo.mp3",
+  "description_songs": [
+    "RATHER BE",
+    "I CAN TELL",
+    "KEEPER",
+    "LIKE I WANT YOU",
+    "HEARTBREAK ANNIVERSARY"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 3500 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 169.92,
+      "end": 179.51999999999998,
+      "duration": 9.599999999999994,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 371.52,
+      "end": 385.44,
+      "duration": 13.920000000000016,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 394.08,
+      "end": 396.0,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 396.47999999999996,
+      "end": 399.36,
+      "duration": 2.8800000000000523,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 408.0,
+      "end": 409.44,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 410.4,
+      "end": 411.84,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 414.24,
+      "end": 417.6,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 422.4,
+      "end": 426.24,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 552.0,
+      "end": 553.44,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 730.56,
+      "end": 732.0,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 732.9599999999999,
+      "end": 740.64,
+      "duration": 7.680000000000064,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 747.8399999999999,
+      "end": 750.24,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 752.16,
+      "end": 753.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 755.52,
+      "end": 756.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 768.9599999999999,
+      "end": 772.3199999999999,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 977.28,
+      "end": 991.68,
+      "duration": 14.399999999999977,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 10,
+      "song": "RATHER BE",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 10,
+      "clip_end": 169.92,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 203,
+      "song": "I CAN TELL",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 179.51999999999998,
+      "clip_end": 371.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 440,
+      "song": "KEEPER",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 426.24,
+      "clip_end": 540,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 540,
+      "song": "LIKE I WANT YOU",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 553.44,
+      "clip_end": 732.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 780,
+      "song": "HEARTBREAK ANNIVERSARY",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 772.3199999999999,
+      "clip_end": 977.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.565937,
+      "duration": 0.565937
+    },
+    {
+      "start": 168.15,
+      "end": 168.668,
+      "duration": 0.518729
+    },
+    {
+      "start": 180.397,
+      "end": 180.915,
+      "duration": 0.518229
+    },
+    {
+      "start": 271.766,
+      "end": 272.755,
+      "duration": 0.988729
+    },
+    {
+      "start": 383.351,
+      "end": 383.855,
+      "duration": 0.504896
+    },
+    {
+      "start": 392.393,
+      "end": 393.075,
+      "duration": 0.681979
+    },
+    {
+      "start": 395.737,
+      "end": 396.605,
+      "duration": 0.868104
+    },
+    {
+      "start": 414.574,
+      "end": 415.104,
+      "duration": 0.529854
+    },
+    {
+      "start": 424.164,
+      "end": 425.003,
+      "duration": 0.838833
+    },
+    {
+      "start": 426.338,
+      "end": 426.963,
+      "duration": 0.625146
+    },
+    {
+      "start": 529.339,
+      "end": 530.209,
+      "duration": 0.869396
+    },
+    {
+      "start": 532.263,
+      "end": 533.141,
+      "duration": 0.878021
+    },
+    {
+      "start": 730.613,
+      "end": 731.393,
+      "duration": 0.779813
+    },
+    {
+      "start": 731.531,
+      "end": 732.267,
+      "duration": 0.735896
+    },
+    {
+      "start": 748.454,
+      "end": 749.072,
+      "duration": 0.617771
+    },
+    {
+      "start": 753.439,
+      "end": 754.391,
+      "duration": 0.951729
+    },
+    {
+      "start": 754.693,
+      "end": 755.73,
+      "duration": 1.0365
+    },
+    {
+      "start": 759.99,
+      "end": 760.632,
+      "duration": 0.642354
+    },
+    {
+      "start": 765.334,
+      "end": 766.095,
+      "duration": 0.761458
+    },
+    {
+      "start": 768.562,
+      "end": 769.142,
+      "duration": 0.579688
+    },
+    {
+      "start": 769.476,
+      "end": 770.725,
+      "duration": 1.24944
+    },
+    {
+      "start": 772.047,
+      "end": 772.95,
+      "duration": 0.902979
+    },
+    {
+      "start": 801.499,
+      "end": 802.167,
+      "duration": 0.668292
+    },
+    {
+      "start": 967.133,
+      "end": 968.541,
+      "duration": 1.40783
+    },
+    {
+      "start": 992.045,
+      "end": 1005.8,
+      "duration": 13.7517
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      53,
+      61,
+      61
+    ],
+    "avg": 57.8,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

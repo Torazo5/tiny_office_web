@@ -1,0 +1,194 @@
+{
+  "video_id": "qTJfITfbYNA",
+  "title": "Blue Man Group: NPR Music Tiny Desk Concert",
+  "duration": 796,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/qTJfITfbYNA.mp3",
+  "description_songs": [
+    "Vortex",
+    "The Forge",
+    "Meditation For Winners"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 254 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 23.04,
+      "end": 29.759999999999998,
+      "duration": 6.719999999999999,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 282.71999999999997,
+      "end": 294.72,
+      "duration": 12.000000000000057,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 468.0,
+      "end": 481.44,
+      "duration": 13.439999999999998,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 535.1999999999999,
+      "end": 536.64,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 661.92,
+      "end": 663.36,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 666.72,
+      "end": 668.16,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 761.28,
+      "end": 794.88,
+      "duration": 33.60000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 62,
+      "song": "Vortex",
+      "corroboration": 0,
+      "silence_match": 60.9327,
+      "clip_start": 29.759999999999998,
+      "clip_end": 282.71999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 295,
+      "song": "The Forge",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 294.72,
+      "clip_end": 468.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 499,
+      "song": "Meditation For Winners",
+      "corroboration": 0,
+      "silence_match": 499.164,
+      "clip_start": 481.44,
+      "clip_end": 761.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 30.4241,
+      "end": 31.0021,
+      "duration": 0.577958
+    },
+    {
+      "start": 60.9327,
+      "end": 61.754,
+      "duration": 0.821271
+    },
+    {
+      "start": 63.2459,
+      "end": 64.0482,
+      "duration": 0.802333
+    },
+    {
+      "start": 65.2943,
+      "end": 65.8059,
+      "duration": 0.511563
+    },
+    {
+      "start": 68.7486,
+      "end": 69.269,
+      "duration": 0.520458
+    },
+    {
+      "start": 281.064,
+      "end": 282.834,
+      "duration": 1.76944
+    },
+    {
+      "start": 467.667,
+      "end": 468.398,
+      "duration": 0.730875
+    },
+    {
+      "start": 481.463,
+      "end": 498.141,
+      "duration": 16.6773
+    },
+    {
+      "start": 499.164,
+      "end": 501.546,
+      "duration": 2.38256
+    },
+    {
+      "start": 501.563,
+      "end": 502.111,
+      "duration": 0.548271
+    },
+    {
+      "start": 502.858,
+      "end": 503.584,
+      "duration": 0.725875
+    },
+    {
+      "start": 503.584,
+      "end": 504.157,
+      "duration": 0.57325
+    },
+    {
+      "start": 794.764,
+      "end": 795.469,
+      "duration": 0.705229
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      61,
+      76
+    ],
+    "avg": 71.0,
+    "min": 61
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

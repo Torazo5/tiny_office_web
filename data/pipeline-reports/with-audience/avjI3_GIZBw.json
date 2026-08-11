@@ -1,0 +1,346 @@
+{
+  "video_id": "avjI3_GIZBw",
+  "title": "Laufey: Tiny Desk Concert",
+  "duration": 1147,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/avjI3_GIZBw.mp3",
+  "description_songs": [
+    "From The Start",
+    "Let You Break My Heart Again",
+    "Promise",
+    "California and Me"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1600 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 5,
+    "accepted": 5,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 181.44,
+      "end": 242.87999999999997,
+      "duration": 61.43999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 491.52,
+      "end": 550.08,
+      "duration": 58.56000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 800.16,
+      "end": 811.68,
+      "duration": 11.519999999999982,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 811.68,
+      "end": 863.04,
+      "duration": 51.360000000000014,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 864.0,
+      "end": 868.3199999999999,
+      "duration": 4.319999999999936,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 869.28,
+      "end": 872.16,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1093.44,
+      "end": 1117.44,
+      "duration": 24.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1137.12,
+      "end": 1142.3999999999999,
+      "duration": 5.279999999999973,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "From The Start",
+      "corroboration": 4,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 181.44,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 74
+    },
+    {
+      "seconds": 245,
+      "song": "Let You Break My Heart Again",
+      "corroboration": 4,
+      "silence_match": 242.92,
+      "clip_start": 242.87999999999997,
+      "clip_end": 491.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 97
+    },
+    {
+      "seconds": 552,
+      "song": "Promise",
+      "corroboration": 4,
+      "silence_match": 550.35,
+      "clip_start": 550.08,
+      "clip_end": 800.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 97
+    },
+    {
+      "seconds": 873,
+      "song": "California and Me",
+      "corroboration": 4,
+      "silence_match": 872.037,
+      "clip_start": 872.16,
+      "clip_end": 1093.44,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 97
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 78.4339,
+      "end": 79.225,
+      "duration": 0.791125
+    },
+    {
+      "start": 150.548,
+      "end": 151.465,
+      "duration": 0.917146
+    },
+    {
+      "start": 164.303,
+      "end": 165.331,
+      "duration": 1.02777
+    },
+    {
+      "start": 180.13,
+      "end": 181.419,
+      "duration": 1.28852
+    },
+    {
+      "start": 195.798,
+      "end": 198.444,
+      "duration": 2.64554
+    },
+    {
+      "start": 213.832,
+      "end": 214.445,
+      "duration": 0.613896
+    },
+    {
+      "start": 242.92,
+      "end": 245.171,
+      "duration": 2.25071
+    },
+    {
+      "start": 476.007,
+      "end": 476.515,
+      "duration": 0.507979
+    },
+    {
+      "start": 487.944,
+      "end": 491.717,
+      "duration": 3.77321
+    },
+    {
+      "start": 520.142,
+      "end": 520.979,
+      "duration": 0.836604
+    },
+    {
+      "start": 522.142,
+      "end": 522.922,
+      "duration": 0.780729
+    },
+    {
+      "start": 537.678,
+      "end": 538.346,
+      "duration": 0.668271
+    },
+    {
+      "start": 549.822,
+      "end": 550.35,
+      "duration": 0.527667
+    },
+    {
+      "start": 550.35,
+      "end": 552.968,
+      "duration": 2.61844
+    },
+    {
+      "start": 553.677,
+      "end": 554.779,
+      "duration": 1.10267
+    },
+    {
+      "start": 555.692,
+      "end": 556.451,
+      "duration": 0.759229
+    },
+    {
+      "start": 557.351,
+      "end": 558.221,
+      "duration": 0.8705
+    },
+    {
+      "start": 564.026,
+      "end": 564.526,
+      "duration": 0.500375
+    },
+    {
+      "start": 567.106,
+      "end": 567.865,
+      "duration": 0.759229
+    },
+    {
+      "start": 579.099,
+      "end": 579.608,
+      "duration": 0.509542
+    },
+    {
+      "start": 587.168,
+      "end": 587.687,
+      "duration": 0.519146
+    },
+    {
+      "start": 603.283,
+      "end": 604.024,
+      "duration": 0.740771
+    },
+    {
+      "start": 681.471,
+      "end": 684.552,
+      "duration": 3.08042
+    },
+    {
+      "start": 706.747,
+      "end": 707.384,
+      "duration": 0.637083
+    },
+    {
+      "start": 707.9,
+      "end": 708.841,
+      "duration": 0.941562
+    },
+    {
+      "start": 712.068,
+      "end": 714.081,
+      "duration": 2.01344
+    },
+    {
+      "start": 714.913,
+      "end": 715.414,
+      "duration": 0.501125
+    },
+    {
+      "start": 719.628,
+      "end": 720.817,
+      "duration": 1.18948
+    },
+    {
+      "start": 799.355,
+      "end": 800.588,
+      "duration": 1.23244
+    },
+    {
+      "start": 815.526,
+      "end": 816.259,
+      "duration": 0.732875
+    },
+    {
+      "start": 826.53,
+      "end": 827.22,
+      "duration": 0.690417
+    },
+    {
+      "start": 829.416,
+      "end": 829.921,
+      "duration": 0.504875
+    },
+    {
+      "start": 832.322,
+      "end": 833.038,
+      "duration": 0.716708
+    },
+    {
+      "start": 837.054,
+      "end": 837.583,
+      "duration": 0.528896
+    },
+    {
+      "start": 857.271,
+      "end": 857.928,
+      "duration": 0.656875
+    },
+    {
+      "start": 872.037,
+      "end": 874.355,
+      "duration": 2.31802
+    },
+    {
+      "start": 1091.38,
+      "end": 1093.53,
+      "duration": 2.15165
+    },
+    {
+      "start": 1117.37,
+      "end": 1137.61,
+      "duration": 20.2443
+    },
+    {
+      "start": 1142.18,
+      "end": 1146.9,
+      "duration": 4.72669
+    }
+  ],
+  "confidence": {
+    "scores": [
+      74,
+      97,
+      97,
+      97
+    ],
+    "avg": 91.2,
+    "min": 74
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

@@ -2,7 +2,7 @@
   "video_id": "-91vymvIH0c",
   "title": "Doechii: Tiny Desk Concert",
   "duration": 1420,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/-91vymvIH0c.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/-91vymvIH0c.mp3",
   "description_songs": [
     "BOOM BAP",
     "BOILED PEANUTS",
@@ -104,12 +104,13 @@
       "corroboration": 0,
       "silence_match": 11.6006,
       "clip_start": 17,
-      "clip_end": 69.12,
+      "clip_end": 68.12,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 68
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 177,
@@ -143,12 +144,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 406,
-      "clip_end": 545.28,
+      "clip_end": 544.28,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 53
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 577,
@@ -156,12 +158,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 567.36,
-      "clip_end": 635.52,
+      "clip_end": 634.52,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 61
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 751,
@@ -182,12 +185,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 864,
-      "clip_end": 1020.48,
+      "clip_end": 1019.48,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 53
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 1080,
@@ -195,12 +199,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 1080,
-      "clip_end": 1391.04,
+      "clip_end": 1390.04,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 53
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -274,7 +279,10 @@
     "avg": 53.9,
     "min": 45
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/-91vymvIH0c.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

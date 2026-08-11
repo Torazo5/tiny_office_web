@@ -1,0 +1,272 @@
+{
+  "video_id": "CIjXUg1s5gc",
+  "title": "T-Pain: NPR Music Tiny Desk Concert",
+  "duration": 828,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/CIjXUg1s5gc.mp3",
+  "description_songs": [
+    "Buy U A Drank (Shawty Snappin')",
+    "Up Down (Do This All Day)",
+    "Drankin' Patna"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 258 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 4.32,
+      "end": 6.720000000000001,
+      "duration": 2.4000000000000004,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 8.16,
+      "end": 54.239999999999995,
+      "duration": 46.08,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 216.0,
+      "end": 226.55999999999997,
+      "duration": 10.559999999999974,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 432.47999999999996,
+      "end": 466.08,
+      "duration": 33.60000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 769.4399999999999,
+      "end": 806.88,
+      "duration": 37.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 810.7199999999999,
+      "end": 812.16,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 60,
+      "song": "Buy U A Drank (Shawty Snappin')",
+      "corroboration": 0,
+      "silence_match": 55.3466,
+      "clip_start": 54.239999999999995,
+      "clip_end": 216.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 230,
+      "song": "Up Down (Do This All Day)",
+      "corroboration": 0,
+      "silence_match": 226.046,
+      "clip_start": 226.55999999999997,
+      "clip_end": 432.47999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 470,
+      "song": "Drankin' Patna",
+      "corroboration": 0,
+      "silence_match": 466.107,
+      "clip_start": 466.08,
+      "clip_end": 769.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.11956,
+      "duration": 5.11956
+    },
+    {
+      "start": 5.75715,
+      "end": 6.33819,
+      "duration": 0.581042
+    },
+    {
+      "start": 14.956,
+      "end": 15.9401,
+      "duration": 0.984062
+    },
+    {
+      "start": 22.8623,
+      "end": 23.479,
+      "duration": 0.61675
+    },
+    {
+      "start": 29.6077,
+      "end": 30.281,
+      "duration": 0.673312
+    },
+    {
+      "start": 38.4243,
+      "end": 39.2141,
+      "duration": 0.789813
+    },
+    {
+      "start": 48.2757,
+      "end": 49.8066,
+      "duration": 1.5309
+    },
+    {
+      "start": 51.4473,
+      "end": 52.06,
+      "duration": 0.612667
+    },
+    {
+      "start": 52.3409,
+      "end": 53.2338,
+      "duration": 0.892896
+    },
+    {
+      "start": 54.7836,
+      "end": 55.3466,
+      "duration": 0.563
+    },
+    {
+      "start": 55.3466,
+      "end": 57.2467,
+      "duration": 1.90008
+    },
+    {
+      "start": 213.386,
+      "end": 214.502,
+      "duration": 1.11627
+    },
+    {
+      "start": 224.806,
+      "end": 225.348,
+      "duration": 0.541854
+    },
+    {
+      "start": 225.35,
+      "end": 225.871,
+      "duration": 0.521229
+    },
+    {
+      "start": 226.046,
+      "end": 228.333,
+      "duration": 2.28654
+    },
+    {
+      "start": 449.814,
+      "end": 450.574,
+      "duration": 0.760188
+    },
+    {
+      "start": 451.353,
+      "end": 451.854,
+      "duration": 0.500437
+    },
+    {
+      "start": 453.358,
+      "end": 455.366,
+      "duration": 2.00773
+    },
+    {
+      "start": 456.636,
+      "end": 457.421,
+      "duration": 0.785167
+    },
+    {
+      "start": 457.483,
+      "end": 458.582,
+      "duration": 1.09813
+    },
+    {
+      "start": 458.955,
+      "end": 459.632,
+      "duration": 0.677187
+    },
+    {
+      "start": 459.956,
+      "end": 461.578,
+      "duration": 1.62258
+    },
+    {
+      "start": 461.58,
+      "end": 462.318,
+      "duration": 0.737854
+    },
+    {
+      "start": 464.259,
+      "end": 464.777,
+      "duration": 0.5185
+    },
+    {
+      "start": 466.107,
+      "end": 466.888,
+      "duration": 0.780792
+    },
+    {
+      "start": 756.372,
+      "end": 757.673,
+      "duration": 1.30079
+    },
+    {
+      "start": 759.264,
+      "end": 759.766,
+      "duration": 0.501583
+    },
+    {
+      "start": 798.125,
+      "end": 799.085,
+      "duration": 0.960229
+    },
+    {
+      "start": 800.504,
+      "end": 801.251,
+      "duration": 0.747083
+    },
+    {
+      "start": 807.223,
+      "end": 808.104,
+      "duration": 0.881125
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      76,
+      76
+    ],
+    "avg": 76.0,
+    "min": 76
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

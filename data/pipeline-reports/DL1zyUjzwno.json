@@ -1,0 +1,428 @@
+{
+  "video_id": "DL1zyUjzwno",
+  "title": "RAYE: Tiny Desk Concert",
+  "duration": 1269,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/DL1zyUjzwno.mp3",
+  "description_songs": [
+    "Worth It.",
+    "Five Star Hotels.",
+    "Mary Jane.",
+    "Buss It Down."
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 957 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 61.44,
+      "end": 62.879999999999995,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 98.88,
+      "end": 100.32000000000001,
+      "duration": 1.440000000000012,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 311.03999999999996,
+      "end": 375.84000000000003,
+      "duration": 64.80000000000007,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 421.91999999999996,
+      "end": 424.32,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 480.47999999999996,
+      "end": 482.4,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 489.12,
+      "end": 490.56,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 491.03999999999996,
+      "end": 493.44,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 583.1999999999999,
+      "end": 594.24,
+      "duration": 11.040000000000077,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 595.1999999999999,
+      "end": 640.32,
+      "duration": 45.12000000000012,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 641.76,
+      "end": 643.2,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 936.9599999999999,
+      "end": 980.64,
+      "duration": 43.680000000000064,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 986.4,
+      "end": 987.84,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 989.76,
+      "end": 1008.48,
+      "duration": 18.720000000000027,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1016.16,
+      "end": 1017.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1020.9599999999999,
+      "end": 1025.28,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1028.1599999999999,
+      "end": 1035.36,
+      "duration": 7.2000000000000455,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1237.9199999999998,
+      "end": 1241.76,
+      "duration": 3.8400000000001455,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1245.12,
+      "end": 1267.68,
+      "duration": 22.560000000000173,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 60,
+      "song": "Worth It.",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 62.879999999999995,
+      "clip_end": 310.03999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 380,
+      "song": "Five Star Hotels.",
+      "corroboration": 0,
+      "silence_match": 379.262,
+      "clip_start": 375.84000000000003,
+      "clip_end": 582.1999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 641,
+      "song": "Mary Jane.",
+      "corroboration": 1,
+      "silence_match": 640.732,
+      "clip_start": 643.2,
+      "clip_end": 935.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 1036,
+      "song": "Buss It Down.",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 1035.36,
+      "clip_end": 1236.9199999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 318.567,
+      "end": 319.489,
+      "duration": 0.921542
+    },
+    {
+      "start": 322.111,
+      "end": 322.897,
+      "duration": 0.785833
+    },
+    {
+      "start": 323.456,
+      "end": 324.652,
+      "duration": 1.19594
+    },
+    {
+      "start": 326.445,
+      "end": 327.573,
+      "duration": 1.12758
+    },
+    {
+      "start": 327.896,
+      "end": 328.481,
+      "duration": 0.585187
+    },
+    {
+      "start": 328.817,
+      "end": 329.458,
+      "duration": 0.641312
+    },
+    {
+      "start": 330.823,
+      "end": 331.396,
+      "duration": 0.573042
+    },
+    {
+      "start": 332.765,
+      "end": 333.847,
+      "duration": 1.08196
+    },
+    {
+      "start": 341.956,
+      "end": 342.643,
+      "duration": 0.687292
+    },
+    {
+      "start": 361.414,
+      "end": 362.071,
+      "duration": 0.656792
+    },
+    {
+      "start": 369.034,
+      "end": 369.961,
+      "duration": 0.926792
+    },
+    {
+      "start": 375.578,
+      "end": 378.396,
+      "duration": 2.81842
+    },
+    {
+      "start": 379.262,
+      "end": 380.484,
+      "duration": 1.22237
+    },
+    {
+      "start": 383.935,
+      "end": 384.664,
+      "duration": 0.729062
+    },
+    {
+      "start": 390.891,
+      "end": 391.734,
+      "duration": 0.843042
+    },
+    {
+      "start": 451.416,
+      "end": 451.97,
+      "duration": 0.553479
+    },
+    {
+      "start": 487.488,
+      "end": 488.432,
+      "duration": 0.94475
+    },
+    {
+      "start": 593.89,
+      "end": 595.684,
+      "duration": 1.79417
+    },
+    {
+      "start": 598.353,
+      "end": 599.089,
+      "duration": 0.735979
+    },
+    {
+      "start": 599.386,
+      "end": 600.423,
+      "duration": 1.03729
+    },
+    {
+      "start": 602.829,
+      "end": 603.462,
+      "duration": 0.632625
+    },
+    {
+      "start": 604.273,
+      "end": 605.074,
+      "duration": 0.801646
+    },
+    {
+      "start": 608.012,
+      "end": 608.54,
+      "duration": 0.528229
+    },
+    {
+      "start": 609.835,
+      "end": 610.765,
+      "duration": 0.930479
+    },
+    {
+      "start": 613.331,
+      "end": 614.405,
+      "duration": 1.07479
+    },
+    {
+      "start": 618.962,
+      "end": 619.666,
+      "duration": 0.703958
+    },
+    {
+      "start": 630.028,
+      "end": 630.769,
+      "duration": 0.740667
+    },
+    {
+      "start": 632.281,
+      "end": 632.852,
+      "duration": 0.571229
+    },
+    {
+      "start": 634.994,
+      "end": 635.67,
+      "duration": 0.6755
+    },
+    {
+      "start": 640.064,
+      "end": 640.674,
+      "duration": 0.609375
+    },
+    {
+      "start": 640.732,
+      "end": 641.453,
+      "duration": 0.721104
+    },
+    {
+      "start": 922.492,
+      "end": 923.221,
+      "duration": 0.728167
+    },
+    {
+      "start": 934.884,
+      "end": 935.473,
+      "duration": 0.589104
+    },
+    {
+      "start": 951.466,
+      "end": 952.182,
+      "duration": 0.715938
+    },
+    {
+      "start": 956.647,
+      "end": 957.424,
+      "duration": 0.776375
+    },
+    {
+      "start": 1237.24,
+      "end": 1238.01,
+      "duration": 0.771271
+    },
+    {
+      "start": 1263.78,
+      "end": 1264.41,
+      "duration": 0.632708
+    },
+    {
+      "start": 1265.16,
+      "end": 1265.82,
+      "duration": 0.65725
+    },
+    {
+      "start": 1265.92,
+      "end": 1266.58,
+      "duration": 0.661896
+    },
+    {
+      "start": 1267.49,
+      "end": 1268.98,
+      "duration": 1.49656
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      76,
+      83,
+      68
+    ],
+    "avg": 72.0,
+    "min": 61
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/DL1zyUjzwno.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

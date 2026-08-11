@@ -2,7 +2,7 @@
   "video_id": "4cfmEgpOOZk",
   "title": "Erykah Badu: NPR Music Tiny Desk Concert",
   "duration": 908,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/4cfmEgpOOZk.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/4cfmEgpOOZk.mp3",
   "description_songs": [
     "Rimshot",
     "Green Eyes"
@@ -71,12 +71,13 @@
       "corroboration": 0,
       "silence_match": 0.0,
       "clip_start": 0.0,
-      "clip_end": 181.44,
+      "clip_end": 180.44,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 58
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 181.44,
@@ -84,12 +85,13 @@
       "corroboration": 0,
       "silence_match": 180.064,
       "clip_start": 193.43999999999997,
-      "clip_end": 887.52,
+      "clip_end": 886.52,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 66
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -242,7 +244,10 @@
     "avg": 62.0,
     "min": 58
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/4cfmEgpOOZk.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

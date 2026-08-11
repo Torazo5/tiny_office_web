@@ -2,7 +2,7 @@
   "video_id": "YcHL0kUFPhw",
   "title": "Chris Stapleton: NPR Music Tiny Desk Concert",
   "duration": 897,
-  "audio_path": null,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/YcHL0kUFPhw.mp3",
   "description_songs": [
     "More Of You",
     "When The Stars Come Out",
@@ -19,57 +19,271 @@
     "rejected": 0,
     "filtered_entries": 0
   },
-  "refine_method": null,
-  "boundary_spans": [],
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 3.84,
+      "duration": 3.84,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 267.36,
+      "end": 306.72,
+      "duration": 39.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 552.96,
+      "end": 562.56,
+      "duration": 9.599999999999909,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 565.92,
+      "end": 568.8,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 569.28,
+      "end": 571.68,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 572.64,
+      "end": 576.96,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 577.4399999999999,
+      "end": 587.04,
+      "duration": 9.600000000000023,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 598.0799999999999,
+      "end": 599.52,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 605.76,
+      "end": 607.2,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 608.64,
+      "end": 611.04,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 612.9599999999999,
+      "end": 616.32,
+      "duration": 3.3600000000001273,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 618.72,
+      "end": 621.6,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 622.56,
+      "end": 624.48,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 851.04,
+      "end": 872.64,
+      "duration": 21.600000000000023,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
   "candidates": [
     {
       "seconds": 0,
       "song": "More Of You",
       "corroboration": 0,
       "silence_match": null,
-      "clip_start": 0,
-      "clip_end": null,
-      "start_refined": false,
-      "end_trimmed": false,
+      "clip_start": 3.84,
+      "clip_end": 266.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 45
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 312,
       "song": "When The Stars Come Out",
       "corroboration": 0,
-      "silence_match": null,
-      "clip_start": 312,
-      "clip_end": null,
-      "start_refined": false,
-      "end_trimmed": false,
+      "silence_match": 306.524,
+      "clip_start": 306.72,
+      "clip_end": 551.96,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 45
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 628,
       "song": "Whiskey And You",
       "corroboration": 0,
       "silence_match": null,
-      "clip_start": 628,
-      "clip_end": null,
-      "start_refined": false,
-      "end_trimmed": false,
+      "clip_start": 624.48,
+      "clip_end": 850.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
       "suspect": false,
-      "confidence": 45
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
     }
   ],
-  "silence_intervals": [],
+  "silence_intervals": [
+    {
+      "start": 265.651,
+      "end": 267.513,
+      "duration": 1.8619
+    },
+    {
+      "start": 278.755,
+      "end": 279.365,
+      "duration": 0.609229
+    },
+    {
+      "start": 279.893,
+      "end": 280.57,
+      "duration": 0.677271
+    },
+    {
+      "start": 280.753,
+      "end": 283.272,
+      "duration": 2.51887
+    },
+    {
+      "start": 295.612,
+      "end": 296.644,
+      "duration": 1.03269
+    },
+    {
+      "start": 304.447,
+      "end": 305.346,
+      "duration": 0.898375
+    },
+    {
+      "start": 306.524,
+      "end": 307.175,
+      "duration": 0.651708
+    },
+    {
+      "start": 552.279,
+      "end": 552.937,
+      "duration": 0.658333
+    },
+    {
+      "start": 567.557,
+      "end": 568.271,
+      "duration": 0.714313
+    },
+    {
+      "start": 569.095,
+      "end": 569.743,
+      "duration": 0.647625
+    },
+    {
+      "start": 571.912,
+      "end": 572.654,
+      "duration": 0.741521
+    },
+    {
+      "start": 572.654,
+      "end": 573.199,
+      "duration": 0.545438
+    },
+    {
+      "start": 621.901,
+      "end": 622.471,
+      "duration": 0.569417
+    },
+    {
+      "start": 641.102,
+      "end": 641.889,
+      "duration": 0.786396
+    },
+    {
+      "start": 661.298,
+      "end": 662.037,
+      "duration": 0.738708
+    },
+    {
+      "start": 701.627,
+      "end": 702.185,
+      "duration": 0.558208
+    },
+    {
+      "start": 702.185,
+      "end": 702.813,
+      "duration": 0.628125
+    },
+    {
+      "start": 786.545,
+      "end": 787.357,
+      "duration": 0.81175
+    },
+    {
+      "start": 869.278,
+      "end": 869.879,
+      "duration": 0.600875
+    },
+    {
+      "start": 872.698,
+      "end": 873.794,
+      "duration": 1.09654
+    },
+    {
+      "start": 896.687,
+      "end": 897.277,
+      "duration": 0.59
+    }
+  ],
   "confidence": {
     "scores": [
-      45,
-      45,
-      45
+      61,
+      76,
+      61
     ],
-    "avg": 45.0,
-    "min": 45
+    "avg": 66.0,
+    "min": 61
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
 }

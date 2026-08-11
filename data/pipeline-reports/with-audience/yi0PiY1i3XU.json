@@ -1,0 +1,323 @@
+{
+  "video_id": "yi0PiY1i3XU",
+  "title": "Grupo Frontera: Tiny Desk Concert",
+  "duration": 1204,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/yi0PiY1i3XU.mp3",
+  "description_songs": [
+    "un x100to",
+    "Hecha Pa' Mi",
+    "\u00c1ngel",
+    "Por Qu\u00e9 Ser\u00e1",
+    "EL AMOR DE SU VIDA"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1600 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 238.56,
+      "end": 245.76,
+      "duration": 7.199999999999989,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 246.23999999999998,
+      "end": 298.56,
+      "duration": 52.32000000000002,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 311.03999999999996,
+      "end": 312.96,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 313.44,
+      "end": 315.36,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 514.56,
+      "end": 518.88,
+      "duration": 4.32000000000005,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 732.9599999999999,
+      "end": 733.4399999999999,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 735.8399999999999,
+      "end": 740.64,
+      "duration": 4.800000000000068,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 962.4,
+      "end": 995.04,
+      "duration": 32.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1179.36,
+      "end": 1198.08,
+      "duration": 18.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "un x100to",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 238.56,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 311,
+      "song": "Hecha Pa' Mi",
+      "corroboration": 1,
+      "silence_match": 308.961,
+      "clip_start": 315.36,
+      "clip_end": 514.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 530,
+      "song": "\u00c1ngel",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 518.88,
+      "clip_end": 732.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 750,
+      "song": "Por Qu\u00e9 Ser\u00e1",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 740.64,
+      "clip_end": 962.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 1014,
+      "song": "EL AMOR DE SU VIDA",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 995.04,
+      "clip_end": 1179.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 31.4167,
+      "end": 32.5293,
+      "duration": 1.11254
+    },
+    {
+      "start": 254.956,
+      "end": 255.627,
+      "duration": 0.670812
+    },
+    {
+      "start": 259.607,
+      "end": 260.172,
+      "duration": 0.564917
+    },
+    {
+      "start": 261.115,
+      "end": 261.814,
+      "duration": 0.698792
+    },
+    {
+      "start": 267.11,
+      "end": 267.945,
+      "duration": 0.83475
+    },
+    {
+      "start": 268.447,
+      "end": 269.496,
+      "duration": 1.04906
+    },
+    {
+      "start": 279.315,
+      "end": 280.088,
+      "duration": 0.773312
+    },
+    {
+      "start": 286.799,
+      "end": 287.318,
+      "duration": 0.51925
+    },
+    {
+      "start": 289.919,
+      "end": 290.56,
+      "duration": 0.640792
+    },
+    {
+      "start": 292.261,
+      "end": 293.031,
+      "duration": 0.769437
+    },
+    {
+      "start": 294.645,
+      "end": 295.258,
+      "duration": 0.612792
+    },
+    {
+      "start": 296.885,
+      "end": 297.434,
+      "duration": 0.548979
+    },
+    {
+      "start": 297.896,
+      "end": 298.84,
+      "duration": 0.944604
+    },
+    {
+      "start": 298.858,
+      "end": 301.606,
+      "duration": 2.74869
+    },
+    {
+      "start": 308.961,
+      "end": 310.82,
+      "duration": 1.85948
+    },
+    {
+      "start": 518.947,
+      "end": 520.152,
+      "duration": 1.20498
+    },
+    {
+      "start": 741.379,
+      "end": 742.387,
+      "duration": 1.00835
+    },
+    {
+      "start": 969.864,
+      "end": 971.096,
+      "duration": 1.23212
+    },
+    {
+      "start": 976.092,
+      "end": 976.72,
+      "duration": 0.628437
+    },
+    {
+      "start": 979.633,
+      "end": 980.158,
+      "duration": 0.524979
+    },
+    {
+      "start": 981.752,
+      "end": 982.621,
+      "duration": 0.868687
+    },
+    {
+      "start": 984.777,
+      "end": 985.487,
+      "duration": 0.70925
+    },
+    {
+      "start": 989.12,
+      "end": 989.63,
+      "duration": 0.510479
+    },
+    {
+      "start": 990.26,
+      "end": 990.79,
+      "duration": 0.529396
+    },
+    {
+      "start": 992.359,
+      "end": 993.389,
+      "duration": 1.03038
+    },
+    {
+      "start": 994.213,
+      "end": 995.802,
+      "duration": 1.589
+    },
+    {
+      "start": 996.902,
+      "end": 999.511,
+      "duration": 2.60829
+    },
+    {
+      "start": 1194.21,
+      "end": 1194.79,
+      "duration": 0.586583
+    },
+    {
+      "start": 1196.12,
+      "end": 1197.38,
+      "duration": 1.26129
+    },
+    {
+      "start": 1197.66,
+      "end": 1204.24,
+      "duration": 6.58212
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      83,
+      68,
+      68,
+      68
+    ],
+    "avg": 69.4,
+    "min": 60
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

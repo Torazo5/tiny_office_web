@@ -1,0 +1,333 @@
+{
+  "video_id": "I067BonnW48",
+  "title": "The Mar\u00edas: Tiny Desk Concert",
+  "duration": 1176,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/I067BonnW48.mp3",
+  "description_songs": [
+    "Real Life",
+    "Only in My Dreams",
+    "No One Noticed",
+    "Cari\u00f1o"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 5500 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 217.44,
+      "end": 285.6,
+      "duration": 68.16000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 453.59999999999997,
+      "end": 532.32,
+      "duration": 78.72000000000008,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 833.28,
+      "end": 869.76,
+      "duration": 36.48000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1145.28,
+      "end": 1170.72,
+      "duration": 25.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 14,
+      "song": "Real Life",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 14,
+      "clip_end": 217.44,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 300,
+      "song": "Only in My Dreams",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 285.6,
+      "clip_end": 453.59999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 555,
+      "song": "No One Noticed",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 532.32,
+      "clip_end": 833.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 887,
+      "song": "Cari\u00f1o",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 869.76,
+      "clip_end": 1145.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 214.936,
+      "end": 215.841,
+      "duration": 0.904604
+    },
+    {
+      "start": 244.946,
+      "end": 245.682,
+      "duration": 0.736521
+    },
+    {
+      "start": 250.533,
+      "end": 251.475,
+      "duration": 0.941792
+    },
+    {
+      "start": 256.075,
+      "end": 256.663,
+      "duration": 0.587646
+    },
+    {
+      "start": 258.073,
+      "end": 259.533,
+      "duration": 1.4601
+    },
+    {
+      "start": 267.267,
+      "end": 268.875,
+      "duration": 1.6081
+    },
+    {
+      "start": 269.105,
+      "end": 269.758,
+      "duration": 0.653104
+    },
+    {
+      "start": 270.043,
+      "end": 271.726,
+      "duration": 1.68244
+    },
+    {
+      "start": 271.899,
+      "end": 274.004,
+      "duration": 2.10565
+    },
+    {
+      "start": 283.835,
+      "end": 284.354,
+      "duration": 0.518937
+    },
+    {
+      "start": 285.453,
+      "end": 286.609,
+      "duration": 1.15629
+    },
+    {
+      "start": 391.248,
+      "end": 391.773,
+      "duration": 0.524521
+    },
+    {
+      "start": 452.607,
+      "end": 453.404,
+      "duration": 0.796458
+    },
+    {
+      "start": 468.359,
+      "end": 470.512,
+      "duration": 2.15379
+    },
+    {
+      "start": 471.484,
+      "end": 472.26,
+      "duration": 0.775542
+    },
+    {
+      "start": 475.961,
+      "end": 476.684,
+      "duration": 0.72275
+    },
+    {
+      "start": 480.341,
+      "end": 480.902,
+      "duration": 0.561146
+    },
+    {
+      "start": 481.65,
+      "end": 482.248,
+      "duration": 0.59825
+    },
+    {
+      "start": 484.71,
+      "end": 485.291,
+      "duration": 0.580896
+    },
+    {
+      "start": 486.844,
+      "end": 487.869,
+      "duration": 1.0246
+    },
+    {
+      "start": 490.187,
+      "end": 490.988,
+      "duration": 0.801125
+    },
+    {
+      "start": 495.047,
+      "end": 495.863,
+      "duration": 0.816333
+    },
+    {
+      "start": 497.79,
+      "end": 498.582,
+      "duration": 0.791812
+    },
+    {
+      "start": 505.883,
+      "end": 506.658,
+      "duration": 0.775
+    },
+    {
+      "start": 507.036,
+      "end": 507.668,
+      "duration": 0.632021
+    },
+    {
+      "start": 508.097,
+      "end": 508.834,
+      "duration": 0.737583
+    },
+    {
+      "start": 509.629,
+      "end": 510.201,
+      "duration": 0.571333
+    },
+    {
+      "start": 513.969,
+      "end": 514.893,
+      "duration": 0.924229
+    },
+    {
+      "start": 520.21,
+      "end": 520.853,
+      "duration": 0.642958
+    },
+    {
+      "start": 523.401,
+      "end": 523.941,
+      "duration": 0.540021
+    },
+    {
+      "start": 529.446,
+      "end": 530.192,
+      "duration": 0.745917
+    },
+    {
+      "start": 532.177,
+      "end": 535.68,
+      "duration": 3.50231
+    },
+    {
+      "start": 537.123,
+      "end": 542.171,
+      "duration": 5.04808
+    },
+    {
+      "start": 831.203,
+      "end": 833.553,
+      "duration": 2.34967
+    },
+    {
+      "start": 853.147,
+      "end": 853.752,
+      "duration": 0.605062
+    },
+    {
+      "start": 858.69,
+      "end": 859.515,
+      "duration": 0.824812
+    },
+    {
+      "start": 863.613,
+      "end": 864.303,
+      "duration": 0.689917
+    },
+    {
+      "start": 864.817,
+      "end": 865.353,
+      "duration": 0.536062
+    },
+    {
+      "start": 865.939,
+      "end": 866.563,
+      "duration": 0.624
+    },
+    {
+      "start": 866.918,
+      "end": 867.571,
+      "duration": 0.652979
+    },
+    {
+      "start": 869.419,
+      "end": 873.837,
+      "duration": 4.41754
+    },
+    {
+      "start": 1170.56,
+      "end": 1176.4,
+      "duration": 5.84287
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      68,
+      68,
+      68
+    ],
+    "avg": 66.0,
+    "min": 60
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

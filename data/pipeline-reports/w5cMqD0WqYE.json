@@ -1,0 +1,463 @@
+{
+  "video_id": "w5cMqD0WqYE",
+  "title": "Sturgill Simpson: NPR Music Tiny Desk Concert",
+  "duration": 887,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/w5cMqD0WqYE.mp3",
+  "description_songs": [
+    "Turtles All The Way Down",
+    "Time After All",
+    "Life Of Sin",
+    "Water In A Well"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 145 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 1,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 4.32,
+      "end": 16.32,
+      "duration": 12.0,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 16.8,
+      "end": 19.2,
+      "duration": 2.3999999999999986,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 23.52,
+      "end": 30.24,
+      "duration": 6.719999999999999,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 185.76,
+      "end": 224.15999999999997,
+      "duration": 38.39999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 392.64,
+      "end": 394.08,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 394.56,
+      "end": 437.28000000000003,
+      "duration": 42.72000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 571.68,
+      "end": 610.56,
+      "duration": 38.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 843.8399999999999,
+      "end": 875.52,
+      "duration": 31.680000000000064,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 30,
+      "song": "Turtles All The Way Down",
+      "corroboration": 0,
+      "silence_match": 30.5404,
+      "clip_start": 30.24,
+      "clip_end": 184.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 228,
+      "song": "Time After All",
+      "corroboration": 0,
+      "silence_match": 226.662,
+      "clip_start": 224.15999999999997,
+      "clip_end": 393.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 440,
+      "song": "Life Of Sin",
+      "corroboration": 0,
+      "silence_match": 439.391,
+      "clip_start": 437.28000000000003,
+      "clip_end": 570.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 615,
+      "song": "Water In A Well",
+      "corroboration": 0,
+      "silence_match": 614.248,
+      "clip_start": 610.56,
+      "clip_end": 842.8399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.11448,
+      "duration": 5.11448
+    },
+    {
+      "start": 16.0852,
+      "end": 17.173,
+      "duration": 1.08781
+    },
+    {
+      "start": 22.4839,
+      "end": 24.2521,
+      "duration": 1.76821
+    },
+    {
+      "start": 25.5877,
+      "end": 26.9115,
+      "duration": 1.32383
+    },
+    {
+      "start": 30.5404,
+      "end": 31.0836,
+      "duration": 0.543229
+    },
+    {
+      "start": 36.3865,
+      "end": 37.2604,
+      "duration": 0.873979
+    },
+    {
+      "start": 182.951,
+      "end": 186.043,
+      "duration": 3.09183
+    },
+    {
+      "start": 201.579,
+      "end": 202.338,
+      "duration": 0.758854
+    },
+    {
+      "start": 206.804,
+      "end": 207.613,
+      "duration": 0.809542
+    },
+    {
+      "start": 208.606,
+      "end": 209.23,
+      "duration": 0.623646
+    },
+    {
+      "start": 211.075,
+      "end": 211.915,
+      "duration": 0.84
+    },
+    {
+      "start": 216.73,
+      "end": 220.679,
+      "duration": 3.94962
+    },
+    {
+      "start": 221.889,
+      "end": 223.318,
+      "duration": 1.42902
+    },
+    {
+      "start": 223.977,
+      "end": 224.551,
+      "duration": 0.573729
+    },
+    {
+      "start": 224.551,
+      "end": 226.597,
+      "duration": 2.04567
+    },
+    {
+      "start": 226.662,
+      "end": 227.796,
+      "duration": 1.13437
+    },
+    {
+      "start": 258.121,
+      "end": 258.833,
+      "duration": 0.711792
+    },
+    {
+      "start": 267.286,
+      "end": 267.791,
+      "duration": 0.505375
+    },
+    {
+      "start": 406.13,
+      "end": 407.358,
+      "duration": 1.22819
+    },
+    {
+      "start": 407.779,
+      "end": 409.046,
+      "duration": 1.26702
+    },
+    {
+      "start": 411.558,
+      "end": 412.604,
+      "duration": 1.04563
+    },
+    {
+      "start": 414.5,
+      "end": 416.135,
+      "duration": 1.63465
+    },
+    {
+      "start": 422.413,
+      "end": 422.946,
+      "duration": 0.533687
+    },
+    {
+      "start": 426.095,
+      "end": 426.724,
+      "duration": 0.628563
+    },
+    {
+      "start": 430.647,
+      "end": 431.296,
+      "duration": 0.648604
+    },
+    {
+      "start": 431.994,
+      "end": 432.658,
+      "duration": 0.663646
+    },
+    {
+      "start": 436.746,
+      "end": 437.375,
+      "duration": 0.628896
+    },
+    {
+      "start": 439.391,
+      "end": 440.379,
+      "duration": 0.987771
+    },
+    {
+      "start": 591.507,
+      "end": 592.106,
+      "duration": 0.598125
+    },
+    {
+      "start": 599.223,
+      "end": 599.834,
+      "duration": 0.611458
+    },
+    {
+      "start": 602.94,
+      "end": 603.721,
+      "duration": 0.780521
+    },
+    {
+      "start": 604.754,
+      "end": 605.407,
+      "duration": 0.653
+    },
+    {
+      "start": 605.93,
+      "end": 607.674,
+      "duration": 1.74404
+    },
+    {
+      "start": 613.107,
+      "end": 614.139,
+      "duration": 1.03206
+    },
+    {
+      "start": 614.248,
+      "end": 614.927,
+      "duration": 0.6785
+    },
+    {
+      "start": 631.818,
+      "end": 632.499,
+      "duration": 0.6815
+    },
+    {
+      "start": 644.611,
+      "end": 645.112,
+      "duration": 0.500396
+    },
+    {
+      "start": 652.168,
+      "end": 653.186,
+      "duration": 1.01812
+    },
+    {
+      "start": 655.994,
+      "end": 656.697,
+      "duration": 0.702875
+    },
+    {
+      "start": 664.299,
+      "end": 664.946,
+      "duration": 0.647854
+    },
+    {
+      "start": 671.217,
+      "end": 671.944,
+      "duration": 0.727313
+    },
+    {
+      "start": 687.212,
+      "end": 687.754,
+      "duration": 0.541792
+    },
+    {
+      "start": 705.123,
+      "end": 705.674,
+      "duration": 0.551146
+    },
+    {
+      "start": 721.248,
+      "end": 722.236,
+      "duration": 0.98825
+    },
+    {
+      "start": 732.86,
+      "end": 733.795,
+      "duration": 0.935146
+    },
+    {
+      "start": 752.193,
+      "end": 752.863,
+      "duration": 0.669396
+    },
+    {
+      "start": 753.892,
+      "end": 754.877,
+      "duration": 0.985292
+    },
+    {
+      "start": 771.365,
+      "end": 771.99,
+      "duration": 0.624604
+    },
+    {
+      "start": 779.525,
+      "end": 780.632,
+      "duration": 1.10604
+    },
+    {
+      "start": 798.679,
+      "end": 799.515,
+      "duration": 0.835792
+    },
+    {
+      "start": 818.639,
+      "end": 819.274,
+      "duration": 0.634854
+    },
+    {
+      "start": 830.623,
+      "end": 832.198,
+      "duration": 1.57517
+    },
+    {
+      "start": 833.016,
+      "end": 833.608,
+      "duration": 0.592125
+    },
+    {
+      "start": 834.334,
+      "end": 835.008,
+      "duration": 0.673958
+    },
+    {
+      "start": 836.382,
+      "end": 836.917,
+      "duration": 0.534813
+    },
+    {
+      "start": 840.32,
+      "end": 840.979,
+      "duration": 0.658604
+    },
+    {
+      "start": 841.626,
+      "end": 843.489,
+      "duration": 1.86338
+    },
+    {
+      "start": 868.317,
+      "end": 868.933,
+      "duration": 0.616104
+    },
+    {
+      "start": 869.653,
+      "end": 870.664,
+      "duration": 1.0105
+    },
+    {
+      "start": 872.54,
+      "end": 875.309,
+      "duration": 2.76908
+    },
+    {
+      "start": 875.309,
+      "end": 887.014,
+      "duration": 11.7045
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      76,
+      76,
+      76
+    ],
+    "avg": 76.0,
+    "min": 76
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/w5cMqD0WqYE.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

@@ -2,7 +2,7 @@
   "video_id": "id28fCyYgIU",
   "title": "Damian 'Jr. Gong' Marley: NPR Music Tiny Desk Concert",
   "duration": 913,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/id28fCyYgIU.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/id28fCyYgIU.mp3",
   "description_songs": [
     "Slave Mill",
     "So a Child May Follow",
@@ -58,12 +58,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 0.0,
-      "clip_end": 284.15999999999997,
+      "clip_end": 283.15999999999997,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 43
+      "confidence": 43,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 284.15999999999997,
@@ -71,12 +72,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 310.56,
-      "clip_end": 586.0799999999999,
+      "clip_end": 585.0799999999999,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 51
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 586.0799999999999,
@@ -84,12 +86,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 614.4,
-      "clip_end": 890.88,
+      "clip_end": 889.88,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 51
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -168,7 +171,10 @@
     "avg": 48.3,
     "min": 43
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/id28fCyYgIU.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

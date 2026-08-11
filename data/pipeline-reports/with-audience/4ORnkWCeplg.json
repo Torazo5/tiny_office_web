@@ -1,0 +1,166 @@
+{
+  "video_id": "4ORnkWCeplg",
+  "title": "dvsn: NPR Music Tiny Desk Concert",
+  "duration": 721,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/4ORnkWCeplg.mp3",
+  "description_songs": [
+    "Too Deep",
+    "Body Smile",
+    "Mood"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 444 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 163.68,
+      "end": 174.71999999999997,
+      "duration": 11.039999999999964,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 457.44,
+      "end": 468.96,
+      "duration": 11.519999999999982,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 705.12,
+      "end": 718.56,
+      "duration": 13.43999999999994,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 14,
+      "song": "Too Deep",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 14,
+      "clip_end": 163.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 178,
+      "song": "Body Smile",
+      "corroboration": 0,
+      "silence_match": 177.92,
+      "clip_start": 174.71999999999997,
+      "clip_end": 457.44,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 475,
+      "song": "Mood",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 468.96,
+      "clip_end": 705.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 171.758,
+      "end": 172.583,
+      "duration": 0.825062
+    },
+    {
+      "start": 173.23,
+      "end": 173.867,
+      "duration": 0.636958
+    },
+    {
+      "start": 174.542,
+      "end": 177.725,
+      "duration": 3.18285
+    },
+    {
+      "start": 177.92,
+      "end": 178.917,
+      "duration": 0.997125
+    },
+    {
+      "start": 178.994,
+      "end": 180.085,
+      "duration": 1.0911
+    },
+    {
+      "start": 180.285,
+      "end": 181.277,
+      "duration": 0.992625
+    },
+    {
+      "start": 181.338,
+      "end": 182.463,
+      "duration": 1.12479
+    },
+    {
+      "start": 182.679,
+      "end": 183.611,
+      "duration": 0.931625
+    },
+    {
+      "start": 183.678,
+      "end": 184.761,
+      "duration": 1.08279
+    },
+    {
+      "start": 184.954,
+      "end": 187.127,
+      "duration": 2.17235
+    },
+    {
+      "start": 456.432,
+      "end": 457.281,
+      "duration": 0.848896
+    },
+    {
+      "start": 468.853,
+      "end": 469.814,
+      "duration": 0.960375
+    },
+    {
+      "start": 719.161,
+      "end": 720.898,
+      "duration": 1.73775
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      61
+    ],
+    "avg": 63.3,
+    "min": 53
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

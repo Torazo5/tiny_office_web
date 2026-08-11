@@ -1,0 +1,206 @@
+{
+  "video_id": "Ap4DtvUu7Bk",
+  "title": "BADBADNOTGOOD: NPR Music Tiny Desk Concert",
+  "duration": 1288,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/Ap4DtvUu7Bk.mp3",
+  "description_songs": [
+    "And That, Too.",
+    "In Your Eyes\" (Feat. Charlotte Day Wilson)",
+    "Cashmere"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 777 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 389.28,
+      "end": 422.4,
+      "duration": 33.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 662.88,
+      "end": 683.04,
+      "duration": 20.159999999999968,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1260.48,
+      "end": 1285.44,
+      "duration": 24.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 1,
+      "song": "And That, Too.",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 1,
+      "clip_end": 389.28,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 424,
+      "song": "In Your Eyes\" (Feat. Charlotte Day Wilson)",
+      "corroboration": 1,
+      "silence_match": 422.551,
+      "clip_start": 422.4,
+      "clip_end": 662.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 683,
+      "song": "Cashmere",
+      "corroboration": 1,
+      "silence_match": 682.635,
+      "clip_start": 683.04,
+      "clip_end": 1260.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 28.279,
+      "end": 32.955,
+      "duration": 4.67604
+    },
+    {
+      "start": 384.317,
+      "end": 388.911,
+      "duration": 4.59335
+    },
+    {
+      "start": 412.778,
+      "end": 413.569,
+      "duration": 0.790604
+    },
+    {
+      "start": 422.551,
+      "end": 425.991,
+      "duration": 3.44054
+    },
+    {
+      "start": 438.799,
+      "end": 439.308,
+      "duration": 0.508813
+    },
+    {
+      "start": 659.405,
+      "end": 663.292,
+      "duration": 3.88715
+    },
+    {
+      "start": 676.597,
+      "end": 677.129,
+      "duration": 0.532333
+    },
+    {
+      "start": 678.084,
+      "end": 679.785,
+      "duration": 1.70108
+    },
+    {
+      "start": 682.635,
+      "end": 684.838,
+      "duration": 2.2024
+    },
+    {
+      "start": 846.785,
+      "end": 847.499,
+      "duration": 0.714021
+    },
+    {
+      "start": 847.81,
+      "end": 848.411,
+      "duration": 0.601
+    },
+    {
+      "start": 1159.65,
+      "end": 1160.21,
+      "duration": 0.562708
+    },
+    {
+      "start": 1164.57,
+      "end": 1165.36,
+      "duration": 0.789229
+    },
+    {
+      "start": 1166.75,
+      "end": 1167.39,
+      "duration": 0.637
+    },
+    {
+      "start": 1170.94,
+      "end": 1171.88,
+      "duration": 0.938437
+    },
+    {
+      "start": 1173.02,
+      "end": 1174.2,
+      "duration": 1.18208
+    },
+    {
+      "start": 1174.75,
+      "end": 1175.61,
+      "duration": 0.868437
+    },
+    {
+      "start": 1175.67,
+      "end": 1181.66,
+      "duration": 5.99181
+    },
+    {
+      "start": 1181.68,
+      "end": 1183.12,
+      "duration": 1.43894
+    },
+    {
+      "start": 1258.65,
+      "end": 1260.94,
+      "duration": 2.29129
+    },
+    {
+      "start": 1284.43,
+      "end": 1288.25,
+      "duration": 3.82287
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      83,
+      83
+    ],
+    "avg": 75.3,
+    "min": 60
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

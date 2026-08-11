@@ -1,0 +1,220 @@
+{
+  "video_id": "j82L3pLjb_0",
+  "title": "Coldplay: NPR Music Tiny Desk Concert",
+  "duration": 1093,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/j82L3pLjb_0.mp3",
+  "description_songs": [
+    "Cry Cry Cry",
+    "Viva La Vida",
+    "Broken",
+    "1999\" (Prince cover)",
+    "Champion Of The World"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1800 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 4,
+    "accepted": 3,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 383.52,
+      "end": 385.92,
+      "duration": 2.400000000000034,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 387.84,
+      "end": 389.76,
+      "duration": 1.920000000000016,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 396.96,
+      "end": 398.88,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 398.88,
+      "end": 485.76,
+      "duration": 86.88,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 812.64,
+      "end": 813.12,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 817.92,
+      "end": 819.36,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 820.3199999999999,
+      "end": 827.52,
+      "duration": 7.2000000000000455,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 864.9599999999999,
+      "end": 866.4,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 873.12,
+      "end": 875.04,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1072.32,
+      "end": 1089.12,
+      "duration": 16.799999999999955,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Cry Cry Cry",
+      "corroboration": 2,
+      "silence_match": 3.22177,
+      "clip_start": 0,
+      "clip_end": 174,
+      "start_refined": false,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 74
+    },
+    {
+      "seconds": 174,
+      "song": "Viva La Vida",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 174,
+      "clip_end": 383.52,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 67
+    },
+    {
+      "seconds": 487,
+      "song": "Broken",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 485.76,
+      "clip_end": 628,
+      "start_refined": true,
+      "end_trimmed": false,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 67
+    },
+    {
+      "seconds": 628,
+      "song": "1999\" (Prince cover)",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 628,
+      "clip_end": 812.64,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 67
+    },
+    {
+      "seconds": 877,
+      "song": "Champion Of The World",
+      "corroboration": 2,
+      "silence_match": 874.714,
+      "clip_start": 875.04,
+      "clip_end": 1072.32,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 90
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 3.22177,
+      "end": 3.73833,
+      "duration": 0.516563
+    },
+    {
+      "start": 3.98333,
+      "end": 4.58994,
+      "duration": 0.606604
+    },
+    {
+      "start": 416.909,
+      "end": 417.471,
+      "duration": 0.561625
+    },
+    {
+      "start": 462.355,
+      "end": 462.908,
+      "duration": 0.552708
+    },
+    {
+      "start": 465.833,
+      "end": 466.347,
+      "duration": 0.513646
+    },
+    {
+      "start": 467.597,
+      "end": 468.206,
+      "duration": 0.60875
+    },
+    {
+      "start": 874.714,
+      "end": 877.705,
+      "duration": 2.9911
+    },
+    {
+      "start": 1088.07,
+      "end": 1093.01,
+      "duration": 4.93869
+    }
+  ],
+  "confidence": {
+    "scores": [
+      74,
+      67,
+      67,
+      67,
+      90
+    ],
+    "avg": 73.0,
+    "min": 67
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

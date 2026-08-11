@@ -1,0 +1,158 @@
+{
+  "video_id": "xaaYgVRZTnE",
+  "title": "Burna Boy: NPR Music Tiny Desk Concert",
+  "duration": 885,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/xaaYgVRZTnE.mp3",
+  "description_songs": [
+    "Gbona",
+    "Wetin Man Go Do",
+    "Dangote",
+    "Ye"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 250 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 191.04,
+      "end": 196.79999999999998,
+      "duration": 5.759999999999991,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 391.68,
+      "end": 401.28000000000003,
+      "duration": 9.600000000000023,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 632.64,
+      "end": 642.72,
+      "duration": 10.080000000000041,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 865.4399999999999,
+      "end": 869.28,
+      "duration": 3.840000000000032,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 1,
+      "song": "Gbona",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 1,
+      "clip_end": 191.04,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 203,
+      "song": "Wetin Man Go Do",
+      "corroboration": 0,
+      "silence_match": 202.016,
+      "clip_start": 196.79999999999998,
+      "clip_end": 391.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 406,
+      "song": "Dangote",
+      "corroboration": 0,
+      "silence_match": 401.709,
+      "clip_start": 401.28000000000003,
+      "clip_end": 632.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 647,
+      "song": "Ye",
+      "corroboration": 0,
+      "silence_match": 643.152,
+      "clip_start": 642.72,
+      "clip_end": 865.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 4.17683,
+      "duration": 4.17683
+    },
+    {
+      "start": 197.069,
+      "end": 201.872,
+      "duration": 4.8026
+    },
+    {
+      "start": 202.016,
+      "end": 203.746,
+      "duration": 1.72948
+    },
+    {
+      "start": 207.458,
+      "end": 208.024,
+      "duration": 0.566125
+    },
+    {
+      "start": 401.709,
+      "end": 406.828,
+      "duration": 5.1185
+    },
+    {
+      "start": 643.152,
+      "end": 647.957,
+      "duration": 4.80517
+    },
+    {
+      "start": 869.093,
+      "end": 884.936,
+      "duration": 15.8427
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      76,
+      76
+    ],
+    "avg": 74.0,
+    "min": 68
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

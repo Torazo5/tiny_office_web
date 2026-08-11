@@ -1,0 +1,190 @@
+{
+  "video_id": "C_oACPWGvM4",
+  "title": "Leon Bridges: NPR Music Tiny Desk Concert",
+  "duration": 1052,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/C_oACPWGvM4.mp3",
+  "description_songs": [
+    "Coming Home",
+    "Smooth Sailin",
+    "Twistin' & Groovin",
+    "River"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 4 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 2.88,
+      "duration": 2.88,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 230.88,
+      "end": 233.76,
+      "duration": 2.8799999999999955,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 235.67999999999998,
+      "end": 242.87999999999997,
+      "duration": 7.199999999999989,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 429.12,
+      "end": 457.44,
+      "duration": 28.319999999999993,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 708.0,
+      "end": 773.76,
+      "duration": 65.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1012.8,
+      "end": 1051.2,
+      "duration": 38.40000000000009,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Coming Home",
+      "corroboration": 0,
+      "silence_match": 2.94173,
+      "clip_start": 2.88,
+      "clip_end": 229.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 66,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 235.67999999999998,
+      "song": "Smooth Sailin",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 242.87999999999997,
+      "clip_end": 428.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 429.12,
+      "song": "Twistin' & Groovin",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 457.44,
+      "clip_end": 707.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 708.0,
+      "song": "River",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 773.76,
+      "clip_end": 1011.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 2.94173,
+      "end": 3.53433,
+      "duration": 0.592604
+    },
+    {
+      "start": 245.241,
+      "end": 245.884,
+      "duration": 0.642229
+    },
+    {
+      "start": 245.99,
+      "end": 246.792,
+      "duration": 0.801542
+    },
+    {
+      "start": 449.334,
+      "end": 449.874,
+      "duration": 0.540063
+    },
+    {
+      "start": 773.483,
+      "end": 775.219,
+      "duration": 1.7355
+    },
+    {
+      "start": 779.991,
+      "end": 780.736,
+      "duration": 0.745479
+    },
+    {
+      "start": 952.701,
+      "end": 953.503,
+      "duration": 0.802167
+    },
+    {
+      "start": 1008.75,
+      "end": 1009.43,
+      "duration": 0.684479
+    },
+    {
+      "start": 1050.91,
+      "end": 1051.68,
+      "duration": 0.767958
+    }
+  ],
+  "confidence": {
+    "scores": [
+      66,
+      51,
+      51,
+      51
+    ],
+    "avg": 54.8,
+    "min": 51
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/C_oACPWGvM4.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

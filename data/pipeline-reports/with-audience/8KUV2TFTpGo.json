@@ -1,0 +1,223 @@
+{
+  "video_id": "8KUV2TFTpGo",
+  "title": "Nathaniel Rateliff & The Night Sweats: NPR Music Tiny Desk Concerts",
+  "duration": 956,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/8KUV2TFTpGo.mp3",
+  "description_songs": [
+    "I Need Never Get Old",
+    "Look It Here",
+    "I've Been Failing You",
+    "Mellow Out"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 50 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 1.44,
+      "duration": 1.44,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 166.07999999999998,
+      "end": 167.51999999999998,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 238.56,
+      "end": 251.04,
+      "duration": 12.47999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 428.64,
+      "end": 442.08,
+      "duration": 13.439999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 650.88,
+      "end": 700.3199999999999,
+      "duration": 49.43999999999994,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 703.68,
+      "end": 707.04,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 712.3199999999999,
+      "end": 713.76,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 718.0799999999999,
+      "end": 720.0,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 895.1999999999999,
+      "end": 924.48,
+      "duration": 29.280000000000086,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "I Need Never Get Old",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1.44,
+      "clip_end": 238.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 249,
+      "song": "Look It Here",
+      "corroboration": 0,
+      "silence_match": 248.978,
+      "clip_start": 251.04,
+      "clip_end": 428.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 440,
+      "song": "I've Been Failing You",
+      "corroboration": 0,
+      "silence_match": 440.292,
+      "clip_start": 442.08,
+      "clip_end": 650.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 719,
+      "song": "Mellow Out",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 720.0,
+      "clip_end": 895.1999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 248.978,
+      "end": 250.467,
+      "duration": 1.48892
+    },
+    {
+      "start": 250.479,
+      "end": 251.616,
+      "duration": 1.13723
+    },
+    {
+      "start": 440.292,
+      "end": 441.299,
+      "duration": 1.00706
+    },
+    {
+      "start": 442.073,
+      "end": 442.955,
+      "duration": 0.881479
+    },
+    {
+      "start": 650.069,
+      "end": 650.784,
+      "duration": 0.715271
+    },
+    {
+      "start": 685.936,
+      "end": 686.699,
+      "duration": 0.763042
+    },
+    {
+      "start": 686.74,
+      "end": 687.301,
+      "duration": 0.560979
+    },
+    {
+      "start": 687.871,
+      "end": 688.51,
+      "duration": 0.638354
+    },
+    {
+      "start": 691.855,
+      "end": 692.503,
+      "duration": 0.64725
+    },
+    {
+      "start": 702.295,
+      "end": 702.833,
+      "duration": 0.537854
+    },
+    {
+      "start": 702.973,
+      "end": 703.486,
+      "duration": 0.513021
+    },
+    {
+      "start": 924.274,
+      "end": 925.335,
+      "duration": 1.06075
+    },
+    {
+      "start": 954.836,
+      "end": 955.919,
+      "duration": 1.08288
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      76,
+      76,
+      61
+    ],
+    "avg": 68.5,
+    "min": 61
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

@@ -2,7 +2,7 @@
   "video_id": "aWjihS2LHLs",
   "title": "Juanes & Mon Laferte: NPR Music Tiny Desk Concert",
   "duration": 1061,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/aWjihS2LHLs.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/aWjihS2LHLs.mp3",
   "description_songs": [
     "Pa' D\u00f3nde Se Fue\" by Mon Laferte",
     "Am\u00e1rrame [feat. Juanes]\" by Mon Laferte",
@@ -93,12 +93,13 @@
       "corroboration": 2,
       "silence_match": 0.0,
       "clip_start": 0,
-      "clip_end": 261.59999999999997,
+      "clip_end": 260.59999999999997,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 82
+      "confidence": 82,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 316,
@@ -106,12 +107,13 @@
       "corroboration": 1,
       "silence_match": 314.772,
       "clip_start": 314.88,
-      "clip_end": 525.12,
+      "clip_end": 524.12,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 83
+      "confidence": 83,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 553,
@@ -119,12 +121,13 @@
       "corroboration": 2,
       "silence_match": 550.466,
       "clip_start": 544.8,
-      "clip_end": 794.4,
+      "clip_end": 793.4,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 818,
@@ -132,12 +135,13 @@
       "corroboration": 2,
       "silence_match": 816.649,
       "clip_start": 815.52,
-      "clip_end": 1032.96,
+      "clip_end": 1031.96,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -252,7 +256,10 @@
     "avg": 86.2,
     "min": 82
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/aWjihS2LHLs.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }

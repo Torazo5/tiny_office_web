@@ -1,0 +1,61 @@
+{
+  "video_id": "-kWbZvVU-e0",
+  "title": "Chance The Rapper: NPR Music Tiny Desk Concert",
+  "duration": 772,
+  "audio_path": null,
+  "description_songs": [
+    "Juke Jam",
+    "They Won't Go When I Go\" (written by Stevie Wonder)"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 376 likes, matched all 2 description song(s), retained 2 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": null,
+  "boundary_spans": [],
+  "candidates": [
+    {
+      "seconds": 71,
+      "song": "Juke Jam",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 71,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 565,
+      "song": "They Won't Go When I Go\" (written by Stevie Wonder)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 565,
+      "clip_end": null,
+      "start_refined": false,
+      "end_trimmed": false,
+      "suspect": false,
+      "confidence": 45
+    }
+  ],
+  "silence_intervals": [],
+  "confidence": {
+    "scores": [
+      45,
+      45
+    ],
+    "avg": 45.0,
+    "min": 45
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

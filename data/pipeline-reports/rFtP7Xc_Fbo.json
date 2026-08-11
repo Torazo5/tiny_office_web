@@ -1,0 +1,161 @@
+{
+  "video_id": "rFtP7Xc_Fbo",
+  "title": "Brushy One String: NPR Music Tiny Desk Concert",
+  "duration": 688,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/rFtP7Xc_Fbo.mp3",
+  "description_songs": [
+    "Destiny",
+    "Chicken In The Corn",
+    "No Man Stop Me"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 34 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 1,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 132.0,
+      "end": 133.44,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 162.23999999999998,
+      "end": 166.55999999999997,
+      "duration": 4.319999999999993,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 325.44,
+      "end": 326.88,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 347.03999999999996,
+      "end": 353.28000000000003,
+      "duration": 6.240000000000066,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 638.4,
+      "end": 658.56,
+      "duration": 20.159999999999968,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 1,
+      "song": "Destiny",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1,
+      "clip_end": 161.23999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 53,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 171,
+      "song": "Chicken In The Corn",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 166.55999999999997,
+      "clip_end": 346.03999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 356,
+      "song": "No Man Stop Me",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 353.28000000000003,
+      "clip_end": 637.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 61,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 159.695,
+      "end": 160.306,
+      "duration": 0.611021
+    },
+    {
+      "start": 160.323,
+      "end": 161.207,
+      "duration": 0.884375
+    },
+    {
+      "start": 344.812,
+      "end": 345.353,
+      "duration": 0.541917
+    },
+    {
+      "start": 406.687,
+      "end": 407.279,
+      "duration": 0.592042
+    },
+    {
+      "start": 633.697,
+      "end": 634.226,
+      "duration": 0.528854
+    },
+    {
+      "start": 637.324,
+      "end": 637.93,
+      "duration": 0.606083
+    },
+    {
+      "start": 657.35,
+      "end": 658.012,
+      "duration": 0.662667
+    },
+    {
+      "start": 658.488,
+      "end": 660.333,
+      "duration": 1.84517
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      61
+    ],
+    "avg": 58.3,
+    "min": 53
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/rFtP7Xc_Fbo.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

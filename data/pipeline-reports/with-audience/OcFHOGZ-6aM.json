@@ -1,0 +1,280 @@
+{
+  "video_id": "OcFHOGZ-6aM",
+  "title": "Pixies: NPR Music Tiny Desk Concert",
+  "duration": 822,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/OcFHOGZ-6aM.mp3",
+  "description_songs": [
+    "Greens And Blues",
+    "Silver Snail",
+    "Monkey Gone To Heaven"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 213 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 235.67999999999998,
+      "end": 253.43999999999997,
+      "duration": 17.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 257.76,
+      "end": 260.16,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 265.44,
+      "end": 268.32,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 271.2,
+      "end": 273.6,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 274.08,
+      "end": 284.16,
+      "duration": 10.080000000000041,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 285.12,
+      "end": 290.40000000000003,
+      "duration": 5.28000000000003,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 291.36,
+      "end": 293.76,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 511.68,
+      "end": 535.2,
+      "duration": 23.52000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 745.4399999999999,
+      "end": 804.48,
+      "duration": 59.04000000000008,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 807.8399999999999,
+      "end": 811.68,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Greens And Blues",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 235.67999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 300,
+      "song": "Silver Snail",
+      "corroboration": 1,
+      "silence_match": 299.443,
+      "clip_start": 293.76,
+      "clip_end": 511.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 535,
+      "song": "Monkey Gone To Heaven",
+      "corroboration": 1,
+      "silence_match": 534.486,
+      "clip_start": 535.2,
+      "clip_end": 745.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 251.888,
+      "end": 253.899,
+      "duration": 2.01058
+    },
+    {
+      "start": 254.109,
+      "end": 266.935,
+      "duration": 12.826
+    },
+    {
+      "start": 272.693,
+      "end": 273.777,
+      "duration": 1.08354
+    },
+    {
+      "start": 273.816,
+      "end": 274.498,
+      "duration": 0.682125
+    },
+    {
+      "start": 277.868,
+      "end": 278.641,
+      "duration": 0.772792
+    },
+    {
+      "start": 281.926,
+      "end": 282.524,
+      "duration": 0.597708
+    },
+    {
+      "start": 284.139,
+      "end": 285.363,
+      "duration": 1.22367
+    },
+    {
+      "start": 287.054,
+      "end": 287.912,
+      "duration": 0.858417
+    },
+    {
+      "start": 288.085,
+      "end": 288.856,
+      "duration": 0.770583
+    },
+    {
+      "start": 288.881,
+      "end": 289.917,
+      "duration": 1.03635
+    },
+    {
+      "start": 290.376,
+      "end": 291.9,
+      "duration": 1.52377
+    },
+    {
+      "start": 292.16,
+      "end": 293.651,
+      "duration": 1.49119
+    },
+    {
+      "start": 294.001,
+      "end": 294.581,
+      "duration": 0.580375
+    },
+    {
+      "start": 298.252,
+      "end": 299.291,
+      "duration": 1.0395
+    },
+    {
+      "start": 299.443,
+      "end": 301.462,
+      "duration": 2.01869
+    },
+    {
+      "start": 510.859,
+      "end": 512.041,
+      "duration": 1.18135
+    },
+    {
+      "start": 527.682,
+      "end": 528.655,
+      "duration": 0.972375
+    },
+    {
+      "start": 533.715,
+      "end": 534.408,
+      "duration": 0.692833
+    },
+    {
+      "start": 534.486,
+      "end": 535.361,
+      "duration": 0.874583
+    },
+    {
+      "start": 775.52,
+      "end": 778.683,
+      "duration": 3.1625
+    },
+    {
+      "start": 778.823,
+      "end": 782.753,
+      "duration": 3.93067
+    },
+    {
+      "start": 782.821,
+      "end": 783.404,
+      "duration": 0.583479
+    },
+    {
+      "start": 784.837,
+      "end": 787.068,
+      "duration": 2.23152
+    },
+    {
+      "start": 807.267,
+      "end": 808.708,
+      "duration": 1.44077
+    },
+    {
+      "start": 808.715,
+      "end": 810.593,
+      "duration": 1.87869
+    },
+    {
+      "start": 811.271,
+      "end": 821.626,
+      "duration": 10.3559
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      83,
+      83
+    ],
+    "avg": 75.3,
+    "min": 60
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

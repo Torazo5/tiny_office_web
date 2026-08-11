@@ -1,0 +1,396 @@
+{
+  "video_id": "QrR_gm6RqCo",
+  "title": "Mac Miller: NPR Music Tiny Desk Concert",
+  "duration": 1029,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/QrR_gm6RqCo.mp3",
+  "description_songs": [
+    "Small Worlds",
+    "What's the Use? (Feat. Thundercat)",
+    "2009"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 6 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 279.36,
+      "end": 311.04,
+      "duration": 31.680000000000007,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 315.36,
+      "end": 316.8,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 329.28,
+      "end": 333.6,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 334.56,
+      "end": 339.84000000000003,
+      "duration": 5.28000000000003,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 605.28,
+      "end": 623.52,
+      "duration": 18.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 630.72,
+      "end": 642.72,
+      "duration": 12.0,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 643.1999999999999,
+      "end": 647.52,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 648.48,
+      "end": 669.12,
+      "duration": 20.639999999999986,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 671.04,
+      "end": 697.4399999999999,
+      "duration": 26.399999999999977,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 995.52,
+      "end": 1029.12,
+      "duration": 33.59999999999991,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Small Worlds",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 279.36,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58
+    },
+    {
+      "seconds": 279.36,
+      "song": "What's the Use? (Feat. Thundercat)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 311.04,
+      "clip_end": 334.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 671.04,
+      "song": "2009",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 697.4399999999999,
+      "clip_end": 995.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.56644,
+      "duration": 5.56644
+    },
+    {
+      "start": 292.615,
+      "end": 293.203,
+      "duration": 0.587917
+    },
+    {
+      "start": 293.203,
+      "end": 294.011,
+      "duration": 0.808292
+    },
+    {
+      "start": 294.61,
+      "end": 295.758,
+      "duration": 1.14825
+    },
+    {
+      "start": 298.813,
+      "end": 299.495,
+      "duration": 0.681875
+    },
+    {
+      "start": 299.877,
+      "end": 300.394,
+      "duration": 0.51675
+    },
+    {
+      "start": 301.557,
+      "end": 302.228,
+      "duration": 0.671604
+    },
+    {
+      "start": 305.422,
+      "end": 306.045,
+      "duration": 0.623146
+    },
+    {
+      "start": 311.197,
+      "end": 314.131,
+      "duration": 2.93371
+    },
+    {
+      "start": 321.746,
+      "end": 322.491,
+      "duration": 0.744729
+    },
+    {
+      "start": 327.224,
+      "end": 328.257,
+      "duration": 1.03313
+    },
+    {
+      "start": 328.47,
+      "end": 329.035,
+      "duration": 0.564771
+    },
+    {
+      "start": 329.379,
+      "end": 330.058,
+      "duration": 0.678375
+    },
+    {
+      "start": 330.349,
+      "end": 331.667,
+      "duration": 1.31819
+    },
+    {
+      "start": 333.518,
+      "end": 335.031,
+      "duration": 1.51271
+    },
+    {
+      "start": 338.781,
+      "end": 339.345,
+      "duration": 0.5645
+    },
+    {
+      "start": 339.617,
+      "end": 340.721,
+      "duration": 1.10371
+    },
+    {
+      "start": 341.138,
+      "end": 341.684,
+      "duration": 0.546375
+    },
+    {
+      "start": 341.685,
+      "end": 342.248,
+      "duration": 0.562187
+    },
+    {
+      "start": 342.257,
+      "end": 342.801,
+      "duration": 0.543583
+    },
+    {
+      "start": 342.832,
+      "end": 343.364,
+      "duration": 0.531562
+    },
+    {
+      "start": 603.51,
+      "end": 604.198,
+      "duration": 0.688771
+    },
+    {
+      "start": 614.785,
+      "end": 615.293,
+      "duration": 0.507521
+    },
+    {
+      "start": 627.032,
+      "end": 628.143,
+      "duration": 1.11108
+    },
+    {
+      "start": 632.452,
+      "end": 633.076,
+      "duration": 0.623188
+    },
+    {
+      "start": 641.227,
+      "end": 641.8,
+      "duration": 0.572729
+    },
+    {
+      "start": 642.578,
+      "end": 643.483,
+      "duration": 0.905042
+    },
+    {
+      "start": 644.528,
+      "end": 645.334,
+      "duration": 0.805542
+    },
+    {
+      "start": 645.862,
+      "end": 646.385,
+      "duration": 0.522708
+    },
+    {
+      "start": 649.594,
+      "end": 650.966,
+      "duration": 1.37144
+    },
+    {
+      "start": 653.805,
+      "end": 654.747,
+      "duration": 0.941521
+    },
+    {
+      "start": 657.742,
+      "end": 658.405,
+      "duration": 0.66225
+    },
+    {
+      "start": 658.802,
+      "end": 659.382,
+      "duration": 0.580146
+    },
+    {
+      "start": 663.149,
+      "end": 663.918,
+      "duration": 0.769146
+    },
+    {
+      "start": 678.415,
+      "end": 679.793,
+      "duration": 1.37835
+    },
+    {
+      "start": 680.155,
+      "end": 681.217,
+      "duration": 1.0619
+    },
+    {
+      "start": 685.063,
+      "end": 685.771,
+      "duration": 0.708792
+    },
+    {
+      "start": 686.48,
+      "end": 687.029,
+      "duration": 0.548875
+    },
+    {
+      "start": 690.817,
+      "end": 692.252,
+      "duration": 1.43565
+    },
+    {
+      "start": 694.863,
+      "end": 695.371,
+      "duration": 0.507583
+    },
+    {
+      "start": 696.155,
+      "end": 696.924,
+      "duration": 0.769542
+    },
+    {
+      "start": 697.374,
+      "end": 698.869,
+      "duration": 1.49537
+    },
+    {
+      "start": 698.869,
+      "end": 701.594,
+      "duration": 2.7245
+    },
+    {
+      "start": 757.535,
+      "end": 758.042,
+      "duration": 0.507083
+    },
+    {
+      "start": 758.154,
+      "end": 758.784,
+      "duration": 0.630917
+    },
+    {
+      "start": 758.943,
+      "end": 759.478,
+      "duration": 0.535479
+    },
+    {
+      "start": 1021.19,
+      "end": 1022.3,
+      "duration": 1.10398
+    },
+    {
+      "start": 1024.51,
+      "end": 1025.03,
+      "duration": 0.520479
+    },
+    {
+      "start": 1027.5,
+      "end": 1028.31,
+      "duration": 0.806271
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      51,
+      51
+    ],
+    "avg": 53.3,
+    "min": 51
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

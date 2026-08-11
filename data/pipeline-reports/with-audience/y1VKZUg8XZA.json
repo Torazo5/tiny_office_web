@@ -1,0 +1,253 @@
+{
+  "video_id": "y1VKZUg8XZA",
+  "title": "The Free Nationals Feat. Anderson .Paak, Chronixx & India Shawn: NPR Music Tiny Desk Concert",
+  "duration": 1132,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/y1VKZUg8XZA.mp3",
+  "description_songs": [
+    "Beauty & Essex (Featuring India Shawn)",
+    "On Sight (Featuring India Shawn)",
+    "Gidget (Featuring Anderson .Paak)",
+    "Eternal Light (Featuring Chronixx)"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 728 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 186.72,
+      "end": 248.15999999999997,
+      "duration": 61.43999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 412.8,
+      "end": 565.92,
+      "duration": 153.11999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 783.36,
+      "end": 873.12,
+      "duration": 89.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1095.84,
+      "end": 1127.52,
+      "duration": 31.680000000000064,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 6,
+      "song": "Beauty & Essex (Featuring India Shawn)",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 6,
+      "clip_end": 186.72,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 248,
+      "song": "On Sight (Featuring India Shawn)",
+      "corroboration": 1,
+      "silence_match": 248.248,
+      "clip_start": 248.15999999999997,
+      "clip_end": 412.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 565,
+      "song": "Gidget (Featuring Anderson .Paak)",
+      "corroboration": 1,
+      "silence_match": 563.868,
+      "clip_start": 565.92,
+      "clip_end": 783.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 874,
+      "song": "Eternal Light (Featuring Chronixx)",
+      "corroboration": 1,
+      "silence_match": 873.339,
+      "clip_start": 873.12,
+      "clip_end": 1095.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.62627,
+      "duration": 5.62627
+    },
+    {
+      "start": 201.739,
+      "end": 202.361,
+      "duration": 0.622792
+    },
+    {
+      "start": 204.318,
+      "end": 205.18,
+      "duration": 0.861979
+    },
+    {
+      "start": 207.18,
+      "end": 207.834,
+      "duration": 0.654188
+    },
+    {
+      "start": 225.659,
+      "end": 226.201,
+      "duration": 0.542375
+    },
+    {
+      "start": 235.916,
+      "end": 236.825,
+      "duration": 0.909604
+    },
+    {
+      "start": 238.417,
+      "end": 239.545,
+      "duration": 1.12804
+    },
+    {
+      "start": 246.031,
+      "end": 246.533,
+      "duration": 0.502604
+    },
+    {
+      "start": 248.248,
+      "end": 248.966,
+      "duration": 0.717896
+    },
+    {
+      "start": 292.868,
+      "end": 293.538,
+      "duration": 0.669979
+    },
+    {
+      "start": 425.778,
+      "end": 426.416,
+      "duration": 0.638167
+    },
+    {
+      "start": 426.834,
+      "end": 428.289,
+      "duration": 1.45506
+    },
+    {
+      "start": 431.144,
+      "end": 431.738,
+      "duration": 0.594083
+    },
+    {
+      "start": 432.792,
+      "end": 433.303,
+      "duration": 0.510708
+    },
+    {
+      "start": 438.772,
+      "end": 439.578,
+      "duration": 0.806667
+    },
+    {
+      "start": 478.367,
+      "end": 478.921,
+      "duration": 0.554208
+    },
+    {
+      "start": 511.68,
+      "end": 512.236,
+      "duration": 0.556396
+    },
+    {
+      "start": 534.585,
+      "end": 535.114,
+      "duration": 0.528687
+    },
+    {
+      "start": 559.824,
+      "end": 560.347,
+      "duration": 0.523396
+    },
+    {
+      "start": 561.305,
+      "end": 562.139,
+      "duration": 0.834062
+    },
+    {
+      "start": 563.868,
+      "end": 565.12,
+      "duration": 1.25167
+    },
+    {
+      "start": 838.735,
+      "end": 839.382,
+      "duration": 0.647083
+    },
+    {
+      "start": 856.537,
+      "end": 857.057,
+      "duration": 0.519396
+    },
+    {
+      "start": 865.179,
+      "end": 866.228,
+      "duration": 1.04896
+    },
+    {
+      "start": 873.339,
+      "end": 874.346,
+      "duration": 1.00698
+    },
+    {
+      "start": 1127.34,
+      "end": 1131.85,
+      "duration": 4.50485
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      83,
+      83,
+      83
+    ],
+    "avg": 79.2,
+    "min": 68
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

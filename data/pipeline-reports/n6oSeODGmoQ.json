@@ -1,0 +1,312 @@
+{
+  "video_id": "n6oSeODGmoQ",
+  "title": "Gaelynn Lea: NPR Music Tiny Desk Concert",
+  "duration": 1379,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/n6oSeODGmoQ.mp3",
+  "description_songs": [
+    "Someday We'll Linger In The Sun",
+    "Southwind",
+    "Bird Song",
+    "Moment Of Bliss"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 6 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 287.52,
+      "end": 305.28000000000003,
+      "duration": 17.760000000000048,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 305.28,
+      "end": 365.76,
+      "duration": 60.48000000000002,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 546.24,
+      "end": 558.24,
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 558.24,
+      "end": 667.2,
+      "duration": 108.96000000000004,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 667.68,
+      "end": 686.4,
+      "duration": 18.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 912.48,
+      "end": 940.3199999999999,
+      "duration": 27.839999999999918,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1279.68,
+      "end": 1349.28,
+      "duration": 69.59999999999991,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Someday We'll Linger In The Sun",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 286.52,
+      "start_refined": false,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 58,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 287.52,
+      "song": "Southwind",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 305.28000000000003,
+      "clip_end": 545.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 667.68,
+      "song": "Bird Song",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 686.4,
+      "clip_end": 911.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    },
+    {
+      "seconds": 912.48,
+      "song": "Moment Of Bliss",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 940.3199999999999,
+      "clip_end": 1278.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "end_guard": [],
+      "suspect": false,
+      "confidence": 51,
+      "audience_edge_guard_sec": 1.0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.976062,
+      "duration": 0.976062
+    },
+    {
+      "start": 310.736,
+      "end": 311.354,
+      "duration": 0.617271
+    },
+    {
+      "start": 312.653,
+      "end": 313.457,
+      "duration": 0.804354
+    },
+    {
+      "start": 326.038,
+      "end": 326.554,
+      "duration": 0.51525
+    },
+    {
+      "start": 365.534,
+      "end": 366.724,
+      "duration": 1.18981
+    },
+    {
+      "start": 366.724,
+      "end": 370.18,
+      "duration": 3.45623
+    },
+    {
+      "start": 563.845,
+      "end": 564.855,
+      "duration": 1.01038
+    },
+    {
+      "start": 568.341,
+      "end": 569.075,
+      "duration": 0.733271
+    },
+    {
+      "start": 608.277,
+      "end": 608.78,
+      "duration": 0.502667
+    },
+    {
+      "start": 609.903,
+      "end": 610.495,
+      "duration": 0.591875
+    },
+    {
+      "start": 615.04,
+      "end": 615.57,
+      "duration": 0.529917
+    },
+    {
+      "start": 617.603,
+      "end": 618.114,
+      "duration": 0.511083
+    },
+    {
+      "start": 624.529,
+      "end": 625.258,
+      "duration": 0.729375
+    },
+    {
+      "start": 630.045,
+      "end": 630.925,
+      "duration": 0.880083
+    },
+    {
+      "start": 634.629,
+      "end": 635.135,
+      "duration": 0.505875
+    },
+    {
+      "start": 644.824,
+      "end": 645.447,
+      "duration": 0.623167
+    },
+    {
+      "start": 647.583,
+      "end": 648.167,
+      "duration": 0.583667
+    },
+    {
+      "start": 682.118,
+      "end": 683.975,
+      "duration": 1.85696
+    },
+    {
+      "start": 685.173,
+      "end": 685.884,
+      "duration": 0.711833
+    },
+    {
+      "start": 685.924,
+      "end": 687.448,
+      "duration": 1.52371
+    },
+    {
+      "start": 687.485,
+      "end": 688.295,
+      "duration": 0.809917
+    },
+    {
+      "start": 929.957,
+      "end": 930.472,
+      "duration": 0.514896
+    },
+    {
+      "start": 1327.49,
+      "end": 1328.08,
+      "duration": 0.585646
+    },
+    {
+      "start": 1331.13,
+      "end": 1331.64,
+      "duration": 0.508104
+    },
+    {
+      "start": 1331.77,
+      "end": 1332.34,
+      "duration": 0.567375
+    },
+    {
+      "start": 1332.89,
+      "end": 1334.47,
+      "duration": 1.57381
+    },
+    {
+      "start": 1335.19,
+      "end": 1335.89,
+      "duration": 0.708125
+    },
+    {
+      "start": 1337.23,
+      "end": 1338.08,
+      "duration": 0.847354
+    },
+    {
+      "start": 1338.28,
+      "end": 1339.0,
+      "duration": 0.721271
+    },
+    {
+      "start": 1343.36,
+      "end": 1344.03,
+      "duration": 0.674917
+    },
+    {
+      "start": 1345.98,
+      "end": 1346.59,
+      "duration": 0.609437
+    },
+    {
+      "start": 1348.8,
+      "end": 1349.56,
+      "duration": 0.769125
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      51,
+      51,
+      51
+    ],
+    "avg": 52.8,
+    "min": 51
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/n6oSeODGmoQ.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
+}

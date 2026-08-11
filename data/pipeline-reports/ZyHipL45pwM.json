@@ -1,0 +1,276 @@
+{
+  "video_id": "ZyHipL45pwM",
+  "title": "Steve Martin and the Steep Canyon Rangers: NPR Music Tiny Desk Concert",
+  "duration": 962,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/ZyHipL45pwM.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 10.08,
+      "duration": 10.08,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 217.44,
+      "end": 228.48,
+      "duration": 11.039999999999992,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 244.79999999999998,
+      "end": 250.07999999999998,
+      "duration": 5.280000000000001,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 250.56,
+      "end": 252.48,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 254.39999999999998,
+      "end": 255.83999999999997,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 256.32,
+      "end": 259.68,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 459.84,
+      "end": 473.28,
+      "duration": 13.439999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 504.0,
+      "end": 505.44,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 523.68,
+      "end": 525.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 525.6,
+      "end": 529.92,
+      "duration": 4.319999999999936,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 530.4,
+      "end": 531.84,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 532.3199999999999,
+      "end": 533.76,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 534.72,
+      "end": 546.24,
+      "duration": 11.519999999999982,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 547.1999999999999,
+      "end": 549.12,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 703.1999999999999,
+      "end": 732.48,
+      "duration": 29.280000000000086,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 749.28,
+      "end": 750.72,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 752.64,
+      "end": 754.56,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 825.12,
+      "end": 826.56,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 946.0799999999999,
+      "end": 960.48,
+      "duration": 14.400000000000091,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 10.0346,
+      "end": 10.7905,
+      "duration": 0.755917
+    },
+    {
+      "start": 213.893,
+      "end": 214.555,
+      "duration": 0.662062
+    },
+    {
+      "start": 253.867,
+      "end": 255.3,
+      "duration": 1.43235
+    },
+    {
+      "start": 457.815,
+      "end": 460.207,
+      "duration": 2.39102
+    },
+    {
+      "start": 478.843,
+      "end": 479.374,
+      "duration": 0.530958
+    },
+    {
+      "start": 493.45,
+      "end": 493.989,
+      "duration": 0.538792
+    },
+    {
+      "start": 508.827,
+      "end": 509.423,
+      "duration": 0.596812
+    },
+    {
+      "start": 510.218,
+      "end": 510.828,
+      "duration": 0.609208
+    },
+    {
+      "start": 510.907,
+      "end": 511.841,
+      "duration": 0.934208
+    },
+    {
+      "start": 511.841,
+      "end": 512.791,
+      "duration": 0.949937
+    },
+    {
+      "start": 513.115,
+      "end": 516.366,
+      "duration": 3.25098
+    },
+    {
+      "start": 540.333,
+      "end": 541.428,
+      "duration": 1.09479
+    },
+    {
+      "start": 541.814,
+      "end": 542.693,
+      "duration": 0.879208
+    },
+    {
+      "start": 542.892,
+      "end": 543.451,
+      "duration": 0.558792
+    },
+    {
+      "start": 546.166,
+      "end": 547.903,
+      "duration": 1.73679
+    },
+    {
+      "start": 548.842,
+      "end": 550.357,
+      "duration": 1.51537
+    },
+    {
+      "start": 734.183,
+      "end": 735.12,
+      "duration": 0.937521
+    },
+    {
+      "start": 750.018,
+      "end": 750.61,
+      "duration": 0.591771
+    },
+    {
+      "start": 751.685,
+      "end": 752.268,
+      "duration": 0.582896
+    },
+    {
+      "start": 754.667,
+      "end": 755.281,
+      "duration": 0.614625
+    },
+    {
+      "start": 961.255,
+      "end": 962.13,
+      "duration": 0.875937
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0,
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+}

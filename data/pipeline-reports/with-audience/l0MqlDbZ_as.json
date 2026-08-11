@@ -1,0 +1,161 @@
+{
+  "video_id": "l0MqlDbZ_as",
+  "title": "Amin\u00e9: NPR Music Tiny Desk Concert",
+  "duration": 759,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/l0MqlDbZ_as.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 190.07999999999998,
+      "end": 225.6,
+      "duration": 35.52000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 447.84,
+      "end": 470.88,
+      "duration": 23.04000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 690.72,
+      "end": 749.28,
+      "duration": 58.559999999999945,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.07129,
+      "duration": 5.07129
+    },
+    {
+      "start": 22.1399,
+      "end": 22.724,
+      "duration": 0.584104
+    },
+    {
+      "start": 154.695,
+      "end": 155.255,
+      "duration": 0.560292
+    },
+    {
+      "start": 188.132,
+      "end": 190.15,
+      "duration": 2.01756
+    },
+    {
+      "start": 207.151,
+      "end": 207.852,
+      "duration": 0.701187
+    },
+    {
+      "start": 216.758,
+      "end": 217.382,
+      "duration": 0.624479
+    },
+    {
+      "start": 218.258,
+      "end": 218.771,
+      "duration": 0.51275
+    },
+    {
+      "start": 225.112,
+      "end": 226.872,
+      "duration": 1.76015
+    },
+    {
+      "start": 383.193,
+      "end": 383.866,
+      "duration": 0.673708
+    },
+    {
+      "start": 446.001,
+      "end": 447.368,
+      "duration": 1.36669
+    },
+    {
+      "start": 459.312,
+      "end": 460.354,
+      "duration": 1.04135
+    },
+    {
+      "start": 462.366,
+      "end": 463.024,
+      "duration": 0.658708
+    },
+    {
+      "start": 463.565,
+      "end": 464.237,
+      "duration": 0.672542
+    },
+    {
+      "start": 465.564,
+      "end": 466.191,
+      "duration": 0.627021
+    },
+    {
+      "start": 470.274,
+      "end": 472.671,
+      "duration": 2.39602
+    },
+    {
+      "start": 472.946,
+      "end": 473.598,
+      "duration": 0.651708
+    },
+    {
+      "start": 474.753,
+      "end": 475.399,
+      "duration": 0.646333
+    },
+    {
+      "start": 476.573,
+      "end": 477.18,
+      "duration": 0.606563
+    },
+    {
+      "start": 478.331,
+      "end": 478.955,
+      "duration": 0.624188
+    },
+    {
+      "start": 741.38,
+      "end": 742.128,
+      "duration": 0.747979
+    },
+    {
+      "start": 749.316,
+      "end": 758.526,
+      "duration": 9.2105
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

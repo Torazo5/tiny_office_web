@@ -1,0 +1,116 @@
+{
+  "video_id": "tFdebIZJah8",
+  "title": "Chronixx: NPR Music Tiny Desk Concert",
+  "duration": 875,
+  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/tFdebIZJah8.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 273.12,
+      "end": 280.32,
+      "duration": 7.199999999999989,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 495.35999999999996,
+      "end": 519.36,
+      "duration": 24.000000000000057,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 860.64,
+      "end": 872.64,
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 285.59,
+      "end": 286.559,
+      "duration": 0.968583
+    },
+    {
+      "start": 286.572,
+      "end": 287.652,
+      "duration": 1.0804
+    },
+    {
+      "start": 287.685,
+      "end": 288.228,
+      "duration": 0.542708
+    },
+    {
+      "start": 288.249,
+      "end": 288.773,
+      "duration": 0.524
+    },
+    {
+      "start": 510.194,
+      "end": 510.987,
+      "duration": 0.793479
+    },
+    {
+      "start": 512.88,
+      "end": 513.442,
+      "duration": 0.562125
+    },
+    {
+      "start": 513.984,
+      "end": 515.332,
+      "duration": 1.34852
+    },
+    {
+      "start": 515.493,
+      "end": 516.128,
+      "duration": 0.634437
+    },
+    {
+      "start": 516.335,
+      "end": 516.984,
+      "duration": 0.649708
+    },
+    {
+      "start": 516.984,
+      "end": 518.036,
+      "duration": 1.05202
+    },
+    {
+      "start": 518.152,
+      "end": 518.822,
+      "duration": 0.669833
+    },
+    {
+      "start": 870.239,
+      "end": 875.125,
+      "duration": 4.88669
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "refined_v2",
+  "pipeline_version": "refined_v2",
+  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+}

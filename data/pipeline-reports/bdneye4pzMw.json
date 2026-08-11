@@ -2,7 +2,7 @@
   "video_id": "bdneye4pzMw",
   "title": "Sting And Shaggy: NPR Music Tiny Desk Concert",
   "duration": 875,
-  "audio_path": "/home/torazo/code/tiny_office/reports/refined_v2/audio/bdneye4pzMw.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/bdneye4pzMw.mp3",
   "description_songs": [
     "Englishman in New York",
     "Don't Make Me Wait",
@@ -64,12 +64,13 @@
       "corroboration": 3,
       "silence_match": null,
       "clip_start": 10.08,
-      "clip_end": 241.92,
+      "clip_end": 240.92,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 82
+      "confidence": 82,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 265,
@@ -77,12 +78,13 @@
       "corroboration": 2,
       "silence_match": 264.036,
       "clip_start": 277.44,
-      "clip_end": 502.56,
+      "clip_end": 501.56,
       "start_refined": true,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 90
+      "confidence": 90,
+      "audience_edge_guard_sec": 1.0
     },
     {
       "seconds": 515,
@@ -90,12 +92,13 @@
       "corroboration": 2,
       "silence_match": 517.717,
       "clip_start": 515,
-      "clip_end": 840.9599999999999,
+      "clip_end": 839.9599999999999,
       "start_refined": false,
       "end_trimmed": true,
       "end_guard": [],
       "suspect": false,
-      "confidence": 82
+      "confidence": 82,
+      "audience_edge_guard_sec": 1.0
     }
   ],
   "silence_intervals": [
@@ -194,7 +197,10 @@
     "avg": 84.7,
     "min": 82
   },
-  "pipeline": "refined_v2",
-  "pipeline_version": "refined_v2",
-  "source_pipeline": "scripts/analyze_video.py (read-only backend)"
+  "pipeline": "v2_no_audience_variant",
+  "pipeline_version": "v2_no_audience_variant",
+  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/bdneye4pzMw.json (edge-guarded comparison)",
+  "audience_enabled": true,
+  "audience_removed": true,
+  "audience_edge_guard_sec": 1.0
 }
