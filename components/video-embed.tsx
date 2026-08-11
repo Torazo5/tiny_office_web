@@ -306,7 +306,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
   }, [isPlayerReady, onlySongMode, playerState, playbackSettings, setStartAt, songs]);
 
   return (
-    <div className="mb-4">
+    <div className="mb-4 md:max-w-[680px]">
       <div className="flex items-center justify-end mb-2">
         <button
           type="button"
@@ -333,14 +333,6 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
         <div ref={playerHostRef} className="absolute inset-0 h-full w-full" aria-label="Tiny Desk Concert" />
       </div>
 
-      {onlySongMode && (
-        <PlaybackCustomizer
-          settings={playbackSettings}
-          onSettingsChange={setPlaybackSettings}
-          isSignedIn={isSignedIn}
-        />
-      )}
-
       <PlayerControls
         currentTime={currentTime}
         rangeStart={0}
@@ -365,6 +357,14 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
           if (player) setPlayerVolume(player, nextVolume);
         }}
       />
+
+      {onlySongMode && (
+        <PlaybackCustomizer
+          settings={playbackSettings}
+          onSettingsChange={setPlaybackSettings}
+          isSignedIn={isSignedIn}
+        />
+      )}
     </div>
   );
 }
