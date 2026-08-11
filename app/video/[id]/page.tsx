@@ -8,7 +8,6 @@ import { RatingReviewPanel } from "@/components/rating-review-panel";
 import { VideoEmbed } from "@/components/video-embed";
 import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { PresetPicker } from "@/components/preset-picker";
-import { PerformanceCutPicker } from "@/components/performance-cut-picker";
 import { ReviewLikeButton } from "@/components/review-like-button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getCurrentUser } from "@/lib/auth";
@@ -23,16 +22,13 @@ export default async function VideoPage({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ preset_id?: string; cut?: string }>;
+  searchParams: Promise<{ preset_id?: string }>;
 }) {
   const { id } = await params;
-  const { preset_id: previewPresetId, cut: requestedCut } = await searchParams;
-  const cutKey = requestedCut === "no-audience" || requestedCut === "with-audience"
-    ? requestedCut
-    : undefined;
+  const { preset_id: previewPresetId } = await searchParams;
   const user = await getCurrentUser();
-  const [{ performance, presets, selectedPreset, selectedCut, cutVariants }, engagement, playlists, playbackDefaults] = await Promise.all([
-    getPerformanceWithSelectedPreset(id, user?.id, previewPresetId, cutKey),
+  const [{ performance, presets, selectedPreset, selectedCut }, engagement, playlists, playbackDefaults] = await Promise.all([
+    getPerformanceWithSelectedPreset(id, user?.id, previewPresetId),
     getUserEngagement(id, user?.id),
     getPlaylists(user?.id ?? null),
     user ? getPlaybackDefaults(user.id) : Promise.resolve(DEFAULT_PLAYBACK_SETTINGS),
@@ -102,12 +98,6 @@ export default async function VideoPage({
                 Open revision editor →
               </Link>
             </div>
-
-            <PerformanceCutPicker
-              videoId={performance.videoId}
-              variants={cutVariants}
-              selectedCutKey={selectedCut?.key ?? null}
-            />
 
             <PresetPicker
               videoId={performance.videoId}
