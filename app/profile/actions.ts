@@ -78,21 +78,21 @@ export async function savePlaybackDefaults(
     .maybeSingle();
   if (profileError) return { error: "Could not save playback defaults. Try again." };
 
-  const { error } = await supabase.from("profiles").upsert(
-    {
+  const playbackDefaults = {
+    playback_gap_seconds: normalized.gapSeconds,
+    playback_fade_out_seconds: normalized.fadeOutSeconds,
+    playback_fade_in_seconds: normalized.fadeInSeconds,
+    playback_cut_audience: normalized.cutAudience,
+    updated_at: new Date().toISOString(),
+  };
+  const { error } = profile
+    ? await supabase.from("profiles").update(playbackDefaults).eq("user_id", user.id)
+    : await supabase.from("profiles").insert({
       user_id: user.id,
-      ...(profile ? {} : {
-        display_name: "Anonymous",
-        tag: `listener_${user.id.replaceAll("-", "").slice(0, 8).toLowerCase()}`,
-      }),
-      playback_gap_seconds: normalized.gapSeconds,
-      playback_fade_out_seconds: normalized.fadeOutSeconds,
-      playback_fade_in_seconds: normalized.fadeInSeconds,
-      playback_cut_audience: normalized.cutAudience,
-      updated_at: new Date().toISOString(),
-    },
-    { onConflict: "user_id" },
-  );
+      display_name: "Anonymous",
+      tag: `listener_${user.id.replaceAll("-", "").slice(0, 8).toLowerCase()}`,
+      ...playbackDefaults,
+    });
   if (error) return { error: "Could not save playback defaults. Try again." };
 
   revalidatePath("/profile");
