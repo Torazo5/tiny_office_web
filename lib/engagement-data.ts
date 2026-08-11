@@ -40,6 +40,18 @@ export async function getUserEngagement(videoId: string, userId?: string) {
   };
 }
 
+export async function getUserSongHeartKeys(userId?: string) {
+  if (!userId) return [];
+
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("song_hearts")
+    .select("performance_video_id, song_index")
+    .eq("user_id", userId);
+  throwIfError("Loading your song hearts", error);
+  return (data ?? []).map((heart) => `${heart.performance_video_id}:${heart.song_index}`);
+}
+
 export async function getUserReviews(userId: string): Promise<UserReview[]> {
   const supabase = await createClient();
   const { data, error } = await supabase

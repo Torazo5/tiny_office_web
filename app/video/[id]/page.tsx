@@ -5,6 +5,7 @@ import { PlayerProvider } from "@/components/player-context";
 import { SongRow } from "@/components/song-row";
 import { StarRating } from "@/components/star-rating";
 import { RatingReviewPanel } from "@/components/rating-review-panel";
+import { RatingSummary } from "@/components/rating-summary";
 import { VideoEmbed } from "@/components/video-embed";
 import { VideoFeatureHints } from "@/components/feature-hints";
 import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
@@ -14,7 +15,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getCurrentUser } from "@/lib/auth";
 import { getPlaylists } from "@/lib/data";
 import { getPerformanceWithSelectedPreset } from "@/lib/review-data";
-import { getUserEngagement } from "@/lib/engagement-data";
+import { getUserEngagement, getUserSongHeartKeys } from "@/lib/engagement-data";
 import { getPlaybackDefaults } from "@/lib/profile-data";
 import { DEFAULT_PLAYBACK_SETTINGS } from "@/lib/playback-settings";
 
@@ -28,9 +29,10 @@ export default async function VideoPage({
   const { id } = await params;
   const { preset_id: previewPresetId } = await searchParams;
   const user = await getCurrentUser();
-  const [{ performance, presets, selectedPreset, selectedCut }, engagement, playlists, playbackDefaults] = await Promise.all([
+  const [{ performance, presets, selectedPreset, selectedCut }, engagement, heartedSongKeys, playlists, playbackDefaults] = await Promise.all([
     getPerformanceWithSelectedPreset(id, user?.id, previewPresetId),
     getUserEngagement(id, user?.id),
+    getUserSongHeartKeys(user?.id),
     getPlaylists(user?.id ?? null),
     user ? getPlaybackDefaults(user.id) : Promise.resolve(DEFAULT_PLAYBACK_SETTINGS),
   ]);
@@ -69,6 +71,13 @@ export default async function VideoPage({
               Tiny Desk Concert{performance.date ? ` · ${performance.date}` : ""} · NPR Music
             </p>
             <p className="mb-4 text-[11px] text-muted-foreground/70">Used {methodLabel}</p>
+
+            <RatingSummary
+              average={performance.avgRating}
+              ratingCount={performance.ratingCount}
+              reviewCount={performance.reviews.length}
+              distribution={performance.ratingDistribution ?? []}
+            />
 
             <RatingReviewPanel
               videoId={performance.videoId}
@@ -109,25 +118,26 @@ export default async function VideoPage({
               isSignedIn={Boolean(user)}
             />
 
-            <h2 className="text-[13px] font-semibold text-muted-foreground uppercase tracking-wide mb-2.5">
+            <h2 className="mb-3 text-[20px] font-semibold text-foreground">
               Reviews
             </h2>
             <div className="flex flex-col gap-4">
               {performance.reviews.length === 0 && (
-                <p className="text-[13px] text-muted-foreground/70">No reviews yet.</p>
+                <p className="rounded-xl border border-dashed border-border px-5 py-8 text-[14px] text-muted-foreground/70">No reviews yet. Be the first to write one.</p>
               )}
               {performance.reviews.map((rev, i) => (
-                <div key={rev.id ?? i} className="flex gap-3">
+                <article key={rev.id ?? i} className="flex gap-4 rounded-xl border border-border bg-card/65 p-4 sm:p-5">
                   <Avatar size="default">
                     <AvatarImage src={rev.avatarUrl} alt={`${rev.user} profile picture`} />
                     <AvatarFallback>{rev.user.slice(0, 1).toUpperCase()}</AvatarFallback>
                   </Avatar>
                   <div className="min-w-0 flex-1">
-                    <div className="flex items-baseline gap-2 mb-0.5">
-                      <span className="text-[13px] font-semibold text-foreground">{rev.user}</span>
-                      <StarRating rating={rev.rating} size="text-[11.5px]" />
+                    <div className="mb-1 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                      <span className="text-[14px] font-semibold text-foreground">{rev.user}</span>
+                      <StarRating rating={rev.rating} size="text-[13px]" />
+                      <span className="font-mono text-[11px] text-muted-foreground">{rev.rating.toFixed(1)}</span>
                     </div>
-                    <p className="text-[13px] leading-relaxed text-muted-foreground">{rev.text}</p>
+                    <p className="text-[15px] leading-7 text-foreground/90">{rev.text}</p>
                     <div className="mt-2">
                       <ReviewLikeButton
                         reviewId={rev.id}
@@ -138,7 +148,7 @@ export default async function VideoPage({
                       />
                     </div>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
@@ -151,7 +161,12 @@ export default async function VideoPage({
               {performance.songs.map((song) => (
                 <div key={song.index} className="flex min-w-0 items-center gap-2">
                   <div className="min-w-0 flex-1">
-                    <SongRow song={song} />
+                    <SongRow
+                      song={song}
+                      performanceVideoId={performance.videoId}
+                      initialHearted={heartedSongKeys.includes(`${performance.videoId}:${song.index}`)}
+                      isSignedIn={Boolean(user)}
+                    />
                   </div>
                   <AddToPlaylistButton
                     item={{

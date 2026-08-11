@@ -76,6 +76,7 @@ function mapPerformance(
   songRows: SongRow[],
   avgRating: number | null = null,
   ratingCount = 0,
+  ratingDistribution: Performance["ratingDistribution"] = [],
   reviews: Performance["reviews"] = [],
 ): Performance {
   return {
@@ -90,8 +91,16 @@ function mapPerformance(
     verified: performance.verified,
     avgRating,
     ratingCount,
+    ratingDistribution,
     reviews,
   } satisfies Performance;
+}
+
+function ratingDistribution(ratings: number[]): Performance["ratingDistribution"] {
+  return Array.from({ length: 10 }, (_, index) => {
+    const rating = 5 - index * 0.5;
+    return { rating, count: ratings.filter((value) => value === rating).length };
+  });
 }
 
 function ratingsByPerformance(rows: BrowseRatingRow[]) {
@@ -139,6 +148,7 @@ async function loadBrowsePerformances(): Promise<Performance[]> {
       songsByPerformance.get(row.video_id) ?? [],
       values.length ? values.reduce((total, rating) => total + rating, 0) / values.length : null,
       values.length,
+      ratingDistribution(values),
     );
   });
 }
@@ -204,6 +214,7 @@ export async function getBrowsePerformancePage(
       songsByPerformance.get(row.video_id) ?? [],
       values.length ? values.reduce((total, rating) => total + rating, 0) / values.length : null,
       values.length,
+      ratingDistribution(values),
     );
   });
   const nextOffset = safeOffset + rows.length;
@@ -317,6 +328,7 @@ async function loadPerformanceDetail(videoId: string, currentUserId: string | nu
       ? ratings.reduce((total, rating) => total + rating, 0) / ratings.length
       : null,
     ratingCount: ratings.length,
+    ratingDistribution: ratingDistribution(ratings),
     reviews: mappedReviews,
   } satisfies Performance;
 }

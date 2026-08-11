@@ -235,6 +235,7 @@ function AdventureSetup({
 function AdventureSessionPlayer({
   session,
   playlists,
+  heartedSongKeys,
   isSignedIn,
   onRestart,
   onTrackPlay,
@@ -245,6 +246,7 @@ function AdventureSessionPlayer({
 }: {
   session: AdventureSession;
   playlists: PlaylistSummary[];
+  heartedSongKeys: string[];
   isSignedIn: boolean;
   onRestart: () => void;
   onTrackPlay: (track: PlaylistTrack) => void;
@@ -285,11 +287,13 @@ function AdventureSessionPlayer({
           onTrackPlay={onTrackPlay}
           initialPlaybackSettings={initialPlaybackSettings}
           isSignedIn={isSignedIn}
+          initialHeartedSongKeys={heartedSongKeys}
+          songHeartReturnPath="/random-pick"
           playButtonHintTarget="adventure-play"
           sidebarHeader={
             <div>
               <div className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-                Adventure queue · {sourceLabel(session.source)} · {modeLabel(session.mode)}
+                Random pick queue · {sourceLabel(session.source)} · {modeLabel(session.mode)}
               </div>
             </div>
           }
@@ -328,7 +332,7 @@ function AdventureSessionPlayer({
                 item={currentItem}
                 playlists={compatiblePlaylists}
                 isSignedIn={isSignedIn}
-                returnPath="/adventure"
+                returnPath="/random-pick"
               />
             </div>
           )}
@@ -351,12 +355,14 @@ export function AdventureExperience({
   songOptions,
   videoOptions,
   playlists,
+  heartedSongKeys,
   isSignedIn,
   initialPlaybackSettings,
 }: {
   songOptions: PlaylistSongOption[];
   videoOptions: PlaylistVideoOption[];
   playlists: PlaylistSummary[];
+  heartedSongKeys: string[];
   isSignedIn: boolean;
   initialPlaybackSettings: PlaybackSettings;
 }) {
@@ -398,6 +404,7 @@ export function AdventureExperience({
         key={sessionKey}
         session={session}
         playlists={playlists}
+        heartedSongKeys={heartedSongKeys}
         isSignedIn={isSignedIn}
         onRestart={() => setSession(null)}
         onTrackPlay={addTrack}

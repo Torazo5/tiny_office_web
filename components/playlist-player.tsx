@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { PlayerControls } from "@/components/player-controls";
 import { PlaybackCustomizer } from "@/components/playback-customizer";
+import { SongHeartButton } from "@/components/song-heart-button";
 import { DEFAULT_PLAYBACK_SETTINGS, type PlaybackSettings } from "@/lib/playback-settings";
 import type { PlaylistTrack, PlaylistType } from "@/lib/types";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
@@ -42,6 +43,8 @@ export function PlaylistPlayer({
   onTrackPlay,
   playButtonHintTarget,
   sidebarHeader,
+  initialHeartedSongKeys = [],
+  songHeartReturnPath,
 }: {
   tracks: PlaylistTrack[];
   playlistType: PlaylistType;
@@ -54,6 +57,8 @@ export function PlaylistPlayer({
   onTrackPlay?: (track: PlaylistTrack) => void;
   playButtonHintTarget?: string;
   sidebarHeader?: React.ReactNode;
+  initialHeartedSongKeys?: string[];
+  songHeartReturnPath?: string;
 }) {
   const playerHostRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
@@ -699,6 +704,16 @@ export function PlaylistPlayer({
               : ""}
           </p>
           </Link>
+          {currentTrack.songIndex !== null && songHeartReturnPath && (
+            <SongHeartButton
+              key={`${currentTrack.performanceVideoId}:${currentTrack.songIndex}`}
+              performanceVideoId={currentTrack.performanceVideoId}
+              songIndex={currentTrack.songIndex}
+              initialHearted={initialHeartedSongKeys.includes(`${currentTrack.performanceVideoId}:${currentTrack.songIndex}`)}
+              isSignedIn={isSignedIn}
+              returnPath={songHeartReturnPath}
+            />
+          )}
         </div>
       </div>
     </section>

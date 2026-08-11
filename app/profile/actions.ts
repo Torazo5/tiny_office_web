@@ -97,7 +97,7 @@ export async function savePlaybackDefaults(
 
   revalidatePath("/profile");
   revalidatePath("/playlist");
-  revalidatePath("/adventure");
+  revalidatePath("/random-pick");
   return { success: true };
 }
 

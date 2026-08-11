@@ -28,6 +28,13 @@ export interface Song {
   confidence: number;
   /** from candidates[].suspect */
   suspect: boolean;
+  /** Whether the current signed-in listener has hearted this song. */
+  hearted?: boolean;
+}
+
+export interface RatingDistributionEntry {
+  rating: number;
+  count: number;
 }
 
 export type PlaylistSongClip = Pick<Song, "clipStart" | "clipEnd">;
@@ -56,6 +63,8 @@ export interface Performance {
   /** Aggregated from the ratings table. */
   avgRating: number | null;
   ratingCount: number;
+  /** Counts for each half-star rating, highest score first, when loaded. */
+  ratingDistribution?: RatingDistributionEntry[];
   /** Public reviews with like state for the current session. */
   reviews: Review[];
 }

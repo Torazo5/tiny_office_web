@@ -63,9 +63,13 @@ export function RatingReviewPanel({
   }
 
   return (
-    <div className="flex flex-col gap-3 border-y border-border py-4 mb-4">
+    <section className="mb-6 flex flex-col gap-4 rounded-xl border border-border bg-secondary/20 p-5 sm:p-6">
+      <div>
+        <h2 className="text-[17px] font-semibold text-foreground">Add your rating</h2>
+        <p className="mt-1 text-[13px] text-muted-foreground">Your score powers the community rating. Add a review to share the why.</p>
+      </div>
       <div className="flex flex-wrap items-center gap-x-3.5 gap-y-2">
-        <span className="text-[12.5px] font-medium text-muted-foreground">Your rating</span>
+        <span className="text-[13px] font-medium text-muted-foreground">Your rating</span>
         {isSignedIn ? (
           <StarPicker value={rating} onChange={(value) => void handleRating(value)} disabled={isSaving} />
         ) : (
@@ -99,16 +103,16 @@ export function RatingReviewPanel({
       </div>
 
       {isWriting && isSignedIn && (
-        <form onSubmit={(event) => void handleReviewSubmit(event)} className="flex flex-col gap-2">
+        <form onSubmit={(event) => void handleReviewSubmit(event)} className="flex flex-col gap-3 border-t border-border pt-4">
           <label htmlFor={`review-${videoId}`} className="sr-only">Your review</label>
           <textarea
             id={`review-${videoId}`}
             value={reviewText}
             onChange={(event) => setReviewText(event.target.value)}
             maxLength={5000}
-            rows={4}
+            rows={6}
             placeholder="What did you think of this set?"
-            className="w-full resize-y rounded-lg border border-input bg-secondary px-3 py-2.5 text-[13px] leading-relaxed text-foreground outline-none placeholder:text-muted-foreground/70 focus:border-primary"
+            className="w-full resize-y rounded-lg border border-input bg-background px-3.5 py-3 text-[14px] leading-relaxed text-foreground outline-none placeholder:text-muted-foreground/70 focus:border-primary"
           />
           <div className="flex items-center justify-between gap-3">
             <span className="text-[11px] text-muted-foreground">{reviewText.length}/5000</span>
@@ -124,6 +128,6 @@ export function RatingReviewPanel({
       )}
 
       {message && <p className="text-[12px] text-muted-foreground">{message}</p>}
-    </div>
+    </section>
   );
 }
