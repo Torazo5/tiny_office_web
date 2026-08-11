@@ -11,7 +11,7 @@ import {
   submitTruthRequest,
   type ReviewActionState,
 } from "@/app/review/actions";
-import type { Performance, TimelineDraftSong, TruthRequestSummary } from "@/lib/types";
+import type { Performance, PerformanceCutVariant, TimelineDraftSong, TruthRequestSummary } from "@/lib/types";
 import {
   applyTimelineRequestDecisions,
   createTimelineDraft,
@@ -88,12 +88,14 @@ function formatSignedTime(delta: number) {
 
 export function RevisionEditor({
   performance,
+  variant,
   isSignedIn,
   isAdmin,
   request,
   initialDraft,
 }: {
   performance: Performance;
+  variant: PerformanceCutVariant;
   isSignedIn: boolean;
   isAdmin: boolean;
   request?: TruthRequestSummary | null;
@@ -253,9 +255,9 @@ export function RevisionEditor({
           <p className="text-[13px] text-muted-foreground">
             {isAdmin
               ? request
-                ? `Reviewing a main-truth request from ${request.requesterName}`
-                : "Editing main truth directly"
-              : "Edit the timeline, then publish a preset or request a main-truth update."}
+                ? `Reviewing a ${variant.name} main-truth request from ${request.requesterName}`
+                : `Editing ${variant.name} main truth directly`
+              : `Editing the ${variant.name} ground truth. Changes apply only to this timeline.`}
           </p>
         </div>
         <Link
@@ -265,6 +267,12 @@ export function RevisionEditor({
           {isAdmin ? "Admin dashboard" : "Back to performance"}
         </Link>
       </div>
+
+      <section className="mb-5 rounded-[10px] border border-primary/30 bg-primary/5 px-4 py-3">
+        <div className="text-[12px] font-semibold uppercase tracking-wide text-primary">Editing ground truth: {variant.name}</div>
+        <p className="mt-1 text-[12px] text-muted-foreground">{variant.description}</p>
+        <Link href={`/review/${performance.videoId}`} className="mt-2 inline-block text-[12px] font-medium text-primary hover:underline">Choose a different timeline</Link>
+      </section>
 
       <div className="mb-4 flex justify-end">
         <div className="group relative">
@@ -538,6 +546,7 @@ export function RevisionEditor({
 
       <form className="mt-5 border-t border-border pt-5">
         <input type="hidden" name="performance_video_id" value={performance.videoId} />
+        <input type="hidden" name="variant_key" value={variant.key} />
         <input type="hidden" name="draft" value={draftJson} />
         <input type="hidden" name="removed_song_indexes" value={JSON.stringify(explicitlyRemovedSongIndexes)} />
         {request && <input type="hidden" name="request_id" value={request.id} />}
@@ -562,8 +571,8 @@ export function RevisionEditor({
           <div className="mt-4 flex flex-wrap items-center gap-2">
             {isSignedIn ? (
               <>
-                <button formAction={presetAction} type="submit" disabled={isPending} className="rounded-lg border border-input px-3.5 py-2 text-[13px] font-medium text-muted-foreground hover:text-foreground disabled:opacity-60">{presetPending ? "Publishing…" : "Publish listening preset"}</button>
-                <button formAction={truthAction} type="submit" disabled={isPending} className="rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground disabled:opacity-60">{truthPending ? "Sending…" : "Submit for main truth"}</button>
+                <button formAction={presetAction} type="submit" disabled={isPending} className="rounded-lg border border-input px-3.5 py-2 text-[13px] font-medium text-muted-foreground hover:text-foreground disabled:opacity-60">{presetPending ? "Publishing…" : `Publish ${variant.name} preset`}</button>
+                <button formAction={truthAction} type="submit" disabled={isPending} className="rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground disabled:opacity-60">{truthPending ? "Sending…" : `Submit ${variant.name} correction`}</button>
               </>
             ) : (
               <Link href={`/login?next=${encodeURIComponent(`/review/${performance.videoId}`)}`} className="rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground">Sign in to submit</Link>

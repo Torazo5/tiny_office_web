@@ -117,6 +117,7 @@ export interface ListeningPresetSong {
 export interface ListeningPreset {
   id: string;
   performanceVideoId: string;
+  variantKey: PerformanceCutKey;
   ownerId: string;
   ownerName: string;
   name: string;
@@ -129,6 +130,7 @@ export interface ListeningPreset {
 export interface TruthRequestSummary {
   id: string;
   performanceVideoId: string;
+  variantKey: PerformanceCutKey;
   artist: string;
   requesterId: string;
   requesterName: string;

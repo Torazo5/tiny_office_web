@@ -51,6 +51,7 @@ export default async function VideoPage({
     transcript: "transcript",
     manual: "manual review",
   }[performance.method];
+  const revisionHref = `/review/${performance.videoId}?cut=${selectedCut?.key ?? "no-audience"}`;
 
   return (
     <>
@@ -89,13 +90,13 @@ export default async function VideoPage({
 
             <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
               <Link
-                href={`/review/${performance.videoId}`}
+                href={revisionHref}
                 className="rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground"
               >
                 Edit timeline and send request
               </Link>
               <Link
-                href={`/review/${performance.videoId}`}
+                href={revisionHref}
                 className="text-[12.5px] font-medium text-muted-foreground hover:text-foreground"
               >
                 Open revision editor →
@@ -110,6 +111,7 @@ export default async function VideoPage({
 
             <PresetPicker
               videoId={performance.videoId}
+              variantKey={selectedCut?.key ?? "no-audience"}
               presets={presets}
               selectedPresetId={selectedPreset?.id ?? null}
               isSignedIn={Boolean(user)}

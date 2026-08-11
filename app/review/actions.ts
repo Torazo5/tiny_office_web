@@ -5,11 +5,11 @@ import { revalidatePath, revalidateTag } from "next/cache";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 import { endAdminSession, isAdminSession, startAdminSession } from "@/lib/admin-session";
-import { getPerformance, PUBLIC_CATALOG_CACHE_TAG } from "@/lib/data";
+import { PUBLIC_CATALOG_CACHE_TAG } from "@/lib/data";
 import { formatProfileLabel, getUserProfile } from "@/lib/profile-data";
-import { getAdminTruthRequest } from "@/lib/review-data";
+import { getAdminTruthRequest, getPerformanceForRevision } from "@/lib/review-data";
 import { draftChanged, validateTimelineDraft } from "@/lib/review-utils";
-import type { TimelineDraftSong } from "@/lib/types";
+import type { Performance, PerformanceCutKey, TimelineDraftSong } from "@/lib/types";
 
 export type ReviewActionState = { error?: string; success?: string } | null;
 
@@ -80,6 +80,11 @@ function readRemovedSongIndexes(formData: FormData): number[] | null {
   }
 }
 
+function readVariantKey(formData: FormData): PerformanceCutKey | null {
+  const value = readText(formData, "variant_key", 32);
+  return value === "no-audience" || value === "with-audience" ? value : null;
+}
+
 async function getAuthenticatedUser() {
   const supabase = await createClient();
   const { data, error } = await supabase.auth.getUser();
@@ -95,7 +100,7 @@ async function requireAdmin() {
 
 function validateSubmission(
   draft: TimelineDraftSong[] | null,
-  performance: Awaited<ReturnType<typeof getPerformance>>,
+  performance: Performance | null,
 ) {
   if (!draft || !performance) return "This performance could not be loaded.";
   const error = validateTimelineDraft(draft, performance.songs, performance.duration);
@@ -104,20 +109,28 @@ function validateSubmission(
   return null;
 }
 
+async function getVariantPerformance(videoId: string, variantKey: PerformanceCutKey) {
+  const { performance, variant } = await getPerformanceForRevision(videoId, variantKey);
+  if (!performance) return { error: "This performance could not be loaded.", performance: null };
+  if (!variant) return { error: "That ground-truth timeline is not available for this performance.", performance: null };
+  return { error: null, performance };
+}
+
 export async function submitListeningPreset(
   _previousState: ReviewActionState,
   formData: FormData,
 ): Promise<ReviewActionState> {
   const videoId = readText(formData, "performance_video_id", 32);
+  const variantKey = readVariantKey(formData);
   const name = readText(formData, "preset_name", 80);
   const note = readText(formData, "note", 1000);
-  if (!videoId || !name) return { error: "Give this listening preset a name up to 80 characters." };
+  if (!videoId || !variantKey || !name) return { error: "Choose a ground-truth timeline and give this listening preset a name up to 80 characters." };
 
   const { supabase, user } = await getAuthenticatedUser();
   if (!user) return { error: "Sign in to publish a listening preset." };
-  const performance = await getPerformance(videoId);
+  const variantPerformance = await getVariantPerformance(videoId, variantKey);
   const draft = readDraft(formData);
-  const validationError = validateSubmission(draft, performance);
+  const validationError = variantPerformance.error ?? validateSubmission(draft, variantPerformance.performance);
   if (validationError || !draft) return { error: validationError ?? "This performance could not be loaded." };
 
   const profile = await getUserProfile(user.id);
@@ -127,6 +140,7 @@ export async function submitListeningPreset(
   const { error } = await supabase.rpc("create_listening_preset_with_songs", {
     p_id: presetId,
     p_performance_video_id: videoId,
+    p_variant_key: variantKey,
     p_owner_name: formatProfileLabel(profile),
     p_name: name,
     p_note: note || null,
@@ -150,14 +164,15 @@ export async function submitTruthRequest(
   formData: FormData,
 ): Promise<ReviewActionState> {
   const videoId = readText(formData, "performance_video_id", 32);
+  const variantKey = readVariantKey(formData);
   const note = readText(formData, "note", 1000);
-  if (!videoId) return { error: "Performance not found." };
+  if (!videoId || !variantKey) return { error: "Choose a ground-truth timeline before submitting." };
 
   const { supabase, user } = await getAuthenticatedUser();
   if (!user) return { error: "Sign in to submit a main-truth request." };
-  const performance = await getPerformance(videoId);
+  const variantPerformance = await getVariantPerformance(videoId, variantKey);
   const draft = readDraft(formData);
-  const validationError = validateSubmission(draft, performance);
+  const validationError = variantPerformance.error ?? validateSubmission(draft, variantPerformance.performance);
   if (validationError || !draft) return { error: validationError ?? "This performance could not be loaded." };
 
   const profile = await getUserProfile(user.id);
@@ -167,6 +182,7 @@ export async function submitTruthRequest(
   const { error: requestError } = await supabase.rpc("create_truth_request_with_songs", {
     p_id: requestId,
     p_performance_video_id: videoId,
+    p_variant_key: variantKey,
     p_requester_name: formatProfileLabel(profile),
     p_note: note || null,
     p_songs: databaseDraft,
@@ -176,7 +192,7 @@ export async function submitTruthRequest(
       code: requestError.code,
       message: requestError.message,
     });
-    if (requestError.code === "23505") return { error: "You already have a pending request for this performance." };
+    if (requestError.code === "23505") return { error: "You already have a pending request for this ground-truth timeline." };
     return { error: "Could not submit the main-truth request. Try again." };
   }
 
@@ -190,8 +206,9 @@ export async function selectListeningPreset(
   formData: FormData,
 ): Promise<ReviewActionState> {
   const videoId = readText(formData, "performance_video_id", 32);
+  const variantKey = readVariantKey(formData);
   const presetId = readText(formData, "preset_id", 64);
-  if (!videoId) return { error: "Performance not found." };
+  if (!videoId || !variantKey) return { error: "Ground-truth timeline not found." };
 
   const { supabase, user } = await getAuthenticatedUser();
   if (!user) return { error: "Sign in to save your listening choice." };
@@ -201,7 +218,8 @@ export async function selectListeningPreset(
       .from("performance_preset_selections")
       .delete()
       .eq("user_id", user.id)
-      .eq("performance_video_id", videoId);
+      .eq("performance_video_id", videoId)
+      .eq("variant_key", variantKey);
     if (error) return { error: "Could not restore main truth." };
     revalidatePath(`/video/${videoId}`);
     return { success: "Using main truth." };
@@ -212,6 +230,7 @@ export async function selectListeningPreset(
     .select("id")
     .eq("id", presetId)
     .eq("performance_video_id", videoId)
+    .eq("variant_key", variantKey)
     .eq("status", "published")
     .maybeSingle();
   if (presetError || !preset) return { error: "That listening preset is no longer available." };
@@ -219,6 +238,7 @@ export async function selectListeningPreset(
   const { error } = await supabase.from("performance_preset_selections").upsert({
     user_id: user.id,
     performance_video_id: videoId,
+    variant_key: variantKey,
     preset_id: preset.id,
     updated_at: new Date().toISOString(),
   });
@@ -260,22 +280,24 @@ export async function lockAdmin() {
 
 async function saveGroundTruth(
   videoId: string,
+  variantKey: PerformanceCutKey,
   draft: TimelineDraftSong[],
   removedSongIndexes: number[],
   adminId: string,
   requestId: string | null,
   resolutionNote: string | null = null,
 ): Promise<GroundTruthSaveResult> {
-  const validationPerformance = await getPerformance(videoId);
-  if (!validationPerformance) return { error: "Performance not found." };
+  const variantPerformance = await getVariantPerformance(videoId, variantKey);
+  if (variantPerformance.error || !variantPerformance.performance) return { error: variantPerformance.error ?? "Performance not found." };
 
-  const validationError = validateTimelineDraft(draft, validationPerformance.songs, validationPerformance.duration);
+  const validationError = validateTimelineDraft(draft, variantPerformance.performance.songs, variantPerformance.performance.duration);
   if (validationError) return { error: validationError };
 
   const supabase = createAdminClient();
   const databaseDraft = toDatabaseDraft(draft);
   const { data, error } = await supabase.rpc("apply_ground_truth_changes", {
     p_performance_video_id: videoId,
+    p_variant_key: variantKey,
     p_draft: databaseDraft,
     p_removed_song_indexes: removedSongIndexes,
     p_admin_id: adminId,
@@ -316,11 +338,12 @@ export async function saveGroundTruthAction(
   const user = await requireAdmin();
   if (!user) return { error: "Admin access is required." };
   const videoId = readText(formData, "performance_video_id", 32);
+  const variantKey = readVariantKey(formData);
   const draft = readDraft(formData);
   const removedSongIndexes = readRemovedSongIndexes(formData);
-  if (!videoId || !draft || !removedSongIndexes) return { error: "Invalid timeline submission." };
+  if (!videoId || !variantKey || !draft || !removedSongIndexes) return { error: "Invalid timeline submission." };
 
-  const result = await saveGroundTruth(videoId, draft, removedSongIndexes, user.id, null);
+  const result = await saveGroundTruth(videoId, variantKey, draft, removedSongIndexes, user.id, null);
   if (result.error !== null) return result;
   revalidatePath("/");
   revalidatePath(`/video/${videoId}`);
@@ -370,6 +393,7 @@ export async function resolveTruthRequest(
   if (!removedSongIndexes) return { error: "Invalid removal decision." };
   const result = await saveGroundTruth(
     requestData.request.performanceVideoId,
+    requestData.request.variantKey,
     draft,
     removedSongIndexes,
     user.id,

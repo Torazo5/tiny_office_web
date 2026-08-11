@@ -59,9 +59,10 @@ export default async function ReviewQueuePage() {
         <section className="mb-8">
           <h2 className="mb-3 text-[13px] font-semibold uppercase tracking-wide text-muted-foreground">Main-truth requests</h2>
           <div className="overflow-hidden rounded-lg border border-border">
-            <div className="hidden bg-card px-4 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-wide text-muted-foreground md:grid md:grid-cols-[2fr_1fr_1.4fr_0.8fr]">
+            <div className="hidden bg-card px-4 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-wide text-muted-foreground md:grid md:grid-cols-[2fr_1fr_1.1fr_1.1fr_0.8fr]">
               <div>Performance</div>
               <div>Submitted by</div>
+              <div>Ground truth</div>
               <div>Status</div>
               <div />
             </div>
@@ -70,10 +71,11 @@ export default async function ReviewQueuePage() {
               <Link
                 key={request.id}
                 href={`/review/${request.performanceVideoId}?admin=1&request=${request.id}`}
-                className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 border-t border-border px-4 py-3.5 hover:bg-secondary/50 md:grid-cols-[2fr_1fr_1.4fr_0.8fr]"
+                className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 border-t border-border px-4 py-3.5 hover:bg-secondary/50 md:grid-cols-[2fr_1fr_1.1fr_1.1fr_0.8fr]"
               >
                 <div className="text-[13.5px] font-medium text-foreground">{request.artist}</div>
                 <div className="text-[12.5px] text-muted-foreground">{request.requesterName}</div>
+                <div className="text-[12.5px] text-muted-foreground">{request.variantKey === "no-audience" ? "No audience" : "With applause"}</div>
                 <div className={`font-mono text-[11px] uppercase tracking-wide ${request.status === "approved" ? "text-success" : request.status === "rejected" ? "text-primary" : "text-muted-foreground"}`}>{request.status}</div>
                 <div className="text-right text-[12.5px] font-medium text-primary">Open →</div>
               </Link>
@@ -94,7 +96,7 @@ export default async function ReviewQueuePage() {
             {queue.map((item) => (
               <Link
                 key={item.videoId}
-                href={`/review/${item.videoId}?admin=1`}
+                href={`/review/${item.videoId}?admin=1&cut=no-audience`}
                 className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 border-t border-border px-4 py-3.5 hover:bg-secondary/50 md:grid-cols-[2.2fr_0.9fr_2.3fr_0.8fr]"
               >
                 <div className="text-[13.5px] font-medium text-foreground">{item.artist}</div>
@@ -114,7 +116,7 @@ export default async function ReviewQueuePage() {
               <div key={preset.id} className="flex flex-wrap items-center justify-between gap-3 border-t border-border px-4 py-3.5 first:border-t-0">
                 <div>
                   <div className="text-[13.5px] font-medium text-foreground">{preset.name}</div>
-                  <div className="text-[12px] text-muted-foreground">{preset.ownerName} · {preset.performanceVideoId} · {preset.status}</div>
+                  <div className="text-[12px] text-muted-foreground">{preset.ownerName} · {preset.performanceVideoId} · {preset.variantKey === "no-audience" ? "No audience" : "With applause"} · {preset.status}</div>
                 </div>
                 <PresetModerationForm presetId={preset.id} status={preset.status} />
               </div>

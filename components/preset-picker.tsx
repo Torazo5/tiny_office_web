@@ -2,15 +2,17 @@
 
 import { useActionState } from "react";
 import { selectListeningPreset, type ReviewActionState } from "@/app/review/actions";
-import type { ListeningPreset } from "@/lib/types";
+import type { ListeningPreset, PerformanceCutKey } from "@/lib/types";
 
 export function PresetPicker({
   videoId,
+  variantKey,
   presets,
   selectedPresetId,
   isSignedIn,
 }: {
   videoId: string;
+  variantKey: PerformanceCutKey;
   presets: ListeningPreset[];
   selectedPresetId: string | null;
   isSignedIn: boolean;
@@ -36,6 +38,8 @@ export function PresetPicker({
         method={isSignedIn ? undefined : "get"}
         className="flex flex-wrap items-center gap-2"
       >
+        <input type="hidden" name="performance_video_id" value={videoId} />
+        <input type="hidden" name="variant_key" value={variantKey} />
         <select
           name="preset_id"
           defaultValue={selectedPresetId ?? "ground-truth"}

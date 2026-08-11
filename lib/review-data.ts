@@ -2,7 +2,7 @@ import "server-only";
 
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
-import { getPerformanceDetail } from "@/lib/data";
+import { getPerformance, getPerformanceDetail } from "@/lib/data";
 import { formatProfileLabel, getProfilesByUserId, type PublicProfile } from "@/lib/profile-data";
 import type {
   PerformanceCutKey,
@@ -21,6 +21,7 @@ function throwIfError(label: string, error: { message: string } | null) {
 type PresetRow = {
   id: string;
   performance_video_id: string;
+  variant_key: PerformanceCutKey;
   owner_id: string;
   name: string;
   note: string | null;
@@ -71,6 +72,7 @@ function mapPresets(
   return presetRows.map((preset) => ({
     id: preset.id,
     performanceVideoId: preset.performance_video_id,
+    variantKey: preset.variant_key,
     ownerId: preset.owner_id,
     ownerName: formatProfileLabel(profiles.get(preset.owner_id)),
     name: preset.name,
@@ -81,12 +83,18 @@ function mapPresets(
   }));
 }
 
-async function loadPresets(client: Awaited<ReturnType<typeof createClient>>, videoId: string) {
-  const { data: presetRows, error: presetError } = await client
+async function loadPresets(
+  client: Awaited<ReturnType<typeof createClient>>,
+  videoId: string,
+  variantKey?: PerformanceCutKey,
+) {
+  let query = client
     .from("listening_presets")
-    .select("id, performance_video_id, owner_id, name, note, status, created_at")
+    .select("id, performance_video_id, variant_key, owner_id, name, note, status, created_at")
     .eq("performance_video_id", videoId)
     .order("created_at", { ascending: false });
+  if (variantKey) query = query.eq("variant_key", variantKey);
+  const { data: presetRows, error: presetError } = await query;
   throwIfError("Loading listening presets", presetError);
 
   const ids = (presetRows ?? []).map((preset) => preset.id);
@@ -136,7 +144,7 @@ async function loadPerformanceCutVariants(
   }
 
   return ((variantsResult.data ?? []) as PerformanceCutVariantRow[])
-    .filter((variant) => songsByVariant.has(variant.variant_key))
+    .filter((variant) => variant.variant_key === "no-audience" || songsByVariant.has(variant.variant_key))
     .map((variant) => ({
       key: variant.variant_key,
       name: variant.name,
@@ -145,16 +153,16 @@ async function loadPerformanceCutVariants(
     } satisfies PerformanceCutVariant));
 }
 
-export async function getListeningPresets(videoId: string) {
+export async function getListeningPresets(videoId: string, variantKey?: PerformanceCutKey) {
   const supabase = await createClient();
-  return loadPresets(supabase, videoId);
+  return loadPresets(supabase, videoId, variantKey);
 }
 
 export async function getAdminListeningPresets() {
   const supabase = createAdminClient();
   const { data: presetRows, error: presetError } = await supabase
     .from("listening_presets")
-    .select("id, performance_video_id, owner_id, name, note, status, created_at")
+    .select("id, performance_video_id, variant_key, owner_id, name, note, status, created_at")
     .order("created_at", { ascending: false });
   throwIfError("Loading admin listening presets", presetError);
 
@@ -171,13 +179,14 @@ export async function getAdminListeningPresets() {
   return mapPresets(presetRows as PresetRow[], (songRows ?? []) as PresetSongRow[], profiles);
 }
 
-export async function getSelectedPresetId(videoId: string, userId: string) {
+export async function getSelectedPresetId(videoId: string, userId: string, variantKey: PerformanceCutKey) {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("performance_preset_selections")
     .select("preset_id")
     .eq("performance_video_id", videoId)
     .eq("user_id", userId)
+    .eq("variant_key", variantKey)
     .maybeSingle();
   throwIfError("Loading selected listening preset", error);
   return data?.preset_id ?? null;
@@ -234,15 +243,16 @@ export async function getPerformanceWithSelectedPreset(
   previewPresetId?: string,
   cutKey?: PerformanceCutKey,
 ) {
-  const [performance, presets, cutVariants] = await Promise.all([
+  const [performance, cutVariants] = await Promise.all([
     getPerformanceDetail(videoId, userId ?? null),
-    getListeningPresets(videoId),
     loadPerformanceCutVariants(await createClient(), videoId),
   ]);
-  if (!performance) return { performance, selectedPreset: null, selectedCut: null, cutVariants, presets };
+  if (!performance) return { performance, selectedPreset: null, selectedCut: null, cutVariants, presets: [] };
   const selectedCut = cutVariants.find((variant) => variant.key === (cutKey ?? "no-audience"))
     ?? cutVariants.find((variant) => variant.key === "no-audience")
     ?? null;
+  const activeVariantKey = selectedCut?.key ?? "no-audience";
+  const presets = await getListeningPresets(videoId, activeVariantKey);
   const performanceWithCut = applyPerformanceCut(performance, selectedCut);
   if (previewPresetId !== undefined) {
     const selectedPreset = previewPresetId === "ground-truth"
@@ -258,7 +268,7 @@ export async function getPerformanceWithSelectedPreset(
   }
   if (!userId) return { performance: performanceWithCut, selectedPreset: null, selectedCut, cutVariants, presets };
 
-  const selectedPresetId = await getSelectedPresetId(videoId, userId);
+  const selectedPresetId = await getSelectedPresetId(videoId, userId, activeVariantKey);
   const selectedPreset = presets.find((preset) => preset.id === selectedPresetId) ?? null;
   return {
     performance: applyListeningPreset(performanceWithCut, selectedPreset),
@@ -269,9 +279,23 @@ export async function getPerformanceWithSelectedPreset(
   };
 }
 
+export async function getPerformanceForRevision(videoId: string, variantKey: PerformanceCutKey) {
+  const [performance, cutVariants] = await Promise.all([
+    getPerformance(videoId),
+    loadPerformanceCutVariants(await createClient(), videoId),
+  ]);
+  const variant = cutVariants.find((candidate) => candidate.key === variantKey) ?? null;
+  return {
+    performance: performance ? applyPerformanceCut(performance, variant) : null,
+    variant,
+    cutVariants,
+  };
+}
+
 type TruthRequestRow = {
   id: string;
   performance_video_id: string;
+  variant_key: PerformanceCutKey;
   requester_id: string;
   note: string | null;
   status: TruthRequestStatus;
@@ -288,6 +312,7 @@ function mapTruthRequest(
   return {
     id: row.id,
     performanceVideoId: row.performance_video_id,
+    variantKey: row.variant_key,
     artist: performance?.artist ?? row.performance_video_id,
     requesterId: row.requester_id,
     requesterName: formatProfileLabel(profiles.get(row.requester_id)),
@@ -302,7 +327,7 @@ export async function getAdminTruthRequests() {
   const supabase = createAdminClient();
   const { data, error } = await supabase
     .from("truth_requests")
-    .select("id, performance_video_id, requester_id, note, status, created_at, resolved_at, performances(artist)")
+    .select("id, performance_video_id, variant_key, requester_id, note, status, created_at, resolved_at, performances(artist)")
     .order("created_at", { ascending: false });
   throwIfError("Loading truth requests", error);
   const profiles = await getProfilesByUserId((data ?? []).map((row) => row.requester_id));
@@ -313,7 +338,7 @@ export async function getMyTruthRequests(userId: string) {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("truth_requests")
-    .select("id, performance_video_id, requester_id, note, status, created_at, resolved_at, performances(artist)")
+    .select("id, performance_video_id, variant_key, requester_id, note, status, created_at, resolved_at, performances(artist)")
     .eq("requester_id", userId)
     .order("created_at", { ascending: false });
   throwIfError("Loading your truth requests", error);
@@ -330,7 +355,7 @@ export async function getLatestResolvedTruthRequest(userId: string) {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("truth_requests")
-    .select("id, performance_video_id, requester_id, note, status, created_at, resolved_at, performances(artist)")
+    .select("id, performance_video_id, variant_key, requester_id, note, status, created_at, resolved_at, performances(artist)")
     .eq("requester_id", userId)
     .neq("status", "pending")
     .order("created_at", { ascending: false })
@@ -344,7 +369,7 @@ export async function getAdminTruthRequest(requestId: string) {
   const supabase = createAdminClient();
   const { data: request, error: requestError } = await supabase
     .from("truth_requests")
-    .select("id, performance_video_id, requester_id, note, status, created_at, resolved_at, performances(artist)")
+    .select("id, performance_video_id, variant_key, requester_id, note, status, created_at, resolved_at, performances(artist)")
     .eq("id", requestId)
     .maybeSingle();
   throwIfError("Loading truth request", requestError);
@@ -359,14 +384,9 @@ export async function getAdminTruthRequest(requestId: string) {
     .order("song_index");
   throwIfError("Loading truth request timeline", songsError);
 
-  const { data: groundTruthSongs, error: groundTruthError } = await supabase
-    .from("songs")
-    .select("song_index, suspect")
-    .eq("performance_video_id", request.performance_video_id);
-  throwIfError("Loading current boundary statuses", groundTruthError);
-  const confirmedByIndex = new Map(
-    (groundTruthSongs ?? []).map((song) => [Number(song.song_index), !Boolean(song.suspect)]),
-  );
+  const { performance } = await getPerformanceForRevision(request.performance_video_id, request.variant_key);
+  if (!performance) throw new Error("Loading current boundary statuses: performance not found");
+  const confirmedByIndex = new Map(performance.songs.map((song) => [song.index, !song.suspect]));
 
   return {
     request: mapTruthRequest(request as TruthRequestRow, profiles),
