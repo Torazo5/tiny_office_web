@@ -8,7 +8,7 @@
     "test": "node --experimental-strip-types --test scripts/fuzzy-search.test.mjs scripts/only-song-mode.test.mjs scripts/playback-fade.test.mjs scripts/playback-settings.test.mjs scripts/review-utils.test.mjs",
     "start": "next start",
     "lint": "eslint",
-    "seed:pipeline": "node scripts/seed-pipeline.mjs"
+    "seed:pipeline": "node --env-file-if-exists=.env.local scripts/seed-pipeline.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

@@ -46,6 +46,9 @@ The pipeline seed script also needs the server-only secret key:
 SUPABASE_SECRET_KEY=
 ```
 
+For local seeding, put this alongside the public Supabase variables in
+`.env.local`; `npm run seed:pipeline` loads that file automatically.
+
 Never expose `SUPABASE_SECRET_KEY`, `ADMIN_PASSWORD`, or
 `ADMIN_SESSION_SECRET` through a `NEXT_PUBLIC_` variable.
 

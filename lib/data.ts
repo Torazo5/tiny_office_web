@@ -232,16 +232,9 @@ export async function getBrowsePerformancePage(
   };
 }
 
-const getCachedBrowsePerformances = unstable_cache(
-  loadBrowsePerformances,
-  ["public-browse-performances"],
-  {
-    tags: [PUBLIC_CATALOG_CACHE_TAG],
-    revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
-  },
-);
-
-const loadPerformances = cache(async () => getCachedBrowsePerformances());
+// Search must see newly seeded catalog rows immediately. Keep this request
+// scoped rather than putting the full catalog behind a persistent cache.
+const loadPerformances = cache(async () => loadBrowsePerformances());
 
 async function loadPerformance(videoId: string): Promise<Performance | null> {
   const supabase = createPublicClient();
