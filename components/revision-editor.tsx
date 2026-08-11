@@ -21,6 +21,7 @@ import {
   type TimelineRequestDecision,
 } from "@/lib/review-utils";
 import { formatTime } from "@/lib/format";
+import { TimelineFeatureHints } from "@/components/feature-hints";
 
 type EditableSong = {
   index: number;
@@ -399,7 +400,7 @@ export function RevisionEditor({
         </section>
       )}
 
-      <div className="mb-4 flex gap-2 overflow-x-auto border-b border-border pb-2">
+      <div data-feature-hint="timeline-song-picker" className="mb-4 flex gap-2 overflow-x-auto rounded-lg border-b border-border pb-2">
         {songs.map((item, index) => {
           const changed =
             item.title !== item.baseTitle ||
@@ -435,7 +436,7 @@ export function RevisionEditor({
             duration={performance.duration}
           />
 
-          <div className="rounded-[10px] border border-border bg-card p-5">
+          <div data-feature-hint="timeline-boundaries" className="rounded-[10px] border border-border bg-card p-5">
             <div className="flex items-end justify-between gap-3">
               <label className="min-w-0 flex-1 text-[12px] font-medium text-muted-foreground">
                 Song title
@@ -607,6 +608,7 @@ export function RevisionEditor({
           <Link href={`/review/${performance.videoId}?admin=1`} className="mt-2 inline-block text-[12.5px] font-medium text-primary hover:underline">I am an admin →</Link>
         </div>
       )}
+      <TimelineFeatureHints />
     </div>
   );
 }

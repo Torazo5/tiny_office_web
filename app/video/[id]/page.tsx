@@ -6,6 +6,7 @@ import { SongRow } from "@/components/song-row";
 import { StarRating } from "@/components/star-rating";
 import { RatingReviewPanel } from "@/components/rating-review-panel";
 import { VideoEmbed } from "@/components/video-embed";
+import { VideoFeatureHints } from "@/components/feature-hints";
 import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { PresetPicker } from "@/components/preset-picker";
 import { ReviewLikeButton } from "@/components/review-like-button";
@@ -61,6 +62,7 @@ export default async function VideoPage({
         <main className="grid min-w-0 items-start gap-8 p-4 sm:p-8 lg:grid-cols-[1.4fr_1fr]">
           <div className="min-w-0">
             <VideoEmbed videoId={performance.videoId} duration={performance.duration} />
+            <VideoFeatureHints />
 
             <h1 className="text-2xl font-bold text-foreground mb-1.5">{performance.artist}</h1>
             <p className="text-sm text-muted-foreground mb-4">
@@ -84,12 +86,12 @@ export default async function VideoPage({
               />
             </div>
 
-            <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+            <div data-feature-hint="timeline-editor" className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-lg">
               <Link
                 href={revisionHref}
                 className="rounded-lg bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground"
               >
-                Edit timeline and send request
+                Customize timeline
               </Link>
               <Link
                 href={revisionHref}
@@ -141,7 +143,7 @@ export default async function VideoPage({
             </div>
           </div>
 
-          <div className="min-w-0">
+          <div data-feature-hint="song-list" className="min-w-0 rounded-lg">
             <h2 className="text-[13px] font-semibold text-muted-foreground uppercase tracking-wide mb-3">
               Songs in this set
             </h2>

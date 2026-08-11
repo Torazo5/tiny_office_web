@@ -159,7 +159,7 @@ export function RevisionVideoPlayer({
   const clipWidthPercent = Math.max(0, clipEndPercent - clipStartPercent);
 
   return (
-    <section className="overflow-hidden rounded-[10px] border border-border bg-card">
+    <section data-feature-hint="timeline-playback" className="overflow-hidden rounded-[10px] border border-border bg-card">
       <div className="flex items-center justify-between gap-3 border-b border-border px-4 py-3">
         <div>
           <div className="text-[12px] font-semibold uppercase tracking-wide text-muted-foreground">Revision playback</div>

@@ -21,6 +21,8 @@ const PlayerContext = createContext<{
   playbackSettings: PlaybackSettings;
   setPlaybackSettings: (settings: PlaybackSettings) => void;
   isSignedIn: boolean;
+  hasStartedPlayback: boolean;
+  markPlaybackStarted: () => void;
 } | null>(null);
 
 export function PlayerProvider({
@@ -41,16 +43,18 @@ export function PlayerProvider({
   const [currentTime, setCurrentTime] = useState(initialStart);
   const [onlySongMode, setOnlySongMode] = useState(false);
   const [playbackSettings, setPlaybackSettings] = useState(initialPlaybackSettings);
+  const [hasStartedPlayback, setHasStartedPlayback] = useState(false);
 
   const setStartAt = useCallback((seconds: number) => {
     setStartAtState(seconds);
     setSeekRequestId((requestId) => requestId + 1);
     setCurrentTime(seconds);
   }, []);
+  const markPlaybackStarted = useCallback(() => setHasStartedPlayback(true), []);
 
   return (
     <PlayerContext.Provider
-      value={{ songs, startAt, setStartAt, seekRequestId, currentTime, setCurrentTime, onlySongMode, setOnlySongMode, playbackSettings, setPlaybackSettings, isSignedIn }}
+      value={{ songs, startAt, setStartAt, seekRequestId, currentTime, setCurrentTime, onlySongMode, setOnlySongMode, playbackSettings, setPlaybackSettings, isSignedIn, hasStartedPlayback, markPlaybackStarted }}
     >
       {children}
     </PlayerContext.Provider>

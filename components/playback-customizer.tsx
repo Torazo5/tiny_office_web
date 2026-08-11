@@ -71,6 +71,7 @@ export function PlaybackCustomizer({
             setConfirmDefault(false);
             setOpen(true);
           }}
+          data-feature-hint="playback-settings"
           className="rounded-md border border-input bg-background px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:text-foreground"
         >
           Customize playback

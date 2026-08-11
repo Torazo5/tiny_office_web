@@ -4,6 +4,7 @@ import { useCallback, useState } from "react";
 import { History, Shuffle } from "lucide-react";
 import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { PlaylistPlayer } from "@/components/playlist-player";
+import { FirstUseHint } from "@/components/first-use-hint";
 import { RecentlyPlayedPanel, useRecentlyPlayed } from "@/components/recently-played";
 import { formatTime } from "@/lib/format";
 import { trackEvent } from "@/components/analytics";
@@ -137,6 +138,10 @@ function AdventureSetup({
             onClose={() => setShowRecentlyPlayed(false)}
           />
         )}
+
+        <FirstUseHint storageKey="tiny-office:first-use-hint:adventure-setup" className="mb-5 max-w-[650px]">
+          New here? Start with <strong>Songs</strong>, then press <strong>Start the adventure</strong>. Every run is a fresh shuffled queue.
+        </FirstUseHint>
 
         <div className="grid gap-5 lg:grid-cols-2">
           <section className="rounded-xl border border-border bg-card p-5">
@@ -320,6 +325,10 @@ function AdventureSessionPlayer({
             onClose={() => setShowRecentlyPlayed(false)}
           />
         )}
+
+        <FirstUseHint storageKey="tiny-office:first-use-hint:adventure-play" className="mb-5">
+          Your first pick is ready. Press play to start listening; the next pick will be ready when this one ends.
+        </FirstUseHint>
 
         <PlaylistPlayer
           tracks={session.tracks}

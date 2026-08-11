@@ -35,6 +35,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
     playbackSettings,
     setPlaybackSettings,
     isSignedIn,
+    markPlaybackStarted,
   } = usePlayer();
   const playerHostRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
@@ -177,6 +178,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
             if (cancelled || !isYouTubePlayer(event.target)) return;
             const player = event.target;
             if (event.data === YOUTUBE_PLAYER_PLAYING) {
+              markPlaybackStarted();
               const currentTime = player.getCurrentTime();
               const song = songsRef.current.find((item) => currentTime >= item.clipStart && currentTime < item.clipEnd);
               const songKey = `${videoIdRef.current}:${song?.index ?? "performance"}`;
@@ -207,7 +209,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       if (isYouTubePlayer(player)) player.destroy();
       playerRef.current = null;
     };
-  }, [initialStart, setCurrentTime]);
+  }, [initialStart, markPlaybackStarted, setCurrentTime]);
 
   useEffect(() => {
     if (!isPlayerReady || seekRequestId === 0) return;
@@ -312,6 +314,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
           type="button"
           aria-pressed={onlySongMode}
           onClick={() => setOnlySongMode(!onlySongMode)}
+          data-feature-hint="only-song-mode"
           className={`inline-flex items-center gap-2 rounded-lg border px-2.5 py-1.5 text-[12px] font-medium transition-colors ${
             onlySongMode
               ? "border-primary/50 bg-primary/10 text-primary"
