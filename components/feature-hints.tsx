@@ -229,9 +229,7 @@ function GuidedHints({
 }
 
 export function VideoFeatureHints() {
-  const { hasStartedPlayback, setOnlySongMode } = usePlayer();
-
-  if (!hasStartedPlayback) return null;
+  const { setOnlySongMode } = usePlayer();
 
   return (
     <GuidedHints
