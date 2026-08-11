@@ -26,6 +26,7 @@ type PlayerControlsProps = {
   onScrubEnd?: () => void;
   volume: number;
   onVolumeChange: (volume: number) => void;
+  playButtonHintTarget?: string;
 };
 
 function clamp(value: number, min: number, max: number) {
@@ -53,6 +54,7 @@ export function PlayerControls({
   onScrubEnd,
   volume,
   onVolumeChange,
+  playButtonHintTarget,
 }: PlayerControlsProps) {
   const duration = Math.max(0, rangeEnd - rangeStart);
   const sliderMax = Math.max(0.1, duration);
@@ -114,6 +116,7 @@ export function PlayerControls({
             type="button"
             onClick={onTogglePlay}
             disabled={!isReady}
+            data-feature-hint={playButtonHintTarget}
             className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-wait disabled:opacity-60"
             aria-label={isPlaying ? "Pause" : "Play"}
           >

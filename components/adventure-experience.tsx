@@ -4,7 +4,7 @@ import { useCallback, useState } from "react";
 import { History, Shuffle } from "lucide-react";
 import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { PlaylistPlayer } from "@/components/playlist-player";
-import { FirstUseHint } from "@/components/first-use-hint";
+import { AdventurePlayFeatureHints, AdventureSetupFeatureHints } from "@/components/feature-hints";
 import { RecentlyPlayedPanel, useRecentlyPlayed } from "@/components/recently-played";
 import { formatTime } from "@/lib/format";
 import { trackEvent } from "@/components/analytics";
@@ -139,11 +139,7 @@ function AdventureSetup({
           />
         )}
 
-        <FirstUseHint storageKey="tiny-office:first-use-hint:adventure-setup" className="mb-5 max-w-[650px]">
-          New here? Start with <strong>Songs</strong>, then press <strong>Start the adventure</strong>. Every run is a fresh shuffled queue.
-        </FirstUseHint>
-
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div data-feature-hint="adventure-options" className="grid gap-5 rounded-xl lg:grid-cols-2">
           <section className="rounded-xl border border-border bg-card p-5">
             <h2 className="mb-1 text-sm font-semibold text-foreground">What should we play?</h2>
             <p className="mb-4 text-[12.5px] text-muted-foreground">Choose individual song clips or full Tiny Desk performances.</p>
@@ -216,6 +212,7 @@ function AdventureSetup({
             type="button"
             onClick={onStart}
             disabled={availableCount === 0}
+            data-feature-hint="adventure-start"
             className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[0_0_18px_oklch(0.68_0.17_25_/_0.16)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_24px_oklch(0.68_0.17_25_/_0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none"
           >
             <span
@@ -230,6 +227,7 @@ function AdventureSetup({
             Start the adventure
           </button>
         </div>
+        <AdventureSetupFeatureHints />
       </div>
     </main>
   );
@@ -326,10 +324,6 @@ function AdventureSessionPlayer({
           />
         )}
 
-        <FirstUseHint storageKey="tiny-office:first-use-hint:adventure-play" className="mb-5">
-          Your first pick is ready. Press play to start listening; the next pick will be ready when this one ends.
-        </FirstUseHint>
-
         <PlaylistPlayer
           tracks={session.tracks}
           playlistType={session.source}
@@ -340,7 +334,9 @@ function AdventureSessionPlayer({
           onTrackPlay={onTrackPlay}
           initialPlaybackSettings={initialPlaybackSettings}
           isSignedIn={isSignedIn}
+          playButtonHintTarget="adventure-play"
         />
+        <AdventurePlayFeatureHints />
 
         {currentTrack && currentItem && (
           <section className="flex flex-col justify-between gap-4 rounded-xl border border-border bg-card p-5 sm:flex-row sm:items-center">

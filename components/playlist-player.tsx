@@ -39,6 +39,7 @@ export function PlaylistPlayer({
   isSignedIn = false,
   onCurrentTrackChange,
   onTrackPlay,
+  playButtonHintTarget,
 }: {
   tracks: PlaylistTrack[];
   playlistType: PlaylistType;
@@ -49,6 +50,7 @@ export function PlaylistPlayer({
   isSignedIn?: boolean;
   onCurrentTrackChange?: (track: PlaylistTrack) => void;
   onTrackPlay?: (track: PlaylistTrack) => void;
+  playButtonHintTarget?: string;
 }) {
   const playerHostRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
@@ -652,6 +654,7 @@ export function PlaylistPlayer({
           const player = getPlayer();
           if (player) setPlayerVolume(player, nextVolume);
         }}
+        playButtonHintTarget={playButtonHintTarget}
       />
 
       <PlaybackCustomizer

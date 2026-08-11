@@ -50,6 +50,27 @@ const TIMELINE_STEPS: HintStep[] = [
   },
 ];
 
+const ADVENTURE_SETUP_STEPS: HintStep[] = [
+  {
+    target: "adventure-options",
+    title: "Choose your kind of discovery",
+    detail: "Pick individual songs for quick surprises, or full videos for a whole performance at a time.",
+  },
+  {
+    target: "adventure-start",
+    title: "Start a fresh queue",
+    detail: "This creates a new shuffled run. Nothing is permanent, so you can change it up whenever you want.",
+  },
+];
+
+const ADVENTURE_PLAY_STEPS: HintStep[] = [
+  {
+    target: "adventure-play",
+    title: "Your first pick is ready",
+    detail: "Press play to start listening. The queue will keep the next pick ready for you.",
+  },
+];
+
 function subscribe(onStoreChange: () => void) {
   if (typeof window === "undefined") return () => undefined;
   window.addEventListener("storage", onStoreChange);
@@ -84,16 +105,53 @@ function GuidedHints({
     () => true,
   );
   const [stepIndex, setStepIndex] = useState(0);
+  const [targetRect, setTargetRect] = useState<DOMRect | null>(null);
   const step = steps[stepIndex];
 
   useEffect(() => {
-    if (complete || !step) return;
+    if (complete || !step) {
+      const resetFrame = window.requestAnimationFrame(() => setTargetRect(null));
+      return () => window.cancelAnimationFrame(resetFrame);
+    }
     const target = document.querySelector<HTMLElement>(`[data-feature-hint="${step.target}"]`);
     if (!target) return;
 
-    target.classList.add("ring-2", "ring-primary", "ring-offset-2", "ring-offset-background");
+    let frameId: number | null = null;
+    const updateTargetRect = () => {
+      if (frameId !== null) window.cancelAnimationFrame(frameId);
+      frameId = window.requestAnimationFrame(() => setTargetRect(target.getBoundingClientRect()));
+    };
+
+    target.classList.add(
+      "relative",
+      "z-[60]",
+      "rounded-lg",
+      "ring-4",
+      "ring-primary",
+      "ring-offset-4",
+      "ring-offset-background",
+      "shadow-[0_0_38px_oklch(0.68_0.17_25_/_0.45)]",
+    );
     target.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-    return () => target.classList.remove("ring-2", "ring-primary", "ring-offset-2", "ring-offset-background");
+    updateTargetRect();
+    window.addEventListener("resize", updateTargetRect);
+    window.addEventListener("scroll", updateTargetRect, true);
+
+    return () => {
+      if (frameId !== null) window.cancelAnimationFrame(frameId);
+      window.removeEventListener("resize", updateTargetRect);
+      window.removeEventListener("scroll", updateTargetRect, true);
+      target.classList.remove(
+        "relative",
+        "z-[60]",
+        "rounded-lg",
+        "ring-4",
+        "ring-primary",
+        "ring-offset-4",
+        "ring-offset-background",
+        "shadow-[0_0_38px_oklch(0.68_0.17_25_/_0.45)]",
+      );
+    };
   }, [complete, step]);
 
   if (complete || !step) return null;
@@ -117,12 +175,34 @@ function GuidedHints({
     setStepIndex(nextStep);
   }
 
+  const cardWidth = typeof window === "undefined" ? 360 : Math.min(360, window.innerWidth - 32);
+  const cardLeft = targetRect
+    ? Math.min(Math.max(16, targetRect.left), window.innerWidth - cardWidth - 16)
+    : 16;
+  const cardAboveTarget = targetRect && targetRect.bottom + 210 > window.innerHeight - 16;
+  const cardTop = targetRect
+    ? cardAboveTarget
+      ? Math.max(16, targetRect.top - 202)
+      : Math.min(targetRect.bottom + 18, window.innerHeight - 190)
+    : 16;
+
   return (
-    <aside
-      className="fixed bottom-4 right-4 z-40 w-[calc(100%-2rem)] max-w-sm rounded-xl border border-primary/35 bg-card p-4 shadow-2xl"
-      aria-live="polite"
-      aria-label={`Feature hint ${stepIndex + 1} of ${steps.length}`}
-    >
+    <>
+      <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-[1px]" aria-hidden="true" />
+      <aside
+        className="fixed z-[70] w-[calc(100%-2rem)] rounded-xl border border-primary/50 bg-card p-4 shadow-2xl"
+        style={{ width: cardWidth, left: cardLeft, top: cardTop }}
+        aria-live="polite"
+        aria-label={`Feature hint ${stepIndex + 1} of ${steps.length}`}
+      >
+        {targetRect && (
+          <span
+            aria-hidden="true"
+            className={`absolute left-7 h-3 w-3 rotate-45 border-primary bg-card ${
+              cardAboveTarget ? "-bottom-1.5 border-b border-r" : "-top-1.5 border-l border-t"
+            }`}
+          />
+        )}
       <div className="flex items-center justify-between gap-3">
         <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">
           A quick note · {stepIndex + 1}/{steps.length}
@@ -138,7 +218,8 @@ function GuidedHints({
           {stepIndex === steps.length - 1 ? "Done" : "Next tip"}
         </button>
       </div>
-    </aside>
+      </aside>
+    </>
   );
 }
 
@@ -162,4 +243,12 @@ export function VideoFeatureHints() {
 
 export function TimelineFeatureHints() {
   return <GuidedHints storageKey="tiny-office:feature-hints:timeline" steps={TIMELINE_STEPS} />;
+}
+
+export function AdventureSetupFeatureHints() {
+  return <GuidedHints storageKey="tiny-office:feature-hints:adventure-setup" steps={ADVENTURE_SETUP_STEPS} />;
+}
+
+export function AdventurePlayFeatureHints() {
+  return <GuidedHints storageKey="tiny-office:feature-hints:adventure-play" steps={ADVENTURE_PLAY_STEPS} />;
 }
