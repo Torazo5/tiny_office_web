@@ -52,17 +52,23 @@ export default async function BrowsePage({
         </p>
 
         {!query && (
-          <section className="mb-8 max-w-3xl rounded-xl border border-border bg-card/50 p-4 sm:p-5" aria-labelledby="about-heading">
-            <h2 id="about-heading" className="text-[14px] font-semibold text-foreground">
-              About
-            </h2>
-            <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
-              Hi I&apos;m just a coder that is a big fan of Tiny Desk, and wanted a better way to listen to it while building a bigger community. I don&apos;t mean any harm to NPR or Tiny Desk, this is just a way I thought I could enhance some people&apos;s listening experience. If you have any feedback I am happy to receive it at{" "}
-              <a className="text-primary underline decoration-primary/40 underline-offset-2 transition-colors hover:text-foreground" href="mailto:torazo.tokuda@gmail.com">
-                torazo.tokuda@gmail.com
-              </a>
-            </p>
-          </section>
+          <details className="mb-8 max-w-3xl">
+            <summary className="flex w-fit cursor-pointer list-none items-center gap-2 rounded-lg border border-border bg-card/50 px-3.5 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground [&::-webkit-details-marker]:hidden">
+              <span>About</span>
+              <span aria-hidden className="text-base leading-none text-primary">+</span>
+            </summary>
+            <div className="mt-3 rounded-xl border border-border bg-card/50 p-4 sm:p-5">
+              <h2 className="text-[14px] font-semibold text-foreground">
+                About
+              </h2>
+              <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
+                Hi I&apos;m just a coder that is a big fan of Tiny Desk, and wanted a better way to listen to it while building a bigger community. I don&apos;t mean any harm to NPR or Tiny Desk, this is just a way I thought I could enhance some people&apos;s listening experience. If you have any feedback I am happy to receive it at{" "}
+                <a className="text-primary underline decoration-primary/40 underline-offset-2 transition-colors hover:text-foreground" href="mailto:torazo.tokuda@gmail.com">
+                  torazo.tokuda@gmail.com
+                </a>
+              </p>
+            </div>
+          </details>
         )}
 
         {!query && catalogPage ? (
