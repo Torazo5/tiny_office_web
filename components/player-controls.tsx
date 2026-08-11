@@ -27,6 +27,8 @@ type PlayerControlsProps = {
   volume: number;
   onVolumeChange: (volume: number) => void;
   playButtonHintTarget?: string;
+  compact?: boolean;
+  modeControl?: React.ReactNode;
 };
 
 function clamp(value: number, min: number, max: number) {
@@ -55,11 +57,14 @@ export function PlayerControls({
   volume,
   onVolumeChange,
   playButtonHintTarget,
+  compact = false,
+  modeControl,
 }: PlayerControlsProps) {
   const duration = Math.max(0, rangeEnd - rangeStart);
   const sliderMax = Math.max(0.1, duration);
   const currentRelativeTime = clamp(currentTime - rangeStart, 0, duration);
   const [draftValue, setDraftValue] = useState<number | null>(null);
+  const [showMore, setShowMore] = useState(false);
   const draftValueRef = useRef<number | null>(null);
   const scrubbingRef = useRef(false);
   const displayedValue = draftValue ?? currentRelativeTime;
@@ -94,6 +99,96 @@ export function PlayerControls({
       scrubbingRef.current = false;
       onScrubEnd?.();
     }
+  }
+
+  if (compact) {
+    return (
+      <section className="mt-3 rounded-lg border border-border bg-secondary/35 p-2.5" aria-label="Playback controls">
+        <div className="flex min-w-0 items-center gap-2">
+          <button
+            type="button"
+            onClick={onTogglePlay}
+            disabled={!isReady}
+            data-feature-hint={playButtonHintTarget}
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-wait disabled:opacity-60"
+            aria-label={isPlaying ? "Pause" : "Play"}
+          >
+            {isPlaying ? (
+              <span aria-hidden className="flex gap-1">
+                <span className="h-3.5 w-1 rounded-sm bg-primary-foreground" />
+                <span className="h-3.5 w-1 rounded-sm bg-primary-foreground" />
+              </span>
+            ) : (
+              <span aria-hidden className="ml-0.5 block h-0 w-0 border-y-[6px] border-l-[9px] border-y-transparent border-l-primary-foreground" />
+            )}
+          </button>
+
+          <label className="min-w-0 flex-1">
+            <span className="sr-only">Seek video</span>
+            <input
+              type="range"
+              min={0}
+              max={sliderMax}
+              step={0.1}
+              value={Math.min(displayedValue, sliderMax)}
+              onPointerDown={beginScrub}
+              onPointerUp={commitScrub}
+              onPointerCancel={commitScrub}
+              onLostPointerCapture={commitScrub}
+              onKeyUp={commitScrub}
+              onBlur={commitScrub}
+              onChange={(event) => changeScrub(event.target.value)}
+              disabled={!canInteract}
+              className="w-full accent-primary disabled:opacity-50"
+              aria-label="Seek video"
+            />
+          </label>
+
+          <span className="hidden shrink-0 font-mono text-[10px] text-muted-foreground sm:block">
+            {formatTime(displayedValue)} / {formatTime(duration)}
+          </span>
+          {modeControl}
+          <button
+            type="button"
+            onClick={() => setShowMore((open) => !open)}
+            className={`shrink-0 rounded-md border px-2 py-1.5 text-[11px] font-medium transition-colors ${
+              showMore ? "border-primary/50 bg-primary/10 text-primary" : "border-input text-muted-foreground hover:text-foreground"
+            }`}
+            aria-expanded={showMore}
+          >
+            More
+          </button>
+        </div>
+
+        <div className="mt-2 border-t border-border pt-2">
+          <VolumeMeter value={volume} onChange={onVolumeChange} disabled={!isReady} />
+        </div>
+
+        {showMore && (
+          <div className="mt-2 flex items-center gap-2 border-t border-border pt-2">
+            <button
+              type="button"
+              onClick={() => onSkip(-10)}
+              disabled={!isReady}
+              className="rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:text-foreground disabled:cursor-wait disabled:opacity-40"
+            >
+              −10s
+            </button>
+            <button
+              type="button"
+              onClick={() => onSkip(30)}
+              disabled={!isReady}
+              className="rounded-md border border-input px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:text-foreground disabled:cursor-wait disabled:opacity-40"
+            >
+              +30s
+            </button>
+            <span className="font-mono text-[10px] text-muted-foreground sm:hidden">
+              {formatTime(displayedValue)} / {formatTime(duration)}
+            </span>
+          </div>
+        )}
+      </section>
+    );
   }
 
   return (

@@ -307,28 +307,6 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
 
   return (
     <div className="mb-4 md:max-w-[680px]">
-      <div className="flex items-center justify-end mb-2">
-        <button
-          type="button"
-          aria-pressed={onlySongMode}
-          onClick={() => setOnlySongMode(!onlySongMode)}
-          data-feature-hint="only-song-mode"
-          className={`inline-flex items-center gap-2 rounded-lg border px-2.5 py-1.5 text-[12px] font-medium transition-colors ${
-            onlySongMode
-              ? "border-primary/50 bg-primary/10 text-primary"
-              : "border-border bg-secondary text-muted-foreground hover:text-foreground"
-          }`}
-        >
-          <span
-            aria-hidden
-            className={`h-1.5 w-1.5 rounded-full ${
-              onlySongMode ? "bg-primary" : "bg-muted-foreground/50"
-            }`}
-          />
-          Only song mode
-        </button>
-      </div>
-
       <div className="relative aspect-video rounded-[10px] overflow-hidden border border-border bg-black">
         <div ref={playerHostRef} className="absolute inset-0 h-full w-full" aria-label="Tiny Desk Concert" />
       </div>
@@ -356,6 +334,22 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
           const player = getPlayer();
           if (player) setPlayerVolume(player, nextVolume);
         }}
+        compact
+        modeControl={
+          <button
+            type="button"
+            aria-pressed={onlySongMode}
+            onClick={() => setOnlySongMode(!onlySongMode)}
+            data-feature-hint="only-song-mode"
+            className={`shrink-0 rounded-md border px-2 py-1.5 text-[11px] font-medium transition-colors ${
+              onlySongMode
+                ? "border-primary/50 bg-primary/10 text-primary"
+                : "border-input text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            Songs only
+          </button>
+        }
       />
 
       {onlySongMode && (
