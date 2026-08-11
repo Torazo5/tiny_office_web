@@ -2,66 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import { formatTime } from "@/lib/format";
+import {
+  createYouTubePlayer,
+  isYouTubePlayer,
+  loadYouTubeIframeApi,
+  type YouTubePlayer,
+} from "@/lib/youtube-iframe-api";
 
-type YouTubePlayer = {
-  destroy: () => void;
-  getCurrentTime: () => number;
-  getPlayerState: () => number;
-  pauseVideo: () => void;
-  playVideo: () => void;
-  seekTo: (seconds: number, allowSeekAhead: boolean) => void;
-};
-
-type YouTubePlayerEvent = { target: YouTubePlayer };
-type YouTubeStateChangeEvent = { data: number; target: YouTubePlayer };
-
-type YouTubeApi = {
-  Player: new (
-    element: HTMLIFrameElement,
-    options: {
-      events: {
-        onReady: (event: YouTubePlayerEvent) => void;
-        onStateChange: (event: YouTubeStateChangeEvent) => void;
-      };
-    },
-  ) => YouTubePlayer;
-};
-
-type YouTubeWindow = Window & {
-  YT?: YouTubeApi;
-  onYouTubeIframeAPIReady?: () => void;
-};
-
-function youtubeWindow() {
-  return window as YouTubeWindow;
-}
-
-let iframeApiPromise: Promise<void> | null = null;
 const YOUTUBE_PLAYER_PLAYING = 1;
-
-function loadYouTubeIframeApi() {
-  const currentWindow = youtubeWindow();
-  if (currentWindow.YT?.Player) return Promise.resolve();
-  if (iframeApiPromise) return iframeApiPromise;
-
-  iframeApiPromise = new Promise((resolve, reject) => {
-    const previousReady = currentWindow.onYouTubeIframeAPIReady;
-    currentWindow.onYouTubeIframeAPIReady = () => {
-      previousReady?.();
-      resolve();
-    };
-
-    const script = document.createElement("script");
-    script.src = "https://www.youtube.com/iframe_api";
-    script.onerror = () => {
-      iframeApiPromise = null;
-      reject(new Error("Unable to load the YouTube IFrame Player API."));
-    };
-    document.head.append(script);
-  });
-
-  return iframeApiPromise;
-}
 
 export function RevisionVideoPlayer({
   videoId,
@@ -78,41 +26,43 @@ export function RevisionVideoPlayer({
   clipEnd: number;
   duration: number;
 }) {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const playerHostRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
+  const initialVideoIdRef = useRef(videoId);
   const initialClipStartRef = useRef(clipStart);
   const stopAtRef = useRef<number | null>(null);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [playerState, setPlayerState] = useState<number | null>(null);
   const [currentTime, setCurrentTime] = useState(clipStart);
 
+  function getPlayer() {
+    const player = playerRef.current;
+    return isYouTubePlayer(player) ? player : null;
+  }
+
   useEffect(() => {
     let cancelled = false;
 
     void loadYouTubeIframeApi()
-      .then(() => {
-        const currentWindow = youtubeWindow();
-        const youtubeApi = currentWindow.YT;
-        if (cancelled || !iframeRef.current || !youtubeApi?.Player) return;
+      .then((api) => {
+        if (cancelled || !playerHostRef.current) return;
 
-        const player = new youtubeApi.Player(iframeRef.current, {
-          events: {
-            onReady: (event) => {
-              if (cancelled) return;
-              playerRef.current = event.target;
-              event.target.seekTo(initialClipStartRef.current, true);
-              setCurrentTime(initialClipStartRef.current);
-              setPlayerState(event.target.getPlayerState());
-              setIsPlayerReady(true);
-            },
-            onStateChange: (event) => {
-              if (cancelled) return;
-              setPlayerState(event.data);
-            },
+        const player = createYouTubePlayer(api, playerHostRef.current, initialVideoIdRef.current, {
+          onReady: (event) => {
+            if (cancelled || !isYouTubePlayer(event.target)) return;
+            playerRef.current = event.target;
+            event.target.seekTo(initialClipStartRef.current, true);
+            setCurrentTime(initialClipStartRef.current);
+            setPlayerState(event.target.getPlayerState());
+            setIsPlayerReady(true);
           },
-        });
+          onStateChange: (event) => {
+            if (cancelled || !isYouTubePlayer(event.target)) return;
+            setPlayerState(event.data);
+          },
+        }, initialClipStartRef.current);
 
-        playerRef.current = player;
+        if (player) playerRef.current = player;
       })
       .catch(() => {
         // The native YouTube controls remain available if the API is unavailable.
@@ -120,7 +70,8 @@ export function RevisionVideoPlayer({
 
     return () => {
       cancelled = true;
-      playerRef.current?.destroy();
+      const player = playerRef.current;
+      if (isYouTubePlayer(player)) player.destroy();
       playerRef.current = null;
     };
     // The iframe is mounted once; song changes seek the same player below.
@@ -129,8 +80,10 @@ export function RevisionVideoPlayer({
   useEffect(() => {
     if (!isPlayerReady) return;
     stopAtRef.current = null;
-    playerRef.current?.seekTo(clipStart, true);
-    playerRef.current?.pauseVideo();
+    const player = playerRef.current;
+    if (!isYouTubePlayer(player)) return;
+    player.seekTo(clipStart, true);
+    player.pauseVideo();
     const frameId = window.requestAnimationFrame(() => {
       setCurrentTime(clipStart);
       setPlayerState(2);
@@ -143,7 +96,7 @@ export function RevisionVideoPlayer({
 
     const intervalId = window.setInterval(() => {
       const player = playerRef.current;
-      if (!player) return;
+      if (!isYouTubePlayer(player)) return;
 
       const time = player.getCurrentTime();
       setCurrentTime(time);
@@ -161,31 +114,33 @@ export function RevisionVideoPlayer({
   }, [clipEnd, isPlayerReady]);
 
   function playCurrentClip() {
-    if (!playerRef.current) return;
+    const player = getPlayer();
+    if (!player) return;
     stopAtRef.current = clipEnd;
-    playerRef.current.seekTo(clipStart, true);
-    playerRef.current.playVideo();
+    player.seekTo(clipStart, true);
+    player.playVideo();
     setCurrentTime(clipStart);
   }
 
   function playFullPerformance() {
-    if (!playerRef.current) return;
+    const player = getPlayer();
+    if (!player) return;
     stopAtRef.current = null;
-    playerRef.current.seekTo(0, true);
-    playerRef.current.playVideo();
+    player.seekTo(0, true);
+    player.playVideo();
     setCurrentTime(0);
   }
 
   function pause() {
     stopAtRef.current = null;
-    playerRef.current?.pauseVideo();
+    getPlayer()?.pauseVideo();
     setPlayerState(2);
   }
 
   function seek(value: string) {
     const nextTime = Number(value);
     if (!Number.isFinite(nextTime)) return;
-    playerRef.current?.seekTo(nextTime, true);
+    getPlayer()?.seekTo(nextTime, true);
     setCurrentTime(nextTime);
   }
 
@@ -207,14 +162,7 @@ export function RevisionVideoPlayer({
       </div>
 
       <div className="relative aspect-video bg-black">
-        <iframe
-          ref={iframeRef}
-          className="absolute inset-0 h-full w-full"
-          src={`https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1&start=${Math.floor(clipStart)}&rel=0&modestbranding=1`}
-          title={`${songTitle} revision playback`}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+        <div ref={playerHostRef} className="absolute inset-0 h-full w-full" aria-label={`${songTitle} revision playback`} />
       </div>
 
       <div className="space-y-3 p-4">

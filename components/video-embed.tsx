@@ -6,65 +6,15 @@ import { PlayerControls } from "@/components/player-controls";
 import { usePlayer } from "@/components/player-context";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
 import { trackEvent } from "@/components/analytics";
+import {
+  createYouTubePlayer,
+  isYouTubePlayer,
+  loadYouTubeIframeApi,
+  type YouTubePlayer,
+} from "@/lib/youtube-iframe-api";
 
-type YouTubePlayer = {
-  destroy: () => void;
-  getCurrentTime: () => number;
-  getPlayerState: () => number;
-  loadVideoById: (videoId: string, startSeconds?: number) => void;
-  pauseVideo: () => void;
-  playVideo: () => void;
-  seekTo: (seconds: number, allowSeekAhead: boolean) => void;
-};
-
-type YouTubePlayerEvent = { target: YouTubePlayer };
-type YouTubeStateChangeEvent = { data: number; target: YouTubePlayer };
-
-type YouTubeApi = {
-  Player: new (
-    element: HTMLIFrameElement,
-    options: {
-      events: {
-        onReady: (event: YouTubePlayerEvent) => void;
-        onStateChange: (event: YouTubeStateChangeEvent) => void;
-      };
-    },
-  ) => YouTubePlayer;
-};
-
-declare global {
-  interface Window {
-    YT?: YouTubeApi;
-    onYouTubeIframeAPIReady?: () => void;
-  }
-}
-
-let iframeApiPromise: Promise<void> | null = null;
 const YOUTUBE_PLAYER_PLAYING = 1;
 const YOUTUBE_PLAYER_BUFFERING = 3;
-
-function loadYouTubeIframeApi() {
-  if (window.YT?.Player) return Promise.resolve();
-  if (iframeApiPromise) return iframeApiPromise;
-
-  iframeApiPromise = new Promise((resolve, reject) => {
-    const previousReady = window.onYouTubeIframeAPIReady;
-    window.onYouTubeIframeAPIReady = () => {
-      previousReady?.();
-      resolve();
-    };
-
-    const script = document.createElement("script");
-    script.src = "https://www.youtube.com/iframe_api";
-    script.onerror = () => {
-      iframeApiPromise = null;
-      reject(new Error("Unable to load the YouTube IFrame Player API."));
-    };
-    document.head.append(script);
-  });
-
-  return iframeApiPromise;
-}
 
 /**
  * A stable YouTube iframe that the IFrame Player API seeks in place. Calling
@@ -82,8 +32,10 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
     onlySongMode,
     setOnlySongMode,
   } = usePlayer();
-  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const playerHostRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
+  const songsRef = useRef(songs);
+  const videoIdRef = useRef(videoId);
   const [initialStart] = useState(() => Math.floor(startAt));
   const previousTimeRef = useRef(initialStart);
   const trackingTimeRef = useRef<number | null>(null);
@@ -92,9 +44,19 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
   const [playerState, setPlayerState] = useState<number | null>(null);
   const safeDuration = Math.max(0, duration);
 
+  useEffect(() => {
+    songsRef.current = songs;
+    videoIdRef.current = videoId;
+  }, [songs, videoId]);
+
+  function getPlayer() {
+    const player = playerRef.current;
+    return isYouTubePlayer(player) ? player : null;
+  }
+
   function seekTo(seconds: number, allowSeekAhead: boolean) {
     const nextTime = Math.min(Math.max(0, seconds), safeDuration);
-    playerRef.current?.seekTo(nextTime, allowSeekAhead);
+    getPlayer()?.seekTo(nextTime, allowSeekAhead);
     previousTimeRef.current = nextTime;
     trackingTimeRef.current = nextTime;
     setCurrentTime(nextTime);
@@ -108,43 +70,42 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
     let cancelled = false;
 
     void loadYouTubeIframeApi()
-      .then(() => {
-        if (cancelled || !iframeRef.current || !window.YT?.Player) return;
+      .then((api) => {
+        if (cancelled || !playerHostRef.current) return;
 
-        const player = new window.YT.Player(iframeRef.current, {
-          events: {
-            onReady: (event) => {
-              if (cancelled) return;
-              playerRef.current = event.target;
-              const currentTime = event.target.getCurrentTime();
-              previousTimeRef.current = currentTime;
-              trackingTimeRef.current = currentTime;
-              setCurrentTime(currentTime);
-              setPlayerState(event.target.getPlayerState());
-              setIsPlayerReady(true);
-            },
-            onStateChange: (event) => {
-              if (cancelled) return;
-              if (event.data === YOUTUBE_PLAYER_PLAYING) {
-                const currentTime = event.target.getCurrentTime();
-                const song = songs.find((item) => currentTime >= item.clipStart && currentTime < item.clipEnd);
-                const songKey = `${videoId}:${song?.index ?? "performance"}`;
-                if (!playedSongKeysRef.current.has(songKey)) {
-                  playedSongKeysRef.current.add(songKey);
-                  trackEvent({ eventName: "song_play_started", source: "video_embed", performanceVideoId: videoId, songIndex: song?.index });
-                }
-              }
-              if (event.data !== YOUTUBE_PLAYER_BUFFERING) {
-                const currentTime = event.target.getCurrentTime();
-                previousTimeRef.current = currentTime;
-                setCurrentTime(currentTime);
-              }
-              setPlayerState(event.data);
-            },
+        const player = createYouTubePlayer(api, playerHostRef.current, videoIdRef.current, {
+          onReady: (event) => {
+            if (cancelled || !isYouTubePlayer(event.target)) return;
+            playerRef.current = event.target;
+            const currentTime = event.target.getCurrentTime();
+            previousTimeRef.current = currentTime;
+            trackingTimeRef.current = currentTime;
+            setCurrentTime(currentTime);
+            setPlayerState(event.target.getPlayerState());
+            setIsPlayerReady(true);
           },
-        });
+          onStateChange: (event) => {
+            if (cancelled || !isYouTubePlayer(event.target)) return;
+            const player = event.target;
+            if (event.data === YOUTUBE_PLAYER_PLAYING) {
+              const currentTime = player.getCurrentTime();
+              const song = songsRef.current.find((item) => currentTime >= item.clipStart && currentTime < item.clipEnd);
+              const songKey = `${videoIdRef.current}:${song?.index ?? "performance"}`;
+              if (!playedSongKeysRef.current.has(songKey)) {
+                playedSongKeysRef.current.add(songKey);
+                trackEvent({ eventName: "song_play_started", source: "video_embed", performanceVideoId: videoIdRef.current, songIndex: song?.index });
+              }
+            }
+            if (event.data !== YOUTUBE_PLAYER_BUFFERING) {
+              const currentTime = player.getCurrentTime();
+              previousTimeRef.current = currentTime;
+              setCurrentTime(currentTime);
+            }
+            setPlayerState(event.data);
+          },
+        }, initialStart);
 
-        playerRef.current = player;
+        if (player) playerRef.current = player;
       })
       .catch(() => {
         // Native YouTube controls remain available if the API is unavailable.
@@ -152,16 +113,18 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
 
     return () => {
       cancelled = true;
-      playerRef.current?.destroy();
+      const player = playerRef.current;
+      if (isYouTubePlayer(player)) player.destroy();
       playerRef.current = null;
     };
-  }, [setCurrentTime, songs, videoId]);
+  }, [initialStart, setCurrentTime]);
 
   useEffect(() => {
     if (!isPlayerReady || seekRequestId === 0) return;
     previousTimeRef.current = startAt;
     trackingTimeRef.current = startAt;
-    playerRef.current?.seekTo(Math.floor(startAt), true);
+    const player = playerRef.current;
+    if (isYouTubePlayer(player)) player.seekTo(Math.floor(startAt), true);
   }, [isPlayerReady, seekRequestId, startAt]);
 
   useEffect(() => {
@@ -169,7 +132,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
 
     const intervalId = window.setInterval(() => {
       const player = playerRef.current;
-      if (!player || player.getPlayerState() !== YOUTUBE_PLAYER_PLAYING) return;
+      if (!isYouTubePlayer(player) || player.getPlayerState() !== YOUTUBE_PLAYER_PLAYING) return;
 
       const currentTime = player.getCurrentTime();
       const previousTime = trackingTimeRef.current;
@@ -177,7 +140,9 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       if (previousTime === null) return;
 
       const delta = currentTime - previousTime;
-      if (delta > 0 && delta <= 30) void recordListeningProgress(videoId, delta);
+      if (delta > 0 && delta <= 30) {
+        void recordListeningProgress(videoIdRef.current, delta).catch(() => undefined);
+      }
     }, 15000);
 
     return () => window.clearInterval(intervalId);
@@ -188,7 +153,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
 
     const intervalId = window.setInterval(() => {
       const player = playerRef.current;
-      if (!player || player.getPlayerState() !== YOUTUBE_PLAYER_PLAYING) return;
+      if (!isYouTubePlayer(player) || player.getPlayerState() !== YOUTUBE_PLAYER_PLAYING) return;
       setCurrentTime(player.getCurrentTime());
     }, 250);
 
@@ -205,7 +170,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
 
     const intervalId = window.setInterval(() => {
       const player = playerRef.current;
-      if (!player || player.getPlayerState() !== YOUTUBE_PLAYER_PLAYING) return;
+      if (!isYouTubePlayer(player) || player.getPlayerState() !== YOUTUBE_PLAYER_PLAYING) return;
 
       const currentTime = player.getCurrentTime();
       const action = findOnlySongModeAction(
@@ -257,14 +222,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       </div>
 
       <div className="relative aspect-video rounded-[10px] overflow-hidden border border-border bg-black">
-        <iframe
-          ref={iframeRef}
-          className="absolute inset-0 w-full h-full"
-          src={`https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1&start=${initialStart}&rel=0`}
-          title="Tiny Desk Concert"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+        <div ref={playerHostRef} className="absolute inset-0 h-full w-full" aria-label="Tiny Desk Concert" />
       </div>
 
       <PlayerControls
@@ -274,8 +232,10 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
         isPlaying={playerState === YOUTUBE_PLAYER_PLAYING}
         isReady={isPlayerReady}
         onTogglePlay={() => {
-          if (playerState === YOUTUBE_PLAYER_PLAYING) playerRef.current?.pauseVideo();
-          else playerRef.current?.playVideo();
+          const player = getPlayer();
+          if (!player) return;
+          if (playerState === YOUTUBE_PLAYER_PLAYING) player.pauseVideo();
+          else player.playVideo();
         }}
         onSeek={seekTo}
         onSkip={skipBy}

@@ -4,45 +4,16 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { PlayerControls } from "@/components/player-controls";
 import type { PlaylistTrack, PlaylistType } from "@/lib/types";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
-
-type YouTubePlayer = {
-  destroy: () => void;
-  getCurrentTime: () => number;
-  getPlayerState: () => number;
-  loadVideoById: (videoId: string, startSeconds?: number) => void;
-  pauseVideo: () => void;
-  playVideo: () => void;
-  seekTo: (seconds: number, allowSeekAhead: boolean) => void;
-};
-
-type YouTubePlayerEvent = { target: YouTubePlayer };
-type YouTubeStateChangeEvent = { data: number; target: YouTubePlayer };
-
-type YouTubeApi = {
-  Player: new (
-    element: HTMLIFrameElement,
-    options: {
-      events: {
-        onReady: (event: YouTubePlayerEvent) => void;
-        onStateChange: (event: YouTubeStateChangeEvent) => void;
-      };
-    },
-  ) => YouTubePlayer;
-};
-
-type YouTubeWindow = Window & {
-  YT?: YouTubeApi;
-  onYouTubeIframeAPIReady?: () => void;
-};
+import {
+  createYouTubePlayer,
+  isYouTubePlayer,
+  loadYouTubeIframeApi,
+  type YouTubePlayer,
+} from "@/lib/youtube-iframe-api";
 
 const PLAYER_ENDED = 0;
 const PLAYER_PLAYING = 1;
 const PLAYER_BUFFERING = 3;
-let iframeApiPromise: Promise<void> | null = null;
-
-function youtubeWindow() {
-  return window as YouTubeWindow;
-}
 
 function createShuffleOrder(tracks: PlaylistTrack[], startIndex: number) {
   const remaining = tracks
@@ -53,30 +24,6 @@ function createShuffleOrder(tracks: PlaylistTrack[], startIndex: number) {
     [remaining[index], remaining[swapIndex]] = [remaining[swapIndex], remaining[index]];
   }
   return [startIndex, ...remaining];
-}
-
-function loadYouTubeIframeApi() {
-  const currentWindow = youtubeWindow();
-  if (currentWindow.YT?.Player) return Promise.resolve();
-  if (iframeApiPromise) return iframeApiPromise;
-
-  iframeApiPromise = new Promise((resolve, reject) => {
-    const previousReady = currentWindow.onYouTubeIframeAPIReady;
-    currentWindow.onYouTubeIframeAPIReady = () => {
-      previousReady?.();
-      resolve();
-    };
-
-    const script = document.createElement("script");
-    script.src = "https://www.youtube.com/iframe_api";
-    script.onerror = () => {
-      iframeApiPromise = null;
-      reject(new Error("Unable to load the YouTube IFrame Player API."));
-    };
-    document.head.append(script);
-  });
-
-  return iframeApiPromise;
 }
 
 export function PlaylistPlayer({
@@ -96,7 +43,7 @@ export function PlaylistPlayer({
   onCurrentTrackChange?: (track: PlaylistTrack) => void;
   onTrackPlay?: (track: PlaylistTrack) => void;
 }) {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const playerHostRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
   const tracksRef = useRef(tracks);
   const currentIndexRef = useRef(0);
@@ -118,6 +65,11 @@ export function PlaylistPlayer({
   const [isShuffling, setIsShuffling] = useState(false);
   const [shufflePosition, setShufflePosition] = useState(0);
 
+  function getPlayer() {
+    const player = playerRef.current;
+    return isYouTubePlayer(player) ? player : null;
+  }
+
   const resetShuffleOrder = useCallback((startIndex: number) => {
     shuffleOrderRef.current = createShuffleOrder(tracksRef.current, startIndex);
     shufflePositionRef.current = 0;
@@ -126,7 +78,8 @@ export function PlaylistPlayer({
 
   function loadTrack(index: number, preservePlaybackOrder = false) {
     const track = tracksRef.current[index];
-    if (!track || !playerRef.current) return;
+    const player = getPlayer();
+    if (!track || !player) return;
 
     if (isShufflingRef.current && !preservePlaybackOrder) resetShuffleOrder(index);
     const previousTrack = tracksRef.current[currentIndexRef.current];
@@ -137,10 +90,10 @@ export function PlaylistPlayer({
     setCurrentTime(startAt);
     advanceLockRef.current = true;
     if (previousTrack?.performanceVideoId === track.performanceVideoId) {
-      playerRef.current.seekTo(Math.max(0, track.clipStart), true);
-      playerRef.current.playVideo();
+      player.seekTo(Math.max(0, track.clipStart), true);
+      player.playVideo();
     } else {
-      playerRef.current.loadVideoById(track.performanceVideoId, Math.max(0, track.clipStart));
+      player.loadVideoById(track.performanceVideoId, Math.max(0, track.clipStart));
     }
     window.setTimeout(() => {
       advanceLockRef.current = false;
@@ -155,7 +108,7 @@ export function PlaylistPlayer({
       const shuffleOrder = shuffleOrderRef.current ?? [currentIndexRef.current];
       const nextPosition = shufflePositionRef.current + 1;
       if (nextPosition >= shuffleOrder.length) {
-        playerRef.current?.pauseVideo();
+        getPlayer()?.pauseVideo();
         setPlayerState(2);
         return;
       }
@@ -165,7 +118,7 @@ export function PlaylistPlayer({
     } else {
       nextIndex = currentIndexRef.current + 1;
       if (nextIndex >= tracksRef.current.length) {
-        playerRef.current?.pauseVideo();
+        getPlayer()?.pauseVideo();
         setPlayerState(2);
         return;
       }
@@ -221,7 +174,7 @@ export function PlaylistPlayer({
   function seekTo(seconds: number, allowSeekAhead: boolean) {
     const { start, end } = timelineBounds(tracksRef.current[currentIndexRef.current]);
     const nextTime = Math.min(Math.max(start, seconds), end);
-    playerRef.current?.seekTo(nextTime, allowSeekAhead);
+    getPlayer()?.seekTo(nextTime, allowSeekAhead);
     previousTimeRef.current = nextTime;
     setCurrentTime(nextTime);
   }
@@ -258,45 +211,44 @@ export function PlaylistPlayer({
   useEffect(() => {
     let cancelled = false;
 
-    if (!tracksRef.current[0] || !iframeRef.current) return;
+    if (!tracksRef.current[0] || !playerHostRef.current) return;
 
     void loadYouTubeIframeApi()
-      .then(() => {
-        const currentWindow = youtubeWindow();
-        if (cancelled || !iframeRef.current || !currentWindow.YT?.Player) return;
+      .then((api) => {
+        const firstTrack = tracksRef.current[0];
+        if (cancelled || !playerHostRef.current || !firstTrack) return;
 
-        const player = new currentWindow.YT.Player(iframeRef.current, {
-          events: {
-            onReady: (event) => {
-              if (cancelled) return;
-              playerRef.current = event.target;
-              const currentTime = event.target.getCurrentTime();
+        const player = createYouTubePlayer(api, playerHostRef.current, firstTrack.performanceVideoId, {
+          onReady: (event) => {
+            if (cancelled || !isYouTubePlayer(event.target)) return;
+            playerRef.current = event.target;
+            const currentTime = event.target.getCurrentTime();
+            previousTimeRef.current = currentTime;
+            setCurrentTime(currentTime);
+            setPlayerState(event.target.getPlayerState());
+            setIsPlayerReady(true);
+          },
+          onStateChange: (event) => {
+            if (cancelled || !isYouTubePlayer(event.target)) return;
+            const player = event.target;
+            if (event.data !== PLAYER_BUFFERING) {
+              const currentTime = player.getCurrentTime();
               previousTimeRef.current = currentTime;
               setCurrentTime(currentTime);
-              setPlayerState(event.target.getPlayerState());
-              setIsPlayerReady(true);
-            },
-            onStateChange: (event) => {
-              if (cancelled) return;
-              if (event.data !== PLAYER_BUFFERING) {
-                const currentTime = event.target.getCurrentTime();
-                previousTimeRef.current = currentTime;
-                setCurrentTime(currentTime);
-              }
-              setPlayerState(event.data);
-              if (event.data === PLAYER_PLAYING) {
-                const track = tracksRef.current[currentIndexRef.current];
-                if (track) onTrackPlayRef.current?.(track);
-              }
-              if (event.data === PLAYER_ENDED) {
-                if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current, true);
-                else advanceToNextRef.current();
-              }
-            },
+            }
+            setPlayerState(event.data);
+            if (event.data === PLAYER_PLAYING) {
+              const track = tracksRef.current[currentIndexRef.current];
+              if (track) onTrackPlayRef.current?.(track);
+            }
+            if (event.data === PLAYER_ENDED) {
+              if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current, true);
+              else advanceToNextRef.current();
+            }
           },
-        });
+        }, firstTrack.clipStart);
 
-        playerRef.current = player;
+        if (player) playerRef.current = player;
       })
       .catch(() => {
         // The native YouTube controls remain available if the API is unavailable.
@@ -304,7 +256,8 @@ export function PlaylistPlayer({
 
     return () => {
       cancelled = true;
-      playerRef.current?.destroy();
+      const player = playerRef.current;
+      if (isYouTubePlayer(player)) player.destroy();
       playerRef.current = null;
     };
     // The player is intentionally mounted once. Track changes are handled by refs
@@ -328,7 +281,7 @@ export function PlaylistPlayer({
     const intervalId = window.setInterval(() => {
       const player = playerRef.current;
       const track = tracksRef.current[currentIndexRef.current];
-      if (!player || !track || player.getPlayerState() !== PLAYER_PLAYING) return;
+      if (!isYouTubePlayer(player) || !track || player.getPlayerState() !== PLAYER_PLAYING) return;
 
       const currentTime = player.getCurrentTime();
       setCurrentTime(currentTime);
@@ -391,14 +344,7 @@ export function PlaylistPlayer({
   return (
     <section className="mb-8 rounded-xl border border-border bg-card p-4 sm:p-5">
       <div className="relative aspect-video overflow-hidden rounded-lg border border-border bg-black">
-        <iframe
-          ref={iframeRef}
-          className="absolute inset-0 h-full w-full"
-          src={`https://www.youtube-nocookie.com/embed/${tracks[0].performanceVideoId}?enablejsapi=1&start=${Math.floor(tracks[0].clipStart)}&rel=0`}
-          title="Playlist player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+        <div ref={playerHostRef} className="absolute inset-0 h-full w-full" aria-label="Playlist player" />
       </div>
 
       <PlayerControls
@@ -408,8 +354,10 @@ export function PlaylistPlayer({
         isPlaying={isPlaying}
         isReady={isPlayerReady}
         onTogglePlay={() => {
-          if (isPlaying) playerRef.current?.pauseVideo();
-          else playerRef.current?.playVideo();
+          const player = getPlayer();
+          if (!player) return;
+          if (isPlaying) player.pauseVideo();
+          else player.playVideo();
         }}
         onSeek={seekTo}
         onSkip={skipBy}
