@@ -7,7 +7,7 @@ import { TruthRequestNotification } from "@/components/truth-request-notificatio
 import { getLatestResolvedTruthRequest } from "@/lib/review-data";
 import { isAdminSession } from "@/lib/admin-session";
 import { signOut } from "@/app/auth/actions";
-import { WandSparkles } from "lucide-react";
+import { Dices } from "lucide-react";
 
 /**
  * Shared header, per the design handoff. Rendered explicitly at the top of
@@ -66,18 +66,17 @@ export async function Header({
 
         <Link
           href="/adventure"
-          className="group relative inline-flex shrink-0 items-center gap-2 overflow-hidden whitespace-nowrap rounded-full border border-primary/35 bg-primary/10 px-3 py-1.5 text-sm font-semibold text-primary shadow-[0_0_18px_oklch(0.68_0.17_25_/_0.08)] transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/70 hover:bg-primary/15 hover:shadow-[0_0_22px_oklch(0.68_0.17_25_/_0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-md border border-border bg-secondary/45 px-2.5 py-1.5 text-sm font-semibold text-foreground transition-colors hover:border-yellow-400/45 hover:bg-yellow-400/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
-          <span
+          <Dices
             aria-hidden
-            className="pointer-events-none absolute inset-y-0 left-0 w-12 -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-[310%]"
+            className="size-4 text-yellow-400"
+            strokeWidth={2}
           />
-          <WandSparkles
-            aria-hidden
-            className="relative size-4 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
-            strokeWidth={2.2}
-          />
-          I&apos;m feeling adventurous
+          Random pick
+          <span className="rounded-full border border-yellow-400/35 bg-yellow-400/15 px-1.5 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wide text-yellow-300">
+            Recommended
+          </span>
         </Link>
 
         {process.env.NEXT_PUBLIC_FEEDBACK_URL && (

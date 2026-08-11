@@ -104,7 +104,7 @@ function AdventureSetup({
             <div className="mb-2 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
               Random listening
             </div>
-            <h1 className="mb-2 text-[32px] font-bold text-foreground">I&apos;m feeling adventurous</h1>
+            <h1 className="mb-2 text-[32px] font-bold text-foreground">Random pick</h1>
             <p className="text-[14px] leading-relaxed text-muted-foreground">
               Let Tiny Office choose what plays next. Set the kind of discovery you want, then press start for a shuffled queue.
             </p>
@@ -223,7 +223,7 @@ function AdventureSetup({
               className="relative size-4 transition-transform duration-300 group-hover:rotate-6"
               strokeWidth={2.3}
             />
-            Start the adventure
+            Start random pick
           </button>
         </div>
         <AdventureSetupFeatureHints />

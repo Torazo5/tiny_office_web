@@ -4,6 +4,7 @@ import { useState, useTransition } from "react";
 import { SlidersHorizontal, Sparkles } from "lucide-react";
 import { savePlaybackDefaults } from "@/app/profile/actions";
 import {
+  matchingPlaybackPresetId,
   PLAYBACK_PRESETS,
   normalizePlaybackSettings,
   type PlaybackSettings,
@@ -27,6 +28,7 @@ export function PlaybackCustomizer({
   const [draft, setDraft] = useState(settings);
   const [message, setMessage] = useState<string | null>(null);
   const [isSaving, startSaving] = useTransition();
+  const selectedPresetId = matchingPlaybackPresetId(draft);
 
   function apply() {
     const next = normalizePlaybackSettings(draft);
@@ -124,7 +126,12 @@ export function PlaybackCustomizer({
                       key={preset.id}
                       type="button"
                       onClick={() => setDraft(preset.settings)}
-                      className="rounded-lg border border-input bg-secondary/30 p-3 text-left transition-colors hover:border-primary/50"
+                      aria-pressed={selectedPresetId === preset.id}
+                      className={`rounded-lg border p-3 text-left transition-colors ${
+                        selectedPresetId === preset.id
+                          ? "border-primary bg-primary/10 shadow-sm"
+                          : "border-input bg-secondary/30 hover:border-primary/50"
+                      }`}
                     >
                       <span className="flex items-center gap-1.5 text-[12px] font-semibold text-foreground">
                         {preset.name}

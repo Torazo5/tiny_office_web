@@ -122,7 +122,7 @@ export function RecentlyPlayedPanel({
             <h2 className="text-sm font-semibold text-foreground">Recently played</h2>
           </div>
           <p className="mt-1 text-[12px] text-muted-foreground">
-            The last songs you started in Feeling Adventurous.
+            The last songs you started from Random pick.
           </p>
         </div>
         <button

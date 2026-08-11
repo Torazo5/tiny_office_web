@@ -9,10 +9,10 @@ export type PlaybackSettings = {
   cutAudience: boolean;
 };
 
-export const DEFAULT_PLAYBACK_SETTINGS: PlaybackSettings = {
-  gapSeconds: 1,
-  fadeOutSeconds: 1.8,
-  fadeInSeconds: 1,
+const SEAMLESS_PLAYBACK_SETTINGS: PlaybackSettings = {
+  gapSeconds: 0.25,
+  fadeOutSeconds: 2.2,
+  fadeInSeconds: 1.2,
   cutAudience: true,
 };
 
@@ -33,9 +33,21 @@ export const PLAYBACK_PRESETS = [
     id: "seamless",
     name: "Seamless",
     description: "Tight cuts and a short pause for a polished listening flow.",
-    settings: { gapSeconds: 0.25, fadeOutSeconds: 2.2, fadeInSeconds: 1.2, cutAudience: true },
+    settings: SEAMLESS_PLAYBACK_SETTINGS,
   },
 ] as const satisfies readonly { id: string; name: string; description: string; settings: PlaybackSettings }[];
+
+/** New sessions begin with the recommended seamless transition. */
+export const DEFAULT_PLAYBACK_SETTINGS: PlaybackSettings = SEAMLESS_PLAYBACK_SETTINGS;
+
+export function matchingPlaybackPresetId(settings: PlaybackSettings) {
+  return PLAYBACK_PRESETS.find((preset) => (
+    preset.settings.gapSeconds === settings.gapSeconds
+    && preset.settings.fadeOutSeconds === settings.fadeOutSeconds
+    && preset.settings.fadeInSeconds === settings.fadeInSeconds
+    && preset.settings.cutAudience === settings.cutAudience
+  ))?.id ?? null;
+}
 
 function readSeconds(value: unknown, fallback: number, maximum: number) {
   const seconds = typeof value === "number" ? value : Number(value);
