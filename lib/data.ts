@@ -128,7 +128,6 @@ async function loadBrowsePerformances(): Promise<Performance[]> {
     supabase
       .from("performances")
       .select("video_id, artist, source_title, date, duration, method, confidence_avg, confidence_min, verified")
-      .neq("method", "manual")
       .order("artist"),
     supabase
       .from("songs")
@@ -184,7 +183,6 @@ export async function getBrowsePerformancePage(
   const performancesResult = await supabase
     .from("performances")
     .select("video_id, artist, source_title, date, duration, method, confidence_avg, confidence_min, verified", { count: "exact" })
-    .neq("method", "manual")
     .order("verified", { ascending: false })
     .order("confidence_avg", { ascending: false })
     .order("artist")
@@ -252,7 +250,6 @@ async function loadPerformance(videoId: string): Promise<Performance | null> {
       .from("performances")
       .select("video_id, artist, source_title, date, duration, method, confidence_avg, confidence_min, verified")
       .eq("video_id", videoId)
-      .neq("method", "manual")
       .maybeSingle(),
     supabase
       .from("songs")

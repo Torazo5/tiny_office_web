@@ -128,8 +128,9 @@ kept separate from user drafts and public main truth.
 Known limitations:
 
 - Upload dates are not populated by the current pipeline snapshot.
-- `method = 'manual'` reports are excluded from the browse and review queue
-  because the app does not yet have a free-scrub manual-marking workflow.
+- Manual reports are included in Browse/Search when present in the seeded
+  catalog. Their boundaries remain the pipeline's supplied values and should
+  be reviewed before treating them as fully verified.
 - Playback is provider-controlled. The app can seek and constrain playback,
   but it does not host, proxy, or persist YouTube media.
 - The design is intentionally dark-only; there is no light theme.
