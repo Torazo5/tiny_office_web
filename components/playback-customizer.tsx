@@ -135,7 +135,7 @@ export function PlaybackCustomizer({
                     >
                       <span className="flex items-center gap-1.5 text-[12px] font-semibold text-foreground">
                         {preset.name}
-                        {preset.id === "seamless" && (
+                        {preset.id === "default" && (
                           <span className="rounded-full bg-primary/15 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide text-primary">Recommended</span>
                         )}
                       </span>

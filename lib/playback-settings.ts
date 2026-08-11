@@ -11,12 +11,12 @@ export type PlaybackSettings = {
   builtInFade: boolean;
 };
 
-const SEAMLESS_PLAYBACK_SETTINGS: PlaybackSettings = {
-  gapSeconds: 2.5,
+const DEFAULT_PRESET_SETTINGS: PlaybackSettings = {
+  gapSeconds: 1.5,
   fadeOutSeconds: 2,
   fadeInSeconds: 1.2,
   cutAudience: true,
-  builtInFade: true,
+  builtInFade: false,
 };
 
 export const PLAYBACK_PRESETS = [
@@ -33,15 +33,15 @@ export const PLAYBACK_PRESETS = [
     settings: { gapSeconds: 1, fadeOutSeconds: 1.8, fadeInSeconds: 1, cutAudience: false, builtInFade: true },
   },
   {
-    id: "seamless",
-    name: "Seamless",
-    description: "Tight cuts and a short pause for a polished listening flow.",
-    settings: SEAMLESS_PLAYBACK_SETTINGS,
+    id: "default",
+    name: "Default",
+    description: "A balanced pause and soft fade for everyday listening.",
+    settings: DEFAULT_PRESET_SETTINGS,
   },
 ] as const satisfies readonly { id: string; name: string; description: string; settings: PlaybackSettings }[];
 
-/** New sessions begin with the recommended seamless transition. */
-export const DEFAULT_PLAYBACK_SETTINGS: PlaybackSettings = SEAMLESS_PLAYBACK_SETTINGS;
+/** New sessions begin with the recommended default transition. */
+export const DEFAULT_PLAYBACK_SETTINGS: PlaybackSettings = DEFAULT_PRESET_SETTINGS;
 
 export function matchingPlaybackPresetId(settings: PlaybackSettings) {
   return PLAYBACK_PRESETS.find((preset) => (

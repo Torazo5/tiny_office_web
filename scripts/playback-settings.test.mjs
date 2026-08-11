@@ -7,13 +7,13 @@ const {
   matchingPlaybackPresetId,
 } = await import("../lib/playback-settings.ts");
 
-test("seamless is the default playback configuration", () => {
-  const seamless = PLAYBACK_PRESETS.find((preset) => preset.id === "seamless");
-  assert.deepEqual(DEFAULT_PLAYBACK_SETTINGS, seamless.settings);
-  assert.equal(matchingPlaybackPresetId(DEFAULT_PLAYBACK_SETTINGS), "seamless");
-  assert.equal(DEFAULT_PLAYBACK_SETTINGS.gapSeconds, 2.5);
+test("default is the default playback configuration", () => {
+  const defaultPreset = PLAYBACK_PRESETS.find((preset) => preset.id === "default");
+  assert.deepEqual(DEFAULT_PLAYBACK_SETTINGS, defaultPreset.settings);
+  assert.equal(matchingPlaybackPresetId(DEFAULT_PLAYBACK_SETTINGS), "default");
+  assert.equal(DEFAULT_PLAYBACK_SETTINGS.gapSeconds, 1.5);
   assert.equal(DEFAULT_PLAYBACK_SETTINGS.fadeOutSeconds, 2);
-  assert.equal(DEFAULT_PLAYBACK_SETTINGS.builtInFade, true);
+  assert.equal(DEFAULT_PLAYBACK_SETTINGS.builtInFade, false);
 });
 
 test("manual settings do not claim a preset", () => {

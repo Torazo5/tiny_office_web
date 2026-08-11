@@ -72,7 +72,7 @@ const ADVENTURE_PLAY_STEPS: HintStep[] = [
   {
     target: "playback-settings",
     title: "Set the handoff between songs",
-    detail: "Customize the gap and fades here whenever you want the queue to feel more seamless—or give each song a little breathing room.",
+    detail: "Customize the gap and fades here whenever you want to tune the queue—or give each song a little breathing room.",
   },
 ];
 
