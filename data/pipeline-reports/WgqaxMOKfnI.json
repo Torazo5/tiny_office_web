@@ -1,0 +1,476 @@
+{
+  "video_id": "WgqaxMOKfnI",
+  "title": "Billy Strings: Tiny Desk Concert",
+  "duration": 1358,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/WgqaxMOKfnI.mp3",
+  "description_songs": [
+    "Red Daisy",
+    "My Alice",
+    "Malfunction Junction",
+    "Gild the Lily"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 41 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 163.68,
+      "end": 192.95999999999998,
+      "duration": 29.279999999999973,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 203.04,
+      "end": 204.48,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 209.76,
+      "end": 211.2,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 222.23999999999998,
+      "end": 225.6,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 449.76,
+      "end": 456.48,
+      "duration": 6.720000000000027,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 459.35999999999996,
+      "end": 466.56,
+      "duration": 7.2000000000000455,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 483.35999999999996,
+      "end": 486.72,
+      "duration": 3.3600000000000705,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 486.71999999999997,
+      "end": 507.84,
+      "duration": 21.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 513.12,
+      "end": 515.04,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 845.28,
+      "end": 855.84,
+      "duration": 10.56000000000006,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 873.6,
+      "end": 875.04,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 876.9599999999999,
+      "end": 879.36,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 881.76,
+      "end": 889.4399999999999,
+      "duration": 7.67999999999995,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 891.8399999999999,
+      "end": 895.68,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 903.36,
+      "end": 904.8,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 911.52,
+      "end": 913.4399999999999,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 914.4,
+      "end": 918.72,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 937.4399999999999,
+      "end": 939.36,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 940.8,
+      "end": 943.68,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 951.36,
+      "end": 952.8,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 960.0,
+      "end": 964.3199999999999,
+      "duration": 4.319999999999936,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1326.72,
+      "end": 1355.52,
+      "duration": 28.799999999999955,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 8,
+      "song": "Red Daisy",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 8,
+      "clip_end": 164.64,
+      "refined_v2_clip_end": 163.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 163.68,
+      "fade_out_end": 164.64,
+      "detected_music_release_at": 164.64,
+      "first_non_music_at": null,
+      "crowd_onset_at": 163.68,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 233,
+      "song": "My Alice",
+      "corroboration": 0,
+      "silence_match": 228.4,
+      "clip_start": 225.6,
+      "clip_end": 450.71999999999997,
+      "refined_v2_clip_end": 449.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 449.76,
+      "fade_out_end": 450.72,
+      "detected_music_release_at": 450.72,
+      "first_non_music_at": null,
+      "crowd_onset_at": 449.76,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 508,
+      "song": "Malfunction Junction",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 515.04,
+      "clip_end": 845.23,
+      "refined_v2_clip_end": 845.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 845.28,
+      "first_non_music_at": 844.8,
+      "crowd_onset_at": 845.28,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 966,
+      "song": "Gild the Lily",
+      "corroboration": 0,
+      "silence_match": 964.164,
+      "clip_start": 964.3199999999999,
+      "clip_end": 1326.72,
+      "refined_v2_clip_end": 1326.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1326.72,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.536375,
+      "duration": 0.536375
+    },
+    {
+      "start": 190.381,
+      "end": 191.278,
+      "duration": 0.897021
+    },
+    {
+      "start": 202.282,
+      "end": 203.105,
+      "duration": 0.822854
+    },
+    {
+      "start": 208.798,
+      "end": 209.823,
+      "duration": 1.02467
+    },
+    {
+      "start": 210.594,
+      "end": 211.934,
+      "duration": 1.34029
+    },
+    {
+      "start": 217.501,
+      "end": 218.178,
+      "duration": 0.677063
+    },
+    {
+      "start": 219.213,
+      "end": 219.856,
+      "duration": 0.642771
+    },
+    {
+      "start": 220.748,
+      "end": 222.793,
+      "duration": 2.04481
+    },
+    {
+      "start": 223.665,
+      "end": 224.648,
+      "duration": 0.982708
+    },
+    {
+      "start": 228.4,
+      "end": 230.531,
+      "duration": 2.13148
+    },
+    {
+      "start": 464.351,
+      "end": 464.954,
+      "duration": 0.603521
+    },
+    {
+      "start": 465.067,
+      "end": 465.755,
+      "duration": 0.6875
+    },
+    {
+      "start": 482.006,
+      "end": 483.199,
+      "duration": 1.19283
+    },
+    {
+      "start": 514.541,
+      "end": 515.983,
+      "duration": 1.44256
+    },
+    {
+      "start": 875.741,
+      "end": 876.861,
+      "duration": 1.11998
+    },
+    {
+      "start": 882.912,
+      "end": 883.453,
+      "duration": 0.541729
+    },
+    {
+      "start": 886.206,
+      "end": 886.83,
+      "duration": 0.624521
+    },
+    {
+      "start": 890.538,
+      "end": 891.724,
+      "duration": 1.18619
+    },
+    {
+      "start": 899.382,
+      "end": 900.15,
+      "duration": 0.768604
+    },
+    {
+      "start": 911.586,
+      "end": 912.086,
+      "duration": 0.500479
+    },
+    {
+      "start": 913.125,
+      "end": 916.328,
+      "duration": 3.20279
+    },
+    {
+      "start": 917.249,
+      "end": 918.028,
+      "duration": 0.77875
+    },
+    {
+      "start": 939.194,
+      "end": 940.277,
+      "duration": 1.08258
+    },
+    {
+      "start": 940.289,
+      "end": 941.115,
+      "duration": 0.826104
+    },
+    {
+      "start": 941.824,
+      "end": 942.882,
+      "duration": 1.05875
+    },
+    {
+      "start": 943.631,
+      "end": 944.231,
+      "duration": 0.599542
+    },
+    {
+      "start": 944.243,
+      "end": 944.863,
+      "duration": 0.619479
+    },
+    {
+      "start": 947.063,
+      "end": 947.875,
+      "duration": 0.812208
+    },
+    {
+      "start": 949.641,
+      "end": 950.249,
+      "duration": 0.60775
+    },
+    {
+      "start": 950.645,
+      "end": 951.167,
+      "duration": 0.522083
+    },
+    {
+      "start": 953.656,
+      "end": 954.294,
+      "duration": 0.637979
+    },
+    {
+      "start": 961.597,
+      "end": 962.384,
+      "duration": 0.787562
+    },
+    {
+      "start": 964.164,
+      "end": 964.825,
+      "duration": 0.660333
+    },
+    {
+      "start": 1354.87,
+      "end": 1358.15,
+      "duration": 3.27685
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      61,
+      76
+    ],
+    "avg": 66.5,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

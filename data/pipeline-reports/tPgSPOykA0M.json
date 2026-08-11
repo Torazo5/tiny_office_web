@@ -1,0 +1,716 @@
+{
+  "video_id": "tPgSPOykA0M",
+  "title": "Big Sean: Tiny Desk Concert",
+  "duration": 1543,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/tPgSPOykA0M.mp3",
+  "description_songs": [
+    "Memories",
+    "Nothing Is Stopping You",
+    "Blessings",
+    "Play No Games",
+    "Light",
+    "My Last",
+    "Marvin & Chardonnay",
+    "All Me",
+    "Beware",
+    "I Know",
+    "Bounce Back",
+    "One Man Can Change The World",
+    "On Up",
+    "I Don't F*** With You"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 14 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 13 usable episode(s), took top 13; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 165.6,
+      "end": 167.04,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 171.35999999999999,
+      "end": 173.76,
+      "duration": 2.4000000000000057,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 179.04,
+      "end": 180.48,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 197.76,
+      "end": 199.67999999999998,
+      "duration": 1.9199999999999875,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 299.03999999999996,
+      "end": 309.12,
+      "duration": 10.080000000000041,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 502.56,
+      "end": 554.88,
+      "duration": 52.31999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 566.4,
+      "end": 567.84,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 568.3199999999999,
+      "end": 598.08,
+      "duration": 29.760000000000105,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 731.04,
+      "end": 732.96,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 733.4399999999999,
+      "end": 737.76,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 842.4,
+      "end": 844.8,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 844.8,
+      "end": 850.56,
+      "duration": 5.759999999999991,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 872.16,
+      "end": 874.08,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 874.56,
+      "end": 876.0,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 899.04,
+      "end": 900.48,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 905.76,
+      "end": 907.1999999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 914.4,
+      "end": 916.3199999999999,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 941.76,
+      "end": 945.6,
+      "duration": 3.840000000000032,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 964.8,
+      "end": 966.72,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1085.76,
+      "end": 1087.2,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1091.52,
+      "end": 1101.6,
+      "duration": 10.079999999999927,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1152.48,
+      "end": 1153.92,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1154.3999999999999,
+      "end": 1156.8,
+      "duration": 2.400000000000091,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1275.36,
+      "end": 1275.84,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1278.72,
+      "end": 1281.6,
+      "duration": 2.8799999999998818,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1318.56,
+      "end": 1321.92,
+      "duration": 3.3600000000001273,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1329.12,
+      "end": 1329.6,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1505.28,
+      "end": 1527.84,
+      "duration": 22.559999999999945,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1534.56,
+      "end": 1540.8,
+      "duration": 6.240000000000009,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Memories",
+      "corroboration": 0,
+      "silence_match": 0.307604,
+      "clip_start": 0.0,
+      "clip_end": 197.76,
+      "refined_v2_clip_end": 197.76,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": true,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 197.76,
+      "end_unresolved_reason": "music/crowd overlap did not release within 4.0s",
+      "suspect": false,
+      "confidence": 58
+    },
+    {
+      "seconds": 197.76,
+      "song": "Nothing Is Stopping You",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 199.67999999999998,
+      "clip_end": 298.98999999999995,
+      "refined_v2_clip_end": 299.03999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 299.04,
+      "first_non_music_at": 298.56,
+      "crowd_onset_at": 299.04,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 299.03999999999996,
+      "song": "Blessings",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 309.12,
+      "clip_end": 502.03,
+      "refined_v2_clip_end": 502.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 502.08,
+      "first_non_music_at": 501.6,
+      "crowd_onset_at": 502.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 502.56,
+      "song": "Play No Games",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 502.56,
+      "clip_end": 568.3199999999999,
+      "refined_v2_clip_end": 568.3199999999999,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 35
+    },
+    {
+      "seconds": 568.3199999999999,
+      "song": "Light",
+      "corroboration": 0,
+      "silence_match": 570.802,
+      "clip_start": 567.84,
+      "clip_end": 568.3199999999999,
+      "refined_v2_clip_end": 568.3199999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 565.92,
+      "first_non_music_at": 565.44,
+      "crowd_onset_at": 568.32,
+      "end_unresolved_reason": null,
+      "suspect": true,
+      "confidence": 16
+    },
+    {
+      "seconds": 844.8,
+      "song": "My Last",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 850.56,
+      "clip_end": 941.76,
+      "refined_v2_clip_end": 941.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 941.76,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 941.76,
+      "song": "Marvin & Chardonnay",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 945.6,
+      "clip_end": 1090.99,
+      "refined_v2_clip_end": 1091.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1091.04,
+      "first_non_music_at": 1090.56,
+      "crowd_onset_at": 1091.52,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 1091.52,
+      "song": "All Me",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1101.6,
+      "clip_end": 1152.96,
+      "refined_v2_clip_end": 1154.3999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 1152.18,
+      "fade_out_end": 1152.96,
+      "detected_music_release_at": 1152.96,
+      "first_non_music_at": 1152.48,
+      "crowd_onset_at": 1154.4,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 1154.3999999999999,
+      "song": "Beware",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1156.8,
+      "clip_end": 1275.36,
+      "refined_v2_clip_end": 1275.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": true,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1275.36,
+      "end_unresolved_reason": "music/crowd overlap did not release within 4.0s",
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 1275.36,
+      "song": "I Know",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1281.6,
+      "clip_end": 1278.72,
+      "refined_v2_clip_end": 1278.72,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": true,
+      "confidence": 0
+    },
+    {
+      "seconds": 1278.72,
+      "song": "Bounce Back",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1281.6,
+      "clip_end": 1318.56,
+      "refined_v2_clip_end": 1318.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1318.56,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 1318.56,
+      "song": "One Man Can Change The World",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1329.6,
+      "clip_end": 1329.12,
+      "refined_v2_clip_end": 1329.12,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": true,
+      "confidence": 0
+    },
+    {
+      "seconds": 1329.12,
+      "song": "On Up",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1329.6,
+      "clip_end": 1505.28,
+      "refined_v2_clip_end": 1505.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1505.28,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 1505.28,
+      "song": "I Don't F*** With You",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1505.28,
+      "clip_end": 1543,
+      "refined_v2_clip_end": 1543,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 35
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.307604,
+      "end": 0.988646,
+      "duration": 0.681042
+    },
+    {
+      "start": 1.03248,
+      "end": 1.72302,
+      "duration": 0.690542
+    },
+    {
+      "start": 519.02,
+      "end": 519.762,
+      "duration": 0.741375
+    },
+    {
+      "start": 527.165,
+      "end": 527.987,
+      "duration": 0.82175
+    },
+    {
+      "start": 542.154,
+      "end": 542.678,
+      "duration": 0.524021
+    },
+    {
+      "start": 550.125,
+      "end": 550.636,
+      "duration": 0.510563
+    },
+    {
+      "start": 570.802,
+      "end": 571.303,
+      "duration": 0.500896
+    },
+    {
+      "start": 583.04,
+      "end": 583.68,
+      "duration": 0.64
+    },
+    {
+      "start": 589.512,
+      "end": 590.041,
+      "duration": 0.529708
+    },
+    {
+      "start": 597.909,
+      "end": 598.656,
+      "duration": 0.746937
+    },
+    {
+      "start": 598.774,
+      "end": 599.313,
+      "duration": 0.539229
+    },
+    {
+      "start": 734.511,
+      "end": 735.176,
+      "duration": 0.664333
+    },
+    {
+      "start": 780.702,
+      "end": 781.248,
+      "duration": 0.546958
+    },
+    {
+      "start": 900.754,
+      "end": 901.55,
+      "duration": 0.796
+    },
+    {
+      "start": 908.284,
+      "end": 908.874,
+      "duration": 0.59025
+    },
+    {
+      "start": 1521.8,
+      "end": 1523.64,
+      "duration": 1.83725
+    },
+    {
+      "start": 1525.85,
+      "end": 1535.06,
+      "duration": 9.20667
+    },
+    {
+      "start": 1540.67,
+      "end": 1542.93,
+      "duration": 2.25802
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      51,
+      51,
+      35,
+      16,
+      51,
+      51,
+      51,
+      51,
+      0,
+      51,
+      0,
+      51,
+      35
+    ],
+    "avg": 39.4,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

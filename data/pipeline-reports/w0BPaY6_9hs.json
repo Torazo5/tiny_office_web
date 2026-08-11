@@ -1,0 +1,289 @@
+{
+  "video_id": "w0BPaY6_9hs",
+  "title": "Phoenix: NPR Music Tiny Desk Concert",
+  "duration": 756,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/w0BPaY6_9hs.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 7.68,
+      "duration": 7.68,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 8.16,
+      "end": 9.6,
+      "duration": 1.4399999999999995,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 10.08,
+      "end": 14.4,
+      "duration": 4.32,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 139.2,
+      "end": 148.32,
+      "duration": 9.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 331.68,
+      "end": 338.88,
+      "duration": 7.199999999999989,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 342.24,
+      "end": 345.12,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 346.08,
+      "end": 347.52,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 348.47999999999996,
+      "end": 349.92,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 366.71999999999997,
+      "end": 370.08,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 376.32,
+      "end": 380.16,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 380.64,
+      "end": 383.04,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 559.68,
+      "end": 596.16,
+      "duration": 36.48000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 601.92,
+      "end": 603.84,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 604.3199999999999,
+      "end": 612.96,
+      "duration": 8.6400000000001,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 727.1999999999999,
+      "end": 754.56,
+      "duration": 27.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 136.506,
+      "end": 137.476,
+      "duration": 0.970292
+    },
+    {
+      "start": 149.905,
+      "end": 150.503,
+      "duration": 0.598042
+    },
+    {
+      "start": 155.317,
+      "end": 155.868,
+      "duration": 0.551208
+    },
+    {
+      "start": 156.105,
+      "end": 157.237,
+      "duration": 1.13231
+    },
+    {
+      "start": 157.306,
+      "end": 158.284,
+      "duration": 0.977729
+    },
+    {
+      "start": 162.428,
+      "end": 163.291,
+      "duration": 0.863021
+    },
+    {
+      "start": 163.502,
+      "end": 164.357,
+      "duration": 0.855021
+    },
+    {
+      "start": 164.359,
+      "end": 165.668,
+      "duration": 1.30929
+    },
+    {
+      "start": 330.396,
+      "end": 331.239,
+      "duration": 0.842854
+    },
+    {
+      "start": 376.318,
+      "end": 376.831,
+      "duration": 0.512146
+    },
+    {
+      "start": 379.433,
+      "end": 380.902,
+      "duration": 1.46906
+    },
+    {
+      "start": 380.915,
+      "end": 381.424,
+      "duration": 0.508417
+    },
+    {
+      "start": 382.302,
+      "end": 386.168,
+      "duration": 3.86575
+    },
+    {
+      "start": 386.215,
+      "end": 386.848,
+      "duration": 0.6325
+    },
+    {
+      "start": 558.386,
+      "end": 559.228,
+      "duration": 0.84175
+    },
+    {
+      "start": 578.602,
+      "end": 579.674,
+      "duration": 1.07229
+    },
+    {
+      "start": 580.722,
+      "end": 581.468,
+      "duration": 0.745792
+    },
+    {
+      "start": 581.483,
+      "end": 582.401,
+      "duration": 0.917521
+    },
+    {
+      "start": 584.58,
+      "end": 585.17,
+      "duration": 0.589812
+    },
+    {
+      "start": 592.506,
+      "end": 596.5,
+      "duration": 3.99417
+    },
+    {
+      "start": 597.642,
+      "end": 598.979,
+      "duration": 1.33688
+    },
+    {
+      "start": 603.881,
+      "end": 604.801,
+      "duration": 0.919812
+    },
+    {
+      "start": 608.792,
+      "end": 609.303,
+      "duration": 0.511083
+    },
+    {
+      "start": 610.921,
+      "end": 611.751,
+      "duration": 0.829646
+    },
+    {
+      "start": 612.409,
+      "end": 614.055,
+      "duration": 1.64656
+    },
+    {
+      "start": 708.191,
+      "end": 709.146,
+      "duration": 0.954521
+    },
+    {
+      "start": 746.966,
+      "end": 747.57,
+      "duration": 0.604271
+    },
+    {
+      "start": 754.409,
+      "end": 755.659,
+      "duration": 1.25008
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

@@ -1,0 +1,400 @@
+{
+  "video_id": "_La9NC90oCk",
+  "title": "Mumford & Sons: Tiny Desk Concert",
+  "duration": 1018,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/_La9NC90oCk.mp3",
+  "description_songs": [
+    "I'll Tell You Everything",
+    "White Blank Page",
+    "Badlands",
+    "Rubber Band Man"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 705 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 159.84,
+      "end": 162.71999999999997,
+      "duration": 2.879999999999967,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 167.04,
+      "end": 168.48,
+      "duration": 1.4399999999999977,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 170.88,
+      "end": 193.43999999999997,
+      "duration": 22.559999999999974,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 479.52,
+      "end": 486.24,
+      "duration": 6.720000000000027,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 501.12,
+      "end": 516.0,
+      "duration": 14.879999999999995,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 516.48,
+      "end": 526.08,
+      "duration": 9.600000000000023,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 528.0,
+      "end": 530.4,
+      "duration": 2.3999999999999773,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 709.4399999999999,
+      "end": 718.56,
+      "duration": 9.120000000000005,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 724.8,
+      "end": 736.8,
+      "duration": 12.0,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 738.72,
+      "end": 741.6,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 742.56,
+      "end": 749.76,
+      "duration": 7.2000000000000455,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 751.68,
+      "end": 754.08,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 754.56,
+      "end": 756.48,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 979.68,
+      "end": 1006.56,
+      "duration": 26.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 13,
+      "song": "I'll Tell You Everything",
+      "corroboration": 0,
+      "silence_match": 12.8384,
+      "clip_start": 13,
+      "clip_end": 156.91,
+      "refined_v2_clip_end": 159.84,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 157.44,
+      "first_non_music_at": 156.96,
+      "crowd_onset_at": 159.84,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 206,
+      "song": "White Blank Page",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 193.43999999999997,
+      "clip_end": 477.54999999999995,
+      "refined_v2_clip_end": 479.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 477.6,
+      "first_non_music_at": 477.12,
+      "crowd_onset_at": 479.52,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 543,
+      "song": "Badlands",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 530.4,
+      "clip_end": 706.51,
+      "refined_v2_clip_end": 709.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 707.04,
+      "first_non_music_at": 706.56,
+      "crowd_onset_at": 709.44,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 770,
+      "song": "Rubber Band Man",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 756.48,
+      "clip_end": 977.71,
+      "refined_v2_clip_end": 979.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 978.24,
+      "first_non_music_at": 977.76,
+      "crowd_onset_at": 979.68,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 12.8384,
+      "end": 13.4075,
+      "duration": 0.569063
+    },
+    {
+      "start": 15.1166,
+      "end": 16.0345,
+      "duration": 0.917937
+    },
+    {
+      "start": 156.242,
+      "end": 159.887,
+      "duration": 3.64523
+    },
+    {
+      "start": 174.079,
+      "end": 174.601,
+      "duration": 0.521917
+    },
+    {
+      "start": 175.228,
+      "end": 176.727,
+      "duration": 1.49942
+    },
+    {
+      "start": 178.399,
+      "end": 178.97,
+      "duration": 0.571396
+    },
+    {
+      "start": 179.027,
+      "end": 179.682,
+      "duration": 0.655187
+    },
+    {
+      "start": 193.264,
+      "end": 193.871,
+      "duration": 0.606812
+    },
+    {
+      "start": 253.059,
+      "end": 253.857,
+      "duration": 0.798354
+    },
+    {
+      "start": 332.051,
+      "end": 332.858,
+      "duration": 0.807271
+    },
+    {
+      "start": 385.474,
+      "end": 386.323,
+      "duration": 0.84875
+    },
+    {
+      "start": 450.907,
+      "end": 452.21,
+      "duration": 1.30285
+    },
+    {
+      "start": 459.461,
+      "end": 460.873,
+      "duration": 1.41242
+    },
+    {
+      "start": 468.188,
+      "end": 469.549,
+      "duration": 1.36102
+    },
+    {
+      "start": 477.131,
+      "end": 479.343,
+      "duration": 2.21158
+    },
+    {
+      "start": 496.068,
+      "end": 498.144,
+      "duration": 2.07604
+    },
+    {
+      "start": 498.971,
+      "end": 499.553,
+      "duration": 0.582083
+    },
+    {
+      "start": 507.302,
+      "end": 508.128,
+      "duration": 0.826437
+    },
+    {
+      "start": 508.441,
+      "end": 509.046,
+      "duration": 0.604875
+    },
+    {
+      "start": 515.652,
+      "end": 517.072,
+      "duration": 1.41919
+    },
+    {
+      "start": 525.712,
+      "end": 527.272,
+      "duration": 1.56021
+    },
+    {
+      "start": 705.391,
+      "end": 708.979,
+      "duration": 3.58846
+    },
+    {
+      "start": 723.016,
+      "end": 723.991,
+      "duration": 0.975312
+    },
+    {
+      "start": 724.083,
+      "end": 725.427,
+      "duration": 1.34442
+    },
+    {
+      "start": 753.987,
+      "end": 754.976,
+      "duration": 0.988625
+    },
+    {
+      "start": 756.591,
+      "end": 757.655,
+      "duration": 1.06381
+    },
+    {
+      "start": 969.745,
+      "end": 970.488,
+      "duration": 0.742708
+    },
+    {
+      "start": 977.184,
+      "end": 979.308,
+      "duration": 2.12381
+    },
+    {
+      "start": 1004.74,
+      "end": 1005.76,
+      "duration": 1.01937
+    },
+    {
+      "start": 1005.76,
+      "end": 1018.18,
+      "duration": 12.4202
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      61,
+      61,
+      61
+    ],
+    "avg": 62.8,
+    "min": 61
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

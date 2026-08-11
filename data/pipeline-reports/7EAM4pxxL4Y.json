@@ -1,0 +1,789 @@
+{
+  "video_id": "7EAM4pxxL4Y",
+  "title": "Ivy Queen: Tiny Desk Concert",
+  "duration": 1497,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/7EAM4pxxL4Y.mp3",
+  "description_songs": [
+    "Reza por Mi",
+    "La Vida Es As\u00ed",
+    "Menor Que Yo",
+    "En Que Fallamos",
+    "Quiero Bailar"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1100 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 4,
+    "accepted": 3,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 6.720000000000001,
+      "duration": 6.720000000000001,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 7.199999999999999,
+      "end": 12.48,
+      "duration": 5.280000000000001,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 198.23999999999998,
+      "end": 208.79999999999998,
+      "duration": 10.560000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 261.59999999999997,
+      "end": 263.04,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 277.92,
+      "end": 279.84000000000003,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 427.2,
+      "end": 562.08,
+      "duration": 134.88000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 740.16,
+      "end": 742.08,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 742.56,
+      "end": 758.4,
+      "duration": 15.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 787.68,
+      "end": 789.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 844.8,
+      "end": 847.1999999999999,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 847.68,
+      "end": 851.04,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 851.52,
+      "end": 852.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 995.52,
+      "end": 996.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 997.92,
+      "end": 1222.08,
+      "duration": 224.15999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1400.1599999999999,
+      "end": 1496.6399999999999,
+      "duration": 96.48000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 13,
+      "song": "Reza por Mi",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 12.48,
+      "clip_end": 196.74999999999997,
+      "refined_v2_clip_end": 198.23999999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 196.8,
+      "first_non_music_at": 196.32,
+      "crowd_onset_at": 198.24,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 281,
+      "song": "La Vida Es As\u00ed",
+      "corroboration": 2,
+      "silence_match": 280.168,
+      "clip_start": 279.84000000000003,
+      "clip_end": 427.2,
+      "refined_v2_clip_end": 427.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 427.2,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 564,
+      "song": "Menor Que Yo",
+      "corroboration": 2,
+      "silence_match": 561.536,
+      "clip_start": 562.08,
+      "clip_end": 740.11,
+      "refined_v2_clip_end": 742.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 740.16,
+      "first_non_music_at": 739.68,
+      "crowd_onset_at": 742.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 853,
+      "song": "En Que Fallamos",
+      "corroboration": 2,
+      "silence_match": 851.418,
+      "clip_start": 852.96,
+      "clip_end": 995.47,
+      "refined_v2_clip_end": 997.92,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 995.52,
+      "first_non_music_at": 995.04,
+      "crowd_onset_at": 997.92,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 1222,
+      "song": "Quiero Bailar",
+      "corroboration": 2,
+      "silence_match": 1218.29,
+      "clip_start": 1222.08,
+      "clip_end": 1400.1599999999999,
+      "refined_v2_clip_end": 1400.1599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1400.16,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 90
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 6.77254,
+      "end": 7.96781,
+      "duration": 1.19527
+    },
+    {
+      "start": 196.722,
+      "end": 197.379,
+      "duration": 0.657729
+    },
+    {
+      "start": 280.168,
+      "end": 280.757,
+      "duration": 0.588708
+    },
+    {
+      "start": 444.848,
+      "end": 445.382,
+      "duration": 0.534
+    },
+    {
+      "start": 450.25,
+      "end": 450.833,
+      "duration": 0.582979
+    },
+    {
+      "start": 453.677,
+      "end": 454.181,
+      "duration": 0.504167
+    },
+    {
+      "start": 454.977,
+      "end": 455.642,
+      "duration": 0.664854
+    },
+    {
+      "start": 455.671,
+      "end": 456.214,
+      "duration": 0.543583
+    },
+    {
+      "start": 457.484,
+      "end": 458.989,
+      "duration": 1.50498
+    },
+    {
+      "start": 462.74,
+      "end": 463.593,
+      "duration": 0.853042
+    },
+    {
+      "start": 465.149,
+      "end": 466.577,
+      "duration": 1.42808
+    },
+    {
+      "start": 468.418,
+      "end": 469.287,
+      "duration": 0.869271
+    },
+    {
+      "start": 470.701,
+      "end": 471.287,
+      "duration": 0.585854
+    },
+    {
+      "start": 473.799,
+      "end": 474.35,
+      "duration": 0.551354
+    },
+    {
+      "start": 475.17,
+      "end": 475.829,
+      "duration": 0.659583
+    },
+    {
+      "start": 478.593,
+      "end": 479.16,
+      "duration": 0.567125
+    },
+    {
+      "start": 487.717,
+      "end": 488.671,
+      "duration": 0.953917
+    },
+    {
+      "start": 493.765,
+      "end": 494.697,
+      "duration": 0.932021
+    },
+    {
+      "start": 495.995,
+      "end": 497.523,
+      "duration": 1.528
+    },
+    {
+      "start": 498.464,
+      "end": 500.028,
+      "duration": 1.56396
+    },
+    {
+      "start": 500.794,
+      "end": 501.847,
+      "duration": 1.05277
+    },
+    {
+      "start": 503.907,
+      "end": 504.436,
+      "duration": 0.529083
+    },
+    {
+      "start": 505.77,
+      "end": 506.688,
+      "duration": 0.917729
+    },
+    {
+      "start": 507.349,
+      "end": 508.279,
+      "duration": 0.930792
+    },
+    {
+      "start": 510.425,
+      "end": 511.308,
+      "duration": 0.882708
+    },
+    {
+      "start": 514.684,
+      "end": 515.343,
+      "duration": 0.659312
+    },
+    {
+      "start": 516.322,
+      "end": 517.119,
+      "duration": 0.79625
+    },
+    {
+      "start": 519.305,
+      "end": 519.863,
+      "duration": 0.557375
+    },
+    {
+      "start": 521.528,
+      "end": 522.05,
+      "duration": 0.522125
+    },
+    {
+      "start": 523.72,
+      "end": 524.592,
+      "duration": 0.872646
+    },
+    {
+      "start": 525.281,
+      "end": 526.202,
+      "duration": 0.921104
+    },
+    {
+      "start": 538.776,
+      "end": 539.482,
+      "duration": 0.706458
+    },
+    {
+      "start": 540.417,
+      "end": 541.464,
+      "duration": 1.0469
+    },
+    {
+      "start": 542.204,
+      "end": 542.768,
+      "duration": 0.564375
+    },
+    {
+      "start": 543.897,
+      "end": 545.017,
+      "duration": 1.11992
+    },
+    {
+      "start": 546.161,
+      "end": 546.677,
+      "duration": 0.516375
+    },
+    {
+      "start": 547.325,
+      "end": 548.105,
+      "duration": 0.779625
+    },
+    {
+      "start": 553.81,
+      "end": 556.352,
+      "duration": 2.54188
+    },
+    {
+      "start": 558.287,
+      "end": 559.07,
+      "duration": 0.783708
+    },
+    {
+      "start": 561.536,
+      "end": 563.599,
+      "duration": 2.06269
+    },
+    {
+      "start": 584.232,
+      "end": 584.814,
+      "duration": 0.582292
+    },
+    {
+      "start": 783.121,
+      "end": 783.782,
+      "duration": 0.661792
+    },
+    {
+      "start": 801.372,
+      "end": 801.991,
+      "duration": 0.618854
+    },
+    {
+      "start": 836.879,
+      "end": 837.878,
+      "duration": 0.999104
+    },
+    {
+      "start": 843.336,
+      "end": 843.872,
+      "duration": 0.536646
+    },
+    {
+      "start": 847.029,
+      "end": 847.615,
+      "duration": 0.585437
+    },
+    {
+      "start": 851.418,
+      "end": 852.439,
+      "duration": 1.02181
+    },
+    {
+      "start": 875.837,
+      "end": 876.678,
+      "duration": 0.841146
+    },
+    {
+      "start": 878.325,
+      "end": 878.914,
+      "duration": 0.589083
+    },
+    {
+      "start": 886.986,
+      "end": 887.719,
+      "duration": 0.732875
+    },
+    {
+      "start": 888.04,
+      "end": 888.688,
+      "duration": 0.647958
+    },
+    {
+      "start": 932.067,
+      "end": 932.61,
+      "duration": 0.543125
+    },
+    {
+      "start": 934.729,
+      "end": 935.261,
+      "duration": 0.532625
+    },
+    {
+      "start": 1019.06,
+      "end": 1022.19,
+      "duration": 3.12698
+    },
+    {
+      "start": 1023.02,
+      "end": 1023.87,
+      "duration": 0.851458
+    },
+    {
+      "start": 1029.91,
+      "end": 1030.45,
+      "duration": 0.542042
+    },
+    {
+      "start": 1031.22,
+      "end": 1032.16,
+      "duration": 0.937271
+    },
+    {
+      "start": 1033.11,
+      "end": 1033.99,
+      "duration": 0.87825
+    },
+    {
+      "start": 1039.36,
+      "end": 1039.93,
+      "duration": 0.564604
+    },
+    {
+      "start": 1049.62,
+      "end": 1050.29,
+      "duration": 0.669854
+    },
+    {
+      "start": 1051.07,
+      "end": 1052.03,
+      "duration": 0.96225
+    },
+    {
+      "start": 1054.39,
+      "end": 1055.32,
+      "duration": 0.930688
+    },
+    {
+      "start": 1058.78,
+      "end": 1059.53,
+      "duration": 0.752437
+    },
+    {
+      "start": 1060.58,
+      "end": 1061.31,
+      "duration": 0.731854
+    },
+    {
+      "start": 1069.54,
+      "end": 1070.12,
+      "duration": 0.577333
+    },
+    {
+      "start": 1071.05,
+      "end": 1072.09,
+      "duration": 1.04231
+    },
+    {
+      "start": 1073.02,
+      "end": 1074.28,
+      "duration": 1.26006
+    },
+    {
+      "start": 1075.91,
+      "end": 1077.11,
+      "duration": 1.19829
+    },
+    {
+      "start": 1077.92,
+      "end": 1079.8,
+      "duration": 1.88223
+    },
+    {
+      "start": 1079.81,
+      "end": 1080.74,
+      "duration": 0.931396
+    },
+    {
+      "start": 1082.42,
+      "end": 1083.03,
+      "duration": 0.608583
+    },
+    {
+      "start": 1084.97,
+      "end": 1086.05,
+      "duration": 1.08083
+    },
+    {
+      "start": 1087.37,
+      "end": 1088.45,
+      "duration": 1.08842
+    },
+    {
+      "start": 1097.49,
+      "end": 1098.63,
+      "duration": 1.13587
+    },
+    {
+      "start": 1105.66,
+      "end": 1108.07,
+      "duration": 2.41492
+    },
+    {
+      "start": 1108.48,
+      "end": 1109.69,
+      "duration": 1.20881
+    },
+    {
+      "start": 1112.09,
+      "end": 1112.82,
+      "duration": 0.736437
+    },
+    {
+      "start": 1113.64,
+      "end": 1114.91,
+      "duration": 1.27119
+    },
+    {
+      "start": 1117.53,
+      "end": 1118.29,
+      "duration": 0.764229
+    },
+    {
+      "start": 1119.16,
+      "end": 1120.09,
+      "duration": 0.934979
+    },
+    {
+      "start": 1139.2,
+      "end": 1139.92,
+      "duration": 0.716437
+    },
+    {
+      "start": 1154.57,
+      "end": 1156.28,
+      "duration": 1.71546
+    },
+    {
+      "start": 1157.11,
+      "end": 1157.98,
+      "duration": 0.864771
+    },
+    {
+      "start": 1161.92,
+      "end": 1162.82,
+      "duration": 0.896375
+    },
+    {
+      "start": 1167.82,
+      "end": 1168.32,
+      "duration": 0.501917
+    },
+    {
+      "start": 1171.43,
+      "end": 1172.68,
+      "duration": 1.25515
+    },
+    {
+      "start": 1174.31,
+      "end": 1175.46,
+      "duration": 1.15471
+    },
+    {
+      "start": 1179.1,
+      "end": 1179.7,
+      "duration": 0.597854
+    },
+    {
+      "start": 1180.64,
+      "end": 1181.35,
+      "duration": 0.706812
+    },
+    {
+      "start": 1187.37,
+      "end": 1187.98,
+      "duration": 0.618896
+    },
+    {
+      "start": 1191.19,
+      "end": 1192.03,
+      "duration": 0.833396
+    },
+    {
+      "start": 1193.28,
+      "end": 1194.19,
+      "duration": 0.917104
+    },
+    {
+      "start": 1196.99,
+      "end": 1197.59,
+      "duration": 0.5965
+    },
+    {
+      "start": 1202.06,
+      "end": 1204.42,
+      "duration": 2.36892
+    },
+    {
+      "start": 1204.86,
+      "end": 1205.92,
+      "duration": 1.05575
+    },
+    {
+      "start": 1210.08,
+      "end": 1211.63,
+      "duration": 1.54948
+    },
+    {
+      "start": 1218.29,
+      "end": 1219.75,
+      "duration": 1.45077
+    },
+    {
+      "start": 1441.5,
+      "end": 1442.16,
+      "duration": 0.663479
+    },
+    {
+      "start": 1444.38,
+      "end": 1445.1,
+      "duration": 0.726
+    },
+    {
+      "start": 1446.35,
+      "end": 1447.11,
+      "duration": 0.763021
+    },
+    {
+      "start": 1496.5,
+      "end": 1497.0,
+      "duration": 0.506125
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      90,
+      90,
+      90,
+      90
+    ],
+    "avg": 85.6,
+    "min": 68
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

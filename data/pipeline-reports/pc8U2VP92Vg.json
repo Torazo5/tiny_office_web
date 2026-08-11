@@ -1,0 +1,250 @@
+{
+  "video_id": "pc8U2VP92Vg",
+  "title": "The Front Bottoms: NPR Music Tiny Desk Concert",
+  "duration": 939,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/pc8U2VP92Vg.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 2.4,
+      "duration": 2.4,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 120.96,
+      "end": 124.8,
+      "duration": 3.8400000000000034,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 128.64,
+      "end": 130.55999999999997,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 355.2,
+      "end": 366.72,
+      "duration": 11.520000000000039,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 374.88,
+      "end": 376.8,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 382.08,
+      "end": 383.52,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 598.56,
+      "end": 621.6,
+      "duration": 23.040000000000077,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 908.16,
+      "end": 927.36,
+      "duration": 19.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 1.41565,
+      "duration": 1.41565
+    },
+    {
+      "start": 2.1579,
+      "end": 2.85648,
+      "duration": 0.698583
+    },
+    {
+      "start": 118.932,
+      "end": 119.917,
+      "duration": 0.984708
+    },
+    {
+      "start": 129.707,
+      "end": 130.605,
+      "duration": 0.898917
+    },
+    {
+      "start": 130.644,
+      "end": 132.669,
+      "duration": 2.02496
+    },
+    {
+      "start": 145.913,
+      "end": 146.619,
+      "duration": 0.705896
+    },
+    {
+      "start": 353.975,
+      "end": 355.44,
+      "duration": 1.4646
+    },
+    {
+      "start": 364.243,
+      "end": 365.017,
+      "duration": 0.773312
+    },
+    {
+      "start": 365.054,
+      "end": 367.424,
+      "duration": 2.37058
+    },
+    {
+      "start": 367.713,
+      "end": 368.637,
+      "duration": 0.924438
+    },
+    {
+      "start": 369.369,
+      "end": 371.495,
+      "duration": 2.12592
+    },
+    {
+      "start": 371.979,
+      "end": 375.416,
+      "duration": 3.43725
+    },
+    {
+      "start": 380.27,
+      "end": 381.702,
+      "duration": 1.43158
+    },
+    {
+      "start": 381.859,
+      "end": 382.852,
+      "duration": 0.992542
+    },
+    {
+      "start": 383.071,
+      "end": 384.785,
+      "duration": 1.71421
+    },
+    {
+      "start": 596.994,
+      "end": 598.518,
+      "duration": 1.52369
+    },
+    {
+      "start": 609.226,
+      "end": 610.452,
+      "duration": 1.22569
+    },
+    {
+      "start": 611.058,
+      "end": 611.889,
+      "duration": 0.831208
+    },
+    {
+      "start": 611.889,
+      "end": 613.354,
+      "duration": 1.46573
+    },
+    {
+      "start": 615.588,
+      "end": 616.89,
+      "duration": 1.30158
+    },
+    {
+      "start": 617.704,
+      "end": 618.408,
+      "duration": 0.703625
+    },
+    {
+      "start": 619.118,
+      "end": 619.909,
+      "duration": 0.790958
+    },
+    {
+      "start": 621.602,
+      "end": 623.382,
+      "duration": 1.77933
+    },
+    {
+      "start": 623.492,
+      "end": 624.57,
+      "duration": 1.07794
+    },
+    {
+      "start": 799.394,
+      "end": 800.106,
+      "duration": 0.711396
+    },
+    {
+      "start": 807.037,
+      "end": 807.627,
+      "duration": 0.589979
+    },
+    {
+      "start": 903.895,
+      "end": 905.83,
+      "duration": 1.9356
+    },
+    {
+      "start": 918.199,
+      "end": 921.008,
+      "duration": 2.80879
+    },
+    {
+      "start": 926.026,
+      "end": 926.616,
+      "duration": 0.589375
+    },
+    {
+      "start": 926.728,
+      "end": 938.678,
+      "duration": 11.9507
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

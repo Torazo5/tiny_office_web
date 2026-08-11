@@ -1,0 +1,419 @@
+{
+  "video_id": "LJdWpAFutYM",
+  "title": "Kany Garc\u00eda: Tiny Desk Concert",
+  "duration": 1006,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/LJdWpAFutYM.mp3",
+  "description_songs": [
+    "Para Siempre",
+    "B\u00fascame",
+    "Mundo Inventado",
+    "DPM (De Pxta Madre)"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 5 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 202.07999999999998,
+      "end": 253.43999999999997,
+      "duration": 51.359999999999985,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 406.56,
+      "end": 418.08,
+      "duration": 11.519999999999982,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 422.4,
+      "end": 473.76,
+      "duration": 51.360000000000014,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 698.4,
+      "end": 699.84,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 713.28,
+      "end": 736.3199999999999,
+      "duration": 23.039999999999964,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 736.8,
+      "end": 783.84,
+      "duration": 47.04000000000008,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 969.12,
+      "end": 987.36,
+      "duration": 18.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 999.36,
+      "end": 1002.72,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Para Siempre",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 202.02999999999997,
+      "refined_v2_clip_end": 202.07999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 202.08,
+      "first_non_music_at": 201.6,
+      "crowd_onset_at": 202.08,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 202.07999999999998,
+      "song": "B\u00fascame",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 253.43999999999997,
+      "clip_end": 406.56,
+      "refined_v2_clip_end": 406.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 405.98,
+      "fade_out_end": 406.56,
+      "detected_music_release_at": 406.56,
+      "first_non_music_at": 406.08,
+      "crowd_onset_at": 406.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 406.56,
+      "song": "Mundo Inventado",
+      "corroboration": 0,
+      "silence_match": 404.134,
+      "clip_start": 418.08,
+      "clip_end": 421.86999999999995,
+      "refined_v2_clip_end": 422.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 422.4,
+      "first_non_music_at": 421.92,
+      "crowd_onset_at": 422.4,
+      "end_unresolved_reason": null,
+      "suspect": true,
+      "confidence": 16
+    },
+    {
+      "seconds": 713.28,
+      "song": "DPM (De Pxta Madre)",
+      "corroboration": 0,
+      "silence_match": 712.149,
+      "clip_start": 699.84,
+      "clip_end": 713.28,
+      "refined_v2_clip_end": 713.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 713.28,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": true,
+      "confidence": 16
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 29.9287,
+      "end": 30.8089,
+      "duration": 0.880146
+    },
+    {
+      "start": 213.777,
+      "end": 216.031,
+      "duration": 2.25375
+    },
+    {
+      "start": 222.887,
+      "end": 223.557,
+      "duration": 0.670667
+    },
+    {
+      "start": 224.352,
+      "end": 224.987,
+      "duration": 0.634667
+    },
+    {
+      "start": 228.71,
+      "end": 229.244,
+      "duration": 0.534479
+    },
+    {
+      "start": 233.05,
+      "end": 233.606,
+      "duration": 0.556104
+    },
+    {
+      "start": 239.093,
+      "end": 239.622,
+      "duration": 0.528917
+    },
+    {
+      "start": 241.303,
+      "end": 241.924,
+      "duration": 0.620917
+    },
+    {
+      "start": 247.278,
+      "end": 247.903,
+      "duration": 0.624938
+    },
+    {
+      "start": 247.926,
+      "end": 248.821,
+      "duration": 0.895417
+    },
+    {
+      "start": 250.622,
+      "end": 251.552,
+      "duration": 0.929979
+    },
+    {
+      "start": 251.579,
+      "end": 252.332,
+      "duration": 0.7525
+    },
+    {
+      "start": 252.363,
+      "end": 253.079,
+      "duration": 0.716083
+    },
+    {
+      "start": 404.134,
+      "end": 405.976,
+      "duration": 1.84246
+    },
+    {
+      "start": 417.89,
+      "end": 421.978,
+      "duration": 4.08862
+    },
+    {
+      "start": 427.308,
+      "end": 427.944,
+      "duration": 0.636042
+    },
+    {
+      "start": 431.322,
+      "end": 431.869,
+      "duration": 0.546354
+    },
+    {
+      "start": 439.277,
+      "end": 439.785,
+      "duration": 0.507771
+    },
+    {
+      "start": 447.186,
+      "end": 447.775,
+      "duration": 0.588521
+    },
+    {
+      "start": 450.539,
+      "end": 451.086,
+      "duration": 0.546021
+    },
+    {
+      "start": 454.785,
+      "end": 455.351,
+      "duration": 0.566437
+    },
+    {
+      "start": 457.138,
+      "end": 457.702,
+      "duration": 0.563438
+    },
+    {
+      "start": 461.007,
+      "end": 461.691,
+      "duration": 0.683937
+    },
+    {
+      "start": 468.273,
+      "end": 469.077,
+      "duration": 0.803812
+    },
+    {
+      "start": 473.426,
+      "end": 477.05,
+      "duration": 3.62385
+    },
+    {
+      "start": 483.094,
+      "end": 483.974,
+      "duration": 0.879417
+    },
+    {
+      "start": 491.385,
+      "end": 492.476,
+      "duration": 1.09075
+    },
+    {
+      "start": 508.804,
+      "end": 509.31,
+      "duration": 0.505792
+    },
+    {
+      "start": 696.92,
+      "end": 699.33,
+      "duration": 2.41094
+    },
+    {
+      "start": 712.149,
+      "end": 713.312,
+      "duration": 1.16287
+    },
+    {
+      "start": 730.808,
+      "end": 732.381,
+      "duration": 1.57379
+    },
+    {
+      "start": 735.181,
+      "end": 735.71,
+      "duration": 0.528333
+    },
+    {
+      "start": 736.146,
+      "end": 737.366,
+      "duration": 1.22071
+    },
+    {
+      "start": 745.803,
+      "end": 746.396,
+      "duration": 0.593396
+    },
+    {
+      "start": 747.836,
+      "end": 748.399,
+      "duration": 0.563167
+    },
+    {
+      "start": 764.068,
+      "end": 764.577,
+      "duration": 0.508521
+    },
+    {
+      "start": 768.776,
+      "end": 769.414,
+      "duration": 0.637667
+    },
+    {
+      "start": 772.461,
+      "end": 773.269,
+      "duration": 0.807396
+    },
+    {
+      "start": 774.856,
+      "end": 775.983,
+      "duration": 1.12646
+    },
+    {
+      "start": 988.33,
+      "end": 991.15,
+      "duration": 2.8199
+    },
+    {
+      "start": 992.291,
+      "end": 1000.08,
+      "duration": 7.78631
+    },
+    {
+      "start": 1002.59,
+      "end": 1005.55,
+      "duration": 2.96233
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      51,
+      16,
+      16
+    ],
+    "avg": 31.5,
+    "min": 16
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

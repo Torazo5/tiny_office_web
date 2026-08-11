@@ -1,0 +1,278 @@
+{
+  "video_id": "JtBmUxz4GsM",
+  "title": "Jordan Rakei: NPR Music Tiny Desk Concert",
+  "duration": 1059,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/JtBmUxz4GsM.mp3",
+  "description_songs": [
+    "Say Something",
+    "Mind's Eye",
+    "Talk To Me",
+    "Speak"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 231 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 174.23999999999998,
+      "end": 198.23999999999998,
+      "duration": 24.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 730.0799999999999,
+      "end": 767.52,
+      "duration": 37.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1033.44,
+      "end": 1047.84,
+      "duration": 14.399999999999864,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Say Something",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 173.23,
+      "refined_v2_clip_end": 174.23999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 173.28,
+      "first_non_music_at": 172.8,
+      "crowd_onset_at": 174.24,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 199,
+      "song": "Mind's Eye",
+      "corroboration": 0,
+      "silence_match": 198.129,
+      "clip_start": 198.23999999999998,
+      "clip_end": 488,
+      "refined_v2_clip_end": 488,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 488,
+      "song": "Talk To Me",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 488,
+      "clip_end": 727.15,
+      "refined_v2_clip_end": 730.0799999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 727.68,
+      "first_non_music_at": 727.2,
+      "crowd_onset_at": 730.08,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 768,
+      "song": "Speak",
+      "corroboration": 0,
+      "silence_match": 767.244,
+      "clip_start": 767.52,
+      "clip_end": 1032.43,
+      "refined_v2_clip_end": 1033.44,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1032.96,
+      "first_non_music_at": 1032.48,
+      "crowd_onset_at": 1033.44,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 10.8979,
+      "end": 11.532,
+      "duration": 0.634125
+    },
+    {
+      "start": 32.4978,
+      "end": 33.101,
+      "duration": 0.603229
+    },
+    {
+      "start": 172.939,
+      "end": 174.26,
+      "duration": 1.32167
+    },
+    {
+      "start": 186.247,
+      "end": 186.782,
+      "duration": 0.534625
+    },
+    {
+      "start": 187.607,
+      "end": 188.548,
+      "duration": 0.940187
+    },
+    {
+      "start": 190.005,
+      "end": 190.528,
+      "duration": 0.523312
+    },
+    {
+      "start": 192.696,
+      "end": 193.733,
+      "duration": 1.03692
+    },
+    {
+      "start": 198.129,
+      "end": 200.279,
+      "duration": 2.14977
+    },
+    {
+      "start": 726.989,
+      "end": 730.154,
+      "duration": 3.16546
+    },
+    {
+      "start": 748.317,
+      "end": 749.144,
+      "duration": 0.826437
+    },
+    {
+      "start": 752.14,
+      "end": 752.994,
+      "duration": 0.853687
+    },
+    {
+      "start": 758.837,
+      "end": 759.433,
+      "duration": 0.596062
+    },
+    {
+      "start": 761.157,
+      "end": 761.744,
+      "duration": 0.586938
+    },
+    {
+      "start": 762.464,
+      "end": 763.277,
+      "duration": 0.813021
+    },
+    {
+      "start": 764.754,
+      "end": 765.326,
+      "duration": 0.572208
+    },
+    {
+      "start": 767.244,
+      "end": 769.133,
+      "duration": 1.88906
+    },
+    {
+      "start": 1028.53,
+      "end": 1032.99,
+      "duration": 4.45902
+    },
+    {
+      "start": 1033.06,
+      "end": 1033.57,
+      "duration": 0.511979
+    },
+    {
+      "start": 1046.88,
+      "end": 1047.42,
+      "duration": 0.540458
+    },
+    {
+      "start": 1047.42,
+      "end": 1047.93,
+      "duration": 0.506833
+    },
+    {
+      "start": 1047.93,
+      "end": 1059.03,
+      "duration": 11.0969
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      68,
+      53,
+      76
+    ],
+    "avg": 62.5,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

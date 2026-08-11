@@ -91,9 +91,11 @@ migrations in order, including the private-playlist and transactional-write
 migrations, through the approved Supabase deployment workflow.
 
 The checked-in pipeline snapshot in `data/pipeline-reports/` contains the
-default no-audience cut (199 source report JSON files plus
+default no-audience cut (299 source report JSON files plus
 `_mass_pull_summary.json`). The previous applause-inclusive cut is preserved
-under `data/pipeline-reports/with-audience/`. Seed or refresh both cuts with:
+under `data/pipeline-reports/with-audience/` for the 199 overlapping videos;
+the 100 no-audience-only videos have no applause-inclusive cut. Seed or
+refresh both cuts with:
 
 ```bash
 npm run seed:pipeline

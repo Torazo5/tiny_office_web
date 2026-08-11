@@ -2,7 +2,7 @@
   "video_id": "N1w-hDiJ4dM",
   "title": "Tyler, The Creator: NPR Music Tiny Desk Concert",
   "duration": 1484,
-  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/N1w-hDiJ4dM.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/N1w-hDiJ4dM.mp3",
   "description_songs": [
     "Boredom",
     "See You Again",
@@ -10,14 +10,14 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 702 likes, matched all 3 description song(s), retained 3 timestamp(s), filtered 5 non-song chapter entries"
+    "A_comments": "ok \u2014 709 likes, matched all 3 description song(s), retained 3 timestamp(s), filtered 5 non-song chapter entries"
   },
   "comment_filter": {
     "cross_checked": true,
-    "parsed": 3,
-    "accepted": 3,
+    "parsed": 2,
+    "accepted": 2,
     "rejected": 0,
-    "filtered_entries": 15
+    "filtered_entries": 10
   },
   "refine_method": "yamnet",
   "boundary_spans": [
@@ -124,44 +124,77 @@
     {
       "seconds": 0,
       "song": "Boredom",
-      "corroboration": 2,
+      "corroboration": 1,
       "silence_match": 0.0,
       "clip_start": 0,
-      "clip_end": 417.08,
+      "clip_end": 418.08,
+      "refined_v2_clip_end": 418.08,
       "start_refined": false,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 418.08,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
       "suspect": false,
-      "confidence": 82,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 75
     },
     {
       "seconds": 515,
       "song": "See You Again",
-      "corroboration": 2,
+      "corroboration": 1,
       "silence_match": 517.116,
       "clip_start": 518.4,
-      "clip_end": 742.04,
+      "clip_end": 743.04,
+      "refined_v2_clip_end": 743.04,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 743.04,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
       "suspect": false,
-      "confidence": 90,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 83
     },
     {
       "seconds": 792,
       "song": "Glitter",
-      "corroboration": 2,
+      "corroboration": 1,
       "silence_match": 792.313,
       "clip_start": 796.3199999999999,
-      "clip_end": 1139.0,
+      "clip_end": 1139.47,
+      "refined_v2_clip_end": 1140.0,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1139.52,
+      "first_non_music_at": 1139.04,
+      "crowd_onset_at": 1140.0,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 90,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 83
     }
   ],
   "silence_intervals": [
@@ -458,17 +491,23 @@
   ],
   "confidence": {
     "scores": [
-      82,
-      90,
-      90
+      75,
+      83,
+      83
     ],
-    "avg": 87.3,
-    "min": 82
+    "avg": 80.3,
+    "min": 75
   },
-  "pipeline": "v2_no_audience_variant",
-  "pipeline_version": "v2_no_audience_variant",
-  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/N1w-hDiJ4dM.json (edge-guarded comparison)",
-  "audience_enabled": true,
-  "audience_removed": true,
-  "audience_edge_guard_sec": 1.0
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
 }

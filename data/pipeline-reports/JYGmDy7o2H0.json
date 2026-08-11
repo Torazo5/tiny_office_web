@@ -2,7 +2,7 @@
   "video_id": "JYGmDy7o2H0",
   "title": "Dermot Kennedy: NPR Music Tiny Desk Concert",
   "duration": 810,
-  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/JYGmDy7o2H0.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/JYGmDy7o2H0.mp3",
   "description_songs": [
     "Moments Passed",
     "An Evening I Will Not Forget",
@@ -99,9 +99,13 @@
       "corroboration": 0,
       "silence_match": 0.0,
       "clip_start": 0,
-      "clip_end": 266.84,
+      "clip_end": 265.87,
+      "refined_v2_clip_end": 267.84,
       "start_refined": false,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [
         {
           "start": 30.72,
@@ -113,9 +117,16 @@
           "anchor_start": 265.92
         }
       ],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 265.92,
+      "first_non_music_at": 265.44,
+      "crowd_onset_at": 267.84,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 68,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 68
     },
     {
       "seconds": 278,
@@ -123,13 +134,24 @@
       "corroboration": 0,
       "silence_match": 277.797,
       "clip_start": 277.92,
-      "clip_end": 520.76,
+      "clip_end": 521.76,
+      "refined_v2_clip_end": 521.76,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 521.76,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
       "suspect": false,
-      "confidence": 76,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 76
     },
     {
       "seconds": 563,
@@ -137,13 +159,24 @@
       "corroboration": 0,
       "silence_match": 562.181,
       "clip_start": 562.08,
-      "clip_end": 787.16,
+      "clip_end": 786.6700000000001,
+      "refined_v2_clip_end": 788.16,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 786.72,
+      "first_non_music_at": 786.24,
+      "crowd_onset_at": 788.16,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 76,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 76
     }
   ],
   "silence_intervals": [
@@ -277,10 +310,16 @@
     "avg": 73.3,
     "min": 68
   },
-  "pipeline": "v2_no_audience_variant",
-  "pipeline_version": "v2_no_audience_variant",
-  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/JYGmDy7o2H0.json (edge-guarded comparison)",
-  "audience_enabled": true,
-  "audience_removed": true,
-  "audience_edge_guard_sec": 1.0
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
 }

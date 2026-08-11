@@ -1,0 +1,135 @@
+{
+  "video_id": "oaSN_bHjyIw",
+  "title": "Billy Corgan: NPR Music Tiny Desk Concert",
+  "duration": 731,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/oaSN_bHjyIw.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 244.79999999999998,
+      "end": 261.6,
+      "duration": 16.80000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 470.88,
+      "end": 483.36,
+      "duration": 12.480000000000018,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 704.16,
+      "end": 722.88,
+      "duration": 18.720000000000027,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 224.758,
+      "end": 225.375,
+      "duration": 0.617271
+    },
+    {
+      "start": 243.763,
+      "end": 244.549,
+      "duration": 0.786333
+    },
+    {
+      "start": 259.823,
+      "end": 260.727,
+      "duration": 0.903813
+    },
+    {
+      "start": 261.293,
+      "end": 261.847,
+      "duration": 0.553729
+    },
+    {
+      "start": 261.852,
+      "end": 265.307,
+      "duration": 3.45519
+    },
+    {
+      "start": 265.308,
+      "end": 266.473,
+      "duration": 1.16573
+    },
+    {
+      "start": 266.474,
+      "end": 269.247,
+      "duration": 2.7739
+    },
+    {
+      "start": 270.291,
+      "end": 272.857,
+      "duration": 2.56602
+    },
+    {
+      "start": 481.098,
+      "end": 481.958,
+      "duration": 0.860479
+    },
+    {
+      "start": 482.012,
+      "end": 483.031,
+      "duration": 1.01848
+    },
+    {
+      "start": 483.089,
+      "end": 483.673,
+      "duration": 0.58475
+    },
+    {
+      "start": 483.673,
+      "end": 485.06,
+      "duration": 1.38687
+    },
+    {
+      "start": 703.27,
+      "end": 704.253,
+      "duration": 0.983146
+    },
+    {
+      "start": 722.582,
+      "end": 731.196,
+      "duration": 8.61485
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

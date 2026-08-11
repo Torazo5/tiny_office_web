@@ -1,0 +1,545 @@
+{
+  "video_id": "wxaXWSVhRXU",
+  "title": "Foo Fighters: Tiny Desk Concert",
+  "duration": 1430,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/wxaXWSVhRXU.mp3",
+  "description_songs": [
+    "Spit Shine",
+    "Learn to Fly",
+    "Child Actor",
+    "My Hero",
+    "Everlong"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 4200 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 206.4,
+      "end": 216.48,
+      "duration": 10.079999999999984,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 228.95999999999998,
+      "end": 230.87999999999997,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 231.35999999999999,
+      "end": 235.2,
+      "duration": 3.8400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 237.12,
+      "end": 239.99999999999997,
+      "duration": 2.879999999999967,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 240.48,
+      "end": 250.55999999999997,
+      "duration": 10.079999999999984,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 254.39999999999998,
+      "end": 256.8,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 262.08,
+      "end": 269.76,
+      "duration": 7.680000000000007,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 498.24,
+      "end": 577.4399999999999,
+      "duration": 79.19999999999993,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 797.76,
+      "end": 844.8,
+      "duration": 47.039999999999964,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1097.28,
+      "end": 1124.16,
+      "duration": 26.88000000000011,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1320.96,
+      "end": 1321.44,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1404.48,
+      "end": 1405.44,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1407.36,
+      "end": 1428.0,
+      "duration": 20.6400000000001,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Spit Shine",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 206.4,
+      "refined_v2_clip_end": 206.4,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 206.4,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 274,
+      "song": "Learn to Fly",
+      "corroboration": 0,
+      "silence_match": 269.429,
+      "clip_start": 269.76,
+      "clip_end": 499.2,
+      "refined_v2_clip_end": 498.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 498.24,
+      "fade_out_end": 499.2,
+      "detected_music_release_at": 499.2,
+      "first_non_music_at": null,
+      "crowd_onset_at": 498.24,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 584,
+      "song": "Child Actor",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 577.4399999999999,
+      "clip_end": 796.75,
+      "refined_v2_clip_end": 797.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 797.28,
+      "first_non_music_at": 796.8,
+      "crowd_onset_at": 797.76,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 855,
+      "song": "My Hero",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 844.8,
+      "clip_end": 1098.24,
+      "refined_v2_clip_end": 1097.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 1097.28,
+      "fade_out_end": 1098.24,
+      "detected_music_release_at": 1098.24,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1097.28,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 1134,
+      "song": "Everlong",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1124.16,
+      "clip_end": 1407.84,
+      "refined_v2_clip_end": 1404.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [
+        {
+          "start": 1320.96,
+          "end": 1321.44,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.931,
+          "music_run_sec": 48.5,
+          "anchor_start": 1407.36
+        }
+      ],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 1404.48,
+      "fade_out_end": 1407.84,
+      "detected_music_release_at": 1407.84,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1404.48,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 203.348,
+      "end": 204.129,
+      "duration": 0.780458
+    },
+    {
+      "start": 217.041,
+      "end": 217.547,
+      "duration": 0.505979
+    },
+    {
+      "start": 217.547,
+      "end": 220.755,
+      "duration": 3.20794
+    },
+    {
+      "start": 221.049,
+      "end": 223.004,
+      "duration": 1.95498
+    },
+    {
+      "start": 223.346,
+      "end": 224.138,
+      "duration": 0.792312
+    },
+    {
+      "start": 224.299,
+      "end": 224.968,
+      "duration": 0.668604
+    },
+    {
+      "start": 224.968,
+      "end": 226.877,
+      "duration": 1.90871
+    },
+    {
+      "start": 230.797,
+      "end": 231.927,
+      "duration": 1.12987
+    },
+    {
+      "start": 233.507,
+      "end": 234.233,
+      "duration": 0.725938
+    },
+    {
+      "start": 235.158,
+      "end": 236.269,
+      "duration": 1.11131
+    },
+    {
+      "start": 236.753,
+      "end": 237.283,
+      "duration": 0.530104
+    },
+    {
+      "start": 237.657,
+      "end": 238.261,
+      "duration": 0.60425
+    },
+    {
+      "start": 239.771,
+      "end": 241.277,
+      "duration": 1.50629
+    },
+    {
+      "start": 242.007,
+      "end": 242.738,
+      "duration": 0.730875
+    },
+    {
+      "start": 245.811,
+      "end": 246.573,
+      "duration": 0.761667
+    },
+    {
+      "start": 248.021,
+      "end": 248.637,
+      "duration": 0.615938
+    },
+    {
+      "start": 253.045,
+      "end": 254.618,
+      "duration": 1.57315
+    },
+    {
+      "start": 266.899,
+      "end": 267.777,
+      "duration": 0.878542
+    },
+    {
+      "start": 267.976,
+      "end": 268.888,
+      "duration": 0.911812
+    },
+    {
+      "start": 269.429,
+      "end": 270.384,
+      "duration": 0.955437
+    },
+    {
+      "start": 515.699,
+      "end": 516.357,
+      "duration": 0.658687
+    },
+    {
+      "start": 517.102,
+      "end": 517.741,
+      "duration": 0.638312
+    },
+    {
+      "start": 524.05,
+      "end": 525.136,
+      "duration": 1.08571
+    },
+    {
+      "start": 532.636,
+      "end": 533.148,
+      "duration": 0.512292
+    },
+    {
+      "start": 536.323,
+      "end": 536.828,
+      "duration": 0.504771
+    },
+    {
+      "start": 537.199,
+      "end": 538.127,
+      "duration": 0.927521
+    },
+    {
+      "start": 539.873,
+      "end": 540.916,
+      "duration": 1.0424
+    },
+    {
+      "start": 542.083,
+      "end": 542.917,
+      "duration": 0.834292
+    },
+    {
+      "start": 543.174,
+      "end": 543.869,
+      "duration": 0.694833
+    },
+    {
+      "start": 547.233,
+      "end": 548.116,
+      "duration": 0.882958
+    },
+    {
+      "start": 549.683,
+      "end": 550.406,
+      "duration": 0.7235
+    },
+    {
+      "start": 553.217,
+      "end": 554.115,
+      "duration": 0.897917
+    },
+    {
+      "start": 557.496,
+      "end": 558.403,
+      "duration": 0.907458
+    },
+    {
+      "start": 560.568,
+      "end": 561.317,
+      "duration": 0.749292
+    },
+    {
+      "start": 566.101,
+      "end": 567.15,
+      "duration": 1.04873
+    },
+    {
+      "start": 570.384,
+      "end": 570.993,
+      "duration": 0.609083
+    },
+    {
+      "start": 571.246,
+      "end": 572.892,
+      "duration": 1.64579
+    },
+    {
+      "start": 574.459,
+      "end": 577.063,
+      "duration": 2.6045
+    },
+    {
+      "start": 795.696,
+      "end": 797.844,
+      "duration": 2.14819
+    },
+    {
+      "start": 812.167,
+      "end": 814.259,
+      "duration": 2.09238
+    },
+    {
+      "start": 815.941,
+      "end": 816.606,
+      "duration": 0.664271
+    },
+    {
+      "start": 820.584,
+      "end": 821.34,
+      "duration": 0.755771
+    },
+    {
+      "start": 824.155,
+      "end": 824.77,
+      "duration": 0.61475
+    },
+    {
+      "start": 827.586,
+      "end": 828.253,
+      "duration": 0.667417
+    },
+    {
+      "start": 832.235,
+      "end": 833.161,
+      "duration": 0.926562
+    },
+    {
+      "start": 837.147,
+      "end": 837.673,
+      "duration": 0.525896
+    },
+    {
+      "start": 839.925,
+      "end": 840.446,
+      "duration": 0.520708
+    },
+    {
+      "start": 841.413,
+      "end": 841.995,
+      "duration": 0.581833
+    },
+    {
+      "start": 842.411,
+      "end": 843.361,
+      "duration": 0.949583
+    },
+    {
+      "start": 1122.71,
+      "end": 1123.35,
+      "duration": 0.636146
+    },
+    {
+      "start": 1123.84,
+      "end": 1125.06,
+      "duration": 1.21546
+    },
+    {
+      "start": 1315.75,
+      "end": 1317.04,
+      "duration": 1.28946
+    },
+    {
+      "start": 1429.02,
+      "end": 1429.56,
+      "duration": 0.538875
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      61,
+      61,
+      61
+    ],
+    "avg": 62.4,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

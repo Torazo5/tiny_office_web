@@ -1,0 +1,285 @@
+{
+  "video_id": "9GLIZrSwFWk",
+  "title": "Peter Frampton: NPR Music Tiny Desk Concert",
+  "duration": 1070,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/9GLIZrSwFWk.mp3",
+  "description_songs": [
+    "All I Want To Be (Is By Your Side)",
+    "Lines On My Face",
+    "Baby, I Love Your Way"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 19 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 1,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 178.56,
+      "end": 252.48,
+      "duration": 73.91999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 252.48,
+      "end": 304.32,
+      "duration": 51.84,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 304.8,
+      "end": 307.2,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 692.64,
+      "end": 726.24,
+      "duration": 33.60000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1021.92,
+      "end": 1068.96,
+      "duration": 47.04000000000008,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "All I Want To Be (Is By Your Side)",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 178.02999999999997,
+      "refined_v2_clip_end": 178.56,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 178.08,
+      "first_non_music_at": 177.6,
+      "crowd_onset_at": 178.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 307,
+      "song": "Lines On My Face",
+      "corroboration": 0,
+      "silence_match": 307.146,
+      "clip_start": 307.2,
+      "clip_end": 692.16,
+      "refined_v2_clip_end": 692.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 691.48,
+      "fade_out_end": 692.16,
+      "detected_music_release_at": 692.16,
+      "first_non_music_at": 691.68,
+      "crowd_onset_at": 692.64,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 726,
+      "song": "Baby, I Love Your Way",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 726.24,
+      "clip_end": 1021.92,
+      "refined_v2_clip_end": 1021.92,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 1021.34,
+      "fade_out_end": 1021.92,
+      "detected_music_release_at": 1021.92,
+      "first_non_music_at": 1021.44,
+      "crowd_onset_at": 1021.92,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.813562,
+      "duration": 0.813562
+    },
+    {
+      "start": 213.818,
+      "end": 214.416,
+      "duration": 0.598104
+    },
+    {
+      "start": 222.432,
+      "end": 223.137,
+      "duration": 0.704771
+    },
+    {
+      "start": 242.604,
+      "end": 243.108,
+      "duration": 0.504625
+    },
+    {
+      "start": 243.53,
+      "end": 244.216,
+      "duration": 0.685562
+    },
+    {
+      "start": 259.22,
+      "end": 259.868,
+      "duration": 0.647833
+    },
+    {
+      "start": 268.409,
+      "end": 269.327,
+      "duration": 0.918208
+    },
+    {
+      "start": 277.342,
+      "end": 278.338,
+      "duration": 0.996563
+    },
+    {
+      "start": 281.328,
+      "end": 281.868,
+      "duration": 0.54025
+    },
+    {
+      "start": 298.897,
+      "end": 299.434,
+      "duration": 0.537917
+    },
+    {
+      "start": 300.08,
+      "end": 300.684,
+      "duration": 0.604354
+    },
+    {
+      "start": 307.146,
+      "end": 307.868,
+      "duration": 0.721729
+    },
+    {
+      "start": 343.534,
+      "end": 344.492,
+      "duration": 0.957958
+    },
+    {
+      "start": 344.492,
+      "end": 345.014,
+      "duration": 0.521437
+    },
+    {
+      "start": 345.027,
+      "end": 345.53,
+      "duration": 0.502875
+    },
+    {
+      "start": 554.892,
+      "end": 556.058,
+      "duration": 1.16579
+    },
+    {
+      "start": 556.098,
+      "end": 556.614,
+      "duration": 0.516312
+    },
+    {
+      "start": 686.287,
+      "end": 686.853,
+      "duration": 0.566063
+    },
+    {
+      "start": 687.073,
+      "end": 687.742,
+      "duration": 0.669104
+    },
+    {
+      "start": 687.992,
+      "end": 688.931,
+      "duration": 0.938979
+    },
+    {
+      "start": 714.361,
+      "end": 714.949,
+      "duration": 0.587792
+    },
+    {
+      "start": 907.039,
+      "end": 908.575,
+      "duration": 1.5356
+    },
+    {
+      "start": 922.8,
+      "end": 923.317,
+      "duration": 0.516833
+    },
+    {
+      "start": 1066.73,
+      "end": 1067.47,
+      "duration": 0.739542
+    },
+    {
+      "start": 1068.57,
+      "end": 1069.95,
+      "duration": 1.38631
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      61
+    ],
+    "avg": 68.3,
+    "min": 61
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

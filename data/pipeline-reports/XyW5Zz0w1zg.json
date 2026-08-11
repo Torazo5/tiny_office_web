@@ -1,0 +1,394 @@
+{
+  "video_id": "XyW5Zz0w1zg",
+  "title": "Brittany Howard: NPR Music Tiny Desk Concert",
+  "duration": 918,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/XyW5Zz0w1zg.mp3",
+  "description_songs": [
+    "Stay High",
+    "Georgia",
+    "Baby",
+    "Goat Head"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 3 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 217.92,
+      "end": 256.32,
+      "duration": 38.400000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 445.44,
+      "end": 495.36,
+      "duration": 49.920000000000016,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 522.72,
+      "end": 524.16,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 530.4,
+      "end": 531.84,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 532.8,
+      "end": 534.24,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 671.52,
+      "end": 672.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 673.4399999999999,
+      "end": 703.68,
+      "duration": 30.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 897.12,
+      "end": 917.28,
+      "duration": 20.159999999999968,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Stay High",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 216.90999999999997,
+      "refined_v2_clip_end": 217.92,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 217.44,
+      "first_non_music_at": 216.96,
+      "crowd_onset_at": 217.92,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 217.92,
+      "song": "Georgia",
+      "corroboration": 0,
+      "silence_match": 216.628,
+      "clip_start": 256.32,
+      "clip_end": 443.95,
+      "refined_v2_clip_end": 445.44,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 444.48,
+      "first_non_music_at": 444.0,
+      "crowd_onset_at": 445.44,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 445.44,
+      "song": "Baby",
+      "corroboration": 0,
+      "silence_match": 443.568,
+      "clip_start": 495.36,
+      "clip_end": 671.47,
+      "refined_v2_clip_end": 673.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 672.0,
+      "first_non_music_at": 671.52,
+      "crowd_onset_at": 673.44,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 673.4399999999999,
+      "song": "Goat Head",
+      "corroboration": 0,
+      "silence_match": 671.067,
+      "clip_start": 703.68,
+      "clip_end": 894.67,
+      "refined_v2_clip_end": 897.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 894.72,
+      "first_non_music_at": 894.24,
+      "crowd_onset_at": 897.12,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 66
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 216.628,
+      "end": 218.049,
+      "duration": 1.42037
+    },
+    {
+      "start": 235.984,
+      "end": 237.573,
+      "duration": 1.58896
+    },
+    {
+      "start": 245.004,
+      "end": 245.887,
+      "duration": 0.883292
+    },
+    {
+      "start": 251.415,
+      "end": 252.286,
+      "duration": 0.871354
+    },
+    {
+      "start": 255.768,
+      "end": 258.794,
+      "duration": 3.026
+    },
+    {
+      "start": 308.934,
+      "end": 309.555,
+      "duration": 0.620646
+    },
+    {
+      "start": 341.763,
+      "end": 342.336,
+      "duration": 0.573625
+    },
+    {
+      "start": 443.568,
+      "end": 444.753,
+      "duration": 1.1849
+    },
+    {
+      "start": 463.886,
+      "end": 464.665,
+      "duration": 0.779104
+    },
+    {
+      "start": 465.754,
+      "end": 466.353,
+      "duration": 0.598521
+    },
+    {
+      "start": 504.095,
+      "end": 505.024,
+      "duration": 0.929063
+    },
+    {
+      "start": 505.542,
+      "end": 506.252,
+      "duration": 0.709771
+    },
+    {
+      "start": 506.989,
+      "end": 507.609,
+      "duration": 0.619687
+    },
+    {
+      "start": 510.444,
+      "end": 511.475,
+      "duration": 1.03144
+    },
+    {
+      "start": 511.707,
+      "end": 512.852,
+      "duration": 1.14525
+    },
+    {
+      "start": 514.419,
+      "end": 515.125,
+      "duration": 0.706333
+    },
+    {
+      "start": 515.937,
+      "end": 516.985,
+      "duration": 1.04794
+    },
+    {
+      "start": 519.758,
+      "end": 520.54,
+      "duration": 0.782
+    },
+    {
+      "start": 521.112,
+      "end": 521.853,
+      "duration": 0.741437
+    },
+    {
+      "start": 529.932,
+      "end": 531.122,
+      "duration": 1.19025
+    },
+    {
+      "start": 531.511,
+      "end": 533.319,
+      "duration": 1.80888
+    },
+    {
+      "start": 626.505,
+      "end": 627.156,
+      "duration": 0.650958
+    },
+    {
+      "start": 671.067,
+      "end": 672.354,
+      "duration": 1.28712
+    },
+    {
+      "start": 696.632,
+      "end": 698.273,
+      "duration": 1.64115
+    },
+    {
+      "start": 699.164,
+      "end": 700.151,
+      "duration": 0.987625
+    },
+    {
+      "start": 700.698,
+      "end": 701.872,
+      "duration": 1.17373
+    },
+    {
+      "start": 702.676,
+      "end": 703.677,
+      "duration": 1.00173
+    },
+    {
+      "start": 742.891,
+      "end": 743.623,
+      "duration": 0.731875
+    },
+    {
+      "start": 743.823,
+      "end": 744.454,
+      "duration": 0.631479
+    },
+    {
+      "start": 749.624,
+      "end": 750.181,
+      "duration": 0.556937
+    },
+    {
+      "start": 750.345,
+      "end": 751.019,
+      "duration": 0.674396
+    },
+    {
+      "start": 756.165,
+      "end": 756.756,
+      "duration": 0.590875
+    },
+    {
+      "start": 756.909,
+      "end": 757.575,
+      "duration": 0.666208
+    },
+    {
+      "start": 763.465,
+      "end": 764.119,
+      "duration": 0.654583
+    },
+    {
+      "start": 895.378,
+      "end": 895.955,
+      "duration": 0.577292
+    },
+    {
+      "start": 895.956,
+      "end": 897.213,
+      "duration": 1.25765
+    },
+    {
+      "start": 917.338,
+      "end": 918.256,
+      "duration": 0.918562
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      66,
+      66,
+      66
+    ],
+    "avg": 60.2,
+    "min": 43
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

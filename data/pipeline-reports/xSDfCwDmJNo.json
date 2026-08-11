@@ -2,7 +2,7 @@
   "video_id": "xSDfCwDmJNo",
   "title": "Tame Impala: Tiny Desk Concert",
   "duration": 1222,
-  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/xSDfCwDmJNo.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/xSDfCwDmJNo.mp3",
   "description_songs": [
     "Borderline",
     "Loser",
@@ -11,7 +11,7 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 3400 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+    "A_comments": "ok \u2014 3500 likes, matched all 4 description song(s), retained 4 timestamp(s)"
   },
   "comment_filter": {
     "cross_checked": true,
@@ -156,13 +156,24 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 2.4,
-      "clip_end": 259.15999999999997,
+      "clip_end": 260.15999999999997,
+      "refined_v2_clip_end": 260.15999999999997,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 260.16,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
       "suspect": false,
-      "confidence": 61,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 61
     },
     {
       "seconds": 300,
@@ -170,13 +181,24 @@
       "corroboration": 0,
       "silence_match": 297.203,
       "clip_start": 297.6,
-      "clip_end": 517.88,
+      "clip_end": 522.24,
+      "refined_v2_clip_end": 518.88,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 518.88,
+      "fade_out_end": 522.24,
+      "detected_music_release_at": 522.24,
+      "first_non_music_at": null,
+      "crowd_onset_at": 518.88,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 76,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 76
     },
     {
       "seconds": 610,
@@ -184,13 +206,24 @@
       "corroboration": 3,
       "silence_match": null,
       "clip_start": 602.4,
-      "clip_end": 799.64,
+      "clip_end": 800.16,
+      "refined_v2_clip_end": 800.64,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 799.48,
+      "fade_out_end": 800.16,
+      "detected_music_release_at": 800.16,
+      "first_non_music_at": 799.68,
+      "crowd_onset_at": 800.64,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 82,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 82
     },
     {
       "seconds": 843,
@@ -198,13 +231,24 @@
       "corroboration": 1,
       "silence_match": 845.896,
       "clip_start": 846.72,
-      "clip_end": 1194.68,
+      "clip_end": 1199.04,
+      "refined_v2_clip_end": 1195.68,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 1195.68,
+      "fade_out_end": 1199.04,
+      "detected_music_release_at": 1199.04,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1195.68,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 83,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 83
     }
   ],
   "silence_intervals": [
@@ -389,10 +433,16 @@
     "avg": 75.5,
     "min": 61
   },
-  "pipeline": "v2_no_audience_variant",
-  "pipeline_version": "v2_no_audience_variant",
-  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/xSDfCwDmJNo.json (edge-guarded comparison)",
-  "audience_enabled": true,
-  "audience_removed": true,
-  "audience_edge_guard_sec": 1.0
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
 }

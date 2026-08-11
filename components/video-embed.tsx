@@ -7,6 +7,12 @@ import { PlayerControls } from "@/components/player-controls";
 import { PlaybackCustomizer } from "@/components/playback-customizer";
 import { usePlayer } from "@/components/player-context";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
+import {
+  equalPowerFadeGain,
+  fadeDurationFromCurrentTime,
+  getBuiltInFadeWindow,
+  type FadeWindow,
+} from "@/lib/playback-fade";
 import { trackEvent } from "@/components/analytics";
 import {
   createYouTubePlayer,
@@ -49,8 +55,8 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
   const fadeTimerRef = useRef<number | null>(null);
   const isTransitioningRef = useRef(false);
   const volumeRef = useRef(100);
-  const transitionToSongRef = useRef<(nextStart: number) => void>(() => undefined);
-  const fadeOutAndStopRef = useRef<(end: number) => void>(() => undefined);
+  const transitionToSongRef = useRef<(nextStart: number, fadeWindow?: FadeWindow | null, fallbackFadeSeconds?: number) => void>(() => undefined);
+  const fadeOutAndStopRef = useRef<(end: number, fadeWindow?: FadeWindow | null, fallbackFadeSeconds?: number) => void>(() => undefined);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [playerState, setPlayerState] = useState<number | null>(null);
   const [volume, setVolume] = useState(100);
@@ -93,7 +99,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
     isTransitioningRef.current = false;
   }
 
-  function fade(player: YouTubePlayer, from: number, to: number, seconds: number, onComplete: () => void) {
+  function fade(player: YouTubePlayer, from: number, to: number, seconds: number, onComplete: () => void, equalPower = false) {
     if (seconds <= 0) {
       player.setVolume(to);
       onComplete();
@@ -104,7 +110,10 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       const activePlayer = getPlayer();
       if (!activePlayer) return clearTransition();
       const progress = Math.min(1, (performance.now() - startedAt) / (seconds * 1000));
-      activePlayer.setVolume(Math.round(from + (to - from) * progress));
+      const nextVolume = equalPower && to === 0
+        ? from * equalPowerFadeGain(progress)
+        : from + (to - from) * progress;
+      activePlayer.setVolume(Math.round(nextVolume));
       if (progress >= 1) {
         if (fadeTimerRef.current !== null) window.clearInterval(fadeTimerRef.current);
         fadeTimerRef.current = null;
@@ -115,12 +124,14 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
     fadeTimerRef.current = window.setInterval(tick, 50);
   }
 
-  function transitionToSong(nextStart: number) {
+  function transitionToSong(nextStart: number, fadeWindow: FadeWindow | null = null, fallbackFadeSeconds = playbackSettings.fadeOutSeconds) {
     const player = getPlayer();
     if (!player || isTransitioningRef.current) return;
     isTransitioningRef.current = true;
     const volume = volumeRef.current;
-    fade(player, volume, 0, playbackSettings.fadeOutSeconds, () => {
+    const fadeSeconds = fadeDurationFromCurrentTime(fadeWindow, player.getCurrentTime(), fallbackFadeSeconds);
+    fade(player, volume, 0, fadeSeconds, () => {
+      if (fadeWindow) player.seekTo(fadeWindow.end, true);
       player.pauseVideo();
       transitionTimerRef.current = window.setTimeout(() => {
         const activePlayer = getPlayer();
@@ -129,17 +140,23 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
         activePlayer.playVideo();
         previousTimeRef.current = nextStart;
         setStartAt(nextStart);
-        fade(activePlayer, 0, volume, playbackSettings.fadeInSeconds, clearTransition);
+        if (fadeWindow || fallbackFadeSeconds > 0) {
+          fade(activePlayer, 0, volume, playbackSettings.fadeInSeconds, clearTransition);
+        } else {
+          activePlayer.setVolume(volume);
+          clearTransition();
+        }
       }, playbackSettings.gapSeconds * 1000);
-    });
+    }, Boolean(fadeWindow));
   }
 
-  function fadeOutAndStop(end: number) {
+  function fadeOutAndStop(end: number, fadeWindow: FadeWindow | null = null, fallbackFadeSeconds = playbackSettings.fadeOutSeconds) {
     const player = getPlayer();
     if (!player || isTransitioningRef.current) return;
     isTransitioningRef.current = true;
     const volume = volumeRef.current;
-    fade(player, volume, 0, playbackSettings.fadeOutSeconds, () => {
+    const fadeSeconds = fadeDurationFromCurrentTime(fadeWindow, player.getCurrentTime(), fallbackFadeSeconds);
+    fade(player, volume, 0, fadeSeconds, () => {
       const activePlayer = getPlayer();
       if (!activePlayer) return clearTransition();
       activePlayer.seekTo(end, true);
@@ -147,7 +164,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       previousTimeRef.current = end;
       setStartAt(end);
       clearTransition();
-    });
+    }, Boolean(fadeWindow));
   }
 
   useEffect(() => {
@@ -270,14 +287,17 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       );
       if (currentSongIndex >= 0) {
         const currentSong = playableSongs[currentSongIndex];
-        const transitionAt = Math.max(
-          currentSong.clipStart,
-          currentSong.clipEnd - playbackSettings.fadeOutSeconds,
+        const fadeWindow = getBuiltInFadeWindow(currentSong, playbackSettings.builtInFade);
+        const fallbackFadeSeconds = playbackSettings.builtInFade ? 0 : playbackSettings.fadeOutSeconds;
+        const transitionAt = fadeWindow?.start ?? (
+          playbackSettings.builtInFade
+            ? currentSong.clipEnd
+            : Math.max(currentSong.clipStart, currentSong.clipEnd - playbackSettings.fadeOutSeconds)
         );
         if (currentTime >= transitionAt && !isTransitioningRef.current) {
           const nextSong = playableSongs[currentSongIndex + 1];
-          if (nextSong) transitionToSongRef.current(nextSong.clipStart);
-          else fadeOutAndStopRef.current(currentSong.clipEnd);
+          if (nextSong) transitionToSongRef.current(nextSong.clipStart, fadeWindow, fallbackFadeSeconds);
+          else fadeOutAndStopRef.current(currentSong.clipEnd, fadeWindow, fallbackFadeSeconds);
           return;
         }
       }
@@ -300,7 +320,11 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       }
 
       previousTimeRef.current = action.start;
-      transitionToSongRef.current(action.start);
+      transitionToSongRef.current(
+        action.start,
+        null,
+        playbackSettings.builtInFade ? 0 : playbackSettings.fadeOutSeconds,
+      );
     }, 250);
 
     return () => window.clearInterval(intervalId);

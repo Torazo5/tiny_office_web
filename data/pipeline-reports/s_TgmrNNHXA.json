@@ -1,0 +1,251 @@
+{
+  "video_id": "s_TgmrNNHXA",
+  "title": "Dave: NPR Music Tiny Desk Concert",
+  "duration": 803,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/s_TgmrNNHXA.mp3",
+  "description_songs": [
+    "Location",
+    "Black",
+    "Hangman"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 117 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 238.56,
+      "end": 279.84000000000003,
+      "duration": 41.28000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 507.84,
+      "end": 529.92,
+      "duration": 22.079999999999984,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 780.9599999999999,
+      "end": 794.88,
+      "duration": 13.920000000000073,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Location",
+      "corroboration": 1,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 237.54999999999998,
+      "refined_v2_clip_end": 238.56,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 237.6,
+      "first_non_music_at": 237.12,
+      "crowd_onset_at": 238.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 284,
+      "song": "Black",
+      "corroboration": 1,
+      "silence_match": 279.72,
+      "clip_start": 279.84000000000003,
+      "clip_end": 505.86999999999995,
+      "refined_v2_clip_end": 507.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 505.92,
+      "first_non_music_at": 505.44,
+      "crowd_onset_at": 507.84,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 546,
+      "song": "Hangman",
+      "corroboration": 0,
+      "silence_match": 546.858,
+      "clip_start": 529.92,
+      "clip_end": 780.9599999999999,
+      "refined_v2_clip_end": 780.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 780.96,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 3.75606,
+      "duration": 3.75606
+    },
+    {
+      "start": 237.517,
+      "end": 238.536,
+      "duration": 1.01929
+    },
+    {
+      "start": 248.128,
+      "end": 248.641,
+      "duration": 0.512896
+    },
+    {
+      "start": 251.015,
+      "end": 251.961,
+      "duration": 0.945437
+    },
+    {
+      "start": 252.621,
+      "end": 254.877,
+      "duration": 2.25619
+    },
+    {
+      "start": 255.968,
+      "end": 256.842,
+      "duration": 0.874
+    },
+    {
+      "start": 263.531,
+      "end": 264.479,
+      "duration": 0.948417
+    },
+    {
+      "start": 269.41,
+      "end": 269.928,
+      "duration": 0.518125
+    },
+    {
+      "start": 279.72,
+      "end": 282.393,
+      "duration": 2.67315
+    },
+    {
+      "start": 505.539,
+      "end": 506.687,
+      "duration": 1.14873
+    },
+    {
+      "start": 517.284,
+      "end": 518.726,
+      "duration": 1.4421
+    },
+    {
+      "start": 521.714,
+      "end": 522.215,
+      "duration": 0.501875
+    },
+    {
+      "start": 522.833,
+      "end": 523.837,
+      "duration": 1.00392
+    },
+    {
+      "start": 529.927,
+      "end": 532.449,
+      "duration": 2.52219
+    },
+    {
+      "start": 532.458,
+      "end": 533.608,
+      "duration": 1.15065
+    },
+    {
+      "start": 533.671,
+      "end": 536.246,
+      "duration": 2.5746
+    },
+    {
+      "start": 536.316,
+      "end": 538.722,
+      "duration": 2.40594
+    },
+    {
+      "start": 538.723,
+      "end": 539.657,
+      "duration": 0.934187
+    },
+    {
+      "start": 539.85,
+      "end": 546.591,
+      "duration": 6.7414
+    },
+    {
+      "start": 546.858,
+      "end": 547.951,
+      "duration": 1.09342
+    },
+    {
+      "start": 794.541,
+      "end": 803.271,
+      "duration": 8.73002
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      83,
+      76
+    ],
+    "avg": 78.0,
+    "min": 75
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

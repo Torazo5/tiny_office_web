@@ -1,0 +1,419 @@
+{
+  "video_id": "glHqWvkpRqo",
+  "title": "Denzel Curry: Tiny Desk Concert",
+  "duration": 1184,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/glHqWvkpRqo.mp3",
+  "description_songs": [
+    "Melt Session #1",
+    "Walkin",
+    "Troubles",
+    "DIET_",
+    "CLOUT COBAIN | CLOUT CO13A1N",
+    "RICKY"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1300 likes, matched all 6 description song(s), retained 6 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 179.51999999999998,
+      "end": 179.99999999999997,
+      "duration": 0.47999999999998977,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 277.44,
+      "end": 278.88,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 378.24,
+      "end": 380.16,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 382.56,
+      "end": 385.44,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 386.88,
+      "end": 402.72,
+      "duration": 15.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 403.68,
+      "end": 405.12,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 556.3199999999999,
+      "end": 560.16,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 561.12,
+      "end": 589.92,
+      "duration": 28.799999999999955,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 598.0799999999999,
+      "end": 600.0,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 719.52,
+      "end": 720.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 750.24,
+      "end": 772.3199999999999,
+      "duration": 22.079999999999927,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 925.92,
+      "end": 955.1999999999999,
+      "duration": 29.279999999999973,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1135.68,
+      "end": 1174.08,
+      "duration": 38.399999999999864,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1180.32,
+      "end": 1183.68,
+      "duration": 3.3600000000001273,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Melt Session #1",
+      "corroboration": 1,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 179.51999999999998,
+      "refined_v2_clip_end": 179.51999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 179.52,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 192,
+      "song": "Walkin",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 179.99999999999997,
+      "clip_end": 384.42999999999995,
+      "refined_v2_clip_end": 386.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 384.48,
+      "first_non_music_at": 384.0,
+      "crowd_onset_at": 386.88,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 405,
+      "song": "Troubles",
+      "corroboration": 1,
+      "silence_match": 404.226,
+      "clip_start": 405.12,
+      "clip_end": 558.6700000000001,
+      "refined_v2_clip_end": 561.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 558.72,
+      "first_non_music_at": 558.24,
+      "crowd_onset_at": 561.12,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 590,
+      "song": "DIET_",
+      "corroboration": 1,
+      "silence_match": 587.481,
+      "clip_start": 600.0,
+      "clip_end": 749.71,
+      "refined_v2_clip_end": 750.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 750.24,
+      "first_non_music_at": 749.76,
+      "crowd_onset_at": 750.24,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 773,
+      "song": "CLOUT COBAIN | CLOUT CO13A1N",
+      "corroboration": 1,
+      "silence_match": 772.452,
+      "clip_start": 772.3199999999999,
+      "clip_end": 924.4300000000001,
+      "refined_v2_clip_end": 925.92,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 924.48,
+      "first_non_music_at": 924.0,
+      "crowd_onset_at": 925.92,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 956,
+      "song": "RICKY",
+      "corroboration": 1,
+      "silence_match": 955.232,
+      "clip_start": 955.1999999999999,
+      "clip_end": 1135.15,
+      "refined_v2_clip_end": 1135.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1135.2,
+      "first_non_music_at": 1134.72,
+      "crowd_onset_at": 1135.68,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 4.58796,
+      "duration": 4.58796
+    },
+    {
+      "start": 364.662,
+      "end": 365.446,
+      "duration": 0.784042
+    },
+    {
+      "start": 371.1,
+      "end": 371.624,
+      "duration": 0.523417
+    },
+    {
+      "start": 399.104,
+      "end": 399.931,
+      "duration": 0.826417
+    },
+    {
+      "start": 400.678,
+      "end": 401.718,
+      "duration": 1.04029
+    },
+    {
+      "start": 401.915,
+      "end": 404.206,
+      "duration": 2.29071
+    },
+    {
+      "start": 404.226,
+      "end": 405.373,
+      "duration": 1.14738
+    },
+    {
+      "start": 585.139,
+      "end": 585.681,
+      "duration": 0.542292
+    },
+    {
+      "start": 586.175,
+      "end": 586.767,
+      "duration": 0.591771
+    },
+    {
+      "start": 586.774,
+      "end": 587.353,
+      "duration": 0.579063
+    },
+    {
+      "start": 587.481,
+      "end": 590.734,
+      "duration": 3.25327
+    },
+    {
+      "start": 600.827,
+      "end": 601.365,
+      "duration": 0.538187
+    },
+    {
+      "start": 744.835,
+      "end": 745.343,
+      "duration": 0.507958
+    },
+    {
+      "start": 749.605,
+      "end": 750.347,
+      "duration": 0.742104
+    },
+    {
+      "start": 765.63,
+      "end": 766.488,
+      "duration": 0.858458
+    },
+    {
+      "start": 770.543,
+      "end": 771.921,
+      "duration": 1.37835
+    },
+    {
+      "start": 772.452,
+      "end": 773.088,
+      "duration": 0.635854
+    },
+    {
+      "start": 946.013,
+      "end": 946.582,
+      "duration": 0.568917
+    },
+    {
+      "start": 952.61,
+      "end": 953.479,
+      "duration": 0.86825
+    },
+    {
+      "start": 953.486,
+      "end": 955.197,
+      "duration": 1.71115
+    },
+    {
+      "start": 955.232,
+      "end": 956.316,
+      "duration": 1.08404
+    },
+    {
+      "start": 1173.84,
+      "end": 1181.02,
+      "duration": 7.18048
+    },
+    {
+      "start": 1183.45,
+      "end": 1184.36,
+      "duration": 0.907854
+    }
+  ],
+  "confidence": {
+    "scores": [
+      75,
+      68,
+      83,
+      83,
+      83,
+      83
+    ],
+    "avg": 79.2,
+    "min": 68
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

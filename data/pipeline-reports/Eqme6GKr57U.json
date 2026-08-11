@@ -1,0 +1,262 @@
+{
+  "video_id": "Eqme6GKr57U",
+  "title": "GZA & The Soul Rebels: NPR Music Tiny Desk Concert",
+  "duration": 764,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/Eqme6GKr57U.mp3",
+  "description_songs": [
+    "Living in the World Today",
+    "Duel of the Iron Mic",
+    "Liquid Swords"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 367 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 197.28,
+      "end": 214.07999999999998,
+      "duration": 16.799999999999983,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 338.88,
+      "end": 347.52,
+      "duration": 8.639999999999986,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 348.96,
+      "end": 351.36,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 386.4,
+      "end": 395.04,
+      "duration": 8.640000000000043,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 724.3199999999999,
+      "end": 725.76,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 725.76,
+      "end": 753.6,
+      "duration": 27.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Living in the World Today",
+      "corroboration": 0,
+      "silence_match": 0.345104,
+      "clip_start": 0,
+      "clip_end": 196.26999999999998,
+      "refined_v2_clip_end": 197.28,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 196.8,
+      "first_non_music_at": 196.32,
+      "crowd_onset_at": 197.28,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 217,
+      "song": "Duel of the Iron Mic",
+      "corroboration": 0,
+      "silence_match": 217.134,
+      "clip_start": 214.07999999999998,
+      "clip_end": 338.83,
+      "refined_v2_clip_end": 338.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 338.88,
+      "first_non_music_at": 338.4,
+      "crowd_onset_at": 338.88,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 393,
+      "song": "Liquid Swords",
+      "corroboration": 0,
+      "silence_match": 394.59,
+      "clip_start": 395.04,
+      "clip_end": 724.75,
+      "refined_v2_clip_end": 725.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 724.8,
+      "first_non_music_at": 724.32,
+      "crowd_onset_at": 725.76,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.345104,
+      "end": 1.44923,
+      "duration": 1.10413
+    },
+    {
+      "start": 1.50194,
+      "end": 2.62375,
+      "duration": 1.12181
+    },
+    {
+      "start": 2.67308,
+      "end": 3.2529,
+      "duration": 0.579812
+    },
+    {
+      "start": 3.31658,
+      "end": 3.83506,
+      "duration": 0.518479
+    },
+    {
+      "start": 3.87015,
+      "end": 4.42962,
+      "duration": 0.559479
+    },
+    {
+      "start": 4.46702,
+      "end": 5.0654,
+      "duration": 0.598375
+    },
+    {
+      "start": 196.157,
+      "end": 197.366,
+      "duration": 1.20923
+    },
+    {
+      "start": 209.712,
+      "end": 210.54,
+      "duration": 0.828062
+    },
+    {
+      "start": 213.784,
+      "end": 216.15,
+      "duration": 2.36638
+    },
+    {
+      "start": 216.158,
+      "end": 217.06,
+      "duration": 0.901937
+    },
+    {
+      "start": 217.134,
+      "end": 217.689,
+      "duration": 0.554417
+    },
+    {
+      "start": 217.729,
+      "end": 218.299,
+      "duration": 0.570479
+    },
+    {
+      "start": 218.984,
+      "end": 219.532,
+      "duration": 0.547417
+    },
+    {
+      "start": 219.592,
+      "end": 220.175,
+      "duration": 0.582458
+    },
+    {
+      "start": 220.24,
+      "end": 220.838,
+      "duration": 0.597646
+    },
+    {
+      "start": 383.813,
+      "end": 384.476,
+      "duration": 0.663146
+    },
+    {
+      "start": 394.59,
+      "end": 395.117,
+      "duration": 0.526646
+    },
+    {
+      "start": 395.135,
+      "end": 395.669,
+      "duration": 0.533875
+    },
+    {
+      "start": 753.502,
+      "end": 763.646,
+      "duration": 10.1447
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      76
+    ],
+    "avg": 73.3,
+    "min": 68
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

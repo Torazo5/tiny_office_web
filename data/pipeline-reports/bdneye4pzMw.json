@@ -2,7 +2,7 @@
   "video_id": "bdneye4pzMw",
   "title": "Sting And Shaggy: NPR Music Tiny Desk Concert",
   "duration": 875,
-  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/bdneye4pzMw.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/bdneye4pzMw.mp3",
   "description_songs": [
     "Englishman in New York",
     "Don't Make Me Wait",
@@ -14,8 +14,8 @@
   },
   "comment_filter": {
     "cross_checked": true,
-    "parsed": 6,
-    "accepted": 6,
+    "parsed": 7,
+    "accepted": 7,
     "rejected": 0,
     "filtered_entries": 2
   },
@@ -61,16 +61,27 @@
     {
       "seconds": 0,
       "song": "Englishman in New York",
-      "corroboration": 3,
+      "corroboration": 4,
       "silence_match": null,
       "clip_start": 10.08,
-      "clip_end": 240.92,
+      "clip_end": 241.39,
+      "refined_v2_clip_end": 241.92,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 241.44,
+      "first_non_music_at": 240.96,
+      "crowd_onset_at": 241.92,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 82,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 82
     },
     {
       "seconds": 265,
@@ -78,13 +89,24 @@
       "corroboration": 2,
       "silence_match": 264.036,
       "clip_start": 277.44,
-      "clip_end": 501.56,
+      "clip_end": 504.0,
+      "refined_v2_clip_end": 502.56,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 502.56,
+      "fade_out_end": 504.0,
+      "detected_music_release_at": 504.0,
+      "first_non_music_at": null,
+      "crowd_onset_at": 502.56,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 90,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 90
     },
     {
       "seconds": 515,
@@ -92,13 +114,24 @@
       "corroboration": 2,
       "silence_match": 517.717,
       "clip_start": 515,
-      "clip_end": 839.9599999999999,
+      "clip_end": 840.9599999999999,
+      "refined_v2_clip_end": 840.9599999999999,
       "start_refined": false,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": true,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 840.96,
+      "end_unresolved_reason": "music/crowd overlap did not release within 4.0s",
       "suspect": false,
-      "confidence": 82,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 82
     }
   ],
   "silence_intervals": [
@@ -197,10 +230,16 @@
     "avg": 84.7,
     "min": 82
   },
-  "pipeline": "v2_no_audience_variant",
-  "pipeline_version": "v2_no_audience_variant",
-  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/bdneye4pzMw.json (edge-guarded comparison)",
-  "audience_enabled": true,
-  "audience_removed": true,
-  "audience_edge_guard_sec": 1.0
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
 }

@@ -1,0 +1,353 @@
+{
+  "video_id": "G0ljnXV-q40",
+  "title": "NIKI: Tiny Desk Concert",
+  "duration": 1129,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/G0ljnXV-q40.mp3",
+  "description_songs": [
+    "Backburner",
+    "The Apartment We Won't Share",
+    "Before",
+    "Every Summertime"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 3 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 72.96,
+      "end": 74.4,
+      "duration": 1.440000000000012,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 248.16,
+      "end": 306.24,
+      "duration": 58.08000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 489.12,
+      "end": 520.8,
+      "duration": 31.67999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 773.28,
+      "end": 867.36,
+      "duration": 94.08000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1096.32,
+      "end": 1121.76,
+      "duration": 25.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Backburner",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 247.62999999999997,
+      "refined_v2_clip_end": 248.16,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 248.16,
+      "first_non_music_at": 247.68,
+      "crowd_onset_at": 248.16,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 58
+    },
+    {
+      "seconds": 248.16,
+      "song": "The Apartment We Won't Share",
+      "corroboration": 0,
+      "silence_match": 246.481,
+      "clip_start": 306.24,
+      "clip_end": 489.12,
+      "refined_v2_clip_end": 489.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 489.12,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 489.12,
+      "song": "Before",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 520.8,
+      "clip_end": 773.28,
+      "refined_v2_clip_end": 773.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 773.28,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 773.28,
+      "song": "Every Summertime",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 867.36,
+      "clip_end": 1095.79,
+      "refined_v2_clip_end": 1096.32,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1095.84,
+      "first_non_music_at": 1095.36,
+      "crowd_onset_at": 1096.32,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.528021,
+      "duration": 0.528021
+    },
+    {
+      "start": 156.601,
+      "end": 157.209,
+      "duration": 0.607854
+    },
+    {
+      "start": 246.481,
+      "end": 247.791,
+      "duration": 1.30979
+    },
+    {
+      "start": 265.582,
+      "end": 266.412,
+      "duration": 0.829562
+    },
+    {
+      "start": 268.522,
+      "end": 269.676,
+      "duration": 1.15365
+    },
+    {
+      "start": 285.23,
+      "end": 285.858,
+      "duration": 0.628021
+    },
+    {
+      "start": 287.468,
+      "end": 288.255,
+      "duration": 0.786646
+    },
+    {
+      "start": 291.097,
+      "end": 292.052,
+      "duration": 0.955083
+    },
+    {
+      "start": 299.378,
+      "end": 299.906,
+      "duration": 0.52775
+    },
+    {
+      "start": 301.775,
+      "end": 302.468,
+      "duration": 0.693729
+    },
+    {
+      "start": 306.208,
+      "end": 308.667,
+      "duration": 2.45879
+    },
+    {
+      "start": 309.471,
+      "end": 310.058,
+      "duration": 0.587708
+    },
+    {
+      "start": 456.331,
+      "end": 458.373,
+      "duration": 2.04158
+    },
+    {
+      "start": 500.666,
+      "end": 502.502,
+      "duration": 1.83596
+    },
+    {
+      "start": 502.67,
+      "end": 504.306,
+      "duration": 1.63681
+    },
+    {
+      "start": 506.707,
+      "end": 507.53,
+      "duration": 0.822875
+    },
+    {
+      "start": 507.53,
+      "end": 508.526,
+      "duration": 0.9965
+    },
+    {
+      "start": 513.542,
+      "end": 514.059,
+      "duration": 0.516583
+    },
+    {
+      "start": 518.211,
+      "end": 519.188,
+      "duration": 0.977125
+    },
+    {
+      "start": 520.522,
+      "end": 522.246,
+      "duration": 1.72367
+    },
+    {
+      "start": 607.086,
+      "end": 607.941,
+      "duration": 0.854875
+    },
+    {
+      "start": 786.721,
+      "end": 787.39,
+      "duration": 0.668604
+    },
+    {
+      "start": 791.082,
+      "end": 791.584,
+      "duration": 0.502437
+    },
+    {
+      "start": 792.876,
+      "end": 793.481,
+      "duration": 0.605458
+    },
+    {
+      "start": 804.496,
+      "end": 805.259,
+      "duration": 0.763271
+    },
+    {
+      "start": 863.109,
+      "end": 863.673,
+      "duration": 0.564396
+    },
+    {
+      "start": 866.464,
+      "end": 868.537,
+      "duration": 2.07315
+    },
+    {
+      "start": 868.562,
+      "end": 869.304,
+      "duration": 0.741271
+    },
+    {
+      "start": 869.329,
+      "end": 870.051,
+      "duration": 0.721958
+    },
+    {
+      "start": 870.079,
+      "end": 870.839,
+      "duration": 0.759646
+    },
+    {
+      "start": 1117.38,
+      "end": 1118.43,
+      "duration": 1.05221
+    },
+    {
+      "start": 1118.44,
+      "end": 1119.76,
+      "duration": 1.32048
+    },
+    {
+      "start": 1121.64,
+      "end": 1128.59,
+      "duration": 6.95744
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      66,
+      51,
+      51
+    ],
+    "avg": 56.5,
+    "min": 51
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

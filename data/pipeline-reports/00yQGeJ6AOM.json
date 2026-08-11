@@ -1,0 +1,368 @@
+{
+  "video_id": "00yQGeJ6AOM",
+  "title": "Benjamin Clementine: Tiny Desk Concert",
+  "duration": 1109,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/00yQGeJ6AOM.mp3",
+  "description_songs": [
+    "Condolence",
+    "Gone",
+    "Adios"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 104 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 302.88,
+      "end": 343.2,
+      "duration": 40.31999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 588.48,
+      "end": 591.84,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 592.3199999999999,
+      "end": 595.2,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 596.16,
+      "end": 598.56,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 600.48,
+      "end": 602.88,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 603.84,
+      "end": 605.76,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 606.72,
+      "end": 608.16,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 626.4,
+      "end": 647.52,
+      "duration": 21.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1052.6399999999999,
+      "end": 1073.28,
+      "duration": 20.6400000000001,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Condolence",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 301.39,
+      "refined_v2_clip_end": 302.88,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 301.92,
+      "first_non_music_at": 301.44,
+      "crowd_onset_at": 302.88,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 342,
+      "song": "Gone",
+      "corroboration": 0,
+      "silence_match": 341.504,
+      "clip_start": 343.2,
+      "clip_end": 625.39,
+      "refined_v2_clip_end": 626.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 625.92,
+      "first_non_music_at": 625.44,
+      "crowd_onset_at": 626.4,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 645,
+      "song": "Adios",
+      "corroboration": 0,
+      "silence_match": 645.955,
+      "clip_start": 647.52,
+      "clip_end": 1052.1599999999999,
+      "refined_v2_clip_end": 1052.6399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 1051.58,
+      "fade_out_end": 1052.16,
+      "detected_music_release_at": 1052.16,
+      "first_non_music_at": 1051.68,
+      "crowd_onset_at": 1052.64,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.546792,
+      "duration": 0.546792
+    },
+    {
+      "start": 301.357,
+      "end": 302.232,
+      "duration": 0.874437
+    },
+    {
+      "start": 319.127,
+      "end": 320.269,
+      "duration": 1.14144
+    },
+    {
+      "start": 322.787,
+      "end": 323.967,
+      "duration": 1.17919
+    },
+    {
+      "start": 325.251,
+      "end": 327.266,
+      "duration": 2.01475
+    },
+    {
+      "start": 328.989,
+      "end": 329.783,
+      "duration": 0.793958
+    },
+    {
+      "start": 332.052,
+      "end": 332.775,
+      "duration": 0.722854
+    },
+    {
+      "start": 336.952,
+      "end": 338.084,
+      "duration": 1.1325
+    },
+    {
+      "start": 338.67,
+      "end": 339.232,
+      "duration": 0.562104
+    },
+    {
+      "start": 339.942,
+      "end": 341.014,
+      "duration": 1.07258
+    },
+    {
+      "start": 341.504,
+      "end": 342.66,
+      "duration": 1.15625
+    },
+    {
+      "start": 342.988,
+      "end": 343.707,
+      "duration": 0.718958
+    },
+    {
+      "start": 343.709,
+      "end": 345.28,
+      "duration": 1.5704
+    },
+    {
+      "start": 380.783,
+      "end": 381.724,
+      "duration": 0.941021
+    },
+    {
+      "start": 382.079,
+      "end": 382.639,
+      "duration": 0.560167
+    },
+    {
+      "start": 585.662,
+      "end": 589.072,
+      "duration": 3.40987
+    },
+    {
+      "start": 591.693,
+      "end": 593.047,
+      "duration": 1.35398
+    },
+    {
+      "start": 595.2,
+      "end": 596.97,
+      "duration": 1.76987
+    },
+    {
+      "start": 598.317,
+      "end": 601.148,
+      "duration": 2.83083
+    },
+    {
+      "start": 602.798,
+      "end": 604.544,
+      "duration": 1.74627
+    },
+    {
+      "start": 605.359,
+      "end": 607.342,
+      "duration": 1.98283
+    },
+    {
+      "start": 608.119,
+      "end": 611.971,
+      "duration": 3.85187
+    },
+    {
+      "start": 625.267,
+      "end": 626.536,
+      "duration": 1.26967
+    },
+    {
+      "start": 640.084,
+      "end": 640.745,
+      "duration": 0.661333
+    },
+    {
+      "start": 641.257,
+      "end": 641.994,
+      "duration": 0.737187
+    },
+    {
+      "start": 645.955,
+      "end": 647.094,
+      "duration": 1.13883
+    },
+    {
+      "start": 647.79,
+      "end": 650.965,
+      "duration": 3.17512
+    },
+    {
+      "start": 802.628,
+      "end": 803.461,
+      "duration": 0.833104
+    },
+    {
+      "start": 803.613,
+      "end": 804.394,
+      "duration": 0.780438
+    },
+    {
+      "start": 805.212,
+      "end": 806.896,
+      "duration": 1.68365
+    },
+    {
+      "start": 966.913,
+      "end": 967.516,
+      "duration": 0.603646
+    },
+    {
+      "start": 971.241,
+      "end": 971.802,
+      "duration": 0.561167
+    },
+    {
+      "start": 1050.97,
+      "end": 1052.86,
+      "duration": 1.89767
+    },
+    {
+      "start": 1073.36,
+      "end": 1075.48,
+      "duration": 2.11377
+    },
+    {
+      "start": 1075.96,
+      "end": 1076.52,
+      "duration": 0.555063
+    },
+    {
+      "start": 1076.74,
+      "end": 1077.25,
+      "duration": 0.506979
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      76
+    ],
+    "avg": 73.3,
+    "min": 68
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

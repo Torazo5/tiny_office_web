@@ -1,0 +1,363 @@
+{
+  "video_id": "abb3ObvdBus",
+  "title": "Tokischa: Tiny Desk Concert",
+  "duration": 1007,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/abb3ObvdBus.mp3",
+  "description_songs": [
+    "Perra",
+    "Hola",
+    "Somos Iguales",
+    "Delincuente",
+    "ESTILAZO",
+    "Kilos De Amor"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 6 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 6 usable episode(s), took top 5; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 150.72,
+      "end": 173.27999999999997,
+      "duration": 22.559999999999974,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 340.8,
+      "end": 346.08,
+      "duration": 5.279999999999973,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 499.2,
+      "end": 510.72,
+      "duration": 11.520000000000039,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 627.84,
+      "end": 629.28,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 632.64,
+      "end": 637.92,
+      "duration": 5.279999999999973,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 825.6,
+      "end": 839.04,
+      "duration": 13.43999999999994,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 984.0,
+      "end": 984.48,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 986.4,
+      "end": 1006.56,
+      "duration": 20.159999999999968,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Perra",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 150.72,
+      "refined_v2_clip_end": 150.72,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 150.72,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 58
+    },
+    {
+      "seconds": 150.72,
+      "song": "Hola",
+      "corroboration": 0,
+      "silence_match": 149.948,
+      "clip_start": 173.27999999999997,
+      "clip_end": 338.88,
+      "refined_v2_clip_end": 340.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 338.3,
+      "fade_out_end": 338.88,
+      "detected_music_release_at": 338.88,
+      "first_non_music_at": 338.4,
+      "crowd_onset_at": 340.8,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 340.8,
+      "song": "Somos Iguales",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 346.08,
+      "clip_end": 497.76,
+      "refined_v2_clip_end": 499.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 497.18,
+      "fade_out_end": 497.76,
+      "detected_music_release_at": 497.76,
+      "first_non_music_at": 497.28,
+      "crowd_onset_at": 499.2,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 499.2,
+      "song": "Delincuente",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 510.72,
+      "clip_end": 629.4100000000001,
+      "refined_v2_clip_end": 632.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 630.24,
+      "first_non_music_at": 629.76,
+      "crowd_onset_at": 632.64,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 632.64,
+      "song": "ESTILAZO",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 637.92,
+      "clip_end": 824.11,
+      "refined_v2_clip_end": 825.6,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 824.16,
+      "first_non_music_at": 823.68,
+      "crowd_onset_at": 825.6,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 825.6,
+      "song": "Kilos De Amor",
+      "corroboration": 0,
+      "silence_match": 823.731,
+      "clip_start": 839.04,
+      "clip_end": 982.51,
+      "refined_v2_clip_end": 984.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 983.04,
+      "first_non_music_at": 982.56,
+      "crowd_onset_at": 984.0,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 66
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.536875,
+      "duration": 0.536875
+    },
+    {
+      "start": 149.948,
+      "end": 150.753,
+      "duration": 0.805688
+    },
+    {
+      "start": 162.959,
+      "end": 163.614,
+      "duration": 0.655458
+    },
+    {
+      "start": 167.282,
+      "end": 168.714,
+      "duration": 1.43231
+    },
+    {
+      "start": 169.495,
+      "end": 170.372,
+      "duration": 0.877104
+    },
+    {
+      "start": 170.373,
+      "end": 171.235,
+      "duration": 0.861854
+    },
+    {
+      "start": 171.237,
+      "end": 172.089,
+      "duration": 0.851708
+    },
+    {
+      "start": 172.09,
+      "end": 172.904,
+      "duration": 0.81425
+    },
+    {
+      "start": 240.865,
+      "end": 241.929,
+      "duration": 1.06398
+    },
+    {
+      "start": 266.359,
+      "end": 267.333,
+      "duration": 0.973229
+    },
+    {
+      "start": 294.778,
+      "end": 295.735,
+      "duration": 0.957229
+    },
+    {
+      "start": 347.249,
+      "end": 348.536,
+      "duration": 1.28721
+    },
+    {
+      "start": 507.791,
+      "end": 510.451,
+      "duration": 2.66002
+    },
+    {
+      "start": 511.602,
+      "end": 514.768,
+      "duration": 3.16565
+    },
+    {
+      "start": 823.731,
+      "end": 825.738,
+      "duration": 2.00738
+    },
+    {
+      "start": 837.427,
+      "end": 838.061,
+      "duration": 0.634062
+    },
+    {
+      "start": 838.835,
+      "end": 842.099,
+      "duration": 3.26437
+    },
+    {
+      "start": 842.101,
+      "end": 843.366,
+      "duration": 1.26515
+    },
+    {
+      "start": 843.368,
+      "end": 844.397,
+      "duration": 1.029
+    },
+    {
+      "start": 981.626,
+      "end": 984.315,
+      "duration": 2.68842
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      66,
+      51,
+      51,
+      51,
+      66
+    ],
+    "avg": 57.2,
+    "min": 51
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

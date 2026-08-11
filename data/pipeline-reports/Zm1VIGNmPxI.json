@@ -1,0 +1,224 @@
+{
+  "video_id": "Zm1VIGNmPxI",
+  "title": "The Smile: Tiny Desk Concert",
+  "duration": 894,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/Zm1VIGNmPxI.mp3",
+  "description_songs": [
+    "Pana-vision",
+    "The Smoke",
+    "Skrting On the Surface"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 823 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 271.68,
+      "end": 283.68,
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 287.03999999999996,
+      "end": 290.88,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 292.8,
+      "end": 294.24,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 294.71999999999997,
+      "end": 299.04,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 299.52,
+      "end": 301.44,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 526.0799999999999,
+      "end": 533.76,
+      "duration": 7.680000000000064,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 862.56,
+      "end": 893.28,
+      "duration": 30.720000000000027,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Pana-vision",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 271.2,
+      "refined_v2_clip_end": 271.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 270.32,
+      "fade_out_end": 271.2,
+      "detected_music_release_at": 271.2,
+      "first_non_music_at": 270.72,
+      "crowd_onset_at": 271.68,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 302,
+      "song": "The Smoke",
+      "corroboration": 0,
+      "silence_match": 300.536,
+      "clip_start": 301.44,
+      "clip_end": 524.11,
+      "refined_v2_clip_end": 526.0799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 524.64,
+      "first_non_music_at": 524.16,
+      "crowd_onset_at": 526.08,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 533,
+      "song": "Skrting On the Surface",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 533.76,
+      "clip_end": 861.07,
+      "refined_v2_clip_end": 862.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 861.6,
+      "first_non_music_at": 861.12,
+      "crowd_onset_at": 862.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 268.592,
+      "end": 269.982,
+      "duration": 1.3896
+    },
+    {
+      "start": 283.9,
+      "end": 285.047,
+      "duration": 1.14692
+    },
+    {
+      "start": 290.793,
+      "end": 291.351,
+      "duration": 0.558542
+    },
+    {
+      "start": 294.154,
+      "end": 295.637,
+      "duration": 1.4826
+    },
+    {
+      "start": 297.775,
+      "end": 298.47,
+      "duration": 0.695458
+    },
+    {
+      "start": 299.631,
+      "end": 300.162,
+      "duration": 0.531438
+    },
+    {
+      "start": 300.536,
+      "end": 303.761,
+      "duration": 3.22535
+    },
+    {
+      "start": 523.964,
+      "end": 525.311,
+      "duration": 1.34694
+    },
+    {
+      "start": 860.28,
+      "end": 862.25,
+      "duration": 1.97021
+    },
+    {
+      "start": 862.303,
+      "end": 862.907,
+      "duration": 0.604167
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      61
+    ],
+    "avg": 63.3,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

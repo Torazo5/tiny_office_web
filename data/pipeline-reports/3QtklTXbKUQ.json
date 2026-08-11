@@ -1,0 +1,341 @@
+{
+  "video_id": "3QtklTXbKUQ",
+  "title": "Imogen Heap: NPR Music Tiny Desk Concert",
+  "duration": 1143,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/3QtklTXbKUQ.mp3",
+  "description_songs": [
+    "Guitar Song",
+    "Speeding Cars",
+    "Hide and Seek"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 837 likes, matched all 3 description song(s), retained 3 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 2,
+    "rejected": 1,
+    "filtered_entries": 2
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 238.07999999999998,
+      "end": 276.0,
+      "duration": 37.920000000000016,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 276.48,
+      "end": 323.04,
+      "duration": 46.56,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 323.52,
+      "end": 335.52,
+      "duration": 12.0,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 478.56,
+      "end": 479.04,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 544.3199999999999,
+      "end": 556.32,
+      "duration": 12.000000000000114,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 556.3199999999999,
+      "end": 691.68,
+      "duration": 135.36,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 693.12,
+      "end": 711.36,
+      "duration": 18.24000000000001,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 711.8399999999999,
+      "end": 729.12,
+      "duration": 17.280000000000086,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 731.52,
+      "end": 733.4399999999999,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 733.92,
+      "end": 747.36,
+      "duration": 13.440000000000055,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 751.68,
+      "end": 753.6,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 754.0799999999999,
+      "end": 770.88,
+      "duration": 16.800000000000068,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1118.3999999999999,
+      "end": 1131.84,
+      "duration": 13.440000000000055,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Guitar Song",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 236.10999999999999,
+      "refined_v2_clip_end": 238.07999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 236.64,
+      "first_non_music_at": 236.16,
+      "crowd_onset_at": 238.08,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 340,
+      "song": "Speeding Cars",
+      "corroboration": 1,
+      "silence_match": 337.703,
+      "clip_start": 335.52,
+      "clip_end": 542.83,
+      "refined_v2_clip_end": 544.3199999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [
+        {
+          "start": 478.56,
+          "end": 479.04,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.871,
+          "music_run_sec": 40.75,
+          "anchor_start": 544.32
+        }
+      ],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 543.36,
+      "first_non_music_at": 542.88,
+      "crowd_onset_at": 544.32,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 779,
+      "song": "Hide and Seek",
+      "corroboration": 1,
+      "silence_match": 777.024,
+      "clip_start": 770.88,
+      "clip_end": 1118.35,
+      "refined_v2_clip_end": 1118.3999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1118.4,
+      "first_non_music_at": 1117.92,
+      "crowd_onset_at": 1118.4,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 235.058,
+      "end": 238.333,
+      "duration": 3.27521
+    },
+    {
+      "start": 291.652,
+      "end": 292.43,
+      "duration": 0.778125
+    },
+    {
+      "start": 313.029,
+      "end": 313.726,
+      "duration": 0.697187
+    },
+    {
+      "start": 323.868,
+      "end": 324.433,
+      "duration": 0.565417
+    },
+    {
+      "start": 328.9,
+      "end": 329.402,
+      "duration": 0.501437
+    },
+    {
+      "start": 335.356,
+      "end": 336.07,
+      "duration": 0.713125
+    },
+    {
+      "start": 336.07,
+      "end": 337.702,
+      "duration": 1.63135
+    },
+    {
+      "start": 337.703,
+      "end": 340.889,
+      "duration": 3.18592
+    },
+    {
+      "start": 352.938,
+      "end": 353.484,
+      "duration": 0.546542
+    },
+    {
+      "start": 485.315,
+      "end": 487.435,
+      "duration": 2.12031
+    },
+    {
+      "start": 540.536,
+      "end": 543.415,
+      "duration": 2.87958
+    },
+    {
+      "start": 559.116,
+      "end": 559.646,
+      "duration": 0.530271
+    },
+    {
+      "start": 696.528,
+      "end": 697.115,
+      "duration": 0.586833
+    },
+    {
+      "start": 708.14,
+      "end": 708.795,
+      "duration": 0.655042
+    },
+    {
+      "start": 724.0,
+      "end": 725.239,
+      "duration": 1.23858
+    },
+    {
+      "start": 756.685,
+      "end": 757.349,
+      "duration": 0.663396
+    },
+    {
+      "start": 765.036,
+      "end": 765.868,
+      "duration": 0.831354
+    },
+    {
+      "start": 772.18,
+      "end": 772.894,
+      "duration": 0.71475
+    },
+    {
+      "start": 774.571,
+      "end": 775.281,
+      "duration": 0.7095
+    },
+    {
+      "start": 776.334,
+      "end": 776.922,
+      "duration": 0.587938
+    },
+    {
+      "start": 777.024,
+      "end": 779.248,
+      "duration": 2.2235
+    },
+    {
+      "start": 1129.96,
+      "end": 1131.06,
+      "duration": 1.09831
+    },
+    {
+      "start": 1131.06,
+      "end": 1143.4,
+      "duration": 12.335
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      83,
+      83
+    ],
+    "avg": 75.3,
+    "min": 60
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

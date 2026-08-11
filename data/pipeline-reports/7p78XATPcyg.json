@@ -1,0 +1,333 @@
+{
+  "video_id": "7p78XATPcyg",
+  "title": "Omar Apollo: Tiny Desk Concert",
+  "duration": 1093,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/7p78XATPcyg.mp3",
+  "description_songs": [
+    "En El Olvido",
+    "Evergreen",
+    "Petrified",
+    "Endlessly"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2100 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 160.79999999999998,
+      "end": 196.79999999999998,
+      "duration": 36.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 488.15999999999997,
+      "end": 496.8,
+      "duration": 8.640000000000043,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 511.68,
+      "end": 514.08,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 519.36,
+      "end": 522.72,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 762.72,
+      "end": 766.56,
+      "duration": 3.839999999999918,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 769.4399999999999,
+      "end": 772.8,
+      "duration": 3.3600000000000136,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 777.6,
+      "end": 779.52,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 780.0,
+      "end": 781.92,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 790.0799999999999,
+      "end": 792.0,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 795.36,
+      "end": 796.8,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1047.84,
+      "end": 1048.32,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1050.24,
+      "end": 1076.16,
+      "duration": 25.920000000000073,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1089.12,
+      "end": 1092.0,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "En El Olvido",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 159.79,
+      "refined_v2_clip_end": 160.79999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 159.84,
+      "first_non_music_at": 159.36,
+      "crowd_onset_at": 160.8,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 207,
+      "song": "Evergreen",
+      "corroboration": 0,
+      "silence_match": 202.339,
+      "clip_start": 196.79999999999998,
+      "clip_end": 487.63,
+      "refined_v2_clip_end": 488.15999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 487.68,
+      "first_non_music_at": 487.2,
+      "crowd_onset_at": 488.16,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 531,
+      "song": "Petrified",
+      "corroboration": 0,
+      "silence_match": 528.053,
+      "clip_start": 522.72,
+      "clip_end": 762.72,
+      "refined_v2_clip_end": 762.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 762.72,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 800,
+      "song": "Endlessly",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 796.8,
+      "clip_end": 1046.83,
+      "refined_v2_clip_end": 1047.84,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1046.88,
+      "first_non_music_at": 1046.4,
+      "crowd_onset_at": 1047.84,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 183.615,
+      "end": 184.381,
+      "duration": 0.765583
+    },
+    {
+      "start": 189.139,
+      "end": 189.784,
+      "duration": 0.645021
+    },
+    {
+      "start": 201.014,
+      "end": 201.636,
+      "duration": 0.622563
+    },
+    {
+      "start": 202.339,
+      "end": 207.175,
+      "duration": 4.836
+    },
+    {
+      "start": 497.728,
+      "end": 500.033,
+      "duration": 2.30525
+    },
+    {
+      "start": 501.625,
+      "end": 502.233,
+      "duration": 0.607667
+    },
+    {
+      "start": 510.723,
+      "end": 511.909,
+      "duration": 1.18627
+    },
+    {
+      "start": 517.047,
+      "end": 517.825,
+      "duration": 0.777833
+    },
+    {
+      "start": 522.416,
+      "end": 522.982,
+      "duration": 0.565437
+    },
+    {
+      "start": 528.053,
+      "end": 531.008,
+      "duration": 2.9544
+    },
+    {
+      "start": 741.09,
+      "end": 742.993,
+      "duration": 1.90283
+    },
+    {
+      "start": 760.346,
+      "end": 761.045,
+      "duration": 0.699104
+    },
+    {
+      "start": 781.921,
+      "end": 783.072,
+      "duration": 1.15115
+    },
+    {
+      "start": 783.072,
+      "end": 783.612,
+      "duration": 0.539792
+    },
+    {
+      "start": 1075.3,
+      "end": 1076.39,
+      "duration": 1.08737
+    },
+    {
+      "start": 1076.5,
+      "end": 1077.41,
+      "duration": 0.913646
+    },
+    {
+      "start": 1078.2,
+      "end": 1089.6,
+      "duration": 11.3964
+    },
+    {
+      "start": 1092.02,
+      "end": 1093.18,
+      "duration": 1.15938
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76,
+      61
+    ],
+    "avg": 66.5,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

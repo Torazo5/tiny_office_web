@@ -1,0 +1,294 @@
+{
+  "video_id": "hsNKSbTNd5I",
+  "title": "DakhaBrakha: NPR Music Tiny Desk Concert",
+  "duration": 837,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/hsNKSbTNd5I.mp3",
+  "description_songs": [
+    "Sho Z-Pod Duba",
+    "Torokh",
+    "Divka-Marusechka"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 4 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 122.88,
+      "end": 123.36,
+      "duration": 0.480000000000004,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 205.44,
+      "end": 215.99999999999997,
+      "duration": 10.559999999999974,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 471.35999999999996,
+      "end": 484.8,
+      "duration": 13.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 768.9599999999999,
+      "end": 804.48,
+      "duration": 35.520000000000095,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Sho Z-Pod Duba",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 203.95,
+      "refined_v2_clip_end": 205.44,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [
+        {
+          "start": 122.88,
+          "end": 123.36,
+          "duration": 0.48,
+          "reason": "short audience hit followed by sustained musical continuation",
+          "music_fraction": 0.845,
+          "music_run_sec": 20.5,
+          "anchor_start": 205.44
+        }
+      ],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 204.48,
+      "first_non_music_at": 204.0,
+      "crowd_onset_at": 205.44,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 471.35999999999996,
+      "song": "Torokh",
+      "corroboration": 0,
+      "silence_match": 469.139,
+      "clip_start": 484.8,
+      "clip_end": 768.9599999999999,
+      "refined_v2_clip_end": 768.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 768.96,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 768.9599999999999,
+      "song": "Divka-Marusechka",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 804.48,
+      "clip_end": 837,
+      "refined_v2_clip_end": 837,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 43
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 203.819,
+      "end": 204.868,
+      "duration": 1.04856
+    },
+    {
+      "start": 216.181,
+      "end": 223.132,
+      "duration": 6.95169
+    },
+    {
+      "start": 226.687,
+      "end": 227.614,
+      "duration": 0.926729
+    },
+    {
+      "start": 227.618,
+      "end": 228.258,
+      "duration": 0.639917
+    },
+    {
+      "start": 229.538,
+      "end": 230.227,
+      "duration": 0.689333
+    },
+    {
+      "start": 230.288,
+      "end": 230.845,
+      "duration": 0.556771
+    },
+    {
+      "start": 232.003,
+      "end": 232.76,
+      "duration": 0.756271
+    },
+    {
+      "start": 232.771,
+      "end": 233.357,
+      "duration": 0.585417
+    },
+    {
+      "start": 234.571,
+      "end": 235.192,
+      "duration": 0.620521
+    },
+    {
+      "start": 237.07,
+      "end": 237.595,
+      "duration": 0.524813
+    },
+    {
+      "start": 239.51,
+      "end": 240.011,
+      "duration": 0.501188
+    },
+    {
+      "start": 249.116,
+      "end": 249.669,
+      "duration": 0.552937
+    },
+    {
+      "start": 251.539,
+      "end": 252.048,
+      "duration": 0.509687
+    },
+    {
+      "start": 292.392,
+      "end": 293.302,
+      "duration": 0.910042
+    },
+    {
+      "start": 294.187,
+      "end": 295.377,
+      "duration": 1.18938
+    },
+    {
+      "start": 311.634,
+      "end": 312.166,
+      "duration": 0.531333
+    },
+    {
+      "start": 338.521,
+      "end": 346.576,
+      "duration": 8.05544
+    },
+    {
+      "start": 389.118,
+      "end": 389.872,
+      "duration": 0.753437
+    },
+    {
+      "start": 408.527,
+      "end": 409.435,
+      "duration": 0.908333
+    },
+    {
+      "start": 448.11,
+      "end": 465.973,
+      "duration": 17.8633
+    },
+    {
+      "start": 469.139,
+      "end": 470.949,
+      "duration": 1.80927
+    },
+    {
+      "start": 484.74,
+      "end": 487.238,
+      "duration": 2.49869
+    },
+    {
+      "start": 799.679,
+      "end": 801.15,
+      "duration": 1.47117
+    },
+    {
+      "start": 801.203,
+      "end": 801.946,
+      "duration": 0.742833
+    },
+    {
+      "start": 801.973,
+      "end": 803.259,
+      "duration": 1.28565
+    },
+    {
+      "start": 803.926,
+      "end": 807.762,
+      "duration": 3.83665
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      66,
+      43
+    ],
+    "avg": 50.7,
+    "min": 43
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

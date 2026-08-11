@@ -68,7 +68,7 @@ export function PlaybackCustomizer({
           <div>
           <div className="text-[12px] font-semibold text-foreground">Playback controls</div>
           <p className="text-[11px] text-muted-foreground">
-            {secondsLabel(settings.gapSeconds)} gap · {secondsLabel(settings.fadeOutSeconds)} out · {secondsLabel(settings.fadeInSeconds)} in
+            {secondsLabel(settings.gapSeconds)} gap · {secondsLabel(settings.fadeOutSeconds)} out · {secondsLabel(settings.fadeInSeconds)} in · built-in {settings.builtInFade ? "on" : "off"}
           </p>
           </div>
         </div>
@@ -116,7 +116,7 @@ export function PlaybackCustomizer({
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h2 id="playback-customizer-title" className="text-base font-semibold text-foreground">Customize playback</h2>
-                    <p className="mt-1 text-[12.5px] leading-relaxed text-muted-foreground">Fade-out finishes at a song&apos;s end; fade-in begins at the next song&apos;s start.</p>
+                  <p className="mt-1 text-[12.5px] leading-relaxed text-muted-foreground">Built-in fades use each overlap record&apos;s validated window and override the generic fade timing when available.</p>
                   </div>
                   <button type="button" onClick={close} className="rounded-md px-2 py-1 text-[12px] text-muted-foreground hover:text-foreground" aria-label="Close playback customization">Close</button>
                 </div>
@@ -171,6 +171,13 @@ export function PlaybackCustomizer({
                   <span>
                     <span className="block text-[12.5px] font-medium text-foreground">Cut audience between songs</span>
                     <span className="mt-0.5 block text-[11.5px] leading-relaxed text-muted-foreground">Use mapped song boundaries to skip applause and spoken interludes. It applies wherever the performance has song timing.</span>
+                  </span>
+                </label>
+                <label className="mt-3 flex cursor-pointer items-start gap-3 rounded-lg border border-primary/30 bg-primary/5 p-3">
+                  <input type="checkbox" checked={draft.builtInFade} onChange={(event) => setDraft((current) => ({ ...current, builtInFade: event.target.checked }))} className="mt-0.5 accent-primary" />
+                  <span>
+                    <span className="block text-[12.5px] font-medium text-foreground">Use built-in overlap fades</span>
+                    <span className="mt-0.5 block text-[11.5px] leading-relaxed text-muted-foreground">On by default. Uses report-provided fade timing for the 117 resolved overlap boundaries; unresolved records play without an invented fade.</span>
                   </span>
                 </label>
                 <div className="mt-5 flex justify-end gap-2">

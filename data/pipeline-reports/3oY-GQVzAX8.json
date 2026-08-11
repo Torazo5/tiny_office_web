@@ -1,0 +1,150 @@
+{
+  "video_id": "3oY-GQVzAX8",
+  "title": "Bomba Estereo: NPR Music Tiny Desk Concert",
+  "duration": 554,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/3oY-GQVzAX8.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 169.44,
+      "end": 209.27999999999997,
+      "duration": 39.839999999999975,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 532.3199999999999,
+      "end": 533.28,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 540.0,
+      "end": 553.92,
+      "duration": 13.919999999999959,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.46375,
+      "end": 1.24219,
+      "duration": 0.778438
+    },
+    {
+      "start": 1.40617,
+      "end": 2.54725,
+      "duration": 1.14108
+    },
+    {
+      "start": 4.8895,
+      "end": 5.89406,
+      "duration": 1.00456
+    },
+    {
+      "start": 6.10419,
+      "end": 6.6126,
+      "duration": 0.508417
+    },
+    {
+      "start": 6.64162,
+      "end": 7.17104,
+      "duration": 0.529417
+    },
+    {
+      "start": 7.19969,
+      "end": 7.71033,
+      "duration": 0.510646
+    },
+    {
+      "start": 41.3597,
+      "end": 41.8778,
+      "duration": 0.518021
+    },
+    {
+      "start": 168.106,
+      "end": 168.908,
+      "duration": 0.802417
+    },
+    {
+      "start": 194.787,
+      "end": 195.967,
+      "duration": 1.17956
+    },
+    {
+      "start": 196.304,
+      "end": 197.811,
+      "duration": 1.5071
+    },
+    {
+      "start": 200.722,
+      "end": 201.236,
+      "duration": 0.514521
+    },
+    {
+      "start": 202.863,
+      "end": 203.369,
+      "duration": 0.505354
+    },
+    {
+      "start": 203.485,
+      "end": 204.613,
+      "duration": 1.12727
+    },
+    {
+      "start": 205.273,
+      "end": 208.469,
+      "duration": 3.19656
+    },
+    {
+      "start": 209.236,
+      "end": 209.752,
+      "duration": 0.516208
+    },
+    {
+      "start": 209.809,
+      "end": 210.406,
+      "duration": 0.597208
+    },
+    {
+      "start": 553.692,
+      "end": 554.272,
+      "duration": 0.579542
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

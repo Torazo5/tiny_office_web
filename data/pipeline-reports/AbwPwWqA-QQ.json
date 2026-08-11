@@ -1,0 +1,232 @@
+{
+  "video_id": "AbwPwWqA-QQ",
+  "title": "Banks: NPR Music Tiny Desk Concert",
+  "duration": 821,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/AbwPwWqA-QQ.mp3",
+  "description_songs": [
+    "Beggin For Thread",
+    "Alibi",
+    "Brain"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 2 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 245.76,
+      "end": 263.04,
+      "duration": 17.28000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 469.91999999999996,
+      "end": 483.36,
+      "duration": 13.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 758.88,
+      "end": 791.52,
+      "duration": 32.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Beggin For Thread",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 245.28,
+      "refined_v2_clip_end": 245.76,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 244.7,
+      "fade_out_end": 245.28,
+      "detected_music_release_at": 245.28,
+      "first_non_music_at": 244.8,
+      "crowd_onset_at": 245.76,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 245.76,
+      "song": "Alibi",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 263.04,
+      "clip_end": 469.91999999999996,
+      "refined_v2_clip_end": 469.91999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 469.92,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 469.91999999999996,
+      "song": "Brain",
+      "corroboration": 0,
+      "silence_match": 468.287,
+      "clip_start": 483.36,
+      "clip_end": 758.88,
+      "refined_v2_clip_end": 758.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 758.88,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 66
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 100.804,
+      "end": 101.742,
+      "duration": 0.938083
+    },
+    {
+      "start": 105.191,
+      "end": 106.132,
+      "duration": 0.941021
+    },
+    {
+      "start": 258.035,
+      "end": 258.539,
+      "duration": 0.503875
+    },
+    {
+      "start": 259.398,
+      "end": 260.324,
+      "duration": 0.926229
+    },
+    {
+      "start": 261.467,
+      "end": 261.986,
+      "duration": 0.518333
+    },
+    {
+      "start": 262.365,
+      "end": 263.798,
+      "duration": 1.43285
+    },
+    {
+      "start": 468.287,
+      "end": 469.96,
+      "duration": 1.67358
+    },
+    {
+      "start": 481.549,
+      "end": 484.757,
+      "duration": 3.20796
+    },
+    {
+      "start": 732.963,
+      "end": 733.477,
+      "duration": 0.514042
+    },
+    {
+      "start": 744.001,
+      "end": 744.648,
+      "duration": 0.647542
+    },
+    {
+      "start": 754.381,
+      "end": 758.924,
+      "duration": 4.5424
+    },
+    {
+      "start": 776.775,
+      "end": 779.625,
+      "duration": 2.85052
+    },
+    {
+      "start": 779.631,
+      "end": 784.509,
+      "duration": 4.87881
+    },
+    {
+      "start": 785.147,
+      "end": 786.365,
+      "duration": 1.21773
+    },
+    {
+      "start": 786.823,
+      "end": 788.939,
+      "duration": 2.11575
+    },
+    {
+      "start": 788.939,
+      "end": 790.985,
+      "duration": 2.04604
+    },
+    {
+      "start": 820.134,
+      "end": 820.709,
+      "duration": 0.575063
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      51,
+      66
+    ],
+    "avg": 53.3,
+    "min": 43
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

@@ -1,0 +1,747 @@
+{
+  "video_id": "Eq5inG547JA",
+  "title": "Regina Spektor: Tiny Desk Concert",
+  "duration": 1462,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/Eq5inG547JA.mp3",
+  "description_songs": [
+    "Tiny Song",
+    "Loveology",
+    "Becoming All Alone",
+    "Apr\u00e8s Moi",
+    "Fidelity",
+    "Samson"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2600 likes, matched all 6 description song(s), retained 6 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 1.44,
+      "duration": 1.44,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 2.4,
+      "end": 3.84,
+      "duration": 1.44,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 9.12,
+      "end": 11.52,
+      "duration": 2.4000000000000004,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 12.959999999999999,
+      "end": 14.879999999999999,
+      "duration": 1.92,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 17.28,
+      "end": 24.96,
+      "duration": 7.68,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 25.919999999999998,
+      "end": 28.8,
+      "duration": 2.8800000000000026,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 29.279999999999998,
+      "end": 30.72,
+      "duration": 1.4400000000000013,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 31.2,
+      "end": 32.63999999999999,
+      "duration": 1.4399999999999942,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 35.04,
+      "end": 37.44,
+      "duration": 2.3999999999999986,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 37.92,
+      "end": 41.76,
+      "duration": 3.8399999999999963,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 42.72,
+      "end": 45.12,
+      "duration": 2.3999999999999986,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 46.559999999999995,
+      "end": 48.959999999999994,
+      "duration": 2.3999999999999986,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 52.32,
+      "end": 56.16,
+      "duration": 3.8399999999999963,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 56.64,
+      "end": 58.07999999999999,
+      "duration": 1.4399999999999906,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 58.559999999999995,
+      "end": 62.39999999999999,
+      "duration": 3.8399999999999963,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 65.28,
+      "end": 67.68,
+      "duration": 2.4000000000000057,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 70.56,
+      "end": 75.84,
+      "duration": 5.280000000000001,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 76.32,
+      "end": 78.24,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 79.67999999999999,
+      "end": 81.6,
+      "duration": 1.9200000000000017,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 81.6,
+      "end": 105.12,
+      "duration": 23.52000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 390.24,
+      "end": 400.32,
+      "duration": 10.079999999999984,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 416.64,
+      "end": 418.08,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 418.56,
+      "end": 422.88,
+      "duration": 4.319999999999993,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 660.0,
+      "end": 671.52,
+      "duration": 11.519999999999982,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 677.76,
+      "end": 687.36,
+      "duration": 9.600000000000023,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 687.8399999999999,
+      "end": 694.56,
+      "duration": 6.720000000000027,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 966.24,
+      "end": 978.72,
+      "duration": 12.480000000000018,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 982.56,
+      "end": 986.4,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1196.6399999999999,
+      "end": 1205.76,
+      "duration": 9.120000000000118,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1218.24,
+      "end": 1221.12,
+      "duration": 2.8799999999998818,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1222.56,
+      "end": 1226.3999999999999,
+      "duration": 3.839999999999918,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1229.28,
+      "end": 1236.0,
+      "duration": 6.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1435.6799999999998,
+      "end": 1453.92,
+      "duration": 18.240000000000236,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Tiny Song",
+      "corroboration": 1,
+      "silence_match": 0.0,
+      "clip_start": 14.879999999999999,
+      "clip_end": 17.28,
+      "refined_v2_clip_end": 17.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 14.88,
+      "first_non_music_at": 14.4,
+      "crowd_onset_at": 17.28,
+      "end_unresolved_reason": null,
+      "suspect": true,
+      "confidence": 33
+    },
+    {
+      "seconds": 104,
+      "song": "Loveology",
+      "corroboration": 1,
+      "silence_match": 105.238,
+      "clip_start": 105.12,
+      "clip_end": 388.75,
+      "refined_v2_clip_end": 390.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 389.28,
+      "first_non_music_at": 388.8,
+      "crowd_onset_at": 390.24,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 423,
+      "song": "Becoming All Alone",
+      "corroboration": 1,
+      "silence_match": 422.87,
+      "clip_start": 422.88,
+      "clip_end": 657.07,
+      "refined_v2_clip_end": 660.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 657.6,
+      "first_non_music_at": 657.12,
+      "crowd_onset_at": 660.0,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 695,
+      "song": "Apr\u00e8s Moi",
+      "corroboration": 1,
+      "silence_match": 695.615,
+      "clip_start": 694.56,
+      "clip_end": 965.23,
+      "refined_v2_clip_end": 966.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 965.76,
+      "first_non_music_at": 965.28,
+      "crowd_onset_at": 966.24,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 987,
+      "song": "Fidelity",
+      "corroboration": 1,
+      "silence_match": 987.305,
+      "clip_start": 986.4,
+      "clip_end": 1195.63,
+      "refined_v2_clip_end": 1196.6399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1196.16,
+      "first_non_music_at": 1195.68,
+      "crowd_onset_at": 1196.64,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 1236,
+      "song": "Samson",
+      "corroboration": 1,
+      "silence_match": 1236.09,
+      "clip_start": 1236.0,
+      "clip_end": 1435.6799999999998,
+      "refined_v2_clip_end": 1435.6799999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1435.68,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.591333,
+      "duration": 0.591333
+    },
+    {
+      "start": 4.1629,
+      "end": 5.18804,
+      "duration": 1.02515
+    },
+    {
+      "start": 8.39481,
+      "end": 8.90848,
+      "duration": 0.513667
+    },
+    {
+      "start": 8.90894,
+      "end": 9.43385,
+      "duration": 0.524917
+    },
+    {
+      "start": 12.7735,
+      "end": 13.5158,
+      "duration": 0.742229
+    },
+    {
+      "start": 20.1827,
+      "end": 20.6828,
+      "duration": 0.500021
+    },
+    {
+      "start": 25.5628,
+      "end": 26.4911,
+      "duration": 0.928354
+    },
+    {
+      "start": 30.0925,
+      "end": 30.7655,
+      "duration": 0.673042
+    },
+    {
+      "start": 38.728,
+      "end": 39.2593,
+      "duration": 0.531312
+    },
+    {
+      "start": 49.4046,
+      "end": 50.46,
+      "duration": 1.05531
+    },
+    {
+      "start": 50.4778,
+      "end": 51.5175,
+      "duration": 1.03971
+    },
+    {
+      "start": 52.0478,
+      "end": 52.5482,
+      "duration": 0.500437
+    },
+    {
+      "start": 55.847,
+      "end": 56.8814,
+      "duration": 1.03438
+    },
+    {
+      "start": 60.1357,
+      "end": 60.7646,
+      "duration": 0.628896
+    },
+    {
+      "start": 64.4375,
+      "end": 65.5094,
+      "duration": 1.07194
+    },
+    {
+      "start": 70.2017,
+      "end": 71.2756,
+      "duration": 1.07394
+    },
+    {
+      "start": 72.8146,
+      "end": 73.3688,
+      "duration": 0.554229
+    },
+    {
+      "start": 74.86,
+      "end": 75.4534,
+      "duration": 0.593458
+    },
+    {
+      "start": 76.8777,
+      "end": 78.1594,
+      "duration": 1.28163
+    },
+    {
+      "start": 88.7989,
+      "end": 89.4974,
+      "duration": 0.698479
+    },
+    {
+      "start": 105.238,
+      "end": 105.77,
+      "duration": 0.531354
+    },
+    {
+      "start": 185.069,
+      "end": 185.858,
+      "duration": 0.789667
+    },
+    {
+      "start": 188.154,
+      "end": 188.824,
+      "duration": 0.670125
+    },
+    {
+      "start": 237.045,
+      "end": 237.858,
+      "duration": 0.812396
+    },
+    {
+      "start": 239.528,
+      "end": 240.048,
+      "duration": 0.519667
+    },
+    {
+      "start": 240.048,
+      "end": 240.853,
+      "duration": 0.804896
+    },
+    {
+      "start": 254.63,
+      "end": 255.909,
+      "duration": 1.27881
+    },
+    {
+      "start": 384.007,
+      "end": 390.387,
+      "duration": 6.37977
+    },
+    {
+      "start": 400.382,
+      "end": 402.234,
+      "duration": 1.85244
+    },
+    {
+      "start": 402.253,
+      "end": 406.288,
+      "duration": 4.0346
+    },
+    {
+      "start": 406.288,
+      "end": 417.16,
+      "duration": 10.8712
+    },
+    {
+      "start": 417.866,
+      "end": 419.035,
+      "duration": 1.16871
+    },
+    {
+      "start": 422.87,
+      "end": 424.936,
+      "duration": 2.06617
+    },
+    {
+      "start": 469.821,
+      "end": 470.552,
+      "duration": 0.73075
+    },
+    {
+      "start": 527.364,
+      "end": 528.006,
+      "duration": 0.642208
+    },
+    {
+      "start": 575.137,
+      "end": 576.628,
+      "duration": 1.49113
+    },
+    {
+      "start": 580.548,
+      "end": 581.457,
+      "duration": 0.909396
+    },
+    {
+      "start": 623.162,
+      "end": 623.825,
+      "duration": 0.662833
+    },
+    {
+      "start": 637.882,
+      "end": 638.516,
+      "duration": 0.633292
+    },
+    {
+      "start": 654.887,
+      "end": 659.989,
+      "duration": 5.10288
+    },
+    {
+      "start": 671.418,
+      "end": 678.14,
+      "duration": 6.72196
+    },
+    {
+      "start": 688.46,
+      "end": 689.144,
+      "duration": 0.684104
+    },
+    {
+      "start": 694.067,
+      "end": 694.582,
+      "duration": 0.515125
+    },
+    {
+      "start": 695.615,
+      "end": 696.528,
+      "duration": 0.912792
+    },
+    {
+      "start": 962.139,
+      "end": 963.852,
+      "duration": 1.71304
+    },
+    {
+      "start": 963.852,
+      "end": 965.949,
+      "duration": 2.09717
+    },
+    {
+      "start": 978.793,
+      "end": 983.032,
+      "duration": 4.23867
+    },
+    {
+      "start": 984.698,
+      "end": 985.529,
+      "duration": 0.83125
+    },
+    {
+      "start": 986.125,
+      "end": 987.204,
+      "duration": 1.07942
+    },
+    {
+      "start": 987.305,
+      "end": 988.885,
+      "duration": 1.58019
+    },
+    {
+      "start": 1043.76,
+      "end": 1044.33,
+      "duration": 0.573875
+    },
+    {
+      "start": 1194.34,
+      "end": 1195.71,
+      "duration": 1.36756
+    },
+    {
+      "start": 1205.92,
+      "end": 1208.95,
+      "duration": 3.03598
+    },
+    {
+      "start": 1208.96,
+      "end": 1218.77,
+      "duration": 9.8139
+    },
+    {
+      "start": 1221.32,
+      "end": 1223.02,
+      "duration": 1.69625
+    },
+    {
+      "start": 1232.96,
+      "end": 1233.56,
+      "duration": 0.603958
+    },
+    {
+      "start": 1234.53,
+      "end": 1235.17,
+      "duration": 0.644458
+    },
+    {
+      "start": 1236.09,
+      "end": 1237.64,
+      "duration": 1.54698
+    },
+    {
+      "start": 1383.88,
+      "end": 1384.38,
+      "duration": 0.502396
+    },
+    {
+      "start": 1385.45,
+      "end": 1387.38,
+      "duration": 1.9259
+    },
+    {
+      "start": 1431.15,
+      "end": 1435.37,
+      "duration": 4.22325
+    },
+    {
+      "start": 1453.95,
+      "end": 1462.06,
+      "duration": 8.10721
+    }
+  ],
+  "confidence": {
+    "scores": [
+      33,
+      83,
+      83,
+      83,
+      83,
+      83
+    ],
+    "avg": 74.7,
+    "min": 33
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

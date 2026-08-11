@@ -1,0 +1,466 @@
+{
+  "video_id": "AynDvSkZ8og",
+  "title": "DannyLux: Tiny Desk Concert",
+  "duration": 1299,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/AynDvSkZ8og.mp3",
+  "description_songs": [
+    "AMAR Y PERDER",
+    "SI SUPIERAS",
+    "TE EXTRA\u00d1O Y LO SIENTO...",
+    "ATRAPADO"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1000 likes, matched all 4 description song(s), retained 4 timestamp(s), filtered 3 non-song chapter entries"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 3,
+    "rejected": 0,
+    "filtered_entries": 3
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 313.92,
+      "end": 416.64,
+      "duration": 102.71999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 648.9599999999999,
+      "end": 790.56,
+      "duration": 141.60000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1017.5999999999999,
+      "end": 1076.16,
+      "duration": 58.56000000000017,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1079.52,
+      "end": 1083.84,
+      "duration": 4.319999999999936,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1084.32,
+      "end": 1085.76,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1270.08,
+      "end": 1284.0,
+      "duration": 13.920000000000073,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1287.84,
+      "end": 1288.32,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "AMAR Y PERDER",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 313.39,
+      "refined_v2_clip_end": 313.92,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 313.44,
+      "first_non_music_at": 312.96,
+      "crowd_onset_at": 313.92,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 67
+    },
+    {
+      "seconds": 413,
+      "song": "SI SUPIERAS",
+      "corroboration": 2,
+      "silence_match": 413.026,
+      "clip_start": 416.64,
+      "clip_end": 648.91,
+      "refined_v2_clip_end": 648.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 648.96,
+      "first_non_music_at": 648.48,
+      "crowd_onset_at": 648.96,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 799,
+      "song": "TE EXTRA\u00d1O Y LO SIENTO...",
+      "corroboration": 2,
+      "silence_match": 796.15,
+      "clip_start": 790.56,
+      "clip_end": 1017.5999999999999,
+      "refined_v2_clip_end": 1017.5999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1017.6,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 1086,
+      "song": "ATRAPADO",
+      "corroboration": 2,
+      "silence_match": 1085.44,
+      "clip_start": 1085.76,
+      "clip_end": 1269.55,
+      "refined_v2_clip_end": 1270.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1269.6,
+      "first_non_music_at": 1269.12,
+      "crowd_onset_at": 1270.08,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 90
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 329.855,
+      "end": 330.651,
+      "duration": 0.79675
+    },
+    {
+      "start": 333.44,
+      "end": 334.252,
+      "duration": 0.81175
+    },
+    {
+      "start": 337.508,
+      "end": 338.095,
+      "duration": 0.587313
+    },
+    {
+      "start": 339.84,
+      "end": 340.409,
+      "duration": 0.569
+    },
+    {
+      "start": 348.09,
+      "end": 348.678,
+      "duration": 0.587958
+    },
+    {
+      "start": 373.327,
+      "end": 373.851,
+      "duration": 0.5245
+    },
+    {
+      "start": 376.001,
+      "end": 376.578,
+      "duration": 0.577292
+    },
+    {
+      "start": 384.722,
+      "end": 385.293,
+      "duration": 0.570667
+    },
+    {
+      "start": 385.986,
+      "end": 386.553,
+      "duration": 0.567042
+    },
+    {
+      "start": 392.882,
+      "end": 393.442,
+      "duration": 0.559729
+    },
+    {
+      "start": 400.262,
+      "end": 400.801,
+      "duration": 0.539167
+    },
+    {
+      "start": 405.707,
+      "end": 406.36,
+      "duration": 0.652417
+    },
+    {
+      "start": 407.387,
+      "end": 407.942,
+      "duration": 0.554771
+    },
+    {
+      "start": 410.42,
+      "end": 411.078,
+      "duration": 0.657937
+    },
+    {
+      "start": 413.026,
+      "end": 414.008,
+      "duration": 0.982229
+    },
+    {
+      "start": 414.008,
+      "end": 414.554,
+      "duration": 0.545833
+    },
+    {
+      "start": 415.327,
+      "end": 417.104,
+      "duration": 1.77769
+    },
+    {
+      "start": 662.751,
+      "end": 663.412,
+      "duration": 0.661167
+    },
+    {
+      "start": 666.549,
+      "end": 667.081,
+      "duration": 0.531833
+    },
+    {
+      "start": 673.337,
+      "end": 674.14,
+      "duration": 0.803396
+    },
+    {
+      "start": 679.908,
+      "end": 680.475,
+      "duration": 0.567708
+    },
+    {
+      "start": 685.891,
+      "end": 686.821,
+      "duration": 0.929604
+    },
+    {
+      "start": 700.974,
+      "end": 701.504,
+      "duration": 0.529979
+    },
+    {
+      "start": 716.35,
+      "end": 716.916,
+      "duration": 0.565521
+    },
+    {
+      "start": 717.871,
+      "end": 718.878,
+      "duration": 1.00721
+    },
+    {
+      "start": 720.771,
+      "end": 721.274,
+      "duration": 0.502708
+    },
+    {
+      "start": 727.005,
+      "end": 727.743,
+      "duration": 0.737979
+    },
+    {
+      "start": 734.989,
+      "end": 735.809,
+      "duration": 0.819896
+    },
+    {
+      "start": 739.827,
+      "end": 740.408,
+      "duration": 0.581062
+    },
+    {
+      "start": 745.812,
+      "end": 746.491,
+      "duration": 0.678604
+    },
+    {
+      "start": 747.906,
+      "end": 748.597,
+      "duration": 0.691146
+    },
+    {
+      "start": 750.627,
+      "end": 751.277,
+      "duration": 0.649854
+    },
+    {
+      "start": 753.876,
+      "end": 754.743,
+      "duration": 0.86725
+    },
+    {
+      "start": 755.082,
+      "end": 755.708,
+      "duration": 0.625312
+    },
+    {
+      "start": 757.65,
+      "end": 758.341,
+      "duration": 0.690604
+    },
+    {
+      "start": 761.043,
+      "end": 761.596,
+      "duration": 0.5525
+    },
+    {
+      "start": 776.716,
+      "end": 777.515,
+      "duration": 0.798562
+    },
+    {
+      "start": 778.198,
+      "end": 778.988,
+      "duration": 0.789625
+    },
+    {
+      "start": 784.651,
+      "end": 785.177,
+      "duration": 0.526208
+    },
+    {
+      "start": 788.402,
+      "end": 789.362,
+      "duration": 0.959833
+    },
+    {
+      "start": 795.319,
+      "end": 796.089,
+      "duration": 0.769521
+    },
+    {
+      "start": 796.15,
+      "end": 799.491,
+      "duration": 3.3414
+    },
+    {
+      "start": 1025.73,
+      "end": 1026.71,
+      "duration": 0.984729
+    },
+    {
+      "start": 1032.85,
+      "end": 1033.42,
+      "duration": 0.577208
+    },
+    {
+      "start": 1036.32,
+      "end": 1036.89,
+      "duration": 0.57125
+    },
+    {
+      "start": 1042.04,
+      "end": 1042.9,
+      "duration": 0.85925
+    },
+    {
+      "start": 1049.64,
+      "end": 1050.42,
+      "duration": 0.778333
+    },
+    {
+      "start": 1052.07,
+      "end": 1052.85,
+      "duration": 0.777646
+    },
+    {
+      "start": 1054.92,
+      "end": 1055.54,
+      "duration": 0.623542
+    },
+    {
+      "start": 1072.77,
+      "end": 1073.39,
+      "duration": 0.628167
+    },
+    {
+      "start": 1082.17,
+      "end": 1082.68,
+      "duration": 0.517312
+    },
+    {
+      "start": 1085.44,
+      "end": 1089.06,
+      "duration": 3.62296
+    },
+    {
+      "start": 1289.6,
+      "end": 1298.92,
+      "duration": 9.32042
+    }
+  ],
+  "confidence": {
+    "scores": [
+      67,
+      90,
+      90,
+      90
+    ],
+    "avg": 84.2,
+    "min": 67
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

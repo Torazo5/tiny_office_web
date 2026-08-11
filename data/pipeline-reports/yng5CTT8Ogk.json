@@ -1,0 +1,203 @@
+{
+  "video_id": "yng5CTT8Ogk",
+  "title": "Jenny and the Mexicats: NPR Music Tiny Desk Concert",
+  "duration": 916,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/yng5CTT8Ogk.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 168.0,
+      "end": 173.76,
+      "duration": 5.759999999999991,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 175.68,
+      "end": 179.04,
+      "duration": 3.359999999999985,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 498.71999999999997,
+      "end": 501.6,
+      "duration": 2.8800000000000523,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 508.32,
+      "end": 510.72,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 514.0799999999999,
+      "end": 515.52,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 520.3199999999999,
+      "end": 522.24,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 524.64,
+      "end": 527.52,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 528.0,
+      "end": 543.84,
+      "duration": 15.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 546.72,
+      "end": 559.68,
+      "duration": 12.959999999999923,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 560.16,
+      "end": 582.72,
+      "duration": 22.56000000000006,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 883.1999999999999,
+      "end": 883.68,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 897.12,
+      "end": 911.52,
+      "duration": 14.399999999999977,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 166.778,
+      "end": 167.279,
+      "duration": 0.500354
+    },
+    {
+      "start": 285.251,
+      "end": 287.38,
+      "duration": 2.12938
+    },
+    {
+      "start": 496.387,
+      "end": 497.039,
+      "duration": 0.651479
+    },
+    {
+      "start": 519.163,
+      "end": 519.759,
+      "duration": 0.595792
+    },
+    {
+      "start": 523.557,
+      "end": 524.127,
+      "duration": 0.570229
+    },
+    {
+      "start": 525.39,
+      "end": 526.024,
+      "duration": 0.634042
+    },
+    {
+      "start": 526.024,
+      "end": 526.694,
+      "duration": 0.669542
+    },
+    {
+      "start": 529.999,
+      "end": 530.514,
+      "duration": 0.515437
+    },
+    {
+      "start": 548.415,
+      "end": 549.346,
+      "duration": 0.930646
+    },
+    {
+      "start": 554.381,
+      "end": 555.043,
+      "duration": 0.662292
+    },
+    {
+      "start": 559.104,
+      "end": 559.618,
+      "duration": 0.514062
+    },
+    {
+      "start": 572.858,
+      "end": 573.74,
+      "duration": 0.882646
+    },
+    {
+      "start": 575.063,
+      "end": 575.663,
+      "duration": 0.600125
+    },
+    {
+      "start": 582.291,
+      "end": 583.195,
+      "duration": 0.904146
+    },
+    {
+      "start": 911.098,
+      "end": 915.749,
+      "duration": 4.65037
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

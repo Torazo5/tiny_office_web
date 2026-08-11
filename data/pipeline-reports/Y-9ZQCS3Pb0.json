@@ -1,0 +1,298 @@
+{
+  "video_id": "Y-9ZQCS3Pb0",
+  "title": "Tech N9ne Feat. Krizz Kaliko: NPR Music Tiny Desk Concert",
+  "duration": 861,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/Y-9ZQCS3Pb0.mp3",
+  "description_songs": [
+    "Dysfunctional",
+    "Aw Yeah? (interVENTion)",
+    "Fragile",
+    "Speedom (Worldwide Choppers 2)"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 76 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 4.32,
+      "end": 6.24,
+      "duration": 1.92,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 176.16,
+      "end": 200.64,
+      "duration": 24.47999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 342.24,
+      "end": 374.88,
+      "duration": 32.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 547.68,
+      "end": 571.2,
+      "duration": 23.520000000000095,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 634.56,
+      "end": 636.0,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 783.8399999999999,
+      "end": 792.96,
+      "duration": 9.120000000000118,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 842.88,
+      "end": 846.24,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 846.24,
+      "end": 855.36,
+      "duration": 9.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 4,
+      "song": "Dysfunctional",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 6.24,
+      "clip_end": 176.10999999999999,
+      "refined_v2_clip_end": 176.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 176.16,
+      "first_non_music_at": 175.68,
+      "crowd_onset_at": 176.16,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 190,
+      "song": "Aw Yeah? (interVENTion)",
+      "corroboration": 0,
+      "silence_match": 189.686,
+      "clip_start": 200.64,
+      "clip_end": 342.24,
+      "refined_v2_clip_end": 342.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 342.24,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 373,
+      "song": "Fragile",
+      "corroboration": 0,
+      "silence_match": 373.209,
+      "clip_start": 374.88,
+      "clip_end": 547.15,
+      "refined_v2_clip_end": 547.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 547.2,
+      "first_non_music_at": 546.72,
+      "crowd_onset_at": 547.68,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 572,
+      "song": "Speedom (Worldwide Choppers 2)",
+      "corroboration": 0,
+      "silence_match": 569.237,
+      "clip_start": 571.2,
+      "clip_end": 783.3100000000001,
+      "refined_v2_clip_end": 783.8399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 783.36,
+      "first_non_music_at": 782.88,
+      "crowd_onset_at": 783.84,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.2615,
+      "duration": 5.2615
+    },
+    {
+      "start": 181.63,
+      "end": 182.272,
+      "duration": 0.642
+    },
+    {
+      "start": 182.85,
+      "end": 183.42,
+      "duration": 0.5705
+    },
+    {
+      "start": 184.561,
+      "end": 185.095,
+      "duration": 0.534
+    },
+    {
+      "start": 189.686,
+      "end": 191.051,
+      "duration": 1.3651
+    },
+    {
+      "start": 334.41,
+      "end": 335.115,
+      "duration": 0.704708
+    },
+    {
+      "start": 348.765,
+      "end": 349.579,
+      "duration": 0.814792
+    },
+    {
+      "start": 352.712,
+      "end": 353.572,
+      "duration": 0.860062
+    },
+    {
+      "start": 361.297,
+      "end": 362.191,
+      "duration": 0.894521
+    },
+    {
+      "start": 373.209,
+      "end": 373.784,
+      "duration": 0.575854
+    },
+    {
+      "start": 374.801,
+      "end": 375.618,
+      "duration": 0.816208
+    },
+    {
+      "start": 375.787,
+      "end": 376.572,
+      "duration": 0.784813
+    },
+    {
+      "start": 376.739,
+      "end": 377.285,
+      "duration": 0.546146
+    },
+    {
+      "start": 552.948,
+      "end": 553.54,
+      "duration": 0.592688
+    },
+    {
+      "start": 553.808,
+      "end": 554.527,
+      "duration": 0.718708
+    },
+    {
+      "start": 555.549,
+      "end": 556.522,
+      "duration": 0.972958
+    },
+    {
+      "start": 569.237,
+      "end": 569.95,
+      "duration": 0.713354
+    },
+    {
+      "start": 854.581,
+      "end": 860.787,
+      "duration": 6.20594
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      76,
+      76,
+      76
+    ],
+    "avg": 76.0,
+    "min": 76
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

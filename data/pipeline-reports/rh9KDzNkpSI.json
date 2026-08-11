@@ -1,0 +1,713 @@
+{
+  "video_id": "rh9KDzNkpSI",
+  "title": "Booker T. Jones: NPR Music Tiny Desk Concert",
+  "duration": 1073,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/rh9KDzNkpSI.mp3",
+  "description_songs": [
+    "Green Onions",
+    "Born Under A Bad Sign",
+    "Down In Memphis"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 14 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 18.72,
+      "duration": 18.72,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 19.68,
+      "end": 51.35999999999999,
+      "duration": 31.679999999999993,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 250.56,
+      "end": 258.72,
+      "duration": 8.160000000000025,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 258.71999999999997,
+      "end": 348.48,
+      "duration": 89.76000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 373.44,
+      "end": 401.76,
+      "duration": 28.319999999999993,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 402.24,
+      "end": 428.16,
+      "duration": 25.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 446.88,
+      "end": 452.64,
+      "duration": 5.759999999999991,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 453.59999999999997,
+      "end": 461.76,
+      "duration": 8.160000000000025,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 462.71999999999997,
+      "end": 478.56,
+      "duration": 15.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 480.0,
+      "end": 483.36,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 483.84,
+      "end": 493.92,
+      "duration": 10.080000000000041,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 494.4,
+      "end": 495.84,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 496.32,
+      "end": 504.48,
+      "duration": 8.160000000000025,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 691.68,
+      "end": 695.04,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 820.3199999999999,
+      "end": 841.4399999999999,
+      "duration": 21.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 846.7199999999999,
+      "end": 849.6,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 850.56,
+      "end": 853.4399999999999,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 853.92,
+      "end": 858.24,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 878.4,
+      "end": 884.64,
+      "duration": 6.240000000000009,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 885.6,
+      "end": 899.04,
+      "duration": 13.43999999999994,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 906.24,
+      "end": 908.64,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 909.6,
+      "end": 911.04,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 923.04,
+      "end": 924.48,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 927.8399999999999,
+      "end": 930.72,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 933.12,
+      "end": 940.8,
+      "duration": 7.67999999999995,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1040.6399999999999,
+      "end": 1072.32,
+      "duration": 31.680000000000064,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 18.72,
+      "song": "Green Onions",
+      "corroboration": 0,
+      "silence_match": 15.4865,
+      "clip_start": 18.72,
+      "clip_end": 19.68,
+      "refined_v2_clip_end": 19.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 17.28,
+      "first_non_music_at": 16.8,
+      "crowd_onset_at": 19.68,
+      "end_unresolved_reason": null,
+      "suspect": true,
+      "confidence": 16
+    },
+    {
+      "seconds": 19.68,
+      "song": "Born Under A Bad Sign",
+      "corroboration": 0,
+      "silence_match": 15.4865,
+      "clip_start": 51.35999999999999,
+      "clip_end": 248.10999999999999,
+      "refined_v2_clip_end": 250.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 248.16,
+      "first_non_music_at": 247.68,
+      "crowd_onset_at": 250.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 820.3199999999999,
+      "song": "Down In Memphis",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 841.4399999999999,
+      "clip_end": 878.35,
+      "refined_v2_clip_end": 878.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 878.4,
+      "first_non_music_at": 877.92,
+      "crowd_onset_at": 878.4,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 4.39517,
+      "end": 4.97162,
+      "duration": 0.576458
+    },
+    {
+      "start": 13.4897,
+      "end": 14.6155,
+      "duration": 1.12579
+    },
+    {
+      "start": 14.781,
+      "end": 15.4865,
+      "duration": 0.705458
+    },
+    {
+      "start": 15.4865,
+      "end": 16.5323,
+      "duration": 1.04575
+    },
+    {
+      "start": 29.1539,
+      "end": 30.7074,
+      "duration": 1.55348
+    },
+    {
+      "start": 31.261,
+      "end": 32.8289,
+      "duration": 1.56792
+    },
+    {
+      "start": 37.7332,
+      "end": 38.2447,
+      "duration": 0.511521
+    },
+    {
+      "start": 39.9705,
+      "end": 40.7305,
+      "duration": 0.760083
+    },
+    {
+      "start": 43.0076,
+      "end": 43.9681,
+      "duration": 0.960437
+    },
+    {
+      "start": 47.3757,
+      "end": 47.9453,
+      "duration": 0.569625
+    },
+    {
+      "start": 50.7212,
+      "end": 51.7847,
+      "duration": 1.06348
+    },
+    {
+      "start": 235.344,
+      "end": 236.214,
+      "duration": 0.870542
+    },
+    {
+      "start": 248.314,
+      "end": 249.054,
+      "duration": 0.740333
+    },
+    {
+      "start": 260.031,
+      "end": 260.789,
+      "duration": 0.757292
+    },
+    {
+      "start": 261.111,
+      "end": 261.821,
+      "duration": 0.710333
+    },
+    {
+      "start": 264.071,
+      "end": 265.07,
+      "duration": 0.998812
+    },
+    {
+      "start": 279.791,
+      "end": 280.524,
+      "duration": 0.733479
+    },
+    {
+      "start": 283.445,
+      "end": 284.157,
+      "duration": 0.712062
+    },
+    {
+      "start": 291.259,
+      "end": 292.069,
+      "duration": 0.809271
+    },
+    {
+      "start": 318.725,
+      "end": 319.48,
+      "duration": 0.755625
+    },
+    {
+      "start": 322.249,
+      "end": 323.182,
+      "duration": 0.932604
+    },
+    {
+      "start": 324.825,
+      "end": 325.747,
+      "duration": 0.921646
+    },
+    {
+      "start": 326.971,
+      "end": 327.634,
+      "duration": 0.662167
+    },
+    {
+      "start": 328.556,
+      "end": 329.234,
+      "duration": 0.677583
+    },
+    {
+      "start": 333.791,
+      "end": 334.447,
+      "duration": 0.655917
+    },
+    {
+      "start": 338.466,
+      "end": 339.713,
+      "duration": 1.24671
+    },
+    {
+      "start": 346.322,
+      "end": 347.187,
+      "duration": 0.865604
+    },
+    {
+      "start": 386.715,
+      "end": 387.338,
+      "duration": 0.623667
+    },
+    {
+      "start": 390.512,
+      "end": 391.502,
+      "duration": 0.99
+    },
+    {
+      "start": 397.284,
+      "end": 397.95,
+      "duration": 0.665937
+    },
+    {
+      "start": 401.931,
+      "end": 402.512,
+      "duration": 0.581083
+    },
+    {
+      "start": 412.139,
+      "end": 412.963,
+      "duration": 0.823187
+    },
+    {
+      "start": 416.665,
+      "end": 417.243,
+      "duration": 0.578562
+    },
+    {
+      "start": 421.825,
+      "end": 422.419,
+      "duration": 0.593583
+    },
+    {
+      "start": 424.854,
+      "end": 426.065,
+      "duration": 1.21135
+    },
+    {
+      "start": 452.417,
+      "end": 453.877,
+      "duration": 1.46048
+    },
+    {
+      "start": 454.839,
+      "end": 455.454,
+      "duration": 0.6155
+    },
+    {
+      "start": 458.118,
+      "end": 458.747,
+      "duration": 0.629167
+    },
+    {
+      "start": 459.483,
+      "end": 460.141,
+      "duration": 0.658479
+    },
+    {
+      "start": 462.091,
+      "end": 463.357,
+      "duration": 1.26598
+    },
+    {
+      "start": 465.212,
+      "end": 465.763,
+      "duration": 0.550104
+    },
+    {
+      "start": 467.803,
+      "end": 468.431,
+      "duration": 0.627542
+    },
+    {
+      "start": 471.395,
+      "end": 472.106,
+      "duration": 0.711271
+    },
+    {
+      "start": 476.175,
+      "end": 476.942,
+      "duration": 0.767083
+    },
+    {
+      "start": 478.36,
+      "end": 480.415,
+      "duration": 2.05456
+    },
+    {
+      "start": 483.334,
+      "end": 484.457,
+      "duration": 1.12329
+    },
+    {
+      "start": 485.64,
+      "end": 486.376,
+      "duration": 0.735812
+    },
+    {
+      "start": 486.724,
+      "end": 487.503,
+      "duration": 0.778896
+    },
+    {
+      "start": 492.044,
+      "end": 492.809,
+      "duration": 0.764833
+    },
+    {
+      "start": 494.021,
+      "end": 494.919,
+      "duration": 0.897625
+    },
+    {
+      "start": 536.192,
+      "end": 537.284,
+      "duration": 1.09131
+    },
+    {
+      "start": 733.857,
+      "end": 734.403,
+      "duration": 0.546292
+    },
+    {
+      "start": 826.941,
+      "end": 828.797,
+      "duration": 1.85525
+    },
+    {
+      "start": 832.736,
+      "end": 833.675,
+      "duration": 0.938833
+    },
+    {
+      "start": 834.332,
+      "end": 835.283,
+      "duration": 0.950917
+    },
+    {
+      "start": 837.043,
+      "end": 837.847,
+      "duration": 0.803854
+    },
+    {
+      "start": 841.024,
+      "end": 845.274,
+      "duration": 4.25046
+    },
+    {
+      "start": 845.324,
+      "end": 846.383,
+      "duration": 1.05915
+    },
+    {
+      "start": 849.399,
+      "end": 851.063,
+      "duration": 1.66471
+    },
+    {
+      "start": 858.01,
+      "end": 858.849,
+      "duration": 0.839021
+    },
+    {
+      "start": 858.959,
+      "end": 859.504,
+      "duration": 0.545167
+    },
+    {
+      "start": 860.311,
+      "end": 861.176,
+      "duration": 0.865208
+    },
+    {
+      "start": 862.957,
+      "end": 863.499,
+      "duration": 0.542604
+    },
+    {
+      "start": 864.877,
+      "end": 865.4,
+      "duration": 0.523042
+    },
+    {
+      "start": 873.132,
+      "end": 873.761,
+      "duration": 0.629542
+    },
+    {
+      "start": 878.243,
+      "end": 879.038,
+      "duration": 0.795333
+    },
+    {
+      "start": 881.314,
+      "end": 881.839,
+      "duration": 0.5245
+    },
+    {
+      "start": 883.47,
+      "end": 884.494,
+      "duration": 1.02392
+    },
+    {
+      "start": 886.38,
+      "end": 887.238,
+      "duration": 0.857667
+    },
+    {
+      "start": 888.828,
+      "end": 889.911,
+      "duration": 1.08285
+    },
+    {
+      "start": 890.667,
+      "end": 891.265,
+      "duration": 0.598083
+    },
+    {
+      "start": 892.23,
+      "end": 893.14,
+      "duration": 0.910271
+    },
+    {
+      "start": 894.611,
+      "end": 895.183,
+      "duration": 0.57225
+    },
+    {
+      "start": 895.734,
+      "end": 896.558,
+      "duration": 0.823875
+    },
+    {
+      "start": 928.479,
+      "end": 929.329,
+      "duration": 0.850146
+    },
+    {
+      "start": 933.822,
+      "end": 934.427,
+      "duration": 0.604896
+    },
+    {
+      "start": 936.319,
+      "end": 936.879,
+      "duration": 0.560333
+    },
+    {
+      "start": 938.667,
+      "end": 939.458,
+      "duration": 0.791417
+    },
+    {
+      "start": 960.038,
+      "end": 960.613,
+      "duration": 0.574979
+    },
+    {
+      "start": 1039.65,
+      "end": 1040.43,
+      "duration": 0.774
+    },
+    {
+      "start": 1071.29,
+      "end": 1072.54,
+      "duration": 1.25446
+    }
+  ],
+  "confidence": {
+    "scores": [
+      16,
+      66,
+      51
+    ],
+    "avg": 44.3,
+    "min": 16
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

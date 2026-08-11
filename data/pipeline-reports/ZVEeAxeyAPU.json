@@ -1,0 +1,546 @@
+{
+  "video_id": "ZVEeAxeyAPU",
+  "title": "Rita Pay\u00e9s: Tiny Desk Concert",
+  "duration": 1363,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/ZVEeAxeyAPU.mp3",
+  "description_songs": [
+    "El Cervatillo",
+    "Por qu\u00e9 Ser\u00e1",
+    "Nana Per Les Mamas",
+    "Quien lo dir\u00eda"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 250 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 253.44,
+      "end": 254.87999999999997,
+      "duration": 1.4399999999999693,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 307.68,
+      "end": 427.68,
+      "duration": 120.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 740.16,
+      "end": 809.28,
+      "duration": 69.12,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 971.52,
+      "end": 972.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 973.4399999999999,
+      "end": 1021.4399999999999,
+      "duration": 48.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1324.8,
+      "end": 1333.44,
+      "duration": 8.6400000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1336.8,
+      "end": 1352.6399999999999,
+      "duration": 15.839999999999918,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 26,
+      "song": "El Cervatillo",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 26,
+      "clip_end": 305.71,
+      "refined_v2_clip_end": 307.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 305.76,
+      "first_non_music_at": 305.28,
+      "crowd_onset_at": 307.68,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 447,
+      "song": "Por qu\u00e9 Ser\u00e1",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 427.68,
+      "clip_end": 737.76,
+      "refined_v2_clip_end": 740.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 737.08,
+      "fade_out_end": 737.76,
+      "detected_music_release_at": 737.76,
+      "first_non_music_at": 737.28,
+      "crowd_onset_at": 740.16,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 826,
+      "song": "Nana Per Les Mamas",
+      "corroboration": 0,
+      "silence_match": 823.578,
+      "clip_start": 809.28,
+      "clip_end": 970.51,
+      "refined_v2_clip_end": 973.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 971.04,
+      "first_non_music_at": 970.56,
+      "crowd_onset_at": 973.44,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 1038,
+      "song": "Quien lo dir\u00eda",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1021.4399999999999,
+      "clip_end": 1324.8,
+      "refined_v2_clip_end": 1324.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1324.8,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 2.05694,
+      "duration": 2.05694
+    },
+    {
+      "start": 62.2326,
+      "end": 63.7065,
+      "duration": 1.47398
+    },
+    {
+      "start": 88.926,
+      "end": 89.8015,
+      "duration": 0.875563
+    },
+    {
+      "start": 253.675,
+      "end": 254.278,
+      "duration": 0.602625
+    },
+    {
+      "start": 305.56,
+      "end": 307.638,
+      "duration": 2.07804
+    },
+    {
+      "start": 319.469,
+      "end": 320.431,
+      "duration": 0.962313
+    },
+    {
+      "start": 324.435,
+      "end": 325.114,
+      "duration": 0.678375
+    },
+    {
+      "start": 326.788,
+      "end": 327.318,
+      "duration": 0.530062
+    },
+    {
+      "start": 329.565,
+      "end": 330.081,
+      "duration": 0.516188
+    },
+    {
+      "start": 336.753,
+      "end": 337.736,
+      "duration": 0.982771
+    },
+    {
+      "start": 338.967,
+      "end": 339.749,
+      "duration": 0.782708
+    },
+    {
+      "start": 343.461,
+      "end": 344.351,
+      "duration": 0.889854
+    },
+    {
+      "start": 350.176,
+      "end": 351.042,
+      "duration": 0.866312
+    },
+    {
+      "start": 351.232,
+      "end": 351.835,
+      "duration": 0.602687
+    },
+    {
+      "start": 377.861,
+      "end": 378.706,
+      "duration": 0.844375
+    },
+    {
+      "start": 380.927,
+      "end": 381.689,
+      "duration": 0.762521
+    },
+    {
+      "start": 388.139,
+      "end": 388.94,
+      "duration": 0.8015
+    },
+    {
+      "start": 395.652,
+      "end": 396.234,
+      "duration": 0.581521
+    },
+    {
+      "start": 397.983,
+      "end": 398.576,
+      "duration": 0.592792
+    },
+    {
+      "start": 400.399,
+      "end": 401.107,
+      "duration": 0.707479
+    },
+    {
+      "start": 417.226,
+      "end": 417.896,
+      "duration": 0.669271
+    },
+    {
+      "start": 418.665,
+      "end": 419.305,
+      "duration": 0.640937
+    },
+    {
+      "start": 420.04,
+      "end": 420.721,
+      "duration": 0.680292
+    },
+    {
+      "start": 421.775,
+      "end": 423.436,
+      "duration": 1.66067
+    },
+    {
+      "start": 424.658,
+      "end": 425.339,
+      "duration": 0.680333
+    },
+    {
+      "start": 427.568,
+      "end": 430.434,
+      "duration": 2.86587
+    },
+    {
+      "start": 463.471,
+      "end": 465.502,
+      "duration": 2.031
+    },
+    {
+      "start": 734.529,
+      "end": 737.179,
+      "duration": 2.65006
+    },
+    {
+      "start": 746.343,
+      "end": 748.727,
+      "duration": 2.38385
+    },
+    {
+      "start": 749.314,
+      "end": 750.199,
+      "duration": 0.885167
+    },
+    {
+      "start": 750.203,
+      "end": 752.034,
+      "duration": 1.83033
+    },
+    {
+      "start": 752.498,
+      "end": 753.785,
+      "duration": 1.28737
+    },
+    {
+      "start": 754.719,
+      "end": 755.804,
+      "duration": 1.08469
+    },
+    {
+      "start": 756.965,
+      "end": 758.68,
+      "duration": 1.71492
+    },
+    {
+      "start": 759.215,
+      "end": 761.705,
+      "duration": 2.4904
+    },
+    {
+      "start": 762.696,
+      "end": 764.274,
+      "duration": 1.57792
+    },
+    {
+      "start": 766.629,
+      "end": 768.296,
+      "duration": 1.66708
+    },
+    {
+      "start": 771.162,
+      "end": 772.05,
+      "duration": 0.887771
+    },
+    {
+      "start": 775.705,
+      "end": 776.377,
+      "duration": 0.672312
+    },
+    {
+      "start": 777.462,
+      "end": 778.045,
+      "duration": 0.582875
+    },
+    {
+      "start": 782.126,
+      "end": 783.855,
+      "duration": 1.72904
+    },
+    {
+      "start": 786.488,
+      "end": 787.078,
+      "duration": 0.590083
+    },
+    {
+      "start": 790.315,
+      "end": 790.946,
+      "duration": 0.631
+    },
+    {
+      "start": 794.058,
+      "end": 794.644,
+      "duration": 0.585833
+    },
+    {
+      "start": 796.426,
+      "end": 797.477,
+      "duration": 1.05094
+    },
+    {
+      "start": 798.479,
+      "end": 799.227,
+      "duration": 0.747771
+    },
+    {
+      "start": 800.24,
+      "end": 801.206,
+      "duration": 0.966062
+    },
+    {
+      "start": 805.395,
+      "end": 805.968,
+      "duration": 0.572313
+    },
+    {
+      "start": 810.981,
+      "end": 811.952,
+      "duration": 0.970625
+    },
+    {
+      "start": 823.578,
+      "end": 825.16,
+      "duration": 1.58221
+    },
+    {
+      "start": 841.121,
+      "end": 841.84,
+      "duration": 0.719187
+    },
+    {
+      "start": 848.134,
+      "end": 850.0,
+      "duration": 1.86565
+    },
+    {
+      "start": 930.486,
+      "end": 931.411,
+      "duration": 0.925937
+    },
+    {
+      "start": 969.847,
+      "end": 972.914,
+      "duration": 3.0675
+    },
+    {
+      "start": 981.255,
+      "end": 984.301,
+      "duration": 3.04583
+    },
+    {
+      "start": 985.596,
+      "end": 986.118,
+      "duration": 0.522479
+    },
+    {
+      "start": 986.434,
+      "end": 987.7,
+      "duration": 1.26629
+    },
+    {
+      "start": 988.589,
+      "end": 989.434,
+      "duration": 0.844958
+    },
+    {
+      "start": 990.757,
+      "end": 991.527,
+      "duration": 0.770604
+    },
+    {
+      "start": 992.559,
+      "end": 993.963,
+      "duration": 1.40406
+    },
+    {
+      "start": 998.69,
+      "end": 999.555,
+      "duration": 0.864771
+    },
+    {
+      "start": 1003.63,
+      "end": 1004.5,
+      "duration": 0.86525
+    },
+    {
+      "start": 1005.39,
+      "end": 1006.2,
+      "duration": 0.813979
+    },
+    {
+      "start": 1007.98,
+      "end": 1008.7,
+      "duration": 0.717625
+    },
+    {
+      "start": 1009.21,
+      "end": 1009.98,
+      "duration": 0.773208
+    },
+    {
+      "start": 1015.22,
+      "end": 1016.74,
+      "duration": 1.52706
+    },
+    {
+      "start": 1304.77,
+      "end": 1306.53,
+      "duration": 1.76404
+    },
+    {
+      "start": 1321.73,
+      "end": 1323.26,
+      "duration": 1.53285
+    },
+    {
+      "start": 1350.19,
+      "end": 1363.24,
+      "duration": 13.0543
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      76,
+      61
+    ],
+    "avg": 62.8,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

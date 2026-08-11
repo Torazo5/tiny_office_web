@@ -50,6 +50,9 @@ type PerformanceCutVariantSongRow = {
   title: string;
   clip_start: number;
   clip_end: number;
+  overlap_detected: boolean;
+  fade_out_start: number | null;
+  fade_out_end: number | null;
 };
 
 function mapPresets(
@@ -124,7 +127,7 @@ async function loadPerformanceCutVariants(
       .order("sort_order"),
     client
       .from("performance_cut_variant_songs")
-      .select("variant_key, performance_video_id, song_index, title, clip_start, clip_end")
+      .select("variant_key, performance_video_id, song_index, title, clip_start, clip_end, overlap_detected, fade_out_start, fade_out_end")
       .eq("performance_video_id", videoId)
       .order("variant_key")
       .order("song_index"),
@@ -140,6 +143,9 @@ async function loadPerformanceCutVariants(
       title: song.title,
       clipStart: Number(song.clip_start),
       clipEnd: Number(song.clip_end),
+      overlapDetected: Boolean(song.overlap_detected),
+      fadeOutStart: song.fade_out_start === null ? null : Number(song.fade_out_start),
+      fadeOutEnd: song.fade_out_end === null ? null : Number(song.fade_out_end),
     });
     songsByVariant.set(song.variant_key, songs);
   }
@@ -208,6 +214,9 @@ export function applyListeningPreset(performance: Performance, preset: Listening
             clipEnd: edit.clipEnd,
             confidence: 0,
             suspect: false,
+            overlapDetected: false,
+            fadeOutStart: null,
+            fadeOutEnd: null,
           };
     }),
   } satisfies Performance;
@@ -225,7 +234,15 @@ export function applyPerformanceCut(
     songs: variant.songs.map((edit) => {
       const source = performance.songs.find((song) => song.index === edit.songIndex);
       return source
-        ? { ...source, title: edit.title, clipStart: edit.clipStart, clipEnd: edit.clipEnd }
+        ? {
+            ...source,
+            title: edit.title,
+            clipStart: edit.clipStart,
+            clipEnd: edit.clipEnd,
+            overlapDetected: edit.overlapDetected,
+            fadeOutStart: edit.fadeOutStart,
+            fadeOutEnd: edit.fadeOutEnd,
+          }
         : {
             index: edit.songIndex,
             title: edit.title,
@@ -233,6 +250,9 @@ export function applyPerformanceCut(
             clipEnd: edit.clipEnd,
             confidence: 0,
             suspect: false,
+            overlapDetected: edit.overlapDetected,
+            fadeOutStart: edit.fadeOutStart,
+            fadeOutEnd: edit.fadeOutEnd,
           };
     }),
   } satisfies Performance;

@@ -1,0 +1,330 @@
+{
+  "video_id": "qHNUeBK8k7Q",
+  "title": "beabadoobee: Tiny Desk Concert",
+  "duration": 878,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/qHNUeBK8k7Q.mp3",
+  "description_songs": [
+    "See You Soon",
+    "The Perfect Pair",
+    "Ripples",
+    "Glue Song"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 3800 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 3,
+    "accepted": 2,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 199.2,
+      "end": 219.83999999999997,
+      "duration": 20.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 379.2,
+      "end": 467.04,
+      "duration": 87.84000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 662.88,
+      "end": 703.2,
+      "duration": 40.32000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 851.52,
+      "end": 863.52,
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "See You Soon",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 199.2,
+      "refined_v2_clip_end": 199.2,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 199.2,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 222,
+      "song": "The Perfect Pair",
+      "corroboration": 1,
+      "silence_match": 219.82,
+      "clip_start": 219.83999999999997,
+      "clip_end": 379.2,
+      "refined_v2_clip_end": 379.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 379.2,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 471,
+      "song": "Ripples",
+      "corroboration": 1,
+      "silence_match": 466.712,
+      "clip_start": 467.04,
+      "clip_end": 660.91,
+      "refined_v2_clip_end": 662.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 661.44,
+      "first_non_music_at": 660.96,
+      "crowd_onset_at": 662.88,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 701,
+      "song": "Glue Song",
+      "corroboration": 0,
+      "silence_match": 703.172,
+      "clip_start": 703.2,
+      "clip_end": 851.52,
+      "refined_v2_clip_end": 851.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 851.52,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 219.059,
+      "end": 219.649,
+      "duration": 0.590021
+    },
+    {
+      "start": 219.82,
+      "end": 222.25,
+      "duration": 2.43025
+    },
+    {
+      "start": 289.345,
+      "end": 291.042,
+      "duration": 1.69719
+    },
+    {
+      "start": 378.444,
+      "end": 379.022,
+      "duration": 0.578
+    },
+    {
+      "start": 391.561,
+      "end": 392.065,
+      "duration": 0.504312
+    },
+    {
+      "start": 399.18,
+      "end": 399.682,
+      "duration": 0.501833
+    },
+    {
+      "start": 404.541,
+      "end": 405.057,
+      "duration": 0.515292
+    },
+    {
+      "start": 412.303,
+      "end": 412.814,
+      "duration": 0.510875
+    },
+    {
+      "start": 413.689,
+      "end": 414.241,
+      "duration": 0.551708
+    },
+    {
+      "start": 416.61,
+      "end": 417.248,
+      "duration": 0.638292
+    },
+    {
+      "start": 421.435,
+      "end": 421.982,
+      "duration": 0.546687
+    },
+    {
+      "start": 424.201,
+      "end": 424.958,
+      "duration": 0.757583
+    },
+    {
+      "start": 433.892,
+      "end": 434.397,
+      "duration": 0.504604
+    },
+    {
+      "start": 449.232,
+      "end": 449.849,
+      "duration": 0.617104
+    },
+    {
+      "start": 450.293,
+      "end": 450.808,
+      "duration": 0.515437
+    },
+    {
+      "start": 456.412,
+      "end": 457.158,
+      "duration": 0.745687
+    },
+    {
+      "start": 458.802,
+      "end": 459.407,
+      "duration": 0.604875
+    },
+    {
+      "start": 461.888,
+      "end": 462.456,
+      "duration": 0.568667
+    },
+    {
+      "start": 464.932,
+      "end": 465.533,
+      "duration": 0.600896
+    },
+    {
+      "start": 466.712,
+      "end": 470.624,
+      "duration": 3.9115
+    },
+    {
+      "start": 660.738,
+      "end": 661.937,
+      "duration": 1.19908
+    },
+    {
+      "start": 673.703,
+      "end": 674.216,
+      "duration": 0.512417
+    },
+    {
+      "start": 675.974,
+      "end": 676.61,
+      "duration": 0.635917
+    },
+    {
+      "start": 679.868,
+      "end": 680.402,
+      "duration": 0.533458
+    },
+    {
+      "start": 690.579,
+      "end": 691.102,
+      "duration": 0.523188
+    },
+    {
+      "start": 696.306,
+      "end": 696.882,
+      "duration": 0.576063
+    },
+    {
+      "start": 697.309,
+      "end": 698.508,
+      "duration": 1.19902
+    },
+    {
+      "start": 698.81,
+      "end": 699.311,
+      "duration": 0.500417
+    },
+    {
+      "start": 703.172,
+      "end": 707.383,
+      "duration": 4.21087
+    },
+    {
+      "start": 862.83,
+      "end": 878.179,
+      "duration": 15.3483
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      83,
+      83,
+      76
+    ],
+    "avg": 75.5,
+    "min": 60
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

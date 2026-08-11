@@ -1,0 +1,203 @@
+{
+  "video_id": "Xv-FOSJIwrU",
+  "title": "Courtney Barnett: NPR Music Tiny Desk Concert",
+  "duration": 823,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/Xv-FOSJIwrU.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 246.23999999999998,
+      "end": 270.72,
+      "duration": 24.480000000000047,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 275.52,
+      "end": 277.92,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 504.0,
+      "end": 516.96,
+      "duration": 12.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 522.24,
+      "end": 528.96,
+      "duration": 6.720000000000027,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 529.4399999999999,
+      "end": 540.0,
+      "duration": 10.56000000000006,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 542.4,
+      "end": 543.84,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 780.0,
+      "end": 808.3199999999999,
+      "duration": 28.319999999999936,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 257.366,
+      "end": 258.482,
+      "duration": 1.11558
+    },
+    {
+      "start": 263.399,
+      "end": 264.197,
+      "duration": 0.797979
+    },
+    {
+      "start": 264.689,
+      "end": 265.527,
+      "duration": 0.837521
+    },
+    {
+      "start": 268.328,
+      "end": 268.961,
+      "duration": 0.633583
+    },
+    {
+      "start": 269.746,
+      "end": 270.606,
+      "duration": 0.8605
+    },
+    {
+      "start": 270.872,
+      "end": 271.373,
+      "duration": 0.500458
+    },
+    {
+      "start": 273.711,
+      "end": 274.223,
+      "duration": 0.511792
+    },
+    {
+      "start": 275.236,
+      "end": 275.78,
+      "duration": 0.543583
+    },
+    {
+      "start": 514.015,
+      "end": 516.482,
+      "duration": 2.46779
+    },
+    {
+      "start": 517.852,
+      "end": 518.533,
+      "duration": 0.681021
+    },
+    {
+      "start": 528.876,
+      "end": 529.851,
+      "duration": 0.974854
+    },
+    {
+      "start": 532.261,
+      "end": 532.9,
+      "duration": 0.639
+    },
+    {
+      "start": 533.348,
+      "end": 533.96,
+      "duration": 0.611917
+    },
+    {
+      "start": 534.968,
+      "end": 535.491,
+      "duration": 0.523083
+    },
+    {
+      "start": 535.845,
+      "end": 536.39,
+      "duration": 0.545562
+    },
+    {
+      "start": 536.804,
+      "end": 537.727,
+      "duration": 0.923104
+    },
+    {
+      "start": 539.216,
+      "end": 539.91,
+      "duration": 0.693375
+    },
+    {
+      "start": 793.764,
+      "end": 794.529,
+      "duration": 0.764667
+    },
+    {
+      "start": 794.599,
+      "end": 795.242,
+      "duration": 0.642292
+    },
+    {
+      "start": 795.762,
+      "end": 796.597,
+      "duration": 0.834833
+    },
+    {
+      "start": 798.93,
+      "end": 800.188,
+      "duration": 1.25806
+    },
+    {
+      "start": 808.881,
+      "end": 823.031,
+      "duration": 14.1508
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

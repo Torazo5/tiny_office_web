@@ -1,0 +1,302 @@
+{
+  "video_id": "h--fvyPu5e4",
+  "title": "Corinne Bailey Rae: NPR Music Tiny Desk Concert",
+  "duration": 1006,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/h--fvyPu5e4.mp3",
+  "description_songs": [
+    "Paris Nights / New York Mornings",
+    "Hey, I Won't Break Your Heart",
+    "The Skies Will Break"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 77 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 227.51999999999998,
+      "end": 238.55999999999997,
+      "duration": 11.039999999999992,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 243.84,
+      "end": 245.27999999999997,
+      "duration": 1.4399999999999693,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 256.32,
+      "end": 257.76,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 563.04,
+      "end": 605.28,
+      "duration": 42.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 930.24,
+      "end": 955.68,
+      "duration": 25.43999999999994,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 955.68,
+      "end": 1000.8,
+      "duration": 45.120000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Paris Nights / New York Mornings",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 226.98999999999998,
+      "refined_v2_clip_end": 227.51999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 227.52,
+      "first_non_music_at": 227.04,
+      "crowd_onset_at": 227.52,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 242,
+      "song": "Hey, I Won't Break Your Heart",
+      "corroboration": 0,
+      "silence_match": 238.178,
+      "clip_start": 257.76,
+      "clip_end": 563.04,
+      "refined_v2_clip_end": 563.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 563.04,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 578,
+      "song": "The Skies Will Break",
+      "corroboration": 0,
+      "silence_match": 575.336,
+      "clip_start": 578,
+      "clip_end": 931.68,
+      "refined_v2_clip_end": 930.24,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 930.24,
+      "fade_out_end": 931.68,
+      "detected_music_release_at": 931.68,
+      "first_non_music_at": null,
+      "crowd_onset_at": 930.24,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.510896,
+      "duration": 0.510896
+    },
+    {
+      "start": 226.409,
+      "end": 227.335,
+      "duration": 0.925542
+    },
+    {
+      "start": 238.178,
+      "end": 243.893,
+      "duration": 5.71506
+    },
+    {
+      "start": 258.259,
+      "end": 259.569,
+      "duration": 1.30948
+    },
+    {
+      "start": 260.268,
+      "end": 263.448,
+      "duration": 3.18071
+    },
+    {
+      "start": 265.056,
+      "end": 268.966,
+      "duration": 3.91027
+    },
+    {
+      "start": 575.336,
+      "end": 578.455,
+      "duration": 3.11946
+    },
+    {
+      "start": 582.233,
+      "end": 582.927,
+      "duration": 0.694271
+    },
+    {
+      "start": 587.742,
+      "end": 588.615,
+      "duration": 0.873167
+    },
+    {
+      "start": 592.357,
+      "end": 592.917,
+      "duration": 0.559896
+    },
+    {
+      "start": 594.767,
+      "end": 595.51,
+      "duration": 0.742625
+    },
+    {
+      "start": 596.014,
+      "end": 596.62,
+      "duration": 0.606687
+    },
+    {
+      "start": 598.528,
+      "end": 599.245,
+      "duration": 0.7165
+    },
+    {
+      "start": 601.312,
+      "end": 602.282,
+      "duration": 0.970292
+    },
+    {
+      "start": 605.084,
+      "end": 608.713,
+      "duration": 3.62846
+    },
+    {
+      "start": 954.83,
+      "end": 956.593,
+      "duration": 1.76394
+    },
+    {
+      "start": 959.802,
+      "end": 960.336,
+      "duration": 0.534188
+    },
+    {
+      "start": 961.614,
+      "end": 962.513,
+      "duration": 0.898625
+    },
+    {
+      "start": 964.602,
+      "end": 965.391,
+      "duration": 0.7885
+    },
+    {
+      "start": 966.138,
+      "end": 966.709,
+      "duration": 0.571396
+    },
+    {
+      "start": 969.228,
+      "end": 969.977,
+      "duration": 0.749333
+    },
+    {
+      "start": 974.369,
+      "end": 975.053,
+      "duration": 0.684396
+    },
+    {
+      "start": 981.214,
+      "end": 981.917,
+      "duration": 0.703229
+    },
+    {
+      "start": 991.416,
+      "end": 991.919,
+      "duration": 0.503083
+    },
+    {
+      "start": 994.451,
+      "end": 995.325,
+      "duration": 0.874729
+    },
+    {
+      "start": 998.941,
+      "end": 999.552,
+      "duration": 0.611396
+    },
+    {
+      "start": 1000.48,
+      "end": 1006.14,
+      "duration": 5.66829
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      68
+    ],
+    "avg": 70.7,
+    "min": 68
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

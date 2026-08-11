@@ -1,0 +1,483 @@
+{
+  "video_id": "JaoUMbHvsc0",
+  "title": "Mother Falcon: NPR Music Tiny Desk Concert",
+  "duration": 738,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/JaoUMbHvsc0.mp3",
+  "description_songs": [
+    "Marigold",
+    "Marfa",
+    "Dirty Summer"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 109 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 159.35999999999999,
+      "end": 166.55999999999997,
+      "duration": 7.199999999999989,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 174.72,
+      "end": 176.64,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 177.12,
+      "end": 180.95999999999998,
+      "duration": 3.839999999999975,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 190.07999999999998,
+      "end": 191.99999999999997,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 192.48,
+      "end": 195.83999999999997,
+      "duration": 3.359999999999985,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 469.44,
+      "end": 480.0,
+      "duration": 10.560000000000002,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 499.68,
+      "end": 503.52,
+      "duration": 3.839999999999975,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 505.91999999999996,
+      "end": 507.84,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 691.68,
+      "end": 725.76,
+      "duration": 34.08000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 3,
+      "song": "Marigold",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 3,
+      "clip_end": 156.42999999999998,
+      "refined_v2_clip_end": 159.35999999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 156.96,
+      "first_non_music_at": 156.48,
+      "crowd_onset_at": 159.36,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 201,
+      "song": "Marfa",
+      "corroboration": 0,
+      "silence_match": 205.232,
+      "clip_start": 195.83999999999997,
+      "clip_end": 466.98999999999995,
+      "refined_v2_clip_end": 469.44,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 467.52,
+      "first_non_music_at": 467.04,
+      "crowd_onset_at": 469.44,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 509,
+      "song": "Dirty Summer",
+      "corroboration": 0,
+      "silence_match": 507.333,
+      "clip_start": 507.84,
+      "clip_end": 690.6700000000001,
+      "refined_v2_clip_end": 691.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 691.2,
+      "first_non_music_at": 690.72,
+      "crowd_onset_at": 691.68,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.07212,
+      "duration": 5.07212
+    },
+    {
+      "start": 57.748,
+      "end": 58.3229,
+      "duration": 0.574875
+    },
+    {
+      "start": 146.709,
+      "end": 147.487,
+      "duration": 0.778062
+    },
+    {
+      "start": 153.961,
+      "end": 157.95,
+      "duration": 3.98877
+    },
+    {
+      "start": 169.033,
+      "end": 170.065,
+      "duration": 1.03238
+    },
+    {
+      "start": 171.269,
+      "end": 171.77,
+      "duration": 0.500396
+    },
+    {
+      "start": 183.744,
+      "end": 185.539,
+      "duration": 1.79519
+    },
+    {
+      "start": 185.612,
+      "end": 188.243,
+      "duration": 2.63077
+    },
+    {
+      "start": 188.363,
+      "end": 188.983,
+      "duration": 0.620354
+    },
+    {
+      "start": 189.466,
+      "end": 190.867,
+      "duration": 1.40067
+    },
+    {
+      "start": 191.585,
+      "end": 192.585,
+      "duration": 0.999729
+    },
+    {
+      "start": 192.733,
+      "end": 193.438,
+      "duration": 0.705583
+    },
+    {
+      "start": 195.566,
+      "end": 196.362,
+      "duration": 0.795917
+    },
+    {
+      "start": 196.577,
+      "end": 205.218,
+      "duration": 8.64042
+    },
+    {
+      "start": 205.232,
+      "end": 206.006,
+      "duration": 0.773937
+    },
+    {
+      "start": 206.006,
+      "end": 206.791,
+      "duration": 0.784854
+    },
+    {
+      "start": 206.846,
+      "end": 207.634,
+      "duration": 0.788354
+    },
+    {
+      "start": 207.722,
+      "end": 208.419,
+      "duration": 0.696562
+    },
+    {
+      "start": 208.447,
+      "end": 209.251,
+      "duration": 0.804
+    },
+    {
+      "start": 209.262,
+      "end": 209.993,
+      "duration": 0.731042
+    },
+    {
+      "start": 210.034,
+      "end": 210.816,
+      "duration": 0.781833
+    },
+    {
+      "start": 210.845,
+      "end": 211.636,
+      "duration": 0.790833
+    },
+    {
+      "start": 211.643,
+      "end": 212.425,
+      "duration": 0.782104
+    },
+    {
+      "start": 212.527,
+      "end": 214.022,
+      "duration": 1.49456
+    },
+    {
+      "start": 214.084,
+      "end": 215.665,
+      "duration": 1.58058
+    },
+    {
+      "start": 215.72,
+      "end": 217.262,
+      "duration": 1.54223
+    },
+    {
+      "start": 217.303,
+      "end": 218.83,
+      "duration": 1.52675
+    },
+    {
+      "start": 219.023,
+      "end": 219.715,
+      "duration": 0.691729
+    },
+    {
+      "start": 219.715,
+      "end": 220.422,
+      "duration": 0.706896
+    },
+    {
+      "start": 220.527,
+      "end": 221.244,
+      "duration": 0.717417
+    },
+    {
+      "start": 221.244,
+      "end": 222.031,
+      "duration": 0.786479
+    },
+    {
+      "start": 222.267,
+      "end": 222.821,
+      "duration": 0.554729
+    },
+    {
+      "start": 222.882,
+      "end": 223.602,
+      "duration": 0.719458
+    },
+    {
+      "start": 224.581,
+      "end": 225.234,
+      "duration": 0.652854
+    },
+    {
+      "start": 226.139,
+      "end": 226.818,
+      "duration": 0.679104
+    },
+    {
+      "start": 227.131,
+      "end": 227.645,
+      "duration": 0.513208
+    },
+    {
+      "start": 227.888,
+      "end": 228.495,
+      "duration": 0.606542
+    },
+    {
+      "start": 228.536,
+      "end": 229.248,
+      "duration": 0.712833
+    },
+    {
+      "start": 230.319,
+      "end": 230.829,
+      "duration": 0.509917
+    },
+    {
+      "start": 249.795,
+      "end": 251.105,
+      "duration": 1.31031
+    },
+    {
+      "start": 251.196,
+      "end": 251.963,
+      "duration": 0.76775
+    },
+    {
+      "start": 265.021,
+      "end": 265.597,
+      "duration": 0.575437
+    },
+    {
+      "start": 265.769,
+      "end": 266.385,
+      "duration": 0.61575
+    },
+    {
+      "start": 266.563,
+      "end": 267.219,
+      "duration": 0.655521
+    },
+    {
+      "start": 268.2,
+      "end": 268.883,
+      "duration": 0.683937
+    },
+    {
+      "start": 378.287,
+      "end": 378.972,
+      "duration": 0.684479
+    },
+    {
+      "start": 457.106,
+      "end": 459.266,
+      "duration": 2.15979
+    },
+    {
+      "start": 459.331,
+      "end": 466.209,
+      "duration": 6.87754
+    },
+    {
+      "start": 466.262,
+      "end": 469.094,
+      "duration": 2.83244
+    },
+    {
+      "start": 480.472,
+      "end": 500.402,
+      "duration": 19.9292
+    },
+    {
+      "start": 501.137,
+      "end": 502.841,
+      "duration": 1.70362
+    },
+    {
+      "start": 505.162,
+      "end": 505.826,
+      "duration": 0.663125
+    },
+    {
+      "start": 507.333,
+      "end": 511.572,
+      "duration": 4.23906
+    },
+    {
+      "start": 690.551,
+      "end": 691.618,
+      "duration": 1.06638
+    },
+    {
+      "start": 714.067,
+      "end": 715.654,
+      "duration": 1.58775
+    },
+    {
+      "start": 717.995,
+      "end": 719.983,
+      "duration": 1.98781
+    },
+    {
+      "start": 720.934,
+      "end": 721.546,
+      "duration": 0.611167
+    },
+    {
+      "start": 721.606,
+      "end": 724.139,
+      "duration": 2.53235
+    },
+    {
+      "start": 724.222,
+      "end": 738.22,
+      "duration": 13.9981
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      76
+    ],
+    "avg": 73.3,
+    "min": 68
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

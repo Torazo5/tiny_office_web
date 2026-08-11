@@ -1,0 +1,323 @@
+{
+  "video_id": "RZZHTVr-r-g",
+  "title": "Car Seat Headrest: NPR Music Tiny Desk Concert",
+  "duration": 1011,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/RZZHTVr-r-g.mp3",
+  "description_songs": [
+    "The Drum",
+    "Drunk Drivers/Killer Whales",
+    "Sober To Death"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2400 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 2.88,
+      "end": 7.199999999999999,
+      "duration": 4.319999999999999,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 245.76,
+      "end": 269.28000000000003,
+      "duration": 23.52000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 646.56,
+      "end": 666.24,
+      "duration": 19.680000000000064,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 732.0,
+      "end": 733.4399999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 744.48,
+      "end": 745.92,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 823.68,
+      "end": 825.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 835.68,
+      "end": 837.12,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 848.16,
+      "end": 849.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 964.8,
+      "end": 984.96,
+      "duration": 20.160000000000082,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "The Drum",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 7.199999999999999,
+      "clip_end": 243.35999999999999,
+      "refined_v2_clip_end": 245.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 242.68,
+      "fade_out_end": 243.36,
+      "detected_music_release_at": 243.36,
+      "first_non_music_at": 242.88,
+      "crowd_onset_at": 245.76,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 275,
+      "song": "Drunk Drivers/Killer Whales",
+      "corroboration": 0,
+      "silence_match": 274.259,
+      "clip_start": 269.28000000000003,
+      "clip_end": 646.56,
+      "refined_v2_clip_end": 646.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 645.78,
+      "fade_out_end": 646.56,
+      "detected_music_release_at": 646.56,
+      "first_non_music_at": 646.08,
+      "crowd_onset_at": 646.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 666,
+      "song": "Sober To Death",
+      "corroboration": 0,
+      "silence_match": 666.105,
+      "clip_start": 666.24,
+      "clip_end": 963.36,
+      "refined_v2_clip_end": 964.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 962.78,
+      "fade_out_end": 963.36,
+      "detected_music_release_at": 963.36,
+      "first_non_music_at": 962.88,
+      "crowd_onset_at": 964.8,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 3.17467,
+      "duration": 3.17467
+    },
+    {
+      "start": 56.8403,
+      "end": 57.51,
+      "duration": 0.669771
+    },
+    {
+      "start": 242.862,
+      "end": 244.303,
+      "duration": 1.44167
+    },
+    {
+      "start": 253.617,
+      "end": 254.173,
+      "duration": 0.556187
+    },
+    {
+      "start": 256.476,
+      "end": 257.292,
+      "duration": 0.815521
+    },
+    {
+      "start": 260.774,
+      "end": 261.392,
+      "duration": 0.617979
+    },
+    {
+      "start": 262.047,
+      "end": 262.834,
+      "duration": 0.786896
+    },
+    {
+      "start": 265.101,
+      "end": 266.208,
+      "duration": 1.1064
+    },
+    {
+      "start": 267.317,
+      "end": 268.691,
+      "duration": 1.37419
+    },
+    {
+      "start": 274.259,
+      "end": 274.865,
+      "duration": 0.605708
+    },
+    {
+      "start": 275.772,
+      "end": 276.626,
+      "duration": 0.854229
+    },
+    {
+      "start": 283.242,
+      "end": 283.886,
+      "duration": 0.643521
+    },
+    {
+      "start": 283.886,
+      "end": 285.057,
+      "duration": 1.17071
+    },
+    {
+      "start": 300.403,
+      "end": 300.906,
+      "duration": 0.502875
+    },
+    {
+      "start": 300.906,
+      "end": 301.838,
+      "duration": 0.931771
+    },
+    {
+      "start": 644.03,
+      "end": 645.786,
+      "duration": 1.75604
+    },
+    {
+      "start": 654.532,
+      "end": 655.264,
+      "duration": 0.731479
+    },
+    {
+      "start": 659.794,
+      "end": 660.549,
+      "duration": 0.754167
+    },
+    {
+      "start": 661.388,
+      "end": 662.556,
+      "duration": 1.16808
+    },
+    {
+      "start": 666.105,
+      "end": 666.701,
+      "duration": 0.596042
+    },
+    {
+      "start": 961.14,
+      "end": 962.883,
+      "duration": 1.74269
+    },
+    {
+      "start": 976.386,
+      "end": 977.112,
+      "duration": 0.726
+    },
+    {
+      "start": 978.185,
+      "end": 978.886,
+      "duration": 0.700333
+    },
+    {
+      "start": 980.388,
+      "end": 981.644,
+      "duration": 1.25602
+    },
+    {
+      "start": 981.644,
+      "end": 982.491,
+      "duration": 0.846854
+    },
+    {
+      "start": 983.195,
+      "end": 984.315,
+      "duration": 1.12033
+    },
+    {
+      "start": 984.709,
+      "end": 985.633,
+      "duration": 0.924438
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      76,
+      76
+    ],
+    "avg": 76.0,
+    "min": 76
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

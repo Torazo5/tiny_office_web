@@ -1,0 +1,442 @@
+{
+  "video_id": "klL7nY1HzaY",
+  "title": "Durand Bernarr: Tiny Desk Concert",
+  "duration": 1346,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/klL7nY1HzaY.mp3",
+  "description_songs": [
+    "Leveled",
+    "Chops (Reprise from Stuck)",
+    "Sam's Vibe",
+    "Company",
+    "Mango Butter",
+    "Relocate",
+    "Freefall",
+    "Stuck.",
+    "Melody"
+  ],
+  "method": "silence",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 9 description songs (0 candidate(s) checked)",
+    "B_yamnet": "failed \u2014 only 6 usable episode(s) (of 7 valid, 9 total), need 8",
+    "C_silence": "ok \u2014 16 usable gap(s), took top 8 by duration"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 247.2,
+      "end": 247.67999999999998,
+      "duration": 0.47999999999998977,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 371.52,
+      "end": 374.88,
+      "duration": 3.3600000000000136,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 563.52,
+      "end": 578.4,
+      "duration": 14.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 776.64,
+      "end": 785.76,
+      "duration": 9.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 967.68,
+      "end": 970.56,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1141.44,
+      "end": 1145.28,
+      "duration": 3.839999999999918,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1190.8799999999999,
+      "end": 1205.76,
+      "duration": 14.88000000000011,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1322.3999999999999,
+      "end": 1325.28,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1327.2,
+      "end": 1327.68,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.840354,
+      "song": "Leveled",
+      "corroboration": 0,
+      "silence_match": 0.848938,
+      "clip_start": 0.840354,
+      "clip_end": 0.848938,
+      "refined_v2_clip_end": 0.848938,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": true,
+      "confidence": 0
+    },
+    {
+      "seconds": 0.848938,
+      "song": "Chops (Reprise from Stuck)",
+      "corroboration": 0,
+      "silence_match": 0.848938,
+      "clip_start": 0.848938,
+      "clip_end": 1.61467,
+      "refined_v2_clip_end": 1.61467,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": true,
+      "confidence": 0
+    },
+    {
+      "seconds": 1.61467,
+      "song": "Sam's Vibe",
+      "corroboration": 0,
+      "silence_match": 1.61467,
+      "clip_start": 1.61467,
+      "clip_end": 246.18999999999997,
+      "refined_v2_clip_end": 247.2,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 246.72,
+      "first_non_music_at": 246.24,
+      "crowd_onset_at": 247.2,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 482.32,
+      "song": "Company",
+      "corroboration": 0,
+      "silence_match": 482.32,
+      "clip_start": 482.32,
+      "clip_end": 563.52,
+      "refined_v2_clip_end": 563.52,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 563.52,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 794.86,
+      "song": "Mango Butter",
+      "corroboration": 0,
+      "silence_match": 794.86,
+      "clip_start": 785.76,
+      "clip_end": 941.259,
+      "refined_v2_clip_end": 941.259,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 941.259,
+      "song": "Relocate",
+      "corroboration": 0,
+      "silence_match": 941.259,
+      "clip_start": 941.259,
+      "clip_end": 967.48,
+      "refined_v2_clip_end": 967.48,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 35
+    },
+    {
+      "seconds": 967.48,
+      "song": "Freefall",
+      "corroboration": 0,
+      "silence_match": 967.48,
+      "clip_start": 970.56,
+      "clip_end": 1011.13,
+      "refined_v2_clip_end": 1011.13,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 1011.13,
+      "song": "Stuck.",
+      "corroboration": 0,
+      "silence_match": 1011.13,
+      "clip_start": 970.56,
+      "clip_end": 1141.39,
+      "refined_v2_clip_end": 1141.44,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1141.44,
+      "first_non_music_at": 1140.96,
+      "crowd_onset_at": 1141.44,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 1145.19,
+      "song": "Melody",
+      "corroboration": 0,
+      "silence_match": 1145.19,
+      "clip_start": 1145.28,
+      "clip_end": 1190.8799999999999,
+      "refined_v2_clip_end": 1190.8799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1190.88,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0960625,
+      "end": 0.840354,
+      "duration": 0.744292
+    },
+    {
+      "start": 0.848938,
+      "end": 1.59508,
+      "duration": 0.746146
+    },
+    {
+      "start": 1.61467,
+      "end": 2.32727,
+      "duration": 0.712604
+    },
+    {
+      "start": 137.918,
+      "end": 138.502,
+      "duration": 0.584646
+    },
+    {
+      "start": 139.016,
+      "end": 139.675,
+      "duration": 0.658833
+    },
+    {
+      "start": 246.095,
+      "end": 246.784,
+      "duration": 0.689771
+    },
+    {
+      "start": 482.32,
+      "end": 487.58,
+      "duration": 5.25992
+    },
+    {
+      "start": 487.797,
+      "end": 488.463,
+      "duration": 0.666292
+    },
+    {
+      "start": 562.865,
+      "end": 563.553,
+      "duration": 0.688083
+    },
+    {
+      "start": 746.392,
+      "end": 746.993,
+      "duration": 0.600896
+    },
+    {
+      "start": 794.86,
+      "end": 795.911,
+      "duration": 1.05077
+    },
+    {
+      "start": 941.259,
+      "end": 942.183,
+      "duration": 0.923812
+    },
+    {
+      "start": 967.48,
+      "end": 968.491,
+      "duration": 1.0114
+    },
+    {
+      "start": 1011.13,
+      "end": 1011.95,
+      "duration": 0.814375
+    },
+    {
+      "start": 1145.19,
+      "end": 1147.2,
+      "duration": 2.00762
+    },
+    {
+      "start": 1147.2,
+      "end": 1147.9,
+      "duration": 0.698896
+    },
+    {
+      "start": 1147.92,
+      "end": 1148.59,
+      "duration": 0.669771
+    },
+    {
+      "start": 1326.24,
+      "end": 1346.26,
+      "duration": 20.0173
+    }
+  ],
+  "confidence": {
+    "scores": [
+      0,
+      0,
+      43,
+      43,
+      43,
+      35,
+      43,
+      51,
+      51
+    ],
+    "avg": 34.3,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

@@ -1,0 +1,454 @@
+{
+  "video_id": "rwvCEWWWt7Q",
+  "title": "The Oh Hellos: NPR Music Tiny Desk Concert",
+  "duration": 997,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/rwvCEWWWt7Q.mp3",
+  "description_songs": [
+    "Hello My Old Heart",
+    "Like The Dawn",
+    "Exeunt"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 7 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 251.51999999999998,
+      "end": 311.04,
+      "duration": 59.52000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 315.36,
+      "end": 328.32,
+      "duration": 12.95999999999998,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 329.28,
+      "end": 337.44,
+      "duration": 8.160000000000025,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 339.36,
+      "end": 341.28000000000003,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 658.0799999999999,
+      "end": 669.12,
+      "duration": 11.040000000000077,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 672.9599999999999,
+      "end": 676.3199999999999,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 676.8,
+      "end": 678.24,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 685.4399999999999,
+      "end": 689.28,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 691.1999999999999,
+      "end": 694.08,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 696.48,
+      "end": 698.4,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 707.04,
+      "end": 710.88,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 711.8399999999999,
+      "end": 717.6,
+      "duration": 5.760000000000105,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 720.0,
+      "end": 723.36,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 723.8399999999999,
+      "end": 725.28,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 726.24,
+      "end": 728.16,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 732.9599999999999,
+      "end": 736.8,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 739.1999999999999,
+      "end": 740.64,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 744.0,
+      "end": 746.88,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 751.1999999999999,
+      "end": 763.68,
+      "duration": 12.480000000000018,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 764.64,
+      "end": 768.48,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 778.0799999999999,
+      "end": 780.0,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 798.24,
+      "end": 800.16,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 828.48,
+      "end": 829.92,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 928.3199999999999,
+      "end": 966.72,
+      "duration": 38.40000000000009,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Hello My Old Heart",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 250.51,
+      "refined_v2_clip_end": 251.51999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 251.04,
+      "first_non_music_at": 250.56,
+      "crowd_onset_at": 251.52,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 251.51999999999998,
+      "song": "Like The Dawn",
+      "corroboration": 0,
+      "silence_match": 250.385,
+      "clip_start": 251.51999999999998,
+      "clip_end": 928.3199999999999,
+      "refined_v2_clip_end": 928.3199999999999,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 50
+    },
+    {
+      "seconds": 928.3199999999999,
+      "song": "Exeunt",
+      "corroboration": 0,
+      "silence_match": 926.748,
+      "clip_start": 966.72,
+      "clip_end": 997,
+      "refined_v2_clip_end": 997,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 58
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 250.385,
+      "end": 251.402,
+      "duration": 1.01612
+    },
+    {
+      "start": 265.847,
+      "end": 266.5,
+      "duration": 0.652813
+    },
+    {
+      "start": 272.359,
+      "end": 273.103,
+      "duration": 0.743208
+    },
+    {
+      "start": 275.518,
+      "end": 276.155,
+      "duration": 0.636521
+    },
+    {
+      "start": 301.511,
+      "end": 302.052,
+      "duration": 0.540479
+    },
+    {
+      "start": 302.163,
+      "end": 302.989,
+      "duration": 0.825958
+    },
+    {
+      "start": 309.095,
+      "end": 309.827,
+      "duration": 0.731437
+    },
+    {
+      "start": 314.451,
+      "end": 315.911,
+      "duration": 1.46058
+    },
+    {
+      "start": 326.553,
+      "end": 327.076,
+      "duration": 0.523146
+    },
+    {
+      "start": 339.67,
+      "end": 340.209,
+      "duration": 0.538937
+    },
+    {
+      "start": 340.852,
+      "end": 341.983,
+      "duration": 1.1311
+    },
+    {
+      "start": 341.983,
+      "end": 342.783,
+      "duration": 0.799771
+    },
+    {
+      "start": 342.783,
+      "end": 343.553,
+      "duration": 0.769813
+    },
+    {
+      "start": 657.099,
+      "end": 657.62,
+      "duration": 0.52075
+    },
+    {
+      "start": 669.666,
+      "end": 673.673,
+      "duration": 4.00702
+    },
+    {
+      "start": 675.476,
+      "end": 676.006,
+      "duration": 0.529625
+    },
+    {
+      "start": 694.915,
+      "end": 695.433,
+      "duration": 0.517708
+    },
+    {
+      "start": 696.236,
+      "end": 696.747,
+      "duration": 0.510646
+    },
+    {
+      "start": 711.956,
+      "end": 712.908,
+      "duration": 0.951958
+    },
+    {
+      "start": 731.352,
+      "end": 731.939,
+      "duration": 0.586896
+    },
+    {
+      "start": 732.503,
+      "end": 733.111,
+      "duration": 0.608437
+    },
+    {
+      "start": 733.383,
+      "end": 734.036,
+      "duration": 0.652625
+    },
+    {
+      "start": 736.211,
+      "end": 736.795,
+      "duration": 0.584437
+    },
+    {
+      "start": 743.418,
+      "end": 744.016,
+      "duration": 0.598208
+    },
+    {
+      "start": 755.663,
+      "end": 756.47,
+      "duration": 0.807125
+    },
+    {
+      "start": 757.498,
+      "end": 758.101,
+      "duration": 0.603604
+    },
+    {
+      "start": 760.847,
+      "end": 761.448,
+      "duration": 0.601
+    },
+    {
+      "start": 768.942,
+      "end": 769.684,
+      "duration": 0.741583
+    },
+    {
+      "start": 770.327,
+      "end": 772.096,
+      "duration": 1.76833
+    },
+    {
+      "start": 772.12,
+      "end": 774.832,
+      "duration": 2.71287
+    },
+    {
+      "start": 926.748,
+      "end": 927.32,
+      "duration": 0.571729
+    },
+    {
+      "start": 966.116,
+      "end": 967.547,
+      "duration": 1.43115
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      50,
+      58
+    ],
+    "avg": 50.3,
+    "min": 43
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

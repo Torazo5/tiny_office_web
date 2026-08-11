@@ -1,0 +1,280 @@
+{
+  "video_id": "11HHue911Tg",
+  "title": "Jackson Browne: NPR Music Tiny Desk Concert",
+  "duration": 1234,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/11HHue911Tg.mp3",
+  "description_songs": [
+    "Call It A Loan",
+    "The Barricades Of Heaven",
+    "Long Way Around"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 4 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 283.68,
+      "end": 298.56,
+      "duration": 14.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 753.6,
+      "end": 774.72,
+      "duration": 21.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 799.68,
+      "end": 802.56,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 803.04,
+      "end": 812.64,
+      "duration": 9.600000000000023,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 816.0,
+      "end": 817.4399999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 817.4399999999999,
+      "end": 840.48,
+      "duration": 23.040000000000077,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1161.12,
+      "end": 1213.44,
+      "duration": 52.320000000000164,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Call It A Loan",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 283.68,
+      "refined_v2_clip_end": 283.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 283.68,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 753.6,
+      "song": "The Barricades Of Heaven",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 774.72,
+      "clip_end": 800.59,
+      "refined_v2_clip_end": 803.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 800.64,
+      "first_non_music_at": 800.16,
+      "crowd_onset_at": 803.04,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 817.4399999999999,
+      "song": "Long Way Around",
+      "corroboration": 0,
+      "silence_match": 811.895,
+      "clip_start": 840.48,
+      "clip_end": 1161.12,
+      "refined_v2_clip_end": 1161.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 1160.34,
+      "fade_out_end": 1161.12,
+      "detected_music_release_at": 1161.12,
+      "first_non_music_at": 1160.64,
+      "crowd_onset_at": 1161.12,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 66
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 227.039,
+      "end": 227.994,
+      "duration": 0.955229
+    },
+    {
+      "start": 301.59,
+      "end": 302.424,
+      "duration": 0.834
+    },
+    {
+      "start": 314.394,
+      "end": 315.035,
+      "duration": 0.640875
+    },
+    {
+      "start": 315.275,
+      "end": 315.996,
+      "duration": 0.72075
+    },
+    {
+      "start": 774.931,
+      "end": 776.659,
+      "duration": 1.72827
+    },
+    {
+      "start": 781.717,
+      "end": 782.347,
+      "duration": 0.630458
+    },
+    {
+      "start": 792.109,
+      "end": 792.893,
+      "duration": 0.784604
+    },
+    {
+      "start": 797.792,
+      "end": 798.491,
+      "duration": 0.698458
+    },
+    {
+      "start": 800.322,
+      "end": 801.062,
+      "duration": 0.739458
+    },
+    {
+      "start": 811.895,
+      "end": 813.403,
+      "duration": 1.50769
+    },
+    {
+      "start": 828.757,
+      "end": 829.483,
+      "duration": 0.725896
+    },
+    {
+      "start": 838.244,
+      "end": 839.122,
+      "duration": 0.878375
+    },
+    {
+      "start": 840.435,
+      "end": 842.682,
+      "duration": 2.24708
+    },
+    {
+      "start": 842.783,
+      "end": 843.587,
+      "duration": 0.804458
+    },
+    {
+      "start": 986.309,
+      "end": 986.95,
+      "duration": 0.641146
+    },
+    {
+      "start": 986.972,
+      "end": 988.659,
+      "duration": 1.6865
+    },
+    {
+      "start": 1062.22,
+      "end": 1062.85,
+      "duration": 0.634979
+    },
+    {
+      "start": 1153.54,
+      "end": 1154.04,
+      "duration": 0.507229
+    },
+    {
+      "start": 1206.64,
+      "end": 1208.74,
+      "duration": 2.09762
+    },
+    {
+      "start": 1213.95,
+      "end": 1214.81,
+      "duration": 0.857625
+    },
+    {
+      "start": 1233.44,
+      "end": 1234.28,
+      "duration": 0.841146
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      51,
+      66
+    ],
+    "avg": 53.3,
+    "min": 43
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

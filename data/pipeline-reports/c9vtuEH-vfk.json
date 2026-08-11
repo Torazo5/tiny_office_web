@@ -1,0 +1,561 @@
+{
+  "video_id": "c9vtuEH-vfk",
+  "title": "Jeezy: Tiny Desk Concert",
+  "duration": 1409,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/c9vtuEH-vfk.mp3",
+  "description_songs": [
+    "Standing Ovation",
+    "Air Forces",
+    "Bottom Of The Map",
+    "And Then What",
+    "Go Crazy",
+    "Everythang"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 6 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 12 usable episode(s), took top 5; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 2.4,
+      "end": 3.84,
+      "duration": 1.44,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 12.959999999999999,
+      "end": 13.44,
+      "duration": 0.4800000000000004,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 186.23999999999998,
+      "end": 257.28000000000003,
+      "duration": 71.04000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 410.4,
+      "end": 469.44,
+      "duration": 59.04000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 473.76,
+      "end": 475.68,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 643.68,
+      "end": 704.16,
+      "duration": 60.48000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 847.68,
+      "end": 848.16,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 866.4,
+      "end": 888.96,
+      "duration": 22.56000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 889.92,
+      "end": 936.96,
+      "duration": 47.04000000000008,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1116.48,
+      "end": 1116.96,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1121.28,
+      "end": 1122.72,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1124.1599999999999,
+      "end": 1167.36,
+      "duration": 43.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1174.08,
+      "end": 1176.48,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1176.96,
+      "end": 1178.8799999999999,
+      "duration": 1.9199999999998454,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1328.1599999999999,
+      "end": 1328.6399999999999,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1376.1599999999999,
+      "end": 1387.68,
+      "duration": 11.52000000000021,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1400.1599999999999,
+      "end": 1406.3999999999999,
+      "duration": 6.240000000000009,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Standing Ovation",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 13.44,
+      "clip_end": 183.79,
+      "refined_v2_clip_end": 186.23999999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 183.84,
+      "first_non_music_at": 183.36,
+      "crowd_onset_at": 186.24,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 186.23999999999998,
+      "song": "Air Forces",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 257.28000000000003,
+      "clip_end": 408.42999999999995,
+      "refined_v2_clip_end": 410.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 408.48,
+      "first_non_music_at": 408.0,
+      "crowd_onset_at": 410.4,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 410.4,
+      "song": "Bottom Of The Map",
+      "corroboration": 0,
+      "silence_match": 408.443,
+      "clip_start": 469.44,
+      "clip_end": 643.68,
+      "refined_v2_clip_end": 643.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 643.68,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 643.68,
+      "song": "And Then What",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 704.16,
+      "clip_end": 847.68,
+      "refined_v2_clip_end": 847.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 847.68,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 866.4,
+      "song": "Go Crazy",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 848.16,
+      "clip_end": 864.91,
+      "refined_v2_clip_end": 866.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 864.96,
+      "first_non_music_at": 864.48,
+      "crowd_onset_at": 866.4,
+      "end_unresolved_reason": null,
+      "suspect": true,
+      "confidence": 1
+    },
+    {
+      "seconds": 1124.1599999999999,
+      "song": "Everythang",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1122.72,
+      "clip_end": 1124.1599999999999,
+      "refined_v2_clip_end": 1124.1599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1121.76,
+      "first_non_music_at": 1121.28,
+      "crowd_onset_at": 1124.16,
+      "end_unresolved_reason": null,
+      "suspect": true,
+      "confidence": 1
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 193.725,
+      "end": 194.578,
+      "duration": 0.852729
+    },
+    {
+      "start": 196.695,
+      "end": 197.386,
+      "duration": 0.691542
+    },
+    {
+      "start": 202.061,
+      "end": 202.821,
+      "duration": 0.760375
+    },
+    {
+      "start": 226.454,
+      "end": 227.017,
+      "duration": 0.562937
+    },
+    {
+      "start": 238.285,
+      "end": 238.796,
+      "duration": 0.511125
+    },
+    {
+      "start": 257.102,
+      "end": 257.968,
+      "duration": 0.866396
+    },
+    {
+      "start": 408.443,
+      "end": 408.97,
+      "duration": 0.526813
+    },
+    {
+      "start": 423.601,
+      "end": 424.828,
+      "duration": 1.22704
+    },
+    {
+      "start": 425.226,
+      "end": 425.772,
+      "duration": 0.546167
+    },
+    {
+      "start": 429.178,
+      "end": 430.002,
+      "duration": 0.824
+    },
+    {
+      "start": 431.406,
+      "end": 432.296,
+      "duration": 0.890188
+    },
+    {
+      "start": 434.714,
+      "end": 435.384,
+      "duration": 0.670083
+    },
+    {
+      "start": 438.343,
+      "end": 439.197,
+      "duration": 0.854208
+    },
+    {
+      "start": 449.884,
+      "end": 450.399,
+      "duration": 0.514958
+    },
+    {
+      "start": 455.195,
+      "end": 455.71,
+      "duration": 0.515542
+    },
+    {
+      "start": 457.325,
+      "end": 457.949,
+      "duration": 0.624354
+    },
+    {
+      "start": 462.942,
+      "end": 463.446,
+      "duration": 0.503687
+    },
+    {
+      "start": 467.401,
+      "end": 467.932,
+      "duration": 0.531125
+    },
+    {
+      "start": 469.555,
+      "end": 470.231,
+      "duration": 0.676063
+    },
+    {
+      "start": 475.468,
+      "end": 476.477,
+      "duration": 1.00825
+    },
+    {
+      "start": 480.221,
+      "end": 481.516,
+      "duration": 1.29485
+    },
+    {
+      "start": 658.816,
+      "end": 659.731,
+      "duration": 0.914708
+    },
+    {
+      "start": 663.704,
+      "end": 664.734,
+      "duration": 1.02967
+    },
+    {
+      "start": 665.184,
+      "end": 666.482,
+      "duration": 1.29787
+    },
+    {
+      "start": 670.984,
+      "end": 671.893,
+      "duration": 0.909542
+    },
+    {
+      "start": 680.274,
+      "end": 681.122,
+      "duration": 0.847792
+    },
+    {
+      "start": 682.467,
+      "end": 683.108,
+      "duration": 0.641417
+    },
+    {
+      "start": 692.76,
+      "end": 693.274,
+      "duration": 0.513271
+    },
+    {
+      "start": 700.769,
+      "end": 701.596,
+      "duration": 0.827437
+    },
+    {
+      "start": 703.058,
+      "end": 703.608,
+      "duration": 0.549917
+    },
+    {
+      "start": 704.111,
+      "end": 704.647,
+      "duration": 0.535583
+    },
+    {
+      "start": 875.921,
+      "end": 876.883,
+      "duration": 0.961542
+    },
+    {
+      "start": 877.938,
+      "end": 879.154,
+      "duration": 1.21623
+    },
+    {
+      "start": 882.813,
+      "end": 883.337,
+      "duration": 0.523604
+    },
+    {
+      "start": 887.863,
+      "end": 888.446,
+      "duration": 0.583042
+    },
+    {
+      "start": 899.61,
+      "end": 900.16,
+      "duration": 0.550562
+    },
+    {
+      "start": 903.53,
+      "end": 904.031,
+      "duration": 0.500792
+    },
+    {
+      "start": 905.148,
+      "end": 905.65,
+      "duration": 0.50225
+    },
+    {
+      "start": 913.25,
+      "end": 914.011,
+      "duration": 0.760917
+    },
+    {
+      "start": 927.512,
+      "end": 928.117,
+      "duration": 0.604979
+    },
+    {
+      "start": 936.583,
+      "end": 937.387,
+      "duration": 0.804104
+    },
+    {
+      "start": 1139.47,
+      "end": 1140.01,
+      "duration": 0.532979
+    },
+    {
+      "start": 1174.24,
+      "end": 1174.84,
+      "duration": 0.600958
+    },
+    {
+      "start": 1185.02,
+      "end": 1185.64,
+      "duration": 0.619521
+    },
+    {
+      "start": 1187.42,
+      "end": 1188.08,
+      "duration": 0.652417
+    },
+    {
+      "start": 1387.33,
+      "end": 1400.82,
+      "duration": 13.4911
+    },
+    {
+      "start": 1406.46,
+      "end": 1408.71,
+      "duration": 2.25252
+    }
+  ],
+  "confidence": {
+    "scores": [
+      51,
+      51,
+      66,
+      51,
+      1,
+      1
+    ],
+    "avg": 36.8,
+    "min": 1
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

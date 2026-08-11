@@ -2,7 +2,7 @@
   "video_id": "vPBirt1YhuM",
   "title": "Jacob Collier: NPR Music Tiny Desk Concert",
   "duration": 1175,
-  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/vPBirt1YhuM.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/vPBirt1YhuM.mp3",
   "description_songs": [
     "Make Me Cry",
     "Feel",
@@ -10,12 +10,12 @@
   ],
   "method": "comments",
   "resolve_notes": {
-    "A_comments": "ok \u2014 39 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+    "A_comments": "ok \u2014 60 likes, matched all 3 description song(s), retained 3 timestamp(s)"
   },
   "comment_filter": {
     "cross_checked": true,
-    "parsed": 1,
-    "accepted": 1,
+    "parsed": 2,
+    "accepted": 2,
     "rejected": 0,
     "filtered_entries": 0
   },
@@ -96,44 +96,77 @@
     {
       "seconds": 0,
       "song": "Make Me Cry",
-      "corroboration": 0,
+      "corroboration": 1,
       "silence_match": 0.0,
       "clip_start": 0,
-      "clip_end": 261.08,
+      "clip_end": 260.59,
+      "refined_v2_clip_end": 262.08,
       "start_refined": false,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 261.12,
+      "first_non_music_at": 260.64,
+      "crowd_onset_at": 262.08,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 68,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 75
     },
     {
-      "seconds": 314,
+      "seconds": 317,
       "song": "Feel",
-      "corroboration": 0,
-      "silence_match": 312.964,
+      "corroboration": 1,
+      "silence_match": 318.271,
       "clip_start": 313.44,
-      "clip_end": 700.28,
+      "clip_end": 700.27,
+      "refined_v2_clip_end": 701.28,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 700.32,
+      "first_non_music_at": 699.84,
+      "crowd_onset_at": 701.28,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 76,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 83
     },
     {
       "seconds": 752,
       "song": "It Don't Matter",
-      "corroboration": 0,
+      "corroboration": 1,
       "silence_match": 751.495,
       "clip_start": 770.88,
-      "clip_end": 772.28,
+      "clip_end": 773.28,
+      "refined_v2_clip_end": 773.28,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 773.28,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
       "suspect": true,
-      "confidence": 26,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 33
     }
   ],
   "silence_intervals": [
@@ -385,17 +418,23 @@
   ],
   "confidence": {
     "scores": [
-      68,
-      76,
-      26
+      75,
+      83,
+      33
     ],
-    "avg": 56.7,
-    "min": 26
+    "avg": 63.7,
+    "min": 33
   },
-  "pipeline": "v2_no_audience_variant",
-  "pipeline_version": "v2_no_audience_variant",
-  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/vPBirt1YhuM.json (edge-guarded comparison)",
-  "audience_enabled": true,
-  "audience_removed": true,
-  "audience_edge_guard_sec": 1.0
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
 }

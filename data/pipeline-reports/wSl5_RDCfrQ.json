@@ -1,0 +1,312 @@
+{
+  "video_id": "wSl5_RDCfrQ",
+  "title": "Jessie Reyez: Tiny Desk Concert",
+  "duration": 988,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/wSl5_RDCfrQ.mp3",
+  "description_songs": [
+    "MOOD\" (Pt. 1)",
+    "MUTUAL FRIEND\" / \"FIGURES",
+    "ONLY ONE",
+    "FOREVER\" / \"IMPORTED",
+    "MOOD\" (Pt. 2)"
+  ],
+  "method": "silence",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 5 description songs (1 candidate(s) checked)",
+    "B_yamnet": "failed \u2014 only 3 usable episode(s) (of 4 valid, 8 total), need 4",
+    "C_silence": "ok \u2014 13 usable gap(s), took top 4 by duration"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 60.96,
+      "end": 62.879999999999995,
+      "duration": 1.9199999999999946,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 523.1999999999999,
+      "end": 539.52,
+      "duration": 16.32000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 715.1999999999999,
+      "end": 729.6,
+      "duration": 14.400000000000091,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 740.64,
+      "end": 742.08,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 784.3199999999999,
+      "end": 786.24,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 872.64,
+      "end": 887.04,
+      "duration": 14.399999999999977,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 951.36,
+      "end": 978.24,
+      "duration": 26.879999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 983.52,
+      "end": 986.88,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.837875,
+      "song": "MOOD\" (Pt. 1)",
+      "corroboration": 0,
+      "silence_match": 0.847646,
+      "clip_start": 0.837875,
+      "clip_end": 95.8921,
+      "refined_v2_clip_end": 95.8921,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 35
+    },
+    {
+      "seconds": 95.8921,
+      "song": "MUTUAL FRIEND\" / \"FIGURES",
+      "corroboration": 0,
+      "silence_match": 95.8921,
+      "clip_start": 62.879999999999995,
+      "clip_end": 252.074,
+      "refined_v2_clip_end": 252.074,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 252.074,
+      "song": "ONLY ONE",
+      "corroboration": 0,
+      "silence_match": 252.074,
+      "clip_start": 252.074,
+      "clip_end": 522.19,
+      "refined_v2_clip_end": 523.1999999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 522.72,
+      "first_non_music_at": 522.24,
+      "crowd_onset_at": 523.2,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 729.911,
+      "song": "FOREVER\" / \"IMPORTED",
+      "corroboration": 0,
+      "silence_match": 729.911,
+      "clip_start": 742.08,
+      "clip_end": 870.19,
+      "refined_v2_clip_end": 872.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 870.24,
+      "first_non_music_at": 869.76,
+      "crowd_onset_at": 872.64,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 977.818,
+      "song": "MOOD\" (Pt. 2)",
+      "corroboration": 0,
+      "silence_match": 977.818,
+      "clip_start": 986.88,
+      "clip_end": 988,
+      "refined_v2_clip_end": 988,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": true,
+      "confidence": 0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.202,
+      "end": 0.837875,
+      "duration": 0.635875
+    },
+    {
+      "start": 0.847646,
+      "end": 1.50654,
+      "duration": 0.658896
+    },
+    {
+      "start": 1.51827,
+      "end": 2.13304,
+      "duration": 0.614771
+    },
+    {
+      "start": 2.14452,
+      "end": 2.76008,
+      "duration": 0.615563
+    },
+    {
+      "start": 95.8921,
+      "end": 103.121,
+      "duration": 7.22929
+    },
+    {
+      "start": 252.074,
+      "end": 255.102,
+      "duration": 3.02815
+    },
+    {
+      "start": 329.504,
+      "end": 330.659,
+      "duration": 1.15521
+    },
+    {
+      "start": 339.215,
+      "end": 340.672,
+      "duration": 1.45783
+    },
+    {
+      "start": 521.738,
+      "end": 523.297,
+      "duration": 1.55942
+    },
+    {
+      "start": 539.706,
+      "end": 540.718,
+      "duration": 1.01183
+    },
+    {
+      "start": 639.945,
+      "end": 640.456,
+      "duration": 0.511188
+    },
+    {
+      "start": 714.368,
+      "end": 715.708,
+      "duration": 1.34046
+    },
+    {
+      "start": 729.911,
+      "end": 734.046,
+      "duration": 4.13492
+    },
+    {
+      "start": 977.818,
+      "end": 984.327,
+      "duration": 6.50894
+    },
+    {
+      "start": 986.753,
+      "end": 987.788,
+      "duration": 1.03581
+    }
+  ],
+  "confidence": {
+    "scores": [
+      35,
+      43,
+      43,
+      51,
+      0
+    ],
+    "avg": 34.4,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

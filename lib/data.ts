@@ -13,6 +13,7 @@ import type {
   PlaylistSummary,
   PlaylistType,
   PlaylistVideoOption,
+  PlaylistTrack,
   ReviewQueueItem,
   Song,
   PlaylistSongClip,
@@ -38,6 +39,9 @@ type SongRow = {
   clip_end: number;
   confidence: number;
   suspect: boolean;
+  overlap_detected: boolean;
+  fade_out_start: number | null;
+  fade_out_end: number | null;
   heart_count?: number;
 };
 
@@ -69,6 +73,9 @@ function mapSong(song: SongRow): Song {
     clipEnd: Number(song.clip_end),
     confidence: song.confidence,
     suspect: song.suspect,
+    overlapDetected: Boolean(song.overlap_detected),
+    fadeOutStart: song.fade_out_start === null ? null : Number(song.fade_out_start),
+    fadeOutEnd: song.fade_out_end === null ? null : Number(song.fade_out_end),
     heartCount: Number(song.heart_count ?? 0),
   };
 }
@@ -125,7 +132,7 @@ async function loadBrowsePerformances(): Promise<Performance[]> {
       .order("artist"),
     supabase
       .from("songs")
-      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, heart_count")
+      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, overlap_detected, fade_out_start, fade_out_end, heart_count")
       .order("performance_video_id")
       .order("song_index"),
     supabase.from("ratings").select("performance_video_id, rating"),
@@ -193,7 +200,7 @@ export async function getBrowsePerformancePage(
   const [songsResult, ratingsResult] = await Promise.all([
     supabase
       .from("songs")
-      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, heart_count")
+      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, overlap_detected, fade_out_start, fade_out_end, heart_count")
       .in("performance_video_id", videoIds)
       .order("performance_video_id")
       .order("song_index"),
@@ -249,7 +256,7 @@ async function loadPerformance(videoId: string): Promise<Performance | null> {
       .maybeSingle(),
     supabase
       .from("songs")
-      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, heart_count")
+      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, overlap_detected, fade_out_start, fade_out_end, heart_count")
       .eq("performance_video_id", videoId)
       .order("song_index"),
   ]);
@@ -490,7 +497,7 @@ export async function getPlaylist(id: string, ownerId?: string | null): Promise<
 
   const { data: songRows, error: songsError } = await supabase
     .from("songs")
-    .select("performance_video_id, song_index, title, clip_start, clip_end")
+    .select("performance_video_id, song_index, title, clip_start, clip_end, overlap_detected, fade_out_start, fade_out_end")
     .in("performance_video_id", videoIds)
     .order("performance_video_id")
     .order("song_index");
@@ -503,7 +510,13 @@ export async function getPlaylist(id: string, ownerId?: string | null): Promise<
   const songClipsByPerformance = new Map<string, PlaylistSongClip[]>();
   for (const song of songRows ?? []) {
     const songClips = songClipsByPerformance.get(song.performance_video_id) ?? [];
-    songClips.push({ clipStart: Number(song.clip_start), clipEnd: Number(song.clip_end) });
+    songClips.push({
+      clipStart: Number(song.clip_start),
+      clipEnd: Number(song.clip_end),
+      overlapDetected: Boolean(song.overlap_detected),
+      fadeOutStart: song.fade_out_start === null ? null : Number(song.fade_out_start),
+      fadeOutEnd: song.fade_out_end === null ? null : Number(song.fade_out_end),
+    });
     songClipsByPerformance.set(song.performance_video_id, songClips);
   }
 
@@ -515,7 +528,7 @@ export async function getPlaylist(id: string, ownerId?: string | null): Promise<
     owner,
     type: playlist.playlist_type as PlaylistType,
     ownerId: playlist.owner_id,
-    tracks: (tracks ?? []).flatMap((track) => {
+    tracks: (tracks ?? []).flatMap((track): PlaylistTrack[] => {
       const performance = performances.get(track.performance_video_id);
       const song = songs.get(`${track.performance_video_id}:${track.song_index}`);
       if (!performance) return [];
@@ -536,6 +549,9 @@ export async function getPlaylist(id: string, ownerId?: string | null): Promise<
           clipStart: firstPlayableSong?.clipStart ?? 0,
           clipEnd: duration,
           duration,
+          overlapDetected: Boolean(false),
+          fadeOutStart: null,
+          fadeOutEnd: null,
           songClips,
         }];
       }
@@ -553,6 +569,9 @@ export async function getPlaylist(id: string, ownerId?: string | null): Promise<
         clipStart: Number(song.clip_start),
         clipEnd: Number(song.clip_end),
         duration: Math.max(0, Number(song.clip_end) - Number(song.clip_start)),
+        overlapDetected: Boolean(song.overlap_detected),
+        fadeOutStart: song.fade_out_start === null ? null : Number(song.fade_out_start),
+        fadeOutEnd: song.fade_out_end === null ? null : Number(song.fade_out_end),
         songClips: [],
       }];
     }),
@@ -572,6 +591,9 @@ const loadPlaylistOptions = cache(async () => {
       clipEnd: song.clipEnd,
       duration: Math.max(0, song.clipEnd - song.clipStart),
       heartCount: song.heartCount,
+      overlapDetected: song.overlapDetected,
+      fadeOutStart: song.fadeOutStart,
+      fadeOutEnd: song.fadeOutEnd,
     })),
   );
   const videoOptions: PlaylistVideoOption[] = performances.map((performance) => ({
@@ -580,7 +602,13 @@ const loadPlaylistOptions = cache(async () => {
     artist: performance.artist,
     performanceLabel: performance.sourceTitle,
     duration: performance.duration,
-    songClips: performance.songs.map(({ clipStart, clipEnd }) => ({ clipStart, clipEnd })),
+    songClips: performance.songs.map(({ clipStart, clipEnd, overlapDetected, fadeOutStart, fadeOutEnd }) => ({
+      clipStart,
+      clipEnd,
+      overlapDetected,
+      fadeOutStart,
+      fadeOutEnd,
+    })),
   }));
 
   return { songOptions, videoOptions };

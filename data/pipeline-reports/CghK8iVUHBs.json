@@ -1,0 +1,189 @@
+{
+  "video_id": "CghK8iVUHBs",
+  "title": "Roy Ayers: NPR Music Tiny Desk Concert",
+  "duration": 1460,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/CghK8iVUHBs.mp3",
+  "description_songs": [
+    "Searching",
+    "Black Family",
+    "Everybody Loves The Sunshine"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 2 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 405.12,
+      "end": 428.64,
+      "duration": 23.519999999999982,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 947.04,
+      "end": 950.88,
+      "duration": 3.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 990.24,
+      "end": 991.68,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1440.0,
+      "end": 1460.1599999999999,
+      "duration": 20.159999999999854,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Searching",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 405.12,
+      "refined_v2_clip_end": 405.12,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 405.12,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 405.12,
+      "song": "Black Family",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 428.64,
+      "clip_end": 947.04,
+      "refined_v2_clip_end": 947.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 947.04,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 947.04,
+      "song": "Everybody Loves The Sunshine",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 950.88,
+      "clip_end": 1440.0,
+      "refined_v2_clip_end": 1440.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1440.0,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 420.979,
+      "end": 421.861,
+      "duration": 0.882375
+    },
+    {
+      "start": 422.608,
+      "end": 424.083,
+      "duration": 1.47477
+    },
+    {
+      "start": 425.797,
+      "end": 429.102,
+      "duration": 3.30425
+    },
+    {
+      "start": 430.723,
+      "end": 431.306,
+      "duration": 0.58275
+    },
+    {
+      "start": 439.978,
+      "end": 440.578,
+      "duration": 0.600521
+    },
+    {
+      "start": 449.127,
+      "end": 449.73,
+      "duration": 0.603271
+    },
+    {
+      "start": 1459.64,
+      "end": 1460.18,
+      "duration": 0.531729
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      51,
+      51
+    ],
+    "avg": 48.3,
+    "min": 43
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

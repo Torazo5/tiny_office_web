@@ -15,7 +15,10 @@ const supabase = createClient(supabaseUrl, secretKey, {
   auth: { autoRefreshToken: false, persistSession: false },
 });
 
-const EXPECTED_REPORT_COUNT = 199;
+const EXPECTED_REPORT_COUNTS = {
+  "no-audience": 299,
+  "with-audience": 199,
+};
 const reportsDir = join(process.cwd(), "data", "pipeline-reports");
 const REPORT_VARIANTS = [
   {
@@ -40,9 +43,9 @@ async function readReports(directory, variantKey) {
     reportFiles.map(async (file) => JSON.parse(await readFile(join(directory, file), "utf8"))),
   );
 
-  if (reports.length !== EXPECTED_REPORT_COUNT) {
+  if (reports.length !== EXPECTED_REPORT_COUNTS[variantKey]) {
     throw new Error(
-      `Expected exactly ${EXPECTED_REPORT_COUNT} ${variantKey} reports, found ${reports.length}.`,
+      `Expected exactly ${EXPECTED_REPORT_COUNTS[variantKey]} ${variantKey} reports, found ${reports.length}.`,
     );
   }
 
@@ -69,9 +72,13 @@ const reports = reportsByVariant.get("no-audience");
 const previousReports = reportsByVariant.get("with-audience");
 const reportVideoIds = reports.map((report) => report.video_id);
 const previousReportVideoIds = previousReports.map((report) => report.video_id);
-if (reportVideoIds.some((videoId, index) => videoId !== previousReportVideoIds[index])) {
-  throw new Error("The no-audience and with-audience snapshots must contain the same video IDs.");
+const reportVideoIdSet = new Set(reportVideoIds);
+const missingNoAudienceIds = previousReportVideoIds.filter((videoId) => !reportVideoIdSet.has(videoId));
+if (missingNoAudienceIds.length > 0) {
+  throw new Error(`The no-audience snapshot is missing with-audience IDs: ${missingNoAudienceIds.join(", ")}`);
 }
+const withAudienceVideoIdSet = new Set(previousReportVideoIds);
+const noAudienceOnlyVideoCount = reportVideoIds.filter((videoId) => !withAudienceVideoIdSet.has(videoId)).length;
 
 const artistFromTitle = (title) => title.split(":", 1)[0].trim() || title.trim();
 const confidenceValue = (value) => (typeof value === "number" ? value : 0);
@@ -89,16 +96,34 @@ const performances = reports.map((report) => ({
 }));
 
 const makeSongs = (variantReports, variantKey) => variantReports.flatMap((report) =>
-  (report.candidates ?? []).map((candidate, index) => ({
-    variant_key: variantKey,
-    performance_video_id: report.video_id,
-    song_index: index + 1,
-    title: String(candidate.song ?? "Untitled"),
-    clip_start: Number(candidate.clip_start) || 0,
-    clip_end: Number(candidate.clip_end) || 0,
-    confidence: confidenceValue(candidate.confidence),
-    suspect: Boolean(candidate.suspect),
-  })),
+  (report.candidates ?? []).map((candidate, index) => {
+    const clipStart = Number(candidate.clip_start);
+    const clipEnd = Number(candidate.clip_end);
+    const safeClipStart = Number.isFinite(clipStart) ? clipStart : 0;
+    const safeClipEnd = Number.isFinite(clipEnd) ? clipEnd : 0;
+    const fadeOutStart = Number(candidate.fade_out_start);
+    const fadeOutEnd = Number(candidate.fade_out_end);
+    const hasValidFade = Boolean(candidate.overlap_detected)
+      && Number.isFinite(fadeOutStart)
+      && Number.isFinite(fadeOutEnd)
+      && fadeOutStart >= safeClipStart
+      && fadeOutStart < fadeOutEnd
+      && Math.abs(fadeOutEnd - safeClipEnd) <= 0.01;
+
+    return {
+      variant_key: variantKey,
+      performance_video_id: report.video_id,
+      song_index: index + 1,
+      title: String(candidate.song ?? "Untitled"),
+      clip_start: safeClipStart,
+      clip_end: safeClipEnd,
+      confidence: confidenceValue(candidate.confidence),
+      suspect: Boolean(candidate.suspect),
+      overlap_detected: Boolean(candidate.overlap_detected),
+      fade_out_start: hasValidFade ? fadeOutStart : null,
+      fade_out_end: hasValidFade ? fadeOutEnd : null,
+    };
+  }),
 );
 
 const songs = makeSongs(reports, "no-audience").map(({ variant_key, ...song }) => {
@@ -109,7 +134,6 @@ const variantSongs = REPORT_VARIANTS.flatMap((variant) =>
   makeSongs(reportsByVariant.get(variant.key), variant.key),
 );
 
-const reportVideoIdSet = new Set(reportVideoIds);
 const expectedSongKeys = new Set(
   songs.map((song) => `${song.performance_video_id}:${song.song_index}`),
 );
@@ -236,3 +260,6 @@ if (variantSongs.length > 0) {
 console.log(
   `Seeded ${performances.length} default performances, ${songs.length} default songs, and ${variantSongs.length} cut-variant songs.`,
 );
+if (noAudienceOnlyVideoCount > 0) {
+  console.log(`${noAudienceOnlyVideoCount} no-audience performances have no with-audience cut available.`);
+}

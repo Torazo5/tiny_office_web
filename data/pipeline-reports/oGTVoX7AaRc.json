@@ -1,0 +1,518 @@
+{
+  "video_id": "oGTVoX7AaRc",
+  "title": "Robert Glasper Experiment: NPR Music Tiny Desk Concert",
+  "duration": 1498,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/oGTVoX7AaRc.mp3",
+  "description_songs": [
+    "Trust",
+    "NPR Tiny Desk Jam",
+    "F.T.B. (Gonna Be Alright)"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 20 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 2.4,
+      "end": 12.48,
+      "duration": 10.08,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 28.799999999999997,
+      "end": 30.24,
+      "duration": 1.4400000000000013,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 31.68,
+      "end": 33.599999999999994,
+      "duration": 1.9199999999999946,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 465.59999999999997,
+      "end": 485.76,
+      "duration": 20.160000000000025,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 490.56,
+      "end": 494.4,
+      "duration": 3.839999999999975,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 499.2,
+      "end": 504.48,
+      "duration": 5.28000000000003,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 504.96,
+      "end": 507.36,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 508.32,
+      "end": 511.68,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 515.52,
+      "end": 517.44,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 519.36,
+      "end": 525.12,
+      "duration": 5.759999999999991,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 527.52,
+      "end": 528.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 936.9599999999999,
+      "end": 1010.88,
+      "duration": 73.92000000000007,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1018.56,
+      "end": 1021.4399999999999,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1421.76,
+      "end": 1486.56,
+      "duration": 64.79999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 34,
+      "song": "Trust",
+      "corroboration": 0,
+      "silence_match": 32.6339,
+      "clip_start": 33.599999999999994,
+      "clip_end": 465.54999999999995,
+      "refined_v2_clip_end": 465.59999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 465.6,
+      "first_non_music_at": 465.12,
+      "crowd_onset_at": 465.6,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 533,
+      "song": "NPR Tiny Desk Jam",
+      "corroboration": 0,
+      "silence_match": 530.207,
+      "clip_start": 528.96,
+      "clip_end": 934.51,
+      "refined_v2_clip_end": 936.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 935.04,
+      "first_non_music_at": 934.56,
+      "crowd_onset_at": 936.96,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 1020,
+      "song": "F.T.B. (Gonna Be Alright)",
+      "corroboration": 0,
+      "silence_match": 1018.5,
+      "clip_start": 1021.4399999999999,
+      "clip_end": 1418.83,
+      "refined_v2_clip_end": 1421.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1419.36,
+      "first_non_music_at": 1418.88,
+      "crowd_onset_at": 1421.76,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 8.23392,
+      "end": 29.5282,
+      "duration": 21.2943
+    },
+    {
+      "start": 30.4436,
+      "end": 31.0909,
+      "duration": 0.647354
+    },
+    {
+      "start": 32.6339,
+      "end": 34.8496,
+      "duration": 2.21562
+    },
+    {
+      "start": 456.865,
+      "end": 462.691,
+      "duration": 5.82571
+    },
+    {
+      "start": 485.968,
+      "end": 486.546,
+      "duration": 0.578042
+    },
+    {
+      "start": 486.546,
+      "end": 487.635,
+      "duration": 1.08833
+    },
+    {
+      "start": 487.635,
+      "end": 491.693,
+      "duration": 4.05756
+    },
+    {
+      "start": 491.926,
+      "end": 492.593,
+      "duration": 0.667042
+    },
+    {
+      "start": 494.399,
+      "end": 499.862,
+      "duration": 5.46344
+    },
+    {
+      "start": 499.912,
+      "end": 500.747,
+      "duration": 0.835042
+    },
+    {
+      "start": 502.409,
+      "end": 503.418,
+      "duration": 1.00831
+    },
+    {
+      "start": 504.119,
+      "end": 505.565,
+      "duration": 1.44583
+    },
+    {
+      "start": 506.688,
+      "end": 508.293,
+      "duration": 1.6045
+    },
+    {
+      "start": 508.306,
+      "end": 510.261,
+      "duration": 1.95456
+    },
+    {
+      "start": 510.429,
+      "end": 511.333,
+      "duration": 0.903667
+    },
+    {
+      "start": 511.569,
+      "end": 513.76,
+      "duration": 2.19062
+    },
+    {
+      "start": 513.834,
+      "end": 516.53,
+      "duration": 2.69579
+    },
+    {
+      "start": 517.339,
+      "end": 520.794,
+      "duration": 3.45521
+    },
+    {
+      "start": 520.911,
+      "end": 521.731,
+      "duration": 0.819833
+    },
+    {
+      "start": 524.931,
+      "end": 528.845,
+      "duration": 3.91325
+    },
+    {
+      "start": 528.852,
+      "end": 530.195,
+      "duration": 1.34367
+    },
+    {
+      "start": 530.207,
+      "end": 533.703,
+      "duration": 3.49612
+    },
+    {
+      "start": 932.26,
+      "end": 936.6,
+      "duration": 4.34019
+    },
+    {
+      "start": 962.069,
+      "end": 962.861,
+      "duration": 0.792042
+    },
+    {
+      "start": 968.128,
+      "end": 968.979,
+      "duration": 0.851458
+    },
+    {
+      "start": 970.433,
+      "end": 971.215,
+      "duration": 0.781167
+    },
+    {
+      "start": 971.807,
+      "end": 972.364,
+      "duration": 0.556812
+    },
+    {
+      "start": 973.057,
+      "end": 973.97,
+      "duration": 0.912292
+    },
+    {
+      "start": 975.893,
+      "end": 976.99,
+      "duration": 1.09715
+    },
+    {
+      "start": 979.129,
+      "end": 979.634,
+      "duration": 0.505917
+    },
+    {
+      "start": 986.252,
+      "end": 986.892,
+      "duration": 0.639771
+    },
+    {
+      "start": 986.892,
+      "end": 987.864,
+      "duration": 0.972479
+    },
+    {
+      "start": 990.038,
+      "end": 990.817,
+      "duration": 0.779
+    },
+    {
+      "start": 992.763,
+      "end": 993.505,
+      "duration": 0.741687
+    },
+    {
+      "start": 993.848,
+      "end": 994.763,
+      "duration": 0.914979
+    },
+    {
+      "start": 996.299,
+      "end": 997.29,
+      "duration": 0.991104
+    },
+    {
+      "start": 997.291,
+      "end": 998.535,
+      "duration": 1.24421
+    },
+    {
+      "start": 998.621,
+      "end": 1003.52,
+      "duration": 4.89823
+    },
+    {
+      "start": 1012.26,
+      "end": 1012.98,
+      "duration": 0.716062
+    },
+    {
+      "start": 1013.77,
+      "end": 1014.54,
+      "duration": 0.767708
+    },
+    {
+      "start": 1017.63,
+      "end": 1018.49,
+      "duration": 0.853729
+    },
+    {
+      "start": 1018.5,
+      "end": 1021.18,
+      "duration": 2.67692
+    },
+    {
+      "start": 1024.53,
+      "end": 1025.6,
+      "duration": 1.06792
+    },
+    {
+      "start": 1026.94,
+      "end": 1027.53,
+      "duration": 0.590229
+    },
+    {
+      "start": 1028.3,
+      "end": 1028.81,
+      "duration": 0.507854
+    },
+    {
+      "start": 1033.22,
+      "end": 1033.81,
+      "duration": 0.591604
+    },
+    {
+      "start": 1410.59,
+      "end": 1411.57,
+      "duration": 0.981583
+    },
+    {
+      "start": 1411.57,
+      "end": 1412.58,
+      "duration": 1.01073
+    },
+    {
+      "start": 1412.73,
+      "end": 1413.86,
+      "duration": 1.13162
+    },
+    {
+      "start": 1415.51,
+      "end": 1421.22,
+      "duration": 5.70873
+    },
+    {
+      "start": 1461.41,
+      "end": 1462.13,
+      "duration": 0.714604
+    },
+    {
+      "start": 1462.82,
+      "end": 1465.05,
+      "duration": 2.23335
+    },
+    {
+      "start": 1467.67,
+      "end": 1468.2,
+      "duration": 0.529104
+    },
+    {
+      "start": 1468.75,
+      "end": 1469.28,
+      "duration": 0.529833
+    },
+    {
+      "start": 1475.14,
+      "end": 1475.71,
+      "duration": 0.565292
+    },
+    {
+      "start": 1477.01,
+      "end": 1477.85,
+      "duration": 0.849083
+    },
+    {
+      "start": 1478.46,
+      "end": 1479.07,
+      "duration": 0.617896
+    },
+    {
+      "start": 1482.94,
+      "end": 1485.16,
+      "duration": 2.22637
+    },
+    {
+      "start": 1485.18,
+      "end": 1497.93,
+      "duration": 12.7471
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      76,
+      76
+    ],
+    "avg": 76.0,
+    "min": 76
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

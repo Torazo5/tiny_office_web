@@ -1,0 +1,126 @@
+{
+  "video_id": "B76B_akQJuM",
+  "title": "GoldLink: NPR Music Tiny Desk Concert",
+  "duration": 811,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/B76B_akQJuM.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 118.56,
+      "end": 130.55999999999997,
+      "duration": 11.999999999999972,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 354.71999999999997,
+      "end": 370.08,
+      "duration": 15.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 563.52,
+      "end": 576.48,
+      "duration": 12.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 790.56,
+      "end": 796.3199999999999,
+      "duration": 5.759999999999991,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 799.68,
+      "end": 802.08,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 802.0799999999999,
+      "end": 805.92,
+      "duration": 3.840000000000032,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 5.15904,
+      "duration": 5.15904
+    },
+    {
+      "start": 364.431,
+      "end": 365.276,
+      "duration": 0.844604
+    },
+    {
+      "start": 366.925,
+      "end": 368.173,
+      "duration": 1.24802
+    },
+    {
+      "start": 368.217,
+      "end": 368.805,
+      "duration": 0.588354
+    },
+    {
+      "start": 368.848,
+      "end": 369.421,
+      "duration": 0.572521
+    },
+    {
+      "start": 369.47,
+      "end": 370.046,
+      "duration": 0.576437
+    },
+    {
+      "start": 575.39,
+      "end": 577.287,
+      "duration": 1.89752
+    },
+    {
+      "start": 805.608,
+      "end": 810.945,
+      "duration": 5.33717
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

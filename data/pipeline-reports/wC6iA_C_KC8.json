@@ -1,0 +1,378 @@
+{
+  "video_id": "wC6iA_C_KC8",
+  "title": "Daniel, Me Est\u00e1s Matando: Tiny Desk Concert",
+  "duration": 908,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/wC6iA_C_KC8.mp3",
+  "description_songs": [
+    "Intro",
+    "Lo Hice, Te Dej\u00e9",
+    "Es Verdad",
+    "\u00bfQu\u00e9 Se Siente Que Me Gustes Tanto?",
+    "Ya S\u00e9"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 318 likes, matched all 5 description song(s), retained 5 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 250.56,
+      "end": 278.40000000000003,
+      "duration": 27.840000000000032,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 282.24,
+      "end": 290.40000000000003,
+      "duration": 8.160000000000025,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 295.2,
+      "end": 297.12,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 298.56,
+      "end": 306.72,
+      "duration": 8.160000000000025,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 310.56,
+      "end": 313.44,
+      "duration": 2.8799999999999955,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 324.47999999999996,
+      "end": 326.40000000000003,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 434.88,
+      "end": 436.32,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 436.32,
+      "end": 439.68,
+      "duration": 3.3600000000000136,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 507.35999999999996,
+      "end": 554.4,
+      "duration": 47.04000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 560.16,
+      "end": 561.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 881.28,
+      "end": 892.3199999999999,
+      "duration": 11.039999999999964,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 898.0799999999999,
+      "end": 907.1999999999999,
+      "duration": 9.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 13,
+      "song": "Intro",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 13,
+      "clip_end": 53,
+      "refined_v2_clip_end": 53,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 53,
+      "song": "Lo Hice, Te Dej\u00e9",
+      "corroboration": 1,
+      "silence_match": 57.2109,
+      "clip_start": 53,
+      "clip_end": 248.64,
+      "refined_v2_clip_end": 250.56,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 248.06,
+      "fade_out_end": 248.64,
+      "detected_music_release_at": 248.64,
+      "first_non_music_at": 248.16,
+      "crowd_onset_at": 250.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 75
+    },
+    {
+      "seconds": 336,
+      "song": "Es Verdad",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 326.40000000000003,
+      "clip_end": 434.83,
+      "refined_v2_clip_end": 436.32,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 435.36,
+      "first_non_music_at": 434.88,
+      "crowd_onset_at": 436.32,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 452,
+      "song": "\u00bfQu\u00e9 Se Siente Que Me Gustes Tanto?",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 439.68,
+      "clip_end": 504.90999999999997,
+      "refined_v2_clip_end": 507.35999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 505.44,
+      "first_non_music_at": 504.96,
+      "crowd_onset_at": 507.36,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 574,
+      "song": "Ya S\u00e9",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 561.6,
+      "clip_end": 880.75,
+      "refined_v2_clip_end": 881.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 880.8,
+      "first_non_music_at": 880.32,
+      "crowd_onset_at": 881.28,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 39.3609,
+      "end": 40.5954,
+      "duration": 1.23456
+    },
+    {
+      "start": 41.3782,
+      "end": 42.4078,
+      "duration": 1.02956
+    },
+    {
+      "start": 57.2109,
+      "end": 57.9795,
+      "duration": 0.768604
+    },
+    {
+      "start": 231.405,
+      "end": 232.541,
+      "duration": 1.13642
+    },
+    {
+      "start": 247.776,
+      "end": 248.894,
+      "duration": 1.11892
+    },
+    {
+      "start": 263.766,
+      "end": 264.289,
+      "duration": 0.523229
+    },
+    {
+      "start": 264.607,
+      "end": 265.129,
+      "duration": 0.522104
+    },
+    {
+      "start": 274.411,
+      "end": 274.93,
+      "duration": 0.518813
+    },
+    {
+      "start": 276.672,
+      "end": 277.204,
+      "duration": 0.5325
+    },
+    {
+      "start": 278.325,
+      "end": 278.882,
+      "duration": 0.557417
+    },
+    {
+      "start": 318.024,
+      "end": 324.551,
+      "duration": 6.52715
+    },
+    {
+      "start": 325.077,
+      "end": 325.743,
+      "duration": 0.666333
+    },
+    {
+      "start": 434.527,
+      "end": 435.27,
+      "duration": 0.742271
+    },
+    {
+      "start": 519.28,
+      "end": 520.038,
+      "duration": 0.758729
+    },
+    {
+      "start": 521.227,
+      "end": 522.061,
+      "duration": 0.833667
+    },
+    {
+      "start": 541.374,
+      "end": 541.889,
+      "duration": 0.515271
+    },
+    {
+      "start": 545.657,
+      "end": 546.283,
+      "duration": 0.626104
+    },
+    {
+      "start": 558.343,
+      "end": 559.101,
+      "duration": 0.757875
+    },
+    {
+      "start": 560.284,
+      "end": 561.217,
+      "duration": 0.933187
+    },
+    {
+      "start": 585.464,
+      "end": 586.265,
+      "duration": 0.801396
+    },
+    {
+      "start": 854.528,
+      "end": 856.88,
+      "duration": 2.35231
+    },
+    {
+      "start": 859.969,
+      "end": 860.855,
+      "duration": 0.885625
+    },
+    {
+      "start": 906.902,
+      "end": 908.366,
+      "duration": 1.46331
+    }
+  ],
+  "confidence": {
+    "scores": [
+      45,
+      75,
+      61,
+      68,
+      68
+    ],
+    "avg": 63.4,
+    "min": 45
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

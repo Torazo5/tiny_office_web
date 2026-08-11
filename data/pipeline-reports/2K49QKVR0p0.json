@@ -2,7 +2,7 @@
   "video_id": "2K49QKVR0p0",
   "title": "Superorganism: NPR Music Tiny Desk Concert",
   "duration": 609,
-  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/2K49QKVR0p0.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/2K49QKVR0p0.mp3",
   "description_songs": [
     "The Prawn Song",
     "Night Time",
@@ -114,9 +114,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 14.879999999999999,
-      "clip_end": 177.56,
+      "clip_end": 178.56,
+      "refined_v2_clip_end": 178.56,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [
         {
           "start": 25.44,
@@ -146,9 +150,16 @@
           "anchor_start": 69.6
         }
       ],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 178.56,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
       "suspect": false,
-      "confidence": 51,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 51
     },
     {
       "seconds": 178.56,
@@ -156,13 +167,24 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 191.51999999999998,
-      "clip_end": 407.96,
+      "clip_end": 408.96,
+      "refined_v2_clip_end": 408.96,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 408.96,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
       "suspect": false,
-      "confidence": 51,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 51
     },
     {
       "seconds": 408.96,
@@ -170,9 +192,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 432.48,
-      "clip_end": 589.88,
+      "clip_end": 588.4300000000001,
+      "refined_v2_clip_end": 590.88,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [
         {
           "start": 488.64,
@@ -184,9 +210,16 @@
           "anchor_start": 588.0
         }
       ],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 588.48,
+      "first_non_music_at": 588.0,
+      "crowd_onset_at": 590.88,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 51,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 51
     }
   ],
   "silence_intervals": [
@@ -235,10 +268,16 @@
     "avg": 51.0,
     "min": 51
   },
-  "pipeline": "v2_no_audience_variant",
-  "pipeline_version": "v2_no_audience_variant",
-  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/2K49QKVR0p0.json (edge-guarded comparison)",
-  "audience_enabled": true,
-  "audience_removed": true,
-  "audience_edge_guard_sec": 1.0
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
 }

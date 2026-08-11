@@ -1,0 +1,281 @@
+{
+  "video_id": "3MH37M3wPas",
+  "title": "Fito P\u00e1ez: Tiny Desk Concert",
+  "duration": 1118,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/3MH37M3wPas.mp3",
+  "description_songs": [
+    "A Rodar Mi Vida",
+    "Mariposa Tecknicolor",
+    "Sale el Sol",
+    "Circo Beat",
+    "Tercer Mundo"
+  ],
+  "method": "silence",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 5 description songs (0 candidate(s) checked)",
+    "B_yamnet": "failed \u2014 only 3 usable episode(s) (of 4 valid, 5 total), need 4",
+    "C_silence": "ok \u2014 11 usable gap(s), took top 4 by duration"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 302.4,
+      "end": 312.48,
+      "duration": 10.080000000000041,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 559.68,
+      "end": 572.64,
+      "duration": 12.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 740.16,
+      "end": 750.72,
+      "duration": 10.56000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1065.12,
+      "end": 1066.56,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1068.48,
+      "end": 1109.76,
+      "duration": 41.27999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.502083,
+      "song": "A Rodar Mi Vida",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.502083,
+      "clip_end": 301.39,
+      "refined_v2_clip_end": 302.4,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 301.44,
+      "first_non_music_at": 300.96,
+      "crowd_onset_at": 302.4,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 312.143,
+      "song": "Mariposa Tecknicolor",
+      "corroboration": 0,
+      "silence_match": 312.143,
+      "clip_start": 312.48,
+      "clip_end": 559.68,
+      "refined_v2_clip_end": 559.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 559.68,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 750.51,
+      "song": "Sale el Sol",
+      "corroboration": 0,
+      "silence_match": 750.51,
+      "clip_start": 750.72,
+      "clip_end": 792.358,
+      "refined_v2_clip_end": 792.358,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 792.358,
+      "song": "Circo Beat",
+      "corroboration": 0,
+      "silence_match": 792.358,
+      "clip_start": 750.72,
+      "clip_end": 1066.03,
+      "refined_v2_clip_end": 1068.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1066.08,
+      "first_non_music_at": 1065.6,
+      "crowd_onset_at": 1068.48,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 1090.92,
+      "song": "Tercer Mundo",
+      "corroboration": 0,
+      "silence_match": 1090.92,
+      "clip_start": 1109.76,
+      "clip_end": 1118,
+      "refined_v2_clip_end": 1118,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": true,
+      "confidence": 0
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.502083,
+      "duration": 0.502083
+    },
+    {
+      "start": 312.143,
+      "end": 315.324,
+      "duration": 3.18083
+    },
+    {
+      "start": 568.992,
+      "end": 569.626,
+      "duration": 0.6335
+    },
+    {
+      "start": 570.522,
+      "end": 571.024,
+      "duration": 0.501708
+    },
+    {
+      "start": 571.62,
+      "end": 572.463,
+      "duration": 0.843354
+    },
+    {
+      "start": 750.51,
+      "end": 754.095,
+      "duration": 3.58506
+    },
+    {
+      "start": 792.358,
+      "end": 795.164,
+      "duration": 2.80544
+    },
+    {
+      "start": 1000.38,
+      "end": 1001.28,
+      "duration": 0.902667
+    },
+    {
+      "start": 1066.36,
+      "end": 1066.94,
+      "duration": 0.583521
+    },
+    {
+      "start": 1085.45,
+      "end": 1086.29,
+      "duration": 0.836437
+    },
+    {
+      "start": 1090.92,
+      "end": 1091.86,
+      "duration": 0.947833
+    },
+    {
+      "start": 1093.21,
+      "end": 1093.84,
+      "duration": 0.631604
+    },
+    {
+      "start": 1108.91,
+      "end": 1117.66,
+      "duration": 8.74402
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      51,
+      43,
+      51,
+      0
+    ],
+    "avg": 37.6,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

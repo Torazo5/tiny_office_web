@@ -1,0 +1,437 @@
+{
+  "video_id": "s9xYNeiSofM",
+  "title": "Eladio Carrio\u0301n: Tiny Desk Concert",
+  "duration": 1242,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/s9xYNeiSofM.mp3",
+  "description_songs": [
+    "Gladiador",
+    "Air France",
+    "Tata",
+    "Hey Lil Mama",
+    "Mbappe",
+    "Me Muero\u201d (with Lia Kali)",
+    "Luchas Mentales",
+    "Mama's Boy"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 678 likes, matched all 8 description song(s), retained 8 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 344.15999999999997,
+      "end": 352.32,
+      "duration": 8.160000000000025,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 354.71999999999997,
+      "end": 361.92,
+      "duration": 7.2000000000000455,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 362.4,
+      "end": 367.68,
+      "duration": 5.28000000000003,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 667.68,
+      "end": 685.4399999999999,
+      "duration": 17.75999999999999,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 688.8,
+      "end": 696.96,
+      "duration": 8.160000000000082,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 875.52,
+      "end": 877.92,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 878.4,
+      "end": 888.48,
+      "duration": 10.080000000000041,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 984.48,
+      "end": 990.24,
+      "duration": 5.759999999999991,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 992.64,
+      "end": 1005.12,
+      "duration": 12.480000000000018,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1026.24,
+      "end": 1027.68,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1180.8,
+      "end": 1229.28,
+      "duration": 48.48000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 18,
+      "song": "Gladiador",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 18,
+      "clip_end": 111,
+      "refined_v2_clip_end": 111,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 111,
+      "song": "Air France",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 111,
+      "clip_end": 288,
+      "refined_v2_clip_end": 288,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 288,
+      "song": "Tata",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 288,
+      "clip_end": 342.19,
+      "refined_v2_clip_end": 344.15999999999997,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 342.24,
+      "first_non_music_at": 341.76,
+      "crowd_onset_at": 344.16,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 383,
+      "song": "Hey Lil Mama",
+      "corroboration": 0,
+      "silence_match": 384.934,
+      "clip_start": 367.68,
+      "clip_end": 510,
+      "refined_v2_clip_end": 510,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 510,
+      "song": "Mbappe",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 510,
+      "clip_end": 667.15,
+      "refined_v2_clip_end": 667.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 667.2,
+      "first_non_music_at": 666.72,
+      "crowd_onset_at": 667.68,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 713,
+      "song": "Me Muero\u201d (with Lia Kali)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 696.96,
+      "clip_end": 875.95,
+      "refined_v2_clip_end": 878.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 876.0,
+      "first_non_music_at": 875.52,
+      "crowd_onset_at": 878.4,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 904,
+      "song": "Luchas Mentales",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 888.48,
+      "clip_end": 984.48,
+      "refined_v2_clip_end": 984.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 984.48,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 1024,
+      "song": "Mama's Boy",
+      "corroboration": 0,
+      "silence_match": 1021.88,
+      "clip_start": 1027.68,
+      "clip_end": 1180.8,
+      "refined_v2_clip_end": 1180.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1180.8,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 1.03281,
+      "duration": 1.03281
+    },
+    {
+      "start": 384.934,
+      "end": 385.732,
+      "duration": 0.798083
+    },
+    {
+      "start": 386.747,
+      "end": 387.529,
+      "duration": 0.782125
+    },
+    {
+      "start": 388.671,
+      "end": 389.328,
+      "duration": 0.656542
+    },
+    {
+      "start": 392.183,
+      "end": 392.755,
+      "duration": 0.571729
+    },
+    {
+      "start": 673.137,
+      "end": 673.897,
+      "duration": 0.759958
+    },
+    {
+      "start": 677.942,
+      "end": 678.652,
+      "duration": 0.709375
+    },
+    {
+      "start": 694.33,
+      "end": 694.835,
+      "duration": 0.505292
+    },
+    {
+      "start": 695.474,
+      "end": 696.058,
+      "duration": 0.583937
+    },
+    {
+      "start": 696.179,
+      "end": 697.102,
+      "duration": 0.922812
+    },
+    {
+      "start": 897.643,
+      "end": 898.327,
+      "duration": 0.684375
+    },
+    {
+      "start": 985.244,
+      "end": 985.897,
+      "duration": 0.652771
+    },
+    {
+      "start": 989.421,
+      "end": 989.944,
+      "duration": 0.523292
+    },
+    {
+      "start": 999.618,
+      "end": 1000.87,
+      "duration": 1.25154
+    },
+    {
+      "start": 1011.28,
+      "end": 1012.08,
+      "duration": 0.796771
+    },
+    {
+      "start": 1015.76,
+      "end": 1016.3,
+      "duration": 0.541229
+    },
+    {
+      "start": 1021.88,
+      "end": 1022.79,
+      "duration": 0.910937
+    },
+    {
+      "start": 1191.03,
+      "end": 1191.62,
+      "duration": 0.589083
+    },
+    {
+      "start": 1203.09,
+      "end": 1204.04,
+      "duration": 0.9545
+    },
+    {
+      "start": 1230.14,
+      "end": 1241.91,
+      "duration": 11.7695
+    }
+  ],
+  "confidence": {
+    "scores": [
+      45,
+      45,
+      53,
+      68,
+      53,
+      61,
+      61,
+      76
+    ],
+    "avg": 57.8,
+    "min": 45
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

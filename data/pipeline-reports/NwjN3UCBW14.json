@@ -1,0 +1,379 @@
+{
+  "video_id": "NwjN3UCBW14",
+  "title": "D.R.A.M.: NPR Music Tiny Desk Concert",
+  "duration": 1245,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/NwjN3UCBW14.mp3",
+  "description_songs": [
+    "Cash Machine",
+    "Cute",
+    "Sweet VA Breeze",
+    "Special",
+    "Broccoli"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1000 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 203.51999999999998,
+      "end": 252.95999999999998,
+      "duration": 49.44,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 408.96,
+      "end": 452.64,
+      "duration": 43.68000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 743.52,
+      "end": 744.48,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 749.28,
+      "end": 751.2,
+      "duration": 1.9200000000000728,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 753.12,
+      "end": 754.56,
+      "duration": 1.4399999999999409,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 912.9599999999999,
+      "end": 963.84,
+      "duration": 50.88000000000011,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1035.36,
+      "end": 1037.28,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1100.1599999999999,
+      "end": 1101.6,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1212.96,
+      "end": 1214.3999999999999,
+      "duration": 1.4399999999998272,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1214.3999999999999,
+      "end": 1242.72,
+      "duration": 28.320000000000164,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 17,
+      "song": "Cash Machine",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 17,
+      "clip_end": 203.46999999999997,
+      "refined_v2_clip_end": 203.51999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 203.52,
+      "first_non_music_at": 203.04,
+      "crowd_onset_at": 203.52,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 257,
+      "song": "Cute",
+      "corroboration": 0,
+      "silence_match": 252.812,
+      "clip_start": 252.95999999999998,
+      "clip_end": 409.91999999999996,
+      "refined_v2_clip_end": 408.96,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 408.96,
+      "fade_out_end": 409.92,
+      "detected_music_release_at": 409.92,
+      "first_non_music_at": null,
+      "crowd_onset_at": 408.96,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 456,
+      "song": "Sweet VA Breeze",
+      "corroboration": 0,
+      "silence_match": 452.42,
+      "clip_start": 452.64,
+      "clip_end": 743.52,
+      "refined_v2_clip_end": 743.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": true,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 743.52,
+      "end_unresolved_reason": "music/crowd overlap did not release within 4.0s",
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 797,
+      "song": "Special",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 754.56,
+      "clip_end": 913.92,
+      "refined_v2_clip_end": 912.9599999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 912.96,
+      "fade_out_end": 913.92,
+      "detected_music_release_at": 913.92,
+      "first_non_music_at": null,
+      "crowd_onset_at": 912.96,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 964,
+      "song": "Broccoli",
+      "corroboration": 0,
+      "silence_match": 964.012,
+      "clip_start": 963.84,
+      "clip_end": 1212.91,
+      "refined_v2_clip_end": 1214.3999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1212.96,
+      "first_non_music_at": 1212.48,
+      "crowd_onset_at": 1214.4,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.981042,
+      "duration": 0.981042
+    },
+    {
+      "start": 217.259,
+      "end": 218.394,
+      "duration": 1.13467
+    },
+    {
+      "start": 233.064,
+      "end": 233.566,
+      "duration": 0.501354
+    },
+    {
+      "start": 244.049,
+      "end": 244.789,
+      "duration": 0.740542
+    },
+    {
+      "start": 252.812,
+      "end": 253.952,
+      "duration": 1.14079
+    },
+    {
+      "start": 408.353,
+      "end": 409.117,
+      "duration": 0.763687
+    },
+    {
+      "start": 421.037,
+      "end": 421.709,
+      "duration": 0.671812
+    },
+    {
+      "start": 435.616,
+      "end": 436.228,
+      "duration": 0.611687
+    },
+    {
+      "start": 437.992,
+      "end": 438.827,
+      "duration": 0.835229
+    },
+    {
+      "start": 444.743,
+      "end": 445.315,
+      "duration": 0.572042
+    },
+    {
+      "start": 446.013,
+      "end": 446.889,
+      "duration": 0.876104
+    },
+    {
+      "start": 449.018,
+      "end": 449.803,
+      "duration": 0.785229
+    },
+    {
+      "start": 451.202,
+      "end": 452.287,
+      "duration": 1.0855
+    },
+    {
+      "start": 452.42,
+      "end": 455.835,
+      "duration": 3.41487
+    },
+    {
+      "start": 929.357,
+      "end": 929.984,
+      "duration": 0.62725
+    },
+    {
+      "start": 931.68,
+      "end": 932.315,
+      "duration": 0.634667
+    },
+    {
+      "start": 934.646,
+      "end": 935.187,
+      "duration": 0.540458
+    },
+    {
+      "start": 935.564,
+      "end": 936.235,
+      "duration": 0.670979
+    },
+    {
+      "start": 944.791,
+      "end": 945.713,
+      "duration": 0.922521
+    },
+    {
+      "start": 945.713,
+      "end": 946.265,
+      "duration": 0.551521
+    },
+    {
+      "start": 953.233,
+      "end": 953.874,
+      "duration": 0.640667
+    },
+    {
+      "start": 959.573,
+      "end": 960.433,
+      "duration": 0.860479
+    },
+    {
+      "start": 961.412,
+      "end": 961.921,
+      "duration": 0.509625
+    },
+    {
+      "start": 962.206,
+      "end": 963.309,
+      "duration": 1.10337
+    },
+    {
+      "start": 964.012,
+      "end": 964.671,
+      "duration": 0.65875
+    },
+    {
+      "start": 1241.68,
+      "end": 1244.58,
+      "duration": 2.89831
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76,
+      61,
+      76
+    ],
+    "avg": 68.4,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

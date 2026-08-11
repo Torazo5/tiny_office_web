@@ -1,0 +1,460 @@
+{
+  "video_id": "iOdsAE8Mq7I",
+  "title": "Natalie Merchant: NPR Music Tiny Desk Concert",
+  "duration": 1676,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/iOdsAE8Mq7I.mp3",
+  "description_songs": [
+    "Motherland",
+    "Texas",
+    "Cowboy Romance",
+    "Weeping Pilgrim"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 6 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 288.0,
+      "end": 348.96,
+      "duration": 60.95999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 666.72,
+      "end": 678.72,
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 681.12,
+      "end": 736.3199999999999,
+      "duration": 55.19999999999993,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1114.56,
+      "end": 1274.8799999999999,
+      "duration": 160.31999999999994,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1280.6399999999999,
+      "end": 1282.08,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1289.76,
+      "end": 1295.04,
+      "duration": 5.279999999999973,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1319.04,
+      "end": 1321.92,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1323.36,
+      "end": 1325.28,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1370.3999999999999,
+      "end": 1389.12,
+      "duration": 18.720000000000027,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1606.08,
+      "end": 1607.52,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1608.0,
+      "end": 1675.2,
+      "duration": 67.20000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Motherland",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 288.0,
+      "refined_v2_clip_end": 288.0,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 288.0,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 288.0,
+      "song": "Texas",
+      "corroboration": 0,
+      "silence_match": 286.355,
+      "clip_start": 348.96,
+      "clip_end": 666.72,
+      "refined_v2_clip_end": 666.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 666.72,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 681.12,
+      "song": "Cowboy Romance",
+      "corroboration": 0,
+      "silence_match": 684.832,
+      "clip_start": 736.3199999999999,
+      "clip_end": 1114.56,
+      "refined_v2_clip_end": 1114.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": true,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1114.56,
+      "end_unresolved_reason": "music/crowd overlap did not release within 4.0s",
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 1114.56,
+      "song": "Weeping Pilgrim",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1114.56,
+      "clip_end": 1676,
+      "refined_v2_clip_end": 1676,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 35
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 286.355,
+      "end": 288.088,
+      "duration": 1.7321
+    },
+    {
+      "start": 302.81,
+      "end": 303.683,
+      "duration": 0.873771
+    },
+    {
+      "start": 308.169,
+      "end": 309.106,
+      "duration": 0.936187
+    },
+    {
+      "start": 314.788,
+      "end": 315.603,
+      "duration": 0.815083
+    },
+    {
+      "start": 321.551,
+      "end": 322.517,
+      "duration": 0.966167
+    },
+    {
+      "start": 325.124,
+      "end": 325.937,
+      "duration": 0.813167
+    },
+    {
+      "start": 330.127,
+      "end": 330.76,
+      "duration": 0.633458
+    },
+    {
+      "start": 331.345,
+      "end": 332.035,
+      "duration": 0.690521
+    },
+    {
+      "start": 341.423,
+      "end": 342.692,
+      "duration": 1.26958
+    },
+    {
+      "start": 347.243,
+      "end": 347.981,
+      "duration": 0.738021
+    },
+    {
+      "start": 348.8,
+      "end": 350.161,
+      "duration": 1.36123
+    },
+    {
+      "start": 684.832,
+      "end": 686.047,
+      "duration": 1.21525
+    },
+    {
+      "start": 688.474,
+      "end": 688.997,
+      "duration": 0.523354
+    },
+    {
+      "start": 690.204,
+      "end": 690.883,
+      "duration": 0.679375
+    },
+    {
+      "start": 696.046,
+      "end": 696.782,
+      "duration": 0.735771
+    },
+    {
+      "start": 698.121,
+      "end": 698.966,
+      "duration": 0.845229
+    },
+    {
+      "start": 706.837,
+      "end": 707.978,
+      "duration": 1.14081
+    },
+    {
+      "start": 717.125,
+      "end": 717.686,
+      "duration": 0.561521
+    },
+    {
+      "start": 718.258,
+      "end": 719.385,
+      "duration": 1.12762
+    },
+    {
+      "start": 721.441,
+      "end": 722.178,
+      "duration": 0.737375
+    },
+    {
+      "start": 726.584,
+      "end": 727.282,
+      "duration": 0.697208
+    },
+    {
+      "start": 732.42,
+      "end": 734.644,
+      "duration": 2.22394
+    },
+    {
+      "start": 735.621,
+      "end": 736.217,
+      "duration": 0.596125
+    },
+    {
+      "start": 775.333,
+      "end": 776.06,
+      "duration": 0.727667
+    },
+    {
+      "start": 979.896,
+      "end": 980.68,
+      "duration": 0.783958
+    },
+    {
+      "start": 1100.97,
+      "end": 1102.18,
+      "duration": 1.2105
+    },
+    {
+      "start": 1164.0,
+      "end": 1164.8,
+      "duration": 0.801667
+    },
+    {
+      "start": 1165.66,
+      "end": 1167.0,
+      "duration": 1.33379
+    },
+    {
+      "start": 1167.64,
+      "end": 1168.98,
+      "duration": 1.34052
+    },
+    {
+      "start": 1173.33,
+      "end": 1173.85,
+      "duration": 0.516229
+    },
+    {
+      "start": 1185.0,
+      "end": 1185.84,
+      "duration": 0.834833
+    },
+    {
+      "start": 1187.48,
+      "end": 1188.41,
+      "duration": 0.925979
+    },
+    {
+      "start": 1200.08,
+      "end": 1200.6,
+      "duration": 0.514021
+    },
+    {
+      "start": 1208.41,
+      "end": 1208.98,
+      "duration": 0.56725
+    },
+    {
+      "start": 1216.53,
+      "end": 1217.27,
+      "duration": 0.747437
+    },
+    {
+      "start": 1230.18,
+      "end": 1230.72,
+      "duration": 0.535104
+    },
+    {
+      "start": 1233.51,
+      "end": 1235.54,
+      "duration": 2.02821
+    },
+    {
+      "start": 1238.27,
+      "end": 1238.8,
+      "duration": 0.527521
+    },
+    {
+      "start": 1248.71,
+      "end": 1249.25,
+      "duration": 0.544312
+    },
+    {
+      "start": 1250.43,
+      "end": 1251.34,
+      "duration": 0.904625
+    },
+    {
+      "start": 1253.11,
+      "end": 1253.74,
+      "duration": 0.638917
+    },
+    {
+      "start": 1256.63,
+      "end": 1257.47,
+      "duration": 0.843854
+    },
+    {
+      "start": 1263.21,
+      "end": 1263.76,
+      "duration": 0.553896
+    },
+    {
+      "start": 1329.52,
+      "end": 1330.08,
+      "duration": 0.569021
+    },
+    {
+      "start": 1600.85,
+      "end": 1601.52,
+      "duration": 0.667813
+    },
+    {
+      "start": 1674.7,
+      "end": 1676.14,
+      "duration": 1.44275
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      66,
+      66,
+      35
+    ],
+    "avg": 52.5,
+    "min": 35
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

@@ -1,0 +1,332 @@
+{
+  "video_id": "OO6QUgGMp2A",
+  "title": "Sierra Ferrell: Tiny Desk Concert",
+  "duration": 1082,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/OO6QUgGMp2A.mp3",
+  "description_songs": [
+    "I Could Drive You Crazy",
+    "Dollar Bill Bar",
+    "In Dreams",
+    "American Dreaming"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 3 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 220.32,
+      "end": 230.87999999999997,
+      "duration": 10.559999999999974,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 237.12,
+      "end": 238.55999999999997,
+      "duration": 1.4399999999999693,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 239.51999999999998,
+      "end": 241.92,
+      "duration": 2.4000000000000057,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 242.39999999999998,
+      "end": 244.79999999999998,
+      "duration": 2.4000000000000057,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 500.15999999999997,
+      "end": 532.8,
+      "duration": 32.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 744.48,
+      "end": 784.3199999999999,
+      "duration": 39.83999999999992,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1042.08,
+      "end": 1072.8,
+      "duration": 30.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "I Could Drive You Crazy",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 220.26999999999998,
+      "refined_v2_clip_end": 220.32,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 220.32,
+      "first_non_music_at": 219.84,
+      "crowd_onset_at": 220.32,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 220.32,
+      "song": "Dollar Bill Bar",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 238.55999999999997,
+      "clip_end": 499.63,
+      "refined_v2_clip_end": 500.15999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 499.68,
+      "first_non_music_at": 499.2,
+      "crowd_onset_at": 500.16,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 500.15999999999997,
+      "song": "In Dreams",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 532.8,
+      "clip_end": 744.48,
+      "refined_v2_clip_end": 744.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 744.48,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 744.48,
+      "song": "American Dreaming",
+      "corroboration": 0,
+      "silence_match": 743.022,
+      "clip_start": 784.3199999999999,
+      "clip_end": 1042.08,
+      "refined_v2_clip_end": 1042.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1042.08,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 66
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 231.713,
+      "end": 234.819,
+      "duration": 3.10575
+    },
+    {
+      "start": 235.077,
+      "end": 235.71,
+      "duration": 0.632667
+    },
+    {
+      "start": 236.005,
+      "end": 237.094,
+      "duration": 1.08956
+    },
+    {
+      "start": 238.322,
+      "end": 240.276,
+      "duration": 1.95433
+    },
+    {
+      "start": 241.853,
+      "end": 242.748,
+      "duration": 0.894333
+    },
+    {
+      "start": 244.434,
+      "end": 245.592,
+      "duration": 1.15781
+    },
+    {
+      "start": 510.139,
+      "end": 510.788,
+      "duration": 0.648667
+    },
+    {
+      "start": 512.875,
+      "end": 513.601,
+      "duration": 0.726208
+    },
+    {
+      "start": 518.198,
+      "end": 518.967,
+      "duration": 0.768687
+    },
+    {
+      "start": 520.685,
+      "end": 521.658,
+      "duration": 0.972396
+    },
+    {
+      "start": 523.991,
+      "end": 524.748,
+      "duration": 0.757021
+    },
+    {
+      "start": 526.316,
+      "end": 526.856,
+      "duration": 0.539792
+    },
+    {
+      "start": 530.064,
+      "end": 531.151,
+      "duration": 1.08698
+    },
+    {
+      "start": 695.169,
+      "end": 695.957,
+      "duration": 0.788521
+    },
+    {
+      "start": 736.543,
+      "end": 737.092,
+      "duration": 0.549083
+    },
+    {
+      "start": 743.022,
+      "end": 743.522,
+      "duration": 0.500563
+    },
+    {
+      "start": 755.546,
+      "end": 757.949,
+      "duration": 2.4034
+    },
+    {
+      "start": 764.01,
+      "end": 764.529,
+      "duration": 0.519354
+    },
+    {
+      "start": 767.111,
+      "end": 767.643,
+      "duration": 0.531333
+    },
+    {
+      "start": 770.198,
+      "end": 770.736,
+      "duration": 0.538292
+    },
+    {
+      "start": 776.991,
+      "end": 777.786,
+      "duration": 0.794833
+    },
+    {
+      "start": 781.214,
+      "end": 781.988,
+      "duration": 0.774333
+    },
+    {
+      "start": 784.207,
+      "end": 786.274,
+      "duration": 2.06712
+    },
+    {
+      "start": 793.066,
+      "end": 793.567,
+      "duration": 0.500625
+    },
+    {
+      "start": 1037.53,
+      "end": 1038.41,
+      "duration": 0.874667
+    },
+    {
+      "start": 1073.24,
+      "end": 1082.17,
+      "duration": 8.92706
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      51,
+      51,
+      66
+    ],
+    "avg": 52.8,
+    "min": 43
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

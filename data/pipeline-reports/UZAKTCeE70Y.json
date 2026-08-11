@@ -1,0 +1,458 @@
+{
+  "video_id": "UZAKTCeE70Y",
+  "title": "Wilco: NPR Music Tiny Desk Concert",
+  "duration": 1126,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/UZAKTCeE70Y.mp3",
+  "description_songs": [
+    "Dawned On Me",
+    "Whole Love",
+    "Born Alone",
+    "War On War"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 214 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 1.92,
+      "end": 3.84,
+      "duration": 1.92,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 4.8,
+      "end": 9.120000000000001,
+      "duration": 4.320000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 225.6,
+      "end": 242.39999999999998,
+      "duration": 16.799999999999983,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 472.79999999999995,
+      "end": 483.36,
+      "duration": 10.56000000000006,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 503.03999999999996,
+      "end": 504.48,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 505.44,
+      "end": 507.84,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 512.16,
+      "end": 516.48,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 516.96,
+      "end": 519.84,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 523.1999999999999,
+      "end": 526.08,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 529.4399999999999,
+      "end": 532.32,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 532.8,
+      "end": 534.72,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 546.72,
+      "end": 548.16,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 550.0799999999999,
+      "end": 551.52,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 790.0799999999999,
+      "end": 798.72,
+      "duration": 8.6400000000001,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 802.0799999999999,
+      "end": 804.0,
+      "duration": 1.9200000000000728,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 821.28,
+      "end": 824.64,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 826.56,
+      "end": 868.3199999999999,
+      "duration": 41.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1065.12,
+      "end": 1122.24,
+      "duration": 57.12000000000012,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 10,
+      "song": "Dawned On Me",
+      "corroboration": 0,
+      "silence_match": 8.96544,
+      "clip_start": 9.120000000000001,
+      "clip_end": 224.58999999999997,
+      "refined_v2_clip_end": 225.6,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 224.64,
+      "first_non_music_at": 224.16,
+      "crowd_onset_at": 225.6,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 257,
+      "song": "Whole Love",
+      "corroboration": 1,
+      "silence_match": 257.998,
+      "clip_start": 242.39999999999998,
+      "clip_end": 472.27,
+      "refined_v2_clip_end": 472.79999999999995,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 472.8,
+      "first_non_music_at": 472.32,
+      "crowd_onset_at": 472.8,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 550,
+      "song": "Born Alone",
+      "corroboration": 1,
+      "silence_match": 549.923,
+      "clip_start": 551.52,
+      "clip_end": 789.07,
+      "refined_v2_clip_end": 790.0799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 789.12,
+      "first_non_music_at": 788.64,
+      "crowd_onset_at": 790.08,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 867,
+      "song": "War On War",
+      "corroboration": 0,
+      "silence_match": 867.063,
+      "clip_start": 868.3199999999999,
+      "clip_end": 1063.15,
+      "refined_v2_clip_end": 1065.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1063.68,
+      "first_non_music_at": 1063.2,
+      "crowd_onset_at": 1065.12,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 2.58831,
+      "duration": 2.58831
+    },
+    {
+      "start": 3.61015,
+      "end": 4.41365,
+      "duration": 0.8035
+    },
+    {
+      "start": 6.07483,
+      "end": 8.74,
+      "duration": 2.66517
+    },
+    {
+      "start": 8.96544,
+      "end": 11.293,
+      "duration": 2.32758
+    },
+    {
+      "start": 11.5717,
+      "end": 12.3945,
+      "duration": 0.82275
+    },
+    {
+      "start": 240.74,
+      "end": 241.296,
+      "duration": 0.555896
+    },
+    {
+      "start": 246.698,
+      "end": 248.0,
+      "duration": 1.30233
+    },
+    {
+      "start": 248.045,
+      "end": 248.638,
+      "duration": 0.592917
+    },
+    {
+      "start": 257.998,
+      "end": 258.61,
+      "duration": 0.612125
+    },
+    {
+      "start": 470.818,
+      "end": 472.65,
+      "duration": 1.83227
+    },
+    {
+      "start": 485.606,
+      "end": 486.151,
+      "duration": 0.544646
+    },
+    {
+      "start": 502.204,
+      "end": 503.597,
+      "duration": 1.39325
+    },
+    {
+      "start": 506.804,
+      "end": 507.378,
+      "duration": 0.574292
+    },
+    {
+      "start": 511.465,
+      "end": 512.954,
+      "duration": 1.4889
+    },
+    {
+      "start": 525.464,
+      "end": 526.481,
+      "duration": 1.01717
+    },
+    {
+      "start": 534.615,
+      "end": 535.237,
+      "duration": 0.622104
+    },
+    {
+      "start": 544.983,
+      "end": 545.759,
+      "duration": 0.776125
+    },
+    {
+      "start": 546.415,
+      "end": 547.964,
+      "duration": 1.54977
+    },
+    {
+      "start": 548.121,
+      "end": 549.92,
+      "duration": 1.79912
+    },
+    {
+      "start": 549.923,
+      "end": 550.871,
+      "duration": 0.947708
+    },
+    {
+      "start": 550.966,
+      "end": 551.89,
+      "duration": 0.924583
+    },
+    {
+      "start": 817.739,
+      "end": 818.453,
+      "duration": 0.71425
+    },
+    {
+      "start": 819.311,
+      "end": 820.874,
+      "duration": 1.56254
+    },
+    {
+      "start": 821.465,
+      "end": 822.234,
+      "duration": 0.768646
+    },
+    {
+      "start": 822.935,
+      "end": 823.502,
+      "duration": 0.566937
+    },
+    {
+      "start": 839.911,
+      "end": 840.447,
+      "duration": 0.53525
+    },
+    {
+      "start": 843.64,
+      "end": 844.825,
+      "duration": 1.18477
+    },
+    {
+      "start": 847.796,
+      "end": 848.937,
+      "duration": 1.14106
+    },
+    {
+      "start": 861.356,
+      "end": 862.018,
+      "duration": 0.662729
+    },
+    {
+      "start": 867.063,
+      "end": 867.578,
+      "duration": 0.515354
+    },
+    {
+      "start": 867.845,
+      "end": 869.139,
+      "duration": 1.2935
+    },
+    {
+      "start": 1063.11,
+      "end": 1063.94,
+      "duration": 0.834729
+    },
+    {
+      "start": 1114.07,
+      "end": 1114.89,
+      "duration": 0.814167
+    },
+    {
+      "start": 1115.61,
+      "end": 1116.2,
+      "duration": 0.592542
+    },
+    {
+      "start": 1118.76,
+      "end": 1119.28,
+      "duration": 0.518625
+    },
+    {
+      "start": 1121.99,
+      "end": 1126.13,
+      "duration": 4.14665
+    }
+  ],
+  "confidence": {
+    "scores": [
+      76,
+      83,
+      83,
+      76
+    ],
+    "avg": 79.5,
+    "min": 76
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

@@ -1,0 +1,124 @@
+{
+  "video_id": "-hLJNZSIwP8",
+  "title": "Phoebe Bridgers: NPR Music Tiny Desk Concert",
+  "duration": 750,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/-hLJNZSIwP8.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 199.2,
+      "end": 205.43999999999997,
+      "duration": 6.239999999999981,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 223.2,
+      "end": 227.04,
+      "duration": 3.8400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 228.0,
+      "end": 234.23999999999998,
+      "duration": 6.239999999999981,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 520.3199999999999,
+      "end": 550.56,
+      "duration": 30.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 732.9599999999999,
+      "end": 749.28,
+      "duration": 16.32000000000005,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 197.565,
+      "end": 199.286,
+      "duration": 1.72146
+    },
+    {
+      "start": 226.841,
+      "end": 227.704,
+      "duration": 0.862687
+    },
+    {
+      "start": 228.154,
+      "end": 228.882,
+      "duration": 0.728313
+    },
+    {
+      "start": 230.001,
+      "end": 230.633,
+      "duration": 0.632667
+    },
+    {
+      "start": 234.509,
+      "end": 236.864,
+      "duration": 2.35415
+    },
+    {
+      "start": 531.24,
+      "end": 532.289,
+      "duration": 1.04937
+    },
+    {
+      "start": 547.454,
+      "end": 548.123,
+      "duration": 0.669146
+    },
+    {
+      "start": 549.803,
+      "end": 550.405,
+      "duration": 0.601479
+    },
+    {
+      "start": 729.35,
+      "end": 732.63,
+      "duration": 3.2801
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

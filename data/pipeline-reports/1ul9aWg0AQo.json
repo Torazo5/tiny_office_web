@@ -2,7 +2,7 @@
   "video_id": "1ul9aWg0AQo",
   "title": "Faye Webster: Tiny Desk Concert",
   "duration": 1187,
-  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/1ul9aWg0AQo.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/1ul9aWg0AQo.mp3",
   "description_songs": [
     "In A Good Way",
     "But Not Kiss",
@@ -109,13 +109,24 @@
       "corroboration": 0,
       "silence_match": 0.0,
       "clip_start": 0.0,
-      "clip_end": 239.0,
+      "clip_end": 239.46999999999997,
+      "refined_v2_clip_end": 240.0,
       "start_refined": false,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 239.52,
+      "first_non_music_at": 239.04,
+      "crowd_onset_at": 240.0,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 58,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 58
     },
     {
       "seconds": 240.0,
@@ -123,13 +134,24 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 247.2,
-      "clip_end": 489.56,
+      "clip_end": 489.54999999999995,
+      "refined_v2_clip_end": 490.56,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 490.08,
+      "first_non_music_at": 489.6,
+      "crowd_onset_at": 490.56,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 51,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 51
     },
     {
       "seconds": 490.56,
@@ -137,13 +159,24 @@
       "corroboration": 0,
       "silence_match": 489.014,
       "clip_start": 497.28,
-      "clip_end": 709.4,
+      "clip_end": 709.87,
+      "refined_v2_clip_end": 710.4,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 710.4,
+      "first_non_music_at": 709.92,
+      "crowd_onset_at": 710.4,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 66,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 66
     },
     {
       "seconds": 710.4,
@@ -151,13 +184,24 @@
       "corroboration": 0,
       "silence_match": 708.793,
       "clip_start": 720.0,
-      "clip_end": 733.88,
+      "clip_end": 734.88,
+      "refined_v2_clip_end": 734.88,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 734.88,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
       "suspect": true,
-      "confidence": 16,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 16
     },
     {
       "seconds": 734.88,
@@ -165,9 +209,13 @@
       "corroboration": 0,
       "silence_match": null,
       "clip_start": 754.56,
-      "clip_end": 1145.24,
+      "clip_end": 1144.75,
+      "refined_v2_clip_end": 1146.24,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [
         {
           "start": 758.4,
@@ -197,9 +245,16 @@
           "anchor_start": 1102.56
         }
       ],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1145.28,
+      "first_non_music_at": 1144.8,
+      "crowd_onset_at": 1146.24,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 51,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 51
     }
   ],
   "silence_intervals": [
@@ -290,10 +345,16 @@
     "avg": 48.4,
     "min": 16
   },
-  "pipeline": "v2_no_audience_variant",
-  "pipeline_version": "v2_no_audience_variant",
-  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/1ul9aWg0AQo.json (edge-guarded comparison)",
-  "audience_enabled": true,
-  "audience_removed": true,
-  "audience_edge_guard_sec": 1.0
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
 }

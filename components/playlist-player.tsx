@@ -9,6 +9,12 @@ import { DEFAULT_PLAYBACK_SETTINGS, type PlaybackSettings } from "@/lib/playback
 import type { PlaylistTrack, PlaylistType } from "@/lib/types";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
 import {
+  equalPowerFadeGain,
+  fadeDurationFromCurrentTime,
+  getBuiltInFadeWindow,
+  type FadeWindow,
+} from "@/lib/playback-fade";
+import {
   createYouTubePlayer,
   isYouTubePlayer,
   loadYouTubeIframeApi,
@@ -81,10 +87,10 @@ export function PlaylistPlayer({
   const volumeRef = useRef(100);
   const loadTrackRef = useRef<(index: number, preservePlaybackOrder?: boolean) => void>(() => undefined);
   const advanceToNextRef = useRef<() => void>(() => undefined);
-  const fadeOutAndAdvanceRef = useRef<() => void>(() => undefined);
-  const fadeOutAndStopRef = useRef<(end: number) => void>(() => undefined);
+  const fadeOutAndAdvanceRef = useRef<(fadeWindow?: FadeWindow | null, fallbackFadeSeconds?: number) => void>(() => undefined);
+  const fadeOutAndStopRef = useRef<(end: number, fadeWindow?: FadeWindow | null, fallbackFadeSeconds?: number) => void>(() => undefined);
   const beginGapBeforeNextRef = useRef<() => void>(() => undefined);
-  const transitionWithinVideoRef = useRef<(nextSongStart: number) => void>(() => undefined);
+  const transitionWithinVideoRef = useRef<(nextSongStart: number, fadeWindow?: FadeWindow | null, fallbackFadeSeconds?: number) => void>(() => undefined);
   const onTrackPlayRef = useRef(onTrackPlay);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -155,9 +161,11 @@ export function PlaylistPlayer({
     setVolume(normalizedVolume);
   }
 
-  function fadeOutAndAdvance() {
+  function fadeOutAndAdvance(fadeWindow: FadeWindow | null = null, fallbackFadeSeconds = playbackSettingsRef.current.fadeOutSeconds) {
     const player = getPlayer();
-    const fadeDuration = playbackSettingsRef.current.fadeOutSeconds;
+    const fadeDuration = player
+      ? fadeDurationFromCurrentTime(fadeWindow, player.getCurrentTime(), fallbackFadeSeconds)
+      : fallbackFadeSeconds;
     if (isFadingRef.current) return;
     if (!player || fadeDuration <= 0 || !upcomingTrackExists()) {
       beginGapBeforeNext();
@@ -178,10 +186,13 @@ export function PlaylistPlayer({
       }
 
       const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
-      currentPlayer.setVolume(Math.round(fadeVolumeRef.current * (1 - progress)));
+      currentPlayer.setVolume(Math.round(
+        fadeVolumeRef.current * (fadeWindow ? equalPowerFadeGain(progress) : 1 - progress),
+      ));
       if (progress >= 1) {
         clearFadeTimer();
         isFadingRef.current = false;
+        if (fadeWindow) currentPlayer.seekTo(fadeWindow.end, true);
         beginGapBeforeNext();
       }
     };
@@ -190,9 +201,11 @@ export function PlaylistPlayer({
     fadeTimerRef.current = window.setInterval(tick, FADE_INTERVAL_MS);
   }
 
-  function fadeOutAndStop(end: number) {
+  function fadeOutAndStop(end: number, fadeWindow: FadeWindow | null = null, fallbackFadeSeconds = playbackSettingsRef.current.fadeOutSeconds) {
     const player = getPlayer();
-    const fadeDuration = playbackSettingsRef.current.fadeOutSeconds;
+    const fadeDuration = player
+      ? fadeDurationFromCurrentTime(fadeWindow, player.getCurrentTime(), fallbackFadeSeconds)
+      : fallbackFadeSeconds;
     if (!player || isFadingRef.current) return;
     if (fadeDuration <= 0) {
       player.seekTo(end, true);
@@ -211,7 +224,9 @@ export function PlaylistPlayer({
         return;
       }
       const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
-      currentPlayer.setVolume(Math.round(fadeVolumeRef.current * (1 - progress)));
+      currentPlayer.setVolume(Math.round(
+        fadeVolumeRef.current * (fadeWindow ? equalPowerFadeGain(progress) : 1 - progress),
+      ));
       if (progress >= 1) {
         clearFadeTimer();
         isFadingRef.current = false;
@@ -321,7 +336,7 @@ export function PlaylistPlayer({
     }, playbackSettingsRef.current.gapSeconds * 1000);
   }
 
-  function transitionWithinVideo(nextSongStart: number) {
+  function transitionWithinVideo(nextSongStart: number, fadeWindow: FadeWindow | null = null, fallbackFadeSeconds = playbackSettingsRef.current.fadeOutSeconds) {
     const player = getPlayer();
     if (!player) return;
     const beginGap = () => {
@@ -335,10 +350,15 @@ export function PlaylistPlayer({
         currentPlayer.playVideo();
         previousTimeRef.current = nextSongStart;
         setCurrentTime(nextSongStart);
-        beginFadeIn(currentPlayer);
+        if (fadeWindow || fallbackFadeSeconds > 0) beginFadeIn(currentPlayer);
+        else currentPlayer.setVolume(volumeRef.current);
       }, playbackSettingsRef.current.gapSeconds * 1000);
     };
-    const fadeDuration = playbackSettingsRef.current.fadeOutSeconds;
+    const fadeDuration = fadeDurationFromCurrentTime(
+      fadeWindow,
+      player.getCurrentTime(),
+      fallbackFadeSeconds,
+    );
     if (fadeDuration <= 0 || isFadingRef.current) {
       beginGap();
       return;
@@ -354,10 +374,13 @@ export function PlaylistPlayer({
         return;
       }
       const progress = Math.min(1, (performance.now() - startedAt) / (fadeDuration * 1000));
-      currentPlayer.setVolume(Math.round(fadeVolumeRef.current * (1 - progress)));
+      currentPlayer.setVolume(Math.round(
+        fadeVolumeRef.current * (fadeWindow ? equalPowerFadeGain(progress) : 1 - progress),
+      ));
       if (progress >= 1) {
         clearFadeTimer();
         isFadingRef.current = false;
+        if (fadeWindow) currentPlayer.seekTo(fadeWindow.end, true);
         currentPlayer.setVolume(fadeVolumeRef.current);
         beginGap();
       }
@@ -546,13 +569,20 @@ export function PlaylistPlayer({
 
       if (playlistType === "songs") {
         const effectiveClipEnd = Math.max(track.clipEnd, track.clipStart + 0.5);
-        const fadeDuration = playbackSettingsRef.current.fadeOutSeconds;
-        const endThreshold = Math.max(track.clipStart + 0.5, effectiveClipEnd - (fadeDuration || 0.35));
+        const builtInFadeWindow = getBuiltInFadeWindow(track, playbackSettingsRef.current.builtInFade);
+        const fadeDuration = playbackSettingsRef.current.builtInFade
+          ? 0
+          : playbackSettingsRef.current.fadeOutSeconds;
+        const endThreshold = builtInFadeWindow?.start ?? (
+          playbackSettingsRef.current.builtInFade
+            ? effectiveClipEnd
+            : Math.max(track.clipStart + 0.5, effectiveClipEnd - (fadeDuration || 0.35))
+        );
         if (currentTime >= endThreshold) {
           if (isFadingRef.current) return;
           if (isLoopingRef.current) loadTrackRef.current(currentIndexRef.current, true);
-          else if (!upcomingTrackExists()) fadeOutAndStopRef.current(effectiveClipEnd);
-          else if (fadeDuration > 0) fadeOutAndAdvanceRef.current();
+          else if (!upcomingTrackExists()) fadeOutAndStopRef.current(effectiveClipEnd, builtInFadeWindow, fadeDuration);
+          else if (fadeDuration > 0 || builtInFadeWindow) fadeOutAndAdvanceRef.current(builtInFadeWindow, fadeDuration);
           else beginGapBeforeNextRef.current();
         }
         return;
@@ -567,15 +597,20 @@ export function PlaylistPlayer({
       );
       if (currentClipIndex >= 0) {
         const currentClip = playableClips[currentClipIndex];
-        const transitionAt = Math.max(
-          currentClip.clipStart,
-          currentClip.clipEnd - playbackSettingsRef.current.fadeOutSeconds,
+        const builtInFadeWindow = getBuiltInFadeWindow(currentClip, playbackSettingsRef.current.builtInFade);
+        const fadeDuration = playbackSettingsRef.current.builtInFade
+          ? 0
+          : playbackSettingsRef.current.fadeOutSeconds;
+        const transitionAt = builtInFadeWindow?.start ?? (
+          playbackSettingsRef.current.builtInFade
+            ? currentClip.clipEnd
+            : Math.max(currentClip.clipStart, currentClip.clipEnd - playbackSettingsRef.current.fadeOutSeconds)
         );
         if (currentTime >= transitionAt && !isFadingRef.current) {
           const nextClip = playableClips[currentClipIndex + 1];
-          if (nextClip) transitionWithinVideoRef.current(nextClip.clipStart);
-          else if (upcomingTrackExists()) fadeOutAndAdvanceRef.current();
-          else fadeOutAndStopRef.current(currentClip.clipEnd);
+          if (nextClip) transitionWithinVideoRef.current(nextClip.clipStart, builtInFadeWindow, fadeDuration);
+          else if (upcomingTrackExists()) fadeOutAndAdvanceRef.current(builtInFadeWindow, fadeDuration);
+          else fadeOutAndStopRef.current(currentClip.clipEnd, builtInFadeWindow, fadeDuration);
           return;
         }
       }
@@ -605,7 +640,11 @@ export function PlaylistPlayer({
       }
 
       previousTimeRef.current = action.start;
-      transitionWithinVideoRef.current(action.start);
+      transitionWithinVideoRef.current(
+        action.start,
+        null,
+        playbackSettingsRef.current.builtInFade ? 0 : playbackSettingsRef.current.fadeOutSeconds,
+      );
     }, 250);
 
     return () => window.clearInterval(intervalId);

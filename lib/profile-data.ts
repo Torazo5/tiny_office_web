@@ -26,6 +26,7 @@ type PlaybackSettingsRow = {
   playback_fade_out_seconds: number | string | null;
   playback_fade_in_seconds: number | string | null;
   playback_cut_audience: boolean | null;
+  playback_built_in_fade: boolean | null;
 };
 
 function defaultTag(userId: string) {
@@ -90,7 +91,7 @@ export const getPlaybackDefaults = cache(async (userId: string): Promise<Playbac
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("profiles")
-    .select("playback_gap_seconds, playback_fade_out_seconds, playback_fade_in_seconds, playback_cut_audience")
+    .select("playback_gap_seconds, playback_fade_out_seconds, playback_fade_in_seconds, playback_cut_audience, playback_built_in_fade")
     .eq("user_id", userId)
     .maybeSingle();
   if (error) throw new Error(`Loading playback defaults: ${error.message}`);
@@ -100,6 +101,7 @@ export const getPlaybackDefaults = cache(async (userId: string): Promise<Playbac
     fadeOutSeconds: row.playback_fade_out_seconds === null ? undefined : Number(row.playback_fade_out_seconds),
     fadeInSeconds: row.playback_fade_in_seconds === null ? undefined : Number(row.playback_fade_in_seconds),
     cutAudience: row.playback_cut_audience === null ? undefined : row.playback_cut_audience,
+    builtInFade: row.playback_built_in_fade === null ? undefined : row.playback_built_in_fade,
   } : undefined);
 });
 

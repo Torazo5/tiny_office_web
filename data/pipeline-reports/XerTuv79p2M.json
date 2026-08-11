@@ -1,0 +1,555 @@
+{
+  "video_id": "XerTuv79p2M",
+  "title": "Carlos Vives: Tiny Desk Concert",
+  "duration": 1716,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/XerTuv79p2M.mp3",
+  "description_songs": [
+    "La Cachucha Bacana",
+    "Diosa Coronada",
+    "Ella",
+    "Agua",
+    "La Tierra del Olvido",
+    "Pa' Mayte",
+    "Fruta Fresca"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 408 likes, matched all 7 description song(s), retained 7 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 245.76,
+      "end": 251.04,
+      "duration": 5.280000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 469.91999999999996,
+      "end": 483.84,
+      "duration": 13.920000000000016,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 721.92,
+      "end": 724.8,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 726.24,
+      "end": 860.64,
+      "duration": 134.39999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1150.56,
+      "end": 1164.96,
+      "duration": 14.400000000000091,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1316.1599999999999,
+      "end": 1320.0,
+      "duration": 3.8400000000001455,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1324.32,
+      "end": 1359.84,
+      "duration": 35.51999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1375.2,
+      "end": 1377.12,
+      "duration": 1.9199999999998454,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1378.08,
+      "end": 1380.0,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1380.48,
+      "end": 1382.3999999999999,
+      "duration": 1.9199999999998454,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1690.08,
+      "end": 1704.96,
+      "duration": 14.88000000000011,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 28,
+      "song": "La Cachucha Bacana",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 28,
+      "clip_end": 243.30999999999997,
+      "refined_v2_clip_end": 245.76,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 243.36,
+      "first_non_music_at": 242.88,
+      "crowd_onset_at": 245.76,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 262,
+      "song": "Diosa Coronada",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 251.04,
+      "clip_end": 469.91999999999996,
+      "refined_v2_clip_end": 469.91999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 469.92,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 500,
+      "song": "Ella",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 483.84,
+      "clip_end": 658,
+      "refined_v2_clip_end": 658,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 658,
+      "song": "Agua",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 658,
+      "clip_end": 723.79,
+      "refined_v2_clip_end": 726.24,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 723.84,
+      "first_non_music_at": 723.36,
+      "crowd_onset_at": 726.24,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 872,
+      "song": "La Tierra del Olvido",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 860.64,
+      "clip_end": 1150.51,
+      "refined_v2_clip_end": 1150.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1150.56,
+      "first_non_music_at": 1150.08,
+      "crowd_onset_at": 1150.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 1238,
+      "song": "Pa' Mayte",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1238,
+      "clip_end": 1318.08,
+      "refined_v2_clip_end": 1316.1599999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 1316.16,
+      "fade_out_end": 1318.08,
+      "detected_music_release_at": 1318.08,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1316.16,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 1400,
+      "song": "Fruta Fresca",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1382.3999999999999,
+      "clip_end": 1690.03,
+      "refined_v2_clip_end": 1690.08,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1690.08,
+      "first_non_music_at": 1689.6,
+      "crowd_onset_at": 1690.08,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 250.842,
+      "end": 252.822,
+      "duration": 1.97979
+    },
+    {
+      "start": 475.353,
+      "end": 476.118,
+      "duration": 0.764625
+    },
+    {
+      "start": 734.213,
+      "end": 735.459,
+      "duration": 1.24629
+    },
+    {
+      "start": 743.644,
+      "end": 744.675,
+      "duration": 1.03044
+    },
+    {
+      "start": 746.411,
+      "end": 747.633,
+      "duration": 1.22167
+    },
+    {
+      "start": 748.661,
+      "end": 749.444,
+      "duration": 0.783021
+    },
+    {
+      "start": 749.762,
+      "end": 750.281,
+      "duration": 0.518833
+    },
+    {
+      "start": 750.666,
+      "end": 752.183,
+      "duration": 1.51792
+    },
+    {
+      "start": 752.341,
+      "end": 754.133,
+      "duration": 1.7911
+    },
+    {
+      "start": 754.92,
+      "end": 755.766,
+      "duration": 0.846646
+    },
+    {
+      "start": 756.053,
+      "end": 757.531,
+      "duration": 1.47854
+    },
+    {
+      "start": 759.016,
+      "end": 759.965,
+      "duration": 0.948313
+    },
+    {
+      "start": 759.974,
+      "end": 760.561,
+      "duration": 0.587458
+    },
+    {
+      "start": 761.027,
+      "end": 762.374,
+      "duration": 1.34762
+    },
+    {
+      "start": 762.921,
+      "end": 764.189,
+      "duration": 1.2679
+    },
+    {
+      "start": 764.728,
+      "end": 765.956,
+      "duration": 1.22733
+    },
+    {
+      "start": 766.323,
+      "end": 768.206,
+      "duration": 1.88221
+    },
+    {
+      "start": 768.223,
+      "end": 770.418,
+      "duration": 2.19546
+    },
+    {
+      "start": 770.611,
+      "end": 771.323,
+      "duration": 0.711938
+    },
+    {
+      "start": 771.443,
+      "end": 773.15,
+      "duration": 1.70746
+    },
+    {
+      "start": 773.527,
+      "end": 774.588,
+      "duration": 1.06137
+    },
+    {
+      "start": 775.033,
+      "end": 776.703,
+      "duration": 1.67
+    },
+    {
+      "start": 777.333,
+      "end": 778.716,
+      "duration": 1.38342
+    },
+    {
+      "start": 778.746,
+      "end": 780.929,
+      "duration": 2.18254
+    },
+    {
+      "start": 781.83,
+      "end": 782.36,
+      "duration": 0.529813
+    },
+    {
+      "start": 783.244,
+      "end": 785.362,
+      "duration": 2.11813
+    },
+    {
+      "start": 787.071,
+      "end": 788.194,
+      "duration": 1.12271
+    },
+    {
+      "start": 788.55,
+      "end": 789.166,
+      "duration": 0.615146
+    },
+    {
+      "start": 789.166,
+      "end": 790.407,
+      "duration": 1.24144
+    },
+    {
+      "start": 792.156,
+      "end": 792.95,
+      "duration": 0.794187
+    },
+    {
+      "start": 793.304,
+      "end": 793.915,
+      "duration": 0.611354
+    },
+    {
+      "start": 795.035,
+      "end": 795.847,
+      "duration": 0.81225
+    },
+    {
+      "start": 797.472,
+      "end": 798.226,
+      "duration": 0.754333
+    },
+    {
+      "start": 798.731,
+      "end": 799.582,
+      "duration": 0.851437
+    },
+    {
+      "start": 815.307,
+      "end": 816.503,
+      "duration": 1.19677
+    },
+    {
+      "start": 817.528,
+      "end": 818.51,
+      "duration": 0.982625
+    },
+    {
+      "start": 827.979,
+      "end": 828.607,
+      "duration": 0.627854
+    },
+    {
+      "start": 836.443,
+      "end": 837.172,
+      "duration": 0.729083
+    },
+    {
+      "start": 858.366,
+      "end": 859.555,
+      "duration": 1.18852
+    },
+    {
+      "start": 859.851,
+      "end": 861.372,
+      "duration": 1.5205
+    },
+    {
+      "start": 1341.87,
+      "end": 1342.52,
+      "duration": 0.649792
+    },
+    {
+      "start": 1348.22,
+      "end": 1349.51,
+      "duration": 1.29448
+    },
+    {
+      "start": 1351.01,
+      "end": 1355.6,
+      "duration": 4.59423
+    },
+    {
+      "start": 1359.26,
+      "end": 1360.38,
+      "duration": 1.1169
+    },
+    {
+      "start": 1361.09,
+      "end": 1362.68,
+      "duration": 1.58173
+    },
+    {
+      "start": 1368.1,
+      "end": 1369.03,
+      "duration": 0.930312
+    },
+    {
+      "start": 1701.49,
+      "end": 1702.23,
+      "duration": 0.746792
+    },
+    {
+      "start": 1702.36,
+      "end": 1703.36,
+      "duration": 1.00277
+    },
+    {
+      "start": 1703.36,
+      "end": 1716.09,
+      "duration": 12.7249
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      53,
+      53,
+      61,
+      53,
+      61
+    ],
+    "avg": 56.4,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

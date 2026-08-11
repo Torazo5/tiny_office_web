@@ -1,0 +1,323 @@
+{
+  "video_id": "sNJUzwBNbxo",
+  "title": "Gregory Porter: NPR Music Tiny Desk Concert",
+  "duration": 1045,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/sNJUzwBNbxo.mp3",
+  "description_songs": [
+    "No Love Dying",
+    "Take Me To The Alley",
+    "Don't Be A Fool"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 158 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 0.48,
+      "duration": 0.48,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 247.2,
+      "end": 303.84000000000003,
+      "duration": 56.64000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 704.16,
+      "end": 740.64,
+      "duration": 36.48000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1014.7199999999999,
+      "end": 1039.2,
+      "duration": 24.480000000000132,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 2,
+      "song": "No Love Dying",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.48,
+      "clip_end": 247.2,
+      "refined_v2_clip_end": 247.2,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 247.2,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 305,
+      "song": "Take Me To The Alley",
+      "corroboration": 0,
+      "silence_match": 303.769,
+      "clip_start": 303.84000000000003,
+      "clip_end": 703.63,
+      "refined_v2_clip_end": 704.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 704.16,
+      "first_non_music_at": 703.68,
+      "crowd_onset_at": 704.16,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 742,
+      "song": "Don't Be A Fool",
+      "corroboration": 0,
+      "silence_match": 738.88,
+      "clip_start": 740.64,
+      "clip_end": 1014.7199999999999,
+      "refined_v2_clip_end": 1014.7199999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1014.72,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 68.0343,
+      "end": 68.5688,
+      "duration": 0.534521
+    },
+    {
+      "start": 232.884,
+      "end": 234.125,
+      "duration": 1.24123
+    },
+    {
+      "start": 239.694,
+      "end": 241.193,
+      "duration": 1.49871
+    },
+    {
+      "start": 243.905,
+      "end": 247.169,
+      "duration": 3.26375
+    },
+    {
+      "start": 269.683,
+      "end": 270.21,
+      "duration": 0.526937
+    },
+    {
+      "start": 272.997,
+      "end": 273.667,
+      "duration": 0.669625
+    },
+    {
+      "start": 278.945,
+      "end": 279.966,
+      "duration": 1.02046
+    },
+    {
+      "start": 281.284,
+      "end": 281.89,
+      "duration": 0.605812
+    },
+    {
+      "start": 283.696,
+      "end": 284.457,
+      "duration": 0.760708
+    },
+    {
+      "start": 284.79,
+      "end": 285.791,
+      "duration": 1.00071
+    },
+    {
+      "start": 288.447,
+      "end": 289.068,
+      "duration": 0.620625
+    },
+    {
+      "start": 294.736,
+      "end": 295.636,
+      "duration": 0.900167
+    },
+    {
+      "start": 295.792,
+      "end": 296.516,
+      "duration": 0.723729
+    },
+    {
+      "start": 296.892,
+      "end": 297.759,
+      "duration": 0.866833
+    },
+    {
+      "start": 300.622,
+      "end": 301.221,
+      "duration": 0.598667
+    },
+    {
+      "start": 301.702,
+      "end": 302.35,
+      "duration": 0.648125
+    },
+    {
+      "start": 302.358,
+      "end": 303.089,
+      "duration": 0.730604
+    },
+    {
+      "start": 303.769,
+      "end": 304.912,
+      "duration": 1.14329
+    },
+    {
+      "start": 358.883,
+      "end": 359.873,
+      "duration": 0.989729
+    },
+    {
+      "start": 570.038,
+      "end": 570.693,
+      "duration": 0.654312
+    },
+    {
+      "start": 581.862,
+      "end": 582.597,
+      "duration": 0.734396
+    },
+    {
+      "start": 585.227,
+      "end": 585.798,
+      "duration": 0.5715
+    },
+    {
+      "start": 615.505,
+      "end": 616.362,
+      "duration": 0.856667
+    },
+    {
+      "start": 701.295,
+      "end": 704.314,
+      "duration": 3.01937
+    },
+    {
+      "start": 728.617,
+      "end": 729.544,
+      "duration": 0.927187
+    },
+    {
+      "start": 729.544,
+      "end": 730.065,
+      "duration": 0.521188
+    },
+    {
+      "start": 730.543,
+      "end": 731.957,
+      "duration": 1.41427
+    },
+    {
+      "start": 733.427,
+      "end": 734.937,
+      "duration": 1.50979
+    },
+    {
+      "start": 735.886,
+      "end": 738.062,
+      "duration": 2.17596
+    },
+    {
+      "start": 738.88,
+      "end": 739.745,
+      "duration": 0.864333
+    },
+    {
+      "start": 825.523,
+      "end": 826.041,
+      "duration": 0.517917
+    },
+    {
+      "start": 833.496,
+      "end": 834.205,
+      "duration": 0.709333
+    },
+    {
+      "start": 1013.08,
+      "end": 1014.73,
+      "duration": 1.65492
+    },
+    {
+      "start": 1038.43,
+      "end": 1045.1,
+      "duration": 6.66302
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      76,
+      76
+    ],
+    "avg": 71.0,
+    "min": 61
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

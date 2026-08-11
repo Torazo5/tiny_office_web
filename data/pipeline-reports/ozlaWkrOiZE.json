@@ -1,0 +1,333 @@
+{
+  "video_id": "ozlaWkrOiZE",
+  "title": "Chocolate Droppa: Tiny Desk Concert",
+  "duration": 626,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/ozlaWkrOiZE.mp3",
+  "description_songs": [
+    "ATL RAP",
+    "West Coast",
+    "Love Song",
+    "Don't F*** with Dem"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 7 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 2.88,
+      "duration": 2.88,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 4.8,
+      "end": 6.720000000000001,
+      "duration": 1.9200000000000008,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 32.64,
+      "end": 38.879999999999995,
+      "duration": 6.239999999999995,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 39.36,
+      "end": 44.63999999999999,
+      "duration": 5.279999999999994,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 46.559999999999995,
+      "end": 62.879999999999995,
+      "duration": 16.32,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 62.879999999999995,
+      "end": 120.0,
+      "duration": 57.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 216.0,
+      "end": 239.04,
+      "duration": 23.039999999999992,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 438.24,
+      "end": 439.68,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 582.72,
+      "end": 589.92,
+      "duration": 7.199999999999932,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 603.36,
+      "end": 619.68,
+      "duration": 16.319999999999936,
+      "kind": "applause",
+      "contains_talk": false
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 2.88,
+      "song": "ATL RAP",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 6.720000000000001,
+      "clip_end": 4.8,
+      "refined_v2_clip_end": 4.8,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": true,
+      "confidence": 0
+    },
+    {
+      "seconds": 4.8,
+      "song": "West Coast",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 6.720000000000001,
+      "clip_end": 32.59,
+      "refined_v2_clip_end": 32.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 32.64,
+      "first_non_music_at": 32.16,
+      "crowd_onset_at": 32.64,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 62.879999999999995,
+      "song": "Love Song",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 120.0,
+      "clip_end": 214.98999999999998,
+      "refined_v2_clip_end": 216.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 215.04,
+      "first_non_music_at": 214.56,
+      "crowd_onset_at": 216.0,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 216.0,
+      "song": "Don't F*** with Dem",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 239.04,
+      "clip_end": 582.72,
+      "refined_v2_clip_end": 582.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 582.72,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 38.833,
+      "end": 39.42,
+      "duration": 0.587021
+    },
+    {
+      "start": 46.7155,
+      "end": 47.9061,
+      "duration": 1.19065
+    },
+    {
+      "start": 49.5997,
+      "end": 50.6073,
+      "duration": 1.00762
+    },
+    {
+      "start": 54.4513,
+      "end": 55.4024,
+      "duration": 0.951083
+    },
+    {
+      "start": 56.2867,
+      "end": 56.9241,
+      "duration": 0.637375
+    },
+    {
+      "start": 75.4924,
+      "end": 76.3598,
+      "duration": 0.867437
+    },
+    {
+      "start": 81.3523,
+      "end": 82.7978,
+      "duration": 1.44552
+    },
+    {
+      "start": 83.9911,
+      "end": 84.6876,
+      "duration": 0.696458
+    },
+    {
+      "start": 90.3273,
+      "end": 91.6576,
+      "duration": 1.33023
+    },
+    {
+      "start": 92.488,
+      "end": 93.9979,
+      "duration": 1.50985
+    },
+    {
+      "start": 94.7587,
+      "end": 95.9073,
+      "duration": 1.14856
+    },
+    {
+      "start": 96.5986,
+      "end": 97.7796,
+      "duration": 1.18106
+    },
+    {
+      "start": 106.491,
+      "end": 107.624,
+      "duration": 1.13292
+    },
+    {
+      "start": 110.148,
+      "end": 111.111,
+      "duration": 0.963083
+    },
+    {
+      "start": 114.825,
+      "end": 115.564,
+      "duration": 0.738479
+    },
+    {
+      "start": 116.439,
+      "end": 117.648,
+      "duration": 1.20971
+    },
+    {
+      "start": 118.208,
+      "end": 119.137,
+      "duration": 0.929375
+    },
+    {
+      "start": 119.576,
+      "end": 122.707,
+      "duration": 3.13125
+    },
+    {
+      "start": 233.375,
+      "end": 233.944,
+      "duration": 0.568375
+    },
+    {
+      "start": 620.058,
+      "end": 620.571,
+      "duration": 0.512583
+    },
+    {
+      "start": 621.08,
+      "end": 621.632,
+      "duration": 0.552375
+    },
+    {
+      "start": 621.632,
+      "end": 625.5,
+      "duration": 3.86787
+    }
+  ],
+  "confidence": {
+    "scores": [
+      0,
+      51,
+      51,
+      51
+    ],
+    "avg": 38.2,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

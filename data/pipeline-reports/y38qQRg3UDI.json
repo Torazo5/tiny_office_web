@@ -2,7 +2,7 @@
   "video_id": "y38qQRg3UDI",
   "title": "Dua Lipa: Tiny Desk Concert",
   "duration": 1105,
-  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/y38qQRg3UDI.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/y38qQRg3UDI.mp3",
   "description_songs": [
     "Training Season",
     "These Walls",
@@ -86,9 +86,13 @@
       "corroboration": 0,
       "silence_match": 0.0,
       "clip_start": 3,
-      "clip_end": 241.39999999999998,
+      "clip_end": 240.90999999999997,
+      "refined_v2_clip_end": 242.39999999999998,
       "start_refined": false,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [
         {
           "start": 101.28,
@@ -118,9 +122,16 @@
           "anchor_start": 242.4
         }
       ],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 240.96,
+      "first_non_music_at": 240.48,
+      "crowd_onset_at": 242.4,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 68,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 68
     },
     {
       "seconds": 303,
@@ -128,13 +139,24 @@
       "corroboration": 1,
       "silence_match": 302.447,
       "clip_start": 302.40000000000003,
-      "clip_end": 516.4399999999999,
+      "clip_end": 515.95,
+      "refined_v2_clip_end": 517.4399999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 516.48,
+      "first_non_music_at": 516.0,
+      "crowd_onset_at": 517.44,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 83,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 83
     },
     {
       "seconds": 563,
@@ -142,13 +164,24 @@
       "corroboration": 1,
       "silence_match": 562.09,
       "clip_start": 562.56,
-      "clip_end": 794.36,
+      "clip_end": 793.87,
+      "refined_v2_clip_end": 795.36,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 793.92,
+      "first_non_music_at": 793.44,
+      "crowd_onset_at": 795.36,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 83,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 83
     },
     {
       "seconds": 878,
@@ -156,13 +189,24 @@
       "corroboration": 1,
       "silence_match": 874.284,
       "clip_start": 877.92,
-      "clip_end": 1063.6399999999999,
+      "clip_end": 1063.63,
+      "refined_v2_clip_end": 1064.6399999999999,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1063.68,
+      "first_non_music_at": 1063.2,
+      "crowd_onset_at": 1064.64,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 83,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 83
     }
   ],
   "silence_intervals": [
@@ -332,10 +376,16 @@
     "avg": 79.2,
     "min": 68
   },
-  "pipeline": "v2_no_audience_variant",
-  "pipeline_version": "v2_no_audience_variant",
-  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/y38qQRg3UDI.json (edge-guarded comparison)",
-  "audience_enabled": true,
-  "audience_removed": true,
-  "audience_edge_guard_sec": 1.0
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
 }

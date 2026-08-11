@@ -1,0 +1,206 @@
+{
+  "video_id": "d0GoWhQgxyQ",
+  "title": "The Black Crowes: NPR Music Tiny Desk Concert",
+  "duration": 1116,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/d0GoWhQgxyQ.mp3",
+  "description_songs": [
+    "She Talks To Angels",
+    "Jealous Again",
+    "Wiser Time"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 372 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 357.59999999999997,
+      "end": 413.76,
+      "duration": 56.160000000000025,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 730.56,
+      "end": 790.08,
+      "duration": 59.520000000000095,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1081.44,
+      "end": 1108.8,
+      "duration": 27.3599999999999,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "She Talks To Angels",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 357.12,
+      "refined_v2_clip_end": 357.59999999999997,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 356.34,
+      "fade_out_end": 357.12,
+      "detected_music_release_at": 357.12,
+      "first_non_music_at": 356.64,
+      "crowd_onset_at": 357.6,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 414,
+      "song": "Jealous Again",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 413.76,
+      "clip_end": 730.0799999999999,
+      "refined_v2_clip_end": 730.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 729.4,
+      "fade_out_end": 730.08,
+      "detected_music_release_at": 730.08,
+      "first_non_music_at": 729.6,
+      "crowd_onset_at": 730.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 791,
+      "song": "Wiser Time",
+      "corroboration": 0,
+      "silence_match": 789.87,
+      "clip_start": 790.08,
+      "clip_end": 1080.0,
+      "refined_v2_clip_end": 1081.44,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 1079.22,
+      "fade_out_end": 1080.0,
+      "detected_music_release_at": 1080.0,
+      "first_non_music_at": 1079.52,
+      "crowd_onset_at": 1081.44,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 377.753,
+      "end": 378.582,
+      "duration": 0.829479
+    },
+    {
+      "start": 379.422,
+      "end": 379.975,
+      "duration": 0.553104
+    },
+    {
+      "start": 384.52,
+      "end": 385.44,
+      "duration": 0.920021
+    },
+    {
+      "start": 400.157,
+      "end": 400.787,
+      "duration": 0.629458
+    },
+    {
+      "start": 748.419,
+      "end": 749.484,
+      "duration": 1.0655
+    },
+    {
+      "start": 759.047,
+      "end": 759.73,
+      "duration": 0.682812
+    },
+    {
+      "start": 762.98,
+      "end": 763.878,
+      "duration": 0.897208
+    },
+    {
+      "start": 767.432,
+      "end": 767.956,
+      "duration": 0.523875
+    },
+    {
+      "start": 777.759,
+      "end": 778.852,
+      "duration": 1.09267
+    },
+    {
+      "start": 784.049,
+      "end": 785.136,
+      "duration": 1.08771
+    },
+    {
+      "start": 789.87,
+      "end": 791.502,
+      "duration": 1.63269
+    },
+    {
+      "start": 1108.6,
+      "end": 1115.45,
+      "duration": 6.85452
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      76
+    ],
+    "avg": 63.3,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

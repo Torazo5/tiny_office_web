@@ -1,0 +1,271 @@
+{
+  "video_id": "GrmZKTnlOFw",
+  "title": "Jonas Brothers: NPR Music Tiny Desk Concert",
+  "duration": 832,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/GrmZKTnlOFw.mp3",
+  "description_songs": [
+    "Sucker",
+    "I Believe",
+    "Only Human"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 477 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.0,
+      "end": 3.36,
+      "duration": 3.36,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 192.95999999999998,
+      "end": 230.39999999999998,
+      "duration": 37.44,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 230.88,
+      "end": 280.8,
+      "duration": 49.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 281.28,
+      "end": 285.6,
+      "duration": 4.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 491.03999999999996,
+      "end": 587.04,
+      "duration": 96.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 769.4399999999999,
+      "end": 770.88,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 771.36,
+      "end": 776.16,
+      "duration": 4.7999999999999545,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 795.8399999999999,
+      "end": 826.56,
+      "duration": 30.720000000000027,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Sucker",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 3.36,
+      "clip_end": 191.46999999999997,
+      "refined_v2_clip_end": 192.95999999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 191.52,
+      "first_non_music_at": 191.04,
+      "crowd_onset_at": 192.96,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 285,
+      "song": "I Believe",
+      "corroboration": 0,
+      "silence_match": 283.125,
+      "clip_start": 285.6,
+      "clip_end": 491.03999999999996,
+      "refined_v2_clip_end": 491.03999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 490.46,
+      "fade_out_end": 491.04,
+      "detected_music_release_at": 491.04,
+      "first_non_music_at": 490.56,
+      "crowd_onset_at": 491.04,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 585,
+      "song": "Only Human",
+      "corroboration": 0,
+      "silence_match": 585.864,
+      "clip_start": 587.04,
+      "clip_end": 771.36,
+      "refined_v2_clip_end": 771.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 771.36,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 208.575,
+      "end": 209.263,
+      "duration": 0.687958
+    },
+    {
+      "start": 215.0,
+      "end": 215.533,
+      "duration": 0.532979
+    },
+    {
+      "start": 255.045,
+      "end": 255.689,
+      "duration": 0.644813
+    },
+    {
+      "start": 263.853,
+      "end": 264.405,
+      "duration": 0.551792
+    },
+    {
+      "start": 271.714,
+      "end": 272.223,
+      "duration": 0.508854
+    },
+    {
+      "start": 273.27,
+      "end": 273.861,
+      "duration": 0.591729
+    },
+    {
+      "start": 278.9,
+      "end": 279.612,
+      "duration": 0.712458
+    },
+    {
+      "start": 280.461,
+      "end": 281.829,
+      "duration": 1.36783
+    },
+    {
+      "start": 281.961,
+      "end": 282.951,
+      "duration": 0.9895
+    },
+    {
+      "start": 283.125,
+      "end": 284.12,
+      "duration": 0.995083
+    },
+    {
+      "start": 528.016,
+      "end": 528.516,
+      "duration": 0.500333
+    },
+    {
+      "start": 552.43,
+      "end": 552.946,
+      "duration": 0.515708
+    },
+    {
+      "start": 569.964,
+      "end": 570.807,
+      "duration": 0.842333
+    },
+    {
+      "start": 579.194,
+      "end": 579.755,
+      "duration": 0.560562
+    },
+    {
+      "start": 585.864,
+      "end": 586.448,
+      "duration": 0.584437
+    },
+    {
+      "start": 821.017,
+      "end": 821.985,
+      "duration": 0.967562
+    },
+    {
+      "start": 822.709,
+      "end": 823.255,
+      "duration": 0.546312
+    },
+    {
+      "start": 828.515,
+      "end": 831.959,
+      "duration": 3.44467
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      76,
+      76
+    ],
+    "avg": 71.0,
+    "min": 61
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

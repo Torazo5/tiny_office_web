@@ -11,6 +11,7 @@ test("seamless is the default playback configuration", () => {
   const seamless = PLAYBACK_PRESETS.find((preset) => preset.id === "seamless");
   assert.deepEqual(DEFAULT_PLAYBACK_SETTINGS, seamless.settings);
   assert.equal(matchingPlaybackPresetId(DEFAULT_PLAYBACK_SETTINGS), "seamless");
+  assert.equal(DEFAULT_PLAYBACK_SETTINGS.builtInFade, true);
 });
 
 test("manual settings do not claim a preset", () => {

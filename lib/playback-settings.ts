@@ -7,6 +7,8 @@ export type PlaybackSettings = {
   fadeInSeconds: number;
   /** Skip mapped applause and spoken interludes when a song map is available. */
   cutAudience: boolean;
+  /** Use validated per-song overlap fade windows when the data provides one. */
+  builtInFade: boolean;
 };
 
 const SEAMLESS_PLAYBACK_SETTINGS: PlaybackSettings = {
@@ -14,6 +16,7 @@ const SEAMLESS_PLAYBACK_SETTINGS: PlaybackSettings = {
   fadeOutSeconds: 2.2,
   fadeInSeconds: 1.2,
   cutAudience: true,
+  builtInFade: true,
 };
 
 export const PLAYBACK_PRESETS = [
@@ -21,13 +24,13 @@ export const PLAYBACK_PRESETS = [
     id: "studio",
     name: "Studio-like",
     description: "Tight song cuts with no added gap or fades.",
-    settings: { gapSeconds: 0, fadeOutSeconds: 0, fadeInSeconds: 0, cutAudience: true },
+    settings: { gapSeconds: 0, fadeOutSeconds: 0, fadeInSeconds: 0, cutAudience: true, builtInFade: false },
   },
   {
     id: "live",
     name: "Live-like",
     description: "Keep the room response, with a soft transition between songs.",
-    settings: { gapSeconds: 1, fadeOutSeconds: 1.8, fadeInSeconds: 1, cutAudience: false },
+    settings: { gapSeconds: 1, fadeOutSeconds: 1.8, fadeInSeconds: 1, cutAudience: false, builtInFade: true },
   },
   {
     id: "seamless",
@@ -46,6 +49,7 @@ export function matchingPlaybackPresetId(settings: PlaybackSettings) {
     && preset.settings.fadeOutSeconds === settings.fadeOutSeconds
     && preset.settings.fadeInSeconds === settings.fadeInSeconds
     && preset.settings.cutAudience === settings.cutAudience
+    && preset.settings.builtInFade === settings.builtInFade
   ))?.id ?? null;
 }
 
@@ -60,5 +64,6 @@ export function normalizePlaybackSettings(value: Partial<PlaybackSettings> | nul
     fadeOutSeconds: readSeconds(value?.fadeOutSeconds, DEFAULT_PLAYBACK_SETTINGS.fadeOutSeconds, 10),
     fadeInSeconds: readSeconds(value?.fadeInSeconds, DEFAULT_PLAYBACK_SETTINGS.fadeInSeconds, 10),
     cutAudience: value?.cutAudience === undefined ? DEFAULT_PLAYBACK_SETTINGS.cutAudience : Boolean(value.cutAudience),
+    builtInFade: value?.builtInFade === undefined ? DEFAULT_PLAYBACK_SETTINGS.builtInFade : Boolean(value.builtInFade),
   };
 }

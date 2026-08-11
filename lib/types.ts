@@ -17,7 +17,15 @@ export function confidenceTier(min: number): ConfidenceTier {
   return "very-low";
 }
 
-export interface Song {
+export interface OverlapPlaybackData {
+  /** Whether the audio boundary contains music/audience overlap. */
+  overlapDetected?: boolean;
+  /** Validated per-record fade window, or null when unavailable. */
+  fadeOutStart?: number | null;
+  fadeOutEnd?: number | null;
+}
+
+export interface Song extends OverlapPlaybackData {
   index: number;
   title: string;
   /** seconds, from candidates[].clip_start */
@@ -39,7 +47,7 @@ export interface RatingDistributionEntry {
   count: number;
 }
 
-export type PlaylistSongClip = Pick<Song, "clipStart" | "clipEnd">;
+export type PlaylistSongClip = Pick<Song, "clipStart" | "clipEnd" | "overlapDetected" | "fadeOutStart" | "fadeOutEnd">;
 
 export interface Performance {
   /** YouTube video ID — same as reports/<video_id>.json */
@@ -73,11 +81,18 @@ export interface Performance {
 
 export type PerformanceCutKey = "no-audience" | "with-audience";
 
+export interface PerformanceCutSong extends OverlapPlaybackData {
+  songIndex: number;
+  title: string;
+  clipStart: number;
+  clipEnd: number;
+}
+
 export interface PerformanceCutVariant {
   key: PerformanceCutKey;
   name: string;
   description: string;
-  songs: ListeningPresetSong[];
+  songs: PerformanceCutSong[];
 }
 
 export interface Review {
@@ -155,7 +170,7 @@ export interface TruthRequestSummary {
 
 export type PlaylistType = "songs" | "videos";
 
-export interface PlaylistTrack {
+export interface PlaylistTrack extends OverlapPlaybackData {
   /** Display position in the playlist. */
   index: number;
   /** Persisted position used when removing this track. */
@@ -194,7 +209,7 @@ export interface PlaylistSummary {
   thumbnailVideoId: string | null;
 }
 
-export interface PlaylistSongOption {
+export interface PlaylistSongOption extends OverlapPlaybackData {
   performanceVideoId: string;
   songIndex: number;
   title: string;

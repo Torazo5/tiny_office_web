@@ -1,0 +1,460 @@
+{
+  "video_id": "P_yPDiMN3uk",
+  "title": "Maluma: Tiny Desk Concert",
+  "duration": 1297,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/P_yPDiMN3uk.mp3",
+  "description_songs": [
+    "Haw\u00e1i",
+    "COCO LOCO",
+    "ADMV",
+    "Felices los 4",
+    "Seg\u00fan Qui\u00e9n"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 5 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 4 usable episode(s), took top 4; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 238.07999999999998,
+      "end": 253.43999999999997,
+      "duration": 15.359999999999985,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 419.52,
+      "end": 459.36,
+      "duration": 39.84000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 722.4,
+      "end": 724.8,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 726.24,
+      "end": 731.04,
+      "duration": 4.7999999999999545,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 732.48,
+      "end": 735.36,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 738.72,
+      "end": 740.16,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 741.12,
+      "end": 744.48,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 953.28,
+      "end": 1018.0799999999999,
+      "duration": 64.79999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1252.8,
+      "end": 1253.28,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1257.6,
+      "end": 1296.96,
+      "duration": 39.36000000000013,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Haw\u00e1i",
+      "corroboration": 0,
+      "silence_match": 0.0,
+      "clip_start": 0.0,
+      "clip_end": 237.07,
+      "refined_v2_clip_end": 238.07999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 237.6,
+      "first_non_music_at": 237.12,
+      "crowd_onset_at": 238.08,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 58
+    },
+    {
+      "seconds": 238.07999999999998,
+      "song": "COCO LOCO",
+      "corroboration": 0,
+      "silence_match": 236.892,
+      "clip_start": 253.43999999999997,
+      "clip_end": 418.98999999999995,
+      "refined_v2_clip_end": 419.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 419.04,
+      "first_non_music_at": 418.56,
+      "crowd_onset_at": 419.52,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 419.52,
+      "song": "ADMV",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 459.36,
+      "clip_end": 953.23,
+      "refined_v2_clip_end": 953.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 953.28,
+      "first_non_music_at": 952.8,
+      "crowd_onset_at": 953.28,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 953.28,
+      "song": "Felices los 4",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1018.0799999999999,
+      "clip_end": 1252.8,
+      "refined_v2_clip_end": 1252.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1252.8,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 1252.8,
+      "song": "Seg\u00fan Qui\u00e9n",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1253.28,
+      "clip_end": 1257.07,
+      "refined_v2_clip_end": 1257.6,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1257.12,
+      "first_non_music_at": 1256.64,
+      "crowd_onset_at": 1257.6,
+      "end_unresolved_reason": null,
+      "suspect": true,
+      "confidence": 1
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 6.34721,
+      "duration": 6.34721
+    },
+    {
+      "start": 236.892,
+      "end": 237.421,
+      "duration": 0.528479
+    },
+    {
+      "start": 251.269,
+      "end": 258.293,
+      "duration": 7.02387
+    },
+    {
+      "start": 427.972,
+      "end": 429.745,
+      "duration": 1.77325
+    },
+    {
+      "start": 430.89,
+      "end": 431.775,
+      "duration": 0.885229
+    },
+    {
+      "start": 432.791,
+      "end": 433.71,
+      "duration": 0.918854
+    },
+    {
+      "start": 437.205,
+      "end": 437.832,
+      "duration": 0.627146
+    },
+    {
+      "start": 447.084,
+      "end": 447.676,
+      "duration": 0.5925
+    },
+    {
+      "start": 447.706,
+      "end": 448.207,
+      "duration": 0.500812
+    },
+    {
+      "start": 452.822,
+      "end": 454.07,
+      "duration": 1.24858
+    },
+    {
+      "start": 459.119,
+      "end": 459.647,
+      "duration": 0.527875
+    },
+    {
+      "start": 459.703,
+      "end": 462.535,
+      "duration": 2.83233
+    },
+    {
+      "start": 649.222,
+      "end": 651.803,
+      "duration": 2.58156
+    },
+    {
+      "start": 651.905,
+      "end": 654.776,
+      "duration": 2.87019
+    },
+    {
+      "start": 654.804,
+      "end": 658.036,
+      "duration": 3.23219
+    },
+    {
+      "start": 661.753,
+      "end": 669.548,
+      "duration": 7.79525
+    },
+    {
+      "start": 669.728,
+      "end": 673.091,
+      "duration": 3.36267
+    },
+    {
+      "start": 673.091,
+      "end": 674.406,
+      "duration": 1.31452
+    },
+    {
+      "start": 721.548,
+      "end": 723.121,
+      "duration": 1.57237
+    },
+    {
+      "start": 726.128,
+      "end": 726.733,
+      "duration": 0.604979
+    },
+    {
+      "start": 729.065,
+      "end": 729.896,
+      "duration": 0.830396
+    },
+    {
+      "start": 731.265,
+      "end": 733.332,
+      "duration": 2.06648
+    },
+    {
+      "start": 733.485,
+      "end": 734.18,
+      "duration": 0.694812
+    },
+    {
+      "start": 735.115,
+      "end": 737.188,
+      "duration": 2.07356
+    },
+    {
+      "start": 737.417,
+      "end": 739.237,
+      "duration": 1.82088
+    },
+    {
+      "start": 739.875,
+      "end": 740.599,
+      "duration": 0.723896
+    },
+    {
+      "start": 740.605,
+      "end": 741.728,
+      "duration": 1.12323
+    },
+    {
+      "start": 742.83,
+      "end": 743.341,
+      "duration": 0.510583
+    },
+    {
+      "start": 745.164,
+      "end": 746.999,
+      "duration": 1.83508
+    },
+    {
+      "start": 973.948,
+      "end": 974.732,
+      "duration": 0.784458
+    },
+    {
+      "start": 974.82,
+      "end": 976.137,
+      "duration": 1.3165
+    },
+    {
+      "start": 983.896,
+      "end": 984.46,
+      "duration": 0.563917
+    },
+    {
+      "start": 991.537,
+      "end": 992.202,
+      "duration": 0.665042
+    },
+    {
+      "start": 995.492,
+      "end": 996.208,
+      "duration": 0.715604
+    },
+    {
+      "start": 1010.0,
+      "end": 1010.93,
+      "duration": 0.931104
+    },
+    {
+      "start": 1011.88,
+      "end": 1012.51,
+      "duration": 0.632021
+    },
+    {
+      "start": 1016.48,
+      "end": 1017.42,
+      "duration": 0.938812
+    },
+    {
+      "start": 1017.79,
+      "end": 1021.6,
+      "duration": 3.80869
+    },
+    {
+      "start": 1264.63,
+      "end": 1265.17,
+      "duration": 0.542167
+    },
+    {
+      "start": 1269.73,
+      "end": 1270.55,
+      "duration": 0.812521
+    },
+    {
+      "start": 1272.53,
+      "end": 1273.21,
+      "duration": 0.679542
+    },
+    {
+      "start": 1296.66,
+      "end": 1297.38,
+      "duration": 0.725104
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      66,
+      51,
+      51,
+      1
+    ],
+    "avg": 45.4,
+    "min": 1
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

@@ -1,0 +1,259 @@
+{
+  "video_id": "MgTDLlDY_yY",
+  "title": "311: Tiny Desk Concert",
+  "duration": 965,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/MgTDLlDY_yY.mp3",
+  "description_songs": [
+    "Beautiful Disaster",
+    "All Mixed Up",
+    "Amber",
+    "Down"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1400 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 237.12,
+      "end": 260.64,
+      "duration": 23.519999999999982,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 492.96,
+      "end": 504.0,
+      "duration": 11.04000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 509.28,
+      "end": 511.68,
+      "duration": 2.400000000000034,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 711.8399999999999,
+      "end": 724.8,
+      "duration": 12.960000000000036,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 731.52,
+      "end": 732.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 920.16,
+      "end": 959.52,
+      "duration": 39.360000000000014,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Beautiful Disaster",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 237.07,
+      "refined_v2_clip_end": 237.12,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 237.12,
+      "first_non_music_at": 236.64,
+      "crowd_onset_at": 237.12,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 265,
+      "song": "All Mixed Up",
+      "corroboration": 0,
+      "silence_match": 260.307,
+      "clip_start": 260.64,
+      "clip_end": 492.90999999999997,
+      "refined_v2_clip_end": 492.96,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 492.96,
+      "first_non_music_at": 492.48,
+      "crowd_onset_at": 492.96,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 510,
+      "song": "Amber",
+      "corroboration": 0,
+      "silence_match": 512.289,
+      "clip_start": 511.68,
+      "clip_end": 710.83,
+      "refined_v2_clip_end": 711.8399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 710.88,
+      "first_non_music_at": 710.4,
+      "crowd_onset_at": 711.84,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 735,
+      "song": "Down",
+      "corroboration": 0,
+      "silence_match": 735.655,
+      "clip_start": 732.96,
+      "clip_end": 917.71,
+      "refined_v2_clip_end": 920.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 917.76,
+      "first_non_music_at": 917.28,
+      "crowd_onset_at": 920.16,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 244.846,
+      "end": 245.745,
+      "duration": 0.898813
+    },
+    {
+      "start": 248.323,
+      "end": 248.867,
+      "duration": 0.54375
+    },
+    {
+      "start": 251.492,
+      "end": 252.167,
+      "duration": 0.674937
+    },
+    {
+      "start": 256.795,
+      "end": 257.331,
+      "duration": 0.536167
+    },
+    {
+      "start": 260.307,
+      "end": 264.341,
+      "duration": 4.03367
+    },
+    {
+      "start": 504.134,
+      "end": 510.097,
+      "duration": 5.9624
+    },
+    {
+      "start": 512.289,
+      "end": 513.268,
+      "duration": 0.979292
+    },
+    {
+      "start": 724.924,
+      "end": 725.489,
+      "duration": 0.564271
+    },
+    {
+      "start": 725.805,
+      "end": 728.091,
+      "duration": 2.2859
+    },
+    {
+      "start": 733.139,
+      "end": 735.652,
+      "duration": 2.51327
+    },
+    {
+      "start": 735.655,
+      "end": 738.277,
+      "duration": 2.62281
+    },
+    {
+      "start": 953.112,
+      "end": 953.626,
+      "duration": 0.514521
+    },
+    {
+      "start": 959.261,
+      "end": 964.882,
+      "duration": 5.62123
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76,
+      76
+    ],
+    "avg": 70.2,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

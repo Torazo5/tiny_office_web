@@ -1,0 +1,293 @@
+{
+  "video_id": "PCgB07Yy6Xs",
+  "title": "\u00c1lvaro D\u00edaz: Tiny Desk Concert",
+  "duration": 884,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/PCgB07Yy6Xs.mp3",
+  "description_songs": [
+    "Todo Bien",
+    "Chicas de la Isla",
+    "Miles De Mujeres",
+    "Groupie Love"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 2900 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 56.16,
+      "end": 58.07999999999999,
+      "duration": 1.9199999999999946,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 247.67999999999998,
+      "end": 266.40000000000003,
+      "duration": 18.720000000000056,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 446.4,
+      "end": 464.64,
+      "duration": 18.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 633.12,
+      "end": 647.52,
+      "duration": 14.399999999999977,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 837.12,
+      "end": 849.12,
+      "duration": 12.0,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 851.04,
+      "end": 860.64,
+      "duration": 9.600000000000023,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 864.0,
+      "end": 872.16,
+      "duration": 8.159999999999968,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 875.52,
+      "end": 881.76,
+      "duration": 6.240000000000009,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 1,
+      "song": "Todo Bien",
+      "corroboration": 0,
+      "silence_match": 1.02638,
+      "clip_start": 1,
+      "clip_end": 247.14999999999998,
+      "refined_v2_clip_end": 247.67999999999998,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 247.2,
+      "first_non_music_at": 246.72,
+      "crowd_onset_at": 247.68,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 271,
+      "song": "Chicas de la Isla",
+      "corroboration": 0,
+      "silence_match": 269.73,
+      "clip_start": 266.40000000000003,
+      "clip_end": 446.34999999999997,
+      "refined_v2_clip_end": 446.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 446.4,
+      "first_non_music_at": 445.92,
+      "crowd_onset_at": 446.4,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 462,
+      "song": "Miles De Mujeres",
+      "corroboration": 0,
+      "silence_match": 464.239,
+      "clip_start": 464.64,
+      "clip_end": 632.11,
+      "refined_v2_clip_end": 633.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 632.16,
+      "first_non_music_at": 631.68,
+      "crowd_onset_at": 633.12,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 646,
+      "song": "Groupie Love",
+      "corroboration": 0,
+      "silence_match": 647.346,
+      "clip_start": 647.52,
+      "clip_end": 837.12,
+      "refined_v2_clip_end": 837.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 837.12,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.123271,
+      "end": 0.883312,
+      "duration": 0.760042
+    },
+    {
+      "start": 1.02638,
+      "end": 1.63819,
+      "duration": 0.611812
+    },
+    {
+      "start": 1.65758,
+      "end": 2.42723,
+      "duration": 0.769646
+    },
+    {
+      "start": 2.45206,
+      "end": 3.06308,
+      "duration": 0.611021
+    },
+    {
+      "start": 264.129,
+      "end": 264.773,
+      "duration": 0.644292
+    },
+    {
+      "start": 265.367,
+      "end": 266.108,
+      "duration": 0.740583
+    },
+    {
+      "start": 266.335,
+      "end": 267.656,
+      "duration": 1.32146
+    },
+    {
+      "start": 267.657,
+      "end": 268.35,
+      "duration": 0.692396
+    },
+    {
+      "start": 268.366,
+      "end": 269.714,
+      "duration": 1.34727
+    },
+    {
+      "start": 269.73,
+      "end": 270.366,
+      "duration": 0.636604
+    },
+    {
+      "start": 446.037,
+      "end": 446.647,
+      "duration": 0.610708
+    },
+    {
+      "start": 459.109,
+      "end": 459.691,
+      "duration": 0.581896
+    },
+    {
+      "start": 464.239,
+      "end": 467.333,
+      "duration": 3.09419
+    },
+    {
+      "start": 647.346,
+      "end": 648.002,
+      "duration": 0.656312
+    },
+    {
+      "start": 866.674,
+      "end": 867.2,
+      "duration": 0.526104
+    },
+    {
+      "start": 870.405,
+      "end": 871.163,
+      "duration": 0.758
+    },
+    {
+      "start": 881.723,
+      "end": 883.902,
+      "duration": 2.17925
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      76,
+      76,
+      76
+    ],
+    "avg": 74.0,
+    "min": 68
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

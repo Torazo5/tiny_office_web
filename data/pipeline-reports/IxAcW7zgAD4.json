@@ -1,0 +1,84 @@
+{
+  "video_id": "IxAcW7zgAD4",
+  "title": "George Clinton & The P-Funk All Stars: NPR Music Tiny Desk Concert",
+  "duration": 792,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/IxAcW7zgAD4.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 2,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 212.64,
+      "end": 222.71999999999997,
+      "duration": 10.079999999999984,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 409.91999999999996,
+      "end": 411.36,
+      "duration": 1.4400000000000546,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 650.88,
+      "end": 651.36,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 658.0799999999999,
+      "end": 658.56,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 767.52,
+      "end": 784.8,
+      "duration": 17.279999999999973,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 784.131,
+      "end": 791.673,
+      "duration": 7.54175
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

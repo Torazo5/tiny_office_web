@@ -83,6 +83,7 @@ export async function savePlaybackDefaults(
     playback_fade_out_seconds: normalized.fadeOutSeconds,
     playback_fade_in_seconds: normalized.fadeInSeconds,
     playback_cut_audience: normalized.cutAudience,
+    playback_built_in_fade: normalized.builtInFade,
     updated_at: new Date().toISOString(),
   };
   const { error } = profile

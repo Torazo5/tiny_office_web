@@ -1,0 +1,560 @@
+{
+  "video_id": "X0X12AD7nK4",
+  "title": "Goo Goo Dolls: Tiny Desk Concert",
+  "duration": 1150,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/X0X12AD7nK4.mp3",
+  "description_songs": [
+    "Slide",
+    "Feel the Silence",
+    "Not Goodbye (Close My Eyes)",
+    "Iris"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 3600 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 220.32,
+      "end": 245.27999999999997,
+      "duration": 24.95999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 252.95999999999998,
+      "end": 255.83999999999997,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 259.68,
+      "end": 264.0,
+      "duration": 4.319999999999993,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 265.92,
+      "end": 294.72,
+      "duration": 28.80000000000001,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 295.68,
+      "end": 299.52,
+      "duration": 3.839999999999975,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 301.92,
+      "end": 306.24,
+      "duration": 4.319999999999993,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 529.4399999999999,
+      "end": 613.4399999999999,
+      "duration": 84.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 825.12,
+      "end": 856.8,
+      "duration": 31.67999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1097.76,
+      "end": 1145.28,
+      "duration": 47.51999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Slide",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 220.32,
+      "refined_v2_clip_end": 220.32,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 220.32,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 307,
+      "song": "Feel the Silence",
+      "corroboration": 1,
+      "silence_match": 307.596,
+      "clip_start": 306.24,
+      "clip_end": 529.39,
+      "refined_v2_clip_end": 529.4399999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 529.44,
+      "first_non_music_at": 528.96,
+      "crowd_onset_at": 529.44,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 614,
+      "song": "Not Goodbye (Close My Eyes)",
+      "corroboration": 1,
+      "silence_match": 613.433,
+      "clip_start": 613.4399999999999,
+      "clip_end": 824.11,
+      "refined_v2_clip_end": 825.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 824.16,
+      "first_non_music_at": 823.68,
+      "crowd_onset_at": 825.12,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 856,
+      "song": "Iris",
+      "corroboration": 1,
+      "silence_match": 856.524,
+      "clip_start": 856.8,
+      "clip_end": 1097.71,
+      "refined_v2_clip_end": 1097.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1097.76,
+      "first_non_music_at": 1097.28,
+      "crowd_onset_at": 1097.76,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 235.868,
+      "end": 236.531,
+      "duration": 0.662354
+    },
+    {
+      "start": 241.893,
+      "end": 242.513,
+      "duration": 0.620125
+    },
+    {
+      "start": 247.647,
+      "end": 248.733,
+      "duration": 1.08606
+    },
+    {
+      "start": 255.14,
+      "end": 255.806,
+      "duration": 0.666542
+    },
+    {
+      "start": 257.307,
+      "end": 257.866,
+      "duration": 0.559146
+    },
+    {
+      "start": 260.416,
+      "end": 261.726,
+      "duration": 1.31027
+    },
+    {
+      "start": 269.486,
+      "end": 270.061,
+      "duration": 0.575292
+    },
+    {
+      "start": 270.299,
+      "end": 271.204,
+      "duration": 0.904937
+    },
+    {
+      "start": 274.533,
+      "end": 275.326,
+      "duration": 0.793229
+    },
+    {
+      "start": 277.111,
+      "end": 278.224,
+      "duration": 1.11225
+    },
+    {
+      "start": 279.317,
+      "end": 280.575,
+      "duration": 1.25746
+    },
+    {
+      "start": 281.363,
+      "end": 281.989,
+      "duration": 0.626458
+    },
+    {
+      "start": 283.8,
+      "end": 284.506,
+      "duration": 0.706542
+    },
+    {
+      "start": 284.849,
+      "end": 285.387,
+      "duration": 0.537833
+    },
+    {
+      "start": 288.562,
+      "end": 289.682,
+      "duration": 1.11987
+    },
+    {
+      "start": 292.186,
+      "end": 292.914,
+      "duration": 0.728313
+    },
+    {
+      "start": 298.612,
+      "end": 299.217,
+      "duration": 0.604583
+    },
+    {
+      "start": 299.847,
+      "end": 300.422,
+      "duration": 0.575354
+    },
+    {
+      "start": 301.481,
+      "end": 302.058,
+      "duration": 0.577583
+    },
+    {
+      "start": 302.926,
+      "end": 303.442,
+      "duration": 0.516146
+    },
+    {
+      "start": 303.99,
+      "end": 304.863,
+      "duration": 0.872937
+    },
+    {
+      "start": 305.933,
+      "end": 307.596,
+      "duration": 1.66263
+    },
+    {
+      "start": 307.596,
+      "end": 308.569,
+      "duration": 0.972417
+    },
+    {
+      "start": 539.112,
+      "end": 540.253,
+      "duration": 1.14135
+    },
+    {
+      "start": 540.61,
+      "end": 541.3,
+      "duration": 0.690833
+    },
+    {
+      "start": 541.626,
+      "end": 542.815,
+      "duration": 1.1889
+    },
+    {
+      "start": 544.344,
+      "end": 545.611,
+      "duration": 1.2674
+    },
+    {
+      "start": 549.613,
+      "end": 550.449,
+      "duration": 0.836396
+    },
+    {
+      "start": 551.952,
+      "end": 553.129,
+      "duration": 1.17754
+    },
+    {
+      "start": 554.526,
+      "end": 555.162,
+      "duration": 0.636188
+    },
+    {
+      "start": 557.619,
+      "end": 558.288,
+      "duration": 0.668292
+    },
+    {
+      "start": 559.685,
+      "end": 560.449,
+      "duration": 0.764396
+    },
+    {
+      "start": 563.962,
+      "end": 564.767,
+      "duration": 0.805688
+    },
+    {
+      "start": 565.56,
+      "end": 566.082,
+      "duration": 0.522437
+    },
+    {
+      "start": 570.753,
+      "end": 571.375,
+      "duration": 0.622042
+    },
+    {
+      "start": 571.429,
+      "end": 572.293,
+      "duration": 0.864042
+    },
+    {
+      "start": 573.002,
+      "end": 573.584,
+      "duration": 0.58225
+    },
+    {
+      "start": 573.625,
+      "end": 574.568,
+      "duration": 0.942646
+    },
+    {
+      "start": 575.714,
+      "end": 576.296,
+      "duration": 0.581875
+    },
+    {
+      "start": 576.634,
+      "end": 577.756,
+      "duration": 1.12142
+    },
+    {
+      "start": 578.672,
+      "end": 579.413,
+      "duration": 0.740917
+    },
+    {
+      "start": 584.437,
+      "end": 585.187,
+      "duration": 0.749146
+    },
+    {
+      "start": 585.56,
+      "end": 586.379,
+      "duration": 0.819083
+    },
+    {
+      "start": 589.85,
+      "end": 590.52,
+      "duration": 0.67
+    },
+    {
+      "start": 592.963,
+      "end": 593.639,
+      "duration": 0.675125
+    },
+    {
+      "start": 594.769,
+      "end": 595.447,
+      "duration": 0.677458
+    },
+    {
+      "start": 595.942,
+      "end": 596.498,
+      "duration": 0.555583
+    },
+    {
+      "start": 597.65,
+      "end": 598.29,
+      "duration": 0.640104
+    },
+    {
+      "start": 598.978,
+      "end": 599.519,
+      "duration": 0.540562
+    },
+    {
+      "start": 600.833,
+      "end": 601.761,
+      "duration": 0.927854
+    },
+    {
+      "start": 602.433,
+      "end": 603.432,
+      "duration": 0.999208
+    },
+    {
+      "start": 603.453,
+      "end": 604.176,
+      "duration": 0.7225
+    },
+    {
+      "start": 605.405,
+      "end": 606.472,
+      "duration": 1.06698
+    },
+    {
+      "start": 607.903,
+      "end": 608.511,
+      "duration": 0.608042
+    },
+    {
+      "start": 610.049,
+      "end": 610.746,
+      "duration": 0.696208
+    },
+    {
+      "start": 611.031,
+      "end": 611.832,
+      "duration": 0.801333
+    },
+    {
+      "start": 613.433,
+      "end": 616.553,
+      "duration": 3.1201
+    },
+    {
+      "start": 836.103,
+      "end": 836.781,
+      "duration": 0.678417
+    },
+    {
+      "start": 837.17,
+      "end": 837.95,
+      "duration": 0.779896
+    },
+    {
+      "start": 838.781,
+      "end": 840.174,
+      "duration": 1.39265
+    },
+    {
+      "start": 842.14,
+      "end": 844.184,
+      "duration": 2.04354
+    },
+    {
+      "start": 846.847,
+      "end": 847.607,
+      "duration": 0.759375
+    },
+    {
+      "start": 848.532,
+      "end": 849.701,
+      "duration": 1.16906
+    },
+    {
+      "start": 850.148,
+      "end": 850.762,
+      "duration": 0.613875
+    },
+    {
+      "start": 851.136,
+      "end": 852.06,
+      "duration": 0.924396
+    },
+    {
+      "start": 852.067,
+      "end": 854.311,
+      "duration": 2.24431
+    },
+    {
+      "start": 854.598,
+      "end": 856.26,
+      "duration": 1.66256
+    },
+    {
+      "start": 856.524,
+      "end": 857.871,
+      "duration": 1.34681
+    },
+    {
+      "start": 1141.76,
+      "end": 1150.29,
+      "duration": 8.52946
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      83,
+      83,
+      83
+    ],
+    "avg": 77.2,
+    "min": 60
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

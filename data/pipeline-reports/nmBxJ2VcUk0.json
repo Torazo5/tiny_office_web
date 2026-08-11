@@ -2,7 +2,7 @@
   "video_id": "nmBxJ2VcUk0",
   "title": "Tank: Tiny Desk Concert",
   "duration": 1097,
-  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/nmBxJ2VcUk0.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/nmBxJ2VcUk0.mp3",
   "description_songs": [
     "Slowly",
     "Coldest",
@@ -153,10 +153,16 @@
     "avg": 0,
     "min": 0
   },
-  "pipeline": "v2_no_audience_variant",
-  "pipeline_version": "v2_no_audience_variant",
-  "audience_enabled": true,
-  "audience_removed": true,
-  "audience_edge_guard_sec": 1.0,
-  "source_pipeline": "scripts/analyze_video.py (read-only backend; audience edge guard)"
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
 }

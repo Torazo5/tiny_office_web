@@ -2,7 +2,7 @@
   "video_id": "k2QjEgOtCAA",
   "title": "Mandolin Orange: NPR Music Tiny Desk Concert",
   "duration": 870,
-  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/k2QjEgOtCAA.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/k2QjEgOtCAA.mp3",
   "description_songs": [
     "Golden Embers",
     "The Wolves",
@@ -14,8 +14,8 @@
   },
   "comment_filter": {
     "cross_checked": true,
-    "parsed": 1,
-    "accepted": 1,
+    "parsed": 2,
+    "accepted": 2,
     "rejected": 0,
     "filtered_entries": 0
   },
@@ -61,44 +61,77 @@
     {
       "seconds": 0,
       "song": "Golden Embers",
-      "corroboration": 0,
+      "corroboration": 1,
       "silence_match": null,
       "clip_start": 0,
-      "clip_end": 270.68,
+      "clip_end": 271.68,
+      "refined_v2_clip_end": 271.68,
       "start_refined": false,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 271.68,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
       "suspect": false,
-      "confidence": 53,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 60
     },
     {
       "seconds": 304,
       "song": "The Wolves",
-      "corroboration": 0,
+      "corroboration": 1,
       "silence_match": 300.755,
       "clip_start": 297.6,
-      "clip_end": 515.96,
+      "clip_end": 516.4300000000001,
+      "refined_v2_clip_end": 516.96,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 516.48,
+      "first_non_music_at": 516.0,
+      "crowd_onset_at": 516.96,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 76,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 83
     },
     {
       "seconds": 555,
       "song": "Wildfire",
-      "corroboration": 0,
+      "corroboration": 1,
       "silence_match": 552.5,
       "clip_start": 539.04,
-      "clip_end": 848.6,
+      "clip_end": 848.11,
+      "refined_v2_clip_end": 849.6,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 848.64,
+      "first_non_music_at": 848.16,
+      "crowd_onset_at": 849.6,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 76,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 83
     }
   ],
   "silence_intervals": [
@@ -205,17 +238,23 @@
   ],
   "confidence": {
     "scores": [
-      53,
-      76,
-      76
+      60,
+      83,
+      83
     ],
-    "avg": 68.3,
-    "min": 53
+    "avg": 75.3,
+    "min": 60
   },
-  "pipeline": "v2_no_audience_variant",
-  "pipeline_version": "v2_no_audience_variant",
-  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/k2QjEgOtCAA.json (edge-guarded comparison)",
-  "audience_enabled": true,
-  "audience_removed": true,
-  "audience_edge_guard_sec": 1.0
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
 }

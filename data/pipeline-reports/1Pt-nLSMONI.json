@@ -1,0 +1,456 @@
+{
+  "video_id": "1Pt-nLSMONI",
+  "title": "Juanes: Tiny Desk Concert",
+  "duration": 1397,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/1Pt-nLSMONI.mp3",
+  "description_songs": [
+    "Nada Valgo Sin Tu Amor",
+    "Cecilia",
+    "Mala Gente",
+    "La Luz",
+    "A Dios Le Pido"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1500 likes, matched all 5 description song(s), retained 5 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 197.28,
+      "end": 278.40000000000003,
+      "duration": 81.12000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 489.59999999999997,
+      "end": 510.24,
+      "duration": 20.640000000000043,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 837.12,
+      "end": 839.04,
+      "duration": 1.919999999999959,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1123.68,
+      "end": 1143.36,
+      "duration": 19.679999999999836,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1151.04,
+      "end": 1161.12,
+      "duration": 10.079999999999927,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1385.76,
+      "end": 1395.36,
+      "duration": 9.599999999999909,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 13,
+      "song": "Nada Valgo Sin Tu Amor",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 13,
+      "clip_end": 196.74999999999997,
+      "refined_v2_clip_end": 197.28,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 196.8,
+      "first_non_music_at": 196.32,
+      "crowd_onset_at": 197.28,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 292,
+      "song": "Cecilia",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 278.40000000000003,
+      "clip_end": 486.66999999999996,
+      "refined_v2_clip_end": 489.59999999999997,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 487.2,
+      "first_non_music_at": 486.72,
+      "crowd_onset_at": 489.6,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 526,
+      "song": "Mala Gente",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 510.24,
+      "clip_end": 867,
+      "refined_v2_clip_end": 867,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 867,
+      "song": "La Luz",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 839.04,
+      "clip_end": 1123.63,
+      "refined_v2_clip_end": 1123.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1123.68,
+      "first_non_music_at": 1123.2,
+      "crowd_onset_at": 1123.68,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 1176,
+      "song": "A Dios Le Pido",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1161.12,
+      "clip_end": 1383.31,
+      "refined_v2_clip_end": 1385.76,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1383.36,
+      "first_non_music_at": 1382.88,
+      "crowd_onset_at": 1385.76,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 205.474,
+      "end": 206.058,
+      "duration": 0.583313
+    },
+    {
+      "start": 207.287,
+      "end": 208.381,
+      "duration": 1.0945
+    },
+    {
+      "start": 208.809,
+      "end": 209.807,
+      "duration": 0.997437
+    },
+    {
+      "start": 212.056,
+      "end": 213.069,
+      "duration": 1.01308
+    },
+    {
+      "start": 214.267,
+      "end": 215.593,
+      "duration": 1.32587
+    },
+    {
+      "start": 216.539,
+      "end": 217.549,
+      "duration": 1.01027
+    },
+    {
+      "start": 219.163,
+      "end": 220.456,
+      "duration": 1.29233
+    },
+    {
+      "start": 222.82,
+      "end": 223.402,
+      "duration": 0.582354
+    },
+    {
+      "start": 223.413,
+      "end": 224.239,
+      "duration": 0.8265
+    },
+    {
+      "start": 224.807,
+      "end": 226.233,
+      "duration": 1.42598
+    },
+    {
+      "start": 226.935,
+      "end": 228.075,
+      "duration": 1.1404
+    },
+    {
+      "start": 228.472,
+      "end": 229.145,
+      "duration": 0.673375
+    },
+    {
+      "start": 229.53,
+      "end": 230.077,
+      "duration": 0.546771
+    },
+    {
+      "start": 231.105,
+      "end": 231.615,
+      "duration": 0.510729
+    },
+    {
+      "start": 232.167,
+      "end": 233.195,
+      "duration": 1.02848
+    },
+    {
+      "start": 236.736,
+      "end": 238.229,
+      "duration": 1.49281
+    },
+    {
+      "start": 243.44,
+      "end": 244.266,
+      "duration": 0.825292
+    },
+    {
+      "start": 245.006,
+      "end": 245.918,
+      "duration": 0.911438
+    },
+    {
+      "start": 248.301,
+      "end": 248.989,
+      "duration": 0.688354
+    },
+    {
+      "start": 254.49,
+      "end": 255.177,
+      "duration": 0.686979
+    },
+    {
+      "start": 255.177,
+      "end": 255.946,
+      "duration": 0.769354
+    },
+    {
+      "start": 256.783,
+      "end": 257.833,
+      "duration": 1.05012
+    },
+    {
+      "start": 258.278,
+      "end": 258.791,
+      "duration": 0.513042
+    },
+    {
+      "start": 259.679,
+      "end": 260.496,
+      "duration": 0.816896
+    },
+    {
+      "start": 261.528,
+      "end": 262.052,
+      "duration": 0.524312
+    },
+    {
+      "start": 262.973,
+      "end": 263.736,
+      "duration": 0.762479
+    },
+    {
+      "start": 267.938,
+      "end": 268.536,
+      "duration": 0.598042
+    },
+    {
+      "start": 268.947,
+      "end": 270.06,
+      "duration": 1.11225
+    },
+    {
+      "start": 270.642,
+      "end": 272.542,
+      "duration": 1.90012
+    },
+    {
+      "start": 272.827,
+      "end": 274.983,
+      "duration": 2.15683
+    },
+    {
+      "start": 274.993,
+      "end": 276.228,
+      "duration": 1.23456
+    },
+    {
+      "start": 485.978,
+      "end": 486.647,
+      "duration": 0.668479
+    },
+    {
+      "start": 502.313,
+      "end": 503.162,
+      "duration": 0.849292
+    },
+    {
+      "start": 503.628,
+      "end": 504.219,
+      "duration": 0.591187
+    },
+    {
+      "start": 505.826,
+      "end": 506.884,
+      "duration": 1.05838
+    },
+    {
+      "start": 507.992,
+      "end": 510.558,
+      "duration": 2.56573
+    },
+    {
+      "start": 510.815,
+      "end": 511.406,
+      "duration": 0.591479
+    },
+    {
+      "start": 511.423,
+      "end": 512.035,
+      "duration": 0.611292
+    },
+    {
+      "start": 512.042,
+      "end": 512.642,
+      "duration": 0.600146
+    },
+    {
+      "start": 512.699,
+      "end": 513.3,
+      "duration": 0.600938
+    },
+    {
+      "start": 1156.48,
+      "end": 1157.5,
+      "duration": 1.01867
+    },
+    {
+      "start": 1162.01,
+      "end": 1162.57,
+      "duration": 0.555479
+    },
+    {
+      "start": 1162.62,
+      "end": 1163.22,
+      "duration": 0.599083
+    },
+    {
+      "start": 1163.25,
+      "end": 1163.82,
+      "duration": 0.56875
+    },
+    {
+      "start": 1164.53,
+      "end": 1165.08,
+      "duration": 0.549063
+    },
+    {
+      "start": 1165.12,
+      "end": 1165.69,
+      "duration": 0.572187
+    },
+    {
+      "start": 1372.66,
+      "end": 1373.23,
+      "duration": 0.570729
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      53,
+      61,
+      61
+    ],
+    "avg": 57.8,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

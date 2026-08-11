@@ -1,0 +1,553 @@
+{
+  "video_id": "vkzlU2fDLs8",
+  "title": "SIX The Musical: Tiny Desk Concert",
+  "duration": 1184,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/vkzlU2fDLs8.mp3",
+  "description_songs": [
+    "Ex-Wives (Reprise)",
+    "Heart of Stone",
+    "Get Down",
+    "Six"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 609 likes, matched all 4 description song(s), retained 4 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 21.599999999999998,
+      "end": 22.08,
+      "duration": 0.4800000000000004,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 45.6,
+      "end": 49.44,
+      "duration": 3.8399999999999963,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 86.88,
+      "end": 91.2,
+      "duration": 4.320000000000007,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 106.56,
+      "end": 119.52,
+      "duration": 12.959999999999994,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 120.0,
+      "end": 122.4,
+      "duration": 2.4000000000000057,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 126.72,
+      "end": 128.64,
+      "duration": 1.9199999999999875,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 129.12,
+      "end": 135.83999999999997,
+      "duration": 6.71999999999997,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 138.72,
+      "end": 142.07999999999998,
+      "duration": 3.359999999999985,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 149.28,
+      "end": 153.6,
+      "duration": 4.319999999999993,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 154.56,
+      "end": 157.44,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 164.64,
+      "end": 167.04,
+      "duration": 2.4000000000000057,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 216.48,
+      "end": 231.35999999999999,
+      "duration": 14.879999999999995,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 232.32,
+      "end": 233.76,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 242.88,
+      "end": 244.32,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 546.72,
+      "end": 564.48,
+      "duration": 17.75999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 574.0799999999999,
+      "end": 590.4,
+      "duration": 16.32000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 590.88,
+      "end": 603.84,
+      "duration": 12.960000000000036,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 630.24,
+      "end": 631.68,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 641.28,
+      "end": 642.24,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 732.0,
+      "end": 735.36,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 849.12,
+      "end": 880.3199999999999,
+      "duration": 31.199999999999932,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1146.24,
+      "end": 1153.92,
+      "duration": 7.680000000000064,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1155.84,
+      "end": 1176.96,
+      "duration": 21.12000000000012,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 203,
+      "song": "Ex-Wives (Reprise)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 167.04,
+      "clip_end": 216.48,
+      "refined_v2_clip_end": 216.48,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 216.48,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 221,
+      "song": "Heart of Stone",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 233.76,
+      "clip_end": 544.3199999999999,
+      "refined_v2_clip_end": 546.72,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 543.74,
+      "fade_out_end": 544.32,
+      "detected_music_release_at": 544.32,
+      "first_non_music_at": 543.84,
+      "crowd_onset_at": 546.72,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 574,
+      "song": "Get Down",
+      "corroboration": 0,
+      "silence_match": 574.047,
+      "clip_start": 590.4,
+      "clip_end": 590.88,
+      "refined_v2_clip_end": 590.88,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 588.48,
+      "first_non_music_at": 588.0,
+      "crowd_onset_at": 590.88,
+      "end_unresolved_reason": null,
+      "suspect": true,
+      "confidence": 26
+    },
+    {
+      "seconds": 880,
+      "song": "Six",
+      "corroboration": 0,
+      "silence_match": 881.026,
+      "clip_start": 880.3199999999999,
+      "clip_end": 1146.19,
+      "refined_v2_clip_end": 1146.24,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1146.24,
+      "first_non_music_at": 1145.76,
+      "crowd_onset_at": 1146.24,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 10.6431,
+      "end": 12.2808,
+      "duration": 1.63771
+    },
+    {
+      "start": 47.2078,
+      "end": 47.9652,
+      "duration": 0.757375
+    },
+    {
+      "start": 88.5463,
+      "end": 89.0742,
+      "duration": 0.527917
+    },
+    {
+      "start": 107.383,
+      "end": 107.988,
+      "duration": 0.605229
+    },
+    {
+      "start": 118.862,
+      "end": 119.736,
+      "duration": 0.87425
+    },
+    {
+      "start": 120.906,
+      "end": 121.455,
+      "duration": 0.549646
+    },
+    {
+      "start": 247.779,
+      "end": 248.445,
+      "duration": 0.666187
+    },
+    {
+      "start": 299.854,
+      "end": 302.085,
+      "duration": 2.23085
+    },
+    {
+      "start": 375.005,
+      "end": 376.382,
+      "duration": 1.3774
+    },
+    {
+      "start": 392.3,
+      "end": 394.192,
+      "duration": 1.89138
+    },
+    {
+      "start": 433.742,
+      "end": 434.517,
+      "duration": 0.774604
+    },
+    {
+      "start": 434.801,
+      "end": 436.288,
+      "duration": 1.48771
+    },
+    {
+      "start": 439.003,
+      "end": 440.147,
+      "duration": 1.1449
+    },
+    {
+      "start": 443.872,
+      "end": 444.474,
+      "duration": 0.601792
+    },
+    {
+      "start": 470.11,
+      "end": 471.655,
+      "duration": 1.54556
+    },
+    {
+      "start": 472.264,
+      "end": 473.749,
+      "duration": 1.48506
+    },
+    {
+      "start": 474.433,
+      "end": 476.697,
+      "duration": 2.26429
+    },
+    {
+      "start": 543.471,
+      "end": 547.01,
+      "duration": 3.53977
+    },
+    {
+      "start": 560.209,
+      "end": 560.991,
+      "duration": 0.78275
+    },
+    {
+      "start": 562.45,
+      "end": 563.589,
+      "duration": 1.13956
+    },
+    {
+      "start": 564.376,
+      "end": 564.884,
+      "duration": 0.508646
+    },
+    {
+      "start": 574.047,
+      "end": 574.979,
+      "duration": 0.931604
+    },
+    {
+      "start": 575.325,
+      "end": 575.916,
+      "duration": 0.591104
+    },
+    {
+      "start": 586.367,
+      "end": 587.446,
+      "duration": 1.07902
+    },
+    {
+      "start": 588.627,
+      "end": 589.472,
+      "duration": 0.845625
+    },
+    {
+      "start": 590.408,
+      "end": 591.414,
+      "duration": 1.00571
+    },
+    {
+      "start": 592.343,
+      "end": 592.967,
+      "duration": 0.623792
+    },
+    {
+      "start": 593.418,
+      "end": 594.099,
+      "duration": 0.681063
+    },
+    {
+      "start": 595.849,
+      "end": 596.364,
+      "duration": 0.515417
+    },
+    {
+      "start": 597.164,
+      "end": 597.903,
+      "duration": 0.738687
+    },
+    {
+      "start": 602.576,
+      "end": 603.233,
+      "duration": 0.657042
+    },
+    {
+      "start": 604.037,
+      "end": 604.641,
+      "duration": 0.603979
+    },
+    {
+      "start": 641.944,
+      "end": 642.537,
+      "duration": 0.592688
+    },
+    {
+      "start": 686.13,
+      "end": 686.842,
+      "duration": 0.711625
+    },
+    {
+      "start": 707.742,
+      "end": 708.402,
+      "duration": 0.659646
+    },
+    {
+      "start": 863.245,
+      "end": 863.815,
+      "duration": 0.570042
+    },
+    {
+      "start": 864.439,
+      "end": 864.959,
+      "duration": 0.520354
+    },
+    {
+      "start": 881.026,
+      "end": 882.299,
+      "duration": 1.27296
+    },
+    {
+      "start": 884.377,
+      "end": 885.017,
+      "duration": 0.639292
+    },
+    {
+      "start": 885.845,
+      "end": 886.688,
+      "duration": 0.843104
+    },
+    {
+      "start": 889.62,
+      "end": 891.333,
+      "duration": 1.71296
+    },
+    {
+      "start": 893.561,
+      "end": 894.55,
+      "duration": 0.989417
+    },
+    {
+      "start": 897.951,
+      "end": 899.67,
+      "duration": 1.71902
+    },
+    {
+      "start": 901.799,
+      "end": 902.459,
+      "duration": 0.660417
+    },
+    {
+      "start": 903.139,
+      "end": 904.254,
+      "duration": 1.11542
+    },
+    {
+      "start": 907.12,
+      "end": 908.626,
+      "duration": 1.5064
+    },
+    {
+      "start": 915.612,
+      "end": 916.293,
+      "duration": 0.680854
+    },
+    {
+      "start": 1176.37,
+      "end": 1184.44,
+      "duration": 8.07046
+    }
+  ],
+  "confidence": {
+    "scores": [
+      61,
+      61,
+      26,
+      76
+    ],
+    "avg": 56.0,
+    "min": 26
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

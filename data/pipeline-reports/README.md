@@ -1,14 +1,12 @@
 # Pipeline reports (static snapshot)
 
-Raw copy of every `reports/<video_id>.json` from the `tiny_office` pipeline
-repo's `v2_no_audience_variant` batch (199 report JSONs plus
-`_mass_pull_summary.json`), as of 2026-08-11. This is the default cut:
-song boundaries are tightened to stop before audience applause. Committed
-here — not referenced
-by path from the other repo — so this repo is self-contained: whoever
-builds the backend against it doesn't need filesystem access to a sibling
-repo that may not exist in their environment (a cloud coding agent scoped
-to just this repo, for instance).
+Raw copy of the 299 successful `reports/<video_id>.json` files from the
+`tiny_office` pipeline repo's `v3_smart_overlapper` batch plus
+`_mass_pull_summary.json`, as of 2026-08-11. This is the default no-audience
+cut: song boundaries are tightened to stop before audience applause, and
+validated overlap boundaries include `overlap_detected`, `fade_out_start`, and
+`fade_out_end` for playback. Committed here — not referenced by path from the
+other repo — so this repo is self-contained.
 
 This is the **full raw dataset** underlying the 9 curated performances in
 `lib/fixtures/performances.ts` (those are trimmed/typed by hand from a
@@ -17,8 +15,9 @@ performances, or to build a real ingest pipeline instead of hand-copying
 fixtures.
 
 The previous applause-inclusive `refined_v2` snapshot is preserved in
-`data/pipeline-reports/with-audience/` and is available in the video-page
-cut setting as “With applause · less tight cut”.
+`data/pipeline-reports/with-audience/` and remains available as “With applause
+· less tight cut” for the 199 overlapping video IDs. The other 100
+no-audience-only videos intentionally have no applause-inclusive cut.
 
 Schema, tier logic, and confidence scoring are documented in the pipeline
 repo's `PIPELINE.md` — that doc doesn't need to travel with this export,

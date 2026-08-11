@@ -1,0 +1,242 @@
+{
+  "video_id": "-Q9uIhuvUKc",
+  "title": "Diego El Cigala: NPR Music Tiny Desk Concert",
+  "duration": 738,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/-Q9uIhuvUKc.mp3",
+  "description_songs": [
+    "Soledad",
+    "Vete De M\u00ed",
+    "Vida Loca"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 2 usable episode(s), took top 2; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 212.64,
+      "end": 239.04,
+      "duration": 26.400000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 444.47999999999996,
+      "end": 466.56,
+      "duration": 22.08000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 670.56,
+      "end": 710.4,
+      "duration": 39.84000000000003,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Soledad",
+      "corroboration": 0,
+      "silence_match": 5.30485,
+      "clip_start": 0.0,
+      "clip_end": 212.58999999999997,
+      "refined_v2_clip_end": 212.64,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 212.64,
+      "first_non_music_at": 212.16,
+      "crowd_onset_at": 212.64,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 58
+    },
+    {
+      "seconds": 212.64,
+      "song": "Vete De M\u00ed",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 239.04,
+      "clip_end": 443.95,
+      "refined_v2_clip_end": 444.47999999999996,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 444.48,
+      "first_non_music_at": 444.0,
+      "crowd_onset_at": 444.48,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 444.47999999999996,
+      "song": "Vida Loca",
+      "corroboration": 0,
+      "silence_match": 443.239,
+      "clip_start": 466.56,
+      "clip_end": 670.56,
+      "refined_v2_clip_end": 670.56,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": true,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 670.56,
+      "end_unresolved_reason": "music/crowd overlap did not release within 4.0s",
+      "suspect": false,
+      "confidence": 66
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 5.30485,
+      "end": 6.03675,
+      "duration": 0.731896
+    },
+    {
+      "start": 31.933,
+      "end": 33.0133,
+      "duration": 1.08025
+    },
+    {
+      "start": 227.942,
+      "end": 228.518,
+      "duration": 0.575437
+    },
+    {
+      "start": 229.44,
+      "end": 230.294,
+      "duration": 0.853812
+    },
+    {
+      "start": 231.606,
+      "end": 232.426,
+      "duration": 0.820146
+    },
+    {
+      "start": 233.29,
+      "end": 234.05,
+      "duration": 0.760312
+    },
+    {
+      "start": 236.03,
+      "end": 236.933,
+      "duration": 0.902625
+    },
+    {
+      "start": 237.378,
+      "end": 238.292,
+      "duration": 0.913458
+    },
+    {
+      "start": 443.239,
+      "end": 444.043,
+      "duration": 0.804187
+    },
+    {
+      "start": 463.255,
+      "end": 463.851,
+      "duration": 0.595979
+    },
+    {
+      "start": 464.331,
+      "end": 465.185,
+      "duration": 0.854021
+    },
+    {
+      "start": 466.419,
+      "end": 467.785,
+      "duration": 1.36535
+    },
+    {
+      "start": 474.229,
+      "end": 475.11,
+      "duration": 0.881021
+    },
+    {
+      "start": 701.841,
+      "end": 702.474,
+      "duration": 0.632937
+    },
+    {
+      "start": 703.555,
+      "end": 704.173,
+      "duration": 0.617563
+    },
+    {
+      "start": 705.579,
+      "end": 706.147,
+      "duration": 0.568667
+    },
+    {
+      "start": 706.349,
+      "end": 710.054,
+      "duration": 3.70479
+    },
+    {
+      "start": 710.069,
+      "end": 711.833,
+      "duration": 1.76362
+    },
+    {
+      "start": 737.042,
+      "end": 737.617,
+      "duration": 0.575333
+    }
+  ],
+  "confidence": {
+    "scores": [
+      58,
+      51,
+      66
+    ],
+    "avg": 58.3,
+    "min": 51
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

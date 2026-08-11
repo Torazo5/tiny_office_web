@@ -1,0 +1,499 @@
+{
+  "video_id": "G7NapIZ1xGE",
+  "title": "Angel Olsen: NPR Music Tiny Desk Concert",
+  "duration": 1369,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/G7NapIZ1xGE.mp3",
+  "description_songs": [
+    "Unf\u2014theworld",
+    "lota",
+    "Enemy",
+    "White Fire"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 4 description songs (1 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 6 usable episode(s), took top 3; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 151.68,
+      "end": 158.88,
+      "duration": 7.199999999999989,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 383.52,
+      "end": 384.48,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 386.88,
+      "end": 417.12,
+      "duration": 30.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 743.04,
+      "end": 754.08,
+      "duration": 11.040000000000077,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 763.68,
+      "end": 765.6,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 766.56,
+      "end": 768.96,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 772.3199999999999,
+      "end": 775.2,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 777.12,
+      "end": 779.52,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 785.28,
+      "end": 787.68,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 792.0,
+      "end": 794.88,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 802.0799999999999,
+      "end": 804.0,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 809.28,
+      "end": 818.4,
+      "duration": 9.120000000000005,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 818.88,
+      "end": 820.3199999999999,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 820.8,
+      "end": 822.72,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 829.92,
+      "end": 832.8,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 834.7199999999999,
+      "end": 844.8,
+      "duration": 10.080000000000041,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 846.7199999999999,
+      "end": 849.12,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1331.52,
+      "end": 1353.6,
+      "duration": 22.079999999999927,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Unf\u2014theworld",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 151.68,
+      "refined_v2_clip_end": 151.68,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 151.68,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 151.68,
+      "song": "lota",
+      "corroboration": 0,
+      "silence_match": 150.937,
+      "clip_start": 158.88,
+      "clip_end": 383.46999999999997,
+      "refined_v2_clip_end": 383.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 383.52,
+      "first_non_music_at": 383.04,
+      "crowd_onset_at": 383.52,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 66
+    },
+    {
+      "seconds": 386.88,
+      "song": "Enemy",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 417.12,
+      "clip_end": 743.04,
+      "refined_v2_clip_end": 743.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": true,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 743.04,
+      "end_unresolved_reason": "music/crowd overlap did not release within 4.0s",
+      "suspect": false,
+      "confidence": 51
+    },
+    {
+      "seconds": 743.04,
+      "song": "White Fire",
+      "corroboration": 0,
+      "silence_match": 742.355,
+      "clip_start": 754.08,
+      "clip_end": 806.83,
+      "refined_v2_clip_end": 809.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 806.88,
+      "first_non_music_at": 806.4,
+      "crowd_onset_at": 809.28,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 66
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 150.937,
+      "end": 151.491,
+      "duration": 0.554812
+    },
+    {
+      "start": 160.019,
+      "end": 162.629,
+      "duration": 2.6104
+    },
+    {
+      "start": 393.895,
+      "end": 395.062,
+      "duration": 1.16738
+    },
+    {
+      "start": 396.425,
+      "end": 397.293,
+      "duration": 0.868083
+    },
+    {
+      "start": 399.851,
+      "end": 401.268,
+      "duration": 1.41673
+    },
+    {
+      "start": 401.726,
+      "end": 402.425,
+      "duration": 0.698896
+    },
+    {
+      "start": 402.43,
+      "end": 403.907,
+      "duration": 1.4769
+    },
+    {
+      "start": 405.112,
+      "end": 406.481,
+      "duration": 1.36962
+    },
+    {
+      "start": 409.131,
+      "end": 412.284,
+      "duration": 3.15304
+    },
+    {
+      "start": 412.293,
+      "end": 413.785,
+      "duration": 1.4924
+    },
+    {
+      "start": 416.684,
+      "end": 417.775,
+      "duration": 1.09081
+    },
+    {
+      "start": 742.355,
+      "end": 743.099,
+      "duration": 0.744021
+    },
+    {
+      "start": 754.241,
+      "end": 758.486,
+      "duration": 4.24477
+    },
+    {
+      "start": 758.486,
+      "end": 759.294,
+      "duration": 0.808
+    },
+    {
+      "start": 759.357,
+      "end": 760.202,
+      "duration": 0.844146
+    },
+    {
+      "start": 761.544,
+      "end": 762.367,
+      "duration": 0.823646
+    },
+    {
+      "start": 765.899,
+      "end": 766.563,
+      "duration": 0.663854
+    },
+    {
+      "start": 766.576,
+      "end": 767.104,
+      "duration": 0.527521
+    },
+    {
+      "start": 768.8,
+      "end": 769.732,
+      "duration": 0.932208
+    },
+    {
+      "start": 769.732,
+      "end": 771.896,
+      "duration": 2.1645
+    },
+    {
+      "start": 775.277,
+      "end": 776.643,
+      "duration": 1.36542
+    },
+    {
+      "start": 780.281,
+      "end": 781.674,
+      "duration": 1.39362
+    },
+    {
+      "start": 782.489,
+      "end": 786.018,
+      "duration": 3.529
+    },
+    {
+      "start": 787.82,
+      "end": 788.852,
+      "duration": 1.0325
+    },
+    {
+      "start": 789.861,
+      "end": 792.798,
+      "duration": 2.93619
+    },
+    {
+      "start": 795.16,
+      "end": 797.848,
+      "duration": 2.68854
+    },
+    {
+      "start": 797.871,
+      "end": 799.497,
+      "duration": 1.62587
+    },
+    {
+      "start": 800.079,
+      "end": 802.74,
+      "duration": 2.66058
+    },
+    {
+      "start": 803.666,
+      "end": 805.977,
+      "duration": 2.31113
+    },
+    {
+      "start": 806.83,
+      "end": 810.188,
+      "duration": 3.35729
+    },
+    {
+      "start": 813.257,
+      "end": 814.378,
+      "duration": 1.12106
+    },
+    {
+      "start": 814.945,
+      "end": 815.474,
+      "duration": 0.528479
+    },
+    {
+      "start": 816.565,
+      "end": 817.673,
+      "duration": 1.10808
+    },
+    {
+      "start": 817.979,
+      "end": 819.54,
+      "duration": 1.56019
+    },
+    {
+      "start": 820.281,
+      "end": 821.686,
+      "duration": 1.4054
+    },
+    {
+      "start": 827.384,
+      "end": 828.425,
+      "duration": 1.04085
+    },
+    {
+      "start": 828.432,
+      "end": 831.482,
+      "duration": 3.05
+    },
+    {
+      "start": 832.448,
+      "end": 835.297,
+      "duration": 2.84831
+    },
+    {
+      "start": 837.906,
+      "end": 839.585,
+      "duration": 1.6796
+    },
+    {
+      "start": 839.587,
+      "end": 840.294,
+      "duration": 0.706917
+    },
+    {
+      "start": 844.647,
+      "end": 846.018,
+      "duration": 1.37183
+    },
+    {
+      "start": 846.21,
+      "end": 847.49,
+      "duration": 1.28015
+    },
+    {
+      "start": 848.761,
+      "end": 849.407,
+      "duration": 0.64575
+    },
+    {
+      "start": 1353.7,
+      "end": 1368.85,
+      "duration": 15.1481
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      66,
+      51,
+      66
+    ],
+    "avg": 56.5,
+    "min": 43
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

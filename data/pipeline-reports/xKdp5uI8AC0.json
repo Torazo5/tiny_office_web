@@ -2,7 +2,7 @@
   "video_id": "xKdp5uI8AC0",
   "title": "Alt-J: NPR Music Tiny Desk Concert",
   "duration": 797,
-  "audio_path": "/home/torazo/code/tiny_office/reports/v2_no_audience_variant/audio/xKdp5uI8AC0.mp3",
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/xKdp5uI8AC0.mp3",
   "description_songs": [
     "Tessellate",
     "Something Good",
@@ -10,14 +10,14 @@
   ],
   "method": "yamnet",
   "resolve_notes": {
-    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (1 candidate(s) checked)",
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 3 description songs (2 candidate(s) checked)",
     "B_yamnet": "ok \u2014 3 usable episode(s), took top 2; trailing outro excluded"
   },
   "comment_filter": {
     "cross_checked": true,
-    "parsed": 1,
+    "parsed": 2,
     "accepted": 0,
-    "rejected": 1,
+    "rejected": 2,
     "filtered_entries": 0
   },
   "refine_method": "yamnet",
@@ -135,13 +135,24 @@
       "corroboration": 0,
       "silence_match": 0.0,
       "clip_start": 0.0,
-      "clip_end": 181.4,
+      "clip_end": 182.4,
+      "refined_v2_clip_end": 182.4,
       "start_refined": false,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 182.4,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
       "suspect": false,
-      "confidence": 58,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 58
     },
     {
       "seconds": 182.4,
@@ -149,13 +160,24 @@
       "corroboration": 0,
       "silence_match": 177.93,
       "clip_start": 201.6,
-      "clip_end": 436.76,
+      "clip_end": 436.8,
+      "refined_v2_clip_end": 437.76,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 436.22,
+      "fade_out_end": 436.8,
+      "detected_music_release_at": 436.8,
+      "first_non_music_at": 436.32,
+      "crowd_onset_at": 437.76,
+      "end_unresolved_reason": null,
       "suspect": false,
-      "confidence": 66,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 66
     },
     {
       "seconds": 437.76,
@@ -163,13 +185,24 @@
       "corroboration": 0,
       "silence_match": 434.108,
       "clip_start": 454.56,
-      "clip_end": 466.03999999999996,
+      "clip_end": 464.10999999999996,
+      "refined_v2_clip_end": 467.03999999999996,
       "start_refined": true,
       "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
       "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 464.64,
+      "first_non_music_at": 464.16,
+      "crowd_onset_at": 467.04,
+      "end_unresolved_reason": null,
       "suspect": true,
-      "confidence": 16,
-      "audience_edge_guard_sec": 1.0
+      "confidence": 16
     }
   ],
   "silence_intervals": [
@@ -428,10 +461,16 @@
     "avg": 46.7,
     "min": 16
   },
-  "pipeline": "v2_no_audience_variant",
-  "pipeline_version": "v2_no_audience_variant",
-  "source_pipeline": "/home/torazo/code/tiny_office/reports/refined_v2/xKdp5uI8AC0.json (edge-guarded comparison)",
-  "audience_enabled": true,
-  "audience_removed": true,
-  "audience_edge_guard_sec": 1.0
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
 }

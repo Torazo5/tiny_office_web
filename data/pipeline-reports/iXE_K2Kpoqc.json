@@ -1,0 +1,544 @@
+{
+  "video_id": "iXE_K2Kpoqc",
+  "title": "Punch Brothers: NPR Music Tiny Desk Concert",
+  "duration": 1260,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/iXE_K2Kpoqc.mp3",
+  "description_songs": [
+    "My Oh My",
+    "Boll Weevil",
+    "Magnet",
+    "Julep"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 125 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 12.959999999999999,
+      "end": 80.64,
+      "duration": 67.68,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 107.52,
+      "end": 112.32,
+      "duration": 4.799999999999997,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 114.24,
+      "end": 114.72,
+      "duration": 0.480000000000004,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 117.11999999999999,
+      "end": 122.88,
+      "duration": 5.760000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 182.4,
+      "end": 183.83999999999997,
+      "duration": 1.4399999999999693,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 527.52,
+      "end": 536.16,
+      "duration": 8.639999999999986,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 540.0,
+      "end": 541.92,
+      "duration": 1.919999999999959,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 551.52,
+      "end": 558.24,
+      "duration": 6.720000000000027,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 558.72,
+      "end": 564.48,
+      "duration": 5.759999999999991,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 603.84,
+      "end": 620.64,
+      "duration": 16.799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 621.12,
+      "end": 624.0,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 624.48,
+      "end": 628.8,
+      "duration": 4.319999999999936,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 629.28,
+      "end": 631.68,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 633.12,
+      "end": 635.52,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 825.12,
+      "end": 838.08,
+      "duration": 12.960000000000036,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1200.96,
+      "end": 1229.28,
+      "duration": 28.319999999999936,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 123,
+      "song": "My Oh My",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 122.88,
+      "clip_end": 384,
+      "refined_v2_clip_end": 384,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 384,
+      "song": "Boll Weevil",
+      "corroboration": 0,
+      "silence_match": 383.526,
+      "clip_start": 384,
+      "clip_end": 527.47,
+      "refined_v2_clip_end": 527.52,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 527.52,
+      "first_non_music_at": 527.04,
+      "crowd_onset_at": 527.52,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 632,
+      "song": "Magnet",
+      "corroboration": 0,
+      "silence_match": 628.672,
+      "clip_start": 635.52,
+      "clip_end": 824.11,
+      "refined_v2_clip_end": 825.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 824.16,
+      "first_non_music_at": 823.68,
+      "crowd_onset_at": 825.12,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 885,
+      "song": "Julep",
+      "corroboration": 0,
+      "silence_match": 881.744,
+      "clip_start": 885,
+      "clip_end": 1198.51,
+      "refined_v2_clip_end": 1200.96,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1199.04,
+      "first_non_music_at": 1198.56,
+      "crowd_onset_at": 1200.96,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.61875,
+      "duration": 0.61875
+    },
+    {
+      "start": 37.7569,
+      "end": 38.2669,
+      "duration": 0.509958
+    },
+    {
+      "start": 51.3661,
+      "end": 51.8741,
+      "duration": 0.508042
+    },
+    {
+      "start": 63.0897,
+      "end": 63.7381,
+      "duration": 0.648354
+    },
+    {
+      "start": 64.9021,
+      "end": 65.5416,
+      "duration": 0.639417
+    },
+    {
+      "start": 66.845,
+      "end": 67.5011,
+      "duration": 0.656146
+    },
+    {
+      "start": 184.328,
+      "end": 184.883,
+      "duration": 0.555167
+    },
+    {
+      "start": 281.637,
+      "end": 282.296,
+      "duration": 0.658667
+    },
+    {
+      "start": 288.023,
+      "end": 288.536,
+      "duration": 0.513104
+    },
+    {
+      "start": 293.374,
+      "end": 294.174,
+      "duration": 0.799479
+    },
+    {
+      "start": 383.526,
+      "end": 384.048,
+      "duration": 0.522437
+    },
+    {
+      "start": 549.14,
+      "end": 549.841,
+      "duration": 0.700167
+    },
+    {
+      "start": 551.401,
+      "end": 552.066,
+      "duration": 0.664583
+    },
+    {
+      "start": 557.85,
+      "end": 559.362,
+      "duration": 1.51271
+    },
+    {
+      "start": 564.128,
+      "end": 565.528,
+      "duration": 1.39987
+    },
+    {
+      "start": 599.201,
+      "end": 599.968,
+      "duration": 0.767437
+    },
+    {
+      "start": 605.177,
+      "end": 605.753,
+      "duration": 0.575604
+    },
+    {
+      "start": 606.861,
+      "end": 607.409,
+      "duration": 0.548646
+    },
+    {
+      "start": 607.941,
+      "end": 608.999,
+      "duration": 1.05812
+    },
+    {
+      "start": 611.773,
+      "end": 612.415,
+      "duration": 0.642021
+    },
+    {
+      "start": 612.86,
+      "end": 613.404,
+      "duration": 0.544604
+    },
+    {
+      "start": 613.849,
+      "end": 614.357,
+      "duration": 0.507604
+    },
+    {
+      "start": 615.204,
+      "end": 615.869,
+      "duration": 0.665354
+    },
+    {
+      "start": 617.044,
+      "end": 617.955,
+      "duration": 0.910854
+    },
+    {
+      "start": 620.498,
+      "end": 621.845,
+      "duration": 1.3471
+    },
+    {
+      "start": 622.322,
+      "end": 622.845,
+      "duration": 0.522917
+    },
+    {
+      "start": 623.927,
+      "end": 625.079,
+      "duration": 1.1515
+    },
+    {
+      "start": 627.526,
+      "end": 628.171,
+      "duration": 0.644229
+    },
+    {
+      "start": 628.672,
+      "end": 630.174,
+      "duration": 1.50219
+    },
+    {
+      "start": 741.114,
+      "end": 741.846,
+      "duration": 0.732146
+    },
+    {
+      "start": 741.904,
+      "end": 742.687,
+      "duration": 0.7825
+    },
+    {
+      "start": 823.981,
+      "end": 824.659,
+      "duration": 0.677667
+    },
+    {
+      "start": 840.005,
+      "end": 840.583,
+      "duration": 0.578792
+    },
+    {
+      "start": 866.977,
+      "end": 867.588,
+      "duration": 0.611375
+    },
+    {
+      "start": 868.087,
+      "end": 869.298,
+      "duration": 1.2114
+    },
+    {
+      "start": 879.65,
+      "end": 880.307,
+      "duration": 0.656521
+    },
+    {
+      "start": 881.744,
+      "end": 885.68,
+      "duration": 3.93567
+    },
+    {
+      "start": 888.715,
+      "end": 890.27,
+      "duration": 1.55419
+    },
+    {
+      "start": 898.312,
+      "end": 898.932,
+      "duration": 0.619625
+    },
+    {
+      "start": 902.961,
+      "end": 903.518,
+      "duration": 0.556833
+    },
+    {
+      "start": 907.58,
+      "end": 908.117,
+      "duration": 0.536937
+    },
+    {
+      "start": 912.077,
+      "end": 912.736,
+      "duration": 0.659625
+    },
+    {
+      "start": 952.687,
+      "end": 953.412,
+      "duration": 0.724687
+    },
+    {
+      "start": 957.42,
+      "end": 958.006,
+      "duration": 0.585729
+    },
+    {
+      "start": 962.035,
+      "end": 962.579,
+      "duration": 0.543542
+    },
+    {
+      "start": 1003.9,
+      "end": 1004.43,
+      "duration": 0.534146
+    },
+    {
+      "start": 1004.84,
+      "end": 1006.46,
+      "duration": 1.6249
+    },
+    {
+      "start": 1009.92,
+      "end": 1010.48,
+      "duration": 0.562417
+    },
+    {
+      "start": 1010.52,
+      "end": 1011.07,
+      "duration": 0.547187
+    },
+    {
+      "start": 1046.95,
+      "end": 1047.5,
+      "duration": 0.558625
+    },
+    {
+      "start": 1095.46,
+      "end": 1096.0,
+      "duration": 0.53625
+    },
+    {
+      "start": 1131.11,
+      "end": 1132.45,
+      "duration": 1.33733
+    },
+    {
+      "start": 1135.86,
+      "end": 1136.9,
+      "duration": 1.03465
+    },
+    {
+      "start": 1196.82,
+      "end": 1201.53,
+      "duration": 4.71563
+    },
+    {
+      "start": 1227.63,
+      "end": 1230.66,
+      "duration": 3.02225
+    },
+    {
+      "start": 1258.85,
+      "end": 1260.34,
+      "duration": 1.492
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      68,
+      76,
+      68
+    ],
+    "avg": 66.2,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

@@ -1,0 +1,169 @@
+{
+  "video_id": "3-03z36Is6M",
+  "title": "The xx: NPR Music Tiny Desk Concert",
+  "duration": 421,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/3-03z36Is6M.mp3",
+  "description_songs": [
+    "Angels",
+    "Sunset"
+  ],
+  "method": "yamnet",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no parsed comment setlist covered all 2 description songs (0 candidate(s) checked)",
+    "B_yamnet": "ok \u2014 1 usable episode(s), took top 1; trailing outro excluded"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 157.92,
+      "end": 159.35999999999999,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 160.79999999999998,
+      "end": 162.23999999999998,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 170.88,
+      "end": 180.48,
+      "duration": 9.599999999999994,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 377.76,
+      "end": 379.68,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 380.64,
+      "end": 400.8,
+      "duration": 20.160000000000025,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0.0,
+      "song": "Angels",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0.0,
+      "clip_end": 168.42999999999998,
+      "refined_v2_clip_end": 170.88,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 168.48,
+      "first_non_music_at": 168.0,
+      "crowd_onset_at": 170.88,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 43
+    },
+    {
+      "seconds": 170.88,
+      "song": "Sunset",
+      "corroboration": 0,
+      "silence_match": 169.426,
+      "clip_start": 180.48,
+      "clip_end": 377.71,
+      "refined_v2_clip_end": 380.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 378.24,
+      "first_non_music_at": 377.76,
+      "crowd_onset_at": 380.64,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 66
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 115.621,
+      "end": 116.132,
+      "duration": 0.511708
+    },
+    {
+      "start": 169.426,
+      "end": 170.163,
+      "duration": 0.737437
+    },
+    {
+      "start": 182.622,
+      "end": 183.904,
+      "duration": 1.28267
+    },
+    {
+      "start": 376.845,
+      "end": 378.098,
+      "duration": 1.25317
+    },
+    {
+      "start": 396.787,
+      "end": 397.364,
+      "duration": 0.577104
+    },
+    {
+      "start": 398.671,
+      "end": 399.221,
+      "duration": 0.549479
+    },
+    {
+      "start": 400.347,
+      "end": 420.78,
+      "duration": 20.4333
+    }
+  ],
+  "confidence": {
+    "scores": [
+      43,
+      66
+    ],
+    "avg": 54.5,
+    "min": 43
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

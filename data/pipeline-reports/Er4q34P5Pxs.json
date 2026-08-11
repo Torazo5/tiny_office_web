@@ -1,0 +1,262 @@
+{
+  "video_id": "Er4q34P5Pxs",
+  "title": "Passion Pit: NPR Music Tiny Desk Concert",
+  "duration": 658,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/Er4q34P5Pxs.mp3",
+  "description_songs": [
+    "Take A Walk",
+    "Sleepyhead",
+    "Carried Away"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 199 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 229.92,
+      "end": 236.15999999999997,
+      "duration": 6.239999999999981,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 389.28,
+      "end": 394.56,
+      "duration": 5.28000000000003,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 402.24,
+      "end": 404.16,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 410.88,
+      "end": 412.32,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 415.2,
+      "end": 418.08,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 638.4,
+      "end": 657.6,
+      "duration": 19.200000000000045,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Take A Walk",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 228.90999999999997,
+      "refined_v2_clip_end": 229.92,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 228.96,
+      "first_non_music_at": 228.48,
+      "crowd_onset_at": 229.92,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 240,
+      "song": "Sleepyhead",
+      "corroboration": 0,
+      "silence_match": 238.242,
+      "clip_start": 236.15999999999997,
+      "clip_end": 388.75,
+      "refined_v2_clip_end": 389.28,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 388.8,
+      "first_non_music_at": 388.32,
+      "crowd_onset_at": 389.28,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 427,
+      "song": "Carried Away",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 418.08,
+      "clip_end": 637.92,
+      "refined_v2_clip_end": 638.4,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 637.34,
+      "fade_out_end": 637.92,
+      "detected_music_release_at": 637.92,
+      "first_non_music_at": 637.44,
+      "crowd_onset_at": 638.4,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 227.999,
+      "end": 228.65,
+      "duration": 0.650917
+    },
+    {
+      "start": 238.242,
+      "end": 240.473,
+      "duration": 2.2314
+    },
+    {
+      "start": 388.431,
+      "end": 389.301,
+      "duration": 0.869917
+    },
+    {
+      "start": 400.249,
+      "end": 400.798,
+      "duration": 0.548729
+    },
+    {
+      "start": 401.022,
+      "end": 401.536,
+      "duration": 0.514125
+    },
+    {
+      "start": 401.663,
+      "end": 402.849,
+      "duration": 1.18562
+    },
+    {
+      "start": 403.857,
+      "end": 405.523,
+      "duration": 1.66631
+    },
+    {
+      "start": 407.257,
+      "end": 408.107,
+      "duration": 0.8505
+    },
+    {
+      "start": 408.139,
+      "end": 411.501,
+      "duration": 3.3625
+    },
+    {
+      "start": 412.284,
+      "end": 413.618,
+      "duration": 1.33383
+    },
+    {
+      "start": 413.629,
+      "end": 416.848,
+      "duration": 3.21944
+    },
+    {
+      "start": 416.928,
+      "end": 418.342,
+      "duration": 1.41423
+    },
+    {
+      "start": 637.17,
+      "end": 637.732,
+      "duration": 0.561958
+    },
+    {
+      "start": 647.545,
+      "end": 648.605,
+      "duration": 1.05929
+    },
+    {
+      "start": 648.704,
+      "end": 649.368,
+      "duration": 0.6635
+    },
+    {
+      "start": 649.918,
+      "end": 650.946,
+      "duration": 1.02737
+    },
+    {
+      "start": 651.508,
+      "end": 652.594,
+      "duration": 1.08625
+    },
+    {
+      "start": 654.38,
+      "end": 655.041,
+      "duration": 0.660833
+    },
+    {
+      "start": 657.096,
+      "end": 657.995,
+      "duration": 0.899708
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      61
+    ],
+    "avg": 63.3,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

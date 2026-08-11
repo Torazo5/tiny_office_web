@@ -1,0 +1,548 @@
+{
+  "video_id": "6nT911jkWEo",
+  "title": "Iron And Wine: NPR Music Tiny Desk Concert",
+  "duration": 1069,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/6nT911jkWEo.mp3",
+  "description_songs": [],
+  "method": "manual",
+  "resolve_notes": {
+    "A_comments": "failed \u2014 no description setlist available for cross-check",
+    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
+    "C_silence": "failed \u2014 no description setlist to map gaps onto",
+    "D_transcript": "failed \u2014 no transcript available or no description setlist"
+  },
+  "comment_filter": {
+    "cross_checked": false,
+    "parsed": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 3.84,
+      "end": 10.56,
+      "duration": 6.720000000000001,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 12.0,
+      "end": 13.44,
+      "duration": 1.4399999999999995,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 179.04,
+      "end": 258.72,
+      "duration": 79.68000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 263.52,
+      "end": 273.12,
+      "duration": 9.600000000000023,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 453.59999999999997,
+      "end": 482.4,
+      "duration": 28.80000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 494.88,
+      "end": 496.8,
+      "duration": 1.920000000000016,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 517.92,
+      "end": 521.76,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 522.72,
+      "end": 524.16,
+      "duration": 1.4399999999999409,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 526.0799999999999,
+      "end": 529.92,
+      "duration": 3.840000000000032,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 530.4,
+      "end": 550.56,
+      "duration": 20.159999999999968,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 551.04,
+      "end": 553.44,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 553.92,
+      "end": 574.56,
+      "duration": 20.639999999999986,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 575.04,
+      "end": 578.4,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 767.52,
+      "end": 768.96,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 768.9599999999999,
+      "end": 854.88,
+      "duration": 85.92000000000007,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 865.4399999999999,
+      "end": 867.36,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 873.6,
+      "end": 876.48,
+      "duration": 2.8799999999999955,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 880.8,
+      "end": 884.16,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 895.68,
+      "end": 900.48,
+      "duration": 4.800000000000068,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 901.92,
+      "end": 908.16,
+      "duration": 6.240000000000009,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1040.6399999999999,
+      "end": 1042.08,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1044.0,
+      "end": 1068.48,
+      "duration": 24.480000000000018,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [],
+  "silence_intervals": [
+    {
+      "start": 7.13817,
+      "end": 8.31548,
+      "duration": 1.17731
+    },
+    {
+      "start": 13.3794,
+      "end": 14.0359,
+      "duration": 0.656542
+    },
+    {
+      "start": 188.834,
+      "end": 189.498,
+      "duration": 0.664125
+    },
+    {
+      "start": 190.638,
+      "end": 193.606,
+      "duration": 2.96831
+    },
+    {
+      "start": 197.428,
+      "end": 198.104,
+      "duration": 0.675896
+    },
+    {
+      "start": 268.596,
+      "end": 269.283,
+      "duration": 0.686667
+    },
+    {
+      "start": 451.955,
+      "end": 452.554,
+      "duration": 0.599146
+    },
+    {
+      "start": 473.952,
+      "end": 475.348,
+      "duration": 1.39538
+    },
+    {
+      "start": 488.189,
+      "end": 488.8,
+      "duration": 0.611708
+    },
+    {
+      "start": 490.086,
+      "end": 490.768,
+      "duration": 0.681458
+    },
+    {
+      "start": 493.804,
+      "end": 494.462,
+      "duration": 0.658396
+    },
+    {
+      "start": 500.912,
+      "end": 501.651,
+      "duration": 0.738771
+    },
+    {
+      "start": 507.336,
+      "end": 507.838,
+      "duration": 0.502583
+    },
+    {
+      "start": 508.377,
+      "end": 508.956,
+      "duration": 0.579292
+    },
+    {
+      "start": 512.334,
+      "end": 513.085,
+      "duration": 0.750354
+    },
+    {
+      "start": 515.178,
+      "end": 515.692,
+      "duration": 0.514167
+    },
+    {
+      "start": 515.835,
+      "end": 516.519,
+      "duration": 0.684458
+    },
+    {
+      "start": 521.578,
+      "end": 522.503,
+      "duration": 0.925562
+    },
+    {
+      "start": 522.519,
+      "end": 523.267,
+      "duration": 0.748042
+    },
+    {
+      "start": 524.125,
+      "end": 525.916,
+      "duration": 1.7915
+    },
+    {
+      "start": 525.952,
+      "end": 526.611,
+      "duration": 0.658708
+    },
+    {
+      "start": 527.587,
+      "end": 528.466,
+      "duration": 0.879437
+    },
+    {
+      "start": 530.483,
+      "end": 531.319,
+      "duration": 0.835917
+    },
+    {
+      "start": 534.064,
+      "end": 534.779,
+      "duration": 0.714979
+    },
+    {
+      "start": 539.535,
+      "end": 540.036,
+      "duration": 0.500729
+    },
+    {
+      "start": 541.186,
+      "end": 541.689,
+      "duration": 0.503229
+    },
+    {
+      "start": 550.37,
+      "end": 551.26,
+      "duration": 0.890521
+    },
+    {
+      "start": 553.153,
+      "end": 554.388,
+      "duration": 1.23569
+    },
+    {
+      "start": 554.6,
+      "end": 555.197,
+      "duration": 0.597
+    },
+    {
+      "start": 561.67,
+      "end": 562.564,
+      "duration": 0.894562
+    },
+    {
+      "start": 568.744,
+      "end": 569.518,
+      "duration": 0.773708
+    },
+    {
+      "start": 570.876,
+      "end": 571.483,
+      "duration": 0.607687
+    },
+    {
+      "start": 573.008,
+      "end": 573.657,
+      "duration": 0.648771
+    },
+    {
+      "start": 574.254,
+      "end": 574.853,
+      "duration": 0.599687
+    },
+    {
+      "start": 579.987,
+      "end": 580.798,
+      "duration": 0.811125
+    },
+    {
+      "start": 781.239,
+      "end": 781.82,
+      "duration": 0.580958
+    },
+    {
+      "start": 783.215,
+      "end": 784.718,
+      "duration": 1.503
+    },
+    {
+      "start": 789.029,
+      "end": 790.035,
+      "duration": 1.00629
+    },
+    {
+      "start": 790.985,
+      "end": 792.001,
+      "duration": 1.01519
+    },
+    {
+      "start": 800.251,
+      "end": 801.347,
+      "duration": 1.09585
+    },
+    {
+      "start": 802.159,
+      "end": 802.699,
+      "duration": 0.540292
+    },
+    {
+      "start": 803.033,
+      "end": 804.708,
+      "duration": 1.67517
+    },
+    {
+      "start": 806.372,
+      "end": 808.79,
+      "duration": 2.41744
+    },
+    {
+      "start": 810.723,
+      "end": 811.579,
+      "duration": 0.855792
+    },
+    {
+      "start": 816.644,
+      "end": 817.172,
+      "duration": 0.527438
+    },
+    {
+      "start": 817.871,
+      "end": 818.481,
+      "duration": 0.610167
+    },
+    {
+      "start": 823.675,
+      "end": 824.236,
+      "duration": 0.561167
+    },
+    {
+      "start": 826.673,
+      "end": 827.638,
+      "duration": 0.964625
+    },
+    {
+      "start": 830.24,
+      "end": 830.794,
+      "duration": 0.553417
+    },
+    {
+      "start": 831.077,
+      "end": 832.487,
+      "duration": 1.41037
+    },
+    {
+      "start": 835.115,
+      "end": 835.618,
+      "duration": 0.502542
+    },
+    {
+      "start": 836.338,
+      "end": 837.704,
+      "duration": 1.36617
+    },
+    {
+      "start": 838.67,
+      "end": 839.242,
+      "duration": 0.572208
+    },
+    {
+      "start": 839.616,
+      "end": 840.227,
+      "duration": 0.611187
+    },
+    {
+      "start": 841.501,
+      "end": 842.093,
+      "duration": 0.592208
+    },
+    {
+      "start": 842.276,
+      "end": 843.226,
+      "duration": 0.949521
+    },
+    {
+      "start": 845.098,
+      "end": 845.709,
+      "duration": 0.610604
+    },
+    {
+      "start": 848.065,
+      "end": 851.229,
+      "duration": 3.16473
+    },
+    {
+      "start": 873.802,
+      "end": 874.683,
+      "duration": 0.880771
+    },
+    {
+      "start": 875.139,
+      "end": 876.045,
+      "duration": 0.906083
+    },
+    {
+      "start": 879.821,
+      "end": 881.23,
+      "duration": 1.40944
+    },
+    {
+      "start": 882.388,
+      "end": 882.981,
+      "duration": 0.592938
+    },
+    {
+      "start": 886.983,
+      "end": 888.111,
+      "duration": 1.1284
+    },
+    {
+      "start": 888.421,
+      "end": 888.979,
+      "duration": 0.557542
+    },
+    {
+      "start": 889.3,
+      "end": 889.906,
+      "duration": 0.60525
+    },
+    {
+      "start": 894.029,
+      "end": 896.376,
+      "duration": 2.34671
+    },
+    {
+      "start": 904.451,
+      "end": 905.073,
+      "duration": 0.622271
+    },
+    {
+      "start": 905.074,
+      "end": 905.718,
+      "duration": 0.6445
+    },
+    {
+      "start": 1064.99,
+      "end": 1065.6,
+      "duration": 0.611312
+    },
+    {
+      "start": 1067.99,
+      "end": 1068.71,
+      "duration": 0.723
+    }
+  ],
+  "confidence": {
+    "scores": [],
+    "avg": 0,
+    "min": 0
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

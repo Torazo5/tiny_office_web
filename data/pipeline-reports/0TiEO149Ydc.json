@@ -1,0 +1,288 @@
+{
+  "video_id": "0TiEO149Ydc",
+  "title": "The Wild Reeds: NPR Music Tiny Desk Concert",
+  "duration": 899,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/0TiEO149Ydc.mp3",
+  "description_songs": [
+    "Where I'm Going",
+    "Everything Looks Better In Hindsight",
+    "The World We Built"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 70 likes, matched all 3 description song(s), retained 3 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 40.8,
+      "end": 42.239999999999995,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 274.56,
+      "end": 319.68,
+      "duration": 45.120000000000005,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 655.1999999999999,
+      "end": 672.0,
+      "duration": 16.800000000000068,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 869.76,
+      "end": 898.56,
+      "duration": 28.799999999999955,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Where I'm Going",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 274.03,
+      "refined_v2_clip_end": 274.56,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 274.56,
+      "first_non_music_at": 274.08,
+      "crowd_onset_at": 274.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 324,
+      "song": "Everything Looks Better In Hindsight",
+      "corroboration": 0,
+      "silence_match": 319.436,
+      "clip_start": 319.68,
+      "clip_end": 619,
+      "refined_v2_clip_end": 619,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 619,
+      "song": "The World We Built",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 619,
+      "clip_end": 655.1999999999999,
+      "refined_v2_clip_end": 655.1999999999999,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 655.2,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 53
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 22.7982,
+      "end": 24.0595,
+      "duration": 1.26135
+    },
+    {
+      "start": 29.5164,
+      "end": 30.1292,
+      "duration": 0.61275
+    },
+    {
+      "start": 33.7526,
+      "end": 34.4956,
+      "duration": 0.743062
+    },
+    {
+      "start": 41.1899,
+      "end": 41.8908,
+      "duration": 0.700917
+    },
+    {
+      "start": 273.021,
+      "end": 274.929,
+      "duration": 1.90773
+    },
+    {
+      "start": 288.724,
+      "end": 289.45,
+      "duration": 0.725729
+    },
+    {
+      "start": 292.323,
+      "end": 293.296,
+      "duration": 0.973354
+    },
+    {
+      "start": 293.957,
+      "end": 294.669,
+      "duration": 0.712167
+    },
+    {
+      "start": 297.23,
+      "end": 297.786,
+      "duration": 0.556312
+    },
+    {
+      "start": 313.396,
+      "end": 314.083,
+      "duration": 0.686771
+    },
+    {
+      "start": 314.087,
+      "end": 315.703,
+      "duration": 1.61548
+    },
+    {
+      "start": 319.436,
+      "end": 325.228,
+      "duration": 5.79223
+    },
+    {
+      "start": 667.438,
+      "end": 668.656,
+      "duration": 1.21777
+    },
+    {
+      "start": 671.866,
+      "end": 672.908,
+      "duration": 1.04137
+    },
+    {
+      "start": 672.908,
+      "end": 674.002,
+      "duration": 1.09423
+    },
+    {
+      "start": 674.108,
+      "end": 675.024,
+      "duration": 0.915625
+    },
+    {
+      "start": 675.537,
+      "end": 676.721,
+      "duration": 1.18412
+    },
+    {
+      "start": 676.722,
+      "end": 677.737,
+      "duration": 1.01487
+    },
+    {
+      "start": 679.227,
+      "end": 680.449,
+      "duration": 1.2216
+    },
+    {
+      "start": 723.106,
+      "end": 723.633,
+      "duration": 0.527542
+    },
+    {
+      "start": 867.718,
+      "end": 869.654,
+      "duration": 1.93667
+    },
+    {
+      "start": 881.984,
+      "end": 883.162,
+      "duration": 1.17821
+    },
+    {
+      "start": 885.548,
+      "end": 888.388,
+      "duration": 2.84008
+    },
+    {
+      "start": 893.507,
+      "end": 894.443,
+      "duration": 0.936042
+    },
+    {
+      "start": 894.551,
+      "end": 895.052,
+      "duration": 0.500687
+    },
+    {
+      "start": 896.449,
+      "end": 897.17,
+      "duration": 0.720792
+    },
+    {
+      "start": 897.9,
+      "end": 899.367,
+      "duration": 1.46713
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      68,
+      53
+    ],
+    "avg": 58.0,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

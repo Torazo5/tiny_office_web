@@ -1,0 +1,433 @@
+{
+  "video_id": "M34D3Ktovfw",
+  "title": "Noah Kahan: Tiny Desk Concert",
+  "duration": 1405,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/M34D3Ktovfw.mp3",
+  "description_songs": [
+    "American Cars",
+    "The Great Divide",
+    "Orange Juice",
+    "Paid Time Off"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1400 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 2,
+    "accepted": 2,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 265.44,
+      "end": 321.6,
+      "duration": 56.160000000000025,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 640.3199999999999,
+      "end": 643.2,
+      "duration": 2.880000000000109,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 647.52,
+      "end": 708.96,
+      "duration": 61.440000000000055,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 996.0,
+      "end": 1009.4399999999999,
+      "duration": 13.43999999999994,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1012.8,
+      "end": 1015.1999999999999,
+      "duration": 2.3999999999999773,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1020.0,
+      "end": 1023.36,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1024.32,
+      "end": 1031.04,
+      "duration": 6.720000000000027,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1032.48,
+      "end": 1040.6399999999999,
+      "duration": 8.159999999999854,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1041.12,
+      "end": 1044.48,
+      "duration": 3.3600000000001273,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1045.92,
+      "end": 1060.8,
+      "duration": 14.879999999999882,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1063.2,
+      "end": 1063.68,
+      "duration": 0.4800000000000182,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1066.56,
+      "end": 1069.92,
+      "duration": 3.3600000000001273,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1367.04,
+      "end": 1389.12,
+      "duration": 22.079999999999927,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 10,
+      "song": "American Cars",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 10,
+      "clip_end": 264.90999999999997,
+      "refined_v2_clip_end": 265.44,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 264.96,
+      "first_non_music_at": 264.48,
+      "crowd_onset_at": 265.44,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 60
+    },
+    {
+      "seconds": 335,
+      "song": "The Great Divide",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 321.6,
+      "clip_end": 644.59,
+      "refined_v2_clip_end": 647.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 645.12,
+      "first_non_music_at": 644.64,
+      "crowd_onset_at": 647.52,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 720,
+      "song": "Orange Juice",
+      "corroboration": 1,
+      "silence_match": 714.564,
+      "clip_start": 708.96,
+      "clip_end": 994.51,
+      "refined_v2_clip_end": 996.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 995.04,
+      "first_non_music_at": 994.56,
+      "crowd_onset_at": 996.0,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 83
+    },
+    {
+      "seconds": 1076,
+      "song": "Paid Time Off",
+      "corroboration": 1,
+      "silence_match": null,
+      "clip_start": 1069.92,
+      "clip_end": 1367.04,
+      "refined_v2_clip_end": 1367.04,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1367.04,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 68
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 276.315,
+      "end": 277.321,
+      "duration": 1.00571
+    },
+    {
+      "start": 280.718,
+      "end": 281.238,
+      "duration": 0.520229
+    },
+    {
+      "start": 289.378,
+      "end": 290.258,
+      "duration": 0.879708
+    },
+    {
+      "start": 309.542,
+      "end": 310.074,
+      "duration": 0.531292
+    },
+    {
+      "start": 312.503,
+      "end": 313.212,
+      "duration": 0.708521
+    },
+    {
+      "start": 315.737,
+      "end": 317.059,
+      "duration": 1.32267
+    },
+    {
+      "start": 321.588,
+      "end": 325.451,
+      "duration": 3.86246
+    },
+    {
+      "start": 630.922,
+      "end": 632.288,
+      "duration": 1.36642
+    },
+    {
+      "start": 640.496,
+      "end": 641.098,
+      "duration": 0.601354
+    },
+    {
+      "start": 642.988,
+      "end": 646.694,
+      "duration": 3.70644
+    },
+    {
+      "start": 686.279,
+      "end": 686.802,
+      "duration": 0.522167
+    },
+    {
+      "start": 699.835,
+      "end": 700.353,
+      "duration": 0.517896
+    },
+    {
+      "start": 707.644,
+      "end": 708.397,
+      "duration": 0.753625
+    },
+    {
+      "start": 709.017,
+      "end": 709.935,
+      "duration": 0.917792
+    },
+    {
+      "start": 709.935,
+      "end": 710.948,
+      "duration": 1.01281
+    },
+    {
+      "start": 710.949,
+      "end": 714.562,
+      "duration": 3.613
+    },
+    {
+      "start": 714.564,
+      "end": 715.111,
+      "duration": 0.547521
+    },
+    {
+      "start": 777.235,
+      "end": 777.934,
+      "duration": 0.69975
+    },
+    {
+      "start": 941.659,
+      "end": 942.245,
+      "duration": 0.585437
+    },
+    {
+      "start": 962.131,
+      "end": 962.776,
+      "duration": 0.645958
+    },
+    {
+      "start": 965.748,
+      "end": 966.725,
+      "duration": 0.977125
+    },
+    {
+      "start": 969.218,
+      "end": 970.705,
+      "duration": 1.4866
+    },
+    {
+      "start": 973.301,
+      "end": 974.547,
+      "duration": 1.24646
+    },
+    {
+      "start": 977.731,
+      "end": 978.692,
+      "duration": 0.960979
+    },
+    {
+      "start": 981.746,
+      "end": 982.733,
+      "duration": 0.987563
+    },
+    {
+      "start": 985.55,
+      "end": 986.655,
+      "duration": 1.10565
+    },
+    {
+      "start": 989.65,
+      "end": 991.028,
+      "duration": 1.37804
+    },
+    {
+      "start": 992.967,
+      "end": 994.949,
+      "duration": 1.98133
+    },
+    {
+      "start": 1012.57,
+      "end": 1013.13,
+      "duration": 0.565187
+    },
+    {
+      "start": 1024.97,
+      "end": 1025.59,
+      "duration": 0.613458
+    },
+    {
+      "start": 1026.01,
+      "end": 1026.53,
+      "duration": 0.525937
+    },
+    {
+      "start": 1037.37,
+      "end": 1037.89,
+      "duration": 0.522167
+    },
+    {
+      "start": 1042.52,
+      "end": 1043.06,
+      "duration": 0.542542
+    },
+    {
+      "start": 1049.92,
+      "end": 1051.23,
+      "duration": 1.30967
+    },
+    {
+      "start": 1060.54,
+      "end": 1061.38,
+      "duration": 0.839542
+    },
+    {
+      "start": 1067.79,
+      "end": 1069.94,
+      "duration": 2.15731
+    },
+    {
+      "start": 1156.49,
+      "end": 1160.04,
+      "duration": 3.54531
+    },
+    {
+      "start": 1388.3,
+      "end": 1405.24,
+      "duration": 16.9441
+    }
+  ],
+  "confidence": {
+    "scores": [
+      60,
+      61,
+      83,
+      68
+    ],
+    "avg": 68.0,
+    "min": 60
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

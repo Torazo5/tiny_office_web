@@ -1,0 +1,649 @@
+{
+  "video_id": "gHL5ApOqMQc",
+  "title": "Robert Plant: Tiny Desk Concert",
+  "duration": 1613,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/gHL5ApOqMQc.mp3",
+  "description_songs": [
+    "Gospel Plough",
+    "Higher Rock",
+    "Everybody's Song",
+    "It's a Beautiful Day Today",
+    "Gallows Pole"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1000 likes, matched all 5 description song(s), retained 5 timestamp(s), filtered 1 non-song chapter entry"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 1
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 250.56,
+      "end": 331.68,
+      "duration": 81.12,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 588.0,
+      "end": 652.8,
+      "duration": 64.79999999999995,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 899.52,
+      "end": 1108.8,
+      "duration": 209.27999999999997,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1317.12,
+      "end": 1393.44,
+      "duration": 76.32000000000016,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1561.44,
+      "end": 1611.84,
+      "duration": 50.399999999999864,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Gospel Plough",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 248.10999999999999,
+      "refined_v2_clip_end": 250.56,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 248.64,
+      "first_non_music_at": 248.16,
+      "crowd_onset_at": 250.56,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 331,
+      "song": "Higher Rock",
+      "corroboration": 0,
+      "silence_match": 331.459,
+      "clip_start": 331.68,
+      "clip_end": 586.03,
+      "refined_v2_clip_end": 588.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 586.08,
+      "first_non_music_at": 585.6,
+      "crowd_onset_at": 588.0,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 653,
+      "song": "Everybody's Song",
+      "corroboration": 0,
+      "silence_match": 651.203,
+      "clip_start": 652.8,
+      "clip_end": 896.59,
+      "refined_v2_clip_end": 899.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 897.12,
+      "first_non_music_at": 896.64,
+      "crowd_onset_at": 899.52,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 1107,
+      "song": "It's a Beautiful Day Today",
+      "corroboration": 0,
+      "silence_match": 1106.87,
+      "clip_start": 1108.8,
+      "clip_end": 1315.15,
+      "refined_v2_clip_end": 1317.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1315.68,
+      "first_non_music_at": 1315.2,
+      "crowd_onset_at": 1317.12,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 1396,
+      "song": "Gallows Pole",
+      "corroboration": 0,
+      "silence_match": 1395.62,
+      "clip_start": 1393.44,
+      "clip_end": 1560.48,
+      "refined_v2_clip_end": 1561.44,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 1559.9,
+      "fade_out_end": 1560.48,
+      "detected_music_release_at": 1560.48,
+      "first_non_music_at": 1560.0,
+      "crowd_onset_at": 1561.44,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 211.24,
+      "end": 212.228,
+      "duration": 0.988833
+    },
+    {
+      "start": 247.739,
+      "end": 249.772,
+      "duration": 2.03281
+    },
+    {
+      "start": 270.363,
+      "end": 270.928,
+      "duration": 0.565083
+    },
+    {
+      "start": 278.184,
+      "end": 278.918,
+      "duration": 0.734167
+    },
+    {
+      "start": 280.281,
+      "end": 281.26,
+      "duration": 0.978833
+    },
+    {
+      "start": 281.51,
+      "end": 282.116,
+      "duration": 0.605417
+    },
+    {
+      "start": 290.941,
+      "end": 291.475,
+      "duration": 0.534125
+    },
+    {
+      "start": 295.686,
+      "end": 296.228,
+      "duration": 0.541792
+    },
+    {
+      "start": 298.721,
+      "end": 299.33,
+      "duration": 0.608396
+    },
+    {
+      "start": 319.422,
+      "end": 320.093,
+      "duration": 0.670729
+    },
+    {
+      "start": 331.459,
+      "end": 332.582,
+      "duration": 1.12281
+    },
+    {
+      "start": 581.551,
+      "end": 582.21,
+      "duration": 0.658854
+    },
+    {
+      "start": 585.645,
+      "end": 587.272,
+      "duration": 1.62613
+    },
+    {
+      "start": 602.011,
+      "end": 602.726,
+      "duration": 0.714875
+    },
+    {
+      "start": 603.647,
+      "end": 604.218,
+      "duration": 0.571187
+    },
+    {
+      "start": 606.585,
+      "end": 607.852,
+      "duration": 1.26702
+    },
+    {
+      "start": 613.206,
+      "end": 614.119,
+      "duration": 0.913396
+    },
+    {
+      "start": 618.078,
+      "end": 618.927,
+      "duration": 0.848958
+    },
+    {
+      "start": 626.205,
+      "end": 628.396,
+      "duration": 2.19131
+    },
+    {
+      "start": 629.191,
+      "end": 630.441,
+      "duration": 1.25008
+    },
+    {
+      "start": 632.677,
+      "end": 633.506,
+      "duration": 0.829771
+    },
+    {
+      "start": 648.649,
+      "end": 649.392,
+      "duration": 0.743687
+    },
+    {
+      "start": 651.203,
+      "end": 655.899,
+      "duration": 4.69558
+    },
+    {
+      "start": 877.428,
+      "end": 878.029,
+      "duration": 0.600437
+    },
+    {
+      "start": 879.393,
+      "end": 879.993,
+      "duration": 0.600167
+    },
+    {
+      "start": 881.288,
+      "end": 882.134,
+      "duration": 0.846229
+    },
+    {
+      "start": 895.477,
+      "end": 898.922,
+      "duration": 3.44496
+    },
+    {
+      "start": 919.855,
+      "end": 920.415,
+      "duration": 0.560396
+    },
+    {
+      "start": 926.406,
+      "end": 926.955,
+      "duration": 0.549354
+    },
+    {
+      "start": 928.375,
+      "end": 929.134,
+      "duration": 0.759521
+    },
+    {
+      "start": 940.441,
+      "end": 941.103,
+      "duration": 0.661208
+    },
+    {
+      "start": 944.958,
+      "end": 945.513,
+      "duration": 0.55525
+    },
+    {
+      "start": 947.118,
+      "end": 947.747,
+      "duration": 0.628458
+    },
+    {
+      "start": 950.26,
+      "end": 950.837,
+      "duration": 0.576896
+    },
+    {
+      "start": 951.7,
+      "end": 952.379,
+      "duration": 0.679625
+    },
+    {
+      "start": 954.638,
+      "end": 955.287,
+      "duration": 0.648646
+    },
+    {
+      "start": 995.793,
+      "end": 996.297,
+      "duration": 0.503938
+    },
+    {
+      "start": 1050.62,
+      "end": 1051.47,
+      "duration": 0.844437
+    },
+    {
+      "start": 1052.67,
+      "end": 1053.24,
+      "duration": 0.575604
+    },
+    {
+      "start": 1054.82,
+      "end": 1055.41,
+      "duration": 0.595687
+    },
+    {
+      "start": 1061.63,
+      "end": 1062.14,
+      "duration": 0.503938
+    },
+    {
+      "start": 1064.29,
+      "end": 1065.19,
+      "duration": 0.899083
+    },
+    {
+      "start": 1073.44,
+      "end": 1074.07,
+      "duration": 0.637708
+    },
+    {
+      "start": 1076.77,
+      "end": 1077.44,
+      "duration": 0.669458
+    },
+    {
+      "start": 1078.19,
+      "end": 1078.95,
+      "duration": 0.758479
+    },
+    {
+      "start": 1082.88,
+      "end": 1083.44,
+      "duration": 0.564354
+    },
+    {
+      "start": 1089.92,
+      "end": 1090.58,
+      "duration": 0.66225
+    },
+    {
+      "start": 1092.87,
+      "end": 1093.56,
+      "duration": 0.687854
+    },
+    {
+      "start": 1101.65,
+      "end": 1102.22,
+      "duration": 0.577562
+    },
+    {
+      "start": 1103.55,
+      "end": 1104.2,
+      "duration": 0.648208
+    },
+    {
+      "start": 1106.87,
+      "end": 1107.56,
+      "duration": 0.683417
+    },
+    {
+      "start": 1108.66,
+      "end": 1109.69,
+      "duration": 1.02446
+    },
+    {
+      "start": 1124.33,
+      "end": 1124.99,
+      "duration": 0.655375
+    },
+    {
+      "start": 1192.23,
+      "end": 1192.78,
+      "duration": 0.550458
+    },
+    {
+      "start": 1240.06,
+      "end": 1240.76,
+      "duration": 0.701896
+    },
+    {
+      "start": 1245.25,
+      "end": 1245.96,
+      "duration": 0.710792
+    },
+    {
+      "start": 1261.75,
+      "end": 1262.92,
+      "duration": 1.17075
+    },
+    {
+      "start": 1266.16,
+      "end": 1266.89,
+      "duration": 0.736729
+    },
+    {
+      "start": 1268.49,
+      "end": 1269.07,
+      "duration": 0.581
+    },
+    {
+      "start": 1270.37,
+      "end": 1271.07,
+      "duration": 0.693542
+    },
+    {
+      "start": 1308.95,
+      "end": 1309.77,
+      "duration": 0.817771
+    },
+    {
+      "start": 1314.99,
+      "end": 1316.52,
+      "duration": 1.53087
+    },
+    {
+      "start": 1331.53,
+      "end": 1332.52,
+      "duration": 0.9865
+    },
+    {
+      "start": 1333.72,
+      "end": 1334.47,
+      "duration": 0.7475
+    },
+    {
+      "start": 1334.48,
+      "end": 1335.91,
+      "duration": 1.43681
+    },
+    {
+      "start": 1338.54,
+      "end": 1339.05,
+      "duration": 0.505792
+    },
+    {
+      "start": 1344.53,
+      "end": 1345.27,
+      "duration": 0.74
+    },
+    {
+      "start": 1348.64,
+      "end": 1349.31,
+      "duration": 0.676479
+    },
+    {
+      "start": 1352.36,
+      "end": 1353.08,
+      "duration": 0.7145
+    },
+    {
+      "start": 1353.57,
+      "end": 1354.3,
+      "duration": 0.723313
+    },
+    {
+      "start": 1356.74,
+      "end": 1357.82,
+      "duration": 1.08154
+    },
+    {
+      "start": 1358.55,
+      "end": 1359.29,
+      "duration": 0.742833
+    },
+    {
+      "start": 1364.13,
+      "end": 1364.75,
+      "duration": 0.61325
+    },
+    {
+      "start": 1367.02,
+      "end": 1367.66,
+      "duration": 0.639375
+    },
+    {
+      "start": 1368.38,
+      "end": 1369.58,
+      "duration": 1.1986
+    },
+    {
+      "start": 1371.22,
+      "end": 1372.05,
+      "duration": 0.836229
+    },
+    {
+      "start": 1373.77,
+      "end": 1374.51,
+      "duration": 0.741417
+    },
+    {
+      "start": 1376.07,
+      "end": 1376.69,
+      "duration": 0.621708
+    },
+    {
+      "start": 1378.28,
+      "end": 1378.93,
+      "duration": 0.646167
+    },
+    {
+      "start": 1379.71,
+      "end": 1380.23,
+      "duration": 0.515396
+    },
+    {
+      "start": 1385.31,
+      "end": 1385.9,
+      "duration": 0.591562
+    },
+    {
+      "start": 1390.53,
+      "end": 1391.29,
+      "duration": 0.763271
+    },
+    {
+      "start": 1394.03,
+      "end": 1395.62,
+      "duration": 1.58994
+    },
+    {
+      "start": 1395.62,
+      "end": 1397.58,
+      "duration": 1.95975
+    },
+    {
+      "start": 1588.32,
+      "end": 1589.09,
+      "duration": 0.7705
+    },
+    {
+      "start": 1589.72,
+      "end": 1590.5,
+      "duration": 0.779312
+    },
+    {
+      "start": 1612.22,
+      "end": 1612.75,
+      "duration": 0.531104
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      76,
+      76,
+      76,
+      76
+    ],
+    "avg": 71.4,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

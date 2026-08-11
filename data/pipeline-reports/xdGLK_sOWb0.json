@@ -1,0 +1,275 @@
+{
+  "video_id": "xdGLK_sOWb0",
+  "title": "Nao: NPR Music Tiny Desk Concert",
+  "duration": 1104,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/xdGLK_sOWb0.mp3",
+  "description_songs": [
+    "If You Ever",
+    "Bad Blood",
+    "Orbit",
+    "Make It Out Alive"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 117 likes, matched all 4 description song(s), retained 4 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 0.96,
+      "end": 6.720000000000001,
+      "duration": 5.760000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 527.52,
+      "end": 538.08,
+      "duration": 10.56000000000006,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 769.92,
+      "end": 840.96,
+      "duration": 71.04000000000008,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1081.92,
+      "end": 1102.08,
+      "duration": 20.159999999999854,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 8,
+      "song": "If You Ever",
+      "corroboration": 0,
+      "silence_match": 8.57771,
+      "clip_start": 6.720000000000001,
+      "clip_end": 268,
+      "refined_v2_clip_end": 268,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 268,
+      "song": "Bad Blood",
+      "corroboration": 0,
+      "silence_match": 266.45,
+      "clip_start": 268,
+      "clip_end": 525.07,
+      "refined_v2_clip_end": 527.52,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 525.12,
+      "first_non_music_at": 524.64,
+      "crowd_onset_at": 527.52,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 68
+    },
+    {
+      "seconds": 538,
+      "song": "Orbit",
+      "corroboration": 0,
+      "silence_match": 537.839,
+      "clip_start": 538.08,
+      "clip_end": 769.39,
+      "refined_v2_clip_end": 769.92,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 769.92,
+      "first_non_music_at": 769.44,
+      "crowd_onset_at": 769.92,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 840,
+      "song": "Make It Out Alive",
+      "corroboration": 0,
+      "silence_match": 840.001,
+      "clip_start": 840.96,
+      "clip_end": 1080.43,
+      "refined_v2_clip_end": 1081.92,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1080.48,
+      "first_non_music_at": 1080.0,
+      "crowd_onset_at": 1081.92,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.719146,
+      "duration": 0.719146
+    },
+    {
+      "start": 7.11508,
+      "end": 8.5441,
+      "duration": 1.42902
+    },
+    {
+      "start": 8.57771,
+      "end": 9.12,
+      "duration": 0.542292
+    },
+    {
+      "start": 9.15321,
+      "end": 9.66492,
+      "duration": 0.511708
+    },
+    {
+      "start": 9.69446,
+      "end": 10.229,
+      "duration": 0.534521
+    },
+    {
+      "start": 10.2631,
+      "end": 10.7705,
+      "duration": 0.507417
+    },
+    {
+      "start": 266.45,
+      "end": 268.649,
+      "duration": 2.19852
+    },
+    {
+      "start": 525.942,
+      "end": 526.492,
+      "duration": 0.549312
+    },
+    {
+      "start": 537.839,
+      "end": 539.746,
+      "duration": 1.90742
+    },
+    {
+      "start": 541.731,
+      "end": 542.388,
+      "duration": 0.6575
+    },
+    {
+      "start": 544.395,
+      "end": 545.15,
+      "duration": 0.75525
+    },
+    {
+      "start": 547.218,
+      "end": 547.805,
+      "duration": 0.586979
+    },
+    {
+      "start": 557.803,
+      "end": 558.407,
+      "duration": 0.603708
+    },
+    {
+      "start": 768.797,
+      "end": 770.001,
+      "duration": 1.20373
+    },
+    {
+      "start": 807.41,
+      "end": 808.114,
+      "duration": 0.704354
+    },
+    {
+      "start": 816.079,
+      "end": 816.587,
+      "duration": 0.507563
+    },
+    {
+      "start": 840.001,
+      "end": 840.84,
+      "duration": 0.838646
+    },
+    {
+      "start": 1080.31,
+      "end": 1081.46,
+      "duration": 1.1454
+    },
+    {
+      "start": 1100.31,
+      "end": 1103.69,
+      "duration": 3.38354
+    }
+  ],
+  "confidence": {
+    "scores": [
+      68,
+      68,
+      76,
+      76
+    ],
+    "avg": 72.0,
+    "min": 68
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

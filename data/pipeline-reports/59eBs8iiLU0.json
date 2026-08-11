@@ -1,0 +1,682 @@
+{
+  "video_id": "59eBs8iiLU0",
+  "title": "E-40: Tiny Desk Concert",
+  "duration": 1599,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/59eBs8iiLU0.mp3",
+  "description_songs": [
+    "Da Bumble",
+    "Yay Area",
+    "Sprinkle Me",
+    "Captain Save a Hoe",
+    "Snap Yo Fingers",
+    "U and Dat",
+    "Choices (Yup)",
+    "Hope I Don't Go Back",
+    "1-Luv",
+    "Function",
+    "Tell Me When to Go"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1300 likes, matched all 11 description song(s), retained 11 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 111.36,
+      "end": 112.8,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 112.8,
+      "end": 123.36,
+      "duration": 10.560000000000002,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 136.32,
+      "end": 137.76,
+      "duration": 1.4399999999999977,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 220.79999999999998,
+      "end": 227.51999999999998,
+      "duration": 6.719999999999999,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 418.08,
+      "end": 436.32,
+      "duration": 18.24000000000001,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 544.8,
+      "end": 547.2,
+      "duration": 2.400000000000091,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 550.0799999999999,
+      "end": 551.04,
+      "duration": 0.9600000000000364,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 557.76,
+      "end": 559.2,
+      "duration": 1.4400000000000546,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 559.68,
+      "end": 562.08,
+      "duration": 2.400000000000091,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 570.24,
+      "end": 573.6,
+      "duration": 3.3600000000000136,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 775.1999999999999,
+      "end": 798.24,
+      "duration": 23.040000000000077,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 900.0,
+      "end": 908.16,
+      "duration": 8.159999999999968,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 919.1999999999999,
+      "end": 921.12,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    },
+    {
+      "start": 1085.76,
+      "end": 1091.04,
+      "duration": 5.279999999999973,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1203.36,
+      "end": 1212.96,
+      "duration": 9.600000000000136,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1324.8,
+      "end": 1340.6399999999999,
+      "duration": 15.839999999999918,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1547.52,
+      "end": 1583.52,
+      "duration": 36.0,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1586.8799999999999,
+      "end": 1588.8,
+      "duration": 1.9200000000000728,
+      "kind": "talk",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 33,
+      "song": "Da Bumble",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 33,
+      "clip_end": 111.31,
+      "refined_v2_clip_end": 112.8,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 111.36,
+      "first_non_music_at": 110.88,
+      "crowd_onset_at": 112.8,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 137,
+      "song": "Yay Area",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 137.76,
+      "clip_end": 218.82999999999998,
+      "refined_v2_clip_end": 220.79999999999998,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 218.88,
+      "first_non_music_at": 218.4,
+      "crowd_onset_at": 220.8,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 264,
+      "song": "Sprinkle Me",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 227.51999999999998,
+      "clip_end": 357,
+      "refined_v2_clip_end": 357,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 357,
+      "song": "Captain Save a Hoe",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 357,
+      "clip_end": 416.59,
+      "refined_v2_clip_end": 418.08,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 416.64,
+      "first_non_music_at": 416.16,
+      "crowd_onset_at": 418.08,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 449,
+      "song": "Snap Yo Fingers",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 436.32,
+      "clip_end": 542.35,
+      "refined_v2_clip_end": 544.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 542.4,
+      "first_non_music_at": 541.92,
+      "crowd_onset_at": 544.8,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 597,
+      "song": "U and Dat",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 573.6,
+      "clip_end": 773.23,
+      "refined_v2_clip_end": 775.1999999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 773.28,
+      "first_non_music_at": 772.8,
+      "crowd_onset_at": 775.2,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 812,
+      "song": "Choices (Yup)",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 798.24,
+      "clip_end": 898.51,
+      "refined_v2_clip_end": 900.0,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 899.04,
+      "first_non_music_at": 898.56,
+      "crowd_onset_at": 900.0,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 969,
+      "song": "Hope I Don't Go Back",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 969,
+      "clip_end": 1086.72,
+      "refined_v2_clip_end": 1085.76,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "smart_overlap",
+      "overlap_detected": true,
+      "fade_out_start": 1085.76,
+      "fade_out_end": 1086.72,
+      "detected_music_release_at": 1086.72,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1085.76,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 1105,
+      "song": "1-Luv",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1091.04,
+      "clip_end": 1202.35,
+      "refined_v2_clip_end": 1203.36,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1202.4,
+      "first_non_music_at": 1201.92,
+      "crowd_onset_at": 1203.36,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 1227,
+      "song": "Function",
+      "corroboration": 0,
+      "silence_match": 1221.64,
+      "clip_start": 1212.96,
+      "clip_end": 1324.27,
+      "refined_v2_clip_end": 1324.8,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1324.32,
+      "first_non_music_at": 1323.84,
+      "crowd_onset_at": 1324.8,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 1351,
+      "song": "Tell Me When to Go",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 1340.6399999999999,
+      "clip_end": 1546.99,
+      "refined_v2_clip_end": 1547.52,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 1547.04,
+      "first_non_music_at": 1546.56,
+      "crowd_onset_at": 1547.52,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 0.0,
+      "end": 0.613958,
+      "duration": 0.613958
+    },
+    {
+      "start": 0.62375,
+      "end": 1.32429,
+      "duration": 0.700542
+    },
+    {
+      "start": 1.34725,
+      "end": 2.01121,
+      "duration": 0.663958
+    },
+    {
+      "start": 235.24,
+      "end": 235.836,
+      "duration": 0.595708
+    },
+    {
+      "start": 239.28,
+      "end": 239.886,
+      "duration": 0.605687
+    },
+    {
+      "start": 249.447,
+      "end": 250.797,
+      "duration": 1.34983
+    },
+    {
+      "start": 250.84,
+      "end": 251.515,
+      "duration": 0.674958
+    },
+    {
+      "start": 251.543,
+      "end": 252.207,
+      "duration": 0.664167
+    },
+    {
+      "start": 252.234,
+      "end": 252.738,
+      "duration": 0.503917
+    },
+    {
+      "start": 426.098,
+      "end": 427.591,
+      "duration": 1.493
+    },
+    {
+      "start": 428.536,
+      "end": 429.162,
+      "duration": 0.625958
+    },
+    {
+      "start": 429.592,
+      "end": 430.724,
+      "duration": 1.13127
+    },
+    {
+      "start": 566.644,
+      "end": 567.254,
+      "duration": 0.610229
+    },
+    {
+      "start": 784.633,
+      "end": 785.508,
+      "duration": 0.87475
+    },
+    {
+      "start": 785.508,
+      "end": 786.851,
+      "duration": 1.3425
+    },
+    {
+      "start": 788.553,
+      "end": 789.456,
+      "duration": 0.903229
+    },
+    {
+      "start": 794.064,
+      "end": 794.61,
+      "duration": 0.545417
+    },
+    {
+      "start": 797.039,
+      "end": 797.67,
+      "duration": 0.630542
+    },
+    {
+      "start": 798.229,
+      "end": 798.826,
+      "duration": 0.596625
+    },
+    {
+      "start": 798.829,
+      "end": 799.363,
+      "duration": 0.533604
+    },
+    {
+      "start": 799.365,
+      "end": 799.874,
+      "duration": 0.508708
+    },
+    {
+      "start": 799.877,
+      "end": 800.385,
+      "duration": 0.508396
+    },
+    {
+      "start": 898.266,
+      "end": 898.997,
+      "duration": 0.731729
+    },
+    {
+      "start": 912.432,
+      "end": 913.134,
+      "duration": 0.701771
+    },
+    {
+      "start": 935.969,
+      "end": 936.777,
+      "duration": 0.808292
+    },
+    {
+      "start": 954.788,
+      "end": 955.359,
+      "duration": 0.571583
+    },
+    {
+      "start": 955.377,
+      "end": 956.011,
+      "duration": 0.634062
+    },
+    {
+      "start": 956.04,
+      "end": 956.665,
+      "duration": 0.625354
+    },
+    {
+      "start": 1209.53,
+      "end": 1210.8,
+      "duration": 1.26733
+    },
+    {
+      "start": 1211.43,
+      "end": 1212.09,
+      "duration": 0.658667
+    },
+    {
+      "start": 1212.11,
+      "end": 1213.07,
+      "duration": 0.950313
+    },
+    {
+      "start": 1213.1,
+      "end": 1213.7,
+      "duration": 0.595125
+    },
+    {
+      "start": 1213.75,
+      "end": 1214.32,
+      "duration": 0.571125
+    },
+    {
+      "start": 1214.36,
+      "end": 1214.94,
+      "duration": 0.575833
+    },
+    {
+      "start": 1215.02,
+      "end": 1215.53,
+      "duration": 0.504146
+    },
+    {
+      "start": 1216.76,
+      "end": 1217.34,
+      "duration": 0.575458
+    },
+    {
+      "start": 1221.64,
+      "end": 1222.19,
+      "duration": 0.541687
+    },
+    {
+      "start": 1333.22,
+      "end": 1333.73,
+      "duration": 0.516271
+    },
+    {
+      "start": 1334.98,
+      "end": 1335.79,
+      "duration": 0.814437
+    },
+    {
+      "start": 1336.7,
+      "end": 1337.36,
+      "duration": 0.662312
+    },
+    {
+      "start": 1337.41,
+      "end": 1337.92,
+      "duration": 0.503625
+    },
+    {
+      "start": 1567.99,
+      "end": 1568.56,
+      "duration": 0.569063
+    },
+    {
+      "start": 1588.01,
+      "end": 1599.22,
+      "duration": 11.211
+    }
+  ],
+  "confidence": {
+    "scores": [
+      53,
+      61,
+      53,
+      53,
+      61,
+      61,
+      61,
+      53,
+      61,
+      76,
+      61
+    ],
+    "avg": 59.5,
+    "min": 53
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}

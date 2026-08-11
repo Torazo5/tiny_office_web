@@ -1,0 +1,352 @@
+{
+  "video_id": "yUBvP_Rj-SY",
+  "title": "The LOX: Tiny Desk Concert",
+  "duration": 1064,
+  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/yUBvP_Rj-SY.mp3",
+  "description_songs": [
+    "All for the Love",
+    "Recognize",
+    "Good Love",
+    "Good Times",
+    "By Your Side",
+    "Kiss Your A** Goodbye",
+    "Money, Power & Respect",
+    "We Gonna Make It"
+  ],
+  "method": "comments",
+  "resolve_notes": {
+    "A_comments": "ok \u2014 1700 likes, matched all 8 description song(s), retained 8 timestamp(s)"
+  },
+  "comment_filter": {
+    "cross_checked": true,
+    "parsed": 1,
+    "accepted": 1,
+    "rejected": 0,
+    "filtered_entries": 0
+  },
+  "refine_method": "yamnet",
+  "boundary_spans": [
+    {
+      "start": 221.76,
+      "end": 234.71999999999997,
+      "duration": 12.95999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 321.12,
+      "end": 332.64,
+      "duration": 11.519999999999982,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 587.04,
+      "end": 649.4399999999999,
+      "duration": 62.39999999999998,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 812.64,
+      "end": 858.72,
+      "duration": 46.08000000000004,
+      "kind": "applause",
+      "contains_talk": true
+    },
+    {
+      "start": 1034.8799999999999,
+      "end": 1037.76,
+      "duration": 2.880000000000109,
+      "kind": "applause",
+      "contains_talk": false
+    },
+    {
+      "start": 1040.1599999999999,
+      "end": 1049.28,
+      "duration": 9.120000000000118,
+      "kind": "applause",
+      "contains_talk": true
+    }
+  ],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "All for the Love",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 0,
+      "clip_end": 44,
+      "refined_v2_clip_end": 44,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 44,
+      "song": "Recognize",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 44,
+      "clip_end": 132,
+      "refined_v2_clip_end": 132,
+      "start_refined": false,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 45
+    },
+    {
+      "seconds": 132,
+      "song": "Good Love",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 132,
+      "clip_end": 221.76,
+      "refined_v2_clip_end": 221.76,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 221.76,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 235,
+      "song": "Good Times",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 234.71999999999997,
+      "clip_end": 321.07,
+      "refined_v2_clip_end": 321.12,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 321.12,
+      "first_non_music_at": 320.64,
+      "crowd_onset_at": 321.12,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 61
+    },
+    {
+      "seconds": 332,
+      "song": "By Your Side",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 332.64,
+      "clip_end": 403,
+      "refined_v2_clip_end": 403,
+      "start_refined": true,
+      "end_trimmed": false,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": null,
+      "end_unresolved_reason": "refined_v2 found no end transition candidate",
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 403,
+      "song": "Kiss Your A** Goodbye",
+      "corroboration": 0,
+      "silence_match": null,
+      "clip_start": 403,
+      "clip_end": 584.59,
+      "refined_v2_clip_end": 587.04,
+      "start_refined": false,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "music_release_before_audience",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": 584.64,
+      "first_non_music_at": 584.16,
+      "crowd_onset_at": 587.04,
+      "end_unresolved_reason": null,
+      "suspect": false,
+      "confidence": 53
+    },
+    {
+      "seconds": 654,
+      "song": "Money, Power & Respect",
+      "corroboration": 0,
+      "silence_match": 649.592,
+      "clip_start": 649.4399999999999,
+      "clip_end": 812.64,
+      "refined_v2_clip_end": 812.64,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": false,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 812.64,
+      "end_unresolved_reason": "no two-frame music release found before the transition candidate",
+      "suspect": false,
+      "confidence": 76
+    },
+    {
+      "seconds": 859,
+      "song": "We Gonna Make It",
+      "corroboration": 0,
+      "silence_match": 859.603,
+      "clip_start": 858.72,
+      "clip_end": 1034.8799999999999,
+      "refined_v2_clip_end": 1034.8799999999999,
+      "start_refined": true,
+      "end_trimmed": true,
+      "start_trim_mode": null,
+      "detected_music_start_at": null,
+      "start_audience_episode": null,
+      "end_guard": [],
+      "end_trim_mode": "refined_v2_unresolved",
+      "overlap_detected": true,
+      "fade_out_start": null,
+      "fade_out_end": null,
+      "detected_music_release_at": null,
+      "first_non_music_at": null,
+      "crowd_onset_at": 1034.88,
+      "end_unresolved_reason": "music/crowd overlap did not release within 4.0s",
+      "suspect": false,
+      "confidence": 76
+    }
+  ],
+  "silence_intervals": [
+    {
+      "start": 625.89,
+      "end": 626.587,
+      "duration": 0.697
+    },
+    {
+      "start": 637.179,
+      "end": 637.694,
+      "duration": 0.515271
+    },
+    {
+      "start": 649.592,
+      "end": 654.178,
+      "duration": 4.58602
+    },
+    {
+      "start": 837.061,
+      "end": 837.844,
+      "duration": 0.782479
+    },
+    {
+      "start": 839.375,
+      "end": 839.976,
+      "duration": 0.601437
+    },
+    {
+      "start": 841.495,
+      "end": 842.333,
+      "duration": 0.838333
+    },
+    {
+      "start": 857.351,
+      "end": 859.557,
+      "duration": 2.20596
+    },
+    {
+      "start": 859.603,
+      "end": 860.235,
+      "duration": 0.632625
+    },
+    {
+      "start": 1050.48,
+      "end": 1051.08,
+      "duration": 0.598687
+    },
+    {
+      "start": 1051.08,
+      "end": 1064.24,
+      "duration": 13.1566
+    }
+  ],
+  "confidence": {
+    "scores": [
+      45,
+      45,
+      53,
+      61,
+      53,
+      53,
+      76,
+      76
+    ],
+    "avg": 57.8,
+    "min": 45
+  },
+  "pipeline": "v3_smart_overlapper",
+  "pipeline_version": "v3_smart_overlapper",
+  "overlap_strategy": "score_aware_music_applause_tail",
+  "overlap_config": {
+    "max_hold_sec": 4.0,
+    "music_release_frames": 2,
+    "pre_audience_release_lookback_sec": 3.0,
+    "audience_safety_lead_sec": 0.05,
+    "local_audio_hop_sec": 0.1,
+    "local_transient_frames": 2
+  },
+  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+}
