@@ -16,7 +16,7 @@ export function RatingSummary({
   const bars = [...distribution].reverse();
 
   return (
-    <section aria-labelledby="ratings-heading" className="mb-6 max-w-[440px] border-y border-border py-4">
+    <section aria-labelledby="ratings-heading" className="mb-5 max-w-[360px] border-y border-border py-3">
       <div className="flex items-center justify-between gap-4 border-b border-border pb-2">
         <h2 id="ratings-heading" className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
           Ratings
@@ -26,9 +26,9 @@ export function RatingSummary({
         </p>
       </div>
 
-      <div className="mt-4 flex items-end justify-between gap-5">
+      <div className="mt-3 flex items-end justify-between gap-4">
         <div className="min-w-0 flex-1">
-          <div className="flex h-14 items-end gap-1" aria-label="Rating distribution from half a star to five stars">
+          <div className="flex h-11 items-end gap-1" aria-label="Rating distribution from half a star to five stars">
             {bars.map((entry) => (
               <div key={entry.rating} className="flex h-full min-w-0 flex-1 items-end">
                 <div
@@ -39,16 +39,16 @@ export function RatingSummary({
               </div>
             ))}
           </div>
-          <p className="mt-2 text-[11px] text-muted-foreground">
+          <p className="mt-1.5 text-[11px] text-muted-foreground">
             {reviewCount.toLocaleString()} {reviewCount === 1 ? "review" : "reviews"}
           </p>
         </div>
 
         <div className="shrink-0 text-right">
-          <div className="font-mono text-[27px] font-medium leading-none text-foreground">
+          <div className="font-mono text-[24px] font-medium leading-none text-foreground">
             {average === null ? "—" : average.toFixed(1)}
           </div>
-          {average !== null && <StarRating rating={average} size="mt-3 text-[14px]" />}
+          {average !== null && <StarRating rating={average} size="mt-2 text-[12px]" />}
         </div>
       </div>
     </section>
