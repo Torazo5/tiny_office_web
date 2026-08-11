@@ -32,10 +32,10 @@ test("equal-power fade reaches full volume and silence at the endpoints", () => 
 test("special fade-out reaches silence with a short tail", () => {
   assert.equal(specialFadeOutGain(0, 2), 1);
   assert.ok(specialFadeOutGain(0.5, 2) > 0 && specialFadeOutGain(0.5, 2) < 1);
-  assert.equal(specialFadeOutGain(0.85, 2), 0);
-  assert.equal(specialFadeOutGain(0.9, 2), 0);
+  assert.ok(specialFadeOutGain(0.9, 2) > 0);
+  assert.equal(specialFadeOutGain(0.93, 2), 0);
   assert.equal(specialFadeOutGain(1, 2), 0);
-  assert.equal(specialFadeOutGain(0, 0.2), 1);
-  assert.ok(specialFadeOutGain(0.99, 0.2) > 0);
-  assert.equal(specialFadeOutGain(1, 0.2), 0);
+  assert.equal(specialFadeOutGain(0, 0.1), 1);
+  assert.ok(specialFadeOutGain(0.99, 0.1) > 0);
+  assert.equal(specialFadeOutGain(1, 0.1), 0);
 });

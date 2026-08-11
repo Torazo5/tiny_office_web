@@ -12,7 +12,7 @@ export type FadeWindow = {
 };
 
 /** Keep the player silent for the final part of a generic fade-out. */
-export const SPECIAL_FADE_OUT_SILENCE_TAIL_SECONDS = 0.3;
+export const SPECIAL_FADE_OUT_SILENCE_TAIL_SECONDS = 0.15;
 
 /**
  * Only accept the data contract promised by the smart-overlap reports. A
