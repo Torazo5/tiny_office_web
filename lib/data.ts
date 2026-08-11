@@ -21,6 +21,7 @@ import type {
 type PerformanceRow = {
   video_id: string;
   artist: string;
+  source_title: string;
   date: string | null;
   duration: number;
   method: Performance["method"];
@@ -80,6 +81,7 @@ function mapPerformance(
   return {
     videoId: performance.video_id,
     artist: performance.artist,
+    sourceTitle: performance.source_title,
     date: performance.date,
     duration: Number(performance.duration),
     method: performance.method,
@@ -107,7 +109,7 @@ async function loadBrowsePerformances(): Promise<Performance[]> {
   const [performancesResult, songsResult, ratingsResult] = await Promise.all([
     supabase
       .from("performances")
-      .select("video_id, artist, date, duration, method, confidence_avg, confidence_min, verified")
+      .select("video_id, artist, source_title, date, duration, method, confidence_avg, confidence_min, verified")
       .neq("method", "manual")
       .order("artist"),
     supabase
@@ -162,7 +164,7 @@ export async function getBrowsePerformancePage(
   const supabase = createPublicClient();
   const performancesResult = await supabase
     .from("performances")
-    .select("video_id, artist, date, duration, method, confidence_avg, confidence_min, verified", { count: "exact" })
+    .select("video_id, artist, source_title, date, duration, method, confidence_avg, confidence_min, verified", { count: "exact" })
     .neq("method", "manual")
     .order("verified", { ascending: false })
     .order("confidence_avg", { ascending: false })
@@ -228,7 +230,7 @@ async function loadPerformance(videoId: string): Promise<Performance | null> {
   const [performanceResult, songsResult] = await Promise.all([
     supabase
       .from("performances")
-      .select("video_id, artist, date, duration, method, confidence_avg, confidence_min, verified")
+      .select("video_id, artist, source_title, date, duration, method, confidence_avg, confidence_min, verified")
       .eq("video_id", videoId)
       .neq("method", "manual")
       .maybeSingle(),
@@ -467,7 +469,7 @@ export async function getPlaylist(id: string, ownerId?: string | null): Promise<
 
   const { data: performanceRows, error: performancesError } = await supabase
     .from("performances")
-    .select("video_id, artist, date, duration")
+    .select("video_id, artist, source_title, date, duration")
     .in("video_id", videoIds);
   throwIfError("Loading playlist performances", performancesError);
 
@@ -513,7 +515,7 @@ export async function getPlaylist(id: string, ownerId?: string | null): Promise<
           position: track.position,
           title: performance.artist,
           artist: performance.artist,
-          performanceLabel: `Tiny Desk Concert${performance.date ? ` · ${performance.date}` : ""}`,
+          performanceLabel: performance.source_title,
           performanceVideoId: performance.video_id,
           songIndex: null,
           clipStart: firstPlayableSong?.clipStart ?? 0,
@@ -530,7 +532,7 @@ export async function getPlaylist(id: string, ownerId?: string | null): Promise<
         position: track.position,
         title: song.title,
         artist: performance.artist,
-        performanceLabel: `Tiny Desk Concert${performance.date ? ` · ${performance.date}` : ""}`,
+        performanceLabel: performance.source_title,
         performanceVideoId: performance.video_id,
         songIndex: song.song_index,
         clipStart: Number(song.clip_start),
@@ -550,7 +552,7 @@ const loadPlaylistOptions = cache(async () => {
       songIndex: song.index,
       title: song.title,
       artist: performance.artist,
-      performanceLabel: `Tiny Desk Concert${performance.date ? ` · ${performance.date}` : ""}`,
+      performanceLabel: performance.sourceTitle,
       clipStart: song.clipStart,
       clipEnd: song.clipEnd,
       duration: Math.max(0, song.clipEnd - song.clipStart),
@@ -560,7 +562,7 @@ const loadPlaylistOptions = cache(async () => {
     performanceVideoId: performance.videoId,
     title: performance.artist,
     artist: performance.artist,
-    performanceLabel: `Tiny Desk Concert${performance.date ? ` · ${performance.date}` : ""}`,
+    performanceLabel: performance.sourceTitle,
     duration: performance.duration,
     songClips: performance.songs.map(({ clipStart, clipEnd }) => ({ clipStart, clipEnd })),
   }));

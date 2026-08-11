@@ -36,6 +36,8 @@ export interface Performance {
   /** YouTube video ID — same as reports/<video_id>.json */
   videoId: string;
   artist: string;
+  /** Original YouTube title captured by the pipeline and stored in Supabase. */
+  sourceTitle: string;
   /**
    * ISO date string, or null. The pipeline's yt-dlp call never captured
    * upload_date (see PIPELINE.md's JSON schema — it's not a field), so

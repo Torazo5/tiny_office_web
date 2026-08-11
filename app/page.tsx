@@ -4,6 +4,7 @@ import { AnalyticsOnMount } from "@/components/analytics";
 import { PerformanceCard } from "@/components/performance-card";
 import { getCurrentUser } from "@/lib/auth";
 import { getBrowsePerformancePage, getPerformances, getPlaylists } from "@/lib/data";
+import { fuzzySearch } from "@/lib/fuzzy-search";
 
 export default async function BrowsePage({
   searchParams,
@@ -22,11 +23,15 @@ export default async function BrowsePage({
     ? playlists.filter((playlist) => playlist.ownerId === user.id && playlist.type === "videos")
     : [];
   const filteredPerformances = query
-    ? (searchPerformances ?? []).filter((performance) =>
-        [performance.artist, performance.videoId, ...performance.songs.map((song) => song.title)]
-          .join(" ")
-          .toLowerCase()
-          .includes(query.toLowerCase()),
+    ? fuzzySearch(
+        searchPerformances ?? [],
+        query,
+        (performance) => [
+          performance.artist,
+          performance.sourceTitle,
+          performance.videoId,
+          ...performance.songs.map((song) => song.title),
+        ].join(" "),
       )
     : catalogPage?.performances ?? [];
 

@@ -58,7 +58,7 @@ export function PlaybackCustomizer({
 
   return (
     <div className="mt-3">
-      <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-primary/30 bg-[radial-gradient(circle_at_top_left,oklch(0.68_0.17_25_/_0.14),transparent_52%)] px-3 py-2.5">
+      <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-primary/30 bg-secondary/25 px-3 py-2.5">
         <div className="flex min-w-0 items-center gap-2.5">
           <span className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-primary/35 bg-primary/10 text-primary shadow-[0_0_18px_oklch(0.68_0.17_25_/_0.15)]">
             <Sparkles aria-hidden size={15} />

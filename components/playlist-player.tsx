@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { PlayerControls } from "@/components/player-controls";
 import { PlaybackCustomizer } from "@/components/playback-customizer";
 import { DEFAULT_PLAYBACK_SETTINGS, type PlaybackSettings } from "@/lib/playback-settings";
@@ -40,6 +41,7 @@ export function PlaylistPlayer({
   onCurrentTrackChange,
   onTrackPlay,
   playButtonHintTarget,
+  sidebarHeader,
 }: {
   tracks: PlaylistTrack[];
   playlistType: PlaylistType;
@@ -51,6 +53,7 @@ export function PlaylistPlayer({
   onCurrentTrackChange?: (track: PlaylistTrack) => void;
   onTrackPlay?: (track: PlaylistTrack) => void;
   playButtonHintTarget?: string;
+  sidebarHeader?: React.ReactNode;
 }) {
   const playerHostRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
@@ -612,77 +615,92 @@ export function PlaylistPlayer({
   const { start: timelineStart, end: timelineEnd } = timelineBounds(currentTrack);
 
   return (
-    <section className="mb-8 rounded-xl border border-border bg-card p-4 sm:p-5 md:max-w-[680px]">
-      <div className="relative aspect-video overflow-hidden rounded-lg border border-border bg-black">
-        <div ref={playerHostRef} className="absolute inset-0 h-full w-full" aria-label="Playlist player" />
-      </div>
-
-      <PlayerControls
-        currentTime={currentTime}
-        rangeStart={timelineStart}
-        rangeEnd={timelineEnd}
-        isPlaying={isPlaying}
-        isReady={isPlayerReady}
-        onTogglePlay={() => {
-          const player = getPlayer();
-          if (!player) return;
-          if (isPlaying) player.pauseVideo();
-          else player.playVideo();
-        }}
-        onSeek={seekTo}
-        onSkip={skipBy}
-        onPrevious={advanceToPrevious}
-        onNext={() => advanceToNext()}
-        previousDisabled={isShuffling ? shufflePosition === 0 : currentIndex === 0}
-        nextDisabled={isShuffling
-          ? shufflePosition >= tracks.length - 1
-          : currentIndex >= tracks.length - 1}
-        isShuffling={isShuffling}
-        onToggleShuffle={toggleShuffle}
-        isLooping={isLooping}
-        onToggleLoop={toggleLoop}
-        onScrubStart={() => {
-          scrubbingRef.current = true;
-        }}
-        onScrubEnd={() => {
-          scrubbingRef.current = false;
-        }}
-        volume={volume}
-        onVolumeChange={(nextVolume) => {
-          cancelFade();
-          clearTransitionTimers();
-          const player = getPlayer();
-          if (player) setPlayerVolume(player, nextVolume);
-        }}
-        playButtonHintTarget={playButtonHintTarget}
-        compact
-      />
-
-      <PlaybackCustomizer
-        settings={playbackSettings}
-        onSettingsChange={setPlaybackSettings}
-        isSignedIn={isSignedIn}
-      />
-
-      <div className="mt-3 flex flex-wrap items-center gap-3">
-        <div className="min-w-0 flex-1 sm:ml-2">
-          <div className="truncate text-[13.5px] font-semibold text-foreground">{currentTrack.title}</div>
-          <div className="truncate text-[12px] text-muted-foreground">
-            {playlistType === "songs" ? currentTrack.artist : "Full Tiny Desk performance"} · {kindLabel}
+    <section className="mb-8 max-w-[980px] rounded-xl border border-border bg-card p-4 sm:p-5">
+      <div className="grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_240px]">
+        <div className="min-w-0">
+          <div className="relative aspect-video overflow-hidden rounded-lg border border-border bg-black">
+            <div ref={playerHostRef} className="absolute inset-0 h-full w-full" aria-label="Playlist player" />
           </div>
+
+          <PlayerControls
+            currentTime={currentTime}
+            rangeStart={timelineStart}
+            rangeEnd={timelineEnd}
+            isPlaying={isPlaying}
+            isReady={isPlayerReady}
+            onTogglePlay={() => {
+              const player = getPlayer();
+              if (!player) return;
+              if (isPlaying) player.pauseVideo();
+              else player.playVideo();
+            }}
+            onSeek={seekTo}
+            onSkip={skipBy}
+            onPrevious={advanceToPrevious}
+            onNext={() => advanceToNext()}
+            previousDisabled={isShuffling ? shufflePosition === 0 : currentIndex === 0}
+            nextDisabled={isShuffling
+              ? shufflePosition >= tracks.length - 1
+              : currentIndex >= tracks.length - 1}
+            isShuffling={isShuffling}
+            onToggleShuffle={toggleShuffle}
+            isLooping={isLooping}
+            onToggleLoop={toggleLoop}
+            onScrubStart={() => {
+              scrubbingRef.current = true;
+            }}
+            onScrubEnd={() => {
+              scrubbingRef.current = false;
+            }}
+            volume={volume}
+            onVolumeChange={(nextVolume) => {
+              cancelFade();
+              clearTransitionTimers();
+              const player = getPlayer();
+              if (player) setPlayerVolume(player, nextVolume);
+            }}
+            playButtonHintTarget={playButtonHintTarget}
+            compact
+          />
+
+          <PlaybackCustomizer
+            settings={playbackSettings}
+            onSettingsChange={setPlaybackSettings}
+            isSignedIn={isSignedIn}
+          />
         </div>
-        <span className="font-mono text-[11px] text-muted-foreground">
-          {isBuffering ? "Loading…" : `${currentIndex + 1} / ${tracks.length}`}
-        </span>
+
+        <div className="space-y-4">
+          {sidebarHeader}
+          <Link
+            href={`/video/${currentTrack.performanceVideoId}`}
+            className="group block rounded-xl border border-border bg-secondary/25 p-4 transition-colors hover:border-primary/55 hover:bg-secondary/50"
+          >
+          <div className="flex items-center justify-between gap-2 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-primary">
+            <span>Now playing</span>
+            <span>{isBuffering ? "Loading…" : `${currentIndex + 1} / ${tracks.length}`}</span>
+          </div>
+          <h2 className="mt-3 line-clamp-2 text-[15px] font-semibold text-foreground">{currentTrack.title}</h2>
+          <p className="mt-1 truncate text-[12px] text-muted-foreground">{currentTrack.artist}</p>
+          <div className="mt-4 border-t border-border/80 pt-3">
+            <div className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">From this performance</div>
+            <div className="mt-1 line-clamp-2 text-[12.5px] font-medium text-foreground">{currentTrack.performanceLabel}</div>
+            <div className="mt-1 text-[11px] text-muted-foreground">{playlistType === "songs" ? "Song clip" : "Full performance"} · {kindLabel}</div>
+          </div>
+          <span className="mt-4 inline-flex text-[12px] font-semibold text-primary transition-transform group-hover:translate-x-0.5">
+            Open performance →
+          </span>
+          <p className="mt-4 border-t border-border/80 pt-3 text-[11.5px] leading-relaxed text-muted-foreground">
+            One player stays mounted while the next {playlistType === "songs" ? "song clip" : "performance"} loads in place.
+            {playlistType === "videos"
+              ? onlySongMode
+                ? " Gaps between mapped songs are skipped."
+                : " This performance plays from start to finish."
+              : ""}
+          </p>
+          </Link>
+        </div>
       </div>
-      <p className="mt-3 text-[12px] text-muted-foreground/75">
-        One player stays mounted while the next {playlistType === "songs" ? "song clip" : "performance"} loads in place.
-        {playlistType === "videos"
-          ? onlySongMode
-            ? " Full performances skip gaps and advance after the final song."
-            : " Full performances play normally from start to finish."
-          : ""}
-      </p>
     </section>
   );
 }

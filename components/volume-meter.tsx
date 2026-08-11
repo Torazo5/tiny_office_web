@@ -10,18 +10,20 @@ export function VolumeMeter({
   value,
   onChange,
   disabled = false,
+  compact = false,
 }: {
   value: number;
   onChange: (value: number) => void;
   disabled?: boolean;
+  compact?: boolean;
 }) {
   const volume = clampVolume(value);
   const VolumeIcon = volume === 0 ? VolumeX : volume < 50 ? Volume1 : Volume2;
 
   return (
-    <div className="flex items-center gap-2.5" aria-label="Volume meter">
-      <VolumeIcon className="size-4 shrink-0 text-muted-foreground" aria-hidden />
-      <label className="flex min-w-0 flex-1 items-center gap-2">
+    <div className={`flex items-center ${compact ? "gap-1.5" : "gap-2.5"}`} aria-label="Volume meter">
+      <VolumeIcon className={`${compact ? "size-3.5" : "size-4"} shrink-0 text-muted-foreground`} aria-hidden />
+      <label className={`flex min-w-0 flex-1 items-center ${compact ? "gap-0" : "gap-2"}`}>
         <span className="sr-only">Volume</span>
         <input
           type="range"
@@ -37,7 +39,7 @@ export function VolumeMeter({
           }}
           aria-label={`Volume ${volume}%`}
         />
-        <output className="w-8 text-right font-mono text-[11px] text-muted-foreground">{volume}%</output>
+        {!compact && <output className="w-8 text-right font-mono text-[11px] text-muted-foreground">{volume}%</output>}
       </label>
     </div>
   );

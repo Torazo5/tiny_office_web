@@ -15,6 +15,7 @@ export const PERFORMANCES: Performance[] = [
   {
     videoId: "XfzpYcwiUrA",
     artist: "Adele",
+    sourceTitle: "Adele: NPR Music Tiny Desk Concert",
     date: null,
     duration: 874,
     method: "comments",
@@ -34,6 +35,7 @@ export const PERFORMANCES: Performance[] = [
   {
     videoId: "jIIuzB11dsA",
     artist: "Harry Styles",
+    sourceTitle: "Harry Styles: NPR Music Tiny Desk Concert",
     date: null,
     duration: 1153,
     method: "comments",
@@ -52,6 +54,7 @@ export const PERFORMANCES: Performance[] = [
   {
     videoId: "FvVnP8G6ITs",
     artist: "Taylor Swift",
+    sourceTitle: "Taylor Swift: NPR Music Tiny Desk Concert",
     date: null,
     duration: 1739,
     method: "comments",
@@ -70,6 +73,7 @@ export const PERFORMANCES: Performance[] = [
   {
     videoId: "ferZnZ0_rSM",
     artist: "Anderson .Paak & The Free Nationals",
+    sourceTitle: "Anderson .Paak & The Free Nationals: NPR Music Tiny Desk Concert",
     date: null,
     duration: 938,
     method: "comments",
@@ -90,6 +94,7 @@ export const PERFORMANCES: Performance[] = [
   {
     videoId: "lkDYKk9k-2E",
     artist: "Tyler Childers",
+    sourceTitle: "Tyler Childers: NPR Music Tiny Desk Concert",
     date: null,
     duration: 580,
     method: "comments",
@@ -107,6 +112,7 @@ export const PERFORMANCES: Performance[] = [
   {
     videoId: "y38qQRg3UDI",
     artist: "Dua Lipa",
+    sourceTitle: "Dua Lipa: Tiny Desk Concert",
     date: null,
     duration: 1105,
     method: "comments",
@@ -125,6 +131,7 @@ export const PERFORMANCES: Performance[] = [
   {
     videoId: "cMIJsoaxRjk",
     artist: "Justin Timberlake",
+    sourceTitle: "Justin Timberlake: NPR Music Tiny Desk Concert",
     date: null,
     duration: 1540,
     method: "comments",
@@ -151,6 +158,7 @@ export const PERFORMANCES: Performance[] = [
   {
     videoId: "QrR_gm6RqCo",
     artist: "Mac Miller",
+    sourceTitle: "Mac Miller: NPR Music Tiny Desk Concert",
     date: null,
     duration: 1029,
     method: "yamnet",
@@ -168,6 +176,7 @@ export const PERFORMANCES: Performance[] = [
   {
     videoId: "e81LZCHhNKQ",
     artist: "Napalm Death",
+    sourceTitle: "Napalm Death: NPR Music Tiny Desk Concert",
     date: null,
     duration: 1139,
     method: "yamnet",

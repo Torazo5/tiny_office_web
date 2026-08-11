@@ -59,7 +59,7 @@ export default async function VideoPage({
         initialPlaybackSettings={playbackDefaults}
         isSignedIn={Boolean(user)}
       >
-        <main className="grid min-w-0 items-start gap-8 p-4 sm:p-8 lg:grid-cols-[1.4fr_1fr]">
+        <main className="grid min-w-0 items-start gap-8 p-4 sm:p-8 lg:grid-cols-2 lg:gap-5">
           <div className="min-w-0">
             <VideoEmbed videoId={performance.videoId} duration={performance.duration} />
             <VideoFeatureHints />

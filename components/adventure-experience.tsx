@@ -6,7 +6,6 @@ import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { PlaylistPlayer } from "@/components/playlist-player";
 import { AdventurePlayFeatureHints, AdventureSetupFeatureHints } from "@/components/feature-hints";
 import { RecentlyPlayedPanel, useRecentlyPlayed } from "@/components/recently-played";
-import { formatTime } from "@/lib/format";
 import { trackEvent } from "@/components/analytics";
 import type { PlaybackSettings } from "@/lib/playback-settings";
 import type {
@@ -276,54 +275,6 @@ function AdventureSessionPlayer({
   return (
     <main className="p-4 sm:p-8">
       <div className="mx-auto max-w-[920px]">
-        <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
-            <div className="mb-2 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-              Adventure queue · {sourceLabel(session.source)} · {modeLabel(session.mode)}
-            </div>
-            <h1 className="text-[28px] font-bold text-foreground">Your random picks</h1>
-            <p className="mt-1 text-[13px] text-muted-foreground">
-              Everything is shuffled. Save a favorite whenever one finds you.
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto">
-            <button
-              type="button"
-              onClick={() => setShowRecentlyPlayed((isOpen) => !isOpen)}
-              aria-expanded={showRecentlyPlayed}
-              className={`inline-flex items-center gap-2 rounded-lg border px-3.5 py-2 text-[13px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
-                showRecentlyPlayed
-                  ? "border-primary/50 bg-primary/10 text-primary"
-                  : "border-input text-muted-foreground hover:border-primary/50 hover:text-foreground"
-              }`}
-            >
-              <History aria-hidden className="size-4" />
-              Recently played
-              {recentlyPlayed.length > 0 && (
-                <span className="rounded-full bg-secondary px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground">
-                  {recentlyPlayed.length}
-                </span>
-              )}
-            </button>
-            <button
-              type="button"
-              onClick={onRestart}
-              className="rounded-lg border border-input px-3.5 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Change settings
-            </button>
-          </div>
-        </div>
-
-        {showRecentlyPlayed && (
-          <RecentlyPlayedPanel
-            tracks={recentlyPlayed}
-            onPlay={onPlayRecentlyPlayed}
-            onClear={onClearRecentlyPlayed}
-            onClose={() => setShowRecentlyPlayed(false)}
-          />
-        )}
-
         <PlaylistPlayer
           tracks={session.tracks}
           playlistType={session.source}
@@ -335,21 +286,44 @@ function AdventureSessionPlayer({
           initialPlaybackSettings={initialPlaybackSettings}
           isSignedIn={isSignedIn}
           playButtonHintTarget="adventure-play"
+          sidebarHeader={
+            <div>
+              <div className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+                Adventure queue · {sourceLabel(session.source)} · {modeLabel(session.mode)}
+              </div>
+            </div>
+          }
         />
         <AdventurePlayFeatureHints />
 
-        {currentTrack && currentItem && (
-          <section className="flex flex-col justify-between gap-4 rounded-xl border border-border bg-card p-5 sm:flex-row sm:items-center">
-            <div className="min-w-0">
-              <div className="mb-1 font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                Current pick
-              </div>
-              <h2 className="truncate text-lg font-semibold text-foreground">{currentTrack.title}</h2>
-              <p className="mt-1 truncate text-[13px] text-muted-foreground">
-                {currentTrack.artist} · {currentTrack.performanceLabel} · {formatTime(currentTrack.duration)}
-              </p>
-            </div>
-            <div className="shrink-0">
+        <div className="mb-5 flex flex-wrap items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setShowRecentlyPlayed((isOpen) => !isOpen)}
+            aria-expanded={showRecentlyPlayed}
+            className={`inline-flex items-center gap-2 rounded-lg border px-3.5 py-2 text-[13px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+              showRecentlyPlayed
+                ? "border-primary/50 bg-primary/10 text-primary"
+                : "border-input text-muted-foreground hover:border-primary/50 hover:text-foreground"
+            }`}
+          >
+            <History aria-hidden className="size-4" />
+            Recently played
+            {recentlyPlayed.length > 0 && (
+              <span className="rounded-full bg-secondary px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground">
+                {recentlyPlayed.length}
+              </span>
+            )}
+          </button>
+          <button
+            type="button"
+            onClick={onRestart}
+            className="rounded-lg border border-input px-3.5 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Change settings
+          </button>
+          {currentItem && (
+            <div className="ml-auto shrink-0">
               <AddToPlaylistButton
                 item={currentItem}
                 playlists={compatiblePlaylists}
@@ -357,7 +331,16 @@ function AdventureSessionPlayer({
                 returnPath="/adventure"
               />
             </div>
-          </section>
+          )}
+        </div>
+
+        {showRecentlyPlayed && (
+          <RecentlyPlayedPanel
+            tracks={recentlyPlayed}
+            onPlay={onPlayRecentlyPlayed}
+            onClear={onClearRecentlyPlayed}
+            onClose={() => setShowRecentlyPlayed(false)}
+          />
         )}
       </div>
     </main>
