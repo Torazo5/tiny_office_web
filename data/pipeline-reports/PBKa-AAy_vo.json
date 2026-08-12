@@ -2,21 +2,15 @@
   "video_id": "PBKa-AAy_vo",
   "title": "Daniel Caesar: NPR Music Tiny Desk Concert",
   "duration": 993,
-  "audio_path": "/home/torazo/code/tiny_office/reports/v3_smart_overlapper/audio/PBKa-AAy_vo.mp3",
-  "description_songs": [],
-  "method": "manual",
+  "audio_path": "/home/torazo/code/tiny_office/reports/audio/PBKa-AAy_vo.mp3",
+  "description_songs": [
+    "Japanese Denim",
+    "Get You",
+    "Best Part (feat. H.E.R.)"
+  ],
+  "method": "comments",
   "resolve_notes": {
-    "A_comments": "failed \u2014 no description setlist available for cross-check",
-    "B_yamnet": "failed \u2014 no description setlist or no audio classification available",
-    "C_silence": "failed \u2014 no description setlist to map gaps onto",
-    "D_transcript": "failed \u2014 no transcript available or no description setlist"
-  },
-  "comment_filter": {
-    "cross_checked": false,
-    "parsed": 6,
-    "accepted": 0,
-    "rejected": 0,
-    "filtered_entries": 0
+    "A_comments": "ok \u2014 3300 likes, template #0"
   },
   "refine_method": "yamnet",
   "boundary_spans": [
@@ -24,25 +18,77 @@
       "start": 272.64,
       "end": 277.44,
       "duration": 4.800000000000011,
-      "kind": "applause",
-      "contains_talk": false
+      "kind": "applause"
+    },
+    {
+      "start": 624.9599999999999,
+      "end": 627.36,
+      "duration": 2.400000000000091,
+      "kind": "talk"
     },
     {
       "start": 644.16,
-      "end": 652.32,
-      "duration": 8.160000000000082,
-      "kind": "applause",
-      "contains_talk": true
+      "end": 651.84,
+      "duration": 7.680000000000064,
+      "kind": "applause"
     },
     {
       "start": 967.68,
+      "end": 968.64,
+      "duration": 0.9600000000000364,
+      "kind": "applause"
+    },
+    {
+      "start": 971.04,
+      "end": 978.72,
+      "duration": 7.680000000000064,
+      "kind": "applause"
+    },
+    {
+      "start": 981.5999999999999,
       "end": 985.4399999999999,
-      "duration": 17.75999999999999,
-      "kind": "applause",
-      "contains_talk": true
+      "duration": 3.840000000000032,
+      "kind": "applause"
     }
   ],
-  "candidates": [],
+  "candidates": [
+    {
+      "seconds": 0,
+      "song": "Japanese Denim",
+      "corroboration": 2,
+      "silence_match": 0.0,
+      "clip_start": 0,
+      "clip_end": 272.64,
+      "start_refined": false,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 82
+    },
+    {
+      "seconds": 279,
+      "song": "Get You",
+      "corroboration": 2,
+      "silence_match": 281.929,
+      "clip_start": 277.44,
+      "clip_end": 644.16,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 90
+    },
+    {
+      "seconds": 650,
+      "song": "Best Part (feat. H.E.R.)",
+      "corroboration": 2,
+      "silence_match": null,
+      "clip_start": 651.84,
+      "clip_end": 967.68,
+      "start_refined": true,
+      "end_trimmed": true,
+      "suspect": false,
+      "confidence": 75
+    }
+  ],
   "silence_intervals": [
     {
       "start": 0.0,
@@ -106,20 +152,12 @@
     }
   ],
   "confidence": {
-    "scores": [],
-    "avg": 0,
-    "min": 0
-  },
-  "pipeline": "v3_smart_overlapper",
-  "pipeline_version": "v3_smart_overlapper",
-  "overlap_strategy": "score_aware_music_applause_tail",
-  "overlap_config": {
-    "max_hold_sec": 4.0,
-    "music_release_frames": 2,
-    "pre_audience_release_lookback_sec": 3.0,
-    "audience_safety_lead_sec": 0.05,
-    "local_audio_hop_sec": 0.1,
-    "local_transient_frames": 2
-  },
-  "source_pipeline": "scripts/analyze_video.py (read-only backend; smart overlap builder)"
+    "scores": [
+      82,
+      90,
+      75
+    ],
+    "avg": 82.3,
+    "min": 75
+  }
 }
