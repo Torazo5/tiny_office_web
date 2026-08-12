@@ -3,6 +3,7 @@ import "server-only";
 import { cache } from "react";
 import { getPerformances } from "@/lib/data";
 import {
+  getCanonicalArtistSlug,
   getArtistSlug,
   getConcertRoutes,
 } from "@/lib/seo-routes";
@@ -35,7 +36,8 @@ export const getSeoArtists = cache(async (): Promise<SeoArtist[]> => {
 
 export const getSeoArtist = cache(async (slug: string): Promise<SeoArtist | null> => {
   const artists = await getSeoArtists();
-  return artists.find((artist) => artist.slug === slug) ?? null;
+  const canonicalSlug = getCanonicalArtistSlug(slug);
+  return artists.find((artist) => artist.slug === canonicalSlug) ?? null;
 });
 
 export const getSeoConcerts = cache(async () => getConcertRoutes(await getSeoPerformances()));

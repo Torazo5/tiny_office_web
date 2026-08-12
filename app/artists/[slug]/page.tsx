@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { Header } from "@/components/header";
 import { getSeoArtist, getSeoArtists, getSeoPerformances } from "@/lib/seo-data";
 import { getArtistPath, getConcertName, getConcertPath } from "@/lib/seo-routes";
@@ -33,6 +33,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
   const { slug } = await params;
   const artist = await getSeoArtist(slug);
   if (!artist) notFound();
+  if (slug !== artist.slug) permanentRedirect(getArtistPath(artist.artist));
 
   const allPerformances = await getSeoPerformances();
 

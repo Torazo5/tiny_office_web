@@ -23,6 +23,14 @@ export function getArtistSlug(artist: string): string {
   return slugify(artist);
 }
 
+const artistSlugAliases: Record<string, string> = {
+  "daniel-ceasar": "daniel-caesar",
+};
+
+export function getCanonicalArtistSlug(slug: string): string {
+  return artistSlugAliases[slug] ?? slug;
+}
+
 export function getArtistPath(artist: string): string {
   return `/artists/${getArtistSlug(artist)}`;
 }
@@ -40,7 +48,6 @@ export function getConcertName(performance: SeoPerformance): string {
 
 function getBaseConcertSlug(performance: SeoPerformance): string {
   const concertName = getConcertName(performance)
-    .replace(/\bnpr\s+music\b/gi, "")
     .replace(/\bconcert\b/gi, "")
     .trim();
 
