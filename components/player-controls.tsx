@@ -16,6 +16,12 @@ type PlayerControlsProps = {
   onSkip: (seconds: number) => void;
   onPrevious?: () => void;
   onNext?: () => void;
+  previousLabel?: string;
+  nextLabel?: string;
+  onPreviousSong?: () => void;
+  onNextSong?: () => void;
+  previousSongDisabled?: boolean;
+  nextSongDisabled?: boolean;
   previousDisabled?: boolean;
   nextDisabled?: boolean;
   isShuffling?: boolean;
@@ -46,6 +52,12 @@ export function PlayerControls({
   onSkip,
   onPrevious,
   onNext,
+  previousLabel = "Previous song",
+  nextLabel = "Next song",
+  onPreviousSong,
+  onNextSong,
+  previousSongDisabled = false,
+  nextSongDisabled = false,
   previousDisabled = false,
   nextDisabled = false,
   isShuffling = false,
@@ -116,7 +128,8 @@ export function PlayerControls({
                 onClick={onPrevious}
                 disabled={!isReady || previousDisabled}
                 className="flex h-8 w-8 items-center justify-center rounded-full border border-input text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground disabled:cursor-default disabled:opacity-40"
-                aria-label="Previous song"
+                aria-label={previousLabel}
+                title={previousLabel}
               >
                 <SkipBack size={15} aria-hidden />
               </button>
@@ -144,7 +157,8 @@ export function PlayerControls({
                 onClick={onNext}
                 disabled={!isReady || nextDisabled}
                 className="flex h-8 w-8 items-center justify-center rounded-full border border-input text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground disabled:cursor-default disabled:opacity-40"
-                aria-label="Next song"
+                aria-label={nextLabel}
+                title={nextLabel}
               >
                 <SkipForward size={15} aria-hidden />
               </button>
@@ -179,6 +193,38 @@ export function PlayerControls({
             </button>
           </div>
         </div>
+
+        {(onPreviousSong || onNextSong) && (
+          <div className="mt-2 flex items-center justify-center gap-1.5 border-t border-border pt-2">
+            <span className="mr-1 text-[11px] font-medium text-muted-foreground">Song</span>
+            {onPreviousSong && (
+              <button
+                type="button"
+                onClick={onPreviousSong}
+                disabled={!isReady || previousSongDisabled}
+                className="flex h-8 items-center gap-1 rounded-md border border-input px-2 text-[11px] font-medium text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground disabled:cursor-default disabled:opacity-40"
+                aria-label="Previous song"
+                title="Previous song in this video"
+              >
+                <SkipBack size={14} aria-hidden />
+                Previous
+              </button>
+            )}
+            {onNextSong && (
+              <button
+                type="button"
+                onClick={onNextSong}
+                disabled={!isReady || nextSongDisabled}
+                className="flex h-8 items-center gap-1 rounded-md border border-input px-2 text-[11px] font-medium text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground disabled:cursor-default disabled:opacity-40"
+                aria-label="Next song"
+                title="Next song in this video"
+              >
+                Next
+                <SkipForward size={14} aria-hidden />
+              </button>
+            )}
+          </div>
+        )}
 
         <div className="mt-2 border-t border-border pt-2">
           <label className="block">
@@ -258,7 +304,8 @@ export function PlayerControls({
               onClick={onPrevious}
               disabled={!isReady || previousDisabled}
               className="flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground disabled:cursor-default disabled:opacity-40"
-              aria-label="Previous song"
+              aria-label={previousLabel}
+              title={previousLabel}
             >
               <SkipBack size={18} aria-hidden />
             </button>
@@ -288,7 +335,8 @@ export function PlayerControls({
               onClick={onNext}
               disabled={!isReady || nextDisabled}
               className="flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground disabled:cursor-default disabled:opacity-40"
-              aria-label="Next song"
+              aria-label={nextLabel}
+              title={nextLabel}
             >
               <SkipForward size={18} aria-hidden />
             </button>

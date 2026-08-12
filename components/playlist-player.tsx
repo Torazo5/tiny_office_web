@@ -6,6 +6,7 @@ import { PlayerControls } from "@/components/player-controls";
 import { PlaybackCustomizer } from "@/components/playback-customizer";
 import { SongHeartButton } from "@/components/song-heart-button";
 import { DEFAULT_PLAYBACK_SETTINGS, type PlaybackSettings } from "@/lib/playback-settings";
+import { findSongNavigationTarget, type SongNavigationDirection } from "@/lib/song-navigation";
 import type { PlaylistTrack, PlaylistType } from "@/lib/types";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
 import {
@@ -453,6 +454,23 @@ export function PlaylistPlayer({
     seekTo(currentTime + seconds, true);
   }
 
+  function navigateWithinVideo(direction: SongNavigationDirection) {
+    if (playlistType !== "videos") return;
+    const track = tracksRef.current[currentIndexRef.current];
+    const player = getPlayer();
+    if (!track || !player) return;
+
+    const target = findSongNavigationTarget(track.songClips, player.getCurrentTime(), direction);
+    if (target === null) return;
+
+    cancelFade();
+    clearTransitionTimers();
+    player.seekTo(target, true);
+    player.playVideo();
+    previousTimeRef.current = target;
+    setCurrentTime(target);
+  }
+
   useEffect(() => {
     tracksRef.current = tracks;
   }, [tracks]);
@@ -664,6 +682,13 @@ export function PlaylistPlayer({
   const isBuffering = playerState === PLAYER_BUFFERING;
   const kindLabel = playlistType === "songs" ? "Song playlist" : "Video playlist";
   const { start: timelineStart, end: timelineEnd } = timelineBounds(currentTrack);
+  const hasSongNavigation = playlistType === "videos" && currentTrack.songClips.some((song) => song.clipEnd > song.clipStart);
+  const previousSongTarget = hasSongNavigation
+    ? findSongNavigationTarget(currentTrack.songClips, currentTime, "previous")
+    : null;
+  const nextSongTarget = hasSongNavigation
+    ? findSongNavigationTarget(currentTrack.songClips, currentTime, "next")
+    : null;
 
   return (
     <section className="mb-8 max-w-[980px] rounded-xl border border-border bg-card p-4 sm:p-5">
@@ -689,6 +714,12 @@ export function PlaylistPlayer({
             onSkip={skipBy}
             onPrevious={advanceToPrevious}
             onNext={() => advanceToNext()}
+            previousLabel={playlistType === "videos" ? "Previous video" : "Previous song"}
+            nextLabel={playlistType === "videos" ? "Next video" : "Next song"}
+            onPreviousSong={hasSongNavigation ? () => navigateWithinVideo("previous") : undefined}
+            onNextSong={hasSongNavigation ? () => navigateWithinVideo("next") : undefined}
+            previousSongDisabled={previousSongTarget === null}
+            nextSongDisabled={nextSongTarget === null}
             previousDisabled={isShuffling ? shufflePosition === 0 : currentIndex === 0}
             nextDisabled={isShuffling
               ? shufflePosition >= tracks.length - 1
