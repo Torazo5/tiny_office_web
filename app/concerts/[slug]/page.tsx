@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { Header } from "@/components/header";
 import { getSeoConcert, getSeoConcerts } from "@/lib/seo-data";
 import {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: ConcertPageProps): Promise<Me
     title: `${performance.artist}: ${getConcertName(performance)} | Tiny Office`,
     description: getConcertDescription(performance),
     alternates: {
-      canonical: new URL(`/concerts/${slug}`, getSiteUrl()).toString(),
+      canonical: new URL(`/concerts/${concert.slug}`, getSiteUrl()).toString(),
     },
   };
 }
@@ -39,6 +39,7 @@ export default async function ConcertPage({ params }: ConcertPageProps) {
   const { slug } = await params;
   const concert = await getSeoConcert(slug);
   if (!concert) notFound();
+  if (slug !== concert.slug) permanentRedirect(`/concerts/${concert.slug}`);
 
   const { performance } = concert;
   const artistPath = getArtistPath(performance.artist);

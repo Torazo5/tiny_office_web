@@ -1,6 +1,8 @@
 import type { Performance } from "@/lib/types";
 
-export type SeoPerformance = Pick<Performance, "videoId" | "artist" | "sourceTitle">;
+export type SeoPerformance = Pick<Performance, "videoId" | "artist" | "sourceTitle" | "concertSlug"> & {
+  songs?: Performance["songs"];
+};
 
 export type ConcertRoute = {
   performance: Performance;
@@ -46,12 +48,21 @@ export function getConcertName(performance: SeoPerformance): string {
   return sourceTitle || "Tiny Desk Concert";
 }
 
-function getBaseConcertSlug(performance: SeoPerformance): string {
+function getConcertSlugBase(performance: SeoPerformance, stripNprMusic: boolean): string {
   const concertName = getConcertName(performance)
+    .replace(stripNprMusic ? /\bnpr\s+music\b/gi : /$^/, "")
     .replace(/\bconcert\b/gi, "")
     .trim();
 
   return slugify(`${performance.artist} ${concertName || "Tiny Desk"}`);
+}
+
+function getBaseConcertSlug(performance: SeoPerformance): string {
+  return getConcertSlugBase(performance, true);
+}
+
+function compareStableConcertIdentity(left: SeoPerformance, right: SeoPerformance): number {
+  return left.videoId < right.videoId ? -1 : left.videoId > right.videoId ? 1 : 0;
 }
 
 export function getConcertSlug(
@@ -59,12 +70,17 @@ export function getConcertSlug(
   allPerformances?: readonly SeoPerformance[],
 ): string {
   const baseSlug = getBaseConcertSlug(performance);
-  if (!allPerformances) return baseSlug;
+  if (!allPerformances) return performance.concertSlug ?? baseSlug;
 
   const conflicts = allPerformances.filter(
     (candidate) => getBaseConcertSlug(candidate) === baseSlug,
   );
-  return conflicts.length > 1 ? `${baseSlug}-${slugify(performance.videoId)}` : baseSlug;
+  if (conflicts.length <= 1) return baseSlug;
+
+  const occurrence = [...conflicts]
+    .sort(compareStableConcertIdentity)
+    .findIndex((candidate) => candidate.videoId === performance.videoId);
+  return `${baseSlug}-${Math.max(0, occurrence) + 1}`;
 }
 
 export function getConcertPath(
@@ -72,6 +88,21 @@ export function getConcertPath(
   allPerformances?: readonly SeoPerformance[],
 ): string {
   return `/concerts/${getConcertSlug(performance, allPerformances)}`;
+}
+
+export function getConcertSlugMap(
+  performances: readonly SeoPerformance[],
+): Record<string, string> {
+  return Object.fromEntries(
+    performances.map((performance) => [performance.videoId, getConcertSlug(performance, performances)]),
+  );
+}
+
+/** Slugs emitted before duplicate concert identities received numeric suffixes. */
+export function getLegacyConcertSlugs(performance: SeoPerformance): string[] {
+  const displaySlug = getConcertSlugBase(performance, false);
+  const disambiguatedSlug = `${getBaseConcertSlug(performance)}-${slugify(performance.videoId)}`;
+  return [...new Set([displaySlug, disambiguatedSlug])];
 }
 
 export function getConcertRoutes(performances: Performance[]): ConcertRoute[] {
@@ -82,5 +113,8 @@ export function getConcertRoutes(performances: Performance[]): ConcertRoute[] {
 }
 
 export function getConcertDescription(performance: SeoPerformance): string {
-  return `Listen to ${performance.artist}'s ${getConcertName(performance)} song by song in Tiny Office, with the full setlist and playable song clips.`;
+  const details = !performance.songs || performance.songs.length > 0
+    ? "with the full setlist and playable song clips"
+    : "with the available concert details";
+  return `Listen to ${performance.artist}'s ${getConcertName(performance)} song by song in Tiny Office, ${details}.`;
 }

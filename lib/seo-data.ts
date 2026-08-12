@@ -6,6 +6,7 @@ import {
   getCanonicalArtistSlug,
   getArtistSlug,
   getConcertRoutes,
+  getLegacyConcertSlugs,
 } from "@/lib/seo-routes";
 import type { Performance } from "@/lib/types";
 
@@ -44,5 +45,7 @@ export const getSeoConcerts = cache(async () => getConcertRoutes(await getSeoPer
 
 export const getSeoConcert = cache(async (slug: string) => {
   const concerts = await getSeoConcerts();
-  return concerts.find((concert) => concert.slug === slug) ?? null;
+  return concerts.find((concert) => concert.slug === slug)
+    ?? concerts.find((concert) => getLegacyConcertSlugs(concert.performance).includes(slug))
+    ?? null;
 });

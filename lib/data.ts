@@ -6,6 +6,7 @@ import { getCurrentUser } from "@/lib/auth";
 import { formatProfileLabel, getIdenticonUrl, getProfilesByUserId } from "@/lib/profile-data";
 import { createPublicClient } from "@/lib/supabase/public";
 import { createClient } from "@/lib/supabase/server";
+import { getConcertSlugMap } from "@/lib/seo-routes";
 import type {
   Performance,
   Playlist,
@@ -169,6 +170,16 @@ export type BrowsePerformancePage = {
   nextOffset: number;
 };
 
+type PerformanceRouteRow = Pick<PerformanceRow, "video_id" | "artist" | "source_title">;
+
+function withConcertSlugs(performances: Performance[]): Performance[] {
+  const concertSlugs = getConcertSlugMap(performances);
+  return performances.map((performance) => ({
+    ...performance,
+    concertSlug: concertSlugs[performance.videoId],
+  }));
+}
+
 /**
  * The home page deliberately loads a small, quality-first slice. Full catalog
  * reads still power search and the other authenticated product surfaces.
@@ -180,16 +191,30 @@ export async function getBrowsePerformancePage(
   const safeOffset = Math.max(0, Math.floor(offset));
   const safeLimit = Math.min(24, Math.max(1, Math.floor(limit)));
   const supabase = createPublicClient();
-  const performancesResult = await supabase
-    .from("performances")
-    .select("video_id, artist, source_title, date, duration, method, confidence_avg, confidence_min, verified", { count: "exact" })
-    .order("verified", { ascending: false })
-    .order("confidence_avg", { ascending: false })
-    .order("artist")
-    .range(safeOffset, safeOffset + safeLimit - 1);
+  const [performancesResult, routeRowsResult] = await Promise.all([
+    supabase
+      .from("performances")
+      .select("video_id, artist, source_title, date, duration, method, confidence_avg, confidence_min, verified", { count: "exact" })
+      .order("verified", { ascending: false })
+      .order("confidence_avg", { ascending: false })
+      .order("artist")
+      .range(safeOffset, safeOffset + safeLimit - 1),
+    supabase
+      .from("performances")
+      .select("video_id, artist, source_title")
+      .order("artist")
+      .order("video_id"),
+  ]);
   throwIfError("Loading catalog page", performancesResult.error);
+  throwIfError("Loading catalog route identities", routeRowsResult.error);
 
   const rows = (performancesResult.data ?? []) as PerformanceRow[];
+  const routeRows = (routeRowsResult.data ?? []) as PerformanceRouteRow[];
+  const concertSlugs = getConcertSlugMap(routeRows.map((row) => ({
+    videoId: row.video_id,
+    artist: row.artist,
+    sourceTitle: row.source_title,
+  })));
   const videoIds = rows.map((row) => row.video_id);
   if (videoIds.length === 0) {
     return { performances: [], hasMore: false, nextOffset: safeOffset };
@@ -216,13 +241,14 @@ export async function getBrowsePerformancePage(
   const ratings = ratingsByPerformance((ratingsResult.data ?? []) as BrowseRatingRow[]);
   const performances = rows.map((row) => {
     const values = ratings.get(row.video_id) ?? [];
-    return mapPerformance(
+    const performance = mapPerformance(
       row,
       songsByPerformance.get(row.video_id) ?? [],
       values.length ? values.reduce((total, rating) => total + rating, 0) / values.length : null,
       values.length,
       ratingDistribution(values),
     );
+    return { ...performance, concertSlug: concertSlugs[performance.videoId] };
   });
   const nextOffset = safeOffset + rows.length;
   return {
@@ -234,7 +260,7 @@ export async function getBrowsePerformancePage(
 
 // Search must see newly seeded catalog rows immediately. Keep this request
 // scoped rather than putting the full catalog behind a persistent cache.
-const loadPerformances = cache(async () => loadBrowsePerformances());
+const loadPerformances = cache(async () => withConcertSlugs(await loadBrowsePerformances()));
 
 async function loadPerformance(videoId: string): Promise<Performance | null> {
   const supabase = createPublicClient();

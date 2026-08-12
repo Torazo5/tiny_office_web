@@ -68,6 +68,8 @@ export interface Performance {
   artist: string;
   /** Original YouTube title captured by the pipeline and stored in Supabase. */
   sourceTitle: string;
+  /** Derived canonical SEO route slug, assigned across the full catalog. */
+  concertSlug?: string;
   /**
    * ISO date string, or null. The pipeline's yt-dlp call never captured
    * upload_date (see PIPELINE.md's JSON schema — it's not a field), so
