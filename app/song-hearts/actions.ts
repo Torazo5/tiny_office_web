@@ -55,6 +55,7 @@ export async function toggleSongHeart(
   revalidateTag(PUBLIC_CATALOG_CACHE_TAG, "max");
   revalidatePath(`/video/${performanceVideoId}`);
   revalidatePath("/random-pick");
+  revalidatePath("/liked-songs");
   revalidatePath("/adventure");
   return { hearted: shouldHeart, heartCount: Number(updatedSong.heart_count) };
 }

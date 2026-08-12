@@ -64,6 +64,15 @@ export async function Header({
           Playlists
         </Link>
 
+        {user && (
+          <Link
+            href="/liked-songs"
+            className="shrink-0 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Liked songs
+          </Link>
+        )}
+
         <Link
           href="/random-pick"
           className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-md border border-border bg-secondary/45 px-2.5 py-1.5 text-sm font-semibold text-foreground transition-colors hover:border-yellow-400/45 hover:bg-yellow-400/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background"

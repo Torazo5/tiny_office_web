@@ -42,6 +42,19 @@ export interface Song extends OverlapPlaybackData {
   hearted?: boolean;
 }
 
+export interface LikedSong {
+  performanceVideoId: string;
+  songIndex: number;
+  title: string;
+  artist: string;
+  performanceLabel: string;
+  performanceDate: string | null;
+  clipStart: number;
+  clipEnd: number;
+  heartCount: number;
+  heartedAt: string;
+}
+
 export interface RatingDistributionEntry {
   rating: number;
   count: number;

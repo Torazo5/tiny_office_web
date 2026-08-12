@@ -24,10 +24,10 @@ export default async function VideoPage({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ preset_id?: string }>;
+  searchParams: Promise<{ preset_id?: string; song?: string }>;
 }) {
   const { id } = await params;
-  const { preset_id: previewPresetId } = await searchParams;
+  const { preset_id: previewPresetId, song: requestedSong } = await searchParams;
   const user = await getCurrentUser();
   const [{ performance, presets, selectedPreset, selectedCut }, engagement, heartedSongKeys, playlists, playbackDefaults] = await Promise.all([
     getPerformanceWithSelectedPreset(id, user?.id, previewPresetId),
@@ -37,6 +37,10 @@ export default async function VideoPage({
     user ? getPlaybackDefaults(user.id) : Promise.resolve(DEFAULT_PLAYBACK_SETTINGS),
   ]);
   if (!performance) notFound();
+  const requestedSongIndex = requestedSong ? Number.parseInt(requestedSong, 10) : null;
+  const initialSong = requestedSongIndex && requestedSongIndex > 0
+    ? performance.songs.find((song) => song.index === requestedSongIndex)
+    : undefined;
   const songPlaylists = user
     ? playlists.filter((playlist) => playlist.ownerId === user.id && playlist.type === "songs")
     : [];
@@ -56,7 +60,7 @@ export default async function VideoPage({
     <>
       <Header user={user} />
       <PlayerProvider
-        initialStart={performance.songs[0]?.clipStart ?? 0}
+        initialStart={initialSong?.clipStart ?? performance.songs[0]?.clipStart ?? 0}
         songs={performance.songs}
         initialPlaybackSettings={playbackDefaults}
         isSignedIn={Boolean(user)}

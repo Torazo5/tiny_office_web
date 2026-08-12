@@ -12,6 +12,7 @@ export function SongHeartButton({
   initialHeartCount = 0,
   isSignedIn,
   returnPath,
+  onHeartChange,
 }: {
   performanceVideoId: string;
   songIndex: number;
@@ -19,6 +20,7 @@ export function SongHeartButton({
   initialHeartCount?: number;
   isSignedIn: boolean;
   returnPath: string;
+  onHeartChange?: (hearted: boolean) => void;
 }) {
   const [hearted, setHearted] = useState(initialHearted);
   const [heartCount, setHeartCount] = useState(initialHeartCount);
@@ -48,8 +50,10 @@ export function SongHeartButton({
         setError(result.error);
         return;
       }
-      setHearted(result?.hearted ?? nextHearted);
+      const updatedHearted = result?.hearted ?? nextHearted;
+      setHearted(updatedHearted);
       setHeartCount(result?.heartCount ?? heartCount + (nextHearted ? 1 : -1));
+      onHeartChange?.(updatedHearted);
     });
   }
 
