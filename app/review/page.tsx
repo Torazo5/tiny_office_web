@@ -7,6 +7,15 @@ import { isAdminSession } from "@/lib/admin-session";
 import { getAdminListeningPresets, getAdminTruthRequests } from "@/lib/review-data";
 import { getReviewQueue } from "@/lib/data";
 import { lockAdmin } from "@/app/review/actions";
+import { getAdminFeedbackSubmissions } from "@/lib/feedback-data";
+import { markFeedbackReviewed } from "@/app/feedback/actions";
+
+function formatFeedbackDate(value: string) {
+  return new Intl.DateTimeFormat("en-SG", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(new Date(value));
+}
 
 export default async function ReviewQueuePage() {
   const user = await getCurrentUser();
@@ -33,12 +42,14 @@ export default async function ReviewQueuePage() {
     );
   }
 
-  const [queue, requests, presets] = await Promise.all([
+  const [queue, requests, presets, feedback] = await Promise.all([
     getReviewQueue(),
     getAdminTruthRequests(),
     getAdminListeningPresets(),
+    getAdminFeedbackSubmissions(),
   ]);
   const pendingRequests = requests.filter((request) => request.status === "pending");
+  const newFeedbackCount = feedback.filter((item) => item.status === "new").length;
 
   return (
     <>
@@ -48,13 +59,45 @@ export default async function ReviewQueuePage() {
           <div>
             <h1 className="text-xl font-semibold text-foreground">Review dashboard</h1>
             <p className="mt-1 text-[13px] text-muted-foreground">
-              {pendingRequests.length} pending main-truth request{pendingRequests.length === 1 ? "" : "s"} · {presets.length} listening presets
+              {pendingRequests.length} pending main-truth request{pendingRequests.length === 1 ? "" : "s"} · {presets.length} listening presets · {newFeedbackCount} new feedback
             </p>
           </div>
           <form action={lockAdmin}>
             <button type="submit" className="rounded-lg border border-input px-3.5 py-2 text-[12.5px] font-medium text-muted-foreground hover:text-foreground">Lock admin mode</button>
           </form>
         </div>
+
+        <section className="mb-8">
+          <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
+            <h2 className="text-[13px] font-semibold uppercase tracking-wide text-muted-foreground">Feedback</h2>
+            <span className="text-[12px] text-muted-foreground">{newFeedbackCount} new · {feedback.length} total</span>
+          </div>
+          <div className="overflow-hidden rounded-lg border border-border">
+            {feedback.length === 0 && <p className="px-4 py-4 text-[13px] text-muted-foreground">No feedback yet.</p>}
+            {feedback.map((item) => (
+              <article key={item.id} className="border-t border-border px-4 py-4 first:border-t-0">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="whitespace-pre-wrap break-words text-[13.5px] leading-relaxed text-foreground">{item.message}</p>
+                    <p className="mt-2 text-[11.5px] text-muted-foreground">
+                      {item.submittedByName ?? "Anonymous visitor"} · {formatFeedbackDate(item.createdAt)}{item.sourcePath ? ` · ${item.sourcePath}` : ""}
+                    </p>
+                  </div>
+                  {item.status === "new" ? (
+                    <form action={markFeedbackReviewed} className="shrink-0">
+                      <input type="hidden" name="feedback_id" value={item.id} />
+                      <button type="submit" className="rounded-lg border border-input px-3 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:border-success/50 hover:text-success">
+                        Mark reviewed
+                      </button>
+                    </form>
+                  ) : (
+                    <span className="shrink-0 font-mono text-[10px] uppercase tracking-wide text-success">Reviewed</span>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
         <section className="mb-8">
           <h2 className="mb-3 text-[13px] font-semibold uppercase tracking-wide text-muted-foreground">Main-truth requests</h2>

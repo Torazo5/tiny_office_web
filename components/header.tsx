@@ -7,6 +7,7 @@ import { TruthRequestNotification } from "@/components/truth-request-notificatio
 import { getLatestResolvedTruthRequest } from "@/lib/review-data";
 import { isAdminSession } from "@/lib/admin-session";
 import { signOut } from "@/app/auth/actions";
+import { FeedbackButton } from "@/components/feedback-button";
 import { Dices } from "lucide-react";
 
 /**
@@ -88,16 +89,7 @@ export async function Header({
           </span>
         </Link>
 
-        {process.env.NEXT_PUBLIC_FEEDBACK_URL && (
-          <a
-            href={process.env.NEXT_PUBLIC_FEEDBACK_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="shrink-0 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Feedback
-          </a>
-        )}
+        <FeedbackButton />
 
         {user && isAdmin && (
           <Link
