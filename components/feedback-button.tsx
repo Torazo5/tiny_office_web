@@ -70,18 +70,19 @@ export function FeedbackButton() {
       <button
         type="button"
         onClick={openFeedback}
-        className="fixed bottom-4 right-4 z-40 flex w-[min(18rem,calc(100vw-2rem))] items-center gap-3 rounded-2xl border border-primary/30 bg-card/95 p-3.5 text-left shadow-[0_16px_40px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:bottom-6 sm:right-6"
+        className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-4 z-40 flex size-12 items-center justify-center rounded-full border border-primary/30 bg-card/95 p-0 text-left shadow-[0_12px_30px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-[0_16px_35px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:bottom-6 sm:right-6 sm:size-auto sm:w-[min(18rem,calc(100vw-2rem))] sm:items-center sm:justify-start sm:gap-3 sm:rounded-2xl sm:p-3.5"
+        aria-label="Open feedback form"
         aria-haspopup="dialog"
       >
         <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-primary/12 text-primary">
           <MessageSquare aria-hidden className="size-[18px]" />
         </span>
-        <span className="min-w-0 flex-1">
+        <span className="hidden min-w-0 flex-1 sm:block">
           <span className="block font-mono text-[9px] font-semibold uppercase tracking-[0.16em] text-primary">Your voice matters</span>
           <span className="mt-0.5 block text-[13.5px] font-semibold text-foreground">Facing an issue?</span>
           <span className="mt-0.5 block text-[11.5px] text-muted-foreground">Want to give feedback?</span>
         </span>
-        <span aria-hidden className="shrink-0 text-lg leading-none text-primary">↗</span>
+        <span aria-hidden className="hidden shrink-0 text-lg leading-none text-primary sm:block">↗</span>
       </button>
 
       {isOpen && (
