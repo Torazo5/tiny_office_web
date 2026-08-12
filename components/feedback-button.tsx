@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState, useTransition, type FormEvent } from "react";
-import { X } from "lucide-react";
+import { MessageSquare, X } from "lucide-react";
 import { submitFeedback } from "@/app/feedback/actions";
 
 export function FeedbackButton() {
@@ -70,10 +70,18 @@ export function FeedbackButton() {
       <button
         type="button"
         onClick={openFeedback}
-        className="shrink-0 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+        className="fixed bottom-4 right-4 z-40 flex w-[min(18rem,calc(100vw-2rem))] items-center gap-3 rounded-2xl border border-primary/30 bg-card/95 p-3.5 text-left shadow-[0_16px_40px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:bottom-6 sm:right-6"
         aria-haspopup="dialog"
       >
-        Feedback
+        <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-primary/12 text-primary">
+          <MessageSquare aria-hidden className="size-[18px]" />
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block font-mono text-[9px] font-semibold uppercase tracking-[0.16em] text-primary">Your voice matters</span>
+          <span className="mt-0.5 block text-[13.5px] font-semibold text-foreground">Facing an issue?</span>
+          <span className="mt-0.5 block text-[11.5px] text-muted-foreground">Want to give feedback?</span>
+        </span>
+        <span aria-hidden className="shrink-0 text-lg leading-none text-primary">↗</span>
       </button>
 
       {isOpen && (

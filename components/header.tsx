@@ -89,8 +89,6 @@ export async function Header({
           </span>
         </Link>
 
-        <FeedbackButton />
-
         {user && isAdmin && (
           <Link
             href="/review"
@@ -145,6 +143,7 @@ export async function Header({
       )}
       </div>
       </header>
+      <FeedbackButton />
     </>
   );
 }
