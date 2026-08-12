@@ -6,6 +6,7 @@ import { AddToPlaylistButton } from "@/components/add-to-playlist-button";
 import { ConfidenceDot } from "@/components/confidence-dot";
 import { StarRating } from "@/components/star-rating";
 import { YouTubeThumbnail } from "@/components/youtube-thumbnail";
+import { getConcertPath } from "@/lib/seo-routes";
 import type { Performance, PlaylistSummary } from "@/lib/types";
 
 export function PerformanceCard({
@@ -17,10 +18,12 @@ export function PerformanceCard({
   playlists: PlaylistSummary[];
   isSignedIn: boolean;
 }) {
+  const concertPath = getConcertPath(p);
+
   return (
     <article className="min-w-0">
       <Link
-        href={`/video/${p.videoId}`}
+        href={concertPath}
         onClick={() => trackEvent({ eventName: "performance_opened", source: "catalog_card", performanceVideoId: p.videoId })}
         className="group block"
       >
@@ -56,7 +59,7 @@ export function PerformanceCard({
       <div className="mt-2">
         <div className="flex flex-wrap items-center gap-2">
           <Link
-            href={`/video/${p.videoId}`}
+            href={concertPath}
             onClick={() => trackEvent({ eventName: "performance_opened", source: "catalog_play_action", performanceVideoId: p.videoId })}
             className="inline-flex min-h-9 items-center rounded-md bg-primary px-2.5 py-1.5 text-[12px] font-semibold text-primary-foreground transition-opacity hover:opacity-90 sm:min-h-0"
           >

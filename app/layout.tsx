@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 // Fonts per the design handoff (IBM Plex Sans for UI text/headings, IBM
@@ -18,8 +19,17 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tiny Office",
-  description: "An unofficial Tiny Desk companion — every concert, individually playable by song.",
+  metadataBase: getSiteUrl(),
+  title: "Tiny Office | Tiny Desk concerts, song by song",
+  description: "Listen to individual songs from Tiny Desk concerts in a Spotify-style player.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

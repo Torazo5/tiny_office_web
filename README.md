@@ -57,6 +57,8 @@ Never expose `SUPABASE_SECRET_KEY`, `ADMIN_PASSWORD`, or
 | Route | Purpose |
 |---|---|
 | `/` | Browse and search performances |
+| `/artists/[slug]` | Crawlable artist pages with linked Tiny Desk concerts |
+| `/concerts/[slug]` | Crawlable concert pages with descriptions and setlists |
 | `/video/[id]` | YouTube performance player, song timeline, ratings, reviews, and presets |
 | `/playlists` | Signed-in user playlist library |
 | `/playlist/[id]` | Song or full-video playlist with playback controls |
