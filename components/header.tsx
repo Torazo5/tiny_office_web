@@ -65,6 +65,13 @@ export async function Header({
           Playlists
         </Link>
 
+        <Link
+          href="/song-request"
+          className="shrink-0 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+        >
+          Song request
+        </Link>
+
         {user && (
           <Link
             href="/liked-songs"
