@@ -153,16 +153,36 @@ function AdventureSetup({
                   type="button"
                   aria-pressed={source === value}
                   onClick={() => onSourceChange(value)}
-                  className={`rounded-lg border p-4 text-left transition-colors ${
+                  className={`group relative min-h-[132px] cursor-pointer rounded-lg border-2 p-4 text-left transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-card active:translate-y-0 ${
                     source === value
-                      ? "border-primary/60 bg-primary/10"
-                      : "border-border bg-secondary/35 hover:border-primary/40"
+                      ? "border-primary bg-primary/10 shadow-[0_0_0_1px_oklch(0.68_0.17_25_/_0.2)]"
+                      : "border-input bg-secondary/35 hover:-translate-y-0.5 hover:border-primary/60 hover:bg-secondary/70 hover:shadow-lg"
                   }`}
                 >
-                  <div className={`text-sm font-semibold ${source === value ? "text-primary" : "text-foreground"}`}>
-                    {label}
+                  <div className="flex items-start justify-between gap-3">
+                    <div className={`text-sm font-semibold ${source === value ? "text-primary" : "text-foreground"}`}>
+                      {label}
+                    </div>
+                    <span
+                      aria-hidden
+                      className={`flex size-5 shrink-0 items-center justify-center rounded-full border transition-colors ${
+                        source === value
+                          ? "border-primary bg-primary text-primary-foreground"
+                          : "border-muted-foreground/50 text-transparent group-hover:border-primary/70"
+                      }`}
+                    >
+                      <span className="text-[11px] font-bold leading-none">✓</span>
+                    </span>
                   </div>
                   <div className="mt-1 text-[12px] leading-relaxed text-muted-foreground">{description}</div>
+                  <div
+                    className={`mt-3 inline-flex items-center gap-1 text-[11px] font-semibold ${
+                      source === value ? "text-primary" : "text-muted-foreground group-hover:text-foreground"
+                    }`}
+                  >
+                    {source === value ? "Selected" : "Select"}
+                    <span aria-hidden className="text-sm leading-none transition-transform group-hover:translate-x-0.5">→</span>
+                  </div>
                 </button>
               ))}
             </div>
@@ -183,16 +203,36 @@ function AdventureSetup({
                   type="button"
                   aria-pressed={mode === value}
                   onClick={() => onModeChange(value)}
-                  className={`rounded-lg border p-4 text-left transition-colors ${
+                  className={`group relative min-h-[132px] cursor-pointer rounded-lg border-2 p-4 text-left transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-card active:translate-y-0 ${
                     mode === value
-                      ? "border-primary/60 bg-primary/10"
-                      : "border-border bg-secondary/35 hover:border-primary/40"
+                      ? "border-primary bg-primary/10 shadow-[0_0_0_1px_oklch(0.68_0.17_25_/_0.2)]"
+                      : "border-input bg-secondary/35 hover:-translate-y-0.5 hover:border-primary/60 hover:bg-secondary/70 hover:shadow-lg"
                   }`}
                 >
-                  <div className={`text-sm font-semibold ${mode === value ? "text-primary" : "text-foreground"}`}>
-                    {label}
+                  <div className="flex items-start justify-between gap-3">
+                    <div className={`text-sm font-semibold ${mode === value ? "text-primary" : "text-foreground"}`}>
+                      {label}
+                    </div>
+                    <span
+                      aria-hidden
+                      className={`flex size-5 shrink-0 items-center justify-center rounded-full border transition-colors ${
+                        mode === value
+                          ? "border-primary bg-primary text-primary-foreground"
+                          : "border-muted-foreground/50 text-transparent group-hover:border-primary/70"
+                      }`}
+                    >
+                      <span className="text-[11px] font-bold leading-none">✓</span>
+                    </span>
                   </div>
                   <div className="mt-1 text-[12px] leading-relaxed text-muted-foreground">{description}</div>
+                  <div
+                    className={`mt-3 inline-flex items-center gap-1 text-[11px] font-semibold ${
+                      mode === value ? "text-primary" : "text-muted-foreground group-hover:text-foreground"
+                    }`}
+                  >
+                    {mode === value ? "Selected" : "Select"}
+                    <span aria-hidden className="text-sm leading-none transition-transform group-hover:translate-x-0.5">→</span>
+                  </div>
                 </button>
               ))}
             </div>

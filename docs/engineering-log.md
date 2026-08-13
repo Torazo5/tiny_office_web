@@ -3,6 +3,14 @@
 Use this file for major errors and their outcomes. Do not include secrets,
 tokens, personal data, or full environment-variable values.
 
+### 2026-08-13 — Button-affordance production-build verification blocked
+
+- **Symptom and impact:** The required production build could not complete while verifying the clearer Random Pick source and mode buttons.
+- **Root cause / evidence:** Next.js 16.3 Turbopack stopped before application compilation while processing the existing `app/globals.css`; both the sandboxed run and a narrow elevated retry failed while creating a worker process and binding an internal port (`Operation not permitted`).
+- **Systems and files:** Next.js/Turbopack, local process/port permissions, `components/adventure-experience.tsx`, and `app/globals.css`.
+- **Resolution / next action:** Re-run `npm run build` in a runtime that permits Next.js worker processes and port operations. No application workaround was added for this environment-only failure.
+- **Verification:** `npm run lint`, `npx tsc --noEmit`, `npm test`, and `git diff --check` passed; both production-build attempts failed before compiling the changed application module.
+
 ### 2026-08-09 — Catalog performance refactor build verification blocked by WSL1
 
 - **Symptom and impact:** The required `npm run build` check could not start,
