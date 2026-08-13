@@ -124,16 +124,9 @@ ADMIN_SESSION_SECRET=
 The password is checked only in a Server Action. The signed admin session is
 HttpOnly, bound to the Supabase user, and expires after eight hours.
 
-Song request search is optional and uses the server-only YouTube Data API v3
-key below. Without it, the public manual request form still works:
-
-```bash
-YOUTUBE_DATA_API_KEY=
-```
-
-The key is never exposed to the browser. YouTube search results only identify
-candidate videos; the existing pipeline still needs to produce song-boundary
-reports before a request is added to the public catalog.
+Song requests are anonymous plain-text submissions. They appear in the admin
+dashboard import queue; the existing pipeline still needs to produce
+song-boundary reports before a request is added to the public catalog.
 
 ## Pipeline data and known limits
 

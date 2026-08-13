@@ -20,29 +20,6 @@ function readSourcePath(formData: FormData) {
   return value?.startsWith("/") ? value : null;
 }
 
-function readYouTubeVideoId(formData: FormData) {
-  const value = readText(formData, "youtube_video_id", 11);
-  return value && /^[A-Za-z0-9_-]{11}$/.test(value) ? value : null;
-}
-
-function readYouTubePublishedAt(formData: FormData) {
-  const value = readText(formData, "youtube_published_at", 40);
-  if (!value) return null;
-  const timestamp = Date.parse(value);
-  return Number.isFinite(timestamp) ? new Date(timestamp).toISOString() : null;
-}
-
-function readYouTubeThumbnailUrl(formData: FormData) {
-  const value = readText(formData, "youtube_thumbnail_url", 1000);
-  if (!value) return null;
-  try {
-    const url = new URL(value);
-    return url.protocol === "https:" && url.hostname === "i.ytimg.com" ? url.toString() : null;
-  } catch {
-    return null;
-  }
-}
-
 export async function submitSongRequest(
   _previousState: SongRequestActionState,
   formData: FormData,
@@ -52,38 +29,12 @@ export async function submitSongRequest(
   const query = readText(formData, "query", 200);
   if (!query) return { error: "Tell us which concert or video you are looking for." };
 
-  const youtubeVideoId = readYouTubeVideoId(formData);
-  const youtubeTitle = readText(formData, "youtube_title", 500);
-  const youtubeChannelTitle = readText(formData, "youtube_channel_title", 200);
-  const youtubeThumbnailUrl = readYouTubeThumbnailUrl(formData);
-  const youtubePublishedAt = readYouTubePublishedAt(formData);
   const note = readText(formData, "note", 1000);
   const sourcePath = readSourcePath(formData);
   const supabase = createAdminClient();
 
-  if (youtubeVideoId) {
-    const { data: existingPerformance, error: performanceError } = await supabase
-      .from("performances")
-      .select("video_id")
-      .eq("video_id", youtubeVideoId)
-      .maybeSingle();
-    if (performanceError) {
-      console.error("[song-request/submit] Catalog lookup failed", {
-        code: performanceError.code,
-        message: performanceError.message,
-      });
-      return { error: "Could not check whether that video is already in Tiny Office." };
-    }
-    if (existingPerformance) return { error: "That video is already in Tiny Office." };
-  }
-
   const { error } = await supabase.from("song_requests").insert({
     query,
-    youtube_video_id: youtubeVideoId,
-    youtube_title: youtubeTitle,
-    youtube_channel_title: youtubeChannelTitle,
-    youtube_thumbnail_url: youtubeThumbnailUrl,
-    youtube_published_at: youtubePublishedAt,
     note,
     source_path: sourcePath,
   });
@@ -93,7 +44,6 @@ export async function submitSongRequest(
       code: error.code,
       message: error.message,
     });
-    if (error.code === "23505") return { error: "That video is already in the request queue." };
     return { error: "Could not save your request. Please try again." };
   }
 

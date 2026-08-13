@@ -10,7 +10,6 @@ import { lockAdmin } from "@/app/review/actions";
 import { getAdminFeedbackSubmissions } from "@/lib/feedback-data";
 import { markFeedbackReviewed } from "@/app/feedback/actions";
 import { SongRequestModerationForm } from "@/components/song-request-moderation-form";
-import { YouTubeThumbnail } from "@/components/youtube-thumbnail";
 import { getAdminSongRequests } from "@/lib/song-request-data";
 
 function formatFeedbackDate(value: string) {
@@ -81,31 +80,13 @@ export default async function ReviewQueuePage() {
             {songRequests.length === 0 && <p className="px-4 py-4 text-[13px] text-muted-foreground">No song requests yet.</p>}
             {songRequests.map((request) => (
               <article key={request.id} className="border-t border-border px-4 py-4 first:border-t-0">
-                <div className="flex flex-wrap items-start gap-4">
-                  {request.youtubeVideoId && (
-                    <a href={`https://www.youtube.com/watch?v=${request.youtubeVideoId}`} target="_blank" rel="noreferrer" className="block w-28 shrink-0 overflow-hidden rounded-md">
-                      <div className="relative aspect-video">
-                        <YouTubeThumbnail videoId={request.youtubeVideoId} alt="" className="h-full w-full" sizes="112px" />
-                      </div>
-                    </a>
-                  )}
-                  <div className="min-w-0 flex-1">
-                    <div className="flex flex-wrap items-start justify-between gap-3">
-                      <div className="min-w-0">
-                        <p className="break-words text-[13.5px] font-medium text-foreground">{request.youtubeTitle ?? request.query}</p>
-                        <p className="mt-1 text-[12px] text-muted-foreground">
-                          {request.youtubeChannelTitle ? `${request.youtubeChannelTitle} · ` : ""}{formatFeedbackDate(request.createdAt)}{request.sourcePath ? ` · ${request.sourcePath}` : ""}
-                        </p>
-                        {request.youtubeVideoId && (
-                          <a href={`https://www.youtube.com/watch?v=${request.youtubeVideoId}`} target="_blank" rel="noreferrer" className="mt-1 inline-block text-[11.5px] text-primary hover:underline">
-                            Open on YouTube ↗
-                          </a>
-                        )}
-                        {request.note && <p className="mt-2 whitespace-pre-wrap break-words text-[12.5px] leading-relaxed text-muted-foreground">{request.note}</p>}
-                      </div>
-                      <SongRequestModerationForm requestId={request.id} status={request.status} />
-                    </div>
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="whitespace-pre-wrap break-words text-[13.5px] font-medium leading-relaxed text-foreground">{request.query}</p>
+                    <p className="mt-1 text-[12px] text-muted-foreground">{formatFeedbackDate(request.createdAt)}{request.sourcePath ? ` · ${request.sourcePath}` : ""}</p>
+                    {request.note && <p className="mt-2 whitespace-pre-wrap break-words text-[12.5px] leading-relaxed text-muted-foreground">{request.note}</p>}
                   </div>
+                  <SongRequestModerationForm requestId={request.id} status={request.status} />
                 </div>
               </article>
             ))}

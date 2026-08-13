@@ -3,11 +3,9 @@ import { Header } from "@/components/header";
 import { CatalogGrid } from "@/components/catalog-grid";
 import { AnalyticsOnMount } from "@/components/analytics";
 import { PerformanceCard } from "@/components/performance-card";
-import { YouTubeRequestSuggestions } from "@/components/youtube-request-suggestions";
 import { getCurrentUser } from "@/lib/auth";
 import { getBrowsePerformancePage, getPerformances, getPlaylists } from "@/lib/data";
 import { fuzzySearch } from "@/lib/fuzzy-search";
-import { searchYouTubeVideos } from "@/lib/youtube-search";
 
 export default async function BrowsePage({
   searchParams,
@@ -37,10 +35,6 @@ export default async function BrowsePage({
         ].join(" "),
       )
     : catalogPage?.performances ?? [];
-  const youtubeSuggestions = query && filteredPerformances.length === 0
-    ? await searchYouTubeVideos(query)
-    : [];
-
   return (
     <>
       <Header showBack={false} searchQuery={query} user={user} />
@@ -103,7 +97,7 @@ export default async function BrowsePage({
           <>
             <div className="rounded-xl border border-dashed border-border px-6 py-8 text-center">
               <p className="text-[13px] text-muted-foreground">No performances, artists, or songs match that search.</p>
-              <p className="mt-2 text-[12.5px] text-muted-foreground/80">Try the YouTube results below, or request the video directly.</p>
+              <p className="mt-2 text-[12.5px] text-muted-foreground/80">If it should be here, send me a request and I&apos;ll look into it.</p>
               <Link
                 href={`/song-request?q=${encodeURIComponent(query)}`}
                 className="mt-4 inline-flex rounded-lg border border-input px-3.5 py-2 text-[12.5px] font-medium text-muted-foreground transition-colors hover:border-primary/60 hover:text-foreground"
@@ -111,11 +105,6 @@ export default async function BrowsePage({
                 Open song request page →
               </Link>
             </div>
-            <YouTubeRequestSuggestions
-              query={query}
-              results={youtubeSuggestions}
-              sourcePath={`/?q=${encodeURIComponent(query)}`}
-            />
           </>
         )}
       </main>
