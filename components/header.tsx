@@ -8,7 +8,10 @@ import { getLatestResolvedTruthRequest } from "@/lib/review-data";
 import { isAdminSession } from "@/lib/admin-session";
 import { signOut } from "@/app/auth/actions";
 import { FeedbackButton } from "@/components/feedback-button";
-import { Dices } from "lucide-react";
+import { ArrowLeft, Dices, Heart, ListMusic, MessageSquarePlus, ShieldCheck } from "lucide-react";
+
+const navButtonClass =
+  "inline-flex min-h-9 shrink-0 items-center gap-2 whitespace-nowrap rounded-lg border border-border bg-secondary/40 px-3 py-2 text-sm font-medium text-muted-foreground transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:bg-secondary hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0";
 
 /**
  * Shared header, per the design handoff. Rendered explicitly at the top of
@@ -52,31 +55,35 @@ export async function Header({
         {showBack && (
           <Link
             href="/"
-            className="flex shrink-0 items-center gap-1.5 rounded-md px-2.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className={navButtonClass}
           >
-            <span aria-hidden>&larr;</span> Browse
+            <ArrowLeft aria-hidden className="size-4" />
+            Browse
           </Link>
         )}
 
         <Link
           href="/playlists"
-          className="shrink-0 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          className={navButtonClass}
         >
+          <ListMusic aria-hidden className="size-4" />
           Playlists
         </Link>
 
         <Link
           href="/song-request"
-          className="shrink-0 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          className={navButtonClass}
         >
+          <MessageSquarePlus aria-hidden className="size-4" />
           Song request
         </Link>
 
         {user && (
           <Link
             href="/liked-songs"
-            className="shrink-0 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className={navButtonClass}
           >
+            <Heart aria-hidden className="size-4" />
             Liked songs
           </Link>
         )}
@@ -99,8 +106,9 @@ export async function Header({
         {user && isAdmin && (
           <Link
             href="/review"
-            className="shrink-0 text-sm font-medium text-primary transition-colors hover:text-foreground"
+            className={`${navButtonClass} text-primary`}
           >
+            <ShieldCheck aria-hidden className="size-4" />
             Admin dashboard
           </Link>
         )}
