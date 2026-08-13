@@ -49,6 +49,7 @@ type SongRow = {
 
 type BrowseRatingRow = {
   performance_video_id: string;
+  user_id: string;
   rating: number;
 };
 
@@ -127,10 +128,15 @@ function ratingsByPerformance(rows: BrowseRatingRow[]) {
 async function loadBrowsePerformances(): Promise<Performance[]> {
   const supabase = createPublicClient();
   const [performancesResult, songsResult, ratingsResult] = await Promise.all([
-    supabase
-      .from("performances")
-      .select("video_id, artist, source_title, date, duration, method, confidence_avg, confidence_min, verified")
-      .order("artist"),
+    loadAllSupabasePages<PerformanceRow>(
+      "Loading performances",
+      (from, to) => supabase
+        .from("performances")
+        .select("video_id, artist, source_title, date, duration, method, confidence_avg, confidence_min, verified")
+        .order("artist")
+        .order("video_id")
+        .range(from, to),
+    ),
     loadAllSupabasePages<SongRow>(
       "Loading songs",
       (from, to) => supabase
@@ -140,11 +146,16 @@ async function loadBrowsePerformances(): Promise<Performance[]> {
         .order("song_index")
         .range(from, to),
     ),
-    supabase.from("ratings").select("performance_video_id, rating"),
+    loadAllSupabasePages<BrowseRatingRow>(
+      "Loading ratings",
+      (from, to) => supabase
+        .from("ratings")
+        .select("performance_video_id, user_id, rating")
+        .order("performance_video_id")
+        .order("user_id")
+        .range(from, to),
+    ),
   ]);
-
-  throwIfError("Loading performances", performancesResult.error);
-  throwIfError("Loading ratings", ratingsResult.error);
 
   const songsByPerformance = new Map<string, SongRow[]>();
   for (const song of songsResult) {
@@ -153,8 +164,8 @@ async function loadBrowsePerformances(): Promise<Performance[]> {
     songsByPerformance.set(song.performance_video_id, songs);
   }
 
-  const ratings = ratingsByPerformance((ratingsResult.data ?? []) as BrowseRatingRow[]);
-  return ((performancesResult.data ?? []) as PerformanceRow[]).map((row) => {
+  const ratings = ratingsByPerformance(ratingsResult);
+  return performancesResult.map((row) => {
     const values = ratings.get(row.video_id) ?? [];
     return mapPerformance(
       row,
@@ -203,17 +214,20 @@ export async function getBrowsePerformancePage(
       .order("confidence_avg", { ascending: false })
       .order("artist")
       .range(safeOffset, safeOffset + safeLimit - 1),
-    supabase
-      .from("performances")
-      .select("video_id, artist, source_title")
-      .order("artist")
-      .order("video_id"),
+    loadAllSupabasePages<PerformanceRouteRow>(
+      "Loading catalog route identities",
+      (from, to) => supabase
+        .from("performances")
+        .select("video_id, artist, source_title")
+        .order("artist")
+        .order("video_id")
+        .range(from, to),
+    ),
   ]);
   throwIfError("Loading catalog page", performancesResult.error);
-  throwIfError("Loading catalog route identities", routeRowsResult.error);
 
   const rows = (performancesResult.data ?? []) as PerformanceRow[];
-  const routeRows = (routeRowsResult.data ?? []) as PerformanceRouteRow[];
+  const routeRows = routeRowsResult;
   const concertSlugs = getConcertSlugMap(routeRows.map((row) => ({
     videoId: row.video_id,
     artist: row.artist,
@@ -225,24 +239,35 @@ export async function getBrowsePerformancePage(
   }
 
   const [songsResult, ratingsResult] = await Promise.all([
-    supabase
-      .from("songs")
-      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, overlap_detected, fade_out_start, fade_out_end, heart_count")
-      .in("performance_video_id", videoIds)
-      .order("performance_video_id")
-      .order("song_index"),
-    supabase.from("ratings").select("performance_video_id, rating").in("performance_video_id", videoIds),
+    loadAllSupabasePages<SongRow>(
+      "Loading catalog songs",
+      (from, to) => supabase
+        .from("songs")
+        .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, overlap_detected, fade_out_start, fade_out_end, heart_count")
+        .in("performance_video_id", videoIds)
+        .order("performance_video_id")
+        .order("song_index")
+        .range(from, to),
+    ),
+    loadAllSupabasePages<BrowseRatingRow>(
+      "Loading catalog ratings",
+      (from, to) => supabase
+        .from("ratings")
+        .select("performance_video_id, user_id, rating")
+        .in("performance_video_id", videoIds)
+        .order("performance_video_id")
+        .order("user_id")
+        .range(from, to),
+    ),
   ]);
-  throwIfError("Loading catalog songs", songsResult.error);
-  throwIfError("Loading catalog ratings", ratingsResult.error);
 
   const songsByPerformance = new Map<string, SongRow[]>();
-  for (const song of (songsResult.data ?? []) as SongRow[]) {
+  for (const song of songsResult) {
     const songs = songsByPerformance.get(song.performance_video_id) ?? [];
     songs.push(song);
     songsByPerformance.set(song.performance_video_id, songs);
   }
-  const ratings = ratingsByPerformance((ratingsResult.data ?? []) as BrowseRatingRow[]);
+  const ratings = ratingsByPerformance(ratingsResult);
   const performances = rows.map((row) => {
     const values = ratings.get(row.video_id) ?? [];
     const performance = mapPerformance(

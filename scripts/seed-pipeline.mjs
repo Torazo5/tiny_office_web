@@ -1,6 +1,7 @@
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { createClient } from "@supabase/supabase-js";
+import { loadAllSupabasePages } from "../lib/supabase-pagination.ts";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const secretKey = process.env.SUPABASE_SECRET_KEY ?? process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -138,10 +139,14 @@ const expectedSongKeys = new Set(
   songs.map((song) => `${song.performance_video_id}:${song.song_index}`),
 );
 
-const { data: existingPerformances, error: existingPerformancesError } = await supabase
-  .from("performances")
-  .select("video_id");
-if (existingPerformancesError) throw existingPerformancesError;
+const existingPerformances = await loadAllSupabasePages(
+  "Loading existing performances",
+  (from, to) => supabase
+    .from("performances")
+    .select("video_id")
+    .order("video_id")
+    .range(from, to),
+);
 
 const staleVideoIds = (existingPerformances ?? [])
   .map((performance) => performance.video_id)
@@ -156,11 +161,16 @@ if (staleVideoIds.length > 0) {
   console.log(`Removed ${staleVideoIds.length} stale performances: ${staleVideoIds.join(", ")}`);
 }
 
-const { data: existingSongs, error: existingSongsError } = await supabase
-  .from("songs")
-  .select("performance_video_id, song_index")
-  .in("performance_video_id", reportVideoIds);
-if (existingSongsError) throw existingSongsError;
+const existingSongs = await loadAllSupabasePages(
+  "Loading existing songs",
+  (from, to) => supabase
+    .from("songs")
+    .select("performance_video_id, song_index")
+    .in("performance_video_id", reportVideoIds)
+    .order("performance_video_id")
+    .order("song_index")
+    .range(from, to),
+);
 
 const obsoleteSongIndexes = new Map();
 for (const song of existingSongs ?? []) {
@@ -215,11 +225,17 @@ if (variantsError) throw variantsError;
 const expectedVariantSongKeys = new Set(
   variantSongs.map((song) => `${song.variant_key}:${song.performance_video_id}:${song.song_index}`),
 );
-const { data: existingVariantSongs, error: existingVariantSongsError } = await supabase
-  .from("performance_cut_variant_songs")
-  .select("variant_key, performance_video_id, song_index")
-  .in("performance_video_id", reportVideoIds);
-if (existingVariantSongsError) throw existingVariantSongsError;
+const existingVariantSongs = await loadAllSupabasePages(
+  "Loading existing cut-variant songs",
+  (from, to) => supabase
+    .from("performance_cut_variant_songs")
+    .select("variant_key, performance_video_id, song_index")
+    .in("performance_video_id", reportVideoIds)
+    .order("variant_key")
+    .order("performance_video_id")
+    .order("song_index")
+    .range(from, to),
+);
 
 const obsoleteVariantSongIndexes = new Map();
 for (const song of existingVariantSongs ?? []) {
