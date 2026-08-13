@@ -5,6 +5,7 @@ import { cache } from "react";
 import { getCurrentUser } from "@/lib/auth";
 import { formatProfileLabel, getIdenticonUrl, getProfilesByUserId } from "@/lib/profile-data";
 import { createPublicClient } from "@/lib/supabase/public";
+import { loadAllSupabasePages } from "@/lib/supabase-pagination";
 import { createClient } from "@/lib/supabase/server";
 import { getConcertSlugMap } from "@/lib/seo-routes";
 import type {
@@ -130,20 +131,23 @@ async function loadBrowsePerformances(): Promise<Performance[]> {
       .from("performances")
       .select("video_id, artist, source_title, date, duration, method, confidence_avg, confidence_min, verified")
       .order("artist"),
-    supabase
-      .from("songs")
-      .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, overlap_detected, fade_out_start, fade_out_end, heart_count")
-      .order("performance_video_id")
-      .order("song_index"),
+    loadAllSupabasePages<SongRow>(
+      "Loading songs",
+      (from, to) => supabase
+        .from("songs")
+        .select("performance_video_id, song_index, title, clip_start, clip_end, confidence, suspect, overlap_detected, fade_out_start, fade_out_end, heart_count")
+        .order("performance_video_id")
+        .order("song_index")
+        .range(from, to),
+    ),
     supabase.from("ratings").select("performance_video_id, rating"),
   ]);
 
   throwIfError("Loading performances", performancesResult.error);
-  throwIfError("Loading songs", songsResult.error);
   throwIfError("Loading ratings", ratingsResult.error);
 
   const songsByPerformance = new Map<string, SongRow[]>();
-  for (const song of (songsResult.data ?? []) as SongRow[]) {
+  for (const song of songsResult) {
     const songs = songsByPerformance.get(song.performance_video_id) ?? [];
     songs.push(song);
     songsByPerformance.set(song.performance_video_id, songs);
