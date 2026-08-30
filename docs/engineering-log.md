@@ -3,13 +3,13 @@
 Use this file for major errors and their outcomes. Do not include secrets,
 tokens, personal data, or full environment-variable values.
 
-### 2026-08-30 — Autoplay production-build verification blocked by missing dependencies
+### 2026-08-30 — Autoplay production-build verification blocked by local public Supabase configuration
 
-- **Symptom and impact:** The required `npm run build` validation for continuous video autoplay could not start, so this checkout has not received production-build or browser-flow verification.
-- **Root cause / evidence:** `node_modules` is absent and `npm run build` exits immediately with `sh: next: command not found`. A local `npm ci` attempt completed without creating `node_modules/.bin/next`, leaving the dependency unavailable. The Next.js 16 bundled agent documentation is therefore unavailable in this checkout as well.
-- **Systems and files:** Local dependency installation, Next.js 16.3 build tooling, `app/video/[id]/page.tsx`, `components/video-embed.tsx`, and `components/player-context.tsx`.
-- **Resolution / next action:** Restore dependencies with a successful `npm ci`, then run `npm run build` and manually verify an ended full video and the last track in Only songs mode each advance to another video with playback continuing.
-- **Verification:** `npm test` passed all 32 tests, including the new autoplay selection tests; `git diff --check` passed. `npm run build` failed before application compilation because `next` was not installed.
+- **Symptom and impact:** The required production build validation for continuous video autoplay and its visible controls cannot finish in this local shell, so the browser playback flow has not received end-to-end verification here.
+- **Root cause / evidence:** The standard Turbopack build is blocked by sandbox worker-port permissions while processing the existing `app/globals.css`. A Webpack build with `NEXT_PUBLIC_SITE_URL` compiled the application and completed TypeScript, then failed during page-data collection because `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` are not set locally.
+- **Systems and files:** Next.js/Turbopack and Webpack build tooling, local environment configuration, Supabase public client, `app/globals.css`, `components/video-embed.tsx`, and `components/player-context.tsx`.
+- **Resolution / next action:** Supply the public Supabase variables and site URL through local `.env.local` or Vercel environment settings, then run a production build in an environment that permits Turbopack workers. Manually verify that autoplay advances a full concert and the last song in Only songs mode.
+- **Verification:** `npm test` passed all 32 tests, `npm run lint` and `npx tsc --noEmit` passed, and `git diff --check` passed. `npx next build --webpack` compiled successfully and finished TypeScript before the expected missing-Supabase-configuration failure.
 
 ### 2026-08-13 — Button-affordance production-build verification blocked
 

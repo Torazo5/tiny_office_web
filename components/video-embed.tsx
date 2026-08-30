@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Music2 } from "lucide-react";
+import { Music2, Play } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { recordListeningProgress } from "@/app/listening/actions";
 import { PlayerControls } from "@/components/player-controls";
@@ -53,6 +53,8 @@ export function VideoEmbed({
     setCurrentTime,
     onlySongMode,
     setOnlySongMode,
+    autoplayEnabled,
+    setAutoplayEnabled,
     playbackSettings,
     setPlaybackSettings,
     isSignedIn,
@@ -74,6 +76,9 @@ export function VideoEmbed({
   const transitionToSongRef = useRef<(nextStart: number, fadeWindow?: FadeWindow | null, fallbackFadeSeconds?: number) => void>(() => undefined);
   const fadeOutAndStopRef = useRef<(end: number, fadeWindow?: FadeWindow | null, fallbackFadeSeconds?: number, onStopped?: () => void) => void>(() => undefined);
   const onlySongModeRef = useRef(onlySongMode);
+  const autoplayEnabledRef = useRef(autoplayEnabled);
+  const shouldAutoplayRef = useRef(shouldAutoplay);
+  const playAnotherVideoRef = useRef<() => void>(() => undefined);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [playerState, setPlayerState] = useState<number | null>(null);
   const [volume, setVolume] = useState(100);
@@ -88,13 +93,17 @@ export function VideoEmbed({
     onlySongModeRef.current = onlySongMode;
   }, [onlySongMode]);
 
+  useEffect(() => {
+    autoplayEnabledRef.current = autoplayEnabled;
+  }, [autoplayEnabled]);
+
   function getPlayer() {
     const player = playerRef.current;
     return isYouTubePlayer(player) ? player : null;
   }
 
   function playAnotherVideo() {
-    if (isAutoplayNavigatingRef.current) return;
+    if (!autoplayEnabledRef.current || isAutoplayNavigatingRef.current) return;
     const nextVideoId = chooseAutoplayVideoId(autoplayVideoIds, videoIdRef.current);
     if (!nextVideoId) return;
 
@@ -210,6 +219,7 @@ export function VideoEmbed({
   useEffect(() => {
     transitionToSongRef.current = transitionToSong;
     fadeOutAndStopRef.current = fadeOutAndStop;
+    playAnotherVideoRef.current = playAnotherVideo;
   });
 
   useEffect(() => {
@@ -230,12 +240,12 @@ export function VideoEmbed({
             setPlayerVolume(event.target, event.target.getVolume());
             setPlayerState(event.target.getPlayerState());
             setIsPlayerReady(true);
-            if (shouldAutoplay) event.target.playVideo();
+            if (shouldAutoplayRef.current) event.target.playVideo();
           },
           onStateChange: (event) => {
             if (cancelled || !isYouTubePlayer(event.target)) return;
             const player = event.target;
-            if (event.data === YOUTUBE_PLAYER_ENDED) playAnotherVideo();
+            if (event.data === YOUTUBE_PLAYER_ENDED) playAnotherVideoRef.current();
             if (event.data === YOUTUBE_PLAYER_PLAYING) {
               const currentTime = player.getCurrentTime();
               const song = songsRef.current.find((item) => currentTime >= item.clipStart && currentTime < item.clipEnd);
@@ -339,7 +349,7 @@ export function VideoEmbed({
         if (currentTime >= transitionAt && !isTransitioningRef.current) {
           const nextSong = playableSongs[currentSongIndex + 1];
           if (nextSong) transitionToSongRef.current(nextSong.clipStart, fadeWindow, fallbackFadeSeconds);
-          else fadeOutAndStopRef.current(currentSong.clipEnd, fadeWindow, fallbackFadeSeconds, playAnotherVideo);
+          else fadeOutAndStopRef.current(currentSong.clipEnd, fadeWindow, fallbackFadeSeconds, playAnotherVideoRef.current);
           return;
         }
       }
@@ -358,7 +368,7 @@ export function VideoEmbed({
           stopAt,
           null,
           playbackSettings.builtInFade ? 0 : playbackSettings.fadeOutSeconds,
-          playAnotherVideo,
+          playAnotherVideoRef.current,
         );
         return;
       }
@@ -405,25 +415,47 @@ export function VideoEmbed({
         }}
         compact
         modeControl={
-          <button
-            type="button"
-            aria-pressed={onlySongMode}
-            onClick={() => setOnlySongMode(!onlySongMode)}
-            data-feature-hint="only-song-mode"
-            className={`group relative inline-flex shrink-0 items-center gap-1.5 overflow-hidden rounded-md border px-2 py-1.5 text-[11px] font-semibold transition-all ${
-              onlySongMode
-                ? "border-primary/60 bg-primary/15 text-primary shadow-[0_0_18px_oklch(0.68_0.17_25_/_0.25)]"
-                : "border-primary/30 bg-[linear-gradient(120deg,oklch(0.68_0.17_25_/_0.12),transparent)] text-foreground hover:-translate-y-px hover:border-primary/60 hover:shadow-[0_0_16px_oklch(0.68_0.17_25_/_0.18)]"
-            }`}
-            title="Skip applause and talk between mapped songs"
-          >
-            <span aria-hidden className="pointer-events-none absolute inset-y-0 left-0 w-8 -translate-x-full skew-x-[-20deg] bg-primary/25 transition-transform duration-500 group-hover:translate-x-[430%]" />
-            <Music2 aria-hidden size={13} className="relative" />
-            <span className="relative sm:hidden">Songs</span>
-            <span className="relative hidden sm:inline">Only songs</span>
-          </button>
+          <>
+            <button
+              type="button"
+              aria-pressed={autoplayEnabled}
+              onClick={() => setAutoplayEnabled(!autoplayEnabled)}
+              className={`inline-flex shrink-0 items-center gap-1.5 rounded-md border px-2 py-1.5 text-[11px] font-semibold transition-colors ${
+                autoplayEnabled
+                  ? "border-primary/60 bg-primary/15 text-primary"
+                  : "border-input text-muted-foreground hover:border-primary/50 hover:text-foreground"
+              }`}
+              title={autoplayEnabled ? "Turn off autoplay after this concert" : "Turn on autoplay after this concert"}
+            >
+              <Play aria-hidden size={13} className="fill-current" />
+              <span className="hidden sm:inline">Autoplay</span>
+            </button>
+            <button
+              type="button"
+              aria-pressed={onlySongMode}
+              onClick={() => setOnlySongMode(!onlySongMode)}
+              data-feature-hint="only-song-mode"
+              className={`group relative inline-flex shrink-0 items-center gap-1.5 overflow-hidden rounded-md border px-2 py-1.5 text-[11px] font-semibold transition-all ${
+                onlySongMode
+                  ? "border-primary/60 bg-primary/15 text-primary shadow-[0_0_18px_oklch(0.68_0.17_25_/_0.25)]"
+                  : "border-primary/30 bg-[linear-gradient(120deg,oklch(0.68_0.17_25_/_0.12),transparent)] text-foreground hover:-translate-y-px hover:border-primary/60 hover:shadow-[0_0_16px_oklch(0.68_0.17_25_/_0.18)]"
+              }`}
+              title="Skip applause and talk between mapped songs"
+            >
+              <span aria-hidden className="pointer-events-none absolute inset-y-0 left-0 w-8 -translate-x-full skew-x-[-20deg] bg-primary/25 transition-transform duration-500 group-hover:translate-x-[430%]" />
+              <Music2 aria-hidden size={13} className="relative" />
+              <span className="relative sm:hidden">Songs</span>
+              <span className="relative hidden sm:inline">Only songs</span>
+            </button>
+          </>
         }
       />
+
+      <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground" role="status" aria-live="polite">
+        {autoplayEnabled
+          ? `Autoplay is on: when this concert ends, a random different Tiny Desk concert will start${onlySongMode ? " in Only songs mode" : ""}.`
+          : "Autoplay is off: playback will stop when this concert ends."}
+      </p>
 
       {onlySongMode && (
         <PlaybackCustomizer

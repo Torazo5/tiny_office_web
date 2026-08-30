@@ -18,6 +18,8 @@ const PlayerContext = createContext<{
   songs: Song[];
   onlySongMode: boolean;
   setOnlySongMode: (enabled: boolean) => void;
+  autoplayEnabled: boolean;
+  setAutoplayEnabled: (enabled: boolean) => void;
   playbackSettings: PlaybackSettings;
   setPlaybackSettings: (settings: PlaybackSettings) => void;
   isSignedIn: boolean;
@@ -52,6 +54,7 @@ export function PlayerProvider({
   const [seekRequestId, setSeekRequestId] = useState(0);
   const [currentTime, setCurrentTime] = useState(initialStart);
   const [onlySongMode, setOnlySongMode] = useState(initialOnlySongMode);
+  const [autoplayEnabled, setAutoplayEnabled] = useState(true);
   const [playbackSettings, setPlaybackSettings] = useState(initialPlaybackSettings);
 
   const setStartAt = useCallback((seconds: number) => {
@@ -69,7 +72,7 @@ export function PlayerProvider({
 
   return (
     <PlayerContext.Provider
-      value={{ songs, startAt, setStartAt, seekRequestId, currentTime, setCurrentTime, onlySongMode, setOnlySongMode, playbackSettings, setPlaybackSettings, isSignedIn }}
+      value={{ songs, startAt, setStartAt, seekRequestId, currentTime, setCurrentTime, onlySongMode, setOnlySongMode, autoplayEnabled, setAutoplayEnabled, playbackSettings, setPlaybackSettings, isSignedIn }}
     >
       <SongActivityContext.Provider value={songActivity}>
         {children}
