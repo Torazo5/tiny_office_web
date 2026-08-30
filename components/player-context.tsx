@@ -37,19 +37,21 @@ export function PlayerProvider({
   initialStart,
   songs,
   initialPlaybackSettings,
+  initialOnlySongMode = false,
   isSignedIn,
   children,
 }: {
   initialStart: number;
   songs: Song[];
   initialPlaybackSettings: PlaybackSettings;
+  initialOnlySongMode?: boolean;
   isSignedIn: boolean;
   children: React.ReactNode;
 }) {
   const [startAt, setStartAtState] = useState(initialStart);
   const [seekRequestId, setSeekRequestId] = useState(0);
   const [currentTime, setCurrentTime] = useState(initialStart);
-  const [onlySongMode, setOnlySongMode] = useState(false);
+  const [onlySongMode, setOnlySongMode] = useState(initialOnlySongMode);
   const [playbackSettings, setPlaybackSettings] = useState(initialPlaybackSettings);
 
   const setStartAt = useCallback((seconds: number) => {

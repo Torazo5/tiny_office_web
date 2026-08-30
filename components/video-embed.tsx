@@ -2,11 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Music2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { recordListeningProgress } from "@/app/listening/actions";
 import { PlayerControls } from "@/components/player-controls";
 import { PlaybackCustomizer } from "@/components/playback-customizer";
 import { usePlayer } from "@/components/player-context";
 import { findOnlySongModeAction } from "@/lib/only-song-mode";
+import { chooseAutoplayVideoId } from "@/lib/autoplay";
 import {
   equalPowerFadeGain,
   fadeDurationFromCurrentTime,
@@ -24,13 +26,24 @@ import {
 
 const YOUTUBE_PLAYER_PLAYING = 1;
 const YOUTUBE_PLAYER_BUFFERING = 3;
+const YOUTUBE_PLAYER_ENDED = 0;
 
 /**
  * A stable YouTube iframe that the IFrame Player API seeks in place. Calling
  * `seekTo` preserves YouTube's existing paused or playing state, so clicking
  * a song never replaces the player or asks the viewer to start again.
  */
-export function VideoEmbed({ videoId, duration }: { videoId: string; duration: number }) {
+export function VideoEmbed({
+  videoId,
+  duration,
+  autoplayVideoIds,
+  shouldAutoplay,
+}: {
+  videoId: string;
+  duration: number;
+  autoplayVideoIds: string[];
+  shouldAutoplay: boolean;
+}) {
   const {
     songs,
     startAt,
@@ -44,6 +57,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
     setPlaybackSettings,
     isSignedIn,
   } = usePlayer();
+  const router = useRouter();
   const playerHostRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
   const songsRef = useRef(songs);
@@ -55,9 +69,11 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
   const transitionTimerRef = useRef<number | null>(null);
   const fadeTimerRef = useRef<number | null>(null);
   const isTransitioningRef = useRef(false);
+  const isAutoplayNavigatingRef = useRef(false);
   const volumeRef = useRef(100);
   const transitionToSongRef = useRef<(nextStart: number, fadeWindow?: FadeWindow | null, fallbackFadeSeconds?: number) => void>(() => undefined);
-  const fadeOutAndStopRef = useRef<(end: number, fadeWindow?: FadeWindow | null, fallbackFadeSeconds?: number) => void>(() => undefined);
+  const fadeOutAndStopRef = useRef<(end: number, fadeWindow?: FadeWindow | null, fallbackFadeSeconds?: number, onStopped?: () => void) => void>(() => undefined);
+  const onlySongModeRef = useRef(onlySongMode);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [playerState, setPlayerState] = useState<number | null>(null);
   const [volume, setVolume] = useState(100);
@@ -68,9 +84,24 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
     videoIdRef.current = videoId;
   }, [songs, videoId]);
 
+  useEffect(() => {
+    onlySongModeRef.current = onlySongMode;
+  }, [onlySongMode]);
+
   function getPlayer() {
     const player = playerRef.current;
     return isYouTubePlayer(player) ? player : null;
+  }
+
+  function playAnotherVideo() {
+    if (isAutoplayNavigatingRef.current) return;
+    const nextVideoId = chooseAutoplayVideoId(autoplayVideoIds, videoIdRef.current);
+    if (!nextVideoId) return;
+
+    isAutoplayNavigatingRef.current = true;
+    const query = new URLSearchParams({ autoplay: "1" });
+    if (onlySongModeRef.current) query.set("only_songs", "1");
+    router.push(`/video/${encodeURIComponent(nextVideoId)}?${query.toString()}`);
   }
 
   function setPlayerVolume(player: YouTubePlayer, nextVolume: number) {
@@ -153,7 +184,12 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
     }, Boolean(fadeWindow));
   }
 
-  function fadeOutAndStop(end: number, fadeWindow: FadeWindow | null = null, fallbackFadeSeconds = playbackSettings.fadeOutSeconds) {
+  function fadeOutAndStop(
+    end: number,
+    fadeWindow: FadeWindow | null = null,
+    fallbackFadeSeconds = playbackSettings.fadeOutSeconds,
+    onStopped?: () => void,
+  ) {
     const player = getPlayer();
     if (!player || isTransitioningRef.current) return;
     isTransitioningRef.current = true;
@@ -167,6 +203,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
       previousTimeRef.current = end;
       setStartAt(end);
       clearTransition();
+      onStopped?.();
     }, Boolean(fadeWindow));
   }
 
@@ -193,10 +230,12 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
             setPlayerVolume(event.target, event.target.getVolume());
             setPlayerState(event.target.getPlayerState());
             setIsPlayerReady(true);
+            if (shouldAutoplay) event.target.playVideo();
           },
           onStateChange: (event) => {
             if (cancelled || !isYouTubePlayer(event.target)) return;
             const player = event.target;
+            if (event.data === YOUTUBE_PLAYER_ENDED) playAnotherVideo();
             if (event.data === YOUTUBE_PLAYER_PLAYING) {
               const currentTime = player.getCurrentTime();
               const song = songsRef.current.find((item) => currentTime >= item.clipStart && currentTime < item.clipEnd);
@@ -300,7 +339,7 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
         if (currentTime >= transitionAt && !isTransitioningRef.current) {
           const nextSong = playableSongs[currentSongIndex + 1];
           if (nextSong) transitionToSongRef.current(nextSong.clipStart, fadeWindow, fallbackFadeSeconds);
-          else fadeOutAndStopRef.current(currentSong.clipEnd, fadeWindow, fallbackFadeSeconds);
+          else fadeOutAndStopRef.current(currentSong.clipEnd, fadeWindow, fallbackFadeSeconds, playAnotherVideo);
           return;
         }
       }
@@ -315,10 +354,12 @@ export function VideoEmbed({ videoId, duration }: { videoId: string; duration: n
 
       if (action.type === "stop") {
         const stopAt = Math.max(0, action.end);
-        player.seekTo(stopAt, true);
-        player.pauseVideo();
-        previousTimeRef.current = stopAt;
-        setStartAt(stopAt);
+        fadeOutAndStopRef.current(
+          stopAt,
+          null,
+          playbackSettings.builtInFade ? 0 : playbackSettings.fadeOutSeconds,
+          playAnotherVideo,
+        );
         return;
       }
 

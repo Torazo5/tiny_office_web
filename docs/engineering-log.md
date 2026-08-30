@@ -3,6 +3,14 @@
 Use this file for major errors and their outcomes. Do not include secrets,
 tokens, personal data, or full environment-variable values.
 
+### 2026-08-30 — Autoplay production-build verification blocked by missing dependencies
+
+- **Symptom and impact:** The required `npm run build` validation for continuous video autoplay could not start, so this checkout has not received production-build or browser-flow verification.
+- **Root cause / evidence:** `node_modules` is absent and `npm run build` exits immediately with `sh: next: command not found`. A local `npm ci` attempt completed without creating `node_modules/.bin/next`, leaving the dependency unavailable. The Next.js 16 bundled agent documentation is therefore unavailable in this checkout as well.
+- **Systems and files:** Local dependency installation, Next.js 16.3 build tooling, `app/video/[id]/page.tsx`, `components/video-embed.tsx`, and `components/player-context.tsx`.
+- **Resolution / next action:** Restore dependencies with a successful `npm ci`, then run `npm run build` and manually verify an ended full video and the last track in Only songs mode each advance to another video with playback continuing.
+- **Verification:** `npm test` passed all 32 tests, including the new autoplay selection tests; `git diff --check` passed. `npm run build` failed before application compilation because `next` was not installed.
+
 ### 2026-08-13 — Button-affordance production-build verification blocked
 
 - **Symptom and impact:** The required production build could not complete while verifying the clearer Random Pick source and mode buttons.

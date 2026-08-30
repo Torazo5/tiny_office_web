@@ -13,7 +13,7 @@ import { PresetPicker } from "@/components/preset-picker";
 import { ReviewLikeButton } from "@/components/review-like-button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getCurrentUser } from "@/lib/auth";
-import { getPlaylists } from "@/lib/data";
+import { getPlaylistVideoOptions, getPlaylists } from "@/lib/data";
 import { getPerformanceWithSelectedPreset } from "@/lib/review-data";
 import { getUserEngagement, getUserSongHeartKeys } from "@/lib/engagement-data";
 import { getPlaybackDefaults } from "@/lib/profile-data";
@@ -24,17 +24,23 @@ export default async function VideoPage({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ preset_id?: string; song?: string }>;
+  searchParams: Promise<{ preset_id?: string; song?: string; only_songs?: string; autoplay?: string }>;
 }) {
   const { id } = await params;
-  const { preset_id: previewPresetId, song: requestedSong } = await searchParams;
+  const {
+    preset_id: previewPresetId,
+    song: requestedSong,
+    only_songs: requestedOnlySongs,
+    autoplay: requestedAutoplay,
+  } = await searchParams;
   const user = await getCurrentUser();
-  const [{ performance, presets, selectedPreset, selectedCut }, engagement, heartedSongKeys, playlists, playbackDefaults] = await Promise.all([
+  const [{ performance, presets, selectedPreset, selectedCut }, engagement, heartedSongKeys, playlists, playbackDefaults, autoplayVideoOptions] = await Promise.all([
     getPerformanceWithSelectedPreset(id, user?.id, previewPresetId),
     getUserEngagement(id, user?.id),
     getUserSongHeartKeys(user?.id),
     getPlaylists(user?.id ?? null),
     user ? getPlaybackDefaults(user.id) : Promise.resolve(DEFAULT_PLAYBACK_SETTINGS),
+    getPlaylistVideoOptions(),
   ]);
   if (!performance) notFound();
   const requestedSongIndex = requestedSong ? Number.parseInt(requestedSong, 10) : null;
@@ -63,11 +69,17 @@ export default async function VideoPage({
         initialStart={initialSong?.clipStart ?? performance.songs[0]?.clipStart ?? 0}
         songs={performance.songs}
         initialPlaybackSettings={playbackDefaults}
+        initialOnlySongMode={requestedOnlySongs === "1"}
         isSignedIn={Boolean(user)}
       >
         <main className="grid min-w-0 items-start gap-8 p-4 sm:p-8 lg:grid-cols-2 lg:gap-5">
           <div className="min-w-0">
-            <VideoEmbed videoId={performance.videoId} duration={performance.duration} />
+            <VideoEmbed
+              videoId={performance.videoId}
+              duration={performance.duration}
+              autoplayVideoIds={autoplayVideoOptions.map((option) => option.performanceVideoId)}
+              shouldAutoplay={requestedAutoplay === "1"}
+            />
             <VideoFeatureHints />
 
             <h1 className="text-2xl font-bold text-foreground mb-1.5">{performance.artist}</h1>
